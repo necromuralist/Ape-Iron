@@ -1,0 +1,6 @@
+classic,2 gold + 2 copper
+xyz,2 gold=x(main) 1 gold=y(secondary) 1 copper=z(conflict)
+shake it up,2 gold = character describe "normal day" draw gold or copper and turn world upside-down
+watchoo want,1 gold(what character is) + 1 gold (what character secretly wants to be)
+obstacle,start with watchoo want and draw copper card to find obstacle to character becoming what he/she wants
+flash,roll two dice and multiply them together then tell story in that number of sentences
