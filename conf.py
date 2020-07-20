@@ -1372,13 +1372,13 @@ EXTRA_HEAD_DATA = """
 
 <!--
 <script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"
+  src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"
 </script>
--->
+
 <script type="text/javascript" async
   src="../../../assets/javascript/p5.min.js"
 </script>
-
+-->
 <!-- favicons -->
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
