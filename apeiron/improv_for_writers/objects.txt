@@ -1,0 +1,100 @@
+IFW: Apple
+IFW: Apron
+IFW: Arrow
+IFW: Bamboo mat
+IFW: Bandana
+IFW: Baseball
+IFW: Baton
+IFW: Beaker
+IFW: Belt
+IFW: Book
+IFW: Box of matches
+IFW: Bracelet
+IFW: Brass knuckles
+IFW: Brush
+IFW: Buddha statue
+IFW: Camera
+IFW: Candlestick holder
+IFW: Cane
+IFW: Catnip toy
+IFW: Cigar box
+IFW: Collar
+IFW: Compass
+IFW: Computer chip
+IFW: Cross
+IFW: Crown
+IFW: Crystal
+IFW: Deck of cards
+IFW: Diamond ring
+IFW: Diary
+IFW: Doorstop
+IFW: Dresser knob
+IFW: Embroidered patch
+IFW: Empty bottle of wine
+IFW: Feather
+IFW: Film reel
+IFW: Flashlight
+IFW: Framed photo
+IFW: Frying pan
+IFW: Game controller
+IFW: Gas can
+IFW: Globe
+IFW: Glove
+IFW: Goggles
+IFW: Gold ring
+IFW: Guitar
+IFW: Gun
+IFW: Handcuffs
+IFW: Handkerchief
+IFW: Harmonica
+IFW: Hat
+IFW: Headband
+IFW: Ice pick
+IFW: Jewel
+IFW: Key
+IFW: Knife
+IFW: Laptop
+IFW: Letter opener
+IFW: Lipstick
+IFW: Lunchbox
+IFW: Magic wand
+IFW: Marble
+IFW: Marionette
+IFW: Measuring tape
+IFW: Moving box
+IFW: Neck pillow
+IFW: Newspaper
+IFW: Paperweight
+IFW: Passport
+IFW: Pencil
+IFW: Phone
+IFW: Photo album
+IFW: Piano wire
+IFW: Pill
+IFW: Pipe
+IFW: Poker
+IFW: Pom- poms
+IFW: Porcelain doll
+IFW: Potted plant
+IFW: Quill
+IFW: Rosary beads
+IFW: Rubik’s cube
+IFW: Scarf
+IFW: Scissors
+IFW: Sculpture
+IFW: Seed
+IFW: Socks
+IFW: Spoon
+IFW: Sword
+IFW: Tea cup
+IFW: Toolbox
+IFW: Treasure chest
+IFW: Trophy
+IFW: Trumpet
+IFW: Typewriter
+IFW: USB thumb drive
+IFW: Ugly mug
+IFW: Wallet
+IFW: Watch
+IFW: Wind chime
+IFW: Wind- up toy
