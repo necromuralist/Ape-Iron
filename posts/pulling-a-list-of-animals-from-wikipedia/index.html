@@ -77,35 +77,35 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org29317bb">Beginning</a>
+<li><a href="#org1eb69b7">Beginning</a>
 <ul>
-<li><a href="#org78efcad">Set Up</a></li>
+<li><a href="#org278d306">Set Up</a></li>
 </ul>
 </li>
-<li><a href="#org1852711">Middle</a>
+<li><a href="#org915dadc">Middle</a>
 <ul>
-<li><a href="#orgca5572c">Grabbing Some HTML</a></li>
-<li><a href="#orgb5ba555">Building the Table</a></li>
-<li><a href="#org54605ff">Cleaning Up the Table</a></li>
-<li><a href="#orge3804bd">Meats</a></li>
-<li><a href="#org066f420">Again, But With Soup This Time</a></li>
+<li><a href="#org879d30c">Grabbing Some HTML</a></li>
+<li><a href="#org684cff0">Building the Table</a></li>
+<li><a href="#orgdc06a25">Cleaning Up the Table</a></li>
+<li><a href="#org9ee683a">Meats</a></li>
+<li><a href="#org073e30b">Again, But With Soup This Time</a></li>
 </ul>
 </li>
-<li><a href="#orga2a51d5">End</a></li>
+<li><a href="#org62abc3f">End</a></li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org29317bb">
-<h2 id="org29317bb">Beginning</h2>
-<div class="outline-text-2" id="text-org29317bb">
-<p>As part of my pursuit of randomness I'm creating lists of things to select from. In this case I want a list of animals to create a <i>Visual Alphabet</i> and I decided to grab one from wikipedia. This is what I did.</p>
+<div class="outline-2" id="outline-container-org1eb69b7">
+<h2 id="org1eb69b7">Beginning</h2>
+<div class="outline-text-2" id="text-org1eb69b7">
+<p>As part of my pursuit of randomness I'm creating lists of things to select from. In this case I wanted a list of animals to create a <i>Visual Alphabet</i> and I decided to grab one from wikipedia. This is what I did.</p>
 </div>
-<div class="outline-3" id="outline-container-org78efcad">
-<h3 id="org78efcad">Set Up</h3>
-<div class="outline-text-3" id="text-org78efcad"></div>
-<div class="outline-4" id="outline-container-org36aaf7a">
-<h4 id="org36aaf7a">Imports</h4>
-<div class="outline-text-4" id="text-org36aaf7a">
+<div class="outline-3" id="outline-container-org278d306">
+<h3 id="org278d306">Set Up</h3>
+<div class="outline-text-3" id="text-org278d306"></div>
+<div class="outline-4" id="outline-container-org81793fe">
+<h4 id="org81793fe">Imports</h4>
+<div class="outline-text-4" id="text-org81793fe">
 <div class="highlight">
 <pre><span></span><span class="c1"># python</span>
 <span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
@@ -129,18 +129,18 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org452c61b">
-<h4 id="org452c61b">Set Up Tabulate</h4>
-<div class="outline-text-4" id="text-org452c61b">
+<div class="outline-4" id="outline-container-org7cac039">
+<h4 id="org7cac039">Set Up Tabulate</h4>
+<div class="outline-text-4" id="text-org7cac039">
 <p>This is just to make printing the pandas data-frames a little easier. <a href="https://github.com/nnicandro/emacs-jupyter">emacs-jupyter</a> actually does a pretty good job of rendering them as HTML like a regular jupyter notebook, but this makes it a little easier to read while still in emacs, plus I can control things better.</p>
 <div class="highlight">
 <pre><span></span><span class="n">TABLE</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">tabulate</span><span class="p">,</span> <span class="n">showindex</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">tablefmt</span><span class="o">=</span><span class="s2">"orgtbl"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="s2">"keys"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgd122afd">
-<h4 id="orgd122afd">Set Up Selenium</h4>
-<div class="outline-text-4" id="text-orgd122afd">
+<div class="outline-4" id="outline-container-orgf074d7d">
+<h4 id="orgf074d7d">Set Up Selenium</h4>
+<div class="outline-text-4" id="text-orgf074d7d">
 <p>I started using Requests-HTML because it uses <a href="https://pyppeteer.github.io/pyppeteer/index.html">pyppeteer</a> to render javascript. Unfortunately I can't get it to work in a jupyter notebook. Using <a href="https://github.com/erdewit/nest_asyncio">nest_asyncio</a> allows it to run in the notebook but then I get this error:</p>
 <div class="highlight">
 <pre><span></span><span class="ne">AttributeError</span><span class="p">:</span> <span class="s1">'coroutine'</span> <span class="nb">object</span> <span class="n">has</span> <span class="n">no</span> <span class="n">attribute</span> <span class="s1">'newPage'</span>
@@ -155,12 +155,12 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org1852711">
-<h2 id="org1852711">Middle</h2>
-<div class="outline-text-2" id="text-org1852711"></div>
-<div class="outline-3" id="outline-container-orgca5572c">
-<h3 id="orgca5572c">Grabbing Some HTML</h3>
-<div class="outline-text-3" id="text-orgca5572c">
+<div class="outline-2" id="outline-container-org915dadc">
+<h2 id="org915dadc">Middle</h2>
+<div class="outline-text-2" id="text-org915dadc"></div>
+<div class="outline-3" id="outline-container-org879d30c">
+<h3 id="org879d30c">Grabbing Some HTML</h3>
+<div class="outline-text-3" id="text-org879d30c">
 <p>Just let selenium render the JQuery tables for us.</p>
 <div class="highlight">
 <pre><span></span><span class="n">URL</span> <span class="o">=</span> <span class="s2">"https://en.wikipedia.org/wiki/List_of_animal_names"</span>
@@ -168,9 +168,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgb5ba555">
-<h3 id="orgb5ba555">Building the Table</h3>
-<div class="outline-text-3" id="text-orgb5ba555">
+<div class="outline-3" id="outline-container-org684cff0">
+<h3 id="org684cff0">Building the Table</h3>
+<div class="outline-text-3" id="text-org684cff0">
 <p>After giving up on Requests-HTML I was using <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/#searching-the-tree">Beautiful Soup</a> to pull out the table so I could give it to pandas, but then I looked at the pandas documentation and it turns out they already do this, so you don't need to, but you do need to know how many tables there are and which one you want (it returns a list of dataframes). In this case I want the last one.</p>
 <div class="highlight">
 <pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="n">browser</span><span class="o">.</span><span class="n">page_source</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
@@ -211,9 +211,9 @@
 <p>That's a little odd looking.</p>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org54605ff">
-<h3 id="org54605ff">Cleaning Up the Table</h3>
-<div class="outline-text-3" id="text-org54605ff">
+<div class="outline-3" id="outline-container-orgdc06a25">
+<h3 id="orgdc06a25">Cleaning Up the Table</h3>
+<div class="outline-text-3" id="text-orgdc06a25">
 <p>First, what's with all the <code>A</code> entries in the header?</p>
 <div class="highlight">
 <pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
@@ -275,9 +275,9 @@ Index(['Animal', 'Young', 'Female', 'Male', 'Collective noun',
 </table>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orge3804bd">
-<h3 id="orge3804bd">Meats</h3>
-<div class="outline-text-3" id="text-orge3804bd">
+<div class="outline-3" id="outline-container-org9ee683a">
+<h3 id="org9ee683a">Meats</h3>
+<div class="outline-text-3" id="text-org9ee683a">
 <p>At this point I don't know what I really want to do with this. I was originally going to just save the animal names but now the other stuff looks kind of interesting. As an aside I had to look up <a href="https://en.wikipedia.org/wiki/Collateral_adjective">Collateral Adjective</a> on wikipedia:</p>
 <blockquote>
 <p>A collateral adjective is an adjective that is identified with a particular noun in meaning, but that is not derived from that noun.</p>
@@ -329,9 +329,9 @@ Index(['Animal', 'Young', 'Female', 'Male', 'Collective noun',
 <p>Oops. Maybe I should have looked at the table more closely.</p>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org066f420">
-<h3 id="org066f420">Again, But With Soup This Time</h3>
-<div class="outline-text-3" id="text-org066f420">
+<div class="outline-3" id="outline-container-org073e30b">
+<h3 id="org073e30b">Again, But With Soup This Time</h3>
+<div class="outline-text-3" id="text-org073e30b">
 <p>Let's see if using Beautiful Soup will help clean up the dataset a little.</p>
 <div class="highlight">
 <pre><span></span><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">browser</span><span class="o">.</span><span class="n">page_source</span><span class="p">)</span>
@@ -677,9 +677,9 @@ Whale: blubber
 </pre></div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orga2a51d5">
-<h2 id="orga2a51d5">End</h2>
-<div class="outline-text-2" id="text-orga2a51d5">
+<div class="outline-2" id="outline-container-org62abc3f">
+<h2 id="org62abc3f">End</h2>
+<div class="outline-text-2" id="text-org62abc3f">
 <p>And now to save it for later.</p>
 <div class="highlight">
 <pre><span></span><span class="n">load_dotenv</span><span class="p">()</span>

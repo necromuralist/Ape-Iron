@@ -22,7 +22,7 @@
 #+END_SRC
 
 * Beginning
-  As part of my pursuit of randomness I'm creating lists of things to select from. In this case I want a list of animals to create a /Visual Alphabet/ and I decided to grab one from wikipedia. This is what I did.
+  As part of my pursuit of randomness I'm creating lists of things to select from. In this case I wanted a list of animals to create a /Visual Alphabet/ and I decided to grab one from wikipedia. This is what I did.
 ** Set Up 
 *** Imports
 #+begin_src python :results none

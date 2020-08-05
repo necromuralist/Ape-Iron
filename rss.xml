@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron</title><link>https://necromuralist.github.io/Ape-Iron/</link><description>Ironies of the Ape.</description><atom:link href="https://necromuralist.github.io/Ape-Iron/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:necromuralist@protonmail.com"&gt;Cloistered Monkey&lt;/a&gt; </copyright><lastBuildDate>Wed, 05 Aug 2020 01:44:25 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Pulling A List of Animals From Wikipedia</title><link>https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron</title><link>https://necromuralist.github.io/Ape-Iron/</link><description>Ironies of the Ape.</description><atom:link href="https://necromuralist.github.io/Ape-Iron/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:necromuralist@protonmail.com"&gt;Cloistered Monkey&lt;/a&gt; </copyright><lastBuildDate>Wed, 05 Aug 2020 01:51:43 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Pulling A List of Animals From Wikipedia</title><link>https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org29317bb"&gt;Beginning&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org1eb69b7"&gt;Beginning&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org78efcad"&gt;Set Up&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org278d306"&gt;Set Up&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org1852711"&gt;Middle&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org915dadc"&gt;Middle&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#orgca5572c"&gt;Grabbing Some HTML&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#orgb5ba555"&gt;Building the Table&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org54605ff"&gt;Cleaning Up the Table&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#orge3804bd"&gt;Meats&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org066f420"&gt;Again, But With Soup This Time&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org879d30c"&gt;Grabbing Some HTML&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org684cff0"&gt;Building the Table&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#orgdc06a25"&gt;Cleaning Up the Table&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org9ee683a"&gt;Meats&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org073e30b"&gt;Again, But With Soup This Time&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#orga2a51d5"&gt;End&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org62abc3f"&gt;End&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org29317bb" class="outline-2"&gt;
-&lt;h2 id="org29317bb"&gt;Beginning&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org29317bb"&gt;
+&lt;div id="outline-container-org1eb69b7" class="outline-2"&gt;
+&lt;h2 id="org1eb69b7"&gt;Beginning&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org1eb69b7"&gt;
 &lt;p&gt;
-As part of my pursuit of randomness I'm creating lists of things to select from. In this case I want a list of animals to create a &lt;i&gt;Visual Alphabet&lt;/i&gt; and I decided to grab one from wikipedia. This is what I did.
+As part of my pursuit of randomness I'm creating lists of things to select from. In this case I wanted a list of animals to create a &lt;i&gt;Visual Alphabet&lt;/i&gt; and I decided to grab one from wikipedia. This is what I did.
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org78efcad" class="outline-3"&gt;
-&lt;h3 id="org78efcad"&gt;Set Up&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org78efcad"&gt;
+&lt;div id="outline-container-org278d306" class="outline-3"&gt;
+&lt;h3 id="org278d306"&gt;Set Up&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org278d306"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org36aaf7a" class="outline-4"&gt;
-&lt;h4 id="org36aaf7a"&gt;Imports&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org36aaf7a"&gt;
+&lt;div id="outline-container-org81793fe" class="outline-4"&gt;
+&lt;h4 id="org81793fe"&gt;Imports&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org81793fe"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# python&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;functools&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;partial&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pathlib&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Path&lt;/span&gt;
@@ -58,9 +58,9 @@ As part of my pursuit of randomness I'm creating lists of things to select from.
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org452c61b" class="outline-4"&gt;
-&lt;h4 id="org452c61b"&gt;Set Up Tabulate&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org452c61b"&gt;
+&lt;div id="outline-container-org7cac039" class="outline-4"&gt;
+&lt;h4 id="org7cac039"&gt;Set Up Tabulate&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org7cac039"&gt;
 &lt;p&gt;
 This is just to make printing the pandas data-frames a little easier. &lt;a href="https://github.com/nnicandro/emacs-jupyter"&gt;emacs-jupyter&lt;/a&gt; actually does a pretty good job of rendering them as HTML like a regular jupyter notebook, but this makes it a little easier to read while still in emacs, plus I can control things better.
 &lt;/p&gt;
@@ -69,9 +69,9 @@ This is just to make printing the pandas data-frames a little easier. &lt;a href
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgd122afd" class="outline-4"&gt;
-&lt;h4 id="orgd122afd"&gt;Set Up Selenium&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgd122afd"&gt;
+&lt;div id="outline-container-orgf074d7d" class="outline-4"&gt;
+&lt;h4 id="orgf074d7d"&gt;Set Up Selenium&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgf074d7d"&gt;
 &lt;p&gt;
 I started using Requests-HTML because it uses &lt;a href="https://pyppeteer.github.io/pyppeteer/index.html"&gt;pyppeteer&lt;/a&gt; to render javascript. Unfortunately I can't get it to work in a jupyter notebook. Using &lt;a href="https://github.com/erdewit/nest_asyncio"&gt;nest_asyncio&lt;/a&gt; allows it to run in the notebook but then I get this error:
 &lt;/p&gt;
@@ -91,13 +91,13 @@ And tracking all this down is taking too long so I'm going to switch to using se
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org1852711" class="outline-2"&gt;
-&lt;h2 id="org1852711"&gt;Middle&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org1852711"&gt;
+&lt;div id="outline-container-org915dadc" class="outline-2"&gt;
+&lt;h2 id="org915dadc"&gt;Middle&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org915dadc"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgca5572c" class="outline-3"&gt;
-&lt;h3 id="orgca5572c"&gt;Grabbing Some HTML&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgca5572c"&gt;
+&lt;div id="outline-container-org879d30c" class="outline-3"&gt;
+&lt;h3 id="org879d30c"&gt;Grabbing Some HTML&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org879d30c"&gt;
 &lt;p&gt;
 Just let selenium render the JQuery tables for us.
 &lt;/p&gt;
@@ -108,9 +108,9 @@ Just let selenium render the JQuery tables for us.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgb5ba555" class="outline-3"&gt;
-&lt;h3 id="orgb5ba555"&gt;Building the Table&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgb5ba555"&gt;
+&lt;div id="outline-container-org684cff0" class="outline-3"&gt;
+&lt;h3 id="org684cff0"&gt;Building the Table&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org684cff0"&gt;
 &lt;p&gt;
 After giving up on Requests-HTML I was using &lt;a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/#searching-the-tree"&gt;Beautiful Soup&lt;/a&gt; to pull out the table so I could give it to pandas, but then I looked at the pandas documentation and it turns out they already do this, so you don't need to, but you do need to know how many tables there are and which one you want (it returns a list of dataframes). In this case I want the last one. 
 &lt;/p&gt;
@@ -166,9 +166,9 @@ That's a little odd looking.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org54605ff" class="outline-3"&gt;
-&lt;h3 id="org54605ff"&gt;Cleaning Up the Table&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org54605ff"&gt;
+&lt;div id="outline-container-orgdc06a25" class="outline-3"&gt;
+&lt;h3 id="orgdc06a25"&gt;Cleaning Up the Table&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgdc06a25"&gt;
 &lt;p&gt;
 First, what's with all the &lt;code&gt;A&lt;/code&gt; entries in the header?
 &lt;/p&gt;
@@ -250,9 +250,9 @@ Index(['Animal', 'Young', 'Female', 'Male', 'Collective noun',
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orge3804bd" class="outline-3"&gt;
-&lt;h3 id="orge3804bd"&gt;Meats&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orge3804bd"&gt;
+&lt;div id="outline-container-org9ee683a" class="outline-3"&gt;
+&lt;h3 id="org9ee683a"&gt;Meats&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org9ee683a"&gt;
 &lt;p&gt;
 At this point I don't know what I really want to do with this. I was originally going to just save the animal names but now the other stuff looks kind of interesting. As an aside I had to look up &lt;a href="https://en.wikipedia.org/wiki/Collateral_adjective"&gt;Collateral Adjective&lt;/a&gt; on wikipedia:
 &lt;/p&gt;
@@ -331,9 +331,9 @@ Oops. Maybe I should have looked at the table more closely.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org066f420" class="outline-3"&gt;
-&lt;h3 id="org066f420"&gt;Again, But With Soup This Time&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org066f420"&gt;
+&lt;div id="outline-container-org073e30b" class="outline-3"&gt;
+&lt;h3 id="org073e30b"&gt;Again, But With Soup This Time&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org073e30b"&gt;
 &lt;p&gt;
 Let's see if using Beautiful Soup will help clean up the dataset a little.
 &lt;/p&gt;
@@ -750,9 +750,9 @@ Whale: blubber
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orga2a51d5" class="outline-2"&gt;
-&lt;h2 id="orga2a51d5"&gt;End&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orga2a51d5"&gt;
+&lt;div id="outline-container-org62abc3f" class="outline-2"&gt;
+&lt;h2 id="org62abc3f"&gt;End&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org62abc3f"&gt;
 &lt;p&gt;
 And now to save it for later.
 &lt;/p&gt;
