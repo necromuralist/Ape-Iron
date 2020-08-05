@@ -1,0 +1,505 @@
+#+BEGIN_COMMENT
+.. title: Pulling A List of Animals From Wikipedia
+.. slug: pulling-a-list-of-animals-from-wikipedia
+.. date: 2020-08-03 19:55:10 UTC-07:00
+.. tags: wikipedia,scraping,lists
+.. category: Scraping
+.. link: 
+.. description: Grabbing a list of animals from wikipedia.
+.. type: text
+.. status: 
+.. updated: 
+
+#+END_COMMENT
+#+OPTIONS: ^:{}
+#+TOC: headlines 2
+
+#+PROPERTY: header-args :session ~/.local/share/jupyter/runtime/kernel-f032b359-778f-4dd6-aaad-75d1a07a23a1-ssh.json
+
+#+BEGIN_SRC python :results none :exports none
+%load_ext autoreload
+%autoreload 2
+#+END_SRC
+
+* Beginning
+  As part of my pursuit of randomness I'm creating lists of things to select from. In this case I want a list of animals to create a /Visual Alphabet/ and I decided to grab one from wikipedia. This is what I did.
+** Set Up 
+*** Imports
+#+begin_src python :results none
+# python
+from functools import partial
+from pathlib import Path
+from string import ascii_uppercase
+
+import os
+import re
+
+# pypi
+from bs4 import BeautifulSoup
+from dotenv import load_dotenv
+from expects import (
+    be_true,
+    expect,
+)
+from selenium import webdriver
+from tabulate import tabulate
+
+import pandas
+#+end_src
+*** Set Up Tabulate
+    This is just to make printing the pandas data-frames a little easier. [[https://github.com/nnicandro/emacs-jupyter][emacs-jupyter]] actually does a pretty good job of rendering them as HTML like a regular jupyter notebook, but this makes it a little easier to read while still in emacs, plus I can control things better.
+
+#+begin_src python :results none
+TABLE = partial(tabulate, showindex=False, tablefmt="orgtbl", headers="keys")
+#+end_src
+*** Set Up Selenium
+    I started using Requests-HTML because it uses [[https://pyppeteer.github.io/pyppeteer/index.html][pyppeteer]] to render javascript. Unfortunately I can't get it to work in a jupyter notebook. Using [[https://github.com/erdewit/nest_asyncio][nest_asyncio]] allows it to run in the notebook but then I get this error:
+
+#+begin_src python
+AttributeError: 'coroutine' object has no attribute 'newPage'
+#+end_src
+
+And tracking all this down is taking too long so I'm going to switch to using selenium. Since I'm running this on a remote machine we have to run it headless. I used to use [[https://www.wikiwand.com/en/Xvfb][XVFB]] but selenium has a headless mode so let's see if it works.
+
+#+begin_src python :results none
+options = webdriver.FirefoxOptions()
+options.set_headless()
+browser = webdriver.Firefox(firefox_options=options)
+#+end_src
+* Middle
+** Grabbing Some HTML
+   Just let selenium render the JQuery tables for us.
+
+#+begin_src python :results none
+URL = "https://en.wikipedia.org/wiki/List_of_animal_names"
+browser.get(URL)
+#+end_src
+
+** Building the Table
+   After giving up on Requests-HTML I was using [[https://www.crummy.com/software/BeautifulSoup/bs4/doc/#searching-the-tree][Beautiful Soup]] to pull out the table so I could give it to pandas, but then I looked at the pandas documentation and it turns out they already do this, so you don't need to, but you do need to know how many tables there are and which one you want (it returns a list of dataframes). In this case I want the last one. 
+
+#+begin_src python :exports both
+table = pandas.read_html(browser.page_source)[-1]
+print(TABLE(table.head(1)))
+#+end_src
+
+| ('Animal', 'A')   | ('Young', 'A')   | ('Female', 'A')   | ('Male', 'A')   |   ('Collective noun', 'A') | ('Collateral adjective', 'A')   |   ('Culinary noun for meat', 'A') |
+|-------------------+------------------+-------------------+-----------------+----------------------------+---------------------------------+-----------------------------------|
+| Aardvark          | cub              | sow               | boar            |                        nan | orycteropodian                  |                               nan |
+
+That's a little odd looking.
+** Cleaning Up the Table
+   First, what's with all the =A= entries in the header?
+
+#+begin_src python :results output :exports both
+print(table.columns)
+#+end_src
+
+#+RESULTS:
+: MultiIndex([(                'Animal', 'A'),
+:             (                 'Young', 'A'),
+:             (                'Female', 'A'),
+:             (                  'Male', 'A'),
+:             (       'Collective noun', 'A'),
+:             (  'Collateral adjective', 'A'),
+:             ('Culinary noun for meat', 'A')],
+:            )
+
+Hmm..
+
+#+begin_src python :results output :exports both
+table.columns = [column[0] for column in table.columns]
+print(table.columns)
+#+end_src
+
+#+RESULTS:
+: Index(['Animal', 'Young', 'Female', 'Male', 'Collective noun',
+:        'Collateral adjective', 'Culinary noun for meat'],
+:       dtype='object')
+
+#+begin_src python :exports both
+print(TABLE(table.head(1)))
+#+end_src
+
+| Animal   | Young   | Female   | Male   |   Collective noun | Collateral adjective   |   Culinary noun for meat |
+|----------+---------+----------+--------+-------------------+------------------------+--------------------------|
+| Aardvark | cub     | sow      | boar   |               nan | orycteropodian         |                      nan |
+
+** Meats
+   At this point I don't know what I really want to do with this. I was originally going to just save the animal names but now the other stuff looks kind of interesting. As an aside I had to look up [[https://en.wikipedia.org/wiki/Collateral_adjective][Collateral Adjective]] on wikipedia:
+
+#+begin_quote
+A collateral adjective is an adjective that is identified with a particular noun in meaning, but that is not derived from that noun.
+#+end_quote
+
+Good to know.
+
+#+begin_src python :results output :exports both
+meats = table.dropna(subset=["Culinary noun for meat"])
+print(len(meats))
+#+end_src
+
+#+RESULTS:
+: 49
+
+So, now I noticed something else wrong.
+
+#+begin_src python :results output :exports both
+print(TABLE(meats.iloc[-1:]))
+#+end_src
+
+| Animal   | Young   | Female   | Male   | Collective noun   | Collateral adjective   | Culinary noun for meat   |
+|----------+---------+----------+--------+-------------------+------------------------+--------------------------|
+| Z        | Z       | Z        | Z      | Z                 | Z                      | Z                        |
+
+Oops. Maybe I should have looked at the table more closely.
+
+** Again, But With Soup This Time
+   Let's see if using Beautiful Soup will help clean up the dataset a little.
+
+#+begin_src python :results none
+soup = BeautifulSoup(browser.page_source)
+soup_table = soup.find_all("table")[-1]
+#+end_src
+
+The =read_html= method always returns a list, even though I'm only passing in one table.
+
+#+begin_src python :results output :exports both
+table = pandas.read_html(str(soup_table))[0]
+print(TABLE(table.iloc[-1:]))
+#+end_src 
+
+#+RESULTS:
+| ('Animal', 'A')   | ('Young', 'A')                  | ('Female', 'A')   | ('Male', 'A')   | ('Collective noun', 'A')                            | ('Collateral adjective', 'A')   |   ('Culinary noun for meat', 'A') |
+ |-------------------+---------------------------------+-------------------+-----------------+-----------------------------------------------------+---------------------------------+-----------------------------------|
+| Zebra             | foal colt (male) filly (female) | mare              | stallion        | herd[11][107] cohort[107]dazzle [108] zeal[11][107] | zebrine hippotigrine            |                               nan |
+
+Actually, that looks worse.
+
+I went back and looked at the page and the table is broken up by sub-headers indicating the first letter of the animal's name.
+
+#+begin_src python :results output :exports both
+print(str(soup_table).split("\n")[10])
+#+end_src
+
+#+RESULTS:
+: <th colspan="7"><span id="A"></span><b>A</b>
+
+So, maybe I can clean that up a little before creating the table - here's where Beautiful Soup comes in.
+
+#+begin_src python :results output :exports both
+for character in ascii_uppercase:
+    element = soup_table.find(id=character)
+    if element is None:
+        print(f"Element for {character} not found")
+    else:
+        element.parent.parent.decompose()
+
+soup_table.smooth()
+soup_table.encode()
+table = pandas.read_html(str(soup_table))[0]
+print(TABLE(table.head(1)))
+#+end_src
+
+
+| Animal   | Young   | Female   | Male   |   Collective noun | Collateral adjective   |   Culinary noun for meat |
+|----------+---------+----------+--------+-------------------+------------------------+--------------------------|
+| Aardvark | cub     | sow      | boar   |               nan | orycteropodian         |                      nan |
+
+And now back to the meats.
+
+#+begin_src python :results output :exports both
+meats = table.dropna(subset=["Culinary noun for meat"])
+print(len(meats))
+#+end_src
+
+#+RESULTS:
+: 24
+
+#+begin_src python :results output :exports both
+meats = meats.rename(columns={"Culinary noun for meat": "Meat"})
+for row in meats.itertuples():
+    print(f"{row.Animal}: {row.Meat}")
+#+end_src
+
+#+RESULTS:
+#+begin_example
+Cattle[note 3] (list): beef veal
+Chicken (list): poultry
+Deer: venison humble (organ meat)
+DogfishAlso see Shark: Spiny dogfish capeshark (USA) flake (UK, AUS) huss (UK) kahada (CAN)[50] rigg (UK)rock salmon (UK)
+Duck (list) Also see Mallard: poultry
+Elk (wapiti): venison
+Gaur: garabeef
+Goat (list): chevon cabrito mutton
+Goose: poultry
+Guinea fowl: poultry
+Guinea pig: cuy
+MallardAlso see Duck: poultry
+Moose: venison
+Peafowl: poultry
+Pig (list) Also see Boar: pork ham bacon
+Pigeon (list): squab
+RamAlso see Sheep: lamb mutton
+Red deer: venison
+Shark: flake (AUS)
+Sheep (list) Also see Ram: lamb mutton hogget
+Snail: escargot
+Turkey (list): poultry
+Water buffalo: carabeef
+Whale: blubber
+#+end_example
+
+So now there are some other problems - there are footnotes and links that makes things a bit messy. We can't just clear out all link references in the HTML because the names themselves are generally linked so I'll just do some string substitution.
+
+#+begin_src python :results output :exports both
+FOOTNOTES = r"\[\w*\s*\d\]"
+FOOTNOTES_2 = r"\s" + FOOTNOTES
+EMPTY = ""
+SPACE = " "
+LIST = r"\(list\)"
+
+for column in table.columns:
+    table[column] = table[column].str.replace(FOOTNOTES_2, EMPTY)
+    table[column] = table[column].str.replace(FOOTNOTES, SPACE)
+    table[column] = table[column].str.replace(LIST, EMPTY)
+print()
+print(table.loc[32:32])
+#+end_src
+
+#+RESULTS:
+: 
+:       Animal  Young Female  Male                       Collective noun  \
+: 32  Cattle    calf    cow   bull  herd  drove  yoke (oxen) team (oxen)   
+: 
+:                                  Collateral adjective Culinary noun for meat  
+: 32  bovine  taurine (male) vaccine (female) vituli...              beef veal  
+
+#+begin_src python :results output :exports both
+meats = table.dropna(subset=["Culinary noun for meat"])
+meats = meats.rename(columns={"Culinary noun for meat": "Meat"})
+for row in meats.itertuples():
+    print(f"{row.Animal}: {row.Meat}")
+#+end_src
+
+#+RESULTS:
+#+begin_example
+Cattle  : beef veal
+Chicken : poultry
+Deer: venison humble (organ meat)
+DogfishAlso see Shark: Spiny dogfish capeshark (USA) flake (UK, AUS) huss (UK) kahada (CAN)  rigg (UK)rock salmon (UK)
+Duck  Also see Mallard: poultry
+Elk (wapiti): venison
+Gaur: garabeef
+Goat : chevon cabrito mutton
+Goose: poultry
+Guinea fowl: poultry
+Guinea pig: cuy
+MallardAlso see Duck: poultry
+Moose: venison
+Peafowl: poultry
+Pig  Also see Boar: pork ham bacon
+Pigeon : squab
+RamAlso see Sheep: lamb mutton
+Red deer: venison
+Shark: flake (AUS)
+Sheep  Also see Ram: lamb mutton hogget
+Snail: escargot
+Turkey : poultry
+Water buffalo: carabeef
+Whale: blubber
+#+end_example
+
+The weird smashing together of words (e.g. =DogfishAlso=) appears to happen because wikipedia inserts =<br/>= tags to create a sub-row within the table rows. Time to try again.
+
+#+begin_src python :results none
+soup = BeautifulSoup(browser.page_source)
+soup_table = soup.find_all("table")[-1]
+for character in ascii_uppercase:
+    element = soup_table.find(id=character)
+    if element is None:
+        print(f"Element for {character} not found")
+    else:
+        element.parent.parent.decompose()
+
+for tag in soup_table.find_all("br"):
+    tag.replace_with(SPACE)
+
+soup_table.smooth()
+soup_table.encode()
+#+end_src
+
+
+#+begin_src python :results output :exports both
+table = pandas.read_html(str(soup_table))[0]
+print(TABLE(table[table.Animal.str.startswith("Ram")]))
+#+end_src
+
+| Animal             | Young   | Female   | Male   | Collective noun   | Collateral adjective   | Culinary noun for meat   |
+|--------------------+---------+----------+--------+-------------------+------------------------+--------------------------|
+| Ram Also see Sheep | lamb    | ewe      | ram    | flock             | arietine ovine         | lamb mutton              |
+
+#+begin_src python :results output :exports both
+print(table.loc[32:32])
+for column in table.columns:
+    table[column] = table[column].str.replace(FOOTNOTES_2, EMPTY)
+    table[column] = table[column].str.replace(FOOTNOTES, SPACE)
+    table[column] = table[column].str.replace(LIST, EMPTY)
+print()
+print(table.loc[32:32])
+#+end_src
+
+#+RESULTS:
+#+begin_example
+                   Animal     Young   Female  Male  \
+32  Cattle[note 3] (list)  calf[31]  cow[32]  bull   
+
+                               Collective noun  \
+32  herd[11] drove[11] yoke (oxen) team (oxen)   
+
+                                 Collateral adjective Culinary noun for meat  
+32  bovine[note 4] taurine (male) vaccine (female)...              beef veal  
+
+      Animal  Young Female  Male                       Collective noun  \
+32  Cattle    calf    cow   bull  herd  drove  yoke (oxen) team (oxen)   
+
+                                 Collateral adjective Culinary noun for meat  
+32  bovine  taurine (male) vaccine (female) vituli...              beef veal  
+#+end_example
+
+#+begin_src python :results output :exports both
+meats = table.dropna(subset=["Culinary noun for meat"])
+meats = meats.rename(columns={"Culinary noun for meat": "Meat"})
+for row in meats.itertuples():
+    print(f"{row.Animal}: {row.Meat}")
+#+end_src
+
+#+RESULTS:
+#+begin_example
+Cattle  : beef veal
+Chicken : poultry
+Deer: venison humble (organ meat)
+Dogfish Also see Shark: Spiny dogfish capeshark (USA) flake (UK, AUS) huss (UK) kahada (CAN)  rigg (UK) rock salmon (UK)
+Duck  Also see Mallard: poultry
+Elk (wapiti): venison
+Gaur: garabeef
+Goat : chevon cabrito mutton
+Goose: poultry
+Guinea fowl: poultry
+Guinea pig: cuy
+Mallard Also see Duck: poultry
+Moose: venison
+Peafowl: poultry
+Pig  Also see Boar: pork ham bacon
+Pigeon : squab
+Ram Also see Sheep: lamb mutton
+Red deer: venison
+Shark: flake (AUS)
+Sheep  Also see Ram: lamb mutton hogget
+Snail: escargot
+Turkey : poultry
+Water buffalo: carabeef
+Whale: blubber
+#+end_example
+
+This isn't quite the nice set that I was hoping for, but, oh well. Maybe just one more clean-up and onward.
+
+#+begin_src python :results output :exports both
+PATTERN = "Also see (?P<name>\w+)"
+def see_also(match):
+    name = match["name"]
+    return f"(Also see {name})"
+
+table["Animal"] = table.Animal.str.replace(PATTERN, see_also)
+
+for column in table.columns:
+    table[column] = table[column].str.strip()
+
+meats = table.dropna(subset=["Culinary noun for meat"])
+meats = meats.rename(columns={"Culinary noun for meat": "Meat"})
+for row in meats.itertuples():
+    print(f"{row.Animal}: {row.Meat}")
+#+end_src
+
+#+RESULTS:
+#+begin_example
+Cattle: beef veal
+Chicken: poultry
+Deer: venison humble (organ meat)
+Dogfish (Also see Shark): Spiny dogfish capeshark (USA) flake (UK, AUS) huss (UK) kahada (CAN)  rigg (UK) rock salmon (UK)
+Duck  (Also see Mallard): poultry
+Elk (wapiti): venison
+Gaur: garabeef
+Goat: chevon cabrito mutton
+Goose: poultry
+Guinea fowl: poultry
+Guinea pig: cuy
+Mallard (Also see Duck): poultry
+Moose: venison
+Peafowl: poultry
+Pig  (Also see Boar): pork ham bacon
+Pigeon: squab
+Ram (Also see Sheep): lamb mutton
+Red deer: venison
+Shark: flake (AUS)
+Sheep  (Also see Ram): lamb mutton hogget
+Snail: escargot
+Turkey: poultry
+Water buffalo: carabeef
+Whale: blubber
+#+end_example
+
+* End
+  And now to save it for later.
+
+#+begin_src python :results none
+load_dotenv()
+path = Path(os.environ["WIKIPEDIA"]).expanduser()
+if not path.is_dir():
+    path.mkdir()
+
+path = Path(os.environ["WIKIPEDIA_ANIMALS"])
+table.to_csv(path, index=False)
+#+end_src
+
+And for an example use.
+
+#+begin_src python :results output :exports both
+animals = pandas.read_csv(
+    Path(os.environ["WIKIPEDIA_ANIMALS"]).expanduser())
+
+print(animals.sample(1).iloc[0])
+#+end_src
+
+#+RESULTS:
+: Animal                    Marmoset
+: Young                       infant
+: Female                           ?
+: Male                             ?
+: Collective noun                  ?
+: Collateral adjective        simian
+: Culinary noun for meat         NaN
+: Name: 155, dtype: object
+
+#+begin_src python :results output :exports both
+print(meats.sample(1).iloc[0])
+#+end_src
+
+#+RESULTS:
+: Animal                                           Dogfish (Also see Shark)
+: Young                                                                   ?
+: Female                                                                  ?
+: Male                                                                    ?
+: Collective noun                                                     troop
+: Collateral adjective                                   selachian squaloid
+: Meat                    Spiny dogfish capeshark (USA) flake (UK, AUS) ...
+: Name: 59, dtype: object
+
+So, there we go. What have we learned?
+
+ - How to pull a page from wikipedia using Selenium
+ - How to find and clean a wikipedia table using Beautiful Soup
+ - How to convert the Beautiful Soup object to a pandas DataFrame
+ - How to further clean up the data frame using string methods and save the table for later as a CSV
+
+Not so exciting, but it took longer than I thought it would. I blame the heat - it drives one mental.
