@@ -7,14 +7,42 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/</loc>
-  <lastmod>2020-02-18T02:09:00Z</lastmod>
+  <lastmod>2020-08-04T23:25:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/2020/</loc>
+  <lastmod>2020-08-04T23:25:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/archive.html</loc>
-  <lastmod>2020-02-18T02:18:00Z</lastmod>
+  <lastmod>2020-08-04T23:25:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/</loc>
-  <lastmod>2020-02-18T02:09:00Z</lastmod>
+  <lastmod>2020-08-04T23:25:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_scraping/</loc>
+  <lastmod>2020-08-04T23:25:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/lists/</loc>
+  <lastmod>2020-08-04T23:25:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/scraping/</loc>
+  <lastmod>2020-08-04T23:25:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/wikipedia/</loc>
+  <lastmod>2020-08-04T23:25:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/</loc>
+  <lastmod>2020-08-04T23:25:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/posts/testing-testing/</loc>
+  <lastmod>2020-08-04T23:25:00Z</lastmod>
  </url>
 </urlset>
