@@ -1,41 +1,479 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron (Posts about Scraping)</title><link>https://necromuralist.github.io/Ape-Iron/</link><description></description><atom:link href="https://necromuralist.github.io/Ape-Iron/categories/cat_scraping.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:necromuralist@protonmail.com"&gt;Cloistered Monkey&lt;/a&gt; </copyright><lastBuildDate>Wed, 05 Aug 2020 22:39:59 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Pulling A List of Animals From Wikipedia</title><link>https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron (Posts about Scraping)</title><link>https://necromuralist.github.io/Ape-Iron/</link><description></description><atom:link href="https://necromuralist.github.io/Ape-Iron/categories/cat_scraping.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:necromuralist@protonmail.com"&gt;Cloistered Monkey&lt;/a&gt; </copyright><lastBuildDate>Mon, 10 Aug 2020 19:06:35 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Pulling Legendary Creatures From Wikipedia</title><link>https://necromuralist.github.io/Ape-Iron/posts/pulling-legendary-creatures-from-wikipedia/</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org36e9430"&gt;Beginning&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-legendary-creatures-from-wikipedia/#orga9787b2"&gt;Beginning&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#orgca4a4ac"&gt;Set Up&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-legendary-creatures-from-wikipedia/#org250d407"&gt;Set Up&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#orgb3f3f7c"&gt;Middle&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-legendary-creatures-from-wikipedia/#org7952006"&gt;Middle&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org17030aa"&gt;Grabbing Some HTML&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org082f878"&gt;Building the Table&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org5611125"&gt;Cleaning Up the Table&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#orge66389e"&gt;Meats&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org5db9fcc"&gt;Again, But With Soup This Time&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-legendary-creatures-from-wikipedia/#org48d3e32"&gt;Grab the Page and Make Some Soup&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org2319bcb"&gt;End&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org36e9430" class="outline-2"&gt;
-&lt;h2 id="org36e9430"&gt;Beginning&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org36e9430"&gt;
+&lt;div id="outline-container-orga9787b2" class="outline-2"&gt;
+&lt;h2 id="orga9787b2"&gt;Beginning&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orga9787b2"&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-org250d407" class="outline-3"&gt;
+&lt;h3 id="org250d407"&gt;Set Up&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org250d407"&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-orgb8edab4" class="outline-4"&gt;
+&lt;h4 id="orgb8edab4"&gt;Imports&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgb8edab4"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# python&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;argparse&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Namespace&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;functools&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;partial&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;re&lt;/span&gt;
+
+&lt;span class="c1"&gt;# pypi&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bs4&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;BeautifulSoup&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;UnicodeDammit&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;selenium&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;webdriver&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tabulate&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;tabulate&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-org8fc7cc2" class="outline-4"&gt;
+&lt;h4 id="org8fc7cc2"&gt;Tabulate&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org8fc7cc2"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;TABLE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;partial&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tabulate&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;headers&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"keys"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;tablefmt&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"orgtbl"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;showindex&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-orgd38f465" class="outline-4"&gt;
+&lt;h4 id="orgd38f465"&gt;Selenium&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgd38f465"&gt;
+&lt;p&gt;
+I'll use a headless instance of selenium-firefox to grab and render the wikipedia page.
+&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;options&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;webdriver&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;FirefoxOptions&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;options&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;headless&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
+&lt;span class="n"&gt;browser&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;webdriver&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Firefox&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;firefox_options&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;options&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-org7952006" class="outline-2"&gt;
+&lt;h2 id="org7952006"&gt;Middle&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org7952006"&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-org48d3e32" class="outline-3"&gt;
+&lt;h3 id="org48d3e32"&gt;Grab the Page and Make Some Soup&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org48d3e32"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;URL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"https://en.wikipedia.org/wiki/List_of_legendary_creatures_by_type"&lt;/span&gt;
+
+&lt;span class="n"&gt;browser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;URL&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;
+This page is a little odd in that it uses tables but the tables then contain unordered lists which seem to give pandas a hard time, so I'll have to poke around a little bit using Beautiful Soup first to figure it out.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;soup&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;BeautifulSoup&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;browser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;page_source&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgb1748d0" class="outline-4"&gt;
+&lt;h4 id="orgb1748d0"&gt;Looking at the Headings&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgb1748d0"&gt;
+&lt;p&gt;
+The level-2 headlines describe different ways to catalog the creatures, in addition they have "span" tags within them that have the "mw-class" associated with them so we can grab those tags using Beautiful Soup's &lt;a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/#css-selectors"&gt;select&lt;/a&gt; method, which uses CSS selectors.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;headlines&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;soup&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;select&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"h2 span.mw-headline"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;headline&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;headlines&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;" - {headline}"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&amp;lt;span class="mw-headline" id="Animals,_creatures_associated_with"&amp;gt;Animals, creatures associated with&amp;lt;/span&amp;gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;span class="mw-headline" id="Artificial_creatures"&amp;gt;Artificial creatures&amp;lt;/span&amp;gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;span class="mw-headline" id="Body_parts,_creatures_associated_with"&amp;gt;Body parts, creatures associated with&amp;lt;/span&amp;gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;span class="mw-headline" id="Concepts,_creatures_associated_with"&amp;gt;Concepts, creatures associated with&amp;lt;/span&amp;gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;span class="mw-headline" id="Demons"&amp;gt;Demons&amp;lt;/span&amp;gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;span class="mw-headline" id="Elements,_creatures_associated_with"&amp;gt;Elements, creatures associated with&amp;lt;/span&amp;gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;span class="mw-headline" id="Habitats,_creatures_associated_with"&amp;gt;Habitats, creatures associated with&amp;lt;/span&amp;gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;span class="mw-headline" id="Humanoids"&amp;gt;Humanoids&amp;lt;/span&amp;gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;span class="mw-headline" id="Hybrids"&amp;gt;Hybrids&amp;lt;/span&amp;gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;span class="mw-headline" id="Astronomical_objects,_creatures_associated_with"&amp;gt;Astronomical objects, creatures associated with&amp;lt;/span&amp;gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;span class="mw-headline" id="World"&amp;gt;World&amp;lt;/span&amp;gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;span class="mw-headline" id="Creatures_associated_with_Plants"&amp;gt;Creatures associated with Plants&amp;lt;/span&amp;gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;span class="mw-headline" id="Shapeshifters"&amp;gt;Shapeshifters&amp;lt;/span&amp;gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;span class="mw-headline" id="Creatures_associated_with_Times"&amp;gt;Creatures associated with Times&amp;lt;/span&amp;gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;span class="mw-headline" id="Undead"&amp;gt;Undead&amp;lt;/span&amp;gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;span class="mw-headline" id="Miscellaneous"&amp;gt;Miscellaneous&amp;lt;/span&amp;gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;span class="mw-headline" id="References"&amp;gt;References&amp;lt;/span&amp;gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+We don't need references, but the other headlines might be helpful in categorizing these animals. Unfortunately the headings are above the sections with the stuff we want - they aren't parents of the sections so to get the actual parts we're going to need to do something else.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org12cdc41" class="outline-4"&gt;
+&lt;h4 id="org12cdc41"&gt;Tables&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org12cdc41"&gt;
+&lt;p&gt;
+I'll grab all the tables then filter out the ones I don't want - the first three tables are admonitions that the page might not be up to snuff and the last four are references and links to other pages.
+&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;tables&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;soup&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;find_all&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"table"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;tables&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tables&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tables&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-org2b5e8d5" class="outline-4"&gt;
+&lt;h4 id="org2b5e8d5"&gt;The Table-Indices&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org2b5e8d5"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Table&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Namespace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;aquatic&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;arthropods&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;bears&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-orgfdf0b12" class="outline-4"&gt;
+&lt;h4 id="orgfdf0b12"&gt;Animals Associated With&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgfdf0b12"&gt;
+&lt;/div&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;a id="org27ddb6f"&gt;&lt;/a&gt;Aquatic and Marine Animals&lt;br&gt;
+&lt;div class="outline-text-5" id="text-org27ddb6f"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;PATTERN&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"\w+"&lt;/span&gt;
+&lt;span class="n"&gt;WEIRD&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="se"&gt;\xa0&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+&lt;span class="n"&gt;ERASE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;""&lt;/span&gt;
+
+&lt;span class="n"&gt;table&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tables&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Table&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;aquatic&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;items&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;table&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;find_all&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"li"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;DASH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;items&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;23&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;animals&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+&lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+&lt;span class="n"&gt;description&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;items&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;WEIRD&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ERASE&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;DASH&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ERASE&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;tokens&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;" ("&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;two_tokens&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tokens&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;")"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;animals&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tokens&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strip&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+    &lt;span class="n"&gt;origin&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;two_tokens&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strip&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+    &lt;span class="n"&gt;description&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;two_tokens&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strip&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+
+&lt;span class="n"&gt;beasts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pandas&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DataFrame&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;from_dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;animal&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;animals&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;origin&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;origin&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;description&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;description&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;beasts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"type"&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"Aquatic"&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TABLE&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;beasts&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides"&gt;
+
+
+&lt;colgroup&gt;
+&lt;col class="org-left"&gt;
+
+&lt;col class="org-left"&gt;
+
+&lt;col class="org-left"&gt;
+
+&lt;col class="org-left"&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th scope="col" class="org-left"&gt;animal&lt;/th&gt;
+&lt;th scope="col" class="org-left"&gt;origin&lt;/th&gt;
+&lt;th scope="col" class="org-left"&gt;description&lt;/th&gt;
+&lt;th scope="col" class="org-left"&gt;type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td class="org-left"&gt;Bake-kujira&lt;/td&gt;
+&lt;td class="org-left"&gt;Japanese&lt;/td&gt;
+&lt;td class="org-left"&gt;ghost whale&lt;/td&gt;
+&lt;td class="org-left"&gt;Aquatic&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td class="org-left"&gt;Ceffyl Dŵr&lt;/td&gt;
+&lt;td class="org-left"&gt;Welsh&lt;/td&gt;
+&lt;td class="org-left"&gt;water horse&lt;/td&gt;
+&lt;td class="org-left"&gt;Aquatic&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td class="org-left"&gt;Encantado&lt;/td&gt;
+&lt;td class="org-left"&gt;Brazil&lt;/td&gt;
+&lt;td class="org-left"&gt;shapeshifting trickster dolphins&lt;/td&gt;
+&lt;td class="org-left"&gt;Aquatic&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td class="org-left"&gt;Kelpie&lt;/td&gt;
+&lt;td class="org-left"&gt;Scottish&lt;/td&gt;
+&lt;td class="org-left"&gt;water horse&lt;/td&gt;
+&lt;td class="org-left"&gt;Aquatic&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td class="org-left"&gt;Kushtaka&lt;/td&gt;
+&lt;td class="org-left"&gt;Tlingit&lt;/td&gt;
+&lt;td class="org-left"&gt;shapeshifting "land otter man"&lt;/td&gt;
+&lt;td class="org-left"&gt;Aquatic&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td class="org-left"&gt;Selkie&lt;/td&gt;
+&lt;td class="org-left"&gt;Scottish&lt;/td&gt;
+&lt;td class="org-left"&gt;shapeshifting seal people&lt;/td&gt;
+&lt;td class="org-left"&gt;Aquatic&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+
+
+&lt;li&gt;&lt;a id="orgda3aa6e"&gt;&lt;/a&gt;Arthropods&lt;br&gt;
+&lt;div class="outline-text-5" id="text-orgda3aa6e"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;table&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tables&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Table&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;arthropods&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;animal&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+&lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+&lt;span class="n"&gt;description&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;table&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;find_all&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"li"&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;first&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;last&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"("&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;second&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;third&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;last&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;"{WEIRD}{DASH} "&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;first&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strip&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;second&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;second&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;")"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ERASE&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strip&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;third&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;third&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strip&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;animal&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;first&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;origin&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;second&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;description&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;third&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;to_append&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pandas&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DataFrame&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;from_dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="nb"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+	&lt;span class="n"&gt;animal&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;animal&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+	&lt;span class="n"&gt;origin&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;origin&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+	&lt;span class="n"&gt;description&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;description&lt;/span&gt;
+    &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;to_append&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"type"&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"Arthropod"&lt;/span&gt;
+&lt;span class="n"&gt;beasts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pandas&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;concat&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;beasts&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;to_append&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TABLE&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;to_append&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides"&gt;
+
+
+&lt;colgroup&gt;
+&lt;col class="org-left"&gt;
+
+&lt;col class="org-left"&gt;
+
+&lt;col class="org-left"&gt;
+
+&lt;col class="org-left"&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th scope="col" class="org-left"&gt;animal&lt;/th&gt;
+&lt;th scope="col" class="org-left"&gt;origin&lt;/th&gt;
+&lt;th scope="col" class="org-left"&gt;description&lt;/th&gt;
+&lt;th scope="col" class="org-left"&gt;type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td class="org-left"&gt;Anansi&lt;/td&gt;
+&lt;td class="org-left"&gt;West African&lt;/td&gt;
+&lt;td class="org-left"&gt;trickster spider&lt;/td&gt;
+&lt;td class="org-left"&gt;Arthropod&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td class="org-left"&gt;Arachne&lt;/td&gt;
+&lt;td class="org-left"&gt;Greek&lt;/td&gt;
+&lt;td class="org-left"&gt;weaver cursed into a spider&lt;/td&gt;
+&lt;td class="org-left"&gt;Arthropod&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td class="org-left"&gt;Khepri&lt;/td&gt;
+&lt;td class="org-left"&gt;Ancient Egyptian&lt;/td&gt;
+&lt;td class="org-left"&gt;beetle who pushes the sun&lt;/td&gt;
+&lt;td class="org-left"&gt;Arthropod&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td class="org-left"&gt;Tsuchigumo&lt;/td&gt;
+&lt;td class="org-left"&gt;Japanese&lt;/td&gt;
+&lt;td class="org-left"&gt;shapeshifting giant spider&lt;/td&gt;
+&lt;td class="org-left"&gt;Arthropod&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td class="org-left"&gt;Myrmecoleon&lt;/td&gt;
+&lt;td class="org-left"&gt;Christian&lt;/td&gt;
+&lt;td class="org-left"&gt;ant-lion&lt;/td&gt;
+&lt;td class="org-left"&gt;Arthropod&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td class="org-left"&gt;Myrmidons&lt;/td&gt;
+&lt;td class="org-left"&gt;Greek&lt;/td&gt;
+&lt;td class="org-left"&gt;warriors created from ants by Zeus&lt;/td&gt;
+&lt;td class="org-left"&gt;Arthropod&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td class="org-left"&gt;Jorōgumo&lt;/td&gt;
+&lt;td class="org-left"&gt;Japanese&lt;/td&gt;
+&lt;td class="org-left"&gt;ghost woman who shapeshifts into a spider&lt;/td&gt;
+&lt;td class="org-left"&gt;Arthropod&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td class="org-left"&gt;Karkinos&lt;/td&gt;
+&lt;td class="org-left"&gt;Greek&lt;/td&gt;
+&lt;td class="org-left"&gt;Cancer the crab&lt;/td&gt;
+&lt;td class="org-left"&gt;Arthropod&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td class="org-left"&gt;Mothman&lt;/td&gt;
+&lt;td class="org-left"&gt;American cryptid&lt;/td&gt;
+&lt;td class="org-left"&gt;man with moth wings and features&lt;/td&gt;
+&lt;td class="org-left"&gt;Arthropod&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td class="org-left"&gt;Pabilsag&lt;/td&gt;
+&lt;td class="org-left"&gt;Babylonian&lt;/td&gt;
+&lt;td class="org-left"&gt;Sagittarius-like creature with scorpion tail&lt;/td&gt;
+&lt;td class="org-left"&gt;Arthropod&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td class="org-left"&gt;Scorpion man&lt;/td&gt;
+&lt;td class="org-left"&gt;Babylonian&lt;/td&gt;
+&lt;td class="org-left"&gt;protector of travellers&lt;/td&gt;
+&lt;td class="org-left"&gt;Arthropod&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td class="org-left"&gt;Selket&lt;/td&gt;
+&lt;td class="org-left"&gt;Ancient Egyptian&lt;/td&gt;
+&lt;td class="org-left"&gt;scorpion death/healing goddess&lt;/td&gt;
+&lt;td class="org-left"&gt;Arthropod&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a id="org1c0761a"&gt;&lt;/a&gt;Bears&lt;br&gt;
+&lt;div class="outline-text-5" id="text-org1c0761a"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;table&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tables&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Table&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bears&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;animal&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;description&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[],&lt;/span&gt; &lt;span class="p"&gt;[],&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;table&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;find_all&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"li"&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;first&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;right&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"("&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;second&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;third&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;right&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;"){WEIRD}{DASH} "&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;animal&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;first&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;origin&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;second&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;description&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;third&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;to_append&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pandas&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DataFrame&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;from_dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="nb"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;animal&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;animal&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+	 &lt;span class="n"&gt;origin&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;origin&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+	 &lt;span class="n"&gt;description&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;description&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;beasts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pandas&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;concat&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;beasts&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;to_append&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;ignore_index&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TABLE&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;to_append&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides"&gt;
+
+
+&lt;colgroup&gt;
+&lt;col class="org-left"&gt;
+
+&lt;col class="org-left"&gt;
+
+&lt;col class="org-left"&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th scope="col" class="org-left"&gt;animal&lt;/th&gt;
+&lt;th scope="col" class="org-left"&gt;origin&lt;/th&gt;
+&lt;th scope="col" class="org-left"&gt;description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td class="org-left"&gt;Bugbear&lt;/td&gt;
+&lt;td class="org-left"&gt;Celtic&lt;/td&gt;
+&lt;td class="org-left"&gt;child-eating hobgoblin&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td class="org-left"&gt;Callisto&lt;/td&gt;
+&lt;td class="org-left"&gt;Greek&lt;/td&gt;
+&lt;td class="org-left"&gt;A nymph who was turned into a bear by Hera.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><category>lists</category><category>scraping</category><category>wikipedia</category><guid>https://necromuralist.github.io/Ape-Iron/posts/pulling-legendary-creatures-from-wikipedia/</guid><pubDate>Thu, 06 Aug 2020 22:04:35 GMT</pubDate></item><item><title>Pulling A List of Animals From Wikipedia</title><link>https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents"&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;div id="text-table-of-contents"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#orgfee1af9"&gt;Beginning&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org13e1501"&gt;Set Up&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org184ad06"&gt;Middle&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org8a009eb"&gt;Grabbing Some HTML&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org7a5fcd3"&gt;Building the Table&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org7756a2e"&gt;Cleaning Up the Table&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#orgf0d95dc"&gt;Meats&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org60be98d"&gt;Again, But With Soup This Time&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org94604aa"&gt;End&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgfee1af9" class="outline-2"&gt;
+&lt;h2 id="orgfee1af9"&gt;Beginning&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgfee1af9"&gt;
 &lt;p&gt;
 As part of my pursuit of randomness I'm creating lists of things to select from. In this case I wanted a list of animals to create a &lt;i&gt;Visual Alphabet&lt;/i&gt; and I decided to grab one from wikipedia. This is what I did.
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgca4a4ac" class="outline-3"&gt;
-&lt;h3 id="orgca4a4ac"&gt;Set Up&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgca4a4ac"&gt;
+&lt;div id="outline-container-org13e1501" class="outline-3"&gt;
+&lt;h3 id="org13e1501"&gt;Set Up&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org13e1501"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org4445994" class="outline-4"&gt;
-&lt;h4 id="org4445994"&gt;Imports&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org4445994"&gt;
+&lt;div id="outline-container-orgcecc31d" class="outline-4"&gt;
+&lt;h4 id="orgcecc31d"&gt;Imports&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgcecc31d"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# python&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;functools&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;partial&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pathlib&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Path&lt;/span&gt;
@@ -58,9 +496,9 @@ As part of my pursuit of randomness I'm creating lists of things to select from.
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org8985977" class="outline-4"&gt;
-&lt;h4 id="org8985977"&gt;Set Up Tabulate&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org8985977"&gt;
+&lt;div id="outline-container-org9e91d9c" class="outline-4"&gt;
+&lt;h4 id="org9e91d9c"&gt;Set Up Tabulate&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org9e91d9c"&gt;
 &lt;p&gt;
 This is just to make printing the pandas data-frames a little easier. &lt;a href="https://github.com/nnicandro/emacs-jupyter"&gt;emacs-jupyter&lt;/a&gt; actually does a pretty good job of rendering them as HTML like a regular jupyter notebook, but this makes it a little more readable while in emacs, plus I can control things better.
 &lt;/p&gt;
@@ -69,9 +507,9 @@ This is just to make printing the pandas data-frames a little easier. &lt;a href
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgd716945" class="outline-4"&gt;
-&lt;h4 id="orgd716945"&gt;Set Up Selenium&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgd716945"&gt;
+&lt;div id="outline-container-org3e5013f" class="outline-4"&gt;
+&lt;h4 id="org3e5013f"&gt;Set Up Selenium&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org3e5013f"&gt;
 &lt;p&gt;
 I started this using Requests-HTML because wikipedia uses JQuery to render the tables and Requests-HTML it uses &lt;a href="https://pyppeteer.github.io/pyppeteer/index.html"&gt;pyppeteer&lt;/a&gt; to render javascript (as opposed to the reqular requests that just does an HTTP GET and so leaves the tables un-rendered). Unfortunately I can't get it to work in a jupyter notebook. One problem is that both jupyter and Requests-HTML use asyncio -  using &lt;a href="https://github.com/erdewit/nest_asyncio"&gt;nest_asyncio&lt;/a&gt; allows pypeteer to run in the notebook but then I get this error:
 &lt;/p&gt;
@@ -84,20 +522,20 @@ Which looks like it might be a pypeteer error, but tracking all this down is tak
 &lt;/p&gt;
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;options&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;webdriver&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;FirefoxOptions&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;options&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_headless&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;options&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;headless&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
 &lt;span class="n"&gt;browser&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;webdriver&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Firefox&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;firefox_options&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;options&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgb3f3f7c" class="outline-2"&gt;
-&lt;h2 id="orgb3f3f7c"&gt;Middle&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgb3f3f7c"&gt;
+&lt;div id="outline-container-org184ad06" class="outline-2"&gt;
+&lt;h2 id="org184ad06"&gt;Middle&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org184ad06"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org17030aa" class="outline-3"&gt;
-&lt;h3 id="org17030aa"&gt;Grabbing Some HTML&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org17030aa"&gt;
+&lt;div id="outline-container-org8a009eb" class="outline-3"&gt;
+&lt;h3 id="org8a009eb"&gt;Grabbing Some HTML&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org8a009eb"&gt;
 &lt;p&gt;
 Just let selenium render the JQuery tables for us.
 &lt;/p&gt;
@@ -108,9 +546,9 @@ Just let selenium render the JQuery tables for us.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org082f878" class="outline-3"&gt;
-&lt;h3 id="org082f878"&gt;Building the Table&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org082f878"&gt;
+&lt;div id="outline-container-org7a5fcd3" class="outline-3"&gt;
+&lt;h3 id="org7a5fcd3"&gt;Building the Table&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org7a5fcd3"&gt;
 &lt;p&gt;
 After giving up on Requests-HTML I was using &lt;a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/#searching-the-tree"&gt;Beautiful Soup&lt;/a&gt; to pull out the table so I could give it to pandas, but then I looked at the pandas documentation and it turns out they already do this, so you don't need to, but you do need to know how many tables there are and which one you want (it returns a list of dataframes). In this case I want the last one. 
 &lt;/p&gt;
@@ -166,9 +604,9 @@ That's a little odd looking.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org5611125" class="outline-3"&gt;
-&lt;h3 id="org5611125"&gt;Cleaning Up the Table&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org5611125"&gt;
+&lt;div id="outline-container-org7756a2e" class="outline-3"&gt;
+&lt;h3 id="org7756a2e"&gt;Cleaning Up the Table&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org7756a2e"&gt;
 &lt;p&gt;
 First, what's with all the &lt;code&gt;A&lt;/code&gt; entries in the header?
 &lt;/p&gt;
@@ -250,9 +688,9 @@ Index(['Animal', 'Young', 'Female', 'Male', 'Collective noun',
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orge66389e" class="outline-3"&gt;
-&lt;h3 id="orge66389e"&gt;Meats&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orge66389e"&gt;
+&lt;div id="outline-container-orgf0d95dc" class="outline-3"&gt;
+&lt;h3 id="orgf0d95dc"&gt;Meats&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgf0d95dc"&gt;
 &lt;p&gt;
 At this point I don't know what I really want to do with this. I was originally going to just save the animal names but now the other stuff looks kind of interesting. As an aside I had to look up &lt;a href="https://en.wikipedia.org/wiki/Collateral_adjective"&gt;Collateral Adjective&lt;/a&gt; on wikipedia:
 &lt;/p&gt;
@@ -331,9 +769,9 @@ Oops. Maybe I should have looked at the table more closely.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org5db9fcc" class="outline-3"&gt;
-&lt;h3 id="org5db9fcc"&gt;Again, But With Soup This Time&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org5db9fcc"&gt;
+&lt;div id="outline-container-org60be98d" class="outline-3"&gt;
+&lt;h3 id="org60be98d"&gt;Again, But With Soup This Time&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org60be98d"&gt;
 &lt;p&gt;
 Let's see if using Beautiful Soup will help clean up the dataset a little.
 &lt;/p&gt;
@@ -762,9 +1200,9 @@ Whale: blubber
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org2319bcb" class="outline-2"&gt;
-&lt;h2 id="org2319bcb"&gt;End&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org2319bcb"&gt;
+&lt;div id="outline-container-org94604aa" class="outline-2"&gt;
+&lt;h2 id="org94604aa"&gt;End&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org94604aa"&gt;
 &lt;p&gt;
 And now to save it for later.
 &lt;/p&gt;

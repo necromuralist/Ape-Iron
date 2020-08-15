@@ -14,7 +14,7 @@
 #+OPTIONS: ^:{}
 #+TOC: headlines 2
 
-#+PROPERTY: header-args :session ~/.local/share/jupyter/runtime/kernel-f032b359-778f-4dd6-aaad-75d1a07a23a1-ssh.json
+#+PROPERTY: header-args :session ~/.local/share/jupyter/runtime/kernel-726d0a96-c4ae-49bb-be45-759c347b4732-ssh.json
 
 #+BEGIN_SRC python :results none :exports none
 %load_ext autoreload
@@ -63,7 +63,7 @@ Which looks like it might be a pypeteer error, but tracking all this down is tak
 
 #+begin_src python :results none
 options = webdriver.FirefoxOptions()
-options.set_headless()
+options.headless = True
 browser = webdriver.Firefox(firefox_options=options)
 #+end_src
 * Middle
