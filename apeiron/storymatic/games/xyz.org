@@ -1,0 +1,6 @@
+#+TITLE: XYZ
+
+1. Draw two gold cards. This is the main character, /X/
+2. Draw one gold card - this is the secondary character, /Y/.
+3. Draw one copper card - this is the source of their conflict, /Z/.
+4. Tell the story of "X is in conflict with Y about Z".

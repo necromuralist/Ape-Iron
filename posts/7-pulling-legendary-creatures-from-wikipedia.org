@@ -1,0 +1,215 @@
+#+BEGIN_COMMENT
+.. title: Pulling Legendary Creatures From Wikipedia
+.. slug: pulling-legendary-creatures-from-wikipedia
+.. date: 2020-08-06 15:04:35 UTC-07:00
+.. tags: wikipedia,scraping,lists
+.. category: Scraping
+.. link: 
+.. description: Pulling a list of legendary creatures from wikipedia.
+.. type: text
+.. status: 
+.. updated: 
+
+#+END_COMMENT
+#+OPTIONS: ^:{}
+#+TOC: headlines 2
+
+#+PROPERTY: header-args :session ~/.local/share/jupyter/runtime/kernel-605022ca-2ed5-43ff-a01f-f8b41b6b3c17-ssh.json
+
+#+BEGIN_SRC python :results none :exports none
+%load_ext autoreload
+%autoreload 2
+#+END_SRC
+* Beginning
+** Set Up
+*** Imports
+#+begin_src python :results none
+# python
+from argparse import Namespace
+from functools import partial
+import re
+
+# pypi
+from bs4 import BeautifulSoup, UnicodeDammit
+from selenium import webdriver
+from tabulate import tabulate
+
+import pandas
+#+end_src
+*** Tabulate
+#+begin_src python :results none
+TABLE = partial(tabulate, headers="keys", tablefmt="orgtbl", showindex=False)
+#+end_src
+*** Selenium
+    I'll use a headless instance of selenium-firefox to grab and render the wikipedia page.
+#+begin_src python :results none
+options = webdriver.FirefoxOptions()
+options.headless = True
+browser = webdriver.Firefox(firefox_options=options)
+#+end_src
+* Middle
+** Grab the Page and Make Some Soup
+#+begin_src python :results none
+URL = "https://en.wikipedia.org/wiki/List_of_legendary_creatures_by_type"
+
+browser.get(URL)
+#+end_src
+
+This page is a little odd in that it uses tables but the tables then contain unordered lists which seem to give pandas a hard time, so I'll have to poke around a little bit using Beautiful Soup first to figure it out.
+
+#+begin_src python :results none
+soup = BeautifulSoup(browser.page_source)
+#+end_src
+
+*** Looking at the Headings
+    The level-2 headlines describe different ways to catalog the creatures, in addition they have "span" tags within them that have the "mw-class" associated with them so we can grab those tags using Beautiful Soup's [[https://www.crummy.com/software/BeautifulSoup/bs4/doc/#css-selectors][select]] method, which uses CSS selectors.
+
+#+begin_src python
+headlines = soup.select("h2 span.mw-headline")
+for headline in headlines:
+    print(f" - {headline}")
+#+end_src
+
+ - <span class="mw-headline" id="Animals,_creatures_associated_with">Animals, creatures associated with</span>
+ - <span class="mw-headline" id="Artificial_creatures">Artificial creatures</span>
+ - <span class="mw-headline" id="Body_parts,_creatures_associated_with">Body parts, creatures associated with</span>
+ - <span class="mw-headline" id="Concepts,_creatures_associated_with">Concepts, creatures associated with</span>
+ - <span class="mw-headline" id="Demons">Demons</span>
+ - <span class="mw-headline" id="Elements,_creatures_associated_with">Elements, creatures associated with</span>
+ - <span class="mw-headline" id="Habitats,_creatures_associated_with">Habitats, creatures associated with</span>
+ - <span class="mw-headline" id="Humanoids">Humanoids</span>
+ - <span class="mw-headline" id="Hybrids">Hybrids</span>
+ - <span class="mw-headline" id="Astronomical_objects,_creatures_associated_with">Astronomical objects, creatures associated with</span>
+ - <span class="mw-headline" id="World">World</span>
+ - <span class="mw-headline" id="Creatures_associated_with_Plants">Creatures associated with Plants</span>
+ - <span class="mw-headline" id="Shapeshifters">Shapeshifters</span>
+ - <span class="mw-headline" id="Creatures_associated_with_Times">Creatures associated with Times</span>
+ - <span class="mw-headline" id="Undead">Undead</span>
+ - <span class="mw-headline" id="Miscellaneous">Miscellaneous</span>
+ - <span class="mw-headline" id="References">References</span>
+
+We don't need references, but the other headlines might be helpful in categorizing these animals. Unfortunately the headings are above the sections with the stuff we want - they aren't parents of the sections so to get the actual parts we're going to need to do something else.
+
+*** Tables
+    I'll grab all the tables then filter out the ones I don't want - the first three tables are admonitions that the page might not be up to snuff and the last four are references and links to other pages.
+#+begin_src python
+tables = soup.find_all("table")
+tables = tables[3:-4]
+print(len(tables))
+#+end_src
+
+#+RESULTS:
+: 57
+*** The Table-Indices
+#+begin_src python :results none
+Table = Namespace(
+    aquatic=0,
+    arthropods=1,
+    bears=2,
+)
+#+end_src
+*** Animals Associated With
+**** Aquatic and Marine Animals
+#+begin_src python
+PATTERN = "\w+"
+WEIRD = "\xa0"
+ERASE = ""
+
+table = tables[Table.aquatic]
+items = table.find_all("li")
+DASH = items[0].text[23]
+animals = []
+origin = []
+description = []
+for item in items:
+    text = item.text.replace(WEIRD, ERASE)
+    text = text.replace(DASH, ERASE)
+    tokens = text.split(" (")
+    two_tokens = tokens[1].split(")")
+    animals.append(tokens[0].strip())
+    origin.append(two_tokens[0].strip())
+    description.append(two_tokens[1].strip())
+
+beasts = pandas.DataFrame.from_dict(dict(
+    animal=animals,
+    origin=origin,
+    description=description))
+beasts["type"] = "Aquatic"
+print(TABLE(beasts))
+#+end_src
+
+| animal      | origin   | description                      | type    |
+|-------------+----------+----------------------------------+---------|
+| Bake-kujira | Japanese | ghost whale                      | Aquatic |
+| Ceffyl Dŵr  | Welsh    | water horse                      | Aquatic |
+| Encantado   | Brazil   | shapeshifting trickster dolphins | Aquatic |
+| Kelpie      | Scottish | water horse                      | Aquatic |
+| Kushtaka    | Tlingit  | shapeshifting "land otter man"   | Aquatic |
+| Selkie      | Scottish | shapeshifting seal people        | Aquatic |
+
+
+**** Arthropods
+#+begin_src python
+table = tables[Table.arthropods]
+animal = []
+origin = []
+description = []
+for item in table.find_all("li"):
+    first, last = item.text.split("(")
+    second, third = last.split(f"{WEIRD}{DASH} ")
+    first = first.strip()
+    second = second.replace(")", ERASE).strip()
+    third = third.strip()
+    animal.append(first)
+    origin.append(second)
+    description.append(third)
+
+to_append = pandas.DataFrame.from_dict(
+    dict(
+        animal=animal,
+        origin=origin,
+        description=description
+    )
+)
+to_append["type"] = "Arthropod"
+beasts = pandas.concat([beasts, to_append])
+print(TABLE(to_append))
+#+end_src
+
+| animal       | origin           | description                                  | type      |
+|--------------+------------------+----------------------------------------------+-----------|
+| Anansi       | West African     | trickster spider                             | Arthropod |
+| Arachne      | Greek            | weaver cursed into a spider                  | Arthropod |
+| Khepri       | Ancient Egyptian | beetle who pushes the sun                    | Arthropod |
+| Tsuchigumo   | Japanese         | shapeshifting giant spider                   | Arthropod |
+| Myrmecoleon  | Christian        | ant-lion                                     | Arthropod |
+| Myrmidons    | Greek            | warriors created from ants by Zeus           | Arthropod |
+| Jorōgumo     | Japanese         | ghost woman who shapeshifts into a spider    | Arthropod |
+| Karkinos     | Greek            | Cancer the crab                              | Arthropod |
+| Mothman      | American cryptid | man with moth wings and features             | Arthropod |
+| Pabilsag     | Babylonian       | Sagittarius-like creature with scorpion tail | Arthropod |
+| Scorpion man | Babylonian       | protector of travellers                      | Arthropod |
+| Selket       | Ancient Egyptian | scorpion death/healing goddess               | Arthropod |
+**** Bears
+#+begin_src python
+table = tables[Table.bears]
+animal, origin, description = [], [], []
+for item in table.find_all("li"):
+    first, right = item.text.split("(")
+    second, third = right.split(f"){WEIRD}{DASH} ")
+    animal.append(first)
+    origin.append(second)
+    description.append(third)
+to_append = pandas.DataFrame.from_dict(
+    dict(animal=animal,
+         origin=origin,
+         description=description)
+)
+beasts = pandas.concat([beasts, to_append], ignore_index=True)
+print(TABLE(to_append))
+#+end_src
+
+| animal   | origin   | description                                 |
+|----------+----------+---------------------------------------------|
+| Bugbear  | Celtic   | child-eating hobgoblin                      |
+| Callisto | Greek    | A nymph who was turned into a bear by Hera. |
