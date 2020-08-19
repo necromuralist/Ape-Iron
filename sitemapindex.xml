@@ -7,26 +7,34 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_scraping.xml</loc>
-  <lastmod>2020-08-10T19:03:00Z</lastmod>
+  <lastmod>2020-08-19T02:31:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/lists.xml</loc>
-  <lastmod>2020-08-10T19:03:00Z</lastmod>
+  <lastmod>2020-08-19T02:31:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/names.xml</loc>
+  <lastmod>2020-08-19T02:31:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/scraping.xml</loc>
-  <lastmod>2020-08-10T19:03:00Z</lastmod>
+  <lastmod>2020-08-19T02:31:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/social-security-administration.xml</loc>
+  <lastmod>2020-08-19T02:31:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/wikipedia.xml</loc>
-  <lastmod>2020-08-10T19:03:00Z</lastmod>
+  <lastmod>2020-08-10T19:06:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/rss.xml</loc>
-  <lastmod>2020-08-10T19:03:00Z</lastmod>
+  <lastmod>2020-08-19T02:31:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/sitemap.xml</loc>
-  <lastmod>2020-08-10T19:03:00Z</lastmod>
+  <lastmod>2020-08-19T02:31:00Z</lastmod>
  </sitemap>
 </sitemapindex>

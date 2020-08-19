@@ -1,0 +1,177 @@
+#+BEGIN_COMMENT
+.. title: Pulling Top Names From the Past 100 Years
+.. slug: pulling-top-100-names
+.. date: 2020-08-18 17:33:38 UTC-07:00
+.. tags: scraping,lists,social security administration,names
+.. category: Scraping
+.. link: 
+.. description: Pulling the top names in the United States over the last century.
+.. type: text
+.. status: 
+.. updated: 
+
+#+END_COMMENT
+#+OPTIONS: ^:{}
+#+TOC: headlines 2
+
+#+PROPERTY: header-args :session ~/.local/share/jupyter/runtime/kernel-79cf7bd7-2713-4440-a8ca-347cb167dfce-ssh.json
+
+#+BEGIN_SRC python :results none :exports none
+%load_ext autoreload
+%autoreload 2
+#+END_SRC
+* Beginning
+** Set Up
+*** Imports
+#+begin_src python :results none
+# python
+from functools import partial
+
+# pypi
+import hvplot.pandas
+import pandas
+import requests
+
+from graeae import EmbedHoloviews
+#+end_src
+*** Plotting
+#+begin_src python :results none
+SLUG = "pulling-top-100-names"
+Embed = partial(EmbedHoloviews, folder_path=f"files/posts/{SLUG}")
+#+end_src
+* Middle
+** Pulling the Table
+*** Trying a Naive Request
+#+begin_src python :results none
+URL = "https://www.ssa.gov/OACT/babynames/decades/century.html"
+response = requests.get(URL)
+assert response.ok
+#+end_src
+
+#+begin_src python :results output :exports both
+tables = pandas.read_html(response.text)
+print(len(tables))
+#+end_src
+
+#+RESULTS:
+: 1
+
+#+begin_src python :results output :exports both
+table = tables[0]
+print(table.head(1))
+#+end_src
+
+#+RESULTS:
+:   Unnamed: 0_level_0  Males          Females         
+:                 Rank   Name   Number    Name   Number
+: 0                1.0  James  4764644    Mary  3328565
+
+So it looks like it's a plain table so we don't need Selenium or something else to render javascript, but the header is a little messed up.
+
+** Cleaning Up the Table
+#+begin_src python :results output :exports both
+males = table[table.columns[1:3]]
+females = table[table.columns[3:]]
+print(males.head(1))
+#+end_src
+
+#+RESULTS:
+:    Males         
+:     Name   Number
+: 0  James  4764644
+
+*** The Last Row
+#+begin_src python :results output :exports both
+print(males.iloc[-1])
+#+end_src
+
+#+RESULTS:
+: Males  Name      Source: 100% sample based on Social Security c...
+:        Number    Source: 100% sample based on Social Security c...
+: Name: 100, dtype: object
+
+#+begin_src python :results output :exports both
+print(table.tail(1)[table.columns[-1]].values[0])
+#+end_src
+
+#+RESULTS:
+: Source: 100% sample based on Social Security card application data as of of March 2019. See the limitations of  this data source.
+
+That's interesting, but it doesn't help with what I want, which is just the names.
+
+#+begin_src python :results none
+males = males.iloc[:-1]
+females = females.iloc[:-1]
+#+end_src
+
+#+begin_src python :results output :exports both
+assert len(males) == 100
+assert len(females) == 100
+print(females.head(1))
+#+end_src
+
+#+RESULTS:
+:   Females         
+:      Name   Number
+: 0    Mary  3328565
+
+So, now to re-add the rank and add gender columns so the multi-level column headers can be re-done.
+
+#+begin_src python :results output :exports both
+males.columns = ["name", "count"]
+females.columns = ["name", "count"]
+males["gender"] = "male"
+females["gender"] = "female"
+
+males["rank"] = list(range(1, 101))
+females["rank"] = list(range(1, 101))
+
+print(males.head(1))
+#+end_src
+
+#+RESULTS:
+:     name    count gender  rank
+: 0  James  4764644   male     1
+
+Now to re-combine them.
+
+#+begin_src python :results none
+names = pandas.concat([males, females])
+#+end_src
+** Some Plotting
+   Before we can plot them we have to change the =count= column to be (you guessed it) a number since that last row with the source information prevents pandas' ability to convert the column itself.
+
+#+begin_src python :results none
+names.loc[:, "count"] = names["count"].astype(int)
+#+end_src
+
+#+begin_src python :results none
+plot = names.hvplot.bar(x="rank", y="count", by="gender").opts(
+    title="Top Male and Female Names of the Last 100 Years",
+    width=990,
+    height=780,
+    fontscale=2,
+)
+
+outcome = Embed(plot=plot, file_name="gender_plot")()
+#+end_src
+
+#+begin_src python :results output html :exports both
+print(outcome)
+#+end_src
+
+#+RESULTS:
+#+begin_export html
+<object type="text/html" data="gender_plot.html" style="width:100%" height=800>
+  <p>Figure Missing</p>
+</object>
+#+end_export
+
+Well, pretend that you don't see the x-ticks... It's interesting that the highest ranked male names have a higher count than the highest ranked female names.
+* End
+
+Time to save the table.
+
+#+begin_src python :results none
+names.to_csv("apeiron/top_100_ssa_names.csv", index=False)
+#+end_src

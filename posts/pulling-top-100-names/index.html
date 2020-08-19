@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+<head>
+<meta charset="utf-8">
+<meta content="Pulling the top names in the United States over the last century." name="description">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Pulling Top Names From the Past 100 Years | Ape Iron</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<meta content="#5670d4" name="theme-color">
+<meta content="Nikola (getnikola.com)" name="generator">
+<link href="../../rss.xml" hreflang="en" rel="alternate" title="RSS" type="application/rss+xml">
+<link href="https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/" rel="canonical"><!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]-->
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script><!--
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"
+</script>
+
+<script type="text/javascript" async
+  src="../../../assets/javascript/p5.min.js"
+</script>
+--><!-- favicons -->
+<link href="../../apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+<link href="../../favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="../../favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="../../site.webmanifest" rel="manifest">
+<meta content="Cloistered Monkey" name="author">
+<link href="../pulling-legendary-creatures-from-wikipedia/" rel="prev" title="Pulling Legendary Creatures From Wikipedia" type="text/html">
+<meta content="Ape Iron" property="og:site_name">
+<meta content="Pulling Top Names From the Past 100 Years" property="og:title">
+<meta content="https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/" property="og:url">
+<meta content="Pulling the top names in the United States over the last century." property="og:description">
+<meta content="article" property="og:type">
+<meta content="2020-08-18T17:33:38-07:00" property="article:published_time">
+<meta content="lists" property="article:tag">
+<meta content="names" property="article:tag">
+<meta content="scraping" property="article:tag">
+<meta content="social security administration" property="article:tag">
+</head>
+<body>
+<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a> <!-- Menubar -->
+<nav class="navbar navbar-expand-md static-top mb-4 navbar-light bg-light">
+<div class="container"><!-- This keeps the margins nice -->
+ <a class="navbar-brand" href="../../"><span id="blog-title">Ape Iron</span></a> <button aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#bs-navbar" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="bs-navbar">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item"><a class="nav-link" href="../../archive.html">Archive</a></li>
+<li class="nav-item"><a class="nav-link" href="../../categories/">Tags</a></li>
+<li class="nav-item"><a class="nav-link" href="../../rss.xml">RSS feed</a></li>
+<li class="nav-item dropdown"><a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Pages</a>
+<div class="dropdown-menu"><a class="dropdown-item" href="https://necromuralist.github.io/">Cloistered Monkey</a></div>
+</li>
+</ul>
+<!-- DuckDuckGo custom search -->
+<form action="https://duckduckgo.com/" class="navbar-form pull-left" id="search" method="get" name="search"><input name="sites" type="hidden" value="https://necromuralist.github.io/Ape-Iron/"><input name="k8" type="hidden" value="#444444"><input name="k9" type="hidden" value="#D51920"><input name="kt" type="hidden" value="h"><input class="span2" maxlength="255" name="q" placeholder="Search…" type="text"><input style="visibility: hidden;display:none" type="submit" value="DuckDuckGo Search"></form>
+<!-- End of custom search -->
+<ul class="navbar-nav navbar-right">
+<li class="nav-item"><a class="nav-link" href="index.org" id="sourcelink">Source</a></li>
+</ul>
+</div>
+<!-- /.navbar-collapse --></div>
+<!-- /.container --></nav>
+<!-- End of Menubar -->
+<div class="container" id="content" role="main">
+<div class="body-content"><!--Body content-->
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article">
+<header>
+<h1 class="p-name entry-title" itemprop="headline name"><a class="u-url" href=".">Pulling Top Names From the Past 100 Years</a></h1>
+<div class="metadata">
+<p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">Cloistered Monkey</span></p>
+<p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2020-08-18T17:33:38-07:00" itemprop="datePublished" title="2020-08-18 17:33">2020-08-18 17:33</time></a></p>
+<p class="sourceline"><a class="sourcelink" href="index.org">Source</a></p>
+</div>
+</header>
+<div class="e-content entry-content" itemprop="articleBody text">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org0a7ff88">Beginning</a>
+<ul>
+<li><a href="#org8455b51">Set Up</a></li>
+</ul>
+</li>
+<li><a href="#orge277003">Middle</a>
+<ul>
+<li><a href="#orgfcf65cd">Pulling the Table</a></li>
+<li><a href="#orgc8094a9">Cleaning Up the Table</a></li>
+<li><a href="#org4e29bad">Some Plotting</a></li>
+</ul>
+</li>
+<li><a href="#org22991e7">End</a></li>
+</ul>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org0a7ff88">
+<h2 id="org0a7ff88">Beginning</h2>
+<div class="outline-text-2" id="text-org0a7ff88"></div>
+<div class="outline-3" id="outline-container-org8455b51">
+<h3 id="org8455b51">Set Up</h3>
+<div class="outline-text-3" id="text-org8455b51"></div>
+<div class="outline-4" id="outline-container-org290aa13">
+<h4 id="org290aa13">Imports</h4>
+<div class="outline-text-4" id="text-org290aa13">
+<div class="highlight">
+<pre><span></span><span class="c1"># python</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
+
+<span class="c1"># pypi</span>
+<span class="kn">import</span> <span class="nn">hvplot.pandas</span>
+<span class="kn">import</span> <span class="nn">pandas</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="kn">from</span> <span class="nn">graeae</span> <span class="kn">import</span> <span class="n">EmbedHoloviews</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-orgdaa1a84">
+<h4 id="orgdaa1a84">Plotting</h4>
+<div class="outline-text-4" id="text-orgdaa1a84">
+<div class="highlight">
+<pre><span></span><span class="n">SLUG</span> <span class="o">=</span> <span class="s2">"pulling-top-100-names"</span>
+<span class="n">Embed</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">EmbedHoloviews</span><span class="p">,</span> <span class="n">folder_path</span><span class="o">=</span><span class="n">f</span><span class="s2">"files/posts/{SLUG}"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orge277003">
+<h2 id="orge277003">Middle</h2>
+<div class="outline-text-2" id="text-orge277003"></div>
+<div class="outline-3" id="outline-container-orgfcf65cd">
+<h3 id="orgfcf65cd">Pulling the Table</h3>
+<div class="outline-text-3" id="text-orgfcf65cd"></div>
+<div class="outline-4" id="outline-container-orgaeb94c1">
+<h4 id="orgaeb94c1">Trying a Naive Request</h4>
+<div class="outline-text-4" id="text-orgaeb94c1">
+<div class="highlight">
+<pre><span></span><span class="n">URL</span> <span class="o">=</span> <span class="s2">"https://www.ssa.gov/OACT/babynames/decades/century.html"</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">response</span><span class="o">.</span><span class="n">ok</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="n">tables</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tables</span><span class="p">))</span>
+</pre></div>
+<pre class="example">
+1
+</pre>
+<div class="highlight">
+<pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">tables</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+<pre class="example">
+  Unnamed: 0_level_0  Males          Females         
+                Rank   Name   Number    Name   Number
+0                1.0  James  4764644    Mary  3328565
+</pre>
+<p>So it looks like it's a plain table so we don't need Selenium or something else to render javascript, but the header is a little messed up.</p>
+</div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orgc8094a9">
+<h3 id="orgc8094a9">Cleaning Up the Table</h3>
+<div class="outline-text-3" id="text-orgc8094a9">
+<div class="highlight">
+<pre><span></span><span class="n">males</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">table</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]]</span>
+<span class="n">females</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">table</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">3</span><span class="p">:]]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">males</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+<pre class="example">
+   Males         
+    Name   Number
+0  James  4764644
+</pre></div>
+<div class="outline-4" id="outline-container-org86e9ff8">
+<h4 id="org86e9ff8">The Last Row</h4>
+<div class="outline-text-4" id="text-org86e9ff8">
+<div class="highlight">
+<pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">males</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+<pre class="example">
+Males  Name      Source: 100% sample based on Social Security c...
+       Number    Source: 100% sample based on Social Security c...
+Name: 100, dtype: object
+</pre>
+<div class="highlight">
+<pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">1</span><span class="p">)[</span><span class="n">table</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+<pre class="example">
+Source: 100% sample based on Social Security card application data as of of March 2019. See the limitations of  this data source.
+</pre>
+<p>That's interesting, but it doesn't help with what I want, which is just the names.</p>
+<div class="highlight">
+<pre><span></span><span class="n">males</span> <span class="o">=</span> <span class="n">males</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">females</span> <span class="o">=</span> <span class="n">females</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">males</span><span class="p">)</span> <span class="o">==</span> <span class="mi">100</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">females</span><span class="p">)</span> <span class="o">==</span> <span class="mi">100</span>
+<span class="k">print</span><span class="p">(</span><span class="n">females</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+<pre class="example">
+  Females         
+     Name   Number
+0    Mary  3328565
+</pre>
+<p>So, now to re-add the rank and add gender columns so the multi-level column headers can be re-done.</p>
+<div class="highlight">
+<pre><span></span><span class="n">males</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"name"</span><span class="p">,</span> <span class="s2">"count"</span><span class="p">]</span>
+<span class="n">females</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"name"</span><span class="p">,</span> <span class="s2">"count"</span><span class="p">]</span>
+<span class="n">males</span><span class="p">[</span><span class="s2">"gender"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"male"</span>
+<span class="n">females</span><span class="p">[</span><span class="s2">"gender"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"female"</span>
+
+<span class="n">males</span><span class="p">[</span><span class="s2">"rank"</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">101</span><span class="p">))</span>
+<span class="n">females</span><span class="p">[</span><span class="s2">"rank"</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">101</span><span class="p">))</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">males</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+<pre class="example">
+    name    count gender  rank
+0  James  4764644   male     1
+</pre>
+<p>Now to re-combine them.</p>
+<div class="highlight">
+<pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">males</span><span class="p">,</span> <span class="n">females</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org4e29bad">
+<h3 id="org4e29bad">Some Plotting</h3>
+<div class="outline-text-3" id="text-org4e29bad">
+<p>Before we can plot them we have to change the <code>count</code> column to be (you guessed it) a number since that last row with the source information prevents pandas' ability to convert the column itself.</p>
+<div class="highlight">
+<pre><span></span><span class="n">names</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s2">"count"</span><span class="p">]</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="s2">"count"</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="n">plot</span> <span class="o">=</span> <span class="n">names</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">"rank"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"count"</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="s2">"gender"</span><span class="p">)</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">"Top Male and Female Names of the Last 100 Years"</span><span class="p">,</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">990</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">780</span><span class="p">,</span>
+    <span class="n">fontscale</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">outcome</span> <span class="o">=</span> <span class="n">Embed</span><span class="p">(</span><span class="n">plot</span><span class="o">=</span><span class="n">plot</span><span class="p">,</span> <span class="n">file_name</span><span class="o">=</span><span class="s2">"gender_plot"</span><span class="p">)()</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">outcome</span><span class="p">)</span>
+</pre></div>
+<object data="gender_plot.html" height="800" style="width:100%" type="text/html">
+<p>Figure Missing</p>
+</object>
+<p>Well, pretend that you don't see the x-ticks… It's interesting that the highest ranked male names have a higher count than the highest ranked female names.</p>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org22991e7">
+<h2 id="org22991e7">End</h2>
+<div class="outline-text-2" id="text-org22991e7">
+<p>Time to save the table.</p>
+<div class="highlight">
+<pre><span></span><span class="n">names</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">"apeiron/top_100_ssa_names.csv"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<aside class="postpromonav">
+<nav>
+<ul class="tags" itemprop="keywords">
+<li><a class="tag p-category" href="../../categories/lists/" rel="tag">lists</a></li>
+<li><a class="tag p-category" href="../../categories/names/" rel="tag">names</a></li>
+<li><a class="tag p-category" href="../../categories/scraping/" rel="tag">scraping</a></li>
+<li><a class="tag p-category" href="../../categories/social-security-administration/" rel="tag">social security administration</a></li>
+</ul>
+<ul class="pager hidden-print">
+<li class="previous"><a href="../pulling-legendary-creatures-from-wikipedia/" rel="prev" title="Pulling Legendary Creatures From Wikipedia">Previous post</a></li>
+</ul>
+</nav>
+</aside>
+</article>
+<!--End of body content-->
+<footer id="footer">Contents © 2020 <a href="mailto:necromuralist@protonmail.com">Cloistered Monkey</a> - Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a></footer>
+</div>
+</div>
+<script src="../../assets/js/all-nocdn.js"></script>
+<script>
+
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+</script>
+</body>
+</html>

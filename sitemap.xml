@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/</loc>
-  <lastmod>2020-08-04T23:25:00Z</lastmod>
+  <lastmod>2020-08-19T02:23:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_scraping/</loc>
@@ -30,8 +30,16 @@
   <lastmod>2020-08-04T23:25:00Z</lastmod>
  </url>
  <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/names/</loc>
+  <lastmod>2020-08-19T02:23:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/scraping/</loc>
   <lastmod>2020-08-04T23:25:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/social-security-administration/</loc>
+  <lastmod>2020-08-19T02:23:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/wikipedia/</loc>
@@ -44,6 +52,14 @@
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/posts/pulling-legendary-creatures-from-wikipedia/</loc>
   <lastmod>2020-08-10T19:03:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/</loc>
+  <lastmod>2020-08-19T02:23:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/gender_plot.html</loc>
+  <lastmod>2020-08-19T02:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/posts/testing-testing/</loc>
