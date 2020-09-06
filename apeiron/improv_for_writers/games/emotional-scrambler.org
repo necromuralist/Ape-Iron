@@ -1,0 +1,10 @@
+#+TITLE: Emotional Scrambler
+
+1. Select a character you've been working on whose emotions you want to explore.
+2. Select a few random emotions.
+3. Select a random Setting and random Premise.
+4. Pick the next emotion in the list you pre-selected.
+5. Set the timer for one minute.
+6. Write either in first or third person as/about the character with the emotion
+7. Repeate 4-6 until you're out of emotions.
+8. Add another character and repeat the cycle of emotions with both character taking on the emotion whenever the session starts.
