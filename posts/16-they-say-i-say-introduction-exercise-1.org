@@ -3,7 +3,7 @@
 .. slug: they-say-i-say-introduction
 .. date: 2020-09-05 11:45:56 UTC-07:00
 .. tags: writing,exercise,rhetoric
-.. category: writing
+.. category: Writing
 .. link: 
 .. description: The first exercise in They Say, I Say.
 .. type: text
