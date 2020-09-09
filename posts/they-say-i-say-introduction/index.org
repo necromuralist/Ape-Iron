@@ -1,0 +1,29 @@
+#+BEGIN_COMMENT
+.. title: They Say, I Say Introduction: Exercises
+.. slug: they-say-i-say-introduction
+.. date: 2020-09-05 11:45:56 UTC-07:00
+.. tags: writing,exercise,rhetoric
+.. category: Writing
+.. link: 
+.. description: The first exercise in They Say, I Say.
+.. type: text
+.. status: 
+.. updated: 
+
+#+END_COMMENT
+
+* Exercise 1: Fill in the Blanks
+
+In the Introduction to /"They Say/I Say": The Moves That Matter in Academic Writing/, Gerald Graff and Cathy Birkenstein provide templates designed to /provide students with a structure for arguments so that they can learn the basic forms that experienced writers instinctually use/. Specifically, Graff and Birkenstein argue that the types of writing templates they offer /demonstrate the basic forms of argument in order to free the student to be creative while working within those forms/. As the authors themselves put it, /"Even the most avant-garde, cutting-edge artists like improvisational jazz musicians need to master the basic forms that their work improvises on, departs from, and goes beyond, or else their work will come across as uneducated child's play."/ Although some people believe /the use of templates will stifle the writer's originality/, Graff and Birkenstein insist that /using the templates will make writing more original rather than less/. In sum, then, their view is that /writers need to learn the underlying structure of argument and templates provide the best way to do so/.
+
+I /am optimistic that the authors are correct/. I my view, the types of templates that the authors recommend /are useful in both providing a prompt for the writer and a scaffolding that keeps the inexperienced writer from feeling lost/ . For instance, /this exercise forces you to summarize the authors' intent in using templates as well as provide a quote, which I likely would not have done otherwise/. In addition, /because the basic sentences are pre-ordained, I didn't have to spend time worrying about form and style/. Some might object, of course, on the grounds that /simply filling in blanks is not the same thing as writing coherent sentences and paragraphs entirely from scratch/. Yet I would argue that /one has to learn to walk before learning to run, and while attempting to only use templates might prove stifling eventually, they are a valid way to start/. Overall, then, I believe /the use of templates can work as prompts to teach the structure of argument and, perhaps more importantly, to generate writing and thinking/ - an important point to make given /the need to make our thoughts both heard and understood by others in an ever more polarized world/.
+* Exercise 2: Roll Your Own Template
+** Template Source
+  An essay by Emily Poe, then a student at Furman University.
+
+#+begin_quote
+The term “vegetarian” tends to be synonymous with “tree-hugger” in many people’s minds. /They see/ vegetarianism as a cult that brainwashes its followers into eliminating an essential part of their daily diets for an abstract goal of “animal welfare.” /However/, few vegetarians choose their lifestyle just to follow the crowd. /On the contrary/, many of these supposedly brainwashed people are actually independent thinkers, concerned citizens, and compassionate human beings. /For the truth/ is that there are many very good reasons for giving up meat. Perhaps the best reasons are to improve the environment, to encourage humane treatment of livestock, or to enhance one’s own health. /In this essay/, then, closely examining a vegetarian diet as compared to a meat-eater’s diet will show that vegetarianism is clearly the better option for sustaining the Earth and all its inhabitants.
+#+end_quote
+** Fill in the Blanks
+<thesis>. /They see/ <something>. /However/, <this is not so>. /On the contrary/, <instead>. /For the truth/ <>. /Perhaps the best reasons are/ <>. /In this essay/, <this is what I'll show>.
+

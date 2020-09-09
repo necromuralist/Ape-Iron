@@ -15,15 +15,35 @@
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/archive.html</loc>
-  <lastmod>2020-08-10T19:03:00Z</lastmod>
+  <lastmod>2020-09-09T23:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/</loc>
-  <lastmod>2020-08-19T02:23:00Z</lastmod>
+  <lastmod>2020-09-09T20:30:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_doggerel/</loc>
+  <lastmod>2020-09-09T20:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_scraping/</loc>
   <lastmod>2020-08-04T23:25:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_writing/</loc>
+  <lastmod>2020-09-05T20:57:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/doggerel/</loc>
+  <lastmod>2020-09-09T20:30:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/exercise/</loc>
+  <lastmod>2020-09-05T20:57:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/exercises/</loc>
+  <lastmod>2020-09-09T20:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/lists/</loc>
@@ -32,6 +52,10 @@
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/names/</loc>
   <lastmod>2020-08-19T02:23:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/rhetoric/</loc>
+  <lastmod>2020-09-05T20:57:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/scraping/</loc>
@@ -44,6 +68,18 @@
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/wikipedia/</loc>
   <lastmod>2020-08-04T23:25:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/writing/</loc>
+  <lastmod>2020-09-05T20:57:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/posts/in-the-land-before-the-monkey/</loc>
+  <lastmod>2020-09-09T23:38:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/posts/in-the-time-before-the-monkey/</loc>
+  <lastmod>2020-09-09T20:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/</loc>
@@ -62,7 +98,11 @@
   <lastmod>2020-08-19T02:31:00Z</lastmod>
  </url>
  <url>
-  <loc>https://necromuralist.github.io/Ape-Iron/posts/testing-testing/</loc>
-  <lastmod>2020-08-04T23:25:00Z</lastmod>
+  <loc>https://necromuralist.github.io/Ape-Iron/posts/they-say-exercises/</loc>
+  <lastmod>2020-09-09T20:30:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/posts/they-say-i-say-introduction/</loc>
+  <lastmod>2020-09-05T20:57:00Z</lastmod>
  </url>
 </urlset>

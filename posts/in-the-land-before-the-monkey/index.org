@@ -1,0 +1,46 @@
+#+BEGIN_COMMENT
+.. title: In the time of Boar and Monkey
+.. slug: in-the-land-before-the-monkey
+.. date: 2020-09-09 13:12:13 UTC-07:00
+.. tags: doggerel
+.. category: Doggerel
+.. link: 
+.. description: I don't know, just random words.
+.. type: text
+.. status:
+.. updated: 
+
+#+END_COMMENT
+
+#+begin_verse
+In the time of boar and Monkey,
+When Death became a painter,
+Love forgot its mother's name,
+And new memories burn fainter.
+
+Sitting on the front porch,
+Eating screaming greens,
+We sang a song of six-fingers,
+In unkown Cantonese.
+
+Down on the mountain,
+Riding to the Top,
+Father rode side-saddle,
+The Other rode to crop.
+
+Covid came for cannabis,
+And stayed around for meth,
+Our planet burned around us,
+While Juniors breathed out death.
+
+The rage didn't kill us,
+It had no monopoly,
+I watched it all through opaque glass,
+Looking out for me.
+
+Still the Rabbit sits backwards-look-away
+Muttering her grumbles,
+Through her dark of day,
+And the Spiders sing around my head - 
+"We will never go away."
+#+end_verse
