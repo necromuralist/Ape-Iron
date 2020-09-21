@@ -7,12 +7,15 @@ department store santa
 ex-superhero
 gambler
 graffiti writer
+hitchiker
 hunter
 ice cream truck driver
 keeper of a family tradition
 member of the clergy
+mortician
 neglected sibling
 new parent
+not-so-good samaritan
 nudist
 person in professional disgrace
 person who asks what no one ever asks
@@ -35,5 +38,6 @@ snob
 space alien disguised as a person
 subject of a medical experiment
 survivor
+toy maker
 vet
 waiter

@@ -1,0 +1,554 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>countries_by_area</title>
+      
+      
+        
+          
+        <style>
+            .panel-widget-box {
+                	min-height: 20px;
+                	background-color: #f5f5f5;
+                	border: 1px solid #e3e3e3 !important;
+                	border-radius: 4px;
+                	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+                	box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+                	overflow-x: hidden;
+                	overflow-y: hidden;
+                }
+
+                .scrollable {
+                  overflow: scroll;
+                }
+
+                progress {
+                	appearance: none;
+                	-moz-appearance: none;
+                	-webkit-appearance: none;
+
+                	border: none;
+                	height: 20px;
+                	background-color: whiteSmoke;
+                	border-radius: 3px;
+                	box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+                	color: royalblue;
+                	position: relative;
+                	margin: 0 0 1.5em;
+                }
+
+                progress[value]::-webkit-progress-bar {
+                	background-color: whiteSmoke;
+                	border-radius: 3px;
+                	box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+                }
+
+                progress[value]::-webkit-progress-value {
+                	position: relative;
+
+                	background-size: 35px 20px, 100% 100%, 100% 100%;
+                	border-radius:3px;
+                }
+
+                progress.active:not([value])::before {
+                	background-position: 10%;
+                	animation-name: stripes;
+                	animation-duration: 3s;
+                	animation-timing-function: linear;
+                	animation-iteration-count: infinite;
+                }
+
+                progress[value]::-moz-progress-bar {
+                	background-size: 35px 20px, 100% 100%, 100% 100%;
+                	border-radius:3px;
+                }
+
+                progress:not([value])::-moz-progress-bar {
+                	border-radius:3px;
+                	background:
+                	linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, 0.2) 33%, rgba(0, 0, 0, 0.2) 66%, transparent 66%) left/2.5em 1.5em;
+
+                }
+
+                progress.active:not([value])::-moz-progress-bar {
+                	background-position: 10%;
+                	animation-name: stripes;
+                	animation-duration: 3s;
+                	animation-timing-function: linear;
+                	animation-iteration-count: infinite;
+                }
+
+                progress.active:not([value])::-webkit-progress-bar {
+                	background-position: 10%;
+                	animation-name: stripes;
+                	animation-duration: 3s;
+                	animation-timing-function: linear;
+                	animation-iteration-count: infinite;
+                }
+
+                progress.primary[value]::-webkit-progress-value { background-color: #007bff; }
+                progress.primary:not([value])::before { background-color: #007bff; }
+                progress.primary:not([value])::-webkit-progress-bar { background-color: #007bff; }
+                progress.primary::-moz-progress-bar { background-color: #007bff; }
+
+                progress.secondary[value]::-webkit-progress-value { background-color: #6c757d; }
+                progress.secondary:not([value])::before { background-color: #6c757d; }
+                progress.secondary:not([value])::-webkit-progress-bar { background-color: #6c757d; }
+                progress.secondary::-moz-progress-bar { background-color: #6c757d; }
+
+                progress.success[value]::-webkit-progress-value { background-color: #28a745; }
+                progress.success:not([value])::before { background-color: #28a745; }
+                progress.success:not([value])::-webkit-progress-bar { background-color: #28a745; }
+                progress.success::-moz-progress-bar { background-color: #28a745; }
+
+                progress.danger[value]::-webkit-progress-value { background-color: #dc3545; }
+                progress.danger:not([value])::before { background-color: #dc3545; }
+                progress.danger:not([value])::-webkit-progress-bar { background-color: #dc3545; }
+                progress.danger::-moz-progress-bar { background-color: #dc3545; }
+
+                progress.warning[value]::-webkit-progress-value { background-color: #ffc107; }
+                progress.warning:not([value])::before { background-color: #ffc107; }
+                progress.warning:not([value])::-webkit-progress-bar { background-color: #ffc107; }
+                progress.warning::-moz-progress-bar { background-color: #ffc107; }
+
+                progress.info[value]::-webkit-progress-value { background-color: #17a2b8; }
+                progress.info:not([value])::before { background-color: #17a2b8; }
+                progress.info:not([value])::-webkit-progress-bar { background-color: #17a2b8; }
+                progress.info::-moz-progress-bar { background-color: #17a2b8; }
+
+                progress.light[value]::-webkit-progress-value { background-color: #f8f9fa; }
+                progress.light:not([value])::before { background-color: #f8f9fa; }
+                progress.light:not([value])::-webkit-progress-bar { background-color: #f8f9fa; }
+                progress.light::-moz-progress-bar { background-color: #f8f9fa; }
+
+                progress.dark[value]::-webkit-progress-value { background-color: #343a40; }
+                progress.dark:not([value])::-webkit-progress-bar { background-color: #343a40; }
+                progress.dark:not([value])::before { background-color: #343a40; }
+                progress.dark::-moz-progress-bar { background-color: #343a40; }
+
+                progress:not([value])::-webkit-progress-bar {
+                	border-radius: 3px;
+                	background:
+                	linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, 0.2) 33%, rgba(0, 0, 0, 0.2) 66%, transparent 66%) left/2.5em 1.5em;
+                }
+                progress:not([value])::before {
+                	content:" ";
+                	position:absolute;
+                	height: 20px;
+                	top:0;
+                	left:0;
+                	right:0;
+                	bottom:0;
+                	border-radius: 3px;
+                	background:
+                	linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, 0.2) 33%, rgba(0, 0, 0, 0.2) 66%, transparent 66%) left/2.5em 1.5em;
+                }
+
+                @keyframes stripes {
+                  from {background-position: 0%}
+                  to {background-position: 100%}
+                }
+
+        </style>
+        <style>
+            .codehilite .hll { background-color: #ffffcc }
+                .codehilite  { background: #f8f8f8; }
+                .codehilite .c { color: #408080; font-style: italic } /* Comment */
+                .codehilite .err { border: 1px solid #FF0000 } /* Error */
+                .codehilite .k { color: #008000; font-weight: bold } /* Keyword */
+                .codehilite .o { color: #666666 } /* Operator */
+                .codehilite .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+                .codehilite .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+                .codehilite .cp { color: #BC7A00 } /* Comment.Preproc */
+                .codehilite .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+                .codehilite .c1 { color: #408080; font-style: italic } /* Comment.Single */
+                .codehilite .cs { color: #408080; font-style: italic } /* Comment.Special */
+                .codehilite .gd { color: #A00000 } /* Generic.Deleted */
+                .codehilite .ge { font-style: italic } /* Generic.Emph */
+                .codehilite .gr { color: #FF0000 } /* Generic.Error */
+                .codehilite .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+                .codehilite .gi { color: #00A000 } /* Generic.Inserted */
+                .codehilite .go { color: #888888 } /* Generic.Output */
+                .codehilite .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+                .codehilite .gs { font-weight: bold } /* Generic.Strong */
+                .codehilite .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+                .codehilite .gt { color: #0044DD } /* Generic.Traceback */
+                .codehilite .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+                .codehilite .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+                .codehilite .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+                .codehilite .kp { color: #008000 } /* Keyword.Pseudo */
+                .codehilite .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+                .codehilite .kt { color: #B00040 } /* Keyword.Type */
+                .codehilite .m { color: #666666 } /* Literal.Number */
+                .codehilite .s { color: #BA2121 } /* Literal.String */
+                .codehilite .na { color: #7D9029 } /* Name.Attribute */
+                .codehilite .nb { color: #008000 } /* Name.Builtin */
+                .codehilite .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+                .codehilite .no { color: #880000 } /* Name.Constant */
+                .codehilite .nd { color: #AA22FF } /* Name.Decorator */
+                .codehilite .ni { color: #999999; font-weight: bold } /* Name.Entity */
+                .codehilite .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+                .codehilite .nf { color: #0000FF } /* Name.Function */
+                .codehilite .nl { color: #A0A000 } /* Name.Label */
+                .codehilite .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+                .codehilite .nt { color: #008000; font-weight: bold } /* Name.Tag */
+                .codehilite .nv { color: #19177C } /* Name.Variable */
+                .codehilite .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+                .codehilite .w { color: #bbbbbb } /* Text.Whitespace */
+                .codehilite .mb { color: #666666 } /* Literal.Number.Bin */
+                .codehilite .mf { color: #666666 } /* Literal.Number.Float */
+                .codehilite .mh { color: #666666 } /* Literal.Number.Hex */
+                .codehilite .mi { color: #666666 } /* Literal.Number.Integer */
+                .codehilite .mo { color: #666666 } /* Literal.Number.Oct */
+                .codehilite .sa { color: #BA2121 } /* Literal.String.Affix */
+                .codehilite .sb { color: #BA2121 } /* Literal.String.Backtick */
+                .codehilite .sc { color: #BA2121 } /* Literal.String.Char */
+                .codehilite .dl { color: #BA2121 } /* Literal.String.Delimiter */
+                .codehilite .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+                .codehilite .s2 { color: #BA2121 } /* Literal.String.Double */
+                .codehilite .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+                .codehilite .sh { color: #BA2121 } /* Literal.String.Heredoc */
+                .codehilite .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+                .codehilite .sx { color: #008000 } /* Literal.String.Other */
+                .codehilite .sr { color: #BB6688 } /* Literal.String.Regex */
+                .codehilite .s1 { color: #BA2121 } /* Literal.String.Single */
+                .codehilite .ss { color: #19177C } /* Literal.String.Symbol */
+                .codehilite .bp { color: #008000 } /* Name.Builtin.Pseudo */
+                .codehilite .fm { color: #0000FF } /* Name.Function.Magic */
+                .codehilite .vc { color: #19177C } /* Name.Variable.Class */
+                .codehilite .vg { color: #19177C } /* Name.Variable.Global */
+                .codehilite .vi { color: #19177C } /* Name.Variable.Instance */
+                .codehilite .vm { color: #19177C } /* Name.Variable.Magic */
+                .codehilite .il { color: #666666 } /* Literal.Number.Integer.Long */
+
+                .markdown h1 { margin-block-start: 0.34em }
+                .markdown h2 { margin-block-start: 0.42em }
+                .markdown h3 { margin-block-start: 0.5em }
+                .markdown h4 { margin-block-start: 0.67em }
+                .markdown h5 { margin-block-start: 0.84em }
+                .markdown h6 { margin-block-start: 1.17em }
+                .markdown ul { padding-inline-start: 2em }
+                .markdown ol { padding-inline-start: 2em }
+                .markdown strong { font-weight: 600 }
+                .markdown a { color: -webkit-link }
+                .markdown a { color: -moz-hyperlinkText }
+
+        </style>
+        <style>
+            .json-formatter-row {
+                  font-family: monospace;
+                }
+                .json-formatter-row,
+                .json-formatter-row a,
+                .json-formatter-row a:hover {
+                  color: black;
+                  text-decoration: none;
+                }
+                .json-formatter-row .json-formatter-row {
+                  margin-left: 1rem;
+                }
+                .json-formatter-row .json-formatter-children.json-formatter-empty {
+                  opacity: 0.5;
+                  margin-left: 1rem;
+                }
+                .json-formatter-row .json-formatter-children.json-formatter-empty:after {
+                  display: none;
+                }
+                .json-formatter-row .json-formatter-children.json-formatter-empty.json-formatter-object:after {
+                  content: "No properties";
+                }
+                .json-formatter-row .json-formatter-children.json-formatter-empty.json-formatter-array:after {
+                  content: "[]";
+                }
+                .json-formatter-row .json-formatter-string,
+                .json-formatter-row .json-formatter-stringifiable {
+                  color: green;
+                  white-space: pre;
+                  word-wrap: break-word;
+                }
+                .json-formatter-row .json-formatter-number {
+                  color: blue;
+                }
+                .json-formatter-row .json-formatter-boolean {
+                  color: red;
+                }
+                .json-formatter-row .json-formatter-null {
+                  color: #855A00;
+                }
+                .json-formatter-row .json-formatter-undefined {
+                  color: #ca0b69;
+                }
+                .json-formatter-row .json-formatter-function {
+                  color: #FF20ED;
+                }
+                .json-formatter-row .json-formatter-date {
+                  background-color: rgba(0, 0, 0, 0.05);
+                }
+                .json-formatter-row .json-formatter-url {
+                  text-decoration: underline;
+                  color: blue;
+                  cursor: pointer;
+                }
+                .json-formatter-row .json-formatter-bracket {
+                  color: blue;
+                }
+                .json-formatter-row .json-formatter-key {
+                  color: #00008B;
+                  padding-right: 0.2rem;
+                }
+                .json-formatter-row .json-formatter-toggler-link {
+                  cursor: pointer;
+                }
+                .json-formatter-row .json-formatter-toggler {
+                  line-height: 1.2rem;
+                  font-size: 0.7rem;
+                  vertical-align: middle;
+                  opacity: 0.6;
+                  cursor: pointer;
+                  padding-right: 0.2rem;
+                }
+                .json-formatter-row .json-formatter-toggler:after {
+                  display: inline-block;
+                  transition: transform 100ms ease-in;
+                  content: "\25BA";
+                }
+                .json-formatter-row > a > .json-formatter-preview-text {
+                  opacity: 0;
+                  transition: opacity 0.15s ease-in;
+                  font-style: italic;
+                }
+                .json-formatter-row:hover > a > .json-formatter-preview-text {
+                  opacity: 0.6;
+                }
+                .json-formatter-row.json-formatter-open > .json-formatter-toggler-link .json-formatter-toggler:after {
+                  transform: rotate(90deg);
+                }
+                .json-formatter-row.json-formatter-open > .json-formatter-children:after {
+                  display: inline-block;
+                }
+                .json-formatter-row.json-formatter-open > a > .json-formatter-preview-text {
+                  display: none;
+                }
+                .json-formatter-row.json-formatter-open.json-formatter-empty:after {
+                  display: block;
+                }
+                .json-formatter-dark.json-formatter-row {
+                  font-family: monospace;
+                }
+                .json-formatter-dark.json-formatter-row,
+                .json-formatter-dark.json-formatter-row a,
+                .json-formatter-dark.json-formatter-row a:hover {
+                  color: white;
+                  text-decoration: none;
+                }
+                .json-formatter-dark.json-formatter-row .json-formatter-row {
+                  margin-left: 1rem;
+                }
+                .json-formatter-dark.json-formatter-row .json-formatter-children.json-formatter-empty {
+                  opacity: 0.5;
+                  margin-left: 1rem;
+                }
+                .json-formatter-dark.json-formatter-row .json-formatter-children.json-formatter-empty:after {
+                  display: none;
+                }
+                .json-formatter-dark.json-formatter-row .json-formatter-children.json-formatter-empty.json-formatter-object:after {
+                  content: "No properties";
+                }
+                .json-formatter-dark.json-formatter-row .json-formatter-children.json-formatter-empty.json-formatter-array:after {
+                  content: "[]";
+                }
+                .json-formatter-dark.json-formatter-row .json-formatter-string,
+                .json-formatter-dark.json-formatter-row .json-formatter-stringifiable {
+                  color: #31F031;
+                  white-space: pre;
+                  word-wrap: break-word;
+                }
+                .json-formatter-dark.json-formatter-row .json-formatter-number {
+                  color: #66C2FF;
+                }
+                .json-formatter-dark.json-formatter-row .json-formatter-boolean {
+                  color: #EC4242;
+                }
+                .json-formatter-dark.json-formatter-row .json-formatter-null {
+                  color: #EEC97D;
+                }
+                .json-formatter-dark.json-formatter-row .json-formatter-undefined {
+                  color: #ef8fbe;
+                }
+                .json-formatter-dark.json-formatter-row .json-formatter-function {
+                  color: #FD48CB;
+                }
+                .json-formatter-dark.json-formatter-row .json-formatter-date {
+                  background-color: rgba(255, 255, 255, 0.05);
+                }
+                .json-formatter-dark.json-formatter-row .json-formatter-url {
+                  text-decoration: underline;
+                  color: #027BFF;
+                  cursor: pointer;
+                }
+                .json-formatter-dark.json-formatter-row .json-formatter-bracket {
+                  color: #9494FF;
+                }
+                .json-formatter-dark.json-formatter-row .json-formatter-key {
+                  color: #23A0DB;
+                  padding-right: 0.2rem;
+                }
+                .json-formatter-dark.json-formatter-row .json-formatter-toggler-link {
+                  cursor: pointer;
+                }
+                .json-formatter-dark.json-formatter-row .json-formatter-toggler {
+                  line-height: 1.2rem;
+                  font-size: 0.7rem;
+                  vertical-align: middle;
+                  opacity: 0.6;
+                  cursor: pointer;
+                  padding-right: 0.2rem;
+                }
+                .json-formatter-dark.json-formatter-row .json-formatter-toggler:after {
+                  display: inline-block;
+                  transition: transform 100ms ease-in;
+                  content: "\25BA";
+                }
+                .json-formatter-dark.json-formatter-row > a > .json-formatter-preview-text {
+                  opacity: 0;
+                  transition: opacity 0.15s ease-in;
+                  font-style: italic;
+                }
+                .json-formatter-dark.json-formatter-row:hover > a > .json-formatter-preview-text {
+                  opacity: 0.6;
+                }
+                .json-formatter-dark.json-formatter-row.json-formatter-open > .json-formatter-toggler-link .json-formatter-toggler:after {
+                  transform: rotate(90deg);
+                }
+                .json-formatter-dark.json-formatter-row.json-formatter-open > .json-formatter-children:after {
+                  display: inline-block;
+                }
+                .json-formatter-dark.json-formatter-row.json-formatter-open > a > .json-formatter-preview-text {
+                  display: none;
+                }
+                .json-formatter-dark.json-formatter-row.json-formatter-open.json-formatter-empty:after {
+                  display: block;
+                }
+
+        </style>
+        <style>
+            table.panel-df {
+                    margin-left: auto;
+                    margin-right: auto;
+                    border: none;
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                    color: black;
+                    font-size: 12px;
+                    table-layout: fixed;
+                    width: 100%;
+                }
+
+                .panel-df tr, .panel-df th, .panel-df td {
+                    text-align: right;
+                    vertical-align: middle;
+                    padding: 0.5em 0.5em !important;
+                    line-height: normal;
+                    white-space: normal;
+                    max-width: none;
+                    border: none;
+                }
+
+                .panel-df tbody {
+                    display: table-row-group;
+                    vertical-align: middle;
+                    border-color: inherit;
+                }
+
+                .panel-df tbody tr:nth-child(odd) {
+                    background: #f5f5f5;
+                }
+
+                .panel-df thead {
+                    border-bottom: 1px solid black;
+                    vertical-align: bottom;
+                }
+
+                .panel-df tr:hover {
+                    background: lightblue !important;
+                    cursor: pointer;
+                }
+
+        </style>
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.1.1.min.js" integrity="sha384-kLr4fYcqcSpbuI95brIH3vnnYCquzzSxHPU6XGQCIkQRGJwhg0StNbj1eegrHs12" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="8506c468-4d32-484e-ae45-8e37d29d91dc" data-root-id="9693"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="9869">
+          {"69df4a1e-1793-4a78-a0c4-5114a5d3c513":{"roots":{"references":[{"attributes":{"margin":[5,5,5,5],"name":"HSpacer15905","sizing_mode":"stretch_width"},"id":"9694","type":"Spacer"},{"attributes":{"children":[{"id":"9694"},{"id":"9698"},{"id":"9755"}],"margin":[0,0,0,0],"name":"Row15901","tags":["embedded"]},"id":"9693","type":"Row"},{"attributes":{},"id":"9705","type":"CategoricalScale"},{"attributes":{"margin":[5,5,5,5],"name":"HSpacer15906","sizing_mode":"stretch_width"},"id":"9755","type":"Spacer"},{"attributes":{},"id":"9738","type":"CategoricalTickFormatter"},{"attributes":{},"id":"9708","type":"BasicTicker"},{"attributes":{"axis_label":"Area","bounds":"auto","formatter":{"id":"9736"},"major_label_orientation":"horizontal","ticker":{"id":"9708"}},"id":"9707","type":"LinearAxis"},{"attributes":{"bottom_units":"screen","fill_alpha":0.5,"fill_color":"lightgrey","left_units":"screen","level":"overlay","line_alpha":1.0,"line_color":"black","line_dash":[4,4],"line_width":2,"right_units":"screen","top_units":"screen"},"id":"9719","type":"BoxAnnotation"},{"attributes":{"axis":{"id":"9707"},"grid_line_color":null,"ticker":null},"id":"9710","type":"Grid"},{"attributes":{},"id":"9712","type":"CategoricalTicker"},{"attributes":{"fill_alpha":{"value":0.2},"fill_color":{"value":"#1f77b3"},"height":{"value":0.8},"line_alpha":{"value":0.2},"right":{"field":"Area"},"y":{"field":"Country"}},"id":"9732","type":"HBar"},{"attributes":{"axis":{"id":"9711"},"dimension":1,"grid_line_color":null,"ticker":null},"id":"9713","type":"Grid"},{"attributes":{"overlay":{"id":"9719"}},"id":"9717","type":"BoxZoomTool"},{"attributes":{},"id":"9715","type":"PanTool"},{"attributes":{"end":63260999.981,"reset_end":63260999.981,"reset_start":0.0,"tags":[[["Area","Area",null]]]},"id":"9695","type":"Range1d"},{"attributes":{},"id":"9714","type":"SaveTool"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b3"},"height":{"value":0.8},"line_alpha":{"value":0.1},"right":{"field":"Area"},"y":{"field":"Country"}},"id":"9731","type":"HBar"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","tools":[{"id":"9697"},{"id":"9714"},{"id":"9715"},{"id":"9716"},{"id":"9717"},{"id":"9718"}]},"id":"9720","type":"Toolbar"},{"attributes":{},"id":"9728","type":"Selection"},{"attributes":{"data":{"Area":{"__ndarray__":"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","dtype":"float64","order":"little","shape":[253]},"Country":["Vatican City[note 1]","Monaco","Gibraltar (United Kingdom)","Tokelau (New Zealand)","Cocos (Keeling) Islands (Australia)","Saba (Netherlands)","Saint Barth\u00e9lemy (France)","Nauru","Sint Eustatius (Netherlands)","Tuvalu","Sint Maarten (Netherlands)","Norfolk Island (Australia)","Pitcairn Islands (United Kingdom)","Bermuda (United Kingdom)","Saint Martin (France)","San Marino","Guernsey (United Kingdom)","Anguilla (United Kingdom)","Montserrat (United Kingdom)","Macau (China)","Jersey (United Kingdom)","Christmas Island (Australia)","Wallis &amp; Futuna (France)","British Virgin Islands (United Kingdom)","Liechtenstein","Aruba (Netherlands)","Marshall Islands","American Samoa (United States)","Cook Islands (New Zealand)","Cayman Islands (United Kingdom)","Niue (New Zealand)","Saint Kitts and Nevis","Bonaire (Netherlands)","Maldives","Malta","Grenada","United States Virgin Islands (United States)","Mayotte (France)","Saint Vincent and the Grenadines","Saint Helena, Ascension and Tristan da Cunha (United Kingdom)","Barbados","Antigua and Barbuda","Cura\u00e7ao (Netherlands)","Palau","Seychelles","Northern Mariana Islands (United States)","Andorra","Turks and Caicos Islands (United Kingdom)","Guam (United States)","Isle of Man (United Kingdom)","Saint Lucia","Federated States of Micronesia","Tonga","Singapore","Dominica","Bahrain","Kiribati","S\u00e3o Tom\u00e9 and Pr\u00edncipe","Hong Kong (China)","Martinique (France)","Faroe Islands (Denmark)","\u00c5land Islands (Finland)","Guadeloupe (France)","Comoros","Mauritius","R\u00e9union (France)","Luxembourg","Samoa","Northern Cyprus[note 4]","French Polynesia (France)","South Ossetia[note 9]","Cape Verde","Transnistria[note 3]","Trinidad and Tobago","Brunei","Cyprus","Palestine","Saint Pierre and Miquelon (France)","Abkhazia[note 6]","Puerto Rico (United States)","Lebanon","Gambia","Kosovo[note 2]","Jamaica","Artsakh[note 10]","Qatar","Falkland Islands (United Kingdom)","Vanuatu","Montenegro","Bahamas","Timor-Leste","Eswatini (Swaziland)","Kuwait","Fiji","New Caledonia (France)","Slovenia","El Salvador","Israel","Belize","Djibouti","North Macedonia","Rwanda","Haiti","Burundi","Equatorial Guinea","Solomon Islands","Albania","Armenia","Lesotho","Belgium","Moldova","Guinea-Bissau","Taiwan","Bhutan","Switzerland","Netherlands","Denmark","Estonia","Dominican Republic","Slovakia","Costa Rica","Bosnia and Herzegovina","Croatia","Togo","Svalbard and Jan Mayen (Norway)","Latvia","Lithuania","Sri Lanka","Georgia","Ireland","Sierra Leone","Panama","Serbia","Czech Republic","United Arab Emirates","Austria","French Guiana (France)","Azerbaijan","Jordan","Portugal","Hungary","Liberia","South Korea","Iceland","Guatemala","Cuba","Bulgaria","Honduras","Benin","Malawi","North Korea","Eritrea","Nicaragua","Greece","Tajikistan","Bangladesh","Nepal","Tunisia","Suriname","Somaliland[note 8]","Uruguay[note 7][clarification needed]","Cambodia","Syria","Senegal","Kyrgyzstan","Belarus","Guyana","Laos","Romania","Ghana","Uganda","United Kingdom","Guinea","Western Sahara[note 12]","Gabon","New Zealand","Burkina Faso","Ecuador","Philippines","Italy","Oman","Poland","Ivory Coast","Norway","Malaysia","Vietnam","Finland","Republic of the Congo","Germany","Japan","Zimbabwe","Paraguay","Iraq","Morocco","Uzbekistan","Sweden","Yemen","Papua New Guinea","Cameroon","Turkmenistan","Spain","Thailand","France","Botswana","Kenya","Madagascar","Ukraine [note 5]","Central African Republic","Somalia","South Sudan","Afghanistan","Myanmar","Zambia","Chile","Turkey","Mozambique","Pakistan","Namibia","Venezuela","Nigeria","Tanzania","Egypt","Mauritania","Ethiopia","Bolivia","Colombia","Niger","South Africa","Angola","Mali","Chad","Peru","Mongolia","Iran","Libya","Sudan","Indonesia","Mexico","Saudi Arabia","Greenland (Denmark)","Democratic Republic of the Congo","Algeria","Kazakhstan","Argentina","India","Australia","Brazil","China","United States","Canada","Russia[note 11]","World (land only, excluding Antarctica)","World (land only)"],"Density":{"__ndarray__":"AAAAAAC0okAAAAAAYPrnQAAAAAAAEslAAAAAAACwdkAAAAAAAEBZQAAAAAAAQHhAAAAAAAA0k0AAAAAAAJSVQAAAAAAAoHhAAAAAAAAIkEAAAAAAAISpQAAAAAAAIGBAzczMzMzMCEAAAAAAANKoQAAAAAAA4JpAAAAAAAD8lkAAAAAAAEagQAAAAAAAsHZAAAAAAABAX0AAAAAA4MHqQAAAAAAALqJAAAAAAACAQ0AAAAAAAIBqQAAAAAAAQIFAAAAAAABog0AAAAAAAECZQAAAAAAAAIlAAAAAAAB4h0AAAAAAAOBkQAAAAAAAkIRAAAAAAAAAMEAAAAAAAOiAQAAAAAAAQGVAAAAAAAByqUAAAAAAAIewQAAAAAAAmIlAAAAAAAAgiEAAAAAAAMCbQAAAAAAAAIdAAAAAAACAQkAAAAAAAASbQAAAAAAAEINAAAAAAADwjEAAAAAAAABaQAAAAAAAOIFAAAAAAAAQdEAAAAAAAJB6QAAAAAAAwGhAAAAAAAA4ikAAAAAAAJB3QAAAAAAAqIdAAAAAAABgeEAAAAAAAIB2QAAAAACA99NAAAAAAACAb0AAAAAAABC0QAAAAAAA8HhAAAAAAABQgEAAAAAAQCfRQAAAAAAAoIpAAAAAAABAVkAAAAAAAABJQAAAAAAAaINAAAAAAAAAk0AAAAAAAByZQAAAAAAAmItAAAAAAAA4g0AAAAAAAMBmQAAAAAAAAHFAAAAAAADAaUAAAAAAAABCQAAAAAAAIHZAAAAAAABAckAAAAAAAGiFQAAAAAAAoGdAAAAAAAAQeEAAAAAAALqgQAAAAAAAAFBAAAAAAABAUkAAAAAAAGiMQAAAAAAANJtAAAAAAADggEAAAAAAAKB6QAAAAAAAGIRAAAAAAAAAQUAAAAAAACiDQEjhehSuR+E/AAAAAAAAUEAAAAAAAEBdQAAAAAAAAFJAAAAAAABgaUAAAAAAAKBlQAAAAAAAEIRAAAAAAABAX0AAAAAAAABCQAAAAAAAoHBAAAAAAADIiUAAAAAAAPiQQAAAAAAAAEdAAAAAAABAXkAAAAAAACBqQAAAAAAABJNAAAAAAAAMkUAAAAAAAFCQQAAAAAAAQF9AAAAAAAAAT0AAAAAAACBwQAAAAAAAIHBAAAAAAAAgaEAAAAAAAGiOQAAAAAAAoGlAAAAAAADAXEAAAAAAAGSaQIXrUbgeBUxAAAAAAADYgEAAAAAAABCRQAAAAAAA0HVAAAAAAAAAU0AAAAAAAICBQAAAAAAAAHJAAAAAAAAAcEAAAAAAAEBmQAAAAAAAYGdAAAAAAACQdUCamZmZmZm5PwAAAAAAQFNAAAAAAADAW0AAAAAAAOiKQAAAAAAAYGFAAAAAAACgZkAAAAAAANBxQAAAAAAAIGJAAAAAAADgbEAAAAAAAPB1QAAAAAAA8HJAAAAAAAAwcUAzMzMzMzMgQAAAAAAA0HJAAAAAAACAc0AAAAAAABByQAAAAAAAAHFAAAAAAADAXUAAAAAAAOiUQGZmZmZmZiJAAAAAAABQekAAAAAAAIBwQAAAAAAAQGRAAAAAAABgakAAAAAAAOBwQAAAAAAAAHhAAAAAAAAogUAAAAAAAMBSQAAAAAAAAGFAAAAAAABAakAAAAAAAKBkQAAAAAAAzKdAAAAAAABAgEAAAAAAAEBnQAAAAAAAACJAAAAAAAAASkAAAAAAAABKQAAAAAAAIG1AAAAAAADgbUAAAAAAAKBqQAAAAAAAgFRAAAAAAACAXUDNzMzMzMwiQAAAAAAAwFFAAAAAAABgakAAAAAAAJB0QAAAAAAA0HpAAAAAAACohkAAAAAAACBgQDMzMzMzMxdAAAAAAAAANEAAAAAAAABIQAAAAAAAQGhAAAAAAACAZEAAAAAAAHiNQAAAAAAAMIBAAAAAAACAQ0AAAAAAAOBzQAAAAAAA4GlAAAAAAACARUAAAAAAAABwQAAAAAAAgIdAAAAAAAAARUAAAAAAAIBEQAAAAAAA2IJAAAAAAAD4ikAAAAAAAABZQAAAAAAAAEZAAAAAAAAAbUAAAAAAACBqQAAAAAAAoGdAAAAAAACATUAAAAAAAKBkQAAAAAAAAElAAAAAAADgYEAAAAAAAAA/QAAAAAAAAG5AAAAAAAAAdUAAAAAAAPBzQJqZmZmZmSRAAAAAAACAakAAAAAAAEBcQAAAAAAAgGZAAAAAAAAANEAAAAAAAABPQAAAAAAAgElAAAAAAADAX0AAAAAAAABqQAAAAAAAAExAAAAAAAAATkAAAAAAADBxQAAAAAAAQFdAAAAAAABAhkBmZmZmZmYeQAAAAAAAwFZAAAAAAACYgUAAAAAAACBjQAAAAAAAUHBAAAAAAAAAJEAAAAAAAGBwQAAAAAAAADtAAAAAAABAWkAAAAAAAIBIQAAAAAAAQF9AAAAAAACATkAAAAAAAABEQAAAAAAAAD9AAAAAAABAUECamZmZmZkVQAAAAAAAgGBAAAAAAAAAI0AAAAAAAIBMQAAAAAAA0HZAAAAAAADgZEAAAAAAAIBEQHsUrkfherQ/AAAAAAAAWEAAAAAAAIBHQAAAAAAAADFAAAAAAAAARUAAAAAAAKiQQAAAAAAAACJAAAAAAABAUEAAAAAAAJB3QAAAAAAAwFVAAAAAAAAAJEAAAAAAAAA2QAAAAAAAwGJAAAAAAAAAYUA=","dtype":"float64","order":"little","shape":[253]},"Population":[453,38300,33701,1400,544,1947,9961,11200,3193,10300,42876,1748,56,64027,35334,34641,62723,13452,4922,696100,104200,2072,11600,32206,38380,112309,55900,57100,15250,65813,1613,56345,18905,374775,514564,108825,104909,256518,110520,5633,287025,104084,158665,17900,96762,56600,76177,37910,175200,83314,180454,105600,100000,5703600,71808,1543300,125000,201784,7500700,371246,50844,29789,390253,873724,1265577,853659,613894,199300,351965,280600,53532,550483,469000,1363985,421300,875900,4976684,5997,243206,3195153,6855713,2228075,1795666,2726667,150932,2740479,2563,304500,622182,386870,1167242,1159250,4420110,884887,258958,2084301,6704864,9253950,408487,1078373,2077132,12374397,11403000,11215578,1358276,682500,2862427,2957500,2263010,11530853,2681735,1604528,23604265,830808,8586550,17510531,5814461,1324820,10358320,5450421,5058007,3511372,4087843,7538000,2655,1910400,2793466,21803000,3729600,4921500,7901454,4158783,6901188,10681161,9770529,8902600,268700,10067108,10772476,10276617,9764000,4475353,51780579,366130,17679735,11193470,6951482,9158345,11733059,17563749,25549604,3497117,6393824,10724599,9127000,169328340,29609623,11722038,568301,3508180,3518553,16289270,17070135,16209125,6309300,9397800,782225,6492400,19405156,30280811,40006700,67886004,12218357,567421,2067561,5031577,20244080,17571644,109183647,60252824,4645249,38386000,25823071,5367580,32686900,96208984,5527405,5399895,83149300,126010000,15159624,7052983,39309783,36020634,32653900,10343403,28915284,8935000,24348251,5851466,46934632,66554480,67060000,2302878,47564296,25680342,41902416,4737423,15181925,12778250,31575018,54339766,16405229,17373831,83154997,28571310,221018520,2413643,32219521,200962000,55890747,100927736,3984233,107534882,11307314,46461800,22314743,58775022,29250009,19107706,15353184,32162184,3238479,83794858,6470956,40782742,268074600,126577691,34218169,55877,86790567,43000000,18592700,44938712,1352642280,25666400,212086923,1404498560,330329976,38177942,146877088,7814282000,7814282000]},"selected":{"id":"9728"},"selection_policy":{"id":"9746"}},"id":"9727","type":"ColumnDataSource"},{"attributes":{},"id":"9736","type":"BasicTickFormatter"},{"attributes":{"factors":["Vatican City[note 1]","Monaco","Gibraltar (United Kingdom)","Tokelau (New Zealand)","Cocos (Keeling) Islands (Australia)","Saba (Netherlands)","Saint Barth\u00e9lemy (France)","Nauru","Sint Eustatius (Netherlands)","Tuvalu","Sint Maarten (Netherlands)","Norfolk Island (Australia)","Pitcairn Islands (United Kingdom)","Bermuda (United Kingdom)","Saint Martin (France)","San Marino","Guernsey (United Kingdom)","Anguilla (United Kingdom)","Montserrat (United Kingdom)","Macau (China)","Jersey (United Kingdom)","Christmas Island (Australia)","Wallis &amp; Futuna (France)","British Virgin Islands (United Kingdom)","Liechtenstein","Aruba (Netherlands)","Marshall Islands","American Samoa (United States)","Cook Islands (New Zealand)","Cayman Islands (United Kingdom)","Niue (New Zealand)","Saint Kitts and Nevis","Bonaire (Netherlands)","Maldives","Malta","Grenada","United States Virgin Islands (United States)","Mayotte (France)","Saint Vincent and the Grenadines","Saint Helena, Ascension and Tristan da Cunha (United Kingdom)","Barbados","Antigua and Barbuda","Cura\u00e7ao (Netherlands)","Palau","Seychelles","Northern Mariana Islands (United States)","Andorra","Turks and Caicos Islands (United Kingdom)","Guam (United States)","Isle of Man (United Kingdom)","Saint Lucia","Federated States of Micronesia","Tonga","Singapore","Dominica","Bahrain","Kiribati","S\u00e3o Tom\u00e9 and Pr\u00edncipe","Hong Kong (China)","Martinique (France)","Faroe Islands (Denmark)","\u00c5land Islands (Finland)","Guadeloupe (France)","Comoros","Mauritius","R\u00e9union (France)","Luxembourg","Samoa","Northern Cyprus[note 4]","French Polynesia (France)","South Ossetia[note 9]","Cape Verde","Transnistria[note 3]","Trinidad and Tobago","Brunei","Cyprus","Palestine","Saint Pierre and Miquelon (France)","Abkhazia[note 6]","Puerto Rico (United States)","Lebanon","Gambia","Kosovo[note 2]","Jamaica","Artsakh[note 10]","Qatar","Falkland Islands (United Kingdom)","Vanuatu","Montenegro","Bahamas","Timor-Leste","Eswatini (Swaziland)","Kuwait","Fiji","New Caledonia (France)","Slovenia","El Salvador","Israel","Belize","Djibouti","North Macedonia","Rwanda","Haiti","Burundi","Equatorial Guinea","Solomon Islands","Albania","Armenia","Lesotho","Belgium","Moldova","Guinea-Bissau","Taiwan","Bhutan","Switzerland","Netherlands","Denmark","Estonia","Dominican Republic","Slovakia","Costa Rica","Bosnia and Herzegovina","Croatia","Togo","Svalbard and Jan Mayen (Norway)","Latvia","Lithuania","Sri Lanka","Georgia","Ireland","Sierra Leone","Panama","Serbia","Czech Republic","United Arab Emirates","Austria","French Guiana (France)","Azerbaijan","Jordan","Portugal","Hungary","Liberia","South Korea","Iceland","Guatemala","Cuba","Bulgaria","Honduras","Benin","Malawi","North Korea","Eritrea","Nicaragua","Greece","Tajikistan","Bangladesh","Nepal","Tunisia","Suriname","Somaliland[note 8]","Uruguay[note 7][clarification needed]","Cambodia","Syria","Senegal","Kyrgyzstan","Belarus","Guyana","Laos","Romania","Ghana","Uganda","United Kingdom","Guinea","Western Sahara[note 12]","Gabon","New Zealand","Burkina Faso","Ecuador","Philippines","Italy","Oman","Poland","Ivory Coast","Norway","Malaysia","Vietnam","Finland","Republic of the Congo","Germany","Japan","Zimbabwe","Paraguay","Iraq","Morocco","Uzbekistan","Sweden","Yemen","Papua New Guinea","Cameroon","Turkmenistan","Spain","Thailand","France","Botswana","Kenya","Madagascar","Ukraine [note 5]","Central African Republic","Somalia","South Sudan","Afghanistan","Myanmar","Zambia","Chile","Turkey","Mozambique","Pakistan","Namibia","Venezuela","Nigeria","Tanzania","Egypt","Mauritania","Ethiopia","Bolivia","Colombia","Niger","South Africa","Angola","Mali","Chad","Peru","Mongolia","Iran","Libya","Sudan","Indonesia","Mexico","Saudi Arabia","Greenland (Denmark)","Democratic Republic of the Congo","Algeria","Kazakhstan","Argentina","India","Australia","Brazil","China","United States","Canada","Russia[note 11]","World (land only, excluding Antarctica)","World (land only)"],"tags":[[["Country","Country",null]]]},"id":"9696","type":"FactorRange"},{"attributes":{"source":{"id":"9727"}},"id":"9734","type":"CDSView"},{"attributes":{},"id":"9716","type":"WheelZoomTool"},{"attributes":{"data_source":{"id":"9727"},"glyph":{"id":"9730"},"hover_glyph":null,"muted_glyph":{"id":"9732"},"nonselection_glyph":{"id":"9731"},"selection_glyph":null,"view":{"id":"9734"}},"id":"9733","type":"GlyphRenderer"},{"attributes":{"fill_color":{"value":"#1f77b3"},"height":{"value":0.8},"right":{"field":"Area"},"y":{"field":"Country"}},"id":"9730","type":"HBar"},{"attributes":{},"id":"9718","type":"ResetTool"},{"attributes":{"text":"Countries by Area","text_color":{"value":"black"},"text_font_size":{"value":"12pt"}},"id":"9699","type":"Title"},{"attributes":{"axis_label":"Country","bounds":"auto","formatter":{"id":"9738"},"major_label_orientation":"horizontal","ticker":{"id":"9712"}},"id":"9711","type":"CategoricalAxis"},{"attributes":{"callback":null,"renderers":[{"id":"9733"}],"tooltips":[["Country","@Country"],["Area","@Area{0,0.00} (Square Miles)"],["Population","@Population{0,0}"],["Density","@{Density}"]]},"id":"9697","type":"HoverTool"},{"attributes":{},"id":"9746","type":"UnionRenderers"},{"attributes":{},"id":"9703","type":"LinearScale"},{"attributes":{"align":null,"below":[{"id":"9707"}],"center":[{"id":"9710"},{"id":"9713"}],"left":[{"id":"9711"}],"margin":null,"min_border_bottom":10,"min_border_left":10,"min_border_right":10,"min_border_top":10,"plot_height":1560,"plot_width":990,"renderers":[{"id":"9733"}],"sizing_mode":"fixed","title":{"id":"9699"},"toolbar":{"id":"9720"},"toolbar_location":null,"x_range":{"id":"9695"},"x_scale":{"id":"9703"},"y_range":{"id":"9696"},"y_scale":{"id":"9705"}},"id":"9698","subtype":"Figure","type":"Plot"}],"root_ids":["9693"]},"title":"Bokeh Application","version":"2.1.1"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('9869').textContent;
+                  var render_items = [{"docid":"69df4a1e-1793-4a78-a0c4-5114a5d3c513","root_ids":["9693"],"roots":{"9693":"8506c468-4d32-484e-ae45-8e37d29d91dc"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        clearInterval(timer);
+                        embed_document(root);
+                      } else {
+                        attempts++;
+                        if (attempts > 100) {
+                          clearInterval(timer);
+                          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        }
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>
