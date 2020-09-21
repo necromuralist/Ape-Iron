@@ -1,0 +1,28 @@
+#+BEGIN_COMMENT
+.. title: Draw Yourself as Batman
+.. slug: draw-yourself-as-batman
+.. date: 2020-09-20 18:47:10 UTC-07:00
+.. tags: comics,drawing,exercise,making comics
+.. category: Comics
+.. link: 
+.. description: Making Comics' "Draw Yourself as Batman"
+.. type: text
+.. status: private
+.. updated: 
+
+#+END_COMMENT
+* First
+  - Set a three minute timer
+  - Draw yourself as batman doing something you did in the past 24 hours - include your entire body and face
+** Repeat 3 More Times
+  Draw yourself as batman:
+  - Screaming
+  - Depressed
+  - Vomiting
+  - Passed Out
+
+Include settings.
+* Diary
+  Draw yourself as Batman in four scenes from your day - 5 minutes per frame. Silent strip - no words.
+* Cite
+  - {{% doc %}}making-comics{{% /doc %}}

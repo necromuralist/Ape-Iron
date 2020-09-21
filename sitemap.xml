@@ -15,15 +15,31 @@
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/archive.html</loc>
-  <lastmod>2020-09-19T23:43:00Z</lastmod>
+  <lastmod>2020-09-21T01:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/</loc>
-  <lastmod>2020-09-09T20:30:00Z</lastmod>
+  <lastmod>2020-09-21T01:37:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/bibliography/</loc>
+  <lastmod>2020-09-21T01:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_bibliography/</loc>
+  <lastmod>2020-09-21T01:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_comics/</loc>
+  <lastmod>2020-09-21T01:37:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_doggerel/</loc>
   <lastmod>2020-09-09T20:30:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_page-listing/</loc>
+  <lastmod>2020-09-21T01:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_scraping/</loc>
@@ -34,8 +50,16 @@
   <lastmod>2020-09-05T20:57:00Z</lastmod>
  </url>
  <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/comics/</loc>
+  <lastmod>2020-09-21T01:36:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/doggerel/</loc>
   <lastmod>2020-09-09T20:30:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/drawing/</loc>
+  <lastmod>2020-09-21T01:37:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/exercise/</loc>
@@ -46,8 +70,16 @@
   <lastmod>2020-09-09T20:30:00Z</lastmod>
  </url>
  <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/hidden-index/</loc>
+  <lastmod>2020-09-21T01:36:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/lists/</loc>
   <lastmod>2020-08-04T23:25:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/making-comics/</loc>
+  <lastmod>2020-09-21T01:37:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/names/</loc>
@@ -78,6 +110,10 @@
   <lastmod>2020-09-09T23:38:00Z</lastmod>
  </url>
  <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/posts/making-comics/</loc>
+  <lastmod>2020-09-21T01:36:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/</loc>
   <lastmod>2020-08-04T23:25:00Z</lastmod>
  </url>
@@ -103,7 +139,7 @@
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/</loc>
-  <lastmod>2020-09-20T23:47:00Z</lastmod>
+  <lastmod>2020-09-21T00:51:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/bottom_ten_countries_by_area_cleaned.html</loc>
@@ -120,10 +156,6 @@
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/countries_by_area.html</loc>
   <lastmod>2020-09-20T23:13:00Z</lastmod>
- </url>
- <url>
-  <loc>https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/countryies_by_area.html</loc>
-  <lastmod>2020-09-19T23:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/top_ten_countries_by_area.html</loc>

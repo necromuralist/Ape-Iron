@@ -1,0 +1,26 @@
+#+BEGIN_COMMENT
+.. title: Monster Jam
+.. slug: monster-jam
+.. date: 2020-09-20 18:56:59 UTC-07:00
+.. tags: draw-yourself-as-batman
+.. category: Comics
+.. link: 
+.. description: Making Comics' "Monster Jam"
+.. type: text
+.. status: private
+.. updated: 
+
+#+END_COMMENT
+* Steps
+1. Divide your drawing area into quarters.
+2. Make a scribble in each of the quarters.
+3. Set a timer for two minutes and turn one of the scribbles into a monster.
+   - Repeat for the remainder of the panels.
+4. Write four complete sentences:
+   - Something you have to do
+   - A line you have memorized from a poem or song
+   - A question you have been wondering about
+   - A specific command given by a king or queen
+5. Decide which monster is saying each of the sentences and add them as speech bubbles to the drawings.
+* Cite
+  - {{% doc %}}making-comics{{% /doc %}}

@@ -6,32 +6,64 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/bibliography.xml</loc>
+  <lastmod>2020-09-21T01:36:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_bibliography.xml</loc>
+  <lastmod>2020-09-21T01:36:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_comics.xml</loc>
+  <lastmod>2020-09-21T01:38:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_doggerel.xml</loc>
   <lastmod>2020-09-09T23:38:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_page-listing.xml</loc>
+  <lastmod>2020-09-21T01:40:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_scraping.xml</loc>
-  <lastmod>2020-09-20T23:57:00Z</lastmod>
+  <lastmod>2020-09-21T00:25:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_writing.xml</loc>
   <lastmod>2020-09-09T20:30:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/comics.xml</loc>
+  <lastmod>2020-09-21T01:39:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/doggerel.xml</loc>
   <lastmod>2020-09-09T23:38:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/drawing.xml</loc>
+  <lastmod>2020-09-21T01:38:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/exercise.xml</loc>
-  <lastmod>2020-09-09T20:30:00Z</lastmod>
+  <lastmod>2020-09-21T01:39:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/exercises.xml</loc>
   <lastmod>2020-09-09T20:30:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/hidden-index.xml</loc>
+  <lastmod>2020-09-21T01:40:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/lists.xml</loc>
-  <lastmod>2020-09-20T23:57:00Z</lastmod>
+  <lastmod>2020-09-21T00:25:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/making-comics.xml</loc>
+  <lastmod>2020-09-21T01:38:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/names.xml</loc>
@@ -43,7 +75,7 @@
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/scraping.xml</loc>
-  <lastmod>2020-09-20T23:57:00Z</lastmod>
+  <lastmod>2020-09-21T00:25:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/social-security-administration.xml</loc>
@@ -51,7 +83,7 @@
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/wikipedia.xml</loc>
-  <lastmod>2020-09-20T23:57:00Z</lastmod>
+  <lastmod>2020-09-21T00:25:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/writing.xml</loc>
@@ -59,10 +91,10 @@
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/rss.xml</loc>
-  <lastmod>2020-09-20T23:57:00Z</lastmod>
+  <lastmod>2020-09-21T01:41:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/sitemap.xml</loc>
-  <lastmod>2020-09-20T23:57:00Z</lastmod>
+  <lastmod>2020-09-21T01:41:00Z</lastmod>
  </sitemap>
 </sitemapindex>

@@ -1,0 +1,31 @@
+#+BEGIN_COMMENT
+.. title: Character Jam
+.. slug: character-jam
+.. date: 2020-09-20 18:10:57 UTC-07:00
+.. tags: drawing,exercise,comics,making comics
+.. category: Comics
+.. link: 
+.. description: Making Comics' Character Jam
+.. type: text
+.. status: private
+.. updated: 
+
+#+END_COMMENT
+* Steps
+This is meant to be done like an exquisite corpse but I think it works without the group element too.
+
+1. Set up 16 places to draw (panels)
+2. At the bottom of each panel draw a small box for a single caption
+3. Pick a random occupation for each panel and write it in
+4. Pick random character prompts for each panel (maybe from the Storymatic)
+5. For each panel set a one minute timer and draw the first thing that comes to mind - no dialogue, full figure.
+
+Variations:
+
+Instead of 16 panels use 16 separate index cards or pieces of paper.
+Use fewer panels and spend more time drawing each one (but keep it short, maybe just 2 or 3 minutes).
+
+Continue on to {{% doc %}}son-of-character-jam{{% /doc %}}.
+
+* Cite
+  - {{% doc %}}making-comics{{% /doc %}}
