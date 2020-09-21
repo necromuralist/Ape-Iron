@@ -1,0 +1,27 @@
+#+BEGIN_COMMENT
+.. title: Son of Character Jam
+.. slug: son-of-character-jam
+.. date: 2020-09-20 18:25:10 UTC-07:00
+.. tags: comics,drawing,exercise,making comics
+.. category: Comics
+.. link: 
+.. description: Making Comics' Son of Character Jam
+.. type: text
+.. status: private
+.. updated: 
+
+#+END_COMMENT
+
+* Steps
+0. Start with your characters from {{% doc %}}character-jam{{% /doc %}}.
+1. Prepare 16 panels with caption boxes
+2. Find four characters on your Drawing Jam page that you'd like to work on for the next half an hour.
+3. Copy each of them into the first chamber of each row (so distribute the four characters over four rows)
+4. Leave the caption areas blank
+5. Draw each character three more times, filling the row (vary each drawing a little bit (or a lotta bit))
+   - Try to think what is the right next panel given what's been filled in already
+   - Spend about a minute per panel.
+   
+Add details.
+* Cite
+  - {{% doc %}}making-comics{{% /doc %}}

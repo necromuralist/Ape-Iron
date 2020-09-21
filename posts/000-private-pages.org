@@ -1,0 +1,20 @@
+#+BEGIN_COMMENT
+.. title: Private Pages
+.. slug: private-pages
+.. date: 2020-09-20 18:30:40 UTC-07:00
+.. tags: hidden index
+.. category: Page Listing
+.. link: 
+.. description: 
+.. type: text
+.. status: private
+.. updated: 
+
+#+END_COMMENT
+* Making Comics
+ - {{% doc %}}monster-jam{{% /doc %}}
+ - {{% doc %}}draw-yourself-as-batman{{% /doc %}}
+ - {{% doc %}}close-your-eyes{{% /doc %}}
+ - {{% doc %}}character-jam{{% /doc %}}
+ - {{% doc %}}son-of-character-jam{{% /doc %}}
+   
