@@ -1,0 +1,29 @@
+#+TITLE: Roll
+
+These are dice rollers.
+
+#+begin_src python :tangle roll.py :session py
+<<imports>>
+
+<<main>>
+#+end_src
+
+* Imports
+#+begin_src python :noweb-ref imports
+# from python
+import random
+
+# from pypi
+import click
+#+end_src
+* The Main Function
+#+begin_src python :noweb-ref main :session py
+@click.command()
+@click.option("--dice", default=1, help="Number of dice to roll.")
+@click.option("--sides", default=6, help="Number of sides to each die.")
+def roll(dice: int, sides: int):
+    """Roll the dice"""
+    for die in range(dice):
+        print(random.randint(1, sides))
+    return
+#+end_src  

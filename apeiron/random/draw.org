@@ -1,0 +1,32 @@
+#+TITLE: Draw
+Draw some random cards.
+
+#+begin_src python :tangle draw.py
+<<imports>>
+
+<<setup>>
+
+<<the-main>>
+#+end_src
+* Imports
+#+begin_src python :noweb-ref imports
+# from python
+import random
+
+# from pypi
+import click
+#+end_src
+* Setup
+#+begin_src python :noweb-ref setup
+SUITS = list("CHSD")
+RANKS = ["A"] + list(range(2, 11)) + list("JQK")
+#+end_src  
+* The Main Function
+#+begin_src python :noweb-ref the-main
+@click.command()
+@click.option("--cards", default=1, help="Number of cards to draw.")
+def draw(cards: int):
+    for card in range(cards):
+        print(f"{random.choice(RANKS)}{random.choice(SUITS)}")
+    return
+#+end_src

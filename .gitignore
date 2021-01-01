@@ -5,3 +5,4 @@ cache/
 output/
 .env
 geckodriver.log
+*.egg-info/

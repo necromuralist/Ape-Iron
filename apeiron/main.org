@@ -1,0 +1,25 @@
+#+TITLE: The Main
+
+#+begin_src python :tangle main.py
+<<imports>>
+
+<<the-main>>
+#+end_src
+* Imports
+#+begin_src python :noweb-ref imports
+# pypi
+import click
+
+# this project
+from apeiron.random.draw import  draw
+from apeiron.random.roll import  roll
+#+end_src  
+* The Main
+#+begin_src python :noweb-ref the-main
+@click.group()
+def command_line_interface():
+    return
+
+command_line_interface.add_command(draw)
+command_line_interface.add_command(roll)
+#+end_src
