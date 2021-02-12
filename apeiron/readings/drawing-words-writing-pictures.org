@@ -1,4 +1,4 @@
-1. Abel J, Madden M. Drawing words & writing pictures: making comics: manga, graphic novels, and beyond. 1st ed. New York: First Second; 2008. 282 p. 
+#+TITLE: Drawing Words & Writing Pictures
 * Building Blocks
 ** Drawing Time
 *** Action Within a Drawing
@@ -69,4 +69,73 @@
 ** Homework critiques
 ** Story Cards
 ** Comic book mini report
+*** Read it
+    - First for enjoyment
+    - Second with pen and paper - note anything that jumps out at you
+*** The Story
+**** The Protagonist    
+   - Write a one-sentence summary of the plot
+   - Who is the protagonist? Is there more than one?
+   - How can you tell who the protagonist is?
+   - What does that character want?
+   - Does the character change? How?
+**** Time
+     - How much time passes over the course of the story?
+     - Is it evenly paced? Are there gaps?
+     - What techniques are used to control pacing?
+     - Identify one section that moves slowly and one that moves quickly?
+**** The Narrator
+     - Is there a narrator?
+     - What is the tone of the narration?
+     - Can you tell who the narrator is?
+     - Is the narrator reliable?
+**** One Scene
+     - Pick one scene and describe it
+     - What does the protagonist want when it starts?
+     - What does the protagonist do?
+     - What happens? Does the protagonist get what he/she wants?
+     - Is this scene part of the overall arc?
+     - Describe the pacing.
+     - Identify the panel transitions used - how did they affect the pace and feeling of the scene?
+*** The Art
+**** Tracing
+     - Trace the path through a page
+     - Trace the abstract visual shapes
+     - Trace and fill in the solid blacks
+     - Trace the placement of text
+**** Copy
+     - Copy one or more panels in pencil
+     - Ink the copy
+     - Create your own version of the panel(s)
+**** Linework
+     - Describe the quality of the linework
+     - Try to guess what tool the artist used to ink and how large the original was
+**** Camera
+     - Describe the camera angles used and how far the camera was
+     - Is the focal length deep or flat?
+**** Lettering
+     - Describe the lettering
+     - Was it done by hand or computer?
+     - Are there different styles? If so, what meaning do the styles convey?
+**** Page Design & Panel Composition (use "Elements of Page Design" and "Panel Composition" chapters)
+     - Black spotting
+     - Panel size as pacing
+     - Picture elements pointing to and/or framing important items
+     - Guiding the reading path
+     - Canted angles
+     - Formal aspects for storytelling
+     - Negative space
+     - Sound effects
+     - Word balloons and narrative boxes
+     - Panel borders and gutters
+     - Asymmetrical Composition
+     - Angled or unusual panels
+     - Emanata
+     - Gray tones
+     - Color
+     - Visual Rhythm
+**** Finally
+     Write up an essay on the comic.
 ** Making Minicomics
+* Cite
+  - Abel J, Madden M. Drawing words & writing pictures: making comics: manga, graphic novels, and beyond. 1st ed. New York: First Second; 2008. 282 p. 
