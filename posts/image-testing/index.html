@@ -77,73 +77,67 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org4ed3a41">PNG</a>
+<li><a href="#org89ae6f8">Thumbnail With Baguette Box</a>
 <ul>
-<li><a href="#org531717b">Thumbnail With Baguette Box</a>
+<li>
 <ul>
-<li><a href="#orgaeb0517">HTML</a></li>
-<li><a href="#orgcf5ae28">Org-Mode</a></li>
-<li><a href="#org6541e8d">WebP</a></li>
+<li><a href="#org3a99ec0">HTML</a></li>
+<li><a href="#org190a109">Org-Mode</a></li>
+<li><a href="#org44de01f">WebP</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org389778c">More Notes</a></li>
+<li><a href="#org75248e6">More Notes</a></li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org4ed3a41">
-<h2 id="org4ed3a41">PNG</h2>
-<div class="outline-text-2" id="text-org4ed3a41">
-<p>This tries to use an <a href="https://getnikola.com/handbook.html#embedding-images">embedded image</a> from the <code>images</code> folder.</p>
+<div class="outline-2" id="outline-container-org89ae6f8">
+<h2 id="org89ae6f8">Thumbnail With Baguette Box</h2>
+<div class="outline-text-2" id="text-org89ae6f8">
+<p>This is a look at using an <a href="https://getnikola.com/handbook.html#embedding-images">embedded image</a> from the <code>images</code> folder. If you put the files in the <code>images</code> folder then it automatically creates thumbnails and a slide-show, but there's a little trick to getting the folder references right.</p>
 </div>
-<div class="outline-3" id="outline-container-org531717b">
-<h3 id="org531717b">Thumbnail With Baguette Box</h3>
-<div class="outline-text-3" id="text-org531717b">
-<p>If you put the files in the <code>images</code> folder then it automatically creates thumbnails and a slide-show, but there's a little trick to getting the folder references right.</p>
-</div>
-<div class="outline-4" id="outline-container-orgaeb0517">
-<h4 id="orgaeb0517">HTML</h4>
-<div class="outline-text-4" id="text-orgaeb0517">
+<div class="outline-4" id="outline-container-org3a99ec0">
+<h4 id="org3a99ec0">HTML</h4>
+<div class="outline-text-4" id="text-org3a99ec0">
 <p>If you use HTML you can just assume that the <code>images</code> folder is at the root of the site (make sure to set the class to "reference").</p>
-<pre class="example" id="orgdec8d28">
+<pre class="example" id="org136189d">
 &lt;a class="reference" href="/images/eyeball-man.png" alt="Eyeball Man"&gt;&lt;img src="/images/eyeball-man.thumbnail.png"&gt;&lt;/a&gt;
 </pre>
 <a alt="Eyeball Man" class="reference" href="../../images/eyeball-man.png"><img src="../../images/eyeball-man.thumbnail.png"></a></div>
 </div>
-<div class="outline-4" id="outline-container-orgcf5ae28">
-<h4 id="orgcf5ae28">Org-Mode</h4>
-<div class="outline-text-4" id="text-orgcf5ae28">
+<div class="outline-4" id="outline-container-org190a109">
+<h4 id="org190a109">Org-Mode</h4>
+<div class="outline-text-4" id="text-org190a109">
 <p>You can set the attributes with org-mode's image syntax as well, although it's still a little clunky. In this case you have to set the path to the <code>images</code> folder relative to the <code>files/posts</code> folder.</p>
-<pre class="example" id="org10236e3">
+<pre class="example" id="orga834351">
 #+ATTR_HTML: :alt Eyeball Man
 #+ATTR_HTML: :class reference
 [[file:../../images/eyeball-man.png][file:../../images/eyeball-man.thumbnail.png]]
 </pre>
-<div class="figure" id="orgbc30249">
+<div class="figure" id="org25a5f24">
 <p><a alt="Eyeball Man Org" class="reference" href="../../images/eyeball-man.png"><img alt="Eyeball Man Org" class="reference" src="../../images/eyeball-man.thumbnail.png"></a></p>
 </div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org6541e8d">
-<h4 id="org6541e8d">WebP</h4>
-<div class="outline-text-4" id="text-org6541e8d">
-<p>You can use the WebP format… kind of. You have to use the <code>file:</code> directive in the URL (although this seems to be required for this to work anyway) and the thumbnail has to be a format that's more common (I've only tried PNG) - WebP works for the slideshow but not the thumbnail. There might be a way to add WebP support, but that's more than I'm interested in doing right now.</p>
-<pre class="example" id="orgc8e6f3c">
+<div class="outline-4" id="outline-container-org44de01f">
+<h4 id="org44de01f">WebP</h4>
+<div class="outline-text-4" id="text-org44de01f">
+<p>You can use the WebP format… kind of. You have to use the <code>file:</code> directive in the link (although this seems to be required for this to work anyway) and the thumbnail has to be a format that's more common (I've only tried PNG) - WebP works for the slideshow but not the thumbnail. There might be a way to add WebP support, but it doesnt' work out of the box.</p>
+<pre class="example" id="org99d488a">
 #+ATTR_HTML: :alt Eyeball Man WebP
 #+ATTR_HTML: :class reference
 [[file:../../images/eyeball-man.webp][file:../../images/eyeball-man.thumbnail.png]]
 </pre>
-<div class="figure" id="org3ef20df">
+<div class="figure" id="org9c494e6">
 <p><a alt="Eyeball Man WebP" class="reference" href="../../images/eyeball-man.webp"><img alt="Eyeball Man WebP" class="reference" src="../../images/eyeball-man.thumbnail.png"></a></p>
 </div>
 </div>
 </div>
 </div>
-</div>
-<div class="outline-2" id="outline-container-org389778c">
-<h2 id="org389778c">More Notes</h2>
-<div class="outline-text-2" id="text-org389778c">
+<div class="outline-2" id="outline-container-org75248e6">
+<h2 id="org75248e6">More Notes</h2>
+<div class="outline-text-2" id="text-org75248e6">
 <ul class="org-ul">
 <li>The <code>alt</code> attribute adds a title to the images in the slide show in the org-mode formats but not if you type in the HTML directly (from what I can tell).</li>
 <li>The <code>thumbnail</code> files are created when nikola builds the site so if you want to add the link before you build just insert <code>.thumbnail</code> in front of the image file-extension (you can change it in the <code>conf.py</code> file).</li>

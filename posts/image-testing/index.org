@@ -13,11 +13,10 @@
 #+END_COMMENT
 #+OPTIONS: ^:{}
 #+TOC: headlines 3
-* PNG
-  This tries to use an [[https://getnikola.com/handbook.html#embedding-images][embedded image]] from the =images= folder.
 
-** Thumbnail With Baguette Box
-   If you put the files in the =images= folder then it automatically creates thumbnails and a slide-show, but there's a little trick to getting the folder references right. 
+* Thumbnail With Baguette Box  
+  This is a look at using an [[https://getnikola.com/handbook.html#embedding-images][embedded image]] from the =images= folder.    If you put the files in the =images= folder then it automatically creates thumbnails and a slide-show, but there's a little trick to getting the folder references right. 
+
 *** HTML   
    If you use HTML you can just assume that the =images= folder is at the root of the site (make sure to set the class to "reference").
 
@@ -40,7 +39,7 @@
    #+ATTR_HTML: :class reference
    [[file:../../images/eyeball-man.png][file:../../images/eyeball-man.thumbnail.png]]
 *** WebP
-    You can use the WebP format... kind of. You have to use the =file:= directive in the URL (although this seems to be required for this to work anyway) and the thumbnail has to be a format that's more common (I've only tried PNG) - WebP works for the slideshow but not the thumbnail. There might be a way to add WebP support, but that's more than I'm interested in doing right now.
+    You can use the WebP format... kind of. You have to use the =file:= directive in the link (although this seems to be required for this to work anyway) and the thumbnail has to be a format that's more common (I've only tried PNG) - WebP works for the slideshow but not the thumbnail. There might be a way to add WebP support, but it doesnt' work out of the box.
 
 #+begin_example org
     #+ATTR_HTML: :alt Eyeball Man WebP
