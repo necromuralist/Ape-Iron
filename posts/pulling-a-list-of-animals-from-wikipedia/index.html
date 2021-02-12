@@ -77,35 +77,35 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgfee1af9">Beginning</a>
+<li><a href="#org3beccf1">Beginning</a>
 <ul>
-<li><a href="#org13e1501">Set Up</a></li>
+<li><a href="#orgfc72f8e">Set Up</a></li>
 </ul>
 </li>
-<li><a href="#org184ad06">Middle</a>
+<li><a href="#orgae0ad68">Middle</a>
 <ul>
-<li><a href="#org8a009eb">Grabbing Some HTML</a></li>
-<li><a href="#org7a5fcd3">Building the Table</a></li>
-<li><a href="#org7756a2e">Cleaning Up the Table</a></li>
-<li><a href="#orgf0d95dc">Meats</a></li>
-<li><a href="#org60be98d">Again, But With Soup This Time</a></li>
+<li><a href="#org29655fe">Grabbing Some HTML</a></li>
+<li><a href="#orgc175c23">Building the Table</a></li>
+<li><a href="#org2858a0d">Cleaning Up the Table</a></li>
+<li><a href="#org3b2bba0">Meats</a></li>
+<li><a href="#org5507a8c">Again, But With Soup This Time</a></li>
 </ul>
 </li>
-<li><a href="#org94604aa">End</a></li>
+<li><a href="#orgc7bd3a5">End</a></li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgfee1af9">
-<h2 id="orgfee1af9">Beginning</h2>
-<div class="outline-text-2" id="text-orgfee1af9">
+<div class="outline-2" id="outline-container-org3beccf1">
+<h2 id="org3beccf1">Beginning</h2>
+<div class="outline-text-2" id="text-org3beccf1">
 <p>As part of my pursuit of randomness I'm creating lists of things to select from. In this case I wanted a list of animals to create a <i>Visual Alphabet</i> and I decided to grab one from wikipedia. This is what I did.</p>
 </div>
-<div class="outline-3" id="outline-container-org13e1501">
-<h3 id="org13e1501">Set Up</h3>
-<div class="outline-text-3" id="text-org13e1501"></div>
-<div class="outline-4" id="outline-container-orgcecc31d">
-<h4 id="orgcecc31d">Imports</h4>
-<div class="outline-text-4" id="text-orgcecc31d">
+<div class="outline-3" id="outline-container-orgfc72f8e">
+<h3 id="orgfc72f8e">Set Up</h3>
+<div class="outline-text-3" id="text-orgfc72f8e"></div>
+<div class="outline-4" id="outline-container-org3611eae">
+<h4 id="org3611eae">Imports</h4>
+<div class="outline-text-4" id="text-org3611eae">
 <div class="highlight">
 <pre><span></span><span class="c1"># python</span>
 <span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
@@ -129,18 +129,18 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org9e91d9c">
-<h4 id="org9e91d9c">Set Up Tabulate</h4>
-<div class="outline-text-4" id="text-org9e91d9c">
+<div class="outline-4" id="outline-container-org3dd1b71">
+<h4 id="org3dd1b71">Set Up Tabulate</h4>
+<div class="outline-text-4" id="text-org3dd1b71">
 <p>This is just to make printing the pandas data-frames a little easier. <a href="https://github.com/nnicandro/emacs-jupyter">emacs-jupyter</a> actually does a pretty good job of rendering them as HTML like a regular jupyter notebook, but this makes it a little more readable while in emacs, plus I can control things better.</p>
 <div class="highlight">
-<pre><span></span><span class="n">TABLE</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">tabulate</span><span class="p">,</span> <span class="n">showindex</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">tablefmt</span><span class="o">=</span><span class="s2">"orgtbl"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="s2">"keys"</span><span class="p">)</span>
+<pre><span></span><span class="n">TABLE</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">tabulate</span><span class="p">,</span> <span class="n">showindex</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">tablefmt</span><span class="o">=</span><span class="s2">"orgtbl"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="s2">"keys"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org3e5013f">
-<h4 id="org3e5013f">Set Up Selenium</h4>
-<div class="outline-text-4" id="text-org3e5013f">
+<div class="outline-4" id="outline-container-org3776ef3">
+<h4 id="org3776ef3">Set Up Selenium</h4>
+<div class="outline-text-4" id="text-org3776ef3">
 <p>I started this using Requests-HTML because wikipedia uses JQuery to render the tables and Requests-HTML it uses <a href="https://pyppeteer.github.io/pyppeteer/index.html">pyppeteer</a> to render javascript (as opposed to the reqular requests that just does an HTTP GET and so leaves the tables un-rendered). Unfortunately I can't get it to work in a jupyter notebook. One problem is that both jupyter and Requests-HTML use asyncio - using <a href="https://github.com/erdewit/nest_asyncio">nest_asyncio</a> allows pypeteer to run in the notebook but then I get this error:</p>
 <div class="highlight">
 <pre><span></span><span class="ne">AttributeError</span><span class="p">:</span> <span class="s1">'coroutine'</span> <span class="nb">object</span> <span class="n">has</span> <span class="n">no</span> <span class="n">attribute</span> <span class="s1">'newPage'</span>
@@ -148,19 +148,19 @@
 <p>Which looks like it might be a pypeteer error, but tracking all this down is taking too long so I'm going to switch to using selenium. Since I'm running this on a remote machine we have to run it headless. I used to do this using <a href="https://www.wikiwand.com/en/Xvfb">XVFB</a> but selenium has a headless mode so I'll try that instead.</p>
 <div class="highlight">
 <pre><span></span><span class="n">options</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">FirefoxOptions</span><span class="p">()</span>
-<span class="n">options</span><span class="o">.</span><span class="n">headless</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">options</span><span class="o">.</span><span class="n">headless</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Firefox</span><span class="p">(</span><span class="n">firefox_options</span><span class="o">=</span><span class="n">options</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org184ad06">
-<h2 id="org184ad06">Middle</h2>
-<div class="outline-text-2" id="text-org184ad06"></div>
-<div class="outline-3" id="outline-container-org8a009eb">
-<h3 id="org8a009eb">Grabbing Some HTML</h3>
-<div class="outline-text-3" id="text-org8a009eb">
+<div class="outline-2" id="outline-container-orgae0ad68">
+<h2 id="orgae0ad68">Middle</h2>
+<div class="outline-text-2" id="text-orgae0ad68"></div>
+<div class="outline-3" id="outline-container-org29655fe">
+<h3 id="org29655fe">Grabbing Some HTML</h3>
+<div class="outline-text-3" id="text-org29655fe">
 <p>Just let selenium render the JQuery tables for us.</p>
 <div class="highlight">
 <pre><span></span><span class="n">URL</span> <span class="o">=</span> <span class="s2">"https://en.wikipedia.org/wiki/List_of_animal_names"</span>
@@ -168,13 +168,13 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org7a5fcd3">
-<h3 id="org7a5fcd3">Building the Table</h3>
-<div class="outline-text-3" id="text-org7a5fcd3">
+<div class="outline-3" id="outline-container-orgc175c23">
+<h3 id="orgc175c23">Building the Table</h3>
+<div class="outline-text-3" id="text-orgc175c23">
 <p>After giving up on Requests-HTML I was using <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/#searching-the-tree">Beautiful Soup</a> to pull out the table so I could give it to pandas, but then I looked at the pandas documentation and it turns out they already do this, so you don't need to, but you do need to know how many tables there are and which one you want (it returns a list of dataframes). In this case I want the last one.</p>
 <div class="highlight">
 <pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="n">browser</span><span class="o">.</span><span class="n">page_source</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">TABLE</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">TABLE</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)))</span>
 </pre></div>
 <table border="2" cellpadding="6" cellspacing="0" frame="hsides" rules="groups">
 <colgroup>
@@ -211,12 +211,12 @@
 <p>That's a little odd looking.</p>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org7756a2e">
-<h3 id="org7756a2e">Cleaning Up the Table</h3>
-<div class="outline-text-3" id="text-org7756a2e">
+<div class="outline-3" id="outline-container-org2858a0d">
+<h3 id="org2858a0d">Cleaning Up the Table</h3>
+<div class="outline-text-3" id="text-org2858a0d">
 <p>First, what's with all the <code>A</code> entries in the header?</p>
 <div class="highlight">
-<pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
 </pre></div>
 <pre class="example">
 MultiIndex([(                'Animal', 'A'),
@@ -231,7 +231,7 @@ MultiIndex([(                'Animal', 'A'),
 <p>Hmm..</p>
 <div class="highlight">
 <pre><span></span><span class="n">table</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">column</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">table</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
 </pre></div>
 <pre class="example">
 Index(['Animal', 'Young', 'Female', 'Male', 'Collective noun',
@@ -239,7 +239,7 @@ Index(['Animal', 'Young', 'Female', 'Male', 'Collective noun',
       dtype='object')
 </pre>
 <div class="highlight">
-<pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">TABLE</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)))</span>
+<pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">TABLE</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)))</span>
 </pre></div>
 <table border="2" cellpadding="6" cellspacing="0" frame="hsides" rules="groups">
 <colgroup>
@@ -275,9 +275,9 @@ Index(['Animal', 'Young', 'Female', 'Male', 'Collective noun',
 </table>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgf0d95dc">
-<h3 id="orgf0d95dc">Meats</h3>
-<div class="outline-text-3" id="text-orgf0d95dc">
+<div class="outline-3" id="outline-container-org3b2bba0">
+<h3 id="org3b2bba0">Meats</h3>
+<div class="outline-text-3" id="text-org3b2bba0">
 <p>At this point I don't know what I really want to do with this. I was originally going to just save the animal names but now the other stuff looks kind of interesting. As an aside I had to look up <a href="https://en.wikipedia.org/wiki/Collateral_adjective">Collateral Adjective</a> on wikipedia:</p>
 <blockquote>
 <p>A collateral adjective is an adjective that is identified with a particular noun in meaning, but that is not derived from that noun.</p>
@@ -285,14 +285,14 @@ Index(['Animal', 'Young', 'Female', 'Male', 'Collective noun',
 <p>Good to know.</p>
 <div class="highlight">
 <pre><span></span><span class="n">meats</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s2">"Culinary noun for meat"</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">meats</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">meats</span><span class="p">))</span>
 </pre></div>
 <pre class="example">
 49
 </pre>
 <p>So, now I noticed something else wrong.</p>
 <div class="highlight">
-<pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">TABLE</span><span class="p">(</span><span class="n">meats</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">:]))</span>
+<pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">TABLE</span><span class="p">(</span><span class="n">meats</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">:]))</span>
 </pre></div>
 <table border="2" cellpadding="6" cellspacing="0" frame="hsides" rules="groups">
 <colgroup>
@@ -329,9 +329,9 @@ Index(['Animal', 'Young', 'Female', 'Male', 'Collective noun',
 <p>Oops. Maybe I should have looked at the table more closely.</p>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org60be98d">
-<h3 id="org60be98d">Again, But With Soup This Time</h3>
-<div class="outline-text-3" id="text-org60be98d">
+<div class="outline-3" id="outline-container-org5507a8c">
+<h3 id="org5507a8c">Again, But With Soup This Time</h3>
+<div class="outline-text-3" id="text-org5507a8c">
 <p>Let's see if using Beautiful Soup will help clean up the dataset a little.</p>
 <div class="highlight">
 <pre><span></span><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">browser</span><span class="o">.</span><span class="n">page_source</span><span class="p">)</span>
@@ -340,7 +340,7 @@ Index(['Animal', 'Young', 'Female', 'Male', 'Collective noun',
 <p>The <code>read_html</code> method always returns a list, even though I'm only passing in one table.</p>
 <div class="highlight">
 <pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">soup_table</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">TABLE</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">:]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">TABLE</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">:]))</span>
 </pre></div>
 <table border="2" cellpadding="6" cellspacing="0" frame="hsides" rules="groups">
 <colgroup>
@@ -377,7 +377,7 @@ Index(['Animal', 'Young', 'Female', 'Male', 'Collective noun',
 <p>Actually, that looks worse.</p>
 <p>I went back and looked at the page and the table is broken up by sub-headers indicating the first letter of the animal's name.</p>
 <div class="highlight">
-<pre><span></span><span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">soup_table</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)[</span><span class="mi">10</span><span class="p">])</span>
+<pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">soup_table</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)[</span><span class="mi">10</span><span class="p">])</span>
 </pre></div>
 <pre class="example">
 &lt;th colspan="7"&gt;&lt;span id="A"&gt;&lt;/span&gt;&lt;b&gt;A&lt;/b&gt;
@@ -386,15 +386,15 @@ Index(['Animal', 'Young', 'Female', 'Male', 'Collective noun',
 <div class="highlight">
 <pre><span></span><span class="k">for</span> <span class="n">character</span> <span class="ow">in</span> <span class="n">ascii_uppercase</span><span class="p">:</span>
     <span class="n">element</span> <span class="o">=</span> <span class="n">soup_table</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">character</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">element</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">"Element for {character} not found"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">element</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Element for </span><span class="si">{</span><span class="n">character</span><span class="si">}</span><span class="s2"> not found"</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">element</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">decompose</span><span class="p">()</span>
 
 <span class="n">soup_table</span><span class="o">.</span><span class="n">smooth</span><span class="p">()</span>
 <span class="n">soup_table</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
 <span class="n">table</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">soup_table</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">TABLE</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">TABLE</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)))</span>
 </pre></div>
 <table border="2" cellpadding="6" cellspacing="0" frame="hsides" rules="groups">
 <colgroup>
@@ -431,7 +431,7 @@ Index(['Animal', 'Young', 'Female', 'Male', 'Collective noun',
 <p>So, now our first row is for <i>Aardvark</i> instead of the letter <i>A</i>. And now back to the meats.</p>
 <div class="highlight">
 <pre><span></span><span class="n">meats</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s2">"Culinary noun for meat"</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">meats</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">meats</span><span class="p">))</span>
 </pre></div>
 <pre class="example">
 24
@@ -440,9 +440,9 @@ Index(['Animal', 'Young', 'Female', 'Male', 'Collective noun',
 <div class="highlight">
 <pre><span></span><span class="n">meats</span> <span class="o">=</span> <span class="n">meats</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">"Culinary noun for meat"</span><span class="p">:</span> <span class="s2">"Meat"</span><span class="p">})</span>
 <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">meats</span><span class="o">.</span><span class="n">itertuples</span><span class="p">():</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">"{row.Animal}: {row.Meat}"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">row</span><span class="o">.</span><span class="n">Animal</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">row</span><span class="o">.</span><span class="n">Meat</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
-<pre class="example">
+<pre class="example" id="org52706db">
 Cattle[note 3] (list): beef veal
 Chicken (list): poultry
 Deer: venison humble (organ meat)
@@ -480,8 +480,8 @@ Whale: blubber
     <span class="n">table</span><span class="p">[</span><span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">FOOTNOTES_2</span><span class="p">,</span> <span class="n">EMPTY</span><span class="p">)</span>
     <span class="n">table</span><span class="p">[</span><span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">FOOTNOTES</span><span class="p">,</span> <span class="n">SPACE</span><span class="p">)</span>
     <span class="n">table</span><span class="p">[</span><span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">LIST</span><span class="p">,</span> <span class="n">EMPTY</span><span class="p">)</span>
-<span class="k">print</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">32</span><span class="p">:</span><span class="mi">32</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">32</span><span class="p">:</span><span class="mi">32</span><span class="p">])</span>
 </pre></div>
 <pre class="example">
 
@@ -495,9 +495,9 @@ Whale: blubber
 <pre><span></span><span class="n">meats</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s2">"Culinary noun for meat"</span><span class="p">])</span>
 <span class="n">meats</span> <span class="o">=</span> <span class="n">meats</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">"Culinary noun for meat"</span><span class="p">:</span> <span class="s2">"Meat"</span><span class="p">})</span>
 <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">meats</span><span class="o">.</span><span class="n">itertuples</span><span class="p">():</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">"{row.Animal}: {row.Meat}"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">row</span><span class="o">.</span><span class="n">Animal</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">row</span><span class="o">.</span><span class="n">Meat</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
-<pre class="example">
+<pre class="example" id="org11fe104">
 Cattle  : beef veal
 Chicken : poultry
 Deer: venison humble (organ meat)
@@ -529,8 +529,8 @@ Whale: blubber
 <span class="n">soup_table</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">"table"</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">character</span> <span class="ow">in</span> <span class="n">ascii_uppercase</span><span class="p">:</span>
     <span class="n">element</span> <span class="o">=</span> <span class="n">soup_table</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">character</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">element</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">"Element for {character} not found"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">element</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Element for </span><span class="si">{</span><span class="n">character</span><span class="si">}</span><span class="s2"> not found"</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">element</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">decompose</span><span class="p">()</span>
 
@@ -542,7 +542,7 @@ Whale: blubber
 </pre></div>
 <div class="highlight">
 <pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">soup_table</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">TABLE</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="n">table</span><span class="o">.</span><span class="n">Animal</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">"Ram"</span><span class="p">)]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">TABLE</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="n">table</span><span class="o">.</span><span class="n">Animal</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">"Ram"</span><span class="p">)]))</span>
 </pre></div>
 <table border="2" cellpadding="6" cellspacing="0" frame="hsides" rules="groups">
 <colgroup>
@@ -578,15 +578,15 @@ Whale: blubber
 </table>
 <p>So that fixes the smashing together, time to get rid of the footnotes and links to lists.</p>
 <div class="highlight">
-<pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">32</span><span class="p">:</span><span class="mi">32</span><span class="p">])</span>
+<pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">32</span><span class="p">:</span><span class="mi">32</span><span class="p">])</span>
 <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">table</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
     <span class="n">table</span><span class="p">[</span><span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">FOOTNOTES_2</span><span class="p">,</span> <span class="n">EMPTY</span><span class="p">)</span>
     <span class="n">table</span><span class="p">[</span><span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">FOOTNOTES</span><span class="p">,</span> <span class="n">SPACE</span><span class="p">)</span>
     <span class="n">table</span><span class="p">[</span><span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">LIST</span><span class="p">,</span> <span class="n">EMPTY</span><span class="p">)</span>
-<span class="k">print</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">32</span><span class="p">:</span><span class="mi">32</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">32</span><span class="p">:</span><span class="mi">32</span><span class="p">])</span>
 </pre></div>
-<pre class="example">
+<pre class="example" id="org106dd62">
                    Animal     Young   Female  Male  \
 32  Cattle[note 3] (list)  calf[31]  cow[32]  bull   
 
@@ -607,9 +607,9 @@ Whale: blubber
 <pre><span></span><span class="n">meats</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s2">"Culinary noun for meat"</span><span class="p">])</span>
 <span class="n">meats</span> <span class="o">=</span> <span class="n">meats</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">"Culinary noun for meat"</span><span class="p">:</span> <span class="s2">"Meat"</span><span class="p">})</span>
 <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">meats</span><span class="o">.</span><span class="n">itertuples</span><span class="p">():</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">"{row.Animal}: {row.Meat}"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">row</span><span class="o">.</span><span class="n">Animal</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">row</span><span class="o">.</span><span class="n">Meat</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
-<pre class="example">
+<pre class="example" id="org81dec4e">
 Cattle  : beef veal
 Chicken : poultry
 Deer: venison humble (organ meat)
@@ -640,7 +640,7 @@ Whale: blubber
 <pre><span></span><span class="n">PATTERN</span> <span class="o">=</span> <span class="s2">"Also see (?P&lt;name&gt;\w+)"</span>
 <span class="k">def</span> <span class="nf">see_also</span><span class="p">(</span><span class="n">match</span><span class="p">):</span>
     <span class="n">name</span> <span class="o">=</span> <span class="n">match</span><span class="p">[</span><span class="s2">"name"</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">f</span><span class="s2">"(Also see {name})"</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">"(Also see </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">)"</span>
 
 <span class="n">table</span><span class="p">[</span><span class="s2">"Animal"</span><span class="p">]</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">Animal</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">PATTERN</span><span class="p">,</span> <span class="n">see_also</span><span class="p">)</span>
 
@@ -650,9 +650,9 @@ Whale: blubber
 <span class="n">meats</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s2">"Culinary noun for meat"</span><span class="p">])</span>
 <span class="n">meats</span> <span class="o">=</span> <span class="n">meats</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">"Culinary noun for meat"</span><span class="p">:</span> <span class="s2">"Meat"</span><span class="p">})</span>
 <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">meats</span><span class="o">.</span><span class="n">itertuples</span><span class="p">():</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">"{row.Animal}: {row.Meat}"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">row</span><span class="o">.</span><span class="n">Animal</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">row</span><span class="o">.</span><span class="n">Meat</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
-<pre class="example">
+<pre class="example" id="org176444c">
 Cattle: beef veal
 Chicken: poultry
 Deer: venison humble (organ meat)
@@ -680,9 +680,9 @@ Whale: blubber
 </pre></div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org94604aa">
-<h2 id="org94604aa">End</h2>
-<div class="outline-text-2" id="text-org94604aa">
+<div class="outline-2" id="outline-container-orgc7bd3a5">
+<h2 id="orgc7bd3a5">End</h2>
+<div class="outline-text-2" id="text-orgc7bd3a5">
 <p>And now to save it for later.</p>
 <div class="highlight">
 <pre><span></span><span class="n">load_dotenv</span><span class="p">()</span>
@@ -691,14 +691,14 @@ Whale: blubber
     <span class="n">path</span><span class="o">.</span><span class="n">mkdir</span><span class="p">()</span>
 
 <span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"WIKIPEDIA_ANIMALS"</span><span class="p">])</span>
-<span class="n">table</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">table</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 <p>And for an example use.</p>
 <div class="highlight">
 <pre><span></span><span class="n">animals</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
     <span class="n">Path</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"WIKIPEDIA_ANIMALS"</span><span class="p">])</span><span class="o">.</span><span class="n">expanduser</span><span class="p">())</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">animals</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">animals</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 <pre class="example">
 Animal                    Marmoset
@@ -711,7 +711,7 @@ Culinary noun for meat         NaN
 Name: 155, dtype: object
 </pre>
 <div class="highlight">
-<pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">meats</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">meats</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 <pre class="example">
 Animal                                           Dogfish (Also see Shark)
@@ -748,7 +748,9 @@ Name: 59, dtype: object
 </aside>
 </article>
 <!--End of body content-->
-<footer id="footer">Contents © 2020 <a href="mailto:necromuralist@protonmail.com">Cloistered Monkey</a> - Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a></footer>
+<footer id="footer">Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a>
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a href="https://necromuralist.github.io/Ape-Iron/" property="dct:title" rel="cc:attributionURL">Ape Iron</a> by <a href="https://github.com/necromuralistc" property="cc:attributionName" rel="cc:attributionURL dct:creator">The Cloistered Monkey</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" rel="license noopener noreferrer" style="display:inline-block;" target="_blank">CC BY 4.0<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"></a></p>
+</footer>
 </div>
 </div>
 <script src="../../assets/js/all-nocdn.js"></script>
@@ -756,9 +758,7 @@ Name: 59, dtype: object
 
     baguetteBox.run('div#content', {
         ignoreClass: 'islink',
-        captions: function(element) {
-            return element.getElementsByTagName('img')[0].alt;
-    }});
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
 </script>
 </body>
 </html>

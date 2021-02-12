@@ -1,0 +1,35 @@
+#+BEGIN_COMMENT
+.. title: Bag Man
+.. slug: bag-man
+.. date: 2021-02-11 18:03:27 UTC-08:00
+.. tags: images,testing
+.. category: Testing
+.. link: 
+.. description: Testing the images folder structure.
+.. type: text
+.. status: 
+.. updated: 
+
+#+END_COMMENT
+#+OPTIONS: ^:{}
+#+TOC: headlines 3
+* The Bag Man
+  This post was created to see what happens in the slideshow if you put all the image files in the =images= folder without sub-folders, it's a companion to the {{% doc %}}image-testing{{% /doc %}} post.
+  
+    #+ATTR_HTML: :alt Bag Man
+    #+ATTR_HTML: :class reference
+    [[file:../../images/bag-man.webp][file:../../images/bag-man.thumbnail.png]]
+
+* The Bag Man Without Thumbnails
+  If you want to just display the image they recommend you put it in the =files= folder, but you can still reference it in the images folder too, but as with the thumbnails you need to use a more common format like png. This org-reference:
+
+#+begin_example org
+    [[file:../../images/bag-man.png]]
+#+end_example
+
+Will include this image.
+
+    #+ATTR_HTML: :alt Bag Man Big
+    #+ATTR_HTML: :class reference    
+    [[file:../../images/bag-man.png]]
+    

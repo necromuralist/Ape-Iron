@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+<head>
+<meta charset="utf-8">
+<meta content="Ironies of the Ape." name="description">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Ape Iron (old posts, page 2) | Ape Iron</title>
+<link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<meta content="#5670d4" name="theme-color">
+<meta content="Nikola (getnikola.com)" name="generator">
+<link href="rss.xml" hreflang="en" rel="alternate" title="RSS" type="application/rss+xml">
+<link href="https://necromuralist.github.io/Ape-Iron/index-2.html" rel="canonical">
+<link href="index-3.html" rel="prev" type="text/html">
+<link href="index-1.html" rel="next" type="text/html"><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]-->
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script><!--
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"
+</script>
+
+<script type="text/javascript" async
+  src="../../../assets/javascript/p5.min.js"
+</script>
+--><!-- favicons -->
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+<link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="site.webmanifest" rel="manifest">
+</head>
+<body>
+<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a> <!-- Menubar -->
+<nav class="navbar navbar-expand-md static-top mb-4 navbar-light bg-light">
+<div class="container"><!-- This keeps the margins nice -->
+ <a class="navbar-brand" href="."><span id="blog-title">Ape Iron</span></a> <button aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#bs-navbar" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="bs-navbar">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item"><a class="nav-link" href="archive.html">Archive</a></li>
+<li class="nav-item"><a class="nav-link" href="categories/">Tags</a></li>
+<li class="nav-item"><a class="nav-link" href="rss.xml">RSS feed</a></li>
+<li class="nav-item dropdown"><a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Pages</a>
+<div class="dropdown-menu"><a class="dropdown-item" href="https://necromuralist.github.io/">Cloistered Monkey</a></div>
+</li>
+</ul>
+<!-- DuckDuckGo custom search -->
+<form action="https://duckduckgo.com/" class="navbar-form pull-left" id="search" method="get" name="search"><input name="sites" type="hidden" value="https://necromuralist.github.io/Ape-Iron/"><input name="k8" type="hidden" value="#444444"><input name="k9" type="hidden" value="#D51920"><input name="kt" type="hidden" value="h"><input class="span2" maxlength="255" name="q" placeholder="Search…" type="text"><input style="visibility: hidden;display:none" type="submit" value="DuckDuckGo Search"></form>
+<!-- End of custom search -->
+<ul class="navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse --></div>
+<!-- /.container --></nav>
+<!-- End of Menubar -->
+<div class="container" id="content" role="main">
+<div class="body-content"><!--Body content-->
+<div class="postindex">
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article">
+<header>
+<h1 class="p-name entry-title"><a class="u-url" href="posts/pulling-legendary-creatures-from-wikipedia/">Pulling Legendary Creatures From Wikipedia</a></h1>
+<div class="metadata">
+<p class="byline author vcard"><span class="byline-name fn" itemprop="author">Cloistered Monkey</span></p>
+<p class="dateline"><a href="posts/pulling-legendary-creatures-from-wikipedia/" rel="bookmark"><time class="published dt-published" datetime="2020-08-06T15:04:35-07:00" itemprop="datePublished" title="2020-08-06 15:04">2020-08-06 15:04</time></a></p>
+</div>
+</header>
+<div class="p-summary entry-summary">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="posts/pulling-legendary-creatures-from-wikipedia/#org0659f23">Beginning</a>
+<ul>
+<li><a href="posts/pulling-legendary-creatures-from-wikipedia/#orgde37afb">Set Up</a></li>
+</ul>
+</li>
+<li><a href="posts/pulling-legendary-creatures-from-wikipedia/#orge5a1b03">Middle</a>
+<ul>
+<li><a href="posts/pulling-legendary-creatures-from-wikipedia/#org2cf3cae">Grab the Page and Make Some Soup</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org0659f23">
+<h2 id="org0659f23">Beginning</h2>
+<div class="outline-text-2" id="text-org0659f23"></div>
+<div class="outline-3" id="outline-container-orgde37afb">
+<h3 id="orgde37afb">Set Up</h3>
+<div class="outline-text-3" id="text-orgde37afb"></div>
+<div class="outline-4" id="outline-container-org56e0cc1">
+<h4 id="org56e0cc1">Imports</h4>
+<div class="outline-text-4" id="text-org56e0cc1">
+<div class="highlight">
+<pre><span></span><span class="c1"># python</span>
+<span class="kn">from</span> <span class="nn">argparse</span> <span class="kn">import</span> <span class="n">Namespace</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="c1"># pypi</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span><span class="p">,</span> <span class="n">UnicodeDammit</span>
+<span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+<span class="kn">from</span> <span class="nn">tabulate</span> <span class="kn">import</span> <span class="n">tabulate</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-orge630757">
+<h4 id="orge630757">Tabulate</h4>
+<div class="outline-text-4" id="text-orge630757">
+<div class="highlight">
+<pre><span></span><span class="n">TABLE</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">tabulate</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="s2">"keys"</span><span class="p">,</span> <span class="n">tablefmt</span><span class="o">=</span><span class="s2">"orgtbl"</span><span class="p">,</span> <span class="n">showindex</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-orgb04a6c1">
+<h4 id="orgb04a6c1">Selenium</h4>
+<div class="outline-text-4" id="text-orgb04a6c1">
+<p>I'll use a headless instance of selenium-firefox to grab and render the wikipedia page.</p>
+<div class="highlight">
+<pre><span></span><span class="n">options</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">FirefoxOptions</span><span class="p">()</span>
+<span class="n">options</span><span class="o">.</span><span class="n">headless</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Firefox</span><span class="p">(</span><span class="n">firefox_options</span><span class="o">=</span><span class="n">options</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orge5a1b03">
+<h2 id="orge5a1b03">Middle</h2>
+<div class="outline-text-2" id="text-orge5a1b03"></div>
+<div class="outline-3" id="outline-container-org2cf3cae">
+<h3 id="org2cf3cae">Grab the Page and Make Some Soup</h3>
+<div class="outline-text-3" id="text-org2cf3cae">
+<div class="highlight">
+<pre><span></span><span class="n">URL</span> <span class="o">=</span> <span class="s2">"https://en.wikipedia.org/wiki/List_of_legendary_creatures_by_type"</span>
+
+<span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span>
+</pre></div>
+<p>This page is a little odd in that it uses tables but the tables then contain unordered lists which seem to give pandas a hard time, so I'll have to poke around a little bit using Beautiful Soup first to figure it out.</p>
+<div class="highlight">
+<pre><span></span><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">browser</span><span class="o">.</span><span class="n">page_source</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="outline-4" id="outline-container-org0f99563">
+<h4 id="org0f99563">Looking at the Headings</h4>
+<div class="outline-text-4" id="text-org0f99563">
+<p>The level-2 headlines describe different ways to catalog the creatures, in addition they have "span" tags within them that have the "mw-class" associated with them so we can grab those tags using Beautiful Soup's <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/#css-selectors">select</a> method, which uses CSS selectors.</p>
+<div class="highlight">
+<pre><span></span><span class="n">headlines</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">"h2 span.mw-headline"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">headline</span> <span class="ow">in</span> <span class="n">headlines</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">" - </span><span class="si">{</span><span class="n">headline</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+<ul class="org-ul">
+<li>&lt;span class="mw-headline" id="Animals,_creatures_associated_with"&gt;Animals, creatures associated with&lt;/span&gt;</li>
+<li>&lt;span class="mw-headline" id="Artificial_creatures"&gt;Artificial creatures&lt;/span&gt;</li>
+<li>&lt;span class="mw-headline" id="Body_parts,_creatures_associated_with"&gt;Body parts, creatures associated with&lt;/span&gt;</li>
+<li>&lt;span class="mw-headline" id="Concepts,_creatures_associated_with"&gt;Concepts, creatures associated with&lt;/span&gt;</li>
+<li>&lt;span class="mw-headline" id="Demons"&gt;Demons&lt;/span&gt;</li>
+<li>&lt;span class="mw-headline" id="Elements,_creatures_associated_with"&gt;Elements, creatures associated with&lt;/span&gt;</li>
+<li>&lt;span class="mw-headline" id="Habitats,_creatures_associated_with"&gt;Habitats, creatures associated with&lt;/span&gt;</li>
+<li>&lt;span class="mw-headline" id="Humanoids"&gt;Humanoids&lt;/span&gt;</li>
+<li>&lt;span class="mw-headline" id="Hybrids"&gt;Hybrids&lt;/span&gt;</li>
+<li>&lt;span class="mw-headline" id="Astronomical_objects,_creatures_associated_with"&gt;Astronomical objects, creatures associated with&lt;/span&gt;</li>
+<li>&lt;span class="mw-headline" id="World"&gt;World&lt;/span&gt;</li>
+<li>&lt;span class="mw-headline" id="Creatures_associated_with_Plants"&gt;Creatures associated with Plants&lt;/span&gt;</li>
+<li>&lt;span class="mw-headline" id="Shapeshifters"&gt;Shapeshifters&lt;/span&gt;</li>
+<li>&lt;span class="mw-headline" id="Creatures_associated_with_Times"&gt;Creatures associated with Times&lt;/span&gt;</li>
+<li>&lt;span class="mw-headline" id="Undead"&gt;Undead&lt;/span&gt;</li>
+<li>&lt;span class="mw-headline" id="Miscellaneous"&gt;Miscellaneous&lt;/span&gt;</li>
+<li>&lt;span class="mw-headline" id="References"&gt;References&lt;/span&gt;</li>
+</ul>
+<p>We don't need references, but the other headlines might be helpful in categorizing these animals. Unfortunately the headings are above the sections with the stuff we want - they aren't parents of the sections so to get the actual parts we're going to need to do something else.</p>
+</div>
+</div>
+<div class="outline-4" id="outline-container-org5f5f114">
+<h4 id="org5f5f114">Tables</h4>
+<div class="outline-text-4" id="text-org5f5f114">
+<p>I'll grab all the tables then filter out the ones I don't want - the first three tables are admonitions that the page might not be up to snuff and the last four are references and links to other pages.</p>
+<div class="highlight">
+<pre><span></span><span class="n">tables</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">"table"</span><span class="p">)</span>
+<span class="n">tables</span> <span class="o">=</span> <span class="n">tables</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tables</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-org5631263">
+<h4 id="org5631263">The Table-Indices</h4>
+<div class="outline-text-4" id="text-org5631263">
+<div class="highlight">
+<pre><span></span><span class="n">Table</span> <span class="o">=</span> <span class="n">Namespace</span><span class="p">(</span>
+    <span class="n">aquatic</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">arthropods</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">bears</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-org5b5c27c">
+<h4 id="org5b5c27c">Animals Associated With</h4>
+<div class="outline-text-4" id="text-org5b5c27c"></div>
+<ul class="org-ul">
+<li><a id="org46d1ca7"></a>Aquatic and Marine Animals<br>
+<div class="outline-text-5" id="text-org46d1ca7">
+<div class="highlight">
+<pre><span></span><span class="n">PATTERN</span> <span class="o">=</span> <span class="s2">"\w+"</span>
+<span class="n">WEIRD</span> <span class="o">=</span> <span class="s2">"</span><span class="se">\xa0</span><span class="s2">"</span>
+<span class="n">ERASE</span> <span class="o">=</span> <span class="s2">""</span>
+
+<span class="n">table</span> <span class="o">=</span> <span class="n">tables</span><span class="p">[</span><span class="n">Table</span><span class="o">.</span><span class="n">aquatic</span><span class="p">]</span>
+<span class="n">items</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">"li"</span><span class="p">)</span>
+<span class="n">DASH</span> <span class="o">=</span> <span class="n">items</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="p">[</span><span class="mi">23</span><span class="p">]</span>
+<span class="n">animals</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">origin</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">description</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">WEIRD</span><span class="p">,</span> <span class="n">ERASE</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">DASH</span><span class="p">,</span> <span class="n">ERASE</span><span class="p">)</span>
+    <span class="n">tokens</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">" ("</span><span class="p">)</span>
+    <span class="n">two_tokens</span> <span class="o">=</span> <span class="n">tokens</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">")"</span><span class="p">)</span>
+    <span class="n">animals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tokens</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+    <span class="n">origin</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">two_tokens</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+    <span class="n">description</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">two_tokens</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+
+<span class="n">beasts</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span>
+    <span class="n">animal</span><span class="o">=</span><span class="n">animals</span><span class="p">,</span>
+    <span class="n">origin</span><span class="o">=</span><span class="n">origin</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">))</span>
+<span class="n">beasts</span><span class="p">[</span><span class="s2">"type"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"Aquatic"</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">TABLE</span><span class="p">(</span><span class="n">beasts</span><span class="p">))</span>
+</pre></div>
+<table border="2" cellpadding="6" cellspacing="0" frame="hsides" rules="groups">
+<colgroup>
+<col class="org-left">
+<col class="org-left">
+<col class="org-left">
+<col class="org-left"></colgroup>
+<thead>
+<tr>
+<th class="org-left" scope="col">animal</th>
+<th class="org-left" scope="col">origin</th>
+<th class="org-left" scope="col">description</th>
+<th class="org-left" scope="col">type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Bake-kujira</td>
+<td class="org-left">Japanese</td>
+<td class="org-left">ghost whale</td>
+<td class="org-left">Aquatic</td>
+</tr>
+<tr>
+<td class="org-left">Ceffyl Dŵr</td>
+<td class="org-left">Welsh</td>
+<td class="org-left">water horse</td>
+<td class="org-left">Aquatic</td>
+</tr>
+<tr>
+<td class="org-left">Encantado</td>
+<td class="org-left">Brazil</td>
+<td class="org-left">shapeshifting trickster dolphins</td>
+<td class="org-left">Aquatic</td>
+</tr>
+<tr>
+<td class="org-left">Kelpie</td>
+<td class="org-left">Scottish</td>
+<td class="org-left">water horse</td>
+<td class="org-left">Aquatic</td>
+</tr>
+<tr>
+<td class="org-left">Kushtaka</td>
+<td class="org-left">Tlingit</td>
+<td class="org-left">shapeshifting "land otter man"</td>
+<td class="org-left">Aquatic</td>
+</tr>
+<tr>
+<td class="org-left">Selkie</td>
+<td class="org-left">Scottish</td>
+<td class="org-left">shapeshifting seal people</td>
+<td class="org-left">Aquatic</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li><a id="orgf8fe088"></a>Arthropods<br>
+<div class="outline-text-5" id="text-orgf8fe088">
+<div class="highlight">
+<pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">tables</span><span class="p">[</span><span class="n">Table</span><span class="o">.</span><span class="n">arthropods</span><span class="p">]</span>
+<span class="n">animal</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">origin</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">description</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">table</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">"li"</span><span class="p">):</span>
+    <span class="n">first</span><span class="p">,</span> <span class="n">last</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">"("</span><span class="p">)</span>
+    <span class="n">second</span><span class="p">,</span> <span class="n">third</span> <span class="o">=</span> <span class="n">last</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">WEIRD</span><span class="si">}{</span><span class="n">DASH</span><span class="si">}</span><span class="s2"> "</span><span class="p">)</span>
+    <span class="n">first</span> <span class="o">=</span> <span class="n">first</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">second</span> <span class="o">=</span> <span class="n">second</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">")"</span><span class="p">,</span> <span class="n">ERASE</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">third</span> <span class="o">=</span> <span class="n">third</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">animal</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">first</span><span class="p">)</span>
+    <span class="n">origin</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">second</span><span class="p">)</span>
+    <span class="n">description</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">third</span><span class="p">)</span>
+
+<span class="n">to_append</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span>
+    <span class="nb">dict</span><span class="p">(</span>
+        <span class="n">animal</span><span class="o">=</span><span class="n">animal</span><span class="p">,</span>
+        <span class="n">origin</span><span class="o">=</span><span class="n">origin</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="n">description</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+<span class="n">to_append</span><span class="p">[</span><span class="s2">"type"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"Arthropod"</span>
+<span class="n">beasts</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">beasts</span><span class="p">,</span> <span class="n">to_append</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">TABLE</span><span class="p">(</span><span class="n">to_append</span><span class="p">))</span>
+</pre></div>
+<table border="2" cellpadding="6" cellspacing="0" frame="hsides" rules="groups">
+<colgroup>
+<col class="org-left">
+<col class="org-left">
+<col class="org-left">
+<col class="org-left"></colgroup>
+<thead>
+<tr>
+<th class="org-left" scope="col">animal</th>
+<th class="org-left" scope="col">origin</th>
+<th class="org-left" scope="col">description</th>
+<th class="org-left" scope="col">type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Anansi</td>
+<td class="org-left">West African</td>
+<td class="org-left">trickster spider</td>
+<td class="org-left">Arthropod</td>
+</tr>
+<tr>
+<td class="org-left">Arachne</td>
+<td class="org-left">Greek</td>
+<td class="org-left">weaver cursed into a spider</td>
+<td class="org-left">Arthropod</td>
+</tr>
+<tr>
+<td class="org-left">Khepri</td>
+<td class="org-left">Ancient Egyptian</td>
+<td class="org-left">beetle who pushes the sun</td>
+<td class="org-left">Arthropod</td>
+</tr>
+<tr>
+<td class="org-left">Tsuchigumo</td>
+<td class="org-left">Japanese</td>
+<td class="org-left">shapeshifting giant spider</td>
+<td class="org-left">Arthropod</td>
+</tr>
+<tr>
+<td class="org-left">Myrmecoleon</td>
+<td class="org-left">Christian</td>
+<td class="org-left">ant-lion</td>
+<td class="org-left">Arthropod</td>
+</tr>
+<tr>
+<td class="org-left">Myrmidons</td>
+<td class="org-left">Greek</td>
+<td class="org-left">warriors created from ants by Zeus</td>
+<td class="org-left">Arthropod</td>
+</tr>
+<tr>
+<td class="org-left">Jorōgumo</td>
+<td class="org-left">Japanese</td>
+<td class="org-left">ghost woman who shapeshifts into a spider</td>
+<td class="org-left">Arthropod</td>
+</tr>
+<tr>
+<td class="org-left">Karkinos</td>
+<td class="org-left">Greek</td>
+<td class="org-left">Cancer the crab</td>
+<td class="org-left">Arthropod</td>
+</tr>
+<tr>
+<td class="org-left">Mothman</td>
+<td class="org-left">American cryptid</td>
+<td class="org-left">man with moth wings and features</td>
+<td class="org-left">Arthropod</td>
+</tr>
+<tr>
+<td class="org-left">Pabilsag</td>
+<td class="org-left">Babylonian</td>
+<td class="org-left">Sagittarius-like creature with scorpion tail</td>
+<td class="org-left">Arthropod</td>
+</tr>
+<tr>
+<td class="org-left">Scorpion man</td>
+<td class="org-left">Babylonian</td>
+<td class="org-left">protector of travellers</td>
+<td class="org-left">Arthropod</td>
+</tr>
+<tr>
+<td class="org-left">Selket</td>
+<td class="org-left">Ancient Egyptian</td>
+<td class="org-left">scorpion death/healing goddess</td>
+<td class="org-left">Arthropod</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li><a id="org48b9b4c"></a>Bears<br>
+<div class="outline-text-5" id="text-org48b9b4c">
+<div class="highlight">
+<pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">tables</span><span class="p">[</span><span class="n">Table</span><span class="o">.</span><span class="n">bears</span><span class="p">]</span>
+<span class="n">animal</span><span class="p">,</span> <span class="n">origin</span><span class="p">,</span> <span class="n">description</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">table</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">"li"</span><span class="p">):</span>
+    <span class="n">first</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">"("</span><span class="p">)</span>
+    <span class="n">second</span><span class="p">,</span> <span class="n">third</span> <span class="o">=</span> <span class="n">right</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">f</span><span class="s2">")</span><span class="si">{</span><span class="n">WEIRD</span><span class="si">}{</span><span class="n">DASH</span><span class="si">}</span><span class="s2"> "</span><span class="p">)</span>
+    <span class="n">animal</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">first</span><span class="p">)</span>
+    <span class="n">origin</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">second</span><span class="p">)</span>
+    <span class="n">description</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">third</span><span class="p">)</span>
+<span class="n">to_append</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span>
+    <span class="nb">dict</span><span class="p">(</span><span class="n">animal</span><span class="o">=</span><span class="n">animal</span><span class="p">,</span>
+         <span class="n">origin</span><span class="o">=</span><span class="n">origin</span><span class="p">,</span>
+         <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">beasts</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">beasts</span><span class="p">,</span> <span class="n">to_append</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">TABLE</span><span class="p">(</span><span class="n">to_append</span><span class="p">))</span>
+</pre></div>
+<table border="2" cellpadding="6" cellspacing="0" frame="hsides" rules="groups">
+<colgroup>
+<col class="org-left">
+<col class="org-left">
+<col class="org-left"></colgroup>
+<thead>
+<tr>
+<th class="org-left" scope="col">animal</th>
+<th class="org-left" scope="col">origin</th>
+<th class="org-left" scope="col">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Bugbear</td>
+<td class="org-left">Celtic</td>
+<td class="org-left">child-eating hobgoblin</td>
+</tr>
+<tr>
+<td class="org-left">Callisto</td>
+<td class="org-left">Greek</td>
+<td class="org-left">A nymph who was turned into a bear by Hera.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+<ul class="pager postindexpager clearfix">
+<li class="previous"><a href="index-3.html" rel="prev">Newer posts</a></li>
+<li class="next"><a href="index-1.html" rel="next">Older posts</a></li>
+</ul>
+<!--End of body content-->
+<footer id="footer">Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a>
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a href="https://necromuralist.github.io/Ape-Iron/" property="dct:title" rel="cc:attributionURL">Ape Iron</a> by <a href="https://github.com/necromuralistc" property="cc:attributionName" rel="cc:attributionURL dct:creator">The Cloistered Monkey</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" rel="license noopener noreferrer" style="display:inline-block;" target="_blank">CC BY 4.0<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"></a></p>
+</footer>
+</div>
+</div>
+<script src="assets/js/all-nocdn.js"></script>
+<script>
+
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+</script>
+</body>
+</html>

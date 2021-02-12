@@ -73,9 +73,9 @@
 </div>
 </header>
 <div class="e-content entry-content" itemprop="articleBody text">
-<div class="outline-2" id="outline-container-org8dc94f1">
-<h2 id="org8dc94f1">Steps</h2>
-<div class="outline-text-2" id="text-org8dc94f1">
+<div class="outline-2" id="outline-container-orge2ff9be">
+<h2 id="orge2ff9be">Steps</h2>
+<div class="outline-text-2" id="text-orge2ff9be">
 <ol class="org-ol">
 <li>Start with your characters from <a href="../character-jam/">Character Jam</a>.</li>
 <li>Prepare 16 panels with caption boxes</li>
@@ -92,9 +92,9 @@
 <p>Add details.</p>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgea0f45b">
-<h2 id="orgea0f45b">Cite</h2>
-<div class="outline-text-2" id="text-orgea0f45b">
+<div class="outline-2" id="outline-container-orga00654a">
+<h2 id="orga00654a">Cite</h2>
+<div class="outline-text-2" id="text-orga00654a">
 <ul class="org-ul">
 <li><a href="../making-comics/">Making Comics</a></li>
 </ul>
@@ -113,7 +113,9 @@
 </aside>
 </article>
 <!--End of body content-->
-<footer id="footer">Contents © 2020 <a href="mailto:necromuralist@protonmail.com">Cloistered Monkey</a> - Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a></footer>
+<footer id="footer">Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a>
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a href="https://necromuralist.github.io/Ape-Iron/" property="dct:title" rel="cc:attributionURL">Ape Iron</a> by <a href="https://github.com/necromuralistc" property="cc:attributionName" rel="cc:attributionURL dct:creator">The Cloistered Monkey</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" rel="license noopener noreferrer" style="display:inline-block;" target="_blank">CC BY 4.0<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"></a></p>
+</footer>
 </div>
 </div>
 <script src="../../assets/js/all-nocdn.js"></script>
@@ -121,9 +123,7 @@
 
     baguetteBox.run('div#content', {
         ignoreClass: 'islink',
-        captions: function(element) {
-            return element.getElementsByTagName('img')[0].alt;
-    }});
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
 </script>
 </body>
 </html>

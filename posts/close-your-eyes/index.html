@@ -73,9 +73,9 @@
 </div>
 </header>
 <div class="e-content entry-content" itemprop="articleBody text">
-<div class="outline-2" id="outline-container-orgccf5e28">
-<h2 id="orgccf5e28">Steps</h2>
-<div class="outline-text-2" id="text-orgccf5e28">
+<div class="outline-2" id="outline-container-org20e2846">
+<h2 id="org20e2846">Steps</h2>
+<div class="outline-text-2" id="text-org20e2846">
 <ul class="org-ul">
 <li>Pick a random thing (animal, object)</li>
 <li>Set a time for one minote</li>
@@ -84,9 +84,9 @@
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgaff4875">
-<h2 id="orgaff4875">Cite</h2>
-<div class="outline-text-2" id="text-orgaff4875">
+<div class="outline-2" id="outline-container-org454e99f">
+<h2 id="org454e99f">Cite</h2>
+<div class="outline-text-2" id="text-org454e99f">
 <ul class="org-ul">
 <li><a href="../making-comics/">Making Comics</a></li>
 </ul>
@@ -105,7 +105,9 @@
 </aside>
 </article>
 <!--End of body content-->
-<footer id="footer">Contents © 2020 <a href="mailto:necromuralist@protonmail.com">Cloistered Monkey</a> - Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a></footer>
+<footer id="footer">Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a>
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a href="https://necromuralist.github.io/Ape-Iron/" property="dct:title" rel="cc:attributionURL">Ape Iron</a> by <a href="https://github.com/necromuralistc" property="cc:attributionName" rel="cc:attributionURL dct:creator">The Cloistered Monkey</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" rel="license noopener noreferrer" style="display:inline-block;" target="_blank">CC BY 4.0<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"></a></p>
+</footer>
 </div>
 </div>
 <script src="../../assets/js/all-nocdn.js"></script>
@@ -113,9 +115,7 @@
 
     baguetteBox.run('div#content', {
         ignoreClass: 'islink',
-        captions: function(element) {
-            return element.getElementsByTagName('img')[0].alt;
-    }});
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
 </script>
 </body>
 </html>

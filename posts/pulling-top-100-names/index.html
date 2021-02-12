@@ -79,31 +79,31 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org0a7ff88">Beginning</a>
+<li><a href="#orge41a33f">Beginning</a>
 <ul>
-<li><a href="#org8455b51">Set Up</a></li>
+<li><a href="#orga4cdd30">Set Up</a></li>
 </ul>
 </li>
-<li><a href="#orge277003">Middle</a>
+<li><a href="#org1109bf6">Middle</a>
 <ul>
-<li><a href="#orgfcf65cd">Pulling the Table</a></li>
-<li><a href="#orgc8094a9">Cleaning Up the Table</a></li>
-<li><a href="#org4e29bad">Some Plotting</a></li>
+<li><a href="#org3bb6f8b">Pulling the Table</a></li>
+<li><a href="#org4e940e7">Cleaning Up the Table</a></li>
+<li><a href="#org766a939">Some Plotting</a></li>
 </ul>
 </li>
-<li><a href="#org22991e7">End</a></li>
+<li><a href="#org90ceada">End</a></li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org0a7ff88">
-<h2 id="org0a7ff88">Beginning</h2>
-<div class="outline-text-2" id="text-org0a7ff88"></div>
-<div class="outline-3" id="outline-container-org8455b51">
-<h3 id="org8455b51">Set Up</h3>
-<div class="outline-text-3" id="text-org8455b51"></div>
-<div class="outline-4" id="outline-container-org290aa13">
-<h4 id="org290aa13">Imports</h4>
-<div class="outline-text-4" id="text-org290aa13">
+<div class="outline-2" id="outline-container-orge41a33f">
+<h2 id="orge41a33f">Beginning</h2>
+<div class="outline-text-2" id="text-orge41a33f"></div>
+<div class="outline-3" id="outline-container-orga4cdd30">
+<h3 id="orga4cdd30">Set Up</h3>
+<div class="outline-text-3" id="text-orga4cdd30"></div>
+<div class="outline-4" id="outline-container-org753af97">
+<h4 id="org753af97">Imports</h4>
+<div class="outline-text-4" id="text-org753af97">
 <div class="highlight">
 <pre><span></span><span class="c1"># python</span>
 <span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
@@ -117,26 +117,26 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgdaa1a84">
-<h4 id="orgdaa1a84">Plotting</h4>
-<div class="outline-text-4" id="text-orgdaa1a84">
+<div class="outline-4" id="outline-container-orgd470e13">
+<h4 id="orgd470e13">Plotting</h4>
+<div class="outline-text-4" id="text-orgd470e13">
 <div class="highlight">
 <pre><span></span><span class="n">SLUG</span> <span class="o">=</span> <span class="s2">"pulling-top-100-names"</span>
-<span class="n">Embed</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">EmbedHoloviews</span><span class="p">,</span> <span class="n">folder_path</span><span class="o">=</span><span class="n">f</span><span class="s2">"files/posts/{SLUG}"</span><span class="p">)</span>
+<span class="n">Embed</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">EmbedHoloviews</span><span class="p">,</span> <span class="n">folder_path</span><span class="o">=</span><span class="sa">f</span><span class="s2">"files/posts/</span><span class="si">{</span><span class="n">SLUG</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orge277003">
-<h2 id="orge277003">Middle</h2>
-<div class="outline-text-2" id="text-orge277003"></div>
-<div class="outline-3" id="outline-container-orgfcf65cd">
-<h3 id="orgfcf65cd">Pulling the Table</h3>
-<div class="outline-text-3" id="text-orgfcf65cd"></div>
-<div class="outline-4" id="outline-container-orgaeb94c1">
-<h4 id="orgaeb94c1">Trying a Naive Request</h4>
-<div class="outline-text-4" id="text-orgaeb94c1">
+<div class="outline-2" id="outline-container-org1109bf6">
+<h2 id="org1109bf6">Middle</h2>
+<div class="outline-text-2" id="text-org1109bf6"></div>
+<div class="outline-3" id="outline-container-org3bb6f8b">
+<h3 id="org3bb6f8b">Pulling the Table</h3>
+<div class="outline-text-3" id="text-org3bb6f8b"></div>
+<div class="outline-4" id="outline-container-org88abba7">
+<h4 id="org88abba7">Trying a Naive Request</h4>
+<div class="outline-text-4" id="text-org88abba7">
 <div class="highlight">
 <pre><span></span><span class="n">URL</span> <span class="o">=</span> <span class="s2">"https://www.ssa.gov/OACT/babynames/decades/century.html"</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span>
@@ -144,14 +144,14 @@
 </pre></div>
 <div class="highlight">
 <pre><span></span><span class="n">tables</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tables</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tables</span><span class="p">))</span>
 </pre></div>
 <pre class="example">
 1
 </pre>
 <div class="highlight">
 <pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">tables</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
 </pre></div>
 <pre class="example">
   Unnamed: 0_level_0  Males          Females         
@@ -162,24 +162,24 @@
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgc8094a9">
-<h3 id="orgc8094a9">Cleaning Up the Table</h3>
-<div class="outline-text-3" id="text-orgc8094a9">
+<div class="outline-3" id="outline-container-org4e940e7">
+<h3 id="org4e940e7">Cleaning Up the Table</h3>
+<div class="outline-text-3" id="text-org4e940e7">
 <div class="highlight">
 <pre><span></span><span class="n">males</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">table</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]]</span>
 <span class="n">females</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">table</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">3</span><span class="p">:]]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">males</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">males</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
 </pre></div>
 <pre class="example">
    Males         
     Name   Number
 0  James  4764644
 </pre></div>
-<div class="outline-4" id="outline-container-org86e9ff8">
-<h4 id="org86e9ff8">The Last Row</h4>
-<div class="outline-text-4" id="text-org86e9ff8">
+<div class="outline-4" id="outline-container-org5ecb7fe">
+<h4 id="org5ecb7fe">The Last Row</h4>
+<div class="outline-text-4" id="text-org5ecb7fe">
 <div class="highlight">
-<pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">males</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">males</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
 <pre class="example">
 Males  Name      Source: 100% sample based on Social Security c...
@@ -187,7 +187,7 @@ Males  Name      Source: 100% sample based on Social Security c...
 Name: 100, dtype: object
 </pre>
 <div class="highlight">
-<pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">1</span><span class="p">)[</span><span class="n">table</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">1</span><span class="p">)[</span><span class="n">table</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 <pre class="example">
 Source: 100% sample based on Social Security card application data as of of March 2019. See the limitations of  this data source.
@@ -200,7 +200,7 @@ Source: 100% sample based on Social Security card application data as of of Marc
 <div class="highlight">
 <pre><span></span><span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">males</span><span class="p">)</span> <span class="o">==</span> <span class="mi">100</span>
 <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">females</span><span class="p">)</span> <span class="o">==</span> <span class="mi">100</span>
-<span class="k">print</span><span class="p">(</span><span class="n">females</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">females</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
 </pre></div>
 <pre class="example">
   Females         
@@ -217,7 +217,7 @@ Source: 100% sample based on Social Security card application data as of of Marc
 <span class="n">males</span><span class="p">[</span><span class="s2">"rank"</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">101</span><span class="p">))</span>
 <span class="n">females</span><span class="p">[</span><span class="s2">"rank"</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">101</span><span class="p">))</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">males</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">males</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
 </pre></div>
 <pre class="example">
     name    count gender  rank
@@ -230,9 +230,9 @@ Source: 100% sample based on Social Security card application data as of of Marc
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org4e29bad">
-<h3 id="org4e29bad">Some Plotting</h3>
-<div class="outline-text-3" id="text-org4e29bad">
+<div class="outline-3" id="outline-container-org766a939">
+<h3 id="org766a939">Some Plotting</h3>
+<div class="outline-text-3" id="text-org766a939">
 <p>Before we can plot them we have to change the <code>count</code> column to be (you guessed it) a number since that last row with the source information prevents pandas' ability to convert the column itself.</p>
 <div class="highlight">
 <pre><span></span><span class="n">names</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s2">"count"</span><span class="p">]</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="s2">"count"</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
@@ -248,7 +248,7 @@ Source: 100% sample based on Social Security card application data as of of Marc
 <span class="n">outcome</span> <span class="o">=</span> <span class="n">Embed</span><span class="p">(</span><span class="n">plot</span><span class="o">=</span><span class="n">plot</span><span class="p">,</span> <span class="n">file_name</span><span class="o">=</span><span class="s2">"gender_plot"</span><span class="p">)()</span>
 </pre></div>
 <div class="highlight">
-<pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">outcome</span><span class="p">)</span>
+<pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">outcome</span><span class="p">)</span>
 </pre></div>
 <object data="gender_plot.html" height="800" style="width:100%" type="text/html">
 <p>Figure Missing</p>
@@ -257,12 +257,12 @@ Source: 100% sample based on Social Security card application data as of of Marc
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org22991e7">
-<h2 id="org22991e7">End</h2>
-<div class="outline-text-2" id="text-org22991e7">
+<div class="outline-2" id="outline-container-org90ceada">
+<h2 id="org90ceada">End</h2>
+<div class="outline-text-2" id="text-org90ceada">
 <p>Time to save the table.</p>
 <div class="highlight">
-<pre><span></span><span class="n">names</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">"apeiron/top_100_ssa_names.csv"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<pre><span></span><span class="n">names</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">"apeiron/top_100_ssa_names.csv"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -283,7 +283,9 @@ Source: 100% sample based on Social Security card application data as of of Marc
 </aside>
 </article>
 <!--End of body content-->
-<footer id="footer">Contents © 2020 <a href="mailto:necromuralist@protonmail.com">Cloistered Monkey</a> - Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a></footer>
+<footer id="footer">Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a>
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a href="https://necromuralist.github.io/Ape-Iron/" property="dct:title" rel="cc:attributionURL">Ape Iron</a> by <a href="https://github.com/necromuralistc" property="cc:attributionName" rel="cc:attributionURL dct:creator">The Cloistered Monkey</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" rel="license noopener noreferrer" style="display:inline-block;" target="_blank">CC BY 4.0<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"></a></p>
+</footer>
 </div>
 </div>
 <script src="../../assets/js/all-nocdn.js"></script>
@@ -291,9 +293,7 @@ Source: 100% sample based on Social Security card application data as of of Marc
 
     baguetteBox.run('div#content', {
         ignoreClass: 'islink',
-        captions: function(element) {
-            return element.getElementsByTagName('img')[0].alt;
-    }});
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
 </script>
 </body>
 </html>
