@@ -1,0 +1,20 @@
+#+BEGIN_COMMENT
+.. title: Line Walk One
+.. slug: line-walk-one
+.. date: 2021-02-16 21:00:29 UTC-08:00
+.. tags: doodle,line walk
+.. category: Doodle
+.. link: 
+.. description: 
+.. type: text
+.. status: 
+.. updated: 
+
+#+END_COMMENT
+
+    #+ATTR_HTML: :alt Line Walk One
+    #+ATTR_HTML: :class reference
+    [[file:../../images/line-walk-1.webp][file:../../images/line-walk-1.thumbnail.png]]
+
+
+No meaning, just taking a line for a walk.    
