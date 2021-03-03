@@ -18,12 +18,16 @@
   <lastmod>2021-02-12T01:07:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_doodle.xml</loc>
+  <lastmod>2021-02-17T05:05:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_scraping.xml</loc>
   <lastmod>2021-02-12T01:07:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_testing.xml</loc>
-  <lastmod>2021-02-12T03:07:00Z</lastmod>
+  <lastmod>2021-02-20T06:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_writing.xml</loc>
@@ -36,6 +40,10 @@
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/doggerel.xml</loc>
   <lastmod>2021-02-12T01:07:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/doodle.xml</loc>
+  <lastmod>2021-02-17T05:05:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/exercise.xml</loc>
@@ -51,7 +59,11 @@
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/images.xml</loc>
-  <lastmod>2021-02-12T02:39:00Z</lastmod>
+  <lastmod>2021-02-20T06:43:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/line-walk.xml</loc>
+  <lastmod>2021-02-17T05:05:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/lists.xml</loc>
@@ -75,7 +87,7 @@
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/testing.xml</loc>
-  <lastmod>2021-02-12T03:07:00Z</lastmod>
+  <lastmod>2021-02-20T06:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/wikipedia.xml</loc>
@@ -87,10 +99,10 @@
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/rss.xml</loc>
-  <lastmod>2021-02-12T03:07:00Z</lastmod>
+  <lastmod>2021-02-20T06:43:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/sitemap.xml</loc>
-  <lastmod>2021-02-12T03:07:00Z</lastmod>
+  <lastmod>2021-02-20T06:43:00Z</lastmod>
  </sitemap>
 </sitemapindex>

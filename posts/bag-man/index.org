@@ -33,3 +33,9 @@ Will include this image.
     #+ATTR_HTML: :class reference    
     [[file:../../images/bag-man.png]]
     
+* Bag-Man Traced
+
+    #+ATTR_HTML: :alt Bag Man Kraft Paper
+    #+ATTR_HTML: :class reference
+    [[file:../../images/bag-man-kraft.webp][file:../../images/bag-man-kraft.thumbnail.png]]
+  
