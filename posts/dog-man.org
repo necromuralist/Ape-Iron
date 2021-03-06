@@ -1,0 +1,19 @@
+#+BEGIN_COMMENT
+.. title: Dog Man
+.. slug: dog-man
+.. date: 2021-03-05 18:03:27 UTC-08:00
+.. tags: images,sketch
+.. category: Sketch
+.. link: 
+.. description: The dog-man sketch.
+.. type: text
+.. status: 
+.. updated: 
+
+#+END_COMMENT
+#+OPTIONS: ^:{}
+#+TOC: headlines 3
+    #+ATTR_HTML: :alt dog-man
+    #+ATTR_HTML: :class reference
+    [[file:../../images/dog-man.webp][file:../../images/dog-man.thumbnail.png]]
+

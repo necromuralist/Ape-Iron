@@ -1,0 +1,18 @@
+#+BEGIN_COMMENT
+.. title: Hooded
+.. slug: hooded
+.. date: 2021-03-05 18:42:15 UTC-08:00
+.. tags: sketch,watercolor,gouache
+.. category: Sketch
+.. link: 
+.. description: One of my old sketches of a hooded figure.
+.. type: text
+.. status: 
+.. updated: 
+
+#+END_COMMENT
+
+#+ATTR_HTML: :alt Hooded
+#+ATTR_HTML: :class reference
+[[file:../../images/hooded.webp][file:../../images/hooded.thumbnail.png]]
+
