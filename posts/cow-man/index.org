@@ -1,0 +1,21 @@
+#+BEGIN_COMMENT
+.. title: Cow Man
+.. slug: cow-man
+.. date: 2021-03-05 19:03:27 UTC-08:00
+.. tags: images,sketches
+.. category: Sketch
+.. link: 
+.. description: The Cow Man sketch.
+.. type: text
+.. status: 
+.. updated: 
+
+#+END_COMMENT
+#+OPTIONS: ^:{}
+#+TOC: headlines 3
+* The Cow Man
+
+    #+ATTR_HTML: :alt Cow Man
+    #+ATTR_HTML: :class reference
+    [[file:../../images/cow-man.webp][file:../../images/cow-man.thumbnail.png]]
+

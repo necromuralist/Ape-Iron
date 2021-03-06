@@ -66,31 +66,31 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="posts/pulling-top-100-names/#orge41a33f">Beginning</a>
+<li><a href="posts/pulling-top-100-names/#org1194192">Beginning</a>
 <ul>
-<li><a href="posts/pulling-top-100-names/#orga4cdd30">Set Up</a></li>
+<li><a href="posts/pulling-top-100-names/#orgd33125d">Set Up</a></li>
 </ul>
 </li>
-<li><a href="posts/pulling-top-100-names/#org1109bf6">Middle</a>
+<li><a href="posts/pulling-top-100-names/#org6c1a291">Middle</a>
 <ul>
-<li><a href="posts/pulling-top-100-names/#org3bb6f8b">Pulling the Table</a></li>
-<li><a href="posts/pulling-top-100-names/#org4e940e7">Cleaning Up the Table</a></li>
-<li><a href="posts/pulling-top-100-names/#org766a939">Some Plotting</a></li>
+<li><a href="posts/pulling-top-100-names/#org41c8fb1">Pulling the Table</a></li>
+<li><a href="posts/pulling-top-100-names/#org90ad020">Cleaning Up the Table</a></li>
+<li><a href="posts/pulling-top-100-names/#org4405080">Some Plotting</a></li>
 </ul>
 </li>
-<li><a href="posts/pulling-top-100-names/#org90ceada">End</a></li>
+<li><a href="posts/pulling-top-100-names/#org868f69d">End</a></li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orge41a33f">
-<h2 id="orge41a33f">Beginning</h2>
-<div class="outline-text-2" id="text-orge41a33f"></div>
-<div class="outline-3" id="outline-container-orga4cdd30">
-<h3 id="orga4cdd30">Set Up</h3>
-<div class="outline-text-3" id="text-orga4cdd30"></div>
-<div class="outline-4" id="outline-container-org753af97">
-<h4 id="org753af97">Imports</h4>
-<div class="outline-text-4" id="text-org753af97">
+<div class="outline-2" id="outline-container-org1194192">
+<h2 id="org1194192">Beginning</h2>
+<div class="outline-text-2" id="text-org1194192"></div>
+<div class="outline-3" id="outline-container-orgd33125d">
+<h3 id="orgd33125d">Set Up</h3>
+<div class="outline-text-3" id="text-orgd33125d"></div>
+<div class="outline-4" id="outline-container-org38a16e7">
+<h4 id="org38a16e7">Imports</h4>
+<div class="outline-text-4" id="text-org38a16e7">
 <div class="highlight">
 <pre><span></span><span class="c1"># python</span>
 <span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
@@ -104,9 +104,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgd470e13">
-<h4 id="orgd470e13">Plotting</h4>
-<div class="outline-text-4" id="text-orgd470e13">
+<div class="outline-4" id="outline-container-orgecb2666">
+<h4 id="orgecb2666">Plotting</h4>
+<div class="outline-text-4" id="text-orgecb2666">
 <div class="highlight">
 <pre><span></span><span class="n">SLUG</span> <span class="o">=</span> <span class="s2">"pulling-top-100-names"</span>
 <span class="n">Embed</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">EmbedHoloviews</span><span class="p">,</span> <span class="n">folder_path</span><span class="o">=</span><span class="sa">f</span><span class="s2">"files/posts/</span><span class="si">{</span><span class="n">SLUG</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
@@ -115,15 +115,15 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org1109bf6">
-<h2 id="org1109bf6">Middle</h2>
-<div class="outline-text-2" id="text-org1109bf6"></div>
-<div class="outline-3" id="outline-container-org3bb6f8b">
-<h3 id="org3bb6f8b">Pulling the Table</h3>
-<div class="outline-text-3" id="text-org3bb6f8b"></div>
-<div class="outline-4" id="outline-container-org88abba7">
-<h4 id="org88abba7">Trying a Naive Request</h4>
-<div class="outline-text-4" id="text-org88abba7">
+<div class="outline-2" id="outline-container-org6c1a291">
+<h2 id="org6c1a291">Middle</h2>
+<div class="outline-text-2" id="text-org6c1a291"></div>
+<div class="outline-3" id="outline-container-org41c8fb1">
+<h3 id="org41c8fb1">Pulling the Table</h3>
+<div class="outline-text-3" id="text-org41c8fb1"></div>
+<div class="outline-4" id="outline-container-org278233a">
+<h4 id="org278233a">Trying a Naive Request</h4>
+<div class="outline-text-4" id="text-org278233a">
 <div class="highlight">
 <pre><span></span><span class="n">URL</span> <span class="o">=</span> <span class="s2">"https://www.ssa.gov/OACT/babynames/decades/century.html"</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span>
@@ -149,9 +149,9 @@
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org4e940e7">
-<h3 id="org4e940e7">Cleaning Up the Table</h3>
-<div class="outline-text-3" id="text-org4e940e7">
+<div class="outline-3" id="outline-container-org90ad020">
+<h3 id="org90ad020">Cleaning Up the Table</h3>
+<div class="outline-text-3" id="text-org90ad020">
 <div class="highlight">
 <pre><span></span><span class="n">males</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">table</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]]</span>
 <span class="n">females</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">table</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">3</span><span class="p">:]]</span>
@@ -162,9 +162,9 @@
     Name   Number
 0  James  4764644
 </pre></div>
-<div class="outline-4" id="outline-container-org5ecb7fe">
-<h4 id="org5ecb7fe">The Last Row</h4>
-<div class="outline-text-4" id="text-org5ecb7fe">
+<div class="outline-4" id="outline-container-org3858248">
+<h4 id="org3858248">The Last Row</h4>
+<div class="outline-text-4" id="text-org3858248">
 <div class="highlight">
 <pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">males</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
@@ -217,9 +217,9 @@ Source: 100% sample based on Social Security card application data as of of Marc
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org766a939">
-<h3 id="org766a939">Some Plotting</h3>
-<div class="outline-text-3" id="text-org766a939">
+<div class="outline-3" id="outline-container-org4405080">
+<h3 id="org4405080">Some Plotting</h3>
+<div class="outline-text-3" id="text-org4405080">
 <p>Before we can plot them we have to change the <code>count</code> column to be (you guessed it) a number since that last row with the source information prevents pandas' ability to convert the column itself.</p>
 <div class="highlight">
 <pre><span></span><span class="n">names</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s2">"count"</span><span class="p">]</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="s2">"count"</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
@@ -244,9 +244,9 @@ Source: 100% sample based on Social Security card application data as of of Marc
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org90ceada">
-<h2 id="org90ceada">End</h2>
-<div class="outline-text-2" id="text-org90ceada">
+<div class="outline-2" id="outline-container-org868f69d">
+<h2 id="org868f69d">End</h2>
+<div class="outline-text-2" id="text-org868f69d">
 <p>Time to save the table.</p>
 <div class="highlight">
 <pre><span></span><span class="n">names</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">"apeiron/top_100_ssa_names.csv"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>

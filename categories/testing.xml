@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron (Posts about testing)</title><link>https://necromuralist.github.io/Ape-Iron/</link><description></description><atom:link href="https://necromuralist.github.io/Ape-Iron/categories/testing.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:necromuralist@protonmail.com"&gt;Cloistered Monkey&lt;/a&gt; &lt;p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"&gt;&lt;a property="dct:title" rel="cc:attributionURL" href="https://necromuralist.github.io/Ape-Iron/"&gt;Ape Iron&lt;/a&gt; by &lt;a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/necromuralist"&gt;The Cloistered Monkey&lt;/a&gt; is licensed under &lt;a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY 4.0&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;&lt;/a&gt;&lt;/p&gt;</copyright><lastBuildDate>Sat, 20 Feb 2021 06:43:50 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Bag Man</title><link>https://necromuralist.github.io/Ape-Iron/posts/bag-man/</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron (Posts about testing)</title><link>https://necromuralist.github.io/Ape-Iron/</link><description></description><atom:link href="https://necromuralist.github.io/Ape-Iron/categories/testing.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:necromuralist@protonmail.com"&gt;Cloistered Monkey&lt;/a&gt; &lt;p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"&gt;&lt;a property="dct:title" rel="cc:attributionURL" href="https://necromuralist.github.io/Ape-Iron/"&gt;Ape Iron&lt;/a&gt; by &lt;a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/necromuralist"&gt;The Cloistered Monkey&lt;/a&gt; is licensed under &lt;a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY 4.0&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;&lt;/a&gt;&lt;/p&gt;</copyright><lastBuildDate>Sat, 06 Mar 2021 04:06:12 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Bag Man</title><link>https://necromuralist.github.io/Ape-Iron/posts/bag-man/</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bag-man/#orgcfbdf96"&gt;The Bag Man&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bag-man/#orgeb24248"&gt;The Bag Man Without Thumbnails&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bag-man/#org4fbefce"&gt;Bag-Man Traced&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bag-man/#org7ae65de"&gt;The Bag Man&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bag-man/#org77c71bf"&gt;The Bag Man Without Thumbnails&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bag-man/#orge8f247b"&gt;Bag-Man Traced&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgcfbdf96" class="outline-2"&gt;
-&lt;h2 id="orgcfbdf96"&gt;The Bag Man&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgcfbdf96"&gt;
+&lt;div id="outline-container-org7ae65de" class="outline-2"&gt;
+&lt;h2 id="org7ae65de"&gt;The Bag Man&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org7ae65de"&gt;
 &lt;p&gt;
 This post was created to see what happens in the slideshow if you put all the image files in the &lt;code&gt;images&lt;/code&gt; folder without sub-folders, it's a companion to the &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/image-testing/"&gt;Image Testing&lt;/a&gt; post.
 &lt;/p&gt;
 
 
-&lt;div id="org976b47a" class="figure"&gt;
+&lt;div id="orgc402588" class="figure"&gt;
 &lt;p&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/images/bag-man.webp" class="reference" alt="Bag Man"&gt;&lt;img src="https://necromuralist.github.io/Ape-Iron/images/bag-man.thumbnail.png" alt="Bag Man" class="reference"&gt;&lt;/a&gt;
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgeb24248" class="outline-2"&gt;
-&lt;h2 id="orgeb24248"&gt;The Bag Man Without Thumbnails&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgeb24248"&gt;
+&lt;div id="outline-container-org77c71bf" class="outline-2"&gt;
+&lt;h2 id="org77c71bf"&gt;The Bag Man Without Thumbnails&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org77c71bf"&gt;
 &lt;p&gt;
 If you want to just display the image they recommend you put it in the &lt;code&gt;files&lt;/code&gt; folder, but you can still reference it in the images folder too, but as with the thumbnails you need to use a more common format like png. This org-reference:
 &lt;/p&gt;
 
-&lt;pre class="example" id="orgf64febf"&gt;
+&lt;pre class="example" id="org203ce71"&gt;
 [[file:../../images/bag-man.png]]
 &lt;/pre&gt;
 
@@ -40,18 +40,18 @@ Will include this image.
 &lt;/p&gt;
 
 
-&lt;div id="org396b7b1" class="figure"&gt;
+&lt;div id="orge5aa67d" class="figure"&gt;
 &lt;p&gt;&lt;img src="https://necromuralist.github.io/Ape-Iron/images/bag-man.png" alt="Bag Man Big" class="reference"&gt;
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org4fbefce" class="outline-2"&gt;
-&lt;h2 id="org4fbefce"&gt;Bag-Man Traced&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org4fbefce"&gt;
+&lt;div id="outline-container-orge8f247b" class="outline-2"&gt;
+&lt;h2 id="orge8f247b"&gt;Bag-Man Traced&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orge8f247b"&gt;
 
-&lt;div id="orgeb4cd70" class="figure"&gt;
+&lt;div id="org5a99363" class="figure"&gt;
 &lt;p&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/images/bag-man-kraft.webp" class="reference" alt="Bag Man Kraft Paper"&gt;&lt;img src="https://necromuralist.github.io/Ape-Iron/images/bag-man-kraft.thumbnail.png" alt="Bag Man Kraft Paper" class="reference"&gt;&lt;/a&gt;
 &lt;/p&gt;
 &lt;/div&gt;
@@ -60,78 +60,78 @@ Will include this image.
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/image-testing/#org89ae6f8"&gt;Thumbnail With Baguette Box&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/image-testing/#org4036834"&gt;Thumbnail With Baguette Box&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/image-testing/#org3a99ec0"&gt;HTML&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/image-testing/#org190a109"&gt;Org-Mode&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/image-testing/#org44de01f"&gt;WebP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/image-testing/#orgc588b4e"&gt;HTML&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/image-testing/#org30ce856"&gt;Org-Mode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/image-testing/#orgdeaa99d"&gt;WebP&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/image-testing/#org75248e6"&gt;More Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/image-testing/#orgdb268de"&gt;More Notes&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org89ae6f8" class="outline-2"&gt;
-&lt;h2 id="org89ae6f8"&gt;Thumbnail With Baguette Box&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org89ae6f8"&gt;
+&lt;div id="outline-container-org4036834" class="outline-2"&gt;
+&lt;h2 id="org4036834"&gt;Thumbnail With Baguette Box&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org4036834"&gt;
 &lt;p&gt;
 This is a look at using an &lt;a href="https://getnikola.com/handbook.html#embedding-images"&gt;embedded image&lt;/a&gt; from the &lt;code&gt;images&lt;/code&gt; folder.    If you put the files in the &lt;code&gt;images&lt;/code&gt; folder then it automatically creates thumbnails and a slide-show, but there's a little trick to getting the folder references right. 
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org3a99ec0" class="outline-4"&gt;
-&lt;h4 id="org3a99ec0"&gt;HTML&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org3a99ec0"&gt;
+&lt;div id="outline-container-orgc588b4e" class="outline-4"&gt;
+&lt;h4 id="orgc588b4e"&gt;HTML&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgc588b4e"&gt;
 &lt;p&gt;
 If you use HTML you can just assume that the &lt;code&gt;images&lt;/code&gt; folder is at the root of the site (make sure to set the class to "reference").
 &lt;/p&gt;
 
-&lt;pre class="example" id="org136189d"&gt;
+&lt;pre class="example" id="org58318e7"&gt;
 &amp;lt;a class="reference" href="/images/eyeball-man.png" alt="Eyeball Man"&amp;gt;&amp;lt;img src="/images/eyeball-man.thumbnail.png"&amp;gt;&amp;lt;/a&amp;gt;
 &lt;/pre&gt;
 
 &lt;a class="reference" href="https://necromuralist.github.io/Ape-Iron/images/eyeball-man.png" alt="Eyeball Man"&gt;&lt;img src="https://necromuralist.github.io/Ape-Iron/images/eyeball-man.thumbnail.png"&gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org190a109" class="outline-4"&gt;
-&lt;h4 id="org190a109"&gt;Org-Mode&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org190a109"&gt;
+&lt;div id="outline-container-org30ce856" class="outline-4"&gt;
+&lt;h4 id="org30ce856"&gt;Org-Mode&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org30ce856"&gt;
 &lt;p&gt;
 You can set the attributes with org-mode's image syntax as well, although it's still a little clunky. In this case you have to set the path to the &lt;code&gt;images&lt;/code&gt; folder relative to the &lt;code&gt;files/posts&lt;/code&gt; folder.
 &lt;/p&gt;
-&lt;pre class="example" id="orga834351"&gt;
+&lt;pre class="example" id="org34cce96"&gt;
 #+ATTR_HTML: :alt Eyeball Man
 #+ATTR_HTML: :class reference
 [[file:../../images/eyeball-man.png][file:../../images/eyeball-man.thumbnail.png]]
 &lt;/pre&gt;
 
 
-&lt;div id="org25a5f24" class="figure"&gt;
+&lt;div id="org7637904" class="figure"&gt;
 &lt;p&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/images/eyeball-man.png" class="reference" alt="Eyeball Man Org"&gt;&lt;img src="https://necromuralist.github.io/Ape-Iron/images/eyeball-man.thumbnail.png" alt="Eyeball Man Org" class="reference"&gt;&lt;/a&gt;
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org44de01f" class="outline-4"&gt;
-&lt;h4 id="org44de01f"&gt;WebP&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org44de01f"&gt;
+&lt;div id="outline-container-orgdeaa99d" class="outline-4"&gt;
+&lt;h4 id="orgdeaa99d"&gt;WebP&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgdeaa99d"&gt;
 &lt;p&gt;
 You can use the WebP format… kind of. You have to use the &lt;code&gt;file:&lt;/code&gt; directive in the link (although this seems to be required for this to work anyway) and the thumbnail has to be a format that's more common (I've only tried PNG) - WebP works for the slideshow but not the thumbnail. There might be a way to add WebP support, but it doesnt' work out of the box.
 &lt;/p&gt;
 
-&lt;pre class="example" id="org99d488a"&gt;
+&lt;pre class="example" id="org0694cbe"&gt;
 #+ATTR_HTML: :alt Eyeball Man WebP
 #+ATTR_HTML: :class reference
 [[file:../../images/eyeball-man.webp][file:../../images/eyeball-man.thumbnail.png]]
 &lt;/pre&gt;
 
 
-&lt;div id="org9c494e6" class="figure"&gt;
+&lt;div id="org9397eed" class="figure"&gt;
 &lt;p&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/images/eyeball-man.webp" class="reference" alt="Eyeball Man WebP"&gt;&lt;img src="https://necromuralist.github.io/Ape-Iron/images/eyeball-man.thumbnail.png" alt="Eyeball Man WebP" class="reference"&gt;&lt;/a&gt;
 &lt;/p&gt;
 &lt;/div&gt;
@@ -139,9 +139,9 @@ You can use the WebP format… kind of. You have to use the &lt;code&gt;file:&lt
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org75248e6" class="outline-2"&gt;
-&lt;h2 id="org75248e6"&gt;More Notes&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org75248e6"&gt;
+&lt;div id="outline-container-orgdb268de" class="outline-2"&gt;
+&lt;h2 id="orgdb268de"&gt;More Notes&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgdb268de"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;The &lt;code&gt;alt&lt;/code&gt; attribute adds a title to the images in the slide show in the org-mode formats but not if you type in the HTML directly (from what I can tell).&lt;/li&gt;
 &lt;li&gt;The &lt;code&gt;thumbnail&lt;/code&gt; files are created when nikola builds the site so if you want to add the link before you build just insert &lt;code&gt;.thumbnail&lt;/code&gt; in front of the image file-extension (you can change it in the &lt;code&gt;conf.py&lt;/code&gt; file).&lt;/li&gt;
