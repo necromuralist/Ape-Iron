@@ -1,0 +1,22 @@
+#+BEGIN_COMMENT
+.. title: Grisaille Perspective Study
+.. slug: grisaille-perspective-study
+.. date: 2021-03-21 23:14:23 UTC-07:00
+.. tags: watercolor,perspective,grisaille,sketchbook
+.. category: Sketch
+.. link: 
+.. description: A grisaille perspective building sketch.
+.. type: text
+.. status: 
+.. updated: 
+
+#+END_COMMENT
+#+ATTR_HTML: :alt Grisaille Perspective Study
+#+ATTR_HTML: :class reference
+[[file:../../images/grisaille-perspective.webp][file:../../images/grisaille-perspective.thumbnail.png]]
+
+A simple study to try James Gurney's grisaille exercise combined with a "How to Draw" exercise in perspective.
+
+ - yellow-ochre gouache with satin glazing fluid over it
+ - white gouache
+ - ivory black gouache
