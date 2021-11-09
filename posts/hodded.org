@@ -12,7 +12,6 @@
 
 #+END_COMMENT
 
-#+ATTR_HTML: :alt Hooded
-#+ATTR_HTML: :class reference
-[[file:../../images/hooded.webp][file:../../images/hooded.thumbnail.png]]
+{{% thumbnail "/images/hooded.webp" alt="Hooded" %}}{{% /thumbnail %}}
 
+An experiment using white kraft paper. Maybe I'll stick to brown.

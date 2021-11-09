@@ -12,10 +12,8 @@
 
 #+END_COMMENT
 #+OPTIONS: ^:{}
-#+TOC: headlines 3
+
 * The Cow Man
 
-    #+ATTR_HTML: :alt Cow Man
-    #+ATTR_HTML: :class reference
-    [[file:../../images/cow-man.webp][file:../../images/cow-man.thumbnail.png]]
+{{% thumbnail "/images/cow-man.webp" alt="The Cow Man" %}}{{% /thumbnail %}}
 

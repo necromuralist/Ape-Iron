@@ -12,9 +12,7 @@
 
 #+END_COMMENT
 
-    #+ATTR_HTML: :alt Line Walk One
-    #+ATTR_HTML: :class reference
-    [[file:../../images/line-walk-1.webp][file:../../images/line-walk-1.thumbnail.png]]
+{{% thumbnail "/images/line-walk-1.webp" alt="Line Walk" %}}{{% /thumbnail %}}
 
 
 No meaning, just taking a line for a walk.    

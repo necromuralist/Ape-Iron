@@ -8,51 +8,35 @@
 .. description: Testing Nikola's images.
 .. type: text
 .. status: 
-.. updated: 
+.. updated: 2021-11-08
 
 #+END_COMMENT
 #+OPTIONS: ^:{}
-#+TOC: headlines 3
 
 * Thumbnail With Baguette Box  
-  This is a look at using an [[https://getnikola.com/handbook.html#embedding-images][embedded image]] from the =images= folder.    If you put the files in the =images= folder then it automatically creates thumbnails and a slide-show, but there's a little trick to getting the folder references right. 
+  This is a look at using an [[https://getnikola.com/handbook.html#embedding-images][embedded image]] from the =images= folder. If you put the files in the =images= folder then it automatically creates thumbnails and a slide-show, but there's a little trick to getting the folder references right. 
 
-*** HTML   
+** HTML   
    If you use HTML you can just assume that the =images= folder is at the root of the site (make sure to set the class to "reference").
 
 #+begin_example html
-<a class="reference" href="/images/eyeball-man.png" alt="Eyeball Man"><img src="/images/eyeball-man.thumbnail.png"></a>
+<a class="reference" href="/images/eyeball-man.webp" alt="Eyeball Man"><img src="/images/eyeball-man.thumbnail.webp"></a>
 #+end_example
    
 #+begin_export html
-<a class="reference" href="/images/eyeball-man.png" alt="Eyeball Man"><img src="/images/eyeball-man.thumbnail.png"></a>
+<a class="reference" href="/images/eyeball-man.webp" alt="Eyeball Man"><img src="/images/eyeball-man.thumbnail.webp"></a>
 #+end_export
-*** Org-Mode
-    You can set the attributes with org-mode's image syntax as well, although it's still a little clunky. In this case you have to set the path to the =images= folder relative to the =files/posts= folder.
-#+begin_example org
-   #+ATTR_HTML: :alt Eyeball Man
-   #+ATTR_HTML: :class reference
-   [[file:../../images/eyeball-man.png][file:../../images/eyeball-man.thumbnail.png]]
-#+end_example
+** The Thumbnail Shortcode
+   It took me a while to stumble upon this, but there is an ~image~ shortcode for those of us not using ReST (although it isn't directly linked to in the documentation for the ReST directive, from what I could tell). So if you want to do it the easier way:
 
-   #+ATTR_HTML: :alt Eyeball Man Org
-   #+ATTR_HTML: :class reference
-   [[file:../../images/eyeball-man.png][file:../../images/eyeball-man.thumbnail.png]]
-*** WebP
-    You can use the WebP format... kind of. You have to use the =file:= directive in the link (although this seems to be required for this to work anyway) and the thumbnail has to be a format that's more common (I've only tried PNG) - WebP works for the slideshow but not the thumbnail. There might be a way to add WebP support, but it doesnt' work out of the box.
+ - Put the original image in the ~images~ folder
+ - use the shortcode:
 
-#+begin_example org
-    #+ATTR_HTML: :alt Eyeball Man WebP
-    #+ATTR_HTML: :class reference
-    [[file:../../images/eyeball-man.webp][file:../../images/eyeball-man.thumbnail.png]]
-#+end_example
+{{% raw %}}{{% thumbnail "/images/eyeball-man.webp" alt="Eyeball Man" title="Eyeball Man" %}}{{% /thumbnail %}}{{% /raw %}}
 
-    #+ATTR_HTML: :alt Eyeball Man WebP
-    #+ATTR_HTML: :class reference
-    [[file:../../images/eyeball-man.webp][file:../../images/eyeball-man.thumbnail.png]]
+To get a thumbnail which will produce a pop-up to the original image when it's clicked.
 
+{{% thumbnail "/images/eyeball-man.webp" alt="Eyeball Man" %}}{{% /thumbnail %}}
 * More Notes
-  * The =alt= attribute adds a title to the images in the slide show in the org-mode formats but not if you type in the HTML directly (from what I can tell).
-  * The =thumbnail= files are created when nikola builds the site so if you want to add the link before you build just insert =.thumbnail= in front of the image file-extension (you can change it in the =conf.py= file).
-  * Nikola builds the slideshow from all the images on the page. So if you only have one post open, it will show the post's images, but if you are in the index and there's more than one post shown, it will pick up the images from all the posts.
-  * For the org-mode meta-data to work (=ATTR_HTML=) the file-reference has to be directly under the last one and there has to be an empty line under the file reference. Without the empty line the image will still load and the slideshow will work but things like the title might not.
+  * The =alt= attribute adds a title to the images in the slide show
+  * Nikola builds the slideshow from all the images on the page. So if you only have one post open, it will show the post's images, but if you are in the blog-post index and there's more than one post shown, it will pick up the images from all the posts.

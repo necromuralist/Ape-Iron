@@ -11,12 +11,7 @@
 .. updated: 
 
 #+END_COMMENT
-#+ATTR_HTML: :alt Grisaille Perspective Study
-#+ATTR_HTML: :class reference
-[[file:../../images/grisaille-perspective.webp][file:../../images/grisaille-perspective.thumbnail.png]]
 
-A simple study to try James Gurney's grisaille exercise combined with a "How to Draw" exercise in perspective.
+{{% thumbnail "/images/grisaille-perspective.webp" %}}{{% /thumbnail %}}
 
- - yellow-ochre gouache with satin glazing fluid over it
- - white gouache
- - ivory black gouache
+A small sketch with satin-glaze over a yellow-ochre ground. It kept the yellow-ochre from being picked up by the black and white watercolor but then they didn't behave quite like I was expecting.
