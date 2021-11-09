@@ -12,7 +12,5 @@
 
 #+END_COMMENT
 
-#+ATTR_HTML: :alt Devil Leaves Horrible
-#+ATTR_HTML: :class reference
-[[file:../../images/devil-leaves-horrible.webp][file:../../images/devil-leaves-horrible.thumbnail.png]]
+{{% thumbnail "/images/devil-leaves-horrible.webp" alt="Devil At the Airport" %}}{{% /thumbnail %}}
 

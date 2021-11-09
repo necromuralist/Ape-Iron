@@ -12,30 +12,26 @@
 
 #+END_COMMENT
 #+OPTIONS: ^:{}
-#+TOC: headlines 3
 * The Bag Man
   This post was created to see what happens in the slideshow if you put all the image files in the =images= folder without sub-folders, it's a companion to the {{% doc %}}image-testing{{% /doc %}} post.
   
-    #+ATTR_HTML: :alt Bag Man
-    #+ATTR_HTML: :class reference
-    [[file:../../images/bag-man.webp][file:../../images/bag-man.thumbnail.png]]
+{{% thumbnail "/images/bag-man.webp" alt="Bag-Man With Purse-Dog" %}}{{% /thumbnail %}}
 
 * The Bag Man Without Thumbnails
   If you want to just display the image they recommend you put it in the =files= folder, but you can still reference it in the images folder too, but as with the thumbnails you need to use a more common format like png. This org-reference:
 
 #+begin_example org
-    [[file:../../images/bag-man.png]]
+    [[file:../../images/bag-man.webp]]
 #+end_example
 
-Will include this image.
+Will include this (full-sized) image (**note:** The path to the images folder is based on where the post is, if the post was in a subfolder you'd have to go up three directories, not two).
 
     #+ATTR_HTML: :alt Bag Man Big
     #+ATTR_HTML: :class reference    
-    [[file:../../images/bag-man.png]]
+    [[img-url:../../images/bag-man.webp]]
     
-* Bag-Man Traced
+* Bag-Man Re-Crafted
+  This was a tracing of the bag man onto kraft paper to mess around with gouache.
 
-    #+ATTR_HTML: :alt Bag Man Kraft Paper
-    #+ATTR_HTML: :class reference
-    [[file:../../images/bag-man-kraft.webp][file:../../images/bag-man-kraft.thumbnail.png]]
+{{% thumbnail "/images/bag-man-kraft.webp" alt="Bag-Man & Purse-Dog On Kraft Paper" %}}{{% /thumbnail %}}
   

@@ -78,28 +78,28 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgff6b9ff">Beginning</a>
+<li><a href="#org085cb6c">Beginning</a>
 <ul>
-<li><a href="#org7a7c9ad">Set Up</a></li>
+<li><a href="#org7eb3dfa">Set Up</a></li>
 </ul>
 </li>
-<li><a href="#orgf3f0eeb">Middle</a>
+<li><a href="#org1a56703">Middle</a>
 <ul>
-<li><a href="#orgf231636">Grab the Page and Make Some Soup</a></li>
+<li><a href="#org5305ad1">Grab the Page and Make Some Soup</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgff6b9ff">
-<h2 id="orgff6b9ff">Beginning</h2>
-<div class="outline-text-2" id="text-orgff6b9ff"></div>
-<div class="outline-3" id="outline-container-org7a7c9ad">
-<h3 id="org7a7c9ad">Set Up</h3>
-<div class="outline-text-3" id="text-org7a7c9ad"></div>
-<div class="outline-4" id="outline-container-org0253916">
-<h4 id="org0253916">Imports</h4>
-<div class="outline-text-4" id="text-org0253916">
+<div class="outline-2" id="outline-container-org085cb6c">
+<h2 id="org085cb6c">Beginning</h2>
+<div class="outline-text-2" id="text-org085cb6c"></div>
+<div class="outline-3" id="outline-container-org7eb3dfa">
+<h3 id="org7eb3dfa">Set Up</h3>
+<div class="outline-text-3" id="text-org7eb3dfa"></div>
+<div class="outline-4" id="outline-container-org77afcc6">
+<h4 id="org77afcc6">Imports</h4>
+<div class="outline-text-4" id="text-org77afcc6">
 <div class="highlight">
 <pre><span></span><span class="c1"># python</span>
 <span class="kn">from</span> <span class="nn">argparse</span> <span class="kn">import</span> <span class="n">Namespace</span>
@@ -115,17 +115,17 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org12fc423">
-<h4 id="org12fc423">Tabulate</h4>
-<div class="outline-text-4" id="text-org12fc423">
+<div class="outline-4" id="outline-container-orgd8951eb">
+<h4 id="orgd8951eb">Tabulate</h4>
+<div class="outline-text-4" id="text-orgd8951eb">
 <div class="highlight">
 <pre><span></span><span class="n">TABLE</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">tabulate</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="s2">"keys"</span><span class="p">,</span> <span class="n">tablefmt</span><span class="o">=</span><span class="s2">"orgtbl"</span><span class="p">,</span> <span class="n">showindex</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org067317c">
-<h4 id="org067317c">Selenium</h4>
-<div class="outline-text-4" id="text-org067317c">
+<div class="outline-4" id="outline-container-org24e2edf">
+<h4 id="org24e2edf">Selenium</h4>
+<div class="outline-text-4" id="text-org24e2edf">
 <p>I'll use a headless instance of selenium-firefox to grab and render the wikipedia page.</p>
 <div class="highlight">
 <pre><span></span><span class="n">options</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">FirefoxOptions</span><span class="p">()</span>
@@ -136,12 +136,12 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgf3f0eeb">
-<h2 id="orgf3f0eeb">Middle</h2>
-<div class="outline-text-2" id="text-orgf3f0eeb"></div>
-<div class="outline-3" id="outline-container-orgf231636">
-<h3 id="orgf231636">Grab the Page and Make Some Soup</h3>
-<div class="outline-text-3" id="text-orgf231636">
+<div class="outline-2" id="outline-container-org1a56703">
+<h2 id="org1a56703">Middle</h2>
+<div class="outline-text-2" id="text-org1a56703"></div>
+<div class="outline-3" id="outline-container-org5305ad1">
+<h3 id="org5305ad1">Grab the Page and Make Some Soup</h3>
+<div class="outline-text-3" id="text-org5305ad1">
 <div class="highlight">
 <pre><span></span><span class="n">URL</span> <span class="o">=</span> <span class="s2">"https://en.wikipedia.org/wiki/List_of_legendary_creatures_by_type"</span>
 
@@ -152,9 +152,9 @@
 <pre><span></span><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">browser</span><span class="o">.</span><span class="n">page_source</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="outline-4" id="outline-container-org7c17a87">
-<h4 id="org7c17a87">Looking at the Headings</h4>
-<div class="outline-text-4" id="text-org7c17a87">
+<div class="outline-4" id="outline-container-orgd920616">
+<h4 id="orgd920616">Looking at the Headings</h4>
+<div class="outline-text-4" id="text-orgd920616">
 <p>The level-2 headlines describe different ways to catalog the creatures, in addition they have "span" tags within them that have the "mw-class" associated with them so we can grab those tags using Beautiful Soup's <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/#css-selectors">select</a> method, which uses CSS selectors.</p>
 <div class="highlight">
 <pre><span></span><span class="n">headlines</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">"h2 span.mw-headline"</span><span class="p">)</span>
@@ -183,9 +183,9 @@
 <p>We don't need references, but the other headlines might be helpful in categorizing these animals. Unfortunately the headings are above the sections with the stuff we want - they aren't parents of the sections so to get the actual parts we're going to need to do something else.</p>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgc6063f9">
-<h4 id="orgc6063f9">Tables</h4>
-<div class="outline-text-4" id="text-orgc6063f9">
+<div class="outline-4" id="outline-container-orge9491c2">
+<h4 id="orge9491c2">Tables</h4>
+<div class="outline-text-4" id="text-orge9491c2">
 <p>I'll grab all the tables then filter out the ones I don't want - the first three tables are admonitions that the page might not be up to snuff and the last four are references and links to other pages.</p>
 <div class="highlight">
 <pre><span></span><span class="n">tables</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">"table"</span><span class="p">)</span>
@@ -194,9 +194,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgfb9d396">
-<h4 id="orgfb9d396">The Table-Indices</h4>
-<div class="outline-text-4" id="text-orgfb9d396">
+<div class="outline-4" id="outline-container-orgb9c59f6">
+<h4 id="orgb9c59f6">The Table-Indices</h4>
+<div class="outline-text-4" id="text-orgb9c59f6">
 <div class="highlight">
 <pre><span></span><span class="n">Table</span> <span class="o">=</span> <span class="n">Namespace</span><span class="p">(</span>
     <span class="n">aquatic</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
@@ -206,12 +206,12 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org48e3903">
-<h4 id="org48e3903">Animals Associated With</h4>
-<div class="outline-text-4" id="text-org48e3903"></div>
+<div class="outline-4" id="outline-container-org2cfa1cf">
+<h4 id="org2cfa1cf">Animals Associated With</h4>
+<div class="outline-text-4" id="text-org2cfa1cf"></div>
 <ul class="org-ul">
-<li><a id="orgaea4675"></a>Aquatic and Marine Animals<br>
-<div class="outline-text-5" id="text-orgaea4675">
+<li><a id="org949bd24"></a>Aquatic and Marine Animals<br>
+<div class="outline-text-5" id="text-org949bd24">
 <div class="highlight">
 <pre><span></span><span class="n">PATTERN</span> <span class="o">=</span> <span class="s2">"\w+"</span>
 <span class="n">WEIRD</span> <span class="o">=</span> <span class="s2">"</span><span class="se">\xa0</span><span class="s2">"</span>
@@ -294,8 +294,8 @@
 </table>
 </div>
 </li>
-<li><a id="org6a0cc9f"></a>Arthropods<br>
-<div class="outline-text-5" id="text-org6a0cc9f">
+<li><a id="org491f45a"></a>Arthropods<br>
+<div class="outline-text-5" id="text-org491f45a">
 <div class="highlight">
 <pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">tables</span><span class="p">[</span><span class="n">Table</span><span class="o">.</span><span class="n">arthropods</span><span class="p">]</span>
 <span class="n">animal</span> <span class="o">=</span> <span class="p">[]</span>
@@ -413,8 +413,8 @@
 </table>
 </div>
 </li>
-<li><a id="org722ba32"></a>Bears<br>
-<div class="outline-text-5" id="text-org722ba32">
+<li><a id="orgf5a784a"></a>Bears<br>
+<div class="outline-text-5" id="text-orgf5a784a">
 <div class="highlight">
 <pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">tables</span><span class="p">[</span><span class="n">Table</span><span class="o">.</span><span class="n">bears</span><span class="p">]</span>
 <span class="n">animal</span><span class="p">,</span> <span class="n">origin</span><span class="p">,</span> <span class="n">description</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]</span>

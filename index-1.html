@@ -65,35 +65,35 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#org3578c55">Beginning</a>
+<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#orgdae43ce">Beginning</a>
 <ul>
-<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#org4077e21">Set Up</a></li>
+<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#orge0dd340">Set Up</a></li>
 </ul>
 </li>
-<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#org1f67ad4">Middle</a>
+<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#orgbba02f0">Middle</a>
 <ul>
-<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#orge0810ea">Grabbing Some HTML</a></li>
-<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#orgd0bb7d9">Building the Table</a></li>
-<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#org3ab5993">Cleaning Up the Table</a></li>
-<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#org7cd4553">Meats</a></li>
-<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#org3e45710">Again, But With Soup This Time</a></li>
+<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#orge950786">Grabbing Some HTML</a></li>
+<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#org7128128">Building the Table</a></li>
+<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#org69bf6e8">Cleaning Up the Table</a></li>
+<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#org801572b">Meats</a></li>
+<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#org32e650e">Again, But With Soup This Time</a></li>
 </ul>
 </li>
-<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#org383bd82">End</a></li>
+<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#orgb7cd0f8">End</a></li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org3578c55">
-<h2 id="org3578c55">Beginning</h2>
-<div class="outline-text-2" id="text-org3578c55">
+<div class="outline-2" id="outline-container-orgdae43ce">
+<h2 id="orgdae43ce">Beginning</h2>
+<div class="outline-text-2" id="text-orgdae43ce">
 <p>As part of my pursuit of randomness I'm creating lists of things to select from. In this case I wanted a list of animals to create a <i>Visual Alphabet</i> and I decided to grab one from wikipedia. This is what I did.</p>
 </div>
-<div class="outline-3" id="outline-container-org4077e21">
-<h3 id="org4077e21">Set Up</h3>
-<div class="outline-text-3" id="text-org4077e21"></div>
-<div class="outline-4" id="outline-container-org25b2fdf">
-<h4 id="org25b2fdf">Imports</h4>
-<div class="outline-text-4" id="text-org25b2fdf">
+<div class="outline-3" id="outline-container-orge0dd340">
+<h3 id="orge0dd340">Set Up</h3>
+<div class="outline-text-3" id="text-orge0dd340"></div>
+<div class="outline-4" id="outline-container-org1fdd3f3">
+<h4 id="org1fdd3f3">Imports</h4>
+<div class="outline-text-4" id="text-org1fdd3f3">
 <div class="highlight">
 <pre><span></span><span class="c1"># python</span>
 <span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
@@ -117,18 +117,18 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgabda8c5">
-<h4 id="orgabda8c5">Set Up Tabulate</h4>
-<div class="outline-text-4" id="text-orgabda8c5">
+<div class="outline-4" id="outline-container-org46abeef">
+<h4 id="org46abeef">Set Up Tabulate</h4>
+<div class="outline-text-4" id="text-org46abeef">
 <p>This is just to make printing the pandas data-frames a little easier. <a href="https://github.com/nnicandro/emacs-jupyter">emacs-jupyter</a> actually does a pretty good job of rendering them as HTML like a regular jupyter notebook, but this makes it a little more readable while in emacs, plus I can control things better.</p>
 <div class="highlight">
 <pre><span></span><span class="n">TABLE</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">tabulate</span><span class="p">,</span> <span class="n">showindex</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">tablefmt</span><span class="o">=</span><span class="s2">"orgtbl"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="s2">"keys"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org867d3b5">
-<h4 id="org867d3b5">Set Up Selenium</h4>
-<div class="outline-text-4" id="text-org867d3b5">
+<div class="outline-4" id="outline-container-orgfa081ac">
+<h4 id="orgfa081ac">Set Up Selenium</h4>
+<div class="outline-text-4" id="text-orgfa081ac">
 <p>I started this using Requests-HTML because wikipedia uses JQuery to render the tables and Requests-HTML it uses <a href="https://pyppeteer.github.io/pyppeteer/index.html">pyppeteer</a> to render javascript (as opposed to the reqular requests that just does an HTTP GET and so leaves the tables un-rendered). Unfortunately I can't get it to work in a jupyter notebook. One problem is that both jupyter and Requests-HTML use asyncio - using <a href="https://github.com/erdewit/nest_asyncio">nest_asyncio</a> allows pypeteer to run in the notebook but then I get this error:</p>
 <div class="highlight">
 <pre><span></span><span class="ne">AttributeError</span><span class="p">:</span> <span class="s1">'coroutine'</span> <span class="nb">object</span> <span class="n">has</span> <span class="n">no</span> <span class="n">attribute</span> <span class="s1">'newPage'</span>
@@ -143,12 +143,12 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org1f67ad4">
-<h2 id="org1f67ad4">Middle</h2>
-<div class="outline-text-2" id="text-org1f67ad4"></div>
-<div class="outline-3" id="outline-container-orge0810ea">
-<h3 id="orge0810ea">Grabbing Some HTML</h3>
-<div class="outline-text-3" id="text-orge0810ea">
+<div class="outline-2" id="outline-container-orgbba02f0">
+<h2 id="orgbba02f0">Middle</h2>
+<div class="outline-text-2" id="text-orgbba02f0"></div>
+<div class="outline-3" id="outline-container-orge950786">
+<h3 id="orge950786">Grabbing Some HTML</h3>
+<div class="outline-text-3" id="text-orge950786">
 <p>Just let selenium render the JQuery tables for us.</p>
 <div class="highlight">
 <pre><span></span><span class="n">URL</span> <span class="o">=</span> <span class="s2">"https://en.wikipedia.org/wiki/List_of_animal_names"</span>
@@ -156,9 +156,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgd0bb7d9">
-<h3 id="orgd0bb7d9">Building the Table</h3>
-<div class="outline-text-3" id="text-orgd0bb7d9">
+<div class="outline-3" id="outline-container-org7128128">
+<h3 id="org7128128">Building the Table</h3>
+<div class="outline-text-3" id="text-org7128128">
 <p>After giving up on Requests-HTML I was using <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/#searching-the-tree">Beautiful Soup</a> to pull out the table so I could give it to pandas, but then I looked at the pandas documentation and it turns out they already do this, so you don't need to, but you do need to know how many tables there are and which one you want (it returns a list of dataframes). In this case I want the last one.</p>
 <div class="highlight">
 <pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="n">browser</span><span class="o">.</span><span class="n">page_source</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
@@ -199,9 +199,9 @@
 <p>That's a little odd looking.</p>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org3ab5993">
-<h3 id="org3ab5993">Cleaning Up the Table</h3>
-<div class="outline-text-3" id="text-org3ab5993">
+<div class="outline-3" id="outline-container-org69bf6e8">
+<h3 id="org69bf6e8">Cleaning Up the Table</h3>
+<div class="outline-text-3" id="text-org69bf6e8">
 <p>First, what's with all the <code>A</code> entries in the header?</p>
 <div class="highlight">
 <pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
@@ -263,9 +263,9 @@ Index(['Animal', 'Young', 'Female', 'Male', 'Collective noun',
 </table>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org7cd4553">
-<h3 id="org7cd4553">Meats</h3>
-<div class="outline-text-3" id="text-org7cd4553">
+<div class="outline-3" id="outline-container-org801572b">
+<h3 id="org801572b">Meats</h3>
+<div class="outline-text-3" id="text-org801572b">
 <p>At this point I don't know what I really want to do with this. I was originally going to just save the animal names but now the other stuff looks kind of interesting. As an aside I had to look up <a href="https://en.wikipedia.org/wiki/Collateral_adjective">Collateral Adjective</a> on wikipedia:</p>
 <blockquote>
 <p>A collateral adjective is an adjective that is identified with a particular noun in meaning, but that is not derived from that noun.</p>
@@ -317,9 +317,9 @@ Index(['Animal', 'Young', 'Female', 'Male', 'Collective noun',
 <p>Oops. Maybe I should have looked at the table more closely.</p>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org3e45710">
-<h3 id="org3e45710">Again, But With Soup This Time</h3>
-<div class="outline-text-3" id="text-org3e45710">
+<div class="outline-3" id="outline-container-org32e650e">
+<h3 id="org32e650e">Again, But With Soup This Time</h3>
+<div class="outline-text-3" id="text-org32e650e">
 <p>Let's see if using Beautiful Soup will help clean up the dataset a little.</p>
 <div class="highlight">
 <pre><span></span><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">browser</span><span class="o">.</span><span class="n">page_source</span><span class="p">)</span>
@@ -430,7 +430,7 @@ Index(['Animal', 'Young', 'Female', 'Male', 'Collective noun',
 <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">meats</span><span class="o">.</span><span class="n">itertuples</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">row</span><span class="o">.</span><span class="n">Animal</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">row</span><span class="o">.</span><span class="n">Meat</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
-<pre class="example" id="org41d1636">
+<pre class="example">
 Cattle[note 3] (list): beef veal
 Chicken (list): poultry
 Deer: venison humble (organ meat)
@@ -485,7 +485,7 @@ Whale: blubber
 <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">meats</span><span class="o">.</span><span class="n">itertuples</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">row</span><span class="o">.</span><span class="n">Animal</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">row</span><span class="o">.</span><span class="n">Meat</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
-<pre class="example" id="org0f54fa7">
+<pre class="example">
 Cattle  : beef veal
 Chicken : poultry
 Deer: venison humble (organ meat)
@@ -574,7 +574,7 @@ Whale: blubber
 <span class="nb">print</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">32</span><span class="p">:</span><span class="mi">32</span><span class="p">])</span>
 </pre></div>
-<pre class="example" id="org008cb1c">
+<pre class="example">
                    Animal     Young   Female  Male  \
 32  Cattle[note 3] (list)  calf[31]  cow[32]  bull   
 
@@ -597,7 +597,7 @@ Whale: blubber
 <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">meats</span><span class="o">.</span><span class="n">itertuples</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">row</span><span class="o">.</span><span class="n">Animal</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">row</span><span class="o">.</span><span class="n">Meat</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
-<pre class="example" id="orga378831">
+<pre class="example">
 Cattle  : beef veal
 Chicken : poultry
 Deer: venison humble (organ meat)
@@ -640,7 +640,7 @@ Whale: blubber
 <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">meats</span><span class="o">.</span><span class="n">itertuples</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">row</span><span class="o">.</span><span class="n">Animal</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">row</span><span class="o">.</span><span class="n">Meat</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
-<pre class="example" id="org3e51a13">
+<pre class="example">
 Cattle: beef veal
 Chicken: poultry
 Deer: venison humble (organ meat)
@@ -668,9 +668,9 @@ Whale: blubber
 </pre></div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org383bd82">
-<h2 id="org383bd82">End</h2>
-<div class="outline-text-2" id="text-org383bd82">
+<div class="outline-2" id="outline-container-orgb7cd0f8">
+<h2 id="orgb7cd0f8">End</h2>
+<div class="outline-text-2" id="text-orgb7cd0f8">
 <p>And now to save it for later.</p>
 <div class="highlight">
 <pre><span></span><span class="n">load_dotenv</span><span class="p">()</span>
