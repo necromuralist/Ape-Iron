@@ -34,7 +34,7 @@
 
 {{% raw %}}{{% thumbnail "/images/eyeball-man.webp" alt="Eyeball Man" title="Eyeball Man" %}}{{% /thumbnail %}}{{% /raw %}}
 
-To get a thumbnail which will produce a pop-up to the original image when it's clicked.
+This will give you a thumbnail which will produce a pop-up to the original image when it's clicked. In this case the original pencil doodle was about the size of the end of my thumb so there's no real yount to the pop-up. I just used the image to have something to experiment with.
 
 {{% thumbnail "/images/eyeball-man.webp" alt="Eyeball Man" %}}{{% /thumbnail %}}
 * More Notes

@@ -77,35 +77,35 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgdae43ce">Beginning</a>
+<li><a href="#org9fc7dbb">Beginning</a>
 <ul>
-<li><a href="#orge0dd340">Set Up</a></li>
+<li><a href="#orgd21cf34">Set Up</a></li>
 </ul>
 </li>
-<li><a href="#orgbba02f0">Middle</a>
+<li><a href="#org3a9155b">Middle</a>
 <ul>
-<li><a href="#orge950786">Grabbing Some HTML</a></li>
-<li><a href="#org7128128">Building the Table</a></li>
-<li><a href="#org69bf6e8">Cleaning Up the Table</a></li>
-<li><a href="#org801572b">Meats</a></li>
-<li><a href="#org32e650e">Again, But With Soup This Time</a></li>
+<li><a href="#org02ee076">Grabbing Some HTML</a></li>
+<li><a href="#orgbfb4702">Building the Table</a></li>
+<li><a href="#org1824f66">Cleaning Up the Table</a></li>
+<li><a href="#org42fca90">Meats</a></li>
+<li><a href="#org05d0c44">Again, But With Soup This Time</a></li>
 </ul>
 </li>
-<li><a href="#orgb7cd0f8">End</a></li>
+<li><a href="#org284cc5f">End</a></li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgdae43ce">
-<h2 id="orgdae43ce">Beginning</h2>
-<div class="outline-text-2" id="text-orgdae43ce">
+<div class="outline-2" id="outline-container-org9fc7dbb">
+<h2 id="org9fc7dbb">Beginning</h2>
+<div class="outline-text-2" id="text-org9fc7dbb">
 <p>As part of my pursuit of randomness I'm creating lists of things to select from. In this case I wanted a list of animals to create a <i>Visual Alphabet</i> and I decided to grab one from wikipedia. This is what I did.</p>
 </div>
-<div class="outline-3" id="outline-container-orge0dd340">
-<h3 id="orge0dd340">Set Up</h3>
-<div class="outline-text-3" id="text-orge0dd340"></div>
-<div class="outline-4" id="outline-container-org1fdd3f3">
-<h4 id="org1fdd3f3">Imports</h4>
-<div class="outline-text-4" id="text-org1fdd3f3">
+<div class="outline-3" id="outline-container-orgd21cf34">
+<h3 id="orgd21cf34">Set Up</h3>
+<div class="outline-text-3" id="text-orgd21cf34"></div>
+<div class="outline-4" id="outline-container-orgcee6ad4">
+<h4 id="orgcee6ad4">Imports</h4>
+<div class="outline-text-4" id="text-orgcee6ad4">
 <div class="highlight">
 <pre><span></span><span class="c1"># python</span>
 <span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
@@ -129,18 +129,18 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org46abeef">
-<h4 id="org46abeef">Set Up Tabulate</h4>
-<div class="outline-text-4" id="text-org46abeef">
+<div class="outline-4" id="outline-container-org27512a0">
+<h4 id="org27512a0">Set Up Tabulate</h4>
+<div class="outline-text-4" id="text-org27512a0">
 <p>This is just to make printing the pandas data-frames a little easier. <a href="https://github.com/nnicandro/emacs-jupyter">emacs-jupyter</a> actually does a pretty good job of rendering them as HTML like a regular jupyter notebook, but this makes it a little more readable while in emacs, plus I can control things better.</p>
 <div class="highlight">
 <pre><span></span><span class="n">TABLE</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">tabulate</span><span class="p">,</span> <span class="n">showindex</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">tablefmt</span><span class="o">=</span><span class="s2">"orgtbl"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="s2">"keys"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgfa081ac">
-<h4 id="orgfa081ac">Set Up Selenium</h4>
-<div class="outline-text-4" id="text-orgfa081ac">
+<div class="outline-4" id="outline-container-org012f15c">
+<h4 id="org012f15c">Set Up Selenium</h4>
+<div class="outline-text-4" id="text-org012f15c">
 <p>I started this using Requests-HTML because wikipedia uses JQuery to render the tables and Requests-HTML it uses <a href="https://pyppeteer.github.io/pyppeteer/index.html">pyppeteer</a> to render javascript (as opposed to the reqular requests that just does an HTTP GET and so leaves the tables un-rendered). Unfortunately I can't get it to work in a jupyter notebook. One problem is that both jupyter and Requests-HTML use asyncio - using <a href="https://github.com/erdewit/nest_asyncio">nest_asyncio</a> allows pypeteer to run in the notebook but then I get this error:</p>
 <div class="highlight">
 <pre><span></span><span class="ne">AttributeError</span><span class="p">:</span> <span class="s1">'coroutine'</span> <span class="nb">object</span> <span class="n">has</span> <span class="n">no</span> <span class="n">attribute</span> <span class="s1">'newPage'</span>
@@ -155,12 +155,12 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgbba02f0">
-<h2 id="orgbba02f0">Middle</h2>
-<div class="outline-text-2" id="text-orgbba02f0"></div>
-<div class="outline-3" id="outline-container-orge950786">
-<h3 id="orge950786">Grabbing Some HTML</h3>
-<div class="outline-text-3" id="text-orge950786">
+<div class="outline-2" id="outline-container-org3a9155b">
+<h2 id="org3a9155b">Middle</h2>
+<div class="outline-text-2" id="text-org3a9155b"></div>
+<div class="outline-3" id="outline-container-org02ee076">
+<h3 id="org02ee076">Grabbing Some HTML</h3>
+<div class="outline-text-3" id="text-org02ee076">
 <p>Just let selenium render the JQuery tables for us.</p>
 <div class="highlight">
 <pre><span></span><span class="n">URL</span> <span class="o">=</span> <span class="s2">"https://en.wikipedia.org/wiki/List_of_animal_names"</span>
@@ -168,9 +168,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org7128128">
-<h3 id="org7128128">Building the Table</h3>
-<div class="outline-text-3" id="text-org7128128">
+<div class="outline-3" id="outline-container-orgbfb4702">
+<h3 id="orgbfb4702">Building the Table</h3>
+<div class="outline-text-3" id="text-orgbfb4702">
 <p>After giving up on Requests-HTML I was using <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/#searching-the-tree">Beautiful Soup</a> to pull out the table so I could give it to pandas, but then I looked at the pandas documentation and it turns out they already do this, so you don't need to, but you do need to know how many tables there are and which one you want (it returns a list of dataframes). In this case I want the last one.</p>
 <div class="highlight">
 <pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="n">browser</span><span class="o">.</span><span class="n">page_source</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
@@ -211,9 +211,9 @@
 <p>That's a little odd looking.</p>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org69bf6e8">
-<h3 id="org69bf6e8">Cleaning Up the Table</h3>
-<div class="outline-text-3" id="text-org69bf6e8">
+<div class="outline-3" id="outline-container-org1824f66">
+<h3 id="org1824f66">Cleaning Up the Table</h3>
+<div class="outline-text-3" id="text-org1824f66">
 <p>First, what's with all the <code>A</code> entries in the header?</p>
 <div class="highlight">
 <pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
@@ -275,9 +275,9 @@ Index(['Animal', 'Young', 'Female', 'Male', 'Collective noun',
 </table>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org801572b">
-<h3 id="org801572b">Meats</h3>
-<div class="outline-text-3" id="text-org801572b">
+<div class="outline-3" id="outline-container-org42fca90">
+<h3 id="org42fca90">Meats</h3>
+<div class="outline-text-3" id="text-org42fca90">
 <p>At this point I don't know what I really want to do with this. I was originally going to just save the animal names but now the other stuff looks kind of interesting. As an aside I had to look up <a href="https://en.wikipedia.org/wiki/Collateral_adjective">Collateral Adjective</a> on wikipedia:</p>
 <blockquote>
 <p>A collateral adjective is an adjective that is identified with a particular noun in meaning, but that is not derived from that noun.</p>
@@ -329,9 +329,9 @@ Index(['Animal', 'Young', 'Female', 'Male', 'Collective noun',
 <p>Oops. Maybe I should have looked at the table more closely.</p>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org32e650e">
-<h3 id="org32e650e">Again, But With Soup This Time</h3>
-<div class="outline-text-3" id="text-org32e650e">
+<div class="outline-3" id="outline-container-org05d0c44">
+<h3 id="org05d0c44">Again, But With Soup This Time</h3>
+<div class="outline-text-3" id="text-org05d0c44">
 <p>Let's see if using Beautiful Soup will help clean up the dataset a little.</p>
 <div class="highlight">
 <pre><span></span><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">browser</span><span class="o">.</span><span class="n">page_source</span><span class="p">)</span>
@@ -680,9 +680,9 @@ Whale: blubber
 </pre></div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgb7cd0f8">
-<h2 id="orgb7cd0f8">End</h2>
-<div class="outline-text-2" id="text-orgb7cd0f8">
+<div class="outline-2" id="outline-container-org284cc5f">
+<h2 id="org284cc5f">End</h2>
+<div class="outline-text-2" id="text-org284cc5f">
 <p>And now to save it for later.</p>
 <div class="highlight">
 <pre><span></span><span class="n">load_dotenv</span><span class="p">()</span>
@@ -730,7 +730,7 @@ Name: 59, dtype: object
 <li>How to convert the Beautiful Soup object to a pandas DataFrame</li>
 <li>How to further clean up the data frame using string methods and save the table for later as a CSV</li>
 </ul>
-<p>Not so exciting, but it took longer than I thought it would. I blame dog-days of August - the heat, it drives one mental.</p>
+<p>Not so exciting, but it took longer than I thought it would. I blame the dog-days of August - the heat, it drives one mental.</p>
 </div>
 </div>
 </div>

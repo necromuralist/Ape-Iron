@@ -611,7 +611,7 @@ print(outcome)
 
 It's sort of interesting that the two most dense countries are both known for their gambling.
 *** Sparsest
-    First, because of the way I calculated Antartica it currently has a negative number (-14) for density, which is a little odd so I'll set it to 0.
+    First, because of the way I calculated Antarctica it currently has a negative number (-14) for density, which is a little odd so I'll set it to 0.
 
 #+begin_src python :results none
 cleaned.loc[cleaned[Columns.country_cleaned]=="Antarctica", Columns.density_cleaned] = 0
