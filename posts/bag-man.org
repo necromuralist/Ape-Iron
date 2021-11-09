@@ -18,10 +18,10 @@
 {{% thumbnail "/images/bag-man.webp" alt="Bag-Man With Purse-Dog" %}}{{% /thumbnail %}}
 
 * The Bag Man Without Thumbnails
-  If you want to just display the image they recommend you put it in the =files= folder, but you can still reference it in the images folder too, but as with the thumbnails you need to use a more common format like png. This org-reference:
+  If you want to just display the image they recommend you put it in the =files= folder, but you can still reference it in the images folder too, but you need to be aware of the fact that the folder path has to change. This org-reference:
 
 #+begin_example org
-    [[file:../../images/bag-man.webp]]
+    [[img-url:../../images/bag-man.webp]]
 #+end_example
 
 Will include this (full-sized) image (**note:** The path to the images folder is based on where the post is, if the post was in a subfolder you'd have to go up three directories, not two).

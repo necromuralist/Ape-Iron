@@ -508,4 +508,4 @@ So, there we go. What have we learned?
  - How to convert the Beautiful Soup object to a pandas DataFrame
  - How to further clean up the data frame using string methods and save the table for later as a CSV
 
-Not so exciting, but it took longer than I thought it would. I blame dog-days of August - the heat, it drives one mental.
+Not so exciting, but it took longer than I thought it would. I blame the dog-days of August - the heat, it drives one mental.
