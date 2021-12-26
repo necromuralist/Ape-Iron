@@ -1,0 +1,4 @@
+* Draw Yourself
+  - Pick four "things"
+  - Draw yourself as the first thing
+  - For each of the remaining things draw yourself changing from the previous thing into the next
