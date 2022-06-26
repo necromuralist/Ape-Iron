@@ -1,0 +1,246 @@
+* 20200713
+A
+Addition Rule: 70
+Alphabet Peg: 39
+Arachne: 61
+
+B
+BLJOLM: 49
+BLJOLW: 4, 23, 53, 62, 64
+Bass Model: 45
+Bayes' Rule Example: Midterm and Final: 73
+Bayes' Rule Example: Smallpox Example: 72
+Bayes' Rule: 71-74
+Bestiary: 51
+Bias vs Variance: 66
+Broadcast Model: 44
+
+C
+Cereberus: 59, 61
+Clicking: 38
+Conditional Probability: 71, 72
+Contagion Model: 44, 45, 46
+
+D
+Data Journalism: 46, 47
+Diffusion Model: 45
+Disjoint Outcomes: 70
+Doodle: 2, 3
+Dot Product: 3
+Dumpling: 1, 5, 6, 7, 8, 16, 20, 22, 24, 27, 32, 38, 41, 48, 50, 52, 54, 57, 58, 61, 67, 68, 74
+
+E
+Emacs: 52
+Errors: 65
+Etymology: 9, 25, 65, 66
+
+F
+Freakonomics: 58
+
+G
+Gradient Descent: 12, 13, 15, 20, 21
+
+H
+Ham Radio: 37, 56
+Hero's Journey: 57
+
+I
+ISLR: 65, 66
+Inverted Conditional Probability: 74
+
+J
+Joint Probabilities: 71
+
+L
+Linear Algebra: 3
+Linear Regression: 48
+Log-Loss: 10
+Logistic Regression: 9, 10, 12, 13, 15, 16, 18, 20, 21, 25, 26, 29, 33, 34,35, 47, 63
+Lukasa: 67
+
+M
+Making Comics: 19, 21, 24, 25, 26, 34, 42, 55
+Marginal Probabilities: 71
+Medieval Memory Methods: 67-68
+Memorizing Binary Numbers: 40
+Memory Palace: 65, 67, 74
+Memory: 38, 39, 40, 51, 65, 67, 74
+Mnemonic Link System: 38
+Money: 7
+Monstery Intruders: 70
+Monstery: 26, 59, 61
+Multiplication Rule: 71, 72
+
+N
+NLP: 2, 9, 10, 12, 13, 15, 16, 18, 20, 21,25, 26, 29, 33, 43, 47, 48, 63
+Nikola: 28, 35, 37
+Noted: 37, 41, 58
+
+P
+Person-Action-Object: 39
+Probability Distribution: 71
+Probability: 70, 71, 72
+
+R
+Radiolab: 41
+Recipe: 48
+
+S
+SIR Model: 45
+Sauerkraut: 48
+Sentiment Analysis: 43
+Slip Notes: 30, 31, 32, 37, 48, 50
+Statistics: 70
+Statsmodels: 48
+Story Method: 38
+Super Spreaders: 46
+
+T
+Time Map: 3,6, 8, 11, 21, 22, 33, 37, 38, 46, 47, 48, 50, 52, 54, 56, 57, 59, 61, 65, 67, 68, 70, 74
+Tree Diagrams: 72
+Tweets: 2, 18, 26, 38, 43
+
+U
+Unbroken Chain: 14
+
+V
+Vaccination Threshold: 46
+Visual Alphabet: 51, 56, 57, 69
+
+W
+Web Data: 52, 54
+Wikipedia: 52, 54
+Writing Exercise: 8, 11, 10, 13, 16, 17, 22, 28, 33, 42, 50, 52, 54, 55, 56, 59, 60
+
+* 20200823
+ABT: 19-21
+Dickenson, Emily: 19, 27
+Drawing: 53
+Dumpling: 8, 10-11,  15, 18, 23-24, 26, 30, 33, 34, 42-46, 49-52, 57-58, 65-66, 68-69, 72-76
+(NLP) Naive Bayes: 2-5, 9, 12, 16
+(NLP) Word Embeddings: 56, 59, 70-71
+EOM: 13-14
+Historical Eras: 1-2, 6, 34, 39
+Hypothesis Testing: 6
+Hero's Journey: 1-2, 8, 37, 38
+BLJOLW: 7, 17, 77, 79-83
+BLJOLM: 84-85
+Loomis, Andrew: 28, 39
+Peculiar Blindness of Experts: 25
+Random Wikipedia Page: 18
+They Say, I Say: 22
+Mnemotechnicis: 31
+Wyze: 33
+Gorilla: 35
+Kachinka: 35
+Slipnotes: 61-62
+Gesture Drawing: 63-64, 67-68
+Little Red Riding Hood: 66
+Fairy, The: 73
+* Drawing
+** Zentangle Florz: 18.1
+** Zentangle Fescu: 18.14
+** Zentangle Aura Leah: 18.13
+** Line of Action: 19.179
+** Measuring, Gesture, the Bean (Proko): 19.176
+** Character Templates: 19.109
+** Dynamic Golden Rectangle: 19.18
+** Double-Blind Contour Drawing: 19.22
+** Comics - Text Balloons: 19.36
+** Comics - paper: 19.36
+** Doodle- Pink Square Method: 19.36
+** Pen Grips: 19.41, 19.43
+** How To Draw- One Straight Line: 19.185
+** How To Draw- Warm-Ups: 19.185
+** How To Draw - Freehand Curves, Ellipses: 19.186
+** Creative Perspective - Models and the Structural Approach: 19.187
+** Creative Perspective - Plan to Solid: 19.188
+* Algorithms
+** Comix: Bobo Sort: 18.10
+** Comix: Brute Force: 18.14
+** QuickSort
+*** Partition 19.3, 19.7, 19.13
+** Binary Search Tree Property: 19.28
+** Binary Search Tree Walks: 19.29
+** Binary Tree Search: 19.38, 19.53
+** Binary Search Tree: 19.40, 19.45
+** Binary Search Tree Queries: 19.54
+** Binary Serach Tree Tree-Predecessor: 19.59
+** Binary Search Tree Transplant: 19.60
+** Binary Search Tree - TreeDelete: 19.61
+** Binary Search Trees - Randomized: 19.65, 19.69
+** Binary Search Trees - Binary Canary: 19.89
+** Red-Black Trees (Property, Black Height): 19.75
+** Red-Black Trees Left-Rotate: 19.77
+** Red-Black Trees Nil Node: 19.79
+** Red-Black Trees RB-Insert: 19.83
+** Red-Black Trees CRC: 19.88
+** Red-Black Trees Tree-Right-Rotate: 19.94
+** Red-Black Tree Insert: 19.99
+** Red-Black Tree Query Class: 19.109
+** Red-Black Tree Examples: 19.123
+** Red-Black Tree RB-Transplant: 19.133
+** Red-Black Tree RB-Delete: 19.135
+** Red-Black Tree Breadth-First-Search: 19.144
+** Red-Black Tree Depth-First-Search: 19.181, 19.191
+** Red-Black Tree Topological Sort: 19.182
+** Graphs - Strongly Connected Components: 19.194, 19.198
+** Graphs - Transpose: 19.200
+** Bubble-Sort: 19.141
+* Tsusu
+* Math
+** sum of integers: 19.5
+* Git
+** Undo all Changes: 19.30
+** Branch Differences: 19.20
+** Merge Conflict - pick theirs or ours: 19.20
+* IT
+- CUPS/Bonjour Failure: 19.1
+* Writing
+** Five Elements of Story: 3.17
+** Arc of Character: 3.16
+** Archetype 1 - The Everyperson: 19.197
+** Archetype 2 - The Grown-Up Child: 19.197
+** Elbow - Loop Writing: 19.141
+** Elbow - Writing as Translation: 19.98
+** Elbow - Direct Writing: 19.115
+** How To Take Smart Notes: 19.88
+** Free Association: 19.22
+** Improv 4 Writers Rules: 19.23, 19.30, 19.33
+** Improv 4 Writers Games: 19.30, 19.33
+** Slow Writing: 19.25
+* Epistles
+ - 19.66-68
+* Inputs
+** Art of Manliness
+- The Innovation Delusion: 19.80
+** Hidden Brain
+- Memory: 19.153
+** Where Good Ideas Come From:
+- Mutation and the adjacent possible: 19.160
+** You Are Not So Smart
+- Left-Brain Interpreter, Looking-Glass Self: 19.177
+* Emacs
+** Tangling multiple files into one: 19.93
+** Include other files in export: 19.94
+* Dumps
+** Dream Log: 19.155, 19.159
+* Fusu
+- Bills: 19.196
+* Shissui
+** Trespass
+- 18.8
+* Time and Date
+** Daylight Savings Time: 19.87
+** Hanke-Henry Permanent Calendar: 18.3
+** International Fixed Calendar: 18.3
+** International Super Calendar: 18.3
+** Leap Years: 18.4
+** Roman Calendar: 18.4
+* Miscellany
+- Oregonian: casket found: 19.161
+- Morse Code: 18.15
+* Python
+- Queue: 19.161
+* Sklearn - One Hot Encoder: 3.4
+* Cookiecutter Data Science: 3.25
