@@ -13,7 +13,7 @@ ghp-import==2.0.2
 idna==3.3
 Jinja2==3.0.3
 lxml==4.6.4
-Mako==1.1.5
+Mako==1.2.2
 Markdown==3.3.4
 MarkupSafe==2.0.1
 natsort==8.0.0
