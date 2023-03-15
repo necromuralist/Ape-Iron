@@ -79,31 +79,31 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org8b25853">Beginning</a>
+<li><a href="#org1194192">Beginning</a>
 <ul>
-<li><a href="#org2026496">Set Up</a></li>
+<li><a href="#orgd33125d">Set Up</a></li>
 </ul>
 </li>
-<li><a href="#orgec5a53a">Middle</a>
+<li><a href="#org6c1a291">Middle</a>
 <ul>
-<li><a href="#org49b52e4">Pulling the Table</a></li>
-<li><a href="#orgdea0937">Cleaning Up the Table</a></li>
-<li><a href="#orge948adc">Some Plotting</a></li>
+<li><a href="#org41c8fb1">Pulling the Table</a></li>
+<li><a href="#org90ad020">Cleaning Up the Table</a></li>
+<li><a href="#org4405080">Some Plotting</a></li>
 </ul>
 </li>
-<li><a href="#org7c428b3">End</a></li>
+<li><a href="#org868f69d">End</a></li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org8b25853">
-<h2 id="org8b25853">Beginning</h2>
-<div class="outline-text-2" id="text-org8b25853"></div>
-<div class="outline-3" id="outline-container-org2026496">
-<h3 id="org2026496">Set Up</h3>
-<div class="outline-text-3" id="text-org2026496"></div>
-<div class="outline-4" id="outline-container-org6dff4a3">
-<h4 id="org6dff4a3">Imports</h4>
-<div class="outline-text-4" id="text-org6dff4a3">
+<div class="outline-2" id="outline-container-org1194192">
+<h2 id="org1194192">Beginning</h2>
+<div class="outline-text-2" id="text-org1194192"></div>
+<div class="outline-3" id="outline-container-orgd33125d">
+<h3 id="orgd33125d">Set Up</h3>
+<div class="outline-text-3" id="text-orgd33125d"></div>
+<div class="outline-4" id="outline-container-org38a16e7">
+<h4 id="org38a16e7">Imports</h4>
+<div class="outline-text-4" id="text-org38a16e7">
 <div class="highlight">
 <pre><span></span><span class="c1"># python</span>
 <span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
@@ -117,9 +117,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org7c7098b">
-<h4 id="org7c7098b">Plotting</h4>
-<div class="outline-text-4" id="text-org7c7098b">
+<div class="outline-4" id="outline-container-orgecb2666">
+<h4 id="orgecb2666">Plotting</h4>
+<div class="outline-text-4" id="text-orgecb2666">
 <div class="highlight">
 <pre><span></span><span class="n">SLUG</span> <span class="o">=</span> <span class="s2">"pulling-top-100-names"</span>
 <span class="n">Embed</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">EmbedHoloviews</span><span class="p">,</span> <span class="n">folder_path</span><span class="o">=</span><span class="sa">f</span><span class="s2">"files/posts/</span><span class="si">{</span><span class="n">SLUG</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
@@ -128,15 +128,15 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgec5a53a">
-<h2 id="orgec5a53a">Middle</h2>
-<div class="outline-text-2" id="text-orgec5a53a"></div>
-<div class="outline-3" id="outline-container-org49b52e4">
-<h3 id="org49b52e4">Pulling the Table</h3>
-<div class="outline-text-3" id="text-org49b52e4"></div>
-<div class="outline-4" id="outline-container-org048aeeb">
-<h4 id="org048aeeb">Trying a Naive Request</h4>
-<div class="outline-text-4" id="text-org048aeeb">
+<div class="outline-2" id="outline-container-org6c1a291">
+<h2 id="org6c1a291">Middle</h2>
+<div class="outline-text-2" id="text-org6c1a291"></div>
+<div class="outline-3" id="outline-container-org41c8fb1">
+<h3 id="org41c8fb1">Pulling the Table</h3>
+<div class="outline-text-3" id="text-org41c8fb1"></div>
+<div class="outline-4" id="outline-container-org278233a">
+<h4 id="org278233a">Trying a Naive Request</h4>
+<div class="outline-text-4" id="text-org278233a">
 <div class="highlight">
 <pre><span></span><span class="n">URL</span> <span class="o">=</span> <span class="s2">"https://www.ssa.gov/OACT/babynames/decades/century.html"</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span>
@@ -162,9 +162,9 @@
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgdea0937">
-<h3 id="orgdea0937">Cleaning Up the Table</h3>
-<div class="outline-text-3" id="text-orgdea0937">
+<div class="outline-3" id="outline-container-org90ad020">
+<h3 id="org90ad020">Cleaning Up the Table</h3>
+<div class="outline-text-3" id="text-org90ad020">
 <div class="highlight">
 <pre><span></span><span class="n">males</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">table</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]]</span>
 <span class="n">females</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">table</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">3</span><span class="p">:]]</span>
@@ -175,9 +175,9 @@
     Name   Number
 0  James  4764644
 </pre></div>
-<div class="outline-4" id="outline-container-orge5c56e9">
-<h4 id="orge5c56e9">The Last Row</h4>
-<div class="outline-text-4" id="text-orge5c56e9">
+<div class="outline-4" id="outline-container-org3858248">
+<h4 id="org3858248">The Last Row</h4>
+<div class="outline-text-4" id="text-org3858248">
 <div class="highlight">
 <pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">males</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
@@ -230,9 +230,9 @@ Source: 100% sample based on Social Security card application data as of of Marc
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orge948adc">
-<h3 id="orge948adc">Some Plotting</h3>
-<div class="outline-text-3" id="text-orge948adc">
+<div class="outline-3" id="outline-container-org4405080">
+<h3 id="org4405080">Some Plotting</h3>
+<div class="outline-text-3" id="text-org4405080">
 <p>Before we can plot them we have to change the <code>count</code> column to be (you guessed it) a number since that last row with the source information prevents pandas' ability to convert the column itself.</p>
 <div class="highlight">
 <pre><span></span><span class="n">names</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s2">"count"</span><span class="p">]</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="s2">"count"</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
@@ -257,9 +257,9 @@ Source: 100% sample based on Social Security card application data as of of Marc
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org7c428b3">
-<h2 id="org7c428b3">End</h2>
-<div class="outline-text-2" id="text-org7c428b3">
+<div class="outline-2" id="outline-container-org868f69d">
+<h2 id="org868f69d">End</h2>
+<div class="outline-text-2" id="text-org868f69d">
 <p>Time to save the table.</p>
 <div class="highlight">
 <pre><span></span><span class="n">names</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">"apeiron/top_100_ssa_names.csv"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -283,7 +283,7 @@ Source: 100% sample based on Social Security card application data as of of Marc
 </aside>
 </article>
 <!--End of body content-->
-<footer id="footer">Contents © 2021 Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a>
+<footer id="footer">Contents © 2023 Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a>
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a href="https://necromuralist.github.io/Ape-Iron/" property="dct:title" rel="cc:attributionURL">Ape Iron</a> by <a href="https://github.com/necromuralist" property="cc:attributionName" rel="cc:attributionURL dct:creator">The Cloistered Monkey</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" rel="license noopener noreferrer" style="display:inline-block;" target="_blank">CC BY 4.0<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"></a></p>
 </footer>
 </div>

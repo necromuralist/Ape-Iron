@@ -1,0 +1,45 @@
+#+BEGIN_COMMENT
+.. title: Bubba Test
+.. slug: bubba-test
+.. date: 2023-03-14 18:04:56 UTC-07:00
+.. tags: comics,testing
+.. category: Comics
+.. link: 
+.. description: Testing the first Bubba panel.
+.. type: text
+.. status: 
+.. updated: 
+
+#+END_COMMENT
+
+* Big Bubba
+
+This is a webp image converted from a 600 dpi scanned image that was converted to grayscale using gimp.
+
+- Original scanned png: 12 Megabytes
+- After grayscale conversion: 2.8 Megabytes
+- Webp Version: 639 Kilobytes
+
+[[img-url:bubba_001_big.webp][600 ppi image]]
+
+* Smaller Bubba
+
+This is the same image but scaled down to a width of 2,500 pixels.
+
+- Scaled PNG: 501 Kilobytes
+- Webp Version: 116 Kilobytes
+
+[[img-url:bubba_001_small.webp][2,500 Pixel Width]]
+
+* Hosted On PCloud
+
+This is the smaller image hosted on pcloud instead of as part of this repository. To do this you need to go to put the image in the pCloud "Public Folder" and then go to the pcloud website to get the URL. The "Link For Websites" they give you is an anchor so you can download the image (or whatever file you're sharing, so you need to grap the URL and put it in an ~img~ tag instead).
+
+#+begin_export html
+<img src="https://filedn.com/lKA05W1iHns4eTWccSVfpum/bubba-sort/bubba_001_small.webp">
+#+end_export
+
+
+* Conclusion
+
+The intention here was to figure out either what size to make the image so that it won't eat up my GitHub quota or to see how well putting it on pCloud would work. This particular image might not have been the best test for this, though, as the file size endede up being small enough that worrying about using an external image host is maybe not worth the time spent thinking about it. But I'll keep testing as I make the images more complex and perhaps at some point it will make sense to use an external host. In the mean time, using the bigger file didn't really improve the image so at least I know that using 2,500 pixels for the width is good enough.

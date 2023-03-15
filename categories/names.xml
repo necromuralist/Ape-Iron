@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron (Posts about names)</title><link>https://necromuralist.github.io/Ape-Iron/</link><description></description><atom:link href="https://necromuralist.github.io/Ape-Iron/categories/names.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;Cloistered Monkey&lt;/a&gt; &lt;p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"&gt;&lt;a property="dct:title" rel="cc:attributionURL" href="https://necromuralist.github.io/Ape-Iron/"&gt;Ape Iron&lt;/a&gt; by &lt;a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/necromuralist"&gt;The Cloistered Monkey&lt;/a&gt; is licensed under &lt;a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY 4.0&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;&lt;/a&gt;&lt;/p&gt;</copyright><lastBuildDate>Tue, 09 Nov 2021 21:56:00 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Pulling Top Names From the Past 100 Years</title><link>https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron (Posts about names)</title><link>https://necromuralist.github.io/Ape-Iron/</link><description></description><atom:link href="https://necromuralist.github.io/Ape-Iron/categories/names.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;Cloistered Monkey&lt;/a&gt; &lt;p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"&gt;&lt;a property="dct:title" rel="cc:attributionURL" href="https://necromuralist.github.io/Ape-Iron/"&gt;Ape Iron&lt;/a&gt; by &lt;a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/necromuralist"&gt;The Cloistered Monkey&lt;/a&gt; is licensed under &lt;a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY 4.0&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;&lt;/a&gt;&lt;/p&gt;</copyright><lastBuildDate>Wed, 15 Mar 2023 01:18:50 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Pulling Top Names From the Past 100 Years</title><link>https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/#org8b25853"&gt;Beginning&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/#org1194192"&gt;Beginning&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/#org2026496"&gt;Set Up&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/#orgd33125d"&gt;Set Up&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/#orgec5a53a"&gt;Middle&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/#org6c1a291"&gt;Middle&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/#org49b52e4"&gt;Pulling the Table&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/#orgdea0937"&gt;Cleaning Up the Table&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/#orge948adc"&gt;Some Plotting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/#org41c8fb1"&gt;Pulling the Table&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/#org90ad020"&gt;Cleaning Up the Table&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/#org4405080"&gt;Some Plotting&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/#org7c428b3"&gt;End&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/#org868f69d"&gt;End&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org8b25853" class="outline-2"&gt;
-&lt;h2 id="org8b25853"&gt;Beginning&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org8b25853"&gt;
+&lt;div id="outline-container-org1194192" class="outline-2"&gt;
+&lt;h2 id="org1194192"&gt;Beginning&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org1194192"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org2026496" class="outline-3"&gt;
-&lt;h3 id="org2026496"&gt;Set Up&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org2026496"&gt;
+&lt;div id="outline-container-orgd33125d" class="outline-3"&gt;
+&lt;h3 id="orgd33125d"&gt;Set Up&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgd33125d"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org6dff4a3" class="outline-4"&gt;
-&lt;h4 id="org6dff4a3"&gt;Imports&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org6dff4a3"&gt;
+&lt;div id="outline-container-org38a16e7" class="outline-4"&gt;
+&lt;h4 id="org38a16e7"&gt;Imports&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org38a16e7"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# python&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;functools&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;partial&lt;/span&gt;
 
@@ -43,9 +43,9 @@
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org7c7098b" class="outline-4"&gt;
-&lt;h4 id="org7c7098b"&gt;Plotting&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org7c7098b"&gt;
+&lt;div id="outline-container-orgecb2666" class="outline-4"&gt;
+&lt;h4 id="orgecb2666"&gt;Plotting&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgecb2666"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;SLUG&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"pulling-top-100-names"&lt;/span&gt;
 &lt;span class="n"&gt;Embed&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;partial&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EmbedHoloviews&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;folder_path&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;"files/posts/&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;SLUG&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -53,17 +53,17 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgec5a53a" class="outline-2"&gt;
-&lt;h2 id="orgec5a53a"&gt;Middle&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgec5a53a"&gt;
+&lt;div id="outline-container-org6c1a291" class="outline-2"&gt;
+&lt;h2 id="org6c1a291"&gt;Middle&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org6c1a291"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org49b52e4" class="outline-3"&gt;
-&lt;h3 id="org49b52e4"&gt;Pulling the Table&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org49b52e4"&gt;
+&lt;div id="outline-container-org41c8fb1" class="outline-3"&gt;
+&lt;h3 id="org41c8fb1"&gt;Pulling the Table&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org41c8fb1"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org048aeeb" class="outline-4"&gt;
-&lt;h4 id="org048aeeb"&gt;Trying a Naive Request&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org048aeeb"&gt;
+&lt;div id="outline-container-org278233a" class="outline-4"&gt;
+&lt;h4 id="org278233a"&gt;Trying a Naive Request&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org278233a"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;URL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"https://www.ssa.gov/OACT/babynames/decades/century.html"&lt;/span&gt;
 &lt;span class="n"&gt;response&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;requests&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;URL&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="n"&gt;response&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ok&lt;/span&gt;
@@ -96,9 +96,9 @@ So it looks like it's a plain table so we don't need Selenium or something else 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgdea0937" class="outline-3"&gt;
-&lt;h3 id="orgdea0937"&gt;Cleaning Up the Table&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgdea0937"&gt;
+&lt;div id="outline-container-org90ad020" class="outline-3"&gt;
+&lt;h3 id="org90ad020"&gt;Cleaning Up the Table&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org90ad020"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;males&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;table&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;table&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;columns&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
 &lt;span class="n"&gt;females&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;table&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;table&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;columns&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;:]]&lt;/span&gt;
 &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;males&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
@@ -111,9 +111,9 @@ So it looks like it's a plain table so we don't need Selenium or something else 
 &lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orge5c56e9" class="outline-4"&gt;
-&lt;h4 id="orge5c56e9"&gt;The Last Row&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orge5c56e9"&gt;
+&lt;div id="outline-container-org3858248" class="outline-4"&gt;
+&lt;h4 id="org3858248"&gt;The Last Row&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org3858248"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;males&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;iloc&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -182,9 +182,9 @@ Now to re-combine them.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orge948adc" class="outline-3"&gt;
-&lt;h3 id="orge948adc"&gt;Some Plotting&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orge948adc"&gt;
+&lt;div id="outline-container-org4405080" class="outline-3"&gt;
+&lt;h3 id="org4405080"&gt;Some Plotting&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org4405080"&gt;
 &lt;p&gt;
 Before we can plot them we have to change the &lt;code&gt;count&lt;/code&gt; column to be (you guessed it) a number since that last row with the source information prevents pandas' ability to convert the column itself.
 &lt;/p&gt;
@@ -215,9 +215,9 @@ Well, pretend that you don't see the x-ticks… It's interesting that the highes
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org7c428b3" class="outline-2"&gt;
-&lt;h2 id="org7c428b3"&gt;End&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org7c428b3"&gt;
+&lt;div id="outline-container-org868f69d" class="outline-2"&gt;
+&lt;h2 id="org868f69d"&gt;End&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org868f69d"&gt;
 &lt;p&gt;
 Time to save the table.
 &lt;/p&gt;
