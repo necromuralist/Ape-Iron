@@ -1,0 +1,158 @@
+#+BEGIN_COMMENT
+.. title: Graphing P5 Noise
+.. slug: graphing-p5-noise
+.. date: 2023-04-24 11:47:11 UTC-07:00
+.. tags: p5.js,noise,graphing
+.. category: P5.js
+.. link: 
+.. description: Graphing the P5 noise function.
+.. type: text
+.. status: 
+.. updated: 
+.. template: p5.tmpl
+#+END_COMMENT
+
+#+begin_src js :tangle ../files/posts/graphing-p5-noise/noise_graph.js :exports none
+<<noise-graph-id>>
+
+<<noise-graph-function>>
+  <<perlin-noise-space-variables>>
+
+  // set up the slider to change the step-size
+  <<slider-variables>>
+
+  // define some colors
+  <<colors-and-opacity>>
+
+  // create the canvas and the slider
+  <<p5-setup>>
+    <<setup-canvas>>
+
+    <<setup-slider>>
+  } // setup
+
+  // draw the noise graph
+  <<p5js-draw>>
+  <<setup-the-next-frame>>
+
+  // begin one graph plot
+  <<plot-this-frame>>
+  // end one graph plot
+
+  // move the input to the noise function over one step
+  <<move-the-noise-input>>
+  } // end draw
+} // end noise_graph
+
+<<create-the-noise-graph>>
+#+end_src
+
+#+begin_export html
+  <script language="javascript" type="text/javascript" src='noise_graph.js'></script>
+
+  <div id="noise-graph"></div>
+#+end_export
+
+* Setup The Sketch
+This stuff isn't really about plotting the graph but rather about how the javascript is setup in the HTML at the end of it all, but I refer to what's defined here within the sketch functions so I thought I should show it.
+** Name The Parent DIV
+I'm making a ~div~ to stick the sketch into the page so here's the ID I'll use for that ~div~ so the code can refer to it.
+
+#+begin_src js :exports code :noweb-ref noise-graph-id
+const NOISE_GRAPH_DIV = "noise-graph";
+#+end_src
+** The Instance Container Function
+To keep all the variable for the sketch contained in its scope I'm going to use a function (~noise_graph~) to act as a closure.
+
+#+begin_src js :exports code :noweb-ref noise-graph-function
+function noise_graph(p5js){
+#+end_src
+* Constants and Variables
+Before defining the ~setup~ and ~draw~ methods I'll define some variables that we can use within them.
+
+** Perlin Noise Space
+The inputs to the ~noise~ function are what I'm calling the ~X_NOISE_COORDINATE~ (in one way or another). Every time the canvas gets re-drawn I'll re-draw the graph by putting in a sequence of x-values starting at ~STARTING_X_NOISE_COORDINATE~ and incrementing it by the step-size until we get to the right of the canvas.
+
+#+begin_src js :noweb-ref perlin-noise-space-variables :exports code
+let STARTING_X_NOISE_COORDINATE = 0;
+let X_NOISE_COORDINATE_STEP_SIZE = 0.01;
+#+end_src
+** The Slider
+#+begin_src js :noweb-ref slider-variables :exports code
+let slider;
+let MINIMUM_NOISE_COORDINATE_STEP_SIZE = 0;
+let MAXIMUM_NOISE_COORDINATE_STEP_SIZE = 0.25;
+let DEFAULT_NOISE_COORDINATE_STEP_SIZE = 0.01;
+let SLIDER_STEP_SIZE = 0;
+#+end_src
+** Colors
+
+#+begin_src js :exports code :noweb-ref colors-and-opacity
+let BLACK = 0;
+let WHITE = 255;
+let OPACITY = 20;
+let LINE_COLOR = BLACK;
+let BACKGROUND_COLOR = WHITE;
+#+end_src
+* Setup
+#+begin_src js :exports code :noweb-ref p5-setup
+p5js.setup = function() {
+#+end_src
+** Canvas and Line
+#+begin_src js :exports code :noweb-ref setup-canvas
+let canvas = p5js.createCanvas(
+  document.getElementById(NOISE_GRAPH_DIV).offsetWidth, 400);
+p5js.stroke(LINE_COLOR);
+p5js.noFill();
+#+end_src
+** Slider
+#+begin_src js :exports code :noweb-ref setup-slider
+slider = p5js.createSlider(
+  MINIMUM_NOISE_COORDINATE_STEP_SIZE,
+  MAXIMUM_NOISE_COORDINATE_STEP_SIZE,
+  DEFAULT_NOISE_COORDINATE_STEP_SIZE,
+  SLIDER_STEP_SIZE);
+slider.style("width", "100px");
+#+end_src
+* Draw
+** The Draw Function
+#+begin_src js :exports code :noweb-ref p5js-draw
+p5js.draw = function() {
+#+end_src
+** Setup The Next Frame
+#+begin_src js :exports code :noweb-ref setup-the-next-frame
+p5js.background(BACKGROUND_COLOR, OPACITY);
+let x_noise_coordinate = STARTING_X_NOISE_COORDINATE;
+let noise_step_size = slider.value();
+#+end_src
+** Plot Next Frame
+#+begin_src js :exports code :noweb-ref plot-this-frame
+p5js.beginShape();
+
+for (let x = 0; x < p5js.width; x++) {
+  let y = p5js.noise(x_noise_coordinate) * p5js.height;
+  p5js.vertex(x, y);
+  x_noise_coordinate += noise_step_size;
+} 
+p5js.endShape();
+#+end_src
+** Move the Noise Input
+#+begin_src js :exports code :noweb-ref move-the-noise-input
+STARTING_X_NOISE_COORDINATE += noise_step_size;
+#+end_src
+* Make The Sketch Object
+#+begin_src js :exports code :noweb-ref create-the-noise-graph
+new p5(noise_graph, NOISE_GRAPH_DIV);
+#+end_src
+* Sources
+Wikipedia on Perlin Noise:
+ - Perlin noise. In: Wikipedia [Internet]. 2023 [cited 2023 Apr 24]. Available from: https://en.wikipedia.org/w/index.php?title=Perlin_noise&oldid=1148235423
+
+The original javascript came from Daniel Shiffman's Coding Train:
+
+ - I.4: Graphing 1D Perlin Noise [Internet]. [cited 2023 Apr 24]. Available from: https://thecodingtrain.com/tracks/the-nature-of-code-2/noc/perlin/graphing-1d-perlin-noise
+
+ Bugs on the (now deprecated) github processing *Issues* page pointing out that ~noise~ isn't really /perlin/ noise:
+
+ - Real Perlin noise would be nice · Issue #2549 · processing/processing · GitHub [Internet]. [cited 2023 Apr 24]. Available from: https://github.com/processing/processing/issues/2549
+ -  Documentation for noise() · Issue #2550 · processing/processing [Internet]. GitHub. [cited 2023 Apr 24]. Available from: https://github.com/processing/processing/issues/2550
