@@ -67,7 +67,7 @@
 The slider controls how big a step the graph takes along the ~noise~ space with each move to the right along the x-axis (moving the slider to the right makes the steps bigger so the line looks noisier).
 
 * Setup The Sketch
-This stuff isn't really about plotting the graph but rather about how the javascript is setup in the HTML at the end of it all, but I refer to what's defined here within the sketch functions so I thought I should show it.
+This first section isn't really about plotting the graph but rather about setting up the P5 sketch in the HTML, but I refer to what's defined here within the sketch functions so I thought I should show it.
 ** Name The Parent DIV
 I'm making a ~div~ to stick the sketch into the page so here's the ID I'll use for that ~div~ so the code can refer to it.
 
@@ -81,10 +81,10 @@ To keep all the variable for the sketch contained in its scope I'm going to use 
 function noise_graph(p5js){
 #+end_src
 * Constants and Variables
-Before defining the ~setup~ and ~draw~ methods I'll define some variables that we can use within them.
+Now we're into the p5 sketch code. Before defining the ~setup~ and ~draw~ methods I'll define some variables that we can use within them.
 
-** Perlin Noise Space
-The inputs to the ~noise~ function are what I'm calling the ~X_NOISE_COORDINATE~ (in one way or another). Every time the canvas gets re-drawn I'll re-draw the graph by putting in a sequence of x-values starting at ~STARTING_X_NOISE_COORDINATE~ and incrementing it by the step-size until we get to the right of the canvas.
+** The Noise Space
+The inputs to the ~noise~ function are what I'm calling the ~X_NOISE_COORDINATE~ (or variations on that name, anyway). Every time the canvas gets re-drawn I'll re-draw the graph by putting in a sequence of x-values starting at ~STARTING_X_NOISE_COORDINATE~ and incrementing it by the step-size until we get to the right of the canvas.
 
 #+begin_src js :noweb-ref perlin-noise-space-variables :exports code
 let STARTING_X_NOISE_COORDINATE = 0;
