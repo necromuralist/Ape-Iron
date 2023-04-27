@@ -4,11 +4,11 @@
 .. date: 2023-04-24 11:47:11 UTC-07:00
 .. tags: p5.js,noise,graphing
 .. category: P5.js
-.. link: 
+.. link:
 .. description: Graphing the P5 noise function.
 .. type: text
-.. status: 
-.. updated: 
+.. status:
+.. updated:
 .. template: p5.tmpl
 .. has_math: true
 #+END_COMMENT
@@ -64,41 +64,51 @@
   <div id="noise-graph"></div>
 #+end_export
 
-The slider controls how big a step the graph takes along the ~noise~ space with each move to the right along the x-axis (moving the slider to the right makes the steps bigger so the line looks noisier).
+The slider controls how big a step the graph takes along the ~noise~ space with each move to the right along the x-axis (moving the slider to the right makes the steps bigger so the line looks noisier). 
+
+* What Is This About?
+
+The plot is a visualization of the p5.js [[https://p5js.org/reference/#/p5/noise][noise]] function. I got the idea for it from [[https://thecodingtrain.com/tracks/the-nature-of-code-2/noc/perlin/graphing-1d-perlin-noise][the Coding Train]] but the author of that site explains it by talking about it in a video so I thought I'd re-do it so I can understand what the code is doing a little better. The [[https://p5js.org/reference/#/p5/noise][p5 documentation]] and the *Coding Train* both describe the ~noise~ function as producing [[https://en.wikipedia.org/w/index.php?title=Perlin_noise&oldid=1148235423][Perlin noise]], and Dan Shiffman (the *Coding Train* author) even goes on to point out that it's the original version of perlin noise from 1983 and in a later video he shows how to implement [[https://en.wikipedia.org/w/index.php?title=Simplex_noise&oldid=1103667712][Simplex Noise]], an improved version created by Ken Perlin, the author of the original Perlin Noise. On the github site for Processing, however, there are two issues that claim that processing's ~noise~ isn't really /perlin/ noise but rather a form of [[https://en.wikipedia.org/w/index.php?title=Value_noise&oldid=1024311499][Value Noise]]. 
+
+I don't know enough to know what's right, so I'll just call it noise or p5's noise and not worry about which it is.
 
 * Setup The Sketch
-This first section isn't really about plotting the graph but rather about setting up the P5 sketch in the HTML, but I refer to what's defined here within the sketch functions so I thought I should show it.
+Now on to the code. This first section isn't really about plotting the graph but rather about setting up the P5 sketch in the HTML.
 ** Name The Parent DIV
-I'm making a ~div~ to stick the sketch into the page so here's the ID I'll use for that ~div~ so the code can refer to it.
+We're making a ~div~ to stick the sketch into the page so here's the ID we'll use for that ~div~ so the code can refer to it.
 
 #+begin_src js :exports code :noweb-ref noise-graph-id
 const NOISE_GRAPH_DIV = "noise-graph";
 #+end_src
 ** The Instance Container Function
-To keep all the variable for the sketch contained in its scope I'm going to use a function (~noise_graph~) to act as a closure.
+To keep all the variables for the sketch contained in its scope we're going to use a function (~noise_graph~) to act as a closure.
 
 #+begin_src js :exports code :noweb-ref noise-graph-function
 function noise_graph(p5js){
 #+end_src
 * Constants and Variables
-Now we're into the p5 sketch code. Before defining the ~setup~ and ~draw~ methods I'll define some variables that we can use within them.
+Now we're into the p5 sketch code (contained within ~noise_graph~). Before defining the ~setup~ and ~draw~ methods let's define some variables that we can use within them.
 
 ** The Noise Space
-The inputs to the ~noise~ function are what I'm calling the ~X_NOISE_COORDINATE~ (or variations on that name, anyway). Every time the canvas gets re-drawn I'll re-draw the graph by putting in a sequence of x-values starting at ~STARTING_X_NOISE_COORDINATE~ and incrementing it by the step-size until we get to the right of the canvas.
+The inputs to the ~noise~ function are what we'll call the ~X_NOISE_COORDINATE~ (or variations on that name, anyway). Every time the canvas gets re-drawn we'll re-draw the graph by putting in a sequence of x-values starting at ~STARTING_X_NOISE_COORDINATE~ and incrementing it by ~X_NOISE_COORDINATE_STEP_SIZE~ as we move along the x-axis of the canvas.
 
 #+begin_src js :noweb-ref perlin-noise-space-variables :exports code
 let STARTING_X_NOISE_COORDINATE = 0;
 let X_NOISE_COORDINATE_STEP_SIZE = 0.01;
 #+end_src
 ** The Slider
+We'll also add a slider to allow the user to change the step-size to increment the noise input so these are some variables and constants for it.
+
 #+begin_src js :noweb-ref slider-variables :exports code
+const MINIMUM_NOISE_COORDINATE_STEP_SIZE = 0;
+const MAXIMUM_NOISE_COORDINATE_STEP_SIZE = 0.25;
+
 let slider;
-let MINIMUM_NOISE_COORDINATE_STEP_SIZE = 0;
-let MAXIMUM_NOISE_COORDINATE_STEP_SIZE = 0.25;
-let DEFAULT_NOISE_COORDINATE_STEP_SIZE = 0.01;
+let DEFAULT_NOISE_COORDINATE_STEP_SIZE = X_NOISE_COORDINATE_STEP_SIZE;
 let SLIDER_STEP_SIZE = 0;
 #+end_src
 ** Colors
+These are the color settings for the plot.
 
 #+begin_src js :exports code :noweb-ref colors-and-opacity
 let BLACK = 0;
@@ -108,10 +118,14 @@ let LINE_COLOR = BLACK;
 let BACKGROUND_COLOR = WHITE;
 #+end_src
 * Setup
+Now we'll monkey-patch the ~setup~ function that gets called once at the start of the animation.
+
 #+begin_src js :exports code :noweb-ref p5-setup
 p5js.setup = function() {
 #+end_src
 ** Canvas and Line
+The only possibly not-so-obvious thing here should be the ~document.getElementById(NOISE_GRAPH_DIV).offsetWidth~ argument to the ~createCanvas~ method which grabs the width of the container in which the plot is being put (not the width of the entire window).
+
 #+begin_src js :exports code :noweb-ref setup-canvas
 let canvas = p5js.createCanvas(
   document.getElementById(NOISE_GRAPH_DIV).offsetWidth, 400);
@@ -119,6 +133,8 @@ p5js.stroke(LINE_COLOR);
 p5js.noFill();
 #+end_src
 ** Slider
+Now we'll create the slider to let the user play with the step-size for the noise input.
+
 #+begin_src js :exports code :noweb-ref setup-slider
 slider = p5js.createSlider(
   MINIMUM_NOISE_COORDINATE_STEP_SIZE,
@@ -128,23 +144,26 @@ slider = p5js.createSlider(
 slider.style("width", "100px");
 #+end_src
 * Draw
-Here's where I define the ~draw~ function that gets called repeatedly to animate our sketch.
+Here's where we define the ~draw~ function that gets called repeatedly to animate our sketch.
 ** The Draw Function
-I monkey patch the ~draw~ method on the ~p5~ object.
+Monkey patch the ~draw~ method on the ~p5~ object.
 
 #+begin_src js :exports code :noweb-ref p5js-draw
 p5js.draw = function() {
 #+end_src
 ** Setup The Next Frame
-I'll paint the canvas with a semi-opaque white on every refresh so that you can sort of see how the graph changes with each loop. It didn't turn out to be as easy to see as I thought it would be but it looks kind of nice so I'm going to leave it. I create an ~x_noise_coordinate~ which will hold the input to the ~noise~ function as we move through the loop and get the ~noise_step_size~ value from the slider. The ~noise_step_size~ is the amount that I change ~x_noise-coordinate~ as we move from left to right along the x-axis of the graph.
+We'll paint the canvas with a semi-opaque white on every refresh so that you can sort of see how the graph changes with each loop. We also create some variables:
+
+ - ~noise_step_size~ is the amount that the ~x_noise-coordinate~ changes as the plot moves from left to right along the x-axis of the graph
+ - ~y~ will be the y-coordinate for the points in our plot
 
 #+begin_src js :exports code :noweb-ref setup-the-next-frame
 p5js.background(BACKGROUND_COLOR, OPACITY);
-let x_noise_coordinate = STARTING_X_NOISE_COORDINATE;
 let noise_step_size = slider.value();
+let y;
 #+end_src
 ** Plot Next Frame
-Here's where I plot the graph. We're going to draw the graph using connected line segments so before the loop starts I'll tell p5 to start the shape.
+Here's where we plot the graph. We're going to draw the graph using connected line segments so before the loop starts we'll tell p5 to start the shape.
 
 #+begin_src js :exports code :noweb-ref plot-this-frame-begin
 p5js.beginShape();
@@ -159,19 +178,13 @@ for (let x = 0; x < p5js.width; x++) {
 Now we'll get the y-coordinate for the point. Since the ~noise~ function's output is a float from 0 to 1 we can use it to set the y-coordinate to a fraction of the canvas' height by multiplying $noise \times height$.
 
 #+begin_src js :exports code :noweb-ref plot-this-frame-y
-let y = p5js.noise(x_noise_coordinate) * p5js.height;
+y = p5js.noise(STARTING_X_NOISE_COORDINATE + x * noise_step_size) * p5js.height;
 #+end_src
 
 Now that we have the x and y coordinates we can draw the next segment by adding a vertex to the shape.
 
 #+begin_src js :exports code :noweb-ref plot-this-frame-vertex
 p5js.vertex(x, y);
-#+end_src
-
-We want to change our input to the noise function along with our x-coordinate position on the graph so we add a step to it.
-
-#+begin_src js :exports code :noweb-ref plot-this-frame-x-update
-x_noise_coordinate += noise_step_size;
 #+end_src
 
 That's the end of the for-loop. Now, outside of the loop we call ~endShape~ to stop drawing our graph (otherwise it'd draw a line back to the start of the graph the next time we went through the loop).
@@ -184,10 +197,12 @@ Now we'll move the input for the noise function at the start of the graph a litt
 STARTING_X_NOISE_COORDINATE += noise_step_size;
 #+end_src
 * Make The Sketch Object
-Now we pass our sketch definition to ~p5~ to build it and attach it to our HTML div.
+Next we pass our sketch definition to ~p5~ to build it and attach it to our HTML div.
 #+begin_src js :exports code :noweb-ref create-the-noise-graph
 new p5(noise_graph, NOISE_GRAPH_DIV);
 #+end_src
+* And Thats' It, Then
+At this point we should have a graph that helps to visualize how the ~noise~ function changes over one-dimension. Noise to the aside, it's also a useful template for plotting any kind of graph, you'd just have to change the setting of the ~y~ value to whatever other function you want to visualize.
 * Sources
 P5 Reference:
 - reference | noise() [Internet]. [cited 2023 Apr 25]. Available from: https://p5js.org/reference/#/p5/noise
@@ -195,9 +210,10 @@ P5 Reference:
 - reference | vertex() [Internet]. [cited 2023 Apr 25]. Available from: https://p5js.org/reference/#/p5/vertex
 - reference | createSlider() [Internet]. [cited 2023 Apr 25]. Available from: https://p5js.org/reference/#/p5/createSlider
 
-
-Wikipedia on Perlin Noise:
+Wikipedia on Noise:
  - Perlin noise. In: Wikipedia [Internet]. 2023 [cited 2023 Apr 24]. Available from: https://en.wikipedia.org/w/index.php?title=Perlin_noise&oldid=1148235423
+ - Simplex noise. In: Wikipedia [Internet]. 2022 [cited 2023 Apr 26]. Available from: https://en.wikipedia.org/w/index.php?title=Simplex_noise&oldid=1103667712
+ - Value noise. In: Wikipedia [Internet]. 2021 [cited 2023 Apr 26]. Available from: https://en.wikipedia.org/w/index.php?title=Value_noise&oldid=1024311499
 
 The original javascript came from Daniel Shiffman's Coding Train:
 

@@ -5,10 +5,11 @@ function noise_graph(p5js){
   let X_NOISE_COORDINATE_STEP_SIZE = 0.01;
 
   // set up the slider to change the step-size
+  const MINIMUM_NOISE_COORDINATE_STEP_SIZE = 0;
+  const MAXIMUM_NOISE_COORDINATE_STEP_SIZE = 0.25;
+  
   let slider;
-  let MINIMUM_NOISE_COORDINATE_STEP_SIZE = 0;
-  let MAXIMUM_NOISE_COORDINATE_STEP_SIZE = 0.25;
-  let DEFAULT_NOISE_COORDINATE_STEP_SIZE = 0.01;
+  let DEFAULT_NOISE_COORDINATE_STEP_SIZE = X_NOISE_COORDINATE_STEP_SIZE;
   let SLIDER_STEP_SIZE = 0;
 
   // define some colors
@@ -36,17 +37,18 @@ function noise_graph(p5js){
   // draw the noise graph
   p5js.draw = function() {
   p5js.background(BACKGROUND_COLOR, OPACITY);
-  let x_noise_coordinate = STARTING_X_NOISE_COORDINATE;
   let noise_step_size = slider.value();
+  let y;
 
   // begin one graph plot
   p5js.beginShape();
-  
+
   for (let x = 0; x < p5js.width; x++) {
-    let y = p5js.noise(x_noise_coordinate) * p5js.height;
+
+    y = p5js.noise(STARTING_X_NOISE_COORDINATE + x * noise_step_size) * p5js.height;
     p5js.vertex(x, y);
-    x_noise_coordinate += noise_step_size;
-  } 
+    
+  }
   p5js.endShape();
   // end one graph plot
 
