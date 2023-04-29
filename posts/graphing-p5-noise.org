@@ -96,12 +96,15 @@ The inputs to the ~noise~ function are what we'll call the ~X_NOISE_COORDINATE~ 
 let STARTING_X_NOISE_COORDINATE = 0;
 let X_NOISE_COORDINATE_STEP_SIZE = 0.01;
 #+end_src
+
+The ~X_NOISE_COORDINATE_STEP_SIZE~ is sort of a re-mapping or re-proportioning of the x-value we use to draw the points for the ~noise~ function. The p5 canvas uses integers for the pixel coordinates so as we move across the canvas the x-coordinates are non-negative integers - $0, 1, 2, \ldots, width - 1$. The ~noise~ function, on the other hand, works best with much smaller changes. If you use increments of 1 the output will look pretty much random, while our default of 0.01 will make our plot appear smoother and show that each point falls reasonably close to the point that just precedes it. So as the x input to the ~vertex~ function goes up $0, 1, 2, \ldots$ we'll instead increment the input to the ~noise~ function as $0.01, 0.02, 0.03, \ldots$ (by default).
 ** The Slider
-We'll also add a slider to allow the user to change the step-size to increment the noise input so these are some variables and constants for it.
+These are some variables so we can add a slider to allow the user to change the step-size to increment the noise input. The slider step size of 0 means that there will be a continuous change in the value as the slider is moved, as opposed to giving it discrete values to jump to.
 
 #+begin_src js :noweb-ref slider-variables :exports code
 const MINIMUM_NOISE_COORDINATE_STEP_SIZE = 0;
-const MAXIMUM_NOISE_COORDINATE_STEP_SIZE = 0.25;
+const MAXIMUM_NOISE_COORDINATE_STEP_SIZE = 1;
+const SLIDER_WIDTH = "500px";
 
 let slider;
 let DEFAULT_NOISE_COORDINATE_STEP_SIZE = X_NOISE_COORDINATE_STEP_SIZE;
@@ -141,7 +144,7 @@ slider = p5js.createSlider(
   MAXIMUM_NOISE_COORDINATE_STEP_SIZE,
   DEFAULT_NOISE_COORDINATE_STEP_SIZE,
   SLIDER_STEP_SIZE);
-slider.style("width", "100px");
+slider.style("width", SLIDER_WIDTH);
 #+end_src
 * Draw
 Here's where we define the ~draw~ function that gets called repeatedly to animate our sketch.
@@ -178,7 +181,8 @@ for (let x = 0; x < p5js.width; x++) {
 Now we'll get the y-coordinate for the point. Since the ~noise~ function's output is a float from 0 to 1 we can use it to set the y-coordinate to a fraction of the canvas' height by multiplying $noise \times height$.
 
 #+begin_src js :exports code :noweb-ref plot-this-frame-y
-y = p5js.noise(STARTING_X_NOISE_COORDINATE + x * noise_step_size) * p5js.height;
+y = p5js.noise(STARTING_X_NOISE_COORDINATE + x * noise_step_size)
+  ,* p5js.height;
 #+end_src
 
 Now that we have the x and y coordinates we can draw the next segment by adding a vertex to the shape.
@@ -196,12 +200,14 @@ Now we'll move the input for the noise function at the start of the graph a litt
 #+begin_src js :exports code :noweb-ref move-the-noise-input
 STARTING_X_NOISE_COORDINATE += noise_step_size;
 #+end_src
+
+I'm not showing the closing braces (~}~) to end the functions but at this point we close the ~draw~ and ~noise_graph~ functions, ending our definitions for the sketch.
 * Make The Sketch Object
 Next we pass our sketch definition to ~p5~ to build it and attach it to our HTML div.
 #+begin_src js :exports code :noweb-ref create-the-noise-graph
 new p5(noise_graph, NOISE_GRAPH_DIV);
 #+end_src
-* And Thats' It, Then
+* And That's It, Then
 At this point we should have a graph that helps to visualize how the ~noise~ function changes over one-dimension. Noise to the aside, it's also a useful template for plotting any kind of graph, you'd just have to change the setting of the ~y~ value to whatever other function you want to visualize.
 * Sources
 P5 Reference:
