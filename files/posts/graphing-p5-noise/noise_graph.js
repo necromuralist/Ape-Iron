@@ -1,7 +1,7 @@
 const NOISE_GRAPH_DIV = "noise-graph";
 
 function noise_graph(p5js){
-  let STARTING_X_NOISE_COORDINATE = 0;
+  let X_NOISE_COORDINATE_START = 0;
   let X_NOISE_COORDINATE_STEP_SIZE = 0.01;
 
   // set up the slider to change the step-size
@@ -46,7 +46,7 @@ function noise_graph(p5js){
 
   for (let x = 0; x < p5js.width; x++) {
 
-    y = p5js.noise(STARTING_X_NOISE_COORDINATE + x * noise_step_size)
+    y = p5js.noise(X_NOISE_COORDINATE_START + x * noise_step_size)
       * p5js.height;
     p5js.vertex(x, y);
     
@@ -55,7 +55,7 @@ function noise_graph(p5js){
   // end one graph plot
 
   // move the input to the noise function over one step
-  STARTING_X_NOISE_COORDINATE += noise_step_size;
+  X_NOISE_COORDINATE_START += noise_step_size;
   } // end draw
 } // end noise_graph
 

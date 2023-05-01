@@ -93,11 +93,13 @@ Now we're into the p5 sketch code (contained within ~noise_graph~). Before defin
 The inputs to the ~noise~ function are what we'll call the ~X_NOISE_COORDINATE~ (or variations on that name, anyway). Every time the canvas gets re-drawn we'll re-draw the graph by putting in a sequence of x-values starting at ~STARTING_X_NOISE_COORDINATE~ and incrementing it by ~X_NOISE_COORDINATE_STEP_SIZE~ as we move along the x-axis of the canvas.
 
 #+begin_src js :noweb-ref perlin-noise-space-variables :exports code
-let STARTING_X_NOISE_COORDINATE = 0;
+let X_NOISE_COORDINATE_START = 0;
 let X_NOISE_COORDINATE_STEP_SIZE = 0.01;
 #+end_src
 
-The ~X_NOISE_COORDINATE_STEP_SIZE~ is sort of a re-mapping or re-proportioning of the x-value we use to draw the points for the ~noise~ function. The p5 canvas uses integers for the pixel coordinates so as we move across the canvas the x-coordinates are non-negative integers - $0, 1, 2, \ldots, width - 1$. The ~noise~ function, on the other hand, works best with much smaller changes. If you use increments of 1 the output will look pretty much random, while our default of 0.01 will make our plot appear smoother and show that each point falls reasonably close to the point that just precedes it. So as the x input to the ~vertex~ function goes up $0, 1, 2, \ldots$ we'll instead increment the input to the ~noise~ function as $0.01, 0.02, 0.03, \ldots$ (by default).
+The ~X_NOISE_COORDINATE_STEP_SIZE~ is sort of a re-mapping or re-proportioning of the x-value we use to draw the points for the ~noise~ function. The p5 canvas uses integers for the pixel coordinates so as we move across the canvas the x-coordinates are non-negative integers - $0, 1, 2, \ldots, width - 1$. The ~noise~ function, on the other hand, works best with much smaller changes. If you use increments of 1 the output will look pretty much random, while our default of 0.01 will make our plot appear smoother and also show that each point falls reasonably close to the point that just precedes it. So as the x input to the ~vertex~ function goes up $0, 1, 2, \ldots$ we'll increment the input to the ~noise~ function as $0 \times 0.01 = 0, 1 \times 0.01 = 0.01, 2 \times 0.01 = 0.02, \ldots$.
+
+/But/ the ~noise~ function is, well, a function. If you keep passing in the same value to it you'll get the same value out of it so if we just use a scaled value of the x-coordinate ($x \times x_{noise-coordinate-step-size}$) as our input then every time p5 re-draws the sketch it will draw the same graph, producing what looks like a static image. In order to get an animated image  we'll add an initial value to the noise input (~NOISE-COORDINATE-START~) that we'll increment every time we re-start the plot so that the ~noise~ function starts with a different value each time we re-draw the graph. So instead of $x \times x_{noise-coordinate-step-size}$ we use x-{noise-coordinate_start} + x \times x_{noise-coordinate-step-size}$ as the input to the ~noise~ function.
 ** The Slider
 These are some variables so we can add a slider to allow the user to change the step-size to increment the noise input. The slider step size of 0 means that there will be a continuous change in the value as the slider is moved, as opposed to giving it discrete values to jump to.
 
@@ -181,7 +183,7 @@ for (let x = 0; x < p5js.width; x++) {
 Now we'll get the y-coordinate for the point. Since the ~noise~ function's output is a float from 0 to 1 we can use it to set the y-coordinate to a fraction of the canvas' height by multiplying $noise \times height$.
 
 #+begin_src js :exports code :noweb-ref plot-this-frame-y
-y = p5js.noise(STARTING_X_NOISE_COORDINATE + x * noise_step_size)
+y = p5js.noise(X_NOISE_COORDINATE_START + x * noise_step_size)
   ,* p5js.height;
 #+end_src
 
@@ -198,10 +200,14 @@ p5js.endShape();
 ** Move the Noise Input
 Now we'll move the input for the noise function at the start of the graph a little. If we didn't the input to the noise function as we went through the loop would always be the same so our plot would just draw the same thing over and over again (well, if we move the slider to change the ~noise_step_size~ it wouldn't be exactly the same, but the starting point would always be the same).
 #+begin_src js :exports code :noweb-ref move-the-noise-input
-STARTING_X_NOISE_COORDINATE += noise_step_size;
+X_NOISE_COORDINATE_START += noise_step_size;
 #+end_src
 
 I'm not showing the closing braces (~}~) to end the functions but at this point we close the ~draw~ and ~noise_graph~ functions, ending our definitions for the sketch.
+** Once Again But As a Picture
+
+[[img-url:noise-for-loop-1250.webp][for-loop-diagram]]
+
 * Make The Sketch Object
 Next we pass our sketch definition to ~p5~ to build it and attach it to our HTML div.
 #+begin_src js :exports code :noweb-ref create-the-noise-graph
