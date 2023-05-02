@@ -1,8 +1,10 @@
 {#  -*- coding: utf-8 -*- #}
+{% import 'p5_helper.tmpl' as p5 with context %}
+
 {% extends 'post.tmpl' %}
 
 {% block extra_head %}
   {{ super() }}
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+  {{ p5.p5_scripts() }}
 {% endblock %}
 
