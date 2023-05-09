@@ -15,7 +15,9 @@
 {{% javascripttag source="walker.js" %}}
 {{% p5div divid="random-walker-sketch" source="sketch.js" %}}
 
-This is a look at the [[https://thecodingtrain.com/tracks/the-nature-of-code-2/noc/1-vectors/1-what-is-a-vector][What Is A Vector]] lesson on The Coding Train, part of the Nature of Code series. I'm going to create an object that takes a random walk. It's used in the series to show how to use vectors instead of object properties (e.g. maintaining and updating ~this.x~ and ~this.y~) to hold the position of an object on the canvas.
+This is a look at the [[https://thecodingtrain.com/tracks/the-nature-of-code-2/noc/1-vectors/1-what-is-a-vector][What Is A Vector]] lesson on The Coding Train, part of the Nature of Code series. It's used in the series to show how to use vectors instead of object properties (e.g. maintaining and updating ~this.x~ and ~this.y~) to hold the position of an object on the canvas.
+
+I'm going to illustrate this by creating an object that takes a [[https://en.wikipedia.org/wiki/Random_walk?useskin=vector][random walk]].
 
 * The Walker
 
