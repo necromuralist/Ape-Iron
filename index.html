@@ -12,21 +12,14 @@
 <meta content="Nikola (getnikola.com)" name="generator">
 <link href="rss.xml" hreflang="en" rel="alternate" title="RSS" type="application/rss+xml">
 <link href="https://necromuralist.github.io/Ape-Iron/" rel="canonical">
-<link href="index-14.html" rel="next" type="text/html"><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]-->
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script><!--
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"
-</script>
-
-<script type="text/javascript" async
-  src="../../../assets/javascript/p5.min.js"
-</script>
---><!-- favicons -->
+<link href="index-1.html" rel="next" type="text/html"><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><!-- favicons -->
 <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
 <link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
 <link href="favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
 <link href="site.webmanifest" rel="manifest">
-<link href="posts/bubba-test/" rel="prefetch" type="text/html">
+<link href="posts/a-random-walker/" rel="prefetch" type="text/html">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
 </head>
 <body>
 <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a> <!-- Menubar -->
@@ -55,6 +48,465 @@
 <div class="postindex">
 <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article">
 <header>
+<h1 class="p-name entry-title"><a class="u-url" href="posts/a-random-walker/">A Random Walk(er)</a></h1>
+<div class="metadata">
+<p class="byline author vcard"><span class="byline-name fn" itemprop="author">Cloistered Monkey</span></p>
+<p class="dateline"><a href="posts/a-random-walker/" rel="bookmark"><time class="published dt-published" datetime="2023-05-09T13:07:44-07:00" itemprop="datePublished" title="2023-05-09 13:07">2023-05-09 13:07</time></a></p>
+</div>
+</header>
+<div class="p-summary entry-summary">
+<p>
+<script language="javascript" src="posts/a-random-walker/walker.js" type="text/javascript"></script>
+<script language="javascript" src="posts/a-random-walker/sketch.js" type="text/javascript"></script></p>
+<div id="random-walker-sketch"></div>
+<p>This is a look at the <a href="https://thecodingtrain.com/tracks/the-nature-of-code-2/noc/1-vectors/1-what-is-a-vector">What Is A Vector</a> lesson on The Coding Train, part of the Nature of Code series. I'm going to create an object that takes a random walk. It's used in the series to show how to use vectors instead of object properties (e.g. maintaining and updating <code>this.x</code> and <code>this.y</code>) to hold the position of an object on the canvas.</p>
+<div class="outline-2" id="outline-container-org24f3249">
+<h2 id="org24f3249">The Walker</h2>
+<div class="outline-text-2" id="text-org24f3249">
+<p>First up is a Walker class that keeps track of its position on the canvas, updates the position, and draws itself. I'm thinking that drawing itself doesn't seem right, but I suppose since we're only creating one object moving the drawing outside of the class is more work than what's needed.</p>
+</div>
+<div class="outline-3" id="outline-container-org4e39910">
+<h3 id="org4e39910">The Constructor</h3>
+<div class="outline-text-3" id="text-org4e39910">
+<div class="highlight">
+<pre><span></span><span class="cm">/** The Random Walker */</span>
+<span class="kd">class</span><span class="w"> </span><span class="nx">Walker</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="cm">/** Create the walker</span>
+<span class="cm">   * @param {integer}: x - x-coordinate</span>
+<span class="cm">   * @param {integer}: y - y-coordinate</span>
+<span class="cm">   * @param {number}: limit - minimum and maximum for the random</span>
+<span class="cm">   * @param {integer}: p5 - p5 instance</span>
+
+<span class="cm">   * As a side effect uses x and y to create `this.position`, a vector</span>
+<span class="cm">   */</span>
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="p">,</span><span class="w"> </span><span class="nx">limit</span><span class="p">,</span><span class="w"> </span><span class="nx">p5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">p5</span><span class="p">.</span><span class="nx">createVector</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="p">);</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">limit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">limit</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">p5</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="c1">// end constructor</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org70f9b4b">
+<h3 id="org70f9b4b">The Step Property</h3>
+<div class="outline-text-3" id="text-org70f9b4b">
+<p>In the Coding Train video he increments the coordinates of the position vector separately, but since this is supposed to be about vectors I thought it should add another vector. This one was a little bit of a head-scratcher at first, though. <code>p5</code> will make a two-dimensional vector for you with the x and y values set to some random value from -1 to 1 (it's a unit vector set to a random angle) using <a href="https://p5js.org/reference/#/p5.Vector/random2D">p5.Vector.random2D</a>. But the <code>p5</code> we need to use isn't our <code>p5</code> but rather the global p5 object. The <code>p5</code> instance we hold doesn't have the <code>Vector</code> class definition, for some reason (which is why you need to use <code>createVector</code> I guess).</p>
+<p>Since the random values are from -1 to 1 I'm multiplying it by a user-specified integer to get a bigger step.</p>
+<div class="highlight">
+<pre><span></span><span class="cm">/** The next random step</span>
+<span class="cm">    @returns: p5.Vector</span>
+<span class="cm">*/</span>
+<span class="nx">get</span><span class="w"> </span><span class="nx">next_step</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">p5</span><span class="p">.</span><span class="nx">Vector</span><span class="p">.</span><span class="nx">random2D</span><span class="p">().</span><span class="nx">mult</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">limit</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// end get next_step</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orgf6ce01b">
+<h3 id="orgf6ce01b">The Update Method</h3>
+<div class="outline-text-3" id="text-orgf6ce01b">
+<p>It would have been nice if p5 vectors could be added using operators, but instead we need to use the <code>add</code> method. Weirdly, <a href="https://p5js.org/reference/#/p5.Vector/add">the Vector.add documentation</a> doesn't cover the case where you pass a vector to another vector's <code>add</code> method, only the cases where you're adding the arguments separately, adding an array of values, or adding two vectors using the <code>p5.Vector.add</code> static method. It appears to do an in-place update, though, so I'll assume that that's what it does.</p>
+<div class="highlight">
+<pre><span></span><span class="cm">/** Add the ~next_step~ vector to the ~position~ vector, updating in-place */</span>
+<span class="nx">update</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">next_step</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// end update</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orgb88b450">
+<h3 id="orgb88b450">The Show Method</h3>
+<div class="outline-text-3" id="text-orgb88b450">
+<p>This is where the walker draws itself. Even though we're using a vector to hold the position, you still need to unpack the coordinates when calling the <code>point</code> method.</p>
+<div class="highlight">
+<pre><span></span><span class="cm">/** Draw the position as a point */</span>
+<span class="nx">show</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">stroke</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="w"> </span><span class="mf">100</span><span class="p">);</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">strokeWeight</span><span class="p">(</span><span class="mf">5</span><span class="p">);</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">point</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="c1">// end show</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orga020e9e">
+<h3 id="orga020e9e">Move and Show</h3>
+<div class="outline-text-3" id="text-orga020e9e">
+<p>Not really needed, but I'd rather make one function call for the user to move the walker and have it draw itself.</p>
+<div class="highlight">
+<pre><span></span><span class="cm">/**Convenience method to call ~update~ and ~show~ */</span>
+<span class="nx">move_and_show</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">update</span><span class="p">();</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// end move_and_show</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org52117f6">
+<h2 id="org52117f6">The Sketch</h2>
+<div class="outline-text-2" id="text-org52117f6">
+<p>Now the sketch. It seems a little awkward, but since the Walker definition is in a separate file from the sketch definition we need to remember add a <code>script</code> tag to the HTML for both of them. I guess you can think of that as the equivalent of an import, although it feels weird somehow.</p>
+</div>
+<div class="outline-3" id="outline-container-org2847ab4">
+<h3 id="org2847ab4">Some Constants</h3>
+<div class="outline-text-3" id="text-org2847ab4">
+<div class="highlight">
+<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">WALKER_SKETCH_DIV</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"random-walker-sketch"</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">HEIGHT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">400</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">STEP_LIMIT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">WHITE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">255</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org1b1d14a">
+<h3 id="org1b1d14a">The Sketch Function</h3>
+<div class="outline-text-3" id="text-org1b1d14a">
+<p>Nothing fancy here, we're just declaring the function and the <code>walker</code> variable to hold our Walker object.</p>
+<div class="highlight">
+<pre><span></span><span class="cm">/** Sketch of a Random Walk */</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">random_walk</span><span class="p">(</span><span class="nx">p5js</span><span class="p">){</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">walker</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org38822b3">
+<h3 id="org38822b3">Set Up</h3>
+<div class="outline-text-3" id="text-org38822b3">
+<p>Set up the sketch by drawing the canvas and creating a Walker.</p>
+<div class="highlight">
+<pre><span></span><span class="cm">/** Initial setup of the canvas and Walker */</span>
+<span class="nx">p5js</span><span class="p">.</span><span class="nx">setup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">p5js</span><span class="p">.</span><span class="nx">createCanvas</span><span class="p">(</span>
+<span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">WALKER_SKETCH_DIV</span><span class="p">).</span><span class="nx">offsetWidth</span><span class="p">,</span><span class="w"> </span><span class="nx">HEIGHT</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">walker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Walker</span><span class="p">(</span><span class="nx">p5js</span><span class="p">.</span><span class="nx">width</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">p5js</span><span class="p">.</span><span class="nx">height</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">STEP_LIMIT</span><span class="p">,</span><span class="w"> </span><span class="nx">p5js</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">p5js</span><span class="p">.</span><span class="nx">background</span><span class="p">(</span><span class="nx">WHITE</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// end seutp</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org338bf05">
+<h3 id="org338bf05">Draw</h3>
+<div class="outline-text-3" id="text-org338bf05">
+<p>Our <code>draw</code> function defers to the walker to do everything.</p>
+<div class="highlight">
+<pre><span></span><span class="cm">/** Draw a frame */</span>
+<span class="nx">p5js</span><span class="p">.</span><span class="nx">draw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">walker</span><span class="p">.</span><span class="nx">move_and_show</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="c1">// end draw</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgb3fcdec">
+<h2 id="orgb3fcdec">The End</h2>
+<div class="outline-text-2" id="text-orgb3fcdec">
+<p>And there it is. One thing to note is that there's no checking of the position to see if it's wandered off the canvas so it's possible that it will wander completely off and updates won't be visible.</p>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orge28177b">
+<h2 id="orge28177b">Sources</h2>
+<div class="outline-text-2" id="text-orge28177b"></div>
+<div class="outline-3" id="outline-container-org27e2c84">
+<h3 id="org27e2c84">The Coding Train</h3>
+<div class="outline-text-3" id="text-org27e2c84">
+<ul class="org-ul">
+<li>1.1 What is a Vector? [Internet]. [cited 2023 May 9]. Available from: <a href="https://thecodingtrain.com">https://thecodingtrain.com</a></li>
+</ul>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org96a1414">
+<h3 id="org96a1414">P5 Reference</h3>
+<div class="outline-text-3" id="text-org96a1414">
+<ul class="org-ul">
+<li>reference | createVector() [Internet]. [cited 2023 May 9]. Available from: <a href="https://p5js.org/reference/#/p5/createVector">https://p5js.org/reference/#/p5/createVector</a></li>
+<li>reference | p5.Vector [Internet]. [cited 2023 May 9]. Available from: <a href="https://p5js.org/reference/#/p5.Vector">https://p5js.org/reference/#/p5.Vector</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article">
+<header>
+<h1 class="p-name entry-title"><a class="u-url" href="posts/graphing-p5-noise/">Graphing P5 Noise</a></h1>
+<div class="metadata">
+<p class="byline author vcard"><span class="byline-name fn" itemprop="author">Cloistered Monkey</span></p>
+<p class="dateline"><a href="posts/graphing-p5-noise/" rel="bookmark"><time class="published dt-published" datetime="2023-04-24T11:47:11-07:00" itemprop="datePublished" title="2023-04-24 11:47">2023-04-24 11:47</time></a></p>
+</div>
+</header>
+<div class="p-summary entry-summary">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="posts/graphing-p5-noise/#orgb7b288a">What Is This About?</a></li>
+<li><a href="posts/graphing-p5-noise/#orgc7b2554">Setup The Sketch</a>
+<ul>
+<li><a href="posts/graphing-p5-noise/#org8bf8024">Name The Parent DIV</a></li>
+<li><a href="posts/graphing-p5-noise/#org26f227f">The Instance Container Function</a></li>
+</ul>
+</li>
+<li><a href="posts/graphing-p5-noise/#orgac585d5">Constants and Variables</a>
+<ul>
+<li><a href="posts/graphing-p5-noise/#org9486ebe">The Noise Space</a></li>
+<li><a href="posts/graphing-p5-noise/#orgdf9996a">The Slider</a></li>
+<li><a href="posts/graphing-p5-noise/#orgbb53782">Colors</a></li>
+</ul>
+</li>
+<li><a href="posts/graphing-p5-noise/#org3d63047">Setup</a>
+<ul>
+<li><a href="posts/graphing-p5-noise/#org2fa2801">Canvas and Line</a></li>
+<li><a href="posts/graphing-p5-noise/#org69bb72f">Slider</a></li>
+</ul>
+</li>
+<li><a href="posts/graphing-p5-noise/#orgeb3257f">Draw</a>
+<ul>
+<li><a href="posts/graphing-p5-noise/#org7ce1895">The Draw Function</a></li>
+<li><a href="posts/graphing-p5-noise/#org3f26503">Setup The Next Frame</a></li>
+<li><a href="posts/graphing-p5-noise/#org470116b">Plot Next Frame</a></li>
+<li><a href="posts/graphing-p5-noise/#org4c8ff79">Move the Noise Input</a></li>
+<li><a href="posts/graphing-p5-noise/#org9f3967b">Once Again But As a Picture</a></li>
+</ul>
+</li>
+<li><a href="posts/graphing-p5-noise/#org38c0685">Make The Sketch Object</a></li>
+<li><a href="posts/graphing-p5-noise/#orgbf28997">And That's It, Then</a></li>
+<li><a href="posts/graphing-p5-noise/#org75e65bb">Sources</a></li>
+</ul>
+</div>
+</div>
+<script language="javascript" src="posts/graphing-p5-noise/noise_graph.js" type="text/javascript"></script>
+<div id="noise-graph"></div>
+<p>The slider controls how big a step the graph takes along the <code>noise</code> space with each move to the right along the x-axis (moving the slider to the right makes the steps bigger so the line looks noisier).</p>
+<div class="outline-2" id="outline-container-orgb7b288a">
+<h2 id="orgb7b288a">What Is This About?</h2>
+<div class="outline-text-2" id="text-orgb7b288a">
+<p>The plot is a visualization of the p5.js <a href="https://p5js.org/reference/#/p5/noise">noise</a> function. I got the idea for it from <a href="https://thecodingtrain.com/tracks/the-nature-of-code-2/noc/perlin/graphing-1d-perlin-noise">the Coding Train</a> but the author of that site explains it by talking about it in a video so I thought I'd re-do it so I can understand what the code is doing a little better. The <a href="https://p5js.org/reference/#/p5/noise">p5 documentation</a> and the <b>Coding Train</b> both describe the <code>noise</code> function as producing <a href="https://en.wikipedia.org/w/index.php?title=Perlin_noise&amp;oldid=1148235423">Perlin noise</a>, and Dan Shiffman (the <b>Coding Train</b> author) even goes on to point out that it's the original version of perlin noise from 1983 and in a later video he shows how to implement <a href="https://en.wikipedia.org/w/index.php?title=Simplex_noise&amp;oldid=1103667712">Simplex Noise</a>, an improved version created by Ken Perlin, the author of the original Perlin Noise. On the github site for Processing, however, there are two issues that claim that processing's <code>noise</code> isn't really <i>perlin</i> noise but rather a form of <a href="https://en.wikipedia.org/w/index.php?title=Value_noise&amp;oldid=1024311499">Value Noise</a>.</p>
+<p>I don't know enough to know what's right, so I'll just call it noise or p5's noise and not worry about which it is.</p>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgc7b2554">
+<h2 id="orgc7b2554">Setup The Sketch</h2>
+<div class="outline-text-2" id="text-orgc7b2554">
+<p>Now on to the code. This first section isn't really about plotting the graph but rather about setting up the P5 sketch in the HTML.</p>
+</div>
+<div class="outline-3" id="outline-container-org8bf8024">
+<h3 id="org8bf8024">Name The Parent DIV</h3>
+<div class="outline-text-3" id="text-org8bf8024">
+<p>We're making a <code>div</code> to stick the sketch into the page so here's the ID we'll use for that <code>div</code> so the code can refer to it.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">NOISE_GRAPH_DIV</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"noise-graph"</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org26f227f">
+<h3 id="org26f227f">The Instance Container Function</h3>
+<div class="outline-text-3" id="text-org26f227f">
+<p>To keep all the variables for the sketch contained in its scope we're going to use a function (<code>noise_graph</code>) to act as a closure.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">noise_graph</span><span class="p">(</span><span class="nx">p5js</span><span class="p">){</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgac585d5">
+<h2 id="orgac585d5">Constants and Variables</h2>
+<div class="outline-text-2" id="text-orgac585d5">
+<p>Now we're into the p5 sketch code (contained within <code>noise_graph</code>). Before defining the <code>setup</code> and <code>draw</code> methods let's define some variables that we can use within them.</p>
+</div>
+<div class="outline-3" id="outline-container-org9486ebe">
+<h3 id="org9486ebe">The Noise Space</h3>
+<div class="outline-text-3" id="text-org9486ebe">
+<p>The inputs to the <code>noise</code> function are what we'll call the <code>X_NOISE_COORDINATE</code> (or variations on that name, anyway). Every time the canvas gets re-drawn we'll re-draw the graph by putting in a sequence of x-values starting at <code>STARTING_X_NOISE_COORDINATE</code> and incrementing it by <code>X_NOISE_COORDINATE_STEP_SIZE</code> as we move along the x-axis of the canvas.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">X_NOISE_COORDINATE_START</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">X_NOISE_COORDINATE_STEP_SIZE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.01</span><span class="p">;</span>
+</pre></div>
+<p>The <code>X_NOISE_COORDINATE_STEP_SIZE</code> is sort of a re-mapping or re-proportioning of the x-value we use to draw the points for the <code>noise</code> function. The p5 canvas uses integers for the pixel coordinates so as we move across the canvas the x-coordinates are non-negative integers - \(0, 1, 2, \ldots, width - 1\). The <code>noise</code> function, on the other hand, works best with much smaller changes. If you use increments of 1 the output will look pretty much random, while our default of 0.01 will make our plot appear smoother and also show that each point falls reasonably close to the point that just precedes it. So as the x input to the <code>vertex</code> function goes up \(0, 1, 2, \ldots\) we'll increment the input to the <code>noise</code> function as \(0 \times 0.01 = 0, 1 \times 0.01 = 0.01, 2 \times 0.01 = 0.02, \ldots\).</p>
+<p><i>But</i> the <code>noise</code> function is, well, a function. If you keep passing in the same value to it you'll get the same value out of it so if we just use a scaled value of the x-coordinate (\(x \times x_{noise-coordinate-step-size}\)) as our input then every time p5 re-draws the sketch it will draw the same graph, producing what looks like a static image. In order to get an animated image we'll add an initial value to the noise input (<code>NOISE-COORDINATE-START</code>) that we'll increment every time we re-start the plot so that the <code>noise</code> function starts with a different value each time we re-draw the graph. So instead of \(x \times x_{noise-coordinate-step-size}\) we use \(x_{noise-coordinate-start} + x \times x_{noise-coordinate-step-size}\) as the input to the <code>noise</code> function.</p>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orgdf9996a">
+<h3 id="orgdf9996a">The Slider</h3>
+<div class="outline-text-3" id="text-orgdf9996a">
+<p>These are some variables so we can add a slider to allow the user to change the step-size to increment the noise input. The slider step size of 0 means that there will be a continuous change in the value as the slider is moved, as opposed to giving it discrete values to jump to.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">MINIMUM_NOISE_COORDINATE_STEP_SIZE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">MAXIMUM_NOISE_COORDINATE_STEP_SIZE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">SLIDER_WIDTH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"500px"</span><span class="p">;</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">slider</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">DEFAULT_NOISE_COORDINATE_STEP_SIZE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">X_NOISE_COORDINATE_STEP_SIZE</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">SLIDER_STEP_SIZE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orgbb53782">
+<h3 id="orgbb53782">Colors</h3>
+<div class="outline-text-3" id="text-orgbb53782">
+<p>These are the color settings for the plot.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">BLACK</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">WHITE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">255</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">OPACITY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">20</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">LINE_COLOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">BLACK</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">BACKGROUND_COLOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">WHITE</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org3d63047">
+<h2 id="org3d63047">Setup</h2>
+<div class="outline-text-2" id="text-org3d63047">
+<p>Now we'll monkey-patch the <code>setup</code> function that gets called once at the start of the animation.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">p5js</span><span class="p">.</span><span class="nx">setup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</pre></div>
+</div>
+<div class="outline-3" id="outline-container-org2fa2801">
+<h3 id="org2fa2801">Canvas and Line</h3>
+<div class="outline-text-3" id="text-org2fa2801">
+<p>The only possibly not-so-obvious thing here should be the <code>document.getElementById(NOISE_GRAPH_DIV).offsetWidth</code> argument to the <code>createCanvas</code> method which grabs the width of the container in which the plot is being put (not the width of the entire window).</p>
+<div class="highlight">
+<pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">canvas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">p5js</span><span class="p">.</span><span class="nx">createCanvas</span><span class="p">(</span>
+<span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">NOISE_GRAPH_DIV</span><span class="p">).</span><span class="nx">offsetWidth</span><span class="p">,</span><span class="w"> </span><span class="mf">400</span><span class="p">);</span>
+<span class="nx">p5js</span><span class="p">.</span><span class="nx">stroke</span><span class="p">(</span><span class="nx">LINE_COLOR</span><span class="p">);</span>
+<span class="nx">p5js</span><span class="p">.</span><span class="nx">noFill</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org69bb72f">
+<h3 id="org69bb72f">Slider</h3>
+<div class="outline-text-3" id="text-org69bb72f">
+<p>Now we'll create the slider to let the user play with the step-size for the noise input.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">slider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">p5js</span><span class="p">.</span><span class="nx">createSlider</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">MINIMUM_NOISE_COORDINATE_STEP_SIZE</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">MAXIMUM_NOISE_COORDINATE_STEP_SIZE</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">DEFAULT_NOISE_COORDINATE_STEP_SIZE</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">SLIDER_STEP_SIZE</span><span class="p">);</span>
+<span class="nx">slider</span><span class="p">.</span><span class="nx">style</span><span class="p">(</span><span class="s2">"width"</span><span class="p">,</span><span class="w"> </span><span class="nx">SLIDER_WIDTH</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgeb3257f">
+<h2 id="orgeb3257f">Draw</h2>
+<div class="outline-text-2" id="text-orgeb3257f">
+<p>Here's where we define the <code>draw</code> function that gets called repeatedly to animate our sketch.</p>
+</div>
+<div class="outline-3" id="outline-container-org7ce1895">
+<h3 id="org7ce1895">The Draw Function</h3>
+<div class="outline-text-3" id="text-org7ce1895">
+<p>Monkey patch the <code>draw</code> method on the <code>p5</code> object.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">p5js</span><span class="p">.</span><span class="nx">draw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org3f26503">
+<h3 id="org3f26503">Setup The Next Frame</h3>
+<div class="outline-text-3" id="text-org3f26503">
+<p>We'll paint the canvas with a semi-opaque white on every refresh so that you can sort of see how the graph changes with each loop. We also create some variables:</p>
+<ul class="org-ul">
+<li><code>noise_step_size</code> is the amount that the <code>x_noise-coordinate</code> changes as the plot moves from left to right along the x-axis of the graph</li>
+<li><code>y</code> will be the y-coordinate for the points in our plot</li>
+</ul>
+<div class="highlight">
+<pre><span></span><span class="nx">p5js</span><span class="p">.</span><span class="nx">background</span><span class="p">(</span><span class="nx">BACKGROUND_COLOR</span><span class="p">,</span><span class="w"> </span><span class="nx">OPACITY</span><span class="p">);</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">noise_step_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">slider</span><span class="p">.</span><span class="nx">value</span><span class="p">();</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">y</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org470116b">
+<h3 id="org470116b">Plot Next Frame</h3>
+<div class="outline-text-3" id="text-org470116b">
+<p>Here's where we plot the graph. We're going to draw the graph using connected line segments so before the loop starts we'll tell p5 to start the shape.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">p5js</span><span class="p">.</span><span class="nx">beginShape</span><span class="p">();</span>
+</pre></div>
+<p>To draw the graph we'll traverse the canvas from left to right with a for-loop. The <code>x</code> variable in the for-loop corresponds to the x-coordinate in the canvas where we're going to put the next point in our line.</p>
+<div class="highlight">
+<pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">p5js</span><span class="p">.</span><span class="nx">width</span><span class="p">;</span><span class="w"> </span><span class="nx">x</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</pre></div>
+<p>Now we'll get the y-coordinate for the point. Since the <code>noise</code> function's output is a float from 0 to 1 we can use it to set the y-coordinate to a fraction of the canvas' height by multiplying \(noise \times height\).</p>
+<div class="highlight">
+<pre><span></span><span class="nx">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">p5js</span><span class="p">.</span><span class="nx">noise</span><span class="p">(</span><span class="nx">X_NOISE_COORDINATE_START</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">noise_step_size</span><span class="p">)</span>
+<span class="w">  </span><span class="o">*</span><span class="w"> </span><span class="nx">p5js</span><span class="p">.</span><span class="nx">height</span><span class="p">;</span>
+</pre></div>
+<p>Now that we have the x and y coordinates we can draw the next segment by adding a vertex to the shape.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">p5js</span><span class="p">.</span><span class="nx">vertex</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="p">);</span>
+</pre></div>
+<p>That's the end of the for-loop. Now, outside of the loop we call <code>endShape</code> to stop drawing our graph (otherwise it'd draw a line back to the start of the graph the next time we went through the loop).</p>
+<div class="highlight">
+<pre><span></span><span class="nx">p5js</span><span class="p">.</span><span class="nx">endShape</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org4c8ff79">
+<h3 id="org4c8ff79">Move the Noise Input</h3>
+<div class="outline-text-3" id="text-org4c8ff79">
+<p>Now we'll move the input for the noise function at the start of the graph a little. If we didn't the input to the noise function as we went through the loop would always be the same so our plot would just draw the same thing over and over again (well, if we move the slider to change the <code>noise_step_size</code> it wouldn't be exactly the same, but the starting point would always be the same).</p>
+<div class="highlight">
+<pre><span></span><span class="nx">X_NOISE_COORDINATE_START</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">noise_step_size</span><span class="p">;</span>
+</pre></div>
+<p>I'm not showing the closing braces (<code>}</code>) to end the functions but at this point we close the <code>draw</code> and <code>noise_graph</code> functions, ending our definitions for the sketch.</p>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org9f3967b">
+<h3 id="org9f3967b">Once Again But As a Picture</h3>
+<div class="outline-text-3" id="text-org9f3967b">
+<p><img alt="for-loop-diagram" src="posts/graphing-p5-noise/noise-for-loop-1250.webp"></p>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org38c0685">
+<h2 id="org38c0685">Make The Sketch Object</h2>
+<div class="outline-text-2" id="text-org38c0685">
+<p>Next we pass our sketch definition to <code>p5</code> to build it and attach it to our HTML div.</p>
+<div class="highlight">
+<pre><span></span><span class="ow">new</span><span class="w"> </span><span class="nx">p5</span><span class="p">(</span><span class="nx">noise_graph</span><span class="p">,</span><span class="w"> </span><span class="nx">NOISE_GRAPH_DIV</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgbf28997">
+<h2 id="orgbf28997">And That's It, Then</h2>
+<div class="outline-text-2" id="text-orgbf28997">
+<p>At this point we should have a graph that helps to visualize how the <code>noise</code> function changes over one-dimension. Noise to the aside, it's also a useful template for plotting any kind of graph, you'd just have to change the setting of the <code>y</code> value to whatever other function you want to visualize.</p>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org75e65bb">
+<h2 id="org75e65bb">Sources</h2>
+<div class="outline-text-2" id="text-org75e65bb">
+<p>P5 Reference:</p>
+<ul class="org-ul">
+<li>reference | noise() [Internet]. [cited 2023 Apr 25]. Available from: <a href="https://p5js.org/reference/#/p5/noise">https://p5js.org/reference/#/p5/noise</a></li>
+<li>reference | beginShape() [Internet]. [cited 2023 Apr 25]. Available from: <a href="https://p5js.org/reference/#/p5/beginShape">https://p5js.org/reference/#/p5/beginShape</a></li>
+<li>reference | vertex() [Internet]. [cited 2023 Apr 25]. Available from: <a href="https://p5js.org/reference/#/p5/vertex">https://p5js.org/reference/#/p5/vertex</a></li>
+<li>reference | createSlider() [Internet]. [cited 2023 Apr 25]. Available from: <a href="https://p5js.org/reference/#/p5/createSlider">https://p5js.org/reference/#/p5/createSlider</a></li>
+</ul>
+<p>Wikipedia on Noise:</p>
+<ul class="org-ul">
+<li>Perlin noise. In: Wikipedia [Internet]. 2023 [cited 2023 Apr 24]. Available from: <a href="https://en.wikipedia.org/w/index.php?title=Perlin_noise&amp;oldid=1148235423">https://en.wikipedia.org/w/index.php?title=Perlin_noise&amp;oldid=1148235423</a></li>
+<li>Simplex noise. In: Wikipedia [Internet]. 2022 [cited 2023 Apr 26]. Available from: <a href="https://en.wikipedia.org/w/index.php?title=Simplex_noise&amp;oldid=1103667712">https://en.wikipedia.org/w/index.php?title=Simplex_noise&amp;oldid=1103667712</a></li>
+<li>Value noise. In: Wikipedia [Internet]. 2021 [cited 2023 Apr 26]. Available from: <a href="https://en.wikipedia.org/w/index.php?title=Value_noise&amp;oldid=1024311499">https://en.wikipedia.org/w/index.php?title=Value_noise&amp;oldid=1024311499</a></li>
+</ul>
+<p>The original javascript came from Daniel Shiffman's Coding Train:</p>
+<ul class="org-ul">
+<li>I.4: Graphing 1D Perlin Noise [Internet]. [cited 2023 Apr 24]. Available from: <a href="https://thecodingtrain.com/tracks/the-nature-of-code-2/noc/perlin/graphing-1d-perlin-noise">https://thecodingtrain.com/tracks/the-nature-of-code-2/noc/perlin/graphing-1d-perlin-noise</a></li>
+</ul>
+<p>Bugs on the (now deprecated) github processing <b>Issues</b> page pointing out that <code>noise</code> isn't really <i>perlin</i> noise:</p>
+<ul class="org-ul">
+<li>Real Perlin noise would be nice · Issue #2549 · processing/processing · GitHub [Internet]. [cited 2023 Apr 24]. Available from: <a href="https://github.com/processing/processing/issues/2549">https://github.com/processing/processing/issues/2549</a></li>
+<li>Documentation for noise() · Issue #2550 · processing/processing [Internet]. GitHub. [cited 2023 Apr 24]. Available from: <a href="https://github.com/processing/processing/issues/2550">https://github.com/processing/processing/issues/2550</a></li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article">
+<header>
 <h1 class="p-name entry-title"><a class="u-url" href="posts/bubba-test/">Bubba Test</a></h1>
 <div class="metadata">
 <p class="byline author vcard"><span class="byline-name fn" itemprop="author">Cloistered Monkey</span></p>
@@ -62,9 +514,9 @@
 </div>
 </header>
 <div class="p-summary entry-summary">
-<div class="outline-2" id="outline-container-orgbcad24d">
-<h2 id="orgbcad24d">Big Bubba</h2>
-<div class="outline-text-2" id="text-orgbcad24d">
+<div class="outline-2" id="outline-container-org5175ef8">
+<h2 id="org5175ef8">Big Bubba</h2>
+<div class="outline-text-2" id="text-org5175ef8">
 <p>This is a webp image converted from a 600 dpi scanned image that was converted to grayscale using gimp.</p>
 <ul class="org-ul">
 <li>Original scanned png: 12 Megabytes</li>
@@ -74,9 +526,9 @@
 <p><img alt="600 ppi image" src="posts/bubba-test/bubba_001_big.webp"></p>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org0e42e62">
-<h2 id="org0e42e62">Smaller Bubba</h2>
-<div class="outline-text-2" id="text-org0e42e62">
+<div class="outline-2" id="outline-container-orge61d6d8">
+<h2 id="orge61d6d8">Smaller Bubba</h2>
+<div class="outline-text-2" id="text-orge61d6d8">
 <p>This is the same image but scaled down to a width of 2,500 pixels.</p>
 <ul class="org-ul">
 <li>Scaled PNG: 501 Kilobytes</li>
@@ -85,25 +537,145 @@
 <p><img alt="2,500 Pixel Width" src="posts/bubba-test/bubba_001_small.webp"></p>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orge2bcfc3">
-<h2 id="orge2bcfc3">Hosted On PCloud</h2>
-<div class="outline-text-2" id="text-orge2bcfc3">
+<div class="outline-2" id="outline-container-orgbddcbdf">
+<h2 id="orgbddcbdf">Hosted On PCloud</h2>
+<div class="outline-text-2" id="text-orgbddcbdf">
 <p>This is the smaller image hosted on pcloud instead of as part of this repository. To do this you need to go to put the image in the pCloud "Public Folder" and then go to the pcloud website to get the URL. The "Link For Websites" they give you is an anchor so you can download the image (or whatever file you're sharing, so you need to grap the URL and put it in an <code>img</code> tag instead).</p>
 <img src="https://filedn.com/lKA05W1iHns4eTWccSVfpum/bubba-sort/bubba_001_small.webp"></div>
 </div>
-<div class="outline-2" id="outline-container-org4524674">
-<h2 id="org4524674">Conclusion</h2>
-<div class="outline-text-2" id="text-org4524674">
+<div class="outline-2" id="outline-container-org13bb64d">
+<h2 id="org13bb64d">Conclusion</h2>
+<div class="outline-text-2" id="text-org13bb64d">
 <p>The intention here was to figure out either what size to make the image so that it won't eat up my GitHub quota or to see how well putting it on pCloud would work. This particular image might not have been the best test for this, though, as the file size endede up being small enough that worrying about using an external image host is maybe not worth the time spent thinking about it. But I'll keep testing as I make the images more complex and perhaps at some point it will make sense to use an external host. In the mean time, using the bigger file didn't really improve the image so at least I know that using 2,500 pixels for the width is good enough.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article">
+<header>
+<h1 class="p-name entry-title"><a class="u-url" href="posts/grisaille-perspective-study/">Grisaille Perspective Study</a></h1>
+<div class="metadata">
+<p class="byline author vcard"><span class="byline-name fn" itemprop="author">Cloistered Monkey</span></p>
+<p class="dateline"><a href="posts/grisaille-perspective-study/" rel="bookmark"><time class="published dt-published" datetime="2021-03-21T23:14:23-07:00" itemprop="datePublished" title="2021-03-21 23:14">2021-03-21 23:14</time></a></p>
+</div>
+</header>
+<div class="p-summary entry-summary">
+<p><a class="image-reference" href="images/grisaille-perspective.webp"><img src="images/grisaille-perspective.thumbnail.webp"></a></p>
+<p>A small sketch with satin-glaze over a yellow-ochre ground. It kept the yellow-ochre from being picked up by the black and white watercolor but then they didn't behave quite like I was expecting.</p>
+</div>
+</article>
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article">
+<header>
+<h1 class="p-name entry-title"><a class="u-url" href="posts/cow-man/">Cow Man</a></h1>
+<div class="metadata">
+<p class="byline author vcard"><span class="byline-name fn" itemprop="author">Cloistered Monkey</span></p>
+<p class="dateline"><a href="posts/cow-man/" rel="bookmark"><time class="published dt-published" datetime="2021-03-05T19:03:27-08:00" itemprop="datePublished" title="2021-03-05 19:03">2021-03-05 19:03</time></a></p>
+</div>
+</header>
+<div class="p-summary entry-summary">
+<div class="outline-2" id="outline-container-org342673e">
+<h2 id="org342673e">The Cow Man</h2>
+<div class="outline-text-2" id="text-org342673e">
+<p><a class="image-reference" href="images/cow-man.webp"><img alt="The Cow Man" src="images/cow-man.thumbnail.webp"></a></p>
+</div>
+</div>
+</div>
+</article>
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article">
+<header>
+<h1 class="p-name entry-title"><a class="u-url" href="posts/devil-leaves-horrible/">Devil Leaves Horrible</a></h1>
+<div class="metadata">
+<p class="byline author vcard"><span class="byline-name fn" itemprop="author">Cloistered Monkey</span></p>
+<p class="dateline"><a href="posts/devil-leaves-horrible/" rel="bookmark"><time class="published dt-published" datetime="2021-03-05T18:42:15-08:00" itemprop="datePublished" title="2021-03-05 18:42">2021-03-05 18:42</time></a></p>
+</div>
+</header>
+<div class="p-summary entry-summary">
+<p><a class="image-reference" href="images/devil-leaves-horrible.webp"><img alt="Devil At the Airport" src="images/devil-leaves-horrible.thumbnail.webp"></a></p>
+</div>
+</article>
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article">
+<header>
+<h1 class="p-name entry-title"><a class="u-url" href="posts/hooded/">Hooded</a></h1>
+<div class="metadata">
+<p class="byline author vcard"><span class="byline-name fn" itemprop="author">Cloistered Monkey</span></p>
+<p class="dateline"><a href="posts/hooded/" rel="bookmark"><time class="published dt-published" datetime="2021-03-05T18:42:15-08:00" itemprop="datePublished" title="2021-03-05 18:42">2021-03-05 18:42</time></a></p>
+</div>
+</header>
+<div class="p-summary entry-summary">
+<p><a class="image-reference" href="images/hooded.webp"><img alt="Hooded" src="images/hooded.thumbnail.webp"></a></p>
+<p>An experiment using white kraft paper. Maybe I'll stick to brown.</p>
+</div>
+</article>
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article">
+<header>
+<h1 class="p-name entry-title"><a class="u-url" href="posts/dog-man/">Dog Man</a></h1>
+<div class="metadata">
+<p class="byline author vcard"><span class="byline-name fn" itemprop="author">Cloistered Monkey</span></p>
+<p class="dateline"><a href="posts/dog-man/" rel="bookmark"><time class="published dt-published" datetime="2021-03-05T18:03:27-08:00" itemprop="datePublished" title="2021-03-05 18:03">2021-03-05 18:03</time></a></p>
+</div>
+</header>
+<div class="p-summary entry-summary">
+<p><a class="image-reference" href="images/dog-man.webp"><img alt="Dog Man" src="images/dog-man.thumbnail.webp"></a></p>
+</div>
+</article>
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article">
+<header>
+<h1 class="p-name entry-title"><a class="u-url" href="posts/line-walk-one/">Line Walk One</a></h1>
+<div class="metadata">
+<p class="byline author vcard"><span class="byline-name fn" itemprop="author">Cloistered Monkey</span></p>
+<p class="dateline"><a href="posts/line-walk-one/" rel="bookmark"><time class="published dt-published" datetime="2021-02-16T21:00:29-08:00" itemprop="datePublished" title="2021-02-16 21:00">2021-02-16 21:00</time></a></p>
+</div>
+</header>
+<div class="p-summary entry-summary">
+<p><a class="image-reference" href="images/line-walk-1.webp"><img alt="Line Walk" src="images/line-walk-1.thumbnail.webp"></a></p>
+<p>No meaning, just taking a line for a walk.</p>
+</div>
+</article>
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article">
+<header>
+<h1 class="p-name entry-title"><a class="u-url" href="posts/bag-man/">Bag Man</a></h1>
+<div class="metadata">
+<p class="byline author vcard"><span class="byline-name fn" itemprop="author">Cloistered Monkey</span></p>
+<p class="dateline"><a href="posts/bag-man/" rel="bookmark"><time class="published dt-published" datetime="2021-02-11T18:03:27-08:00" itemprop="datePublished" title="2021-02-11 18:03">2021-02-11 18:03</time></a></p>
+</div>
+</header>
+<div class="p-summary entry-summary">
+<div class="outline-2" id="outline-container-org692023c">
+<h2 id="org692023c">The Bag Man</h2>
+<div class="outline-text-2" id="text-org692023c">
+<p>This post was created to see what happens in the slideshow if you put all the image files in the <code>images</code> folder without sub-folders, it's a companion to the <a href="posts/image-testing/">Image Testing</a> post.</p>
+<p><a class="image-reference" href="images/bag-man.webp"><img alt="Bag-Man With Purse-Dog" src="images/bag-man.thumbnail.webp"></a></p>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org39f46a3">
+<h2 id="org39f46a3">The Bag Man Without Thumbnails</h2>
+<div class="outline-text-2" id="text-org39f46a3">
+<p>If you want to just display the image they recommend you put it in the <code>files</code> folder, but you can still reference it in the images folder too, but you need to be aware of the fact that the folder path has to change. This org-reference:</p>
+<pre class="example" id="org0d93db7">
+[[img-url:../../images/bag-man.webp]]
+</pre>
+<p>Will include this (full-sized) image (<b>note:</b> The path to the images folder is based on where the post is, if the post was in a subfolder you'd have to go up three directories, not two).</p>
+<p alt="Bag Man Big" class="reference"><img alt="nil" src="images/bag-man.webp"></p>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org26e5a14">
+<h2 id="org26e5a14">Bag-Man Re-Crafted</h2>
+<div class="outline-text-2" id="text-org26e5a14">
+<p>This was a tracing of the bag man onto kraft paper to mess around with gouache.</p>
+<p><a class="image-reference" href="images/bag-man-kraft.webp"><img alt="Bag-Man &amp; Purse-Dog On Kraft Paper" src="images/bag-man-kraft.thumbnail.webp"></a></p>
 </div>
 </div>
 </div>
 </article>
 </div>
 <ul class="pager postindexpager clearfix">
-<li class="next"><a href="index-14.html" rel="next">Older posts</a></li>
+<li class="next"><a href="index-1.html" rel="next">Older posts</a></li>
 </ul>
-<!--End of body content-->
+<script crossorigin="anonymous" integrity="sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
+</script><!--End of body content-->
 <footer id="footer">Contents © 2023 Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a>
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a href="https://necromuralist.github.io/Ape-Iron/" property="dct:title" rel="cc:attributionURL">Ape Iron</a> by <a href="https://github.com/necromuralist" property="cc:attributionName" rel="cc:attributionURL dct:creator">The Cloistered Monkey</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" rel="license noopener noreferrer" style="display:inline-block;" target="_blank">CC BY 4.0<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"></a></p>
 </footer>

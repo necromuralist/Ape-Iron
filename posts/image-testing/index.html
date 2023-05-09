@@ -11,16 +11,7 @@
 <meta content="#5670d4" name="theme-color">
 <meta content="Nikola (getnikola.com)" name="generator">
 <link href="../../rss.xml" hreflang="en" rel="alternate" title="RSS" type="application/rss+xml">
-<link href="https://necromuralist.github.io/Ape-Iron/posts/image-testing/" rel="canonical"><!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]-->
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script><!--
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"
-</script>
-
-<script type="text/javascript" async
-  src="../../../assets/javascript/p5.min.js"
-</script>
---><!-- favicons -->
+<link href="https://necromuralist.github.io/Ape-Iron/posts/image-testing/" rel="canonical"><!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><!-- favicons -->
 <link href="../../apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
 <link href="../../favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
 <link href="../../favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
@@ -73,23 +64,23 @@
 </div>
 </header>
 <div class="e-content entry-content" itemprop="articleBody text">
-<div class="outline-2" id="outline-container-org9cd1d65">
-<h2 id="org9cd1d65">Thumbnail With Baguette Box</h2>
-<div class="outline-text-2" id="text-org9cd1d65">
+<div class="outline-2" id="outline-container-orgc0b1a0b">
+<h2 id="orgc0b1a0b">Thumbnail With Baguette Box</h2>
+<div class="outline-text-2" id="text-orgc0b1a0b">
 <p>This is a look at using an <a href="https://getnikola.com/handbook.html#embedding-images">embedded image</a> from the <code>images</code> folder. If you put the files in the <code>images</code> folder then it automatically creates thumbnails and a slide-show, but there's a little trick to getting the folder references right.</p>
 </div>
-<div class="outline-3" id="outline-container-orgc4aa039">
-<h3 id="orgc4aa039">HTML</h3>
-<div class="outline-text-3" id="text-orgc4aa039">
+<div class="outline-3" id="outline-container-org29c36c8">
+<h3 id="org29c36c8">HTML</h3>
+<div class="outline-text-3" id="text-org29c36c8">
 <p>If you use HTML you can just assume that the <code>images</code> folder is at the root of the site (make sure to set the class to "reference").</p>
-<pre class="example">
+<pre class="example" id="orgccabf2b">
 &lt;a class="reference" href="/images/eyeball-man.webp" alt="Eyeball Man"&gt;&lt;img src="/images/eyeball-man.thumbnail.webp"&gt;&lt;/a&gt;
 </pre>
 <a alt="Eyeball Man" class="reference" href="../../images/eyeball-man.webp"><img src="../../images/eyeball-man.thumbnail.webp"></a></div>
 </div>
-<div class="outline-3" id="outline-container-org8eedc77">
-<h3 id="org8eedc77">The Thumbnail Shortcode</h3>
-<div class="outline-text-3" id="text-org8eedc77">
+<div class="outline-3" id="outline-container-orgcd867cf">
+<h3 id="orgcd867cf">The Thumbnail Shortcode</h3>
+<div class="outline-text-3" id="text-orgcd867cf">
 <p>It took me a while to stumble upon this, but there is an <code>image</code> shortcode for those of us not using ReST (although it isn't directly linked to in the documentation for the ReST directive, from what I could tell). So if you want to do it the easier way:</p>
 <ul class="org-ul">
 <li>Put the original image in the <code>images</code> folder</li>
@@ -101,9 +92,9 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org281729f">
-<h2 id="org281729f">More Notes</h2>
-<div class="outline-text-2" id="text-org281729f">
+<div class="outline-2" id="outline-container-org21f38f2">
+<h2 id="org21f38f2">More Notes</h2>
+<div class="outline-text-2" id="text-org21f38f2">
 <ul class="org-ul">
 <li>The <code>alt</code> attribute adds a title to the images in the slide show</li>
 <li>Nikola builds the slideshow from all the images on the page. So if you only have one post open, it will show the post's images, but if you are in the blog-post index and there's more than one post shown, it will pick up the images from all the posts.</li>

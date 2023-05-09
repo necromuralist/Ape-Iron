@@ -11,16 +11,7 @@
 <meta content="#5670d4" name="theme-color">
 <meta content="Nikola (getnikola.com)" name="generator">
 <link href="../../rss.xml" hreflang="en" rel="alternate" title="RSS" type="application/rss+xml">
-<link href="https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/" rel="canonical"><!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]-->
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script><!--
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"
-</script>
-
-<script type="text/javascript" async
-  src="../../../assets/javascript/p5.min.js"
-</script>
---><!-- favicons -->
+<link href="https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/" rel="canonical"><!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><!-- favicons -->
 <link href="../../apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
 <link href="../../favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
 <link href="../../favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
@@ -75,35 +66,35 @@
 </div>
 </header>
 <div class="e-content entry-content" itemprop="articleBody text">
-<div id="table-of-contents">
+<div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents">
+<div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org1194192">Beginning</a>
+<li><a href="#org5334da0">Beginning</a>
 <ul>
-<li><a href="#orgd33125d">Set Up</a></li>
+<li><a href="#org33a5687">Set Up</a></li>
 </ul>
 </li>
-<li><a href="#org6c1a291">Middle</a>
+<li><a href="#orgb378d49">Middle</a>
 <ul>
-<li><a href="#org41c8fb1">Pulling the Table</a></li>
-<li><a href="#org90ad020">Cleaning Up the Table</a></li>
-<li><a href="#org4405080">Some Plotting</a></li>
+<li><a href="#orgbc9b2b6">Pulling the Table</a></li>
+<li><a href="#org2022cde">Cleaning Up the Table</a></li>
+<li><a href="#orgc15d8ab">Some Plotting</a></li>
 </ul>
 </li>
-<li><a href="#org868f69d">End</a></li>
+<li><a href="#org433c8d7">End</a></li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org1194192">
-<h2 id="org1194192">Beginning</h2>
-<div class="outline-text-2" id="text-org1194192"></div>
-<div class="outline-3" id="outline-container-orgd33125d">
-<h3 id="orgd33125d">Set Up</h3>
-<div class="outline-text-3" id="text-orgd33125d"></div>
-<div class="outline-4" id="outline-container-org38a16e7">
-<h4 id="org38a16e7">Imports</h4>
-<div class="outline-text-4" id="text-org38a16e7">
+<div class="outline-2" id="outline-container-org5334da0">
+<h2 id="org5334da0">Beginning</h2>
+<div class="outline-text-2" id="text-org5334da0"></div>
+<div class="outline-3" id="outline-container-org33a5687">
+<h3 id="org33a5687">Set Up</h3>
+<div class="outline-text-3" id="text-org33a5687"></div>
+<div class="outline-4" id="outline-container-org7a5b0ad">
+<h4 id="org7a5b0ad">Imports</h4>
+<div class="outline-text-4" id="text-org7a5b0ad">
 <div class="highlight">
 <pre><span></span><span class="c1"># python</span>
 <span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
@@ -117,9 +108,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgecb2666">
-<h4 id="orgecb2666">Plotting</h4>
-<div class="outline-text-4" id="text-orgecb2666">
+<div class="outline-4" id="outline-container-orgc0a78b0">
+<h4 id="orgc0a78b0">Plotting</h4>
+<div class="outline-text-4" id="text-orgc0a78b0">
 <div class="highlight">
 <pre><span></span><span class="n">SLUG</span> <span class="o">=</span> <span class="s2">"pulling-top-100-names"</span>
 <span class="n">Embed</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">EmbedHoloviews</span><span class="p">,</span> <span class="n">folder_path</span><span class="o">=</span><span class="sa">f</span><span class="s2">"files/posts/</span><span class="si">{</span><span class="n">SLUG</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
@@ -128,15 +119,15 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org6c1a291">
-<h2 id="org6c1a291">Middle</h2>
-<div class="outline-text-2" id="text-org6c1a291"></div>
-<div class="outline-3" id="outline-container-org41c8fb1">
-<h3 id="org41c8fb1">Pulling the Table</h3>
-<div class="outline-text-3" id="text-org41c8fb1"></div>
-<div class="outline-4" id="outline-container-org278233a">
-<h4 id="org278233a">Trying a Naive Request</h4>
-<div class="outline-text-4" id="text-org278233a">
+<div class="outline-2" id="outline-container-orgb378d49">
+<h2 id="orgb378d49">Middle</h2>
+<div class="outline-text-2" id="text-orgb378d49"></div>
+<div class="outline-3" id="outline-container-orgbc9b2b6">
+<h3 id="orgbc9b2b6">Pulling the Table</h3>
+<div class="outline-text-3" id="text-orgbc9b2b6"></div>
+<div class="outline-4" id="outline-container-org05e9948">
+<h4 id="org05e9948">Trying a Naive Request</h4>
+<div class="outline-text-4" id="text-org05e9948">
 <div class="highlight">
 <pre><span></span><span class="n">URL</span> <span class="o">=</span> <span class="s2">"https://www.ssa.gov/OACT/babynames/decades/century.html"</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span>
@@ -162,9 +153,9 @@
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org90ad020">
-<h3 id="org90ad020">Cleaning Up the Table</h3>
-<div class="outline-text-3" id="text-org90ad020">
+<div class="outline-3" id="outline-container-org2022cde">
+<h3 id="org2022cde">Cleaning Up the Table</h3>
+<div class="outline-text-3" id="text-org2022cde">
 <div class="highlight">
 <pre><span></span><span class="n">males</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">table</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]]</span>
 <span class="n">females</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">table</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">3</span><span class="p">:]]</span>
@@ -175,9 +166,9 @@
     Name   Number
 0  James  4764644
 </pre></div>
-<div class="outline-4" id="outline-container-org3858248">
-<h4 id="org3858248">The Last Row</h4>
-<div class="outline-text-4" id="text-org3858248">
+<div class="outline-4" id="outline-container-org6af0206">
+<h4 id="org6af0206">The Last Row</h4>
+<div class="outline-text-4" id="text-org6af0206">
 <div class="highlight">
 <pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">males</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
@@ -230,9 +221,9 @@ Source: 100% sample based on Social Security card application data as of of Marc
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org4405080">
-<h3 id="org4405080">Some Plotting</h3>
-<div class="outline-text-3" id="text-org4405080">
+<div class="outline-3" id="outline-container-orgc15d8ab">
+<h3 id="orgc15d8ab">Some Plotting</h3>
+<div class="outline-text-3" id="text-orgc15d8ab">
 <p>Before we can plot them we have to change the <code>count</code> column to be (you guessed it) a number since that last row with the source information prevents pandas' ability to convert the column itself.</p>
 <div class="highlight">
 <pre><span></span><span class="n">names</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s2">"count"</span><span class="p">]</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="s2">"count"</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
@@ -257,9 +248,9 @@ Source: 100% sample based on Social Security card application data as of of Marc
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org868f69d">
-<h2 id="org868f69d">End</h2>
-<div class="outline-text-2" id="text-org868f69d">
+<div class="outline-2" id="outline-container-org433c8d7">
+<h2 id="org433c8d7">End</h2>
+<div class="outline-text-2" id="text-org433c8d7">
 <p>Time to save the table.</p>
 <div class="highlight">
 <pre><span></span><span class="n">names</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">"apeiron/top_100_ssa_names.csv"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>

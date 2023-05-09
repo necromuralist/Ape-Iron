@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron (Posts about lists)</title><link>https://necromuralist.github.io/Ape-Iron/</link><description></description><atom:link href="https://necromuralist.github.io/Ape-Iron/categories/lists.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;Cloistered Monkey&lt;/a&gt; &lt;p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"&gt;&lt;a property="dct:title" rel="cc:attributionURL" href="https://necromuralist.github.io/Ape-Iron/"&gt;Ape Iron&lt;/a&gt; by &lt;a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/necromuralist"&gt;The Cloistered Monkey&lt;/a&gt; is licensed under &lt;a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY 4.0&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;&lt;/a&gt;&lt;/p&gt;</copyright><lastBuildDate>Wed, 15 Mar 2023 01:18:50 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Wikipedia List of Countries</title><link>https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron (Posts about lists)</title><link>https://necromuralist.github.io/Ape-Iron/</link><description></description><atom:link href="https://necromuralist.github.io/Ape-Iron/categories/lists.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;Cloistered Monkey&lt;/a&gt; &lt;p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"&gt;&lt;a property="dct:title" rel="cc:attributionURL" href="https://necromuralist.github.io/Ape-Iron/"&gt;Ape Iron&lt;/a&gt; by &lt;a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/necromuralist"&gt;The Cloistered Monkey&lt;/a&gt; is licensed under &lt;a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY 4.0&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;&lt;/a&gt;&lt;/p&gt;</copyright><lastBuildDate>Tue, 09 May 2023 20:04:55 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Wikipedia List of Countries</title><link>https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
-&lt;div id="text-table-of-contents"&gt;
+&lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/#org559da6b"&gt;Beginning&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/#orgf1a0f3f"&gt;Beginning&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/#org43b28a1"&gt;Set Up&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/#orgfaf79e8"&gt;Set Up&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/#org67b1637"&gt;Middle&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/#org7319cbe"&gt;Middle&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/#org3a11e1b"&gt;Grabbing Some HTML&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/#org64e3dcc"&gt;Plotting&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/#org2b6de15"&gt;Just the Population Table&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/#org62a86ff"&gt;Countries by Area&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/#orgb2b0c79"&gt;Grabbing Some HTML&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/#orgd6b8c2f"&gt;Plotting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/#orgc9a83a4"&gt;Just the Population Table&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/#org40f3f53"&gt;Countries by Area&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/#org848b5a8"&gt;Plotting Again&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/#orge37a384"&gt;Plotting Again&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/#orgd44b28f"&gt;By Area&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/#org53812fe"&gt;By Population&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/#org7f01492"&gt;By Density&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/#org271fd5a"&gt;By Area&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/#orgdc321d2"&gt;By Population&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/#org2db1491"&gt;By Density&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/#orgfe71480"&gt;End&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/#orgc682e6d"&gt;End&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org559da6b" class="outline-2"&gt;
-&lt;h2 id="org559da6b"&gt;Beginning&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org559da6b"&gt;
+&lt;div id="outline-container-orgf1a0f3f" class="outline-2"&gt;
+&lt;h2 id="orgf1a0f3f"&gt;Beginning&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgf1a0f3f"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org43b28a1" class="outline-3"&gt;
-&lt;h3 id="org43b28a1"&gt;Set Up&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org43b28a1"&gt;
+&lt;div id="outline-container-orgfaf79e8" class="outline-3"&gt;
+&lt;h3 id="orgfaf79e8"&gt;Set Up&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgfaf79e8"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org4834adf" class="outline-4"&gt;
-&lt;h4 id="org4834adf"&gt;Imports&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org4834adf"&gt;
+&lt;div id="outline-container-org3edb78b" class="outline-4"&gt;
+&lt;h4 id="org3edb78b"&gt;Imports&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org3edb78b"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# python&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;argparse&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Namespace&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;functools&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;partial&lt;/span&gt;
@@ -57,9 +57,9 @@
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org1d32a2a" class="outline-4"&gt;
-&lt;h4 id="org1d32a2a"&gt;Plotting&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org1d32a2a"&gt;
+&lt;div id="outline-container-orged855e8" class="outline-4"&gt;
+&lt;h4 id="orged855e8"&gt;Plotting&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orged855e8"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;SLUG&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"wikipedia-list-of-countries"&lt;/span&gt;
 &lt;span class="n"&gt;Embed&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;partial&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EmbedHoloviews&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;folder_path&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;"files/posts/&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;SLUG&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;Plot&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Namespace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
@@ -71,9 +71,9 @@
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org72215d6" class="outline-4"&gt;
-&lt;h4 id="org72215d6"&gt;Set Up Tabulate&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org72215d6"&gt;
+&lt;div id="outline-container-org45c02b5" class="outline-4"&gt;
+&lt;h4 id="org45c02b5"&gt;Set Up Tabulate&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org45c02b5"&gt;
 &lt;p&gt;
 This is just to make printing the pandas data-frames a little easier. &lt;a href="https://github.com/nnicandro/emacs-jupyter"&gt;emacs-jupyter&lt;/a&gt; actually does a pretty good job of rendering them as HTML like a regular jupyter notebook, but this makes it a little more readable while in emacs, plus I can control things better.
 &lt;/p&gt;
@@ -82,9 +82,9 @@ This is just to make printing the pandas data-frames a little easier. &lt;a href
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgb055b46" class="outline-4"&gt;
-&lt;h4 id="orgb055b46"&gt;Set Up Selenium&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgb055b46"&gt;
+&lt;div id="outline-container-orga9d431b" class="outline-4"&gt;
+&lt;h4 id="orga9d431b"&gt;Set Up Selenium&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orga9d431b"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;options&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;webdriver&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;FirefoxOptions&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;options&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;headless&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
 &lt;span class="n"&gt;browser&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;webdriver&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Firefox&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;firefox_options&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;options&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -93,17 +93,17 @@ This is just to make printing the pandas data-frames a little easier. &lt;a href
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org67b1637" class="outline-2"&gt;
-&lt;h2 id="org67b1637"&gt;Middle&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org67b1637"&gt;
+&lt;div id="outline-container-org7319cbe" class="outline-2"&gt;
+&lt;h2 id="org7319cbe"&gt;Middle&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org7319cbe"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org3a11e1b" class="outline-3"&gt;
-&lt;h3 id="org3a11e1b"&gt;Grabbing Some HTML&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org3a11e1b"&gt;
+&lt;div id="outline-container-orgb2b0c79" class="outline-3"&gt;
+&lt;h3 id="orgb2b0c79"&gt;Grabbing Some HTML&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgb2b0c79"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orga1ca208" class="outline-4"&gt;
-&lt;h4 id="orga1ca208"&gt;Build the Table&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orga1ca208"&gt;
+&lt;div id="outline-container-org05af6c8" class="outline-4"&gt;
+&lt;h4 id="org05af6c8"&gt;Build the Table&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org05af6c8"&gt;
 &lt;p&gt;
 The tables are created using javascript so we need to use Selenium (or something else that handles javascript) to get the page for us.
 &lt;/p&gt;
@@ -226,9 +226,9 @@ Now, I messed up the units for area and density, but I'm not good with the metri
 &lt;/div&gt;
 
 
-&lt;div id="outline-container-orgdbd2699" class="outline-4"&gt;
-&lt;h4 id="orgdbd2699"&gt;The Last Two Rows&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgdbd2699"&gt;
+&lt;div id="outline-container-org568d2ed" class="outline-4"&gt;
+&lt;h4 id="org568d2ed"&gt;The Last Two Rows&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org568d2ed"&gt;
 &lt;p&gt;
 I guess because the table is so long Wikipedia repeats the header at the bottom of the table.
 &lt;/p&gt;
@@ -371,16 +371,16 @@ So only the population is an integer (I'm assuming).
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org64e3dcc" class="outline-3"&gt;
-&lt;h3 id="org64e3dcc"&gt;Plotting&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org64e3dcc"&gt;
+&lt;div id="outline-container-orgd6b8c2f" class="outline-3"&gt;
+&lt;h3 id="orgd6b8c2f"&gt;Plotting&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgd6b8c2f"&gt;
 &lt;p&gt;
 This is just to take a look.
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org1d6acd7" class="outline-4"&gt;
-&lt;h4 id="org1d6acd7"&gt;By Area&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org1d6acd7"&gt;
+&lt;div id="outline-container-orga08c568" class="outline-4"&gt;
+&lt;h4 id="orga08c568"&gt;By Area&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orga08c568"&gt;
 &lt;p&gt;
 First I'll sort the table by area using &lt;a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.sort_values.html"&gt;sort_values&lt;/a&gt;.
 &lt;/p&gt;
@@ -495,8 +495,8 @@ dtype: object
 &lt;/pre&gt;
 
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;"Area Difference: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;world&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;area_cleaned&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;cleaned&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;area_cleaned&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="si"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;,.2f&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;"Population Difference: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;world&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;population&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;cleaned&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;population&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="si"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;,&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;"Area Difference: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;world&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;area_cleaned&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;cleaned&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;area_cleaned&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="si"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;,.2f&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;"Population Difference: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;world&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;population&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;cleaned&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;population&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="si"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;,&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;pre class="example"&gt;
@@ -512,9 +512,9 @@ So, it doesn't actually match the way I thought. I guess there are parts of the 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org2b6de15" class="outline-3"&gt;
-&lt;h3 id="org2b6de15"&gt;Just the Population Table&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org2b6de15"&gt;
+&lt;div id="outline-container-orgc9a83a4" class="outline-3"&gt;
+&lt;h3 id="orgc9a83a4"&gt;Just the Population Table&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgc9a83a4"&gt;
 &lt;p&gt;
 For some reason pandas is acting up here so I had to separate the building of the dataframe and re-running the code blocks a few times. It even said that pandas couldn't find html5lib, which is kind of weird since the earlier &lt;code&gt;read_html&lt;/code&gt; call worked…
 &lt;/p&gt;
@@ -577,8 +577,8 @@ Pandas doesn't seem to be able to handle the "% of world" column - probably beca
 &lt;/p&gt;
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;population_2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;by_population&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;population&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;world&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;population&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;population_2&lt;/span&gt;&lt;span class="si"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;,&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;cleaned&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;population&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;population_2&lt;/span&gt;&lt;span class="si"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;,&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;world&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;population&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;population_2&lt;/span&gt;&lt;span class="si"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;,&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;cleaned&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;population&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;population_2&lt;/span&gt;&lt;span class="si"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;,&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;pre class="example"&gt;
@@ -692,8 +692,8 @@ They copied the header here too, but pandas was able to parse the numbers (proba
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;population_2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;by_population&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;population&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;world&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;population&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;population_2&lt;/span&gt;&lt;span class="si"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;,&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;cleaned&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;population&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;population_2&lt;/span&gt;&lt;span class="si"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;,&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;world&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;population&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;population_2&lt;/span&gt;&lt;span class="si"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;,&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;cleaned&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;population&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;population_2&lt;/span&gt;&lt;span class="si"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;,&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;population_2&lt;/span&gt;&lt;span class="si"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;,&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -712,8 +712,8 @@ The second table is short too, but it still has more than the original table… 
 I think I'll see if making a combined table myself would be better. But first let's see what percentage of the population is missing.
 &lt;/p&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;"By Population Table: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;by_population&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Population&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;world_2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Population&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="si"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;0.2f&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt; %"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;"By Density Table: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cleaned&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Population&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;world_2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Population&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="si"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;0.2f&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt; %"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;"By Population Table: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;by_population&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Population&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;world_2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Population&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="si"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;0.2f&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt; %"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;"By Density Table: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cleaned&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Population&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;world_2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Population&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="si"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;0.2f&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt; %"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;pre class="example"&gt;
@@ -723,9 +723,9 @@ By Density Table: 97.84 %
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org62a86ff" class="outline-3"&gt;
-&lt;h3 id="org62a86ff"&gt;Countries by Area&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org62a86ff"&gt;
+&lt;div id="outline-container-org40f3f53" class="outline-3"&gt;
+&lt;h3 id="org40f3f53"&gt;Countries by Area&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org40f3f53"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;URL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"https://www.wikiwand.com/en/List_of_countries_and_dependencies_by_area"&lt;/span&gt;
 &lt;span class="n"&gt;browser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;URL&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -798,17 +798,17 @@ Okay, so now we have another problem in that all three sets have differing numbe
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org848b5a8" class="outline-2"&gt;
-&lt;h2 id="org848b5a8"&gt;Plotting Again&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org848b5a8"&gt;
+&lt;div id="outline-container-orge37a384" class="outline-2"&gt;
+&lt;h2 id="orge37a384"&gt;Plotting Again&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orge37a384"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgd44b28f" class="outline-3"&gt;
-&lt;h3 id="orgd44b28f"&gt;By Area&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgd44b28f"&gt;
+&lt;div id="outline-container-org271fd5a" class="outline-3"&gt;
+&lt;h3 id="org271fd5a"&gt;By Area&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org271fd5a"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgc239141" class="outline-4"&gt;
-&lt;h4 id="orgc239141"&gt;Biggest&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgc239141"&gt;
+&lt;div id="outline-container-org4cf7487" class="outline-4"&gt;
+&lt;h4 id="org4cf7487"&gt;Biggest&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org4cf7487"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;cleaned&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;cleaned&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sort_values&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;by&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;area_cleaned&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;subset&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;cleaned&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;iloc&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;:]&lt;/span&gt;
 &lt;span class="n"&gt;plot&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;subset&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hvplot&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;barh&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;country_cleaned&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;area_cleaned&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -837,17 +837,17 @@ Okay, so it looks like I forgot to clean out the note references in the country 
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgf48b52c" class="outline-4"&gt;
-&lt;h4 id="orgf48b52c"&gt;Getting Rid of the Notes&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgf48b52c"&gt;
+&lt;div id="outline-container-orgbc908bd" class="outline-4"&gt;
+&lt;h4 id="orgbc908bd"&gt;Getting Rid of the Notes&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgbc908bd"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;names&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;cleaned&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;country_cleaned&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;str&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"["&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;expand&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="n"&gt;cleaned&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;country_cleaned&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;names&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org4db6079" class="outline-4"&gt;
-&lt;h4 id="org4db6079"&gt;Smallest&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org4db6079"&gt;
+&lt;div id="outline-container-orgcc18624" class="outline-4"&gt;
+&lt;h4 id="orgcc18624"&gt;Smallest&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgcc18624"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;subset&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;cleaned&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sort_values&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;by&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;area_cleaned&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ascending&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;iloc&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;:]&lt;/span&gt;
 &lt;span class="n"&gt;plot&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;subset&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hvplot&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;barh&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;country_cleaned&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;area_cleaned&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;opts&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"Bottom Ten Countries by Area"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -869,13 +869,13 @@ Okay, so it looks like I forgot to clean out the note references in the country 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org53812fe" class="outline-3"&gt;
-&lt;h3 id="org53812fe"&gt;By Population&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org53812fe"&gt;
+&lt;div id="outline-container-orgdc321d2" class="outline-3"&gt;
+&lt;h3 id="orgdc321d2"&gt;By Population&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgdc321d2"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org29ec895" class="outline-4"&gt;
-&lt;h4 id="org29ec895"&gt;Most Populated&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org29ec895"&gt;
+&lt;div id="outline-container-org7345660" class="outline-4"&gt;
+&lt;h4 id="org7345660"&gt;Most Populated&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org7345660"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;subset&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;cleaned&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sort_values&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;by&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;population&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;iloc&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;:]&lt;/span&gt;
 &lt;span class="n"&gt;population_columns&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;area_cleaned&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 		      &lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;density_cleaned&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
@@ -905,9 +905,9 @@ I had encountered this list before, when reading &lt;i&gt;Memory Craft&lt;/i&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgb25443f" class="outline-4"&gt;
-&lt;h4 id="orgb25443f"&gt;Least Populous&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgb25443f"&gt;
+&lt;div id="outline-container-org896838c" class="outline-4"&gt;
+&lt;h4 id="org896838c"&gt;Least Populous&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org896838c"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;subset&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;cleaned&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sort_values&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;by&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;population&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ascending&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;iloc&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;:]&lt;/span&gt;
 &lt;span class="n"&gt;plot&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;subset&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hvplot&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;barh&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;country_cleaned&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;population&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 			  &lt;span class="n"&gt;hover_cols&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;population_columns&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;opts&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
@@ -930,13 +930,13 @@ I had encountered this list before, when reading &lt;i&gt;Memory Craft&lt;/i&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org7f01492" class="outline-3"&gt;
-&lt;h3 id="org7f01492"&gt;By Density&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org7f01492"&gt;
+&lt;div id="outline-container-org2db1491" class="outline-3"&gt;
+&lt;h3 id="org2db1491"&gt;By Density&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org2db1491"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org88a5e05" class="outline-4"&gt;
-&lt;h4 id="org88a5e05"&gt;Densest&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org88a5e05"&gt;
+&lt;div id="outline-container-org5a37648" class="outline-4"&gt;
+&lt;h4 id="org5a37648"&gt;Densest&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org5a37648"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;density_columns&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;population&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;area_cleaned&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="n"&gt;subset&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;cleaned&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sort_values&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;by&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;density_cleaned&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;iloc&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;:]&lt;/span&gt;
 &lt;span class="n"&gt;plot&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;subset&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hvplot&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;barh&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;country_cleaned&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;density_cleaned&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -963,9 +963,9 @@ It's sort of interesting that the two most dense countries are both known for th
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orge2a2d15" class="outline-4"&gt;
-&lt;h4 id="orge2a2d15"&gt;Sparsest&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orge2a2d15"&gt;
+&lt;div id="outline-container-orgbc1db2f" class="outline-4"&gt;
+&lt;h4 id="orgbc1db2f"&gt;Sparsest&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgbc1db2f"&gt;
 &lt;p&gt;
 First, because of the way I calculated Antarctica it currently has a negative number (-14) for density, which is a little odd so I'll set it to 0.
 &lt;/p&gt;
@@ -998,9 +998,9 @@ First, because of the way I calculated Antarctica it currently has a negative nu
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgfe71480" class="outline-2"&gt;
-&lt;h2 id="orgfe71480"&gt;End&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgfe71480"&gt;
+&lt;div id="outline-container-orgc682e6d" class="outline-2"&gt;
+&lt;h2 id="orgc682e6d"&gt;End&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgc682e6d"&gt;
 &lt;p&gt;
 Well, the point wasn't really just to look at the list (there is a Wikipedia page there already, after all) but to have something that I could mess with locally, so I'll save it now, but first I'll do a little more cleaning.
 &lt;/p&gt;
@@ -1039,38 +1039,38 @@ And now to save it.
 &lt;span class="n"&gt;cleaned&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="s2"&gt;"countries-by-area-population-density.csv"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><category>lists</category><category>scraping</category><category>wikipedia</category><guid>https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/</guid><pubDate>Sat, 19 Sep 2020 03:27:51 GMT</pubDate></item><item><title>Pulling Top Names From the Past 100 Years</title><link>https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents"&gt;
+&lt;/div&gt;</description><category>lists</category><category>scraping</category><category>wikipedia</category><guid>https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/</guid><pubDate>Sat, 19 Sep 2020 03:27:51 GMT</pubDate></item><item><title>Pulling Top Names From the Past 100 Years</title><link>https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
-&lt;div id="text-table-of-contents"&gt;
+&lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/#org1194192"&gt;Beginning&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/#org5334da0"&gt;Beginning&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/#orgd33125d"&gt;Set Up&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/#org33a5687"&gt;Set Up&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/#org6c1a291"&gt;Middle&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/#orgb378d49"&gt;Middle&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/#org41c8fb1"&gt;Pulling the Table&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/#org90ad020"&gt;Cleaning Up the Table&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/#org4405080"&gt;Some Plotting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/#orgbc9b2b6"&gt;Pulling the Table&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/#org2022cde"&gt;Cleaning Up the Table&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/#orgc15d8ab"&gt;Some Plotting&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/#org868f69d"&gt;End&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/#org433c8d7"&gt;End&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org1194192" class="outline-2"&gt;
-&lt;h2 id="org1194192"&gt;Beginning&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org1194192"&gt;
+&lt;div id="outline-container-org5334da0" class="outline-2"&gt;
+&lt;h2 id="org5334da0"&gt;Beginning&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org5334da0"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgd33125d" class="outline-3"&gt;
-&lt;h3 id="orgd33125d"&gt;Set Up&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgd33125d"&gt;
+&lt;div id="outline-container-org33a5687" class="outline-3"&gt;
+&lt;h3 id="org33a5687"&gt;Set Up&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org33a5687"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org38a16e7" class="outline-4"&gt;
-&lt;h4 id="org38a16e7"&gt;Imports&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org38a16e7"&gt;
+&lt;div id="outline-container-org7a5b0ad" class="outline-4"&gt;
+&lt;h4 id="org7a5b0ad"&gt;Imports&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org7a5b0ad"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# python&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;functools&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;partial&lt;/span&gt;
 
@@ -1083,9 +1083,9 @@ And now to save it.
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgecb2666" class="outline-4"&gt;
-&lt;h4 id="orgecb2666"&gt;Plotting&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgecb2666"&gt;
+&lt;div id="outline-container-orgc0a78b0" class="outline-4"&gt;
+&lt;h4 id="orgc0a78b0"&gt;Plotting&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgc0a78b0"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;SLUG&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"pulling-top-100-names"&lt;/span&gt;
 &lt;span class="n"&gt;Embed&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;partial&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EmbedHoloviews&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;folder_path&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;"files/posts/&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;SLUG&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -1093,17 +1093,17 @@ And now to save it.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org6c1a291" class="outline-2"&gt;
-&lt;h2 id="org6c1a291"&gt;Middle&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org6c1a291"&gt;
+&lt;div id="outline-container-orgb378d49" class="outline-2"&gt;
+&lt;h2 id="orgb378d49"&gt;Middle&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgb378d49"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org41c8fb1" class="outline-3"&gt;
-&lt;h3 id="org41c8fb1"&gt;Pulling the Table&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org41c8fb1"&gt;
+&lt;div id="outline-container-orgbc9b2b6" class="outline-3"&gt;
+&lt;h3 id="orgbc9b2b6"&gt;Pulling the Table&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgbc9b2b6"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org278233a" class="outline-4"&gt;
-&lt;h4 id="org278233a"&gt;Trying a Naive Request&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org278233a"&gt;
+&lt;div id="outline-container-org05e9948" class="outline-4"&gt;
+&lt;h4 id="org05e9948"&gt;Trying a Naive Request&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org05e9948"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;URL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"https://www.ssa.gov/OACT/babynames/decades/century.html"&lt;/span&gt;
 &lt;span class="n"&gt;response&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;requests&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;URL&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="n"&gt;response&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ok&lt;/span&gt;
@@ -1136,9 +1136,9 @@ So it looks like it's a plain table so we don't need Selenium or something else 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org90ad020" class="outline-3"&gt;
-&lt;h3 id="org90ad020"&gt;Cleaning Up the Table&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org90ad020"&gt;
+&lt;div id="outline-container-org2022cde" class="outline-3"&gt;
+&lt;h3 id="org2022cde"&gt;Cleaning Up the Table&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org2022cde"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;males&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;table&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;table&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;columns&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
 &lt;span class="n"&gt;females&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;table&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;table&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;columns&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;:]]&lt;/span&gt;
 &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;males&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
@@ -1151,9 +1151,9 @@ So it looks like it's a plain table so we don't need Selenium or something else 
 &lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org3858248" class="outline-4"&gt;
-&lt;h4 id="org3858248"&gt;The Last Row&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org3858248"&gt;
+&lt;div id="outline-container-org6af0206" class="outline-4"&gt;
+&lt;h4 id="org6af0206"&gt;The Last Row&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org6af0206"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;males&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;iloc&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -1222,9 +1222,9 @@ Now to re-combine them.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org4405080" class="outline-3"&gt;
-&lt;h3 id="org4405080"&gt;Some Plotting&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org4405080"&gt;
+&lt;div id="outline-container-orgc15d8ab" class="outline-3"&gt;
+&lt;h3 id="orgc15d8ab"&gt;Some Plotting&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgc15d8ab"&gt;
 &lt;p&gt;
 Before we can plot them we have to change the &lt;code&gt;count&lt;/code&gt; column to be (you guessed it) a number since that last row with the source information prevents pandas' ability to convert the column itself.
 &lt;/p&gt;
@@ -1255,9 +1255,9 @@ Well, pretend that you don't see the x-ticks… It's interesting that the highes
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org868f69d" class="outline-2"&gt;
-&lt;h2 id="org868f69d"&gt;End&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org868f69d"&gt;
+&lt;div id="outline-container-org433c8d7" class="outline-2"&gt;
+&lt;h2 id="org433c8d7"&gt;End&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org433c8d7"&gt;
 &lt;p&gt;
 Time to save the table.
 &lt;/p&gt;
@@ -1265,35 +1265,35 @@ Time to save the table.
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;names&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"apeiron/top_100_ssa_names.csv"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><category>lists</category><category>names</category><category>scraping</category><category>social security administration</category><guid>https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/</guid><pubDate>Wed, 19 Aug 2020 00:33:38 GMT</pubDate></item><item><title>Pulling Legendary Creatures From Wikipedia</title><link>https://necromuralist.github.io/Ape-Iron/posts/pulling-legendary-creatures-from-wikipedia/</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents"&gt;
+&lt;/div&gt;</description><category>lists</category><category>names</category><category>scraping</category><category>social security administration</category><guid>https://necromuralist.github.io/Ape-Iron/posts/pulling-top-100-names/</guid><pubDate>Wed, 19 Aug 2020 00:33:38 GMT</pubDate></item><item><title>Pulling Legendary Creatures From Wikipedia</title><link>https://necromuralist.github.io/Ape-Iron/posts/pulling-legendary-creatures-from-wikipedia/</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
-&lt;div id="text-table-of-contents"&gt;
+&lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-legendary-creatures-from-wikipedia/#orgff6b9ff"&gt;Beginning&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-legendary-creatures-from-wikipedia/#org6bd5eb7"&gt;Beginning&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-legendary-creatures-from-wikipedia/#org7a7c9ad"&gt;Set Up&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-legendary-creatures-from-wikipedia/#org01ca81c"&gt;Set Up&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-legendary-creatures-from-wikipedia/#orgf3f0eeb"&gt;Middle&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-legendary-creatures-from-wikipedia/#org84ba9bb"&gt;Middle&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-legendary-creatures-from-wikipedia/#orgf231636"&gt;Grab the Page and Make Some Soup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-legendary-creatures-from-wikipedia/#org07b2f2a"&gt;Grab the Page and Make Some Soup&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgff6b9ff" class="outline-2"&gt;
-&lt;h2 id="orgff6b9ff"&gt;Beginning&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgff6b9ff"&gt;
+&lt;div id="outline-container-org6bd5eb7" class="outline-2"&gt;
+&lt;h2 id="org6bd5eb7"&gt;Beginning&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org6bd5eb7"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org7a7c9ad" class="outline-3"&gt;
-&lt;h3 id="org7a7c9ad"&gt;Set Up&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org7a7c9ad"&gt;
+&lt;div id="outline-container-org01ca81c" class="outline-3"&gt;
+&lt;h3 id="org01ca81c"&gt;Set Up&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org01ca81c"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org0253916" class="outline-4"&gt;
-&lt;h4 id="org0253916"&gt;Imports&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org0253916"&gt;
+&lt;div id="outline-container-org5719b25" class="outline-4"&gt;
+&lt;h4 id="org5719b25"&gt;Imports&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org5719b25"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# python&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;argparse&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Namespace&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;functools&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;partial&lt;/span&gt;
@@ -1308,16 +1308,16 @@ Time to save the table.
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org12fc423" class="outline-4"&gt;
-&lt;h4 id="org12fc423"&gt;Tabulate&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org12fc423"&gt;
+&lt;div id="outline-container-orgd1481c0" class="outline-4"&gt;
+&lt;h4 id="orgd1481c0"&gt;Tabulate&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgd1481c0"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;TABLE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;partial&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tabulate&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;headers&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"keys"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;tablefmt&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"orgtbl"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;showindex&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org067317c" class="outline-4"&gt;
-&lt;h4 id="org067317c"&gt;Selenium&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org067317c"&gt;
+&lt;div id="outline-container-org5d7af4a" class="outline-4"&gt;
+&lt;h4 id="org5d7af4a"&gt;Selenium&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org5d7af4a"&gt;
 &lt;p&gt;
 I'll use a headless instance of selenium-firefox to grab and render the wikipedia page.
 &lt;/p&gt;
@@ -1329,13 +1329,13 @@ I'll use a headless instance of selenium-firefox to grab and render the wikipedi
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgf3f0eeb" class="outline-2"&gt;
-&lt;h2 id="orgf3f0eeb"&gt;Middle&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgf3f0eeb"&gt;
+&lt;div id="outline-container-org84ba9bb" class="outline-2"&gt;
+&lt;h2 id="org84ba9bb"&gt;Middle&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org84ba9bb"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgf231636" class="outline-3"&gt;
-&lt;h3 id="orgf231636"&gt;Grab the Page and Make Some Soup&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgf231636"&gt;
+&lt;div id="outline-container-org07b2f2a" class="outline-3"&gt;
+&lt;h3 id="org07b2f2a"&gt;Grab the Page and Make Some Soup&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org07b2f2a"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;URL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"https://en.wikipedia.org/wiki/List_of_legendary_creatures_by_type"&lt;/span&gt;
 
 &lt;span class="n"&gt;browser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;URL&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1349,9 +1349,9 @@ This page is a little odd in that it uses tables but the tables then contain uno
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org7c17a87" class="outline-4"&gt;
-&lt;h4 id="org7c17a87"&gt;Looking at the Headings&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org7c17a87"&gt;
+&lt;div id="outline-container-org31564b4" class="outline-4"&gt;
+&lt;h4 id="org31564b4"&gt;Looking at the Headings&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org31564b4"&gt;
 &lt;p&gt;
 The level-2 headlines describe different ways to catalog the creatures, in addition they have "span" tags within them that have the "mw-class" associated with them so we can grab those tags using Beautiful Soup's &lt;a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/#css-selectors"&gt;select&lt;/a&gt; method, which uses CSS selectors.
 &lt;/p&gt;
@@ -1387,9 +1387,9 @@ We don't need references, but the other headlines might be helpful in categorizi
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgc6063f9" class="outline-4"&gt;
-&lt;h4 id="orgc6063f9"&gt;Tables&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgc6063f9"&gt;
+&lt;div id="outline-container-org44f733a" class="outline-4"&gt;
+&lt;h4 id="org44f733a"&gt;Tables&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org44f733a"&gt;
 &lt;p&gt;
 I'll grab all the tables then filter out the ones I don't want - the first three tables are admonitions that the page might not be up to snuff and the last four are references and links to other pages.
 &lt;/p&gt;
@@ -1399,9 +1399,9 @@ I'll grab all the tables then filter out the ones I don't want - the first three
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgfb9d396" class="outline-4"&gt;
-&lt;h4 id="orgfb9d396"&gt;The Table-Indices&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgfb9d396"&gt;
+&lt;div id="outline-container-org8d9f8f5" class="outline-4"&gt;
+&lt;h4 id="org8d9f8f5"&gt;The Table-Indices&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org8d9f8f5"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Table&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Namespace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;aquatic&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="n"&gt;arthropods&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -1410,13 +1410,13 @@ I'll grab all the tables then filter out the ones I don't want - the first three
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org48e3903" class="outline-4"&gt;
-&lt;h4 id="org48e3903"&gt;Animals Associated With&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org48e3903"&gt;
+&lt;div id="outline-container-org9128f07" class="outline-4"&gt;
+&lt;h4 id="org9128f07"&gt;Animals Associated With&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org9128f07"&gt;
 &lt;/div&gt;
 &lt;ul class="org-ul"&gt;
-&lt;li&gt;&lt;a id="orgaea4675"&gt;&lt;/a&gt;Aquatic and Marine Animals&lt;br&gt;
-&lt;div class="outline-text-5" id="text-orgaea4675"&gt;
+&lt;li&gt;&lt;a id="orgfbee0b4"&gt;&lt;/a&gt;Aquatic and Marine Animals&lt;br&gt;
+&lt;div class="outline-text-5" id="text-orgfbee0b4"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;PATTERN&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"\w+"&lt;/span&gt;
 &lt;span class="n"&gt;WEIRD&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="se"&gt;\xa0&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
 &lt;span class="n"&gt;ERASE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;""&lt;/span&gt;
@@ -1512,8 +1512,8 @@ I'll grab all the tables then filter out the ones I don't want - the first three
 &lt;/li&gt;
 
 
-&lt;li&gt;&lt;a id="org6a0cc9f"&gt;&lt;/a&gt;Arthropods&lt;br&gt;
-&lt;div class="outline-text-5" id="text-org6a0cc9f"&gt;
+&lt;li&gt;&lt;a id="org2fa2358"&gt;&lt;/a&gt;Arthropods&lt;br&gt;
+&lt;div class="outline-text-5" id="text-org2fa2358"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;table&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tables&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Table&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;arthropods&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="n"&gt;animal&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
 &lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
@@ -1648,8 +1648,8 @@ I'll grab all the tables then filter out the ones I don't want - the first three
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a id="org722ba32"&gt;&lt;/a&gt;Bears&lt;br&gt;
-&lt;div class="outline-text-5" id="text-org722ba32"&gt;
+&lt;li&gt;&lt;a id="orge771068"&gt;&lt;/a&gt;Bears&lt;br&gt;
+&lt;div class="outline-text-5" id="text-orge771068"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;table&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tables&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Table&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bears&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="n"&gt;animal&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;description&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[],&lt;/span&gt; &lt;span class="p"&gt;[],&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
 &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;table&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;find_all&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"li"&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
@@ -1703,43 +1703,43 @@ I'll grab all the tables then filter out the ones I don't want - the first three
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><category>lists</category><category>scraping</category><category>wikipedia</category><guid>https://necromuralist.github.io/Ape-Iron/posts/pulling-legendary-creatures-from-wikipedia/</guid><pubDate>Thu, 06 Aug 2020 22:04:35 GMT</pubDate></item><item><title>Pulling A List of Animals From Wikipedia</title><link>https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents"&gt;
+&lt;/div&gt;</description><category>lists</category><category>scraping</category><category>wikipedia</category><guid>https://necromuralist.github.io/Ape-Iron/posts/pulling-legendary-creatures-from-wikipedia/</guid><pubDate>Thu, 06 Aug 2020 22:04:35 GMT</pubDate></item><item><title>Pulling A List of Animals From Wikipedia</title><link>https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
-&lt;div id="text-table-of-contents"&gt;
+&lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org6401ad7"&gt;Beginning&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#orgd11799d"&gt;Beginning&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org157536c"&gt;Set Up&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org078c464"&gt;Set Up&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#orgdff301e"&gt;Middle&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#orge649fde"&gt;Middle&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org829e3a6"&gt;Grabbing Some HTML&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org47fefa0"&gt;Building the Table&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#orgf53dedc"&gt;Cleaning Up the Table&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#orgf8eb8ac"&gt;Meats&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org5e8534d"&gt;Again, But With Soup This Time&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org34633ce"&gt;Grabbing Some HTML&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org2b0889a"&gt;Building the Table&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org3527939"&gt;Cleaning Up the Table&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#orgf43e2c6"&gt;Meats&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#orgc01f2d9"&gt;Again, But With Soup This Time&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org1000ea6"&gt;End&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/#org1ee1b0e"&gt;End&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org6401ad7" class="outline-2"&gt;
-&lt;h2 id="org6401ad7"&gt;Beginning&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org6401ad7"&gt;
+&lt;div id="outline-container-orgd11799d" class="outline-2"&gt;
+&lt;h2 id="orgd11799d"&gt;Beginning&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgd11799d"&gt;
 &lt;p&gt;
 As part of my pursuit of randomness I'm creating lists of things to select from. In this case I wanted a list of animals to create a &lt;i&gt;Visual Alphabet&lt;/i&gt; and I decided to grab one from wikipedia. This is what I did.
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org157536c" class="outline-3"&gt;
-&lt;h3 id="org157536c"&gt;Set Up&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org157536c"&gt;
+&lt;div id="outline-container-org078c464" class="outline-3"&gt;
+&lt;h3 id="org078c464"&gt;Set Up&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org078c464"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org2fe9365" class="outline-4"&gt;
-&lt;h4 id="org2fe9365"&gt;Imports&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org2fe9365"&gt;
+&lt;div id="outline-container-org3bfeb21" class="outline-4"&gt;
+&lt;h4 id="org3bfeb21"&gt;Imports&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org3bfeb21"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# python&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;functools&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;partial&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pathlib&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Path&lt;/span&gt;
@@ -1762,9 +1762,9 @@ As part of my pursuit of randomness I'm creating lists of things to select from.
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgd900a2b" class="outline-4"&gt;
-&lt;h4 id="orgd900a2b"&gt;Set Up Tabulate&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgd900a2b"&gt;
+&lt;div id="outline-container-org42546a9" class="outline-4"&gt;
+&lt;h4 id="org42546a9"&gt;Set Up Tabulate&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org42546a9"&gt;
 &lt;p&gt;
 This is just to make printing the pandas data-frames a little easier. &lt;a href="https://github.com/nnicandro/emacs-jupyter"&gt;emacs-jupyter&lt;/a&gt; actually does a pretty good job of rendering them as HTML like a regular jupyter notebook, but this makes it a little more readable while in emacs, plus I can control things better.
 &lt;/p&gt;
@@ -1773,9 +1773,9 @@ This is just to make printing the pandas data-frames a little easier. &lt;a href
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org0c4fa9f" class="outline-4"&gt;
-&lt;h4 id="org0c4fa9f"&gt;Set Up Selenium&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org0c4fa9f"&gt;
+&lt;div id="outline-container-org133e123" class="outline-4"&gt;
+&lt;h4 id="org133e123"&gt;Set Up Selenium&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org133e123"&gt;
 &lt;p&gt;
 I started this using Requests-HTML because wikipedia uses JQuery to render the tables and Requests-HTML it uses &lt;a href="https://pyppeteer.github.io/pyppeteer/index.html"&gt;pyppeteer&lt;/a&gt; to render javascript (as opposed to the reqular requests that just does an HTTP GET and so leaves the tables un-rendered). Unfortunately I can't get it to work in a jupyter notebook. One problem is that both jupyter and Requests-HTML use asyncio -  using &lt;a href="https://github.com/erdewit/nest_asyncio"&gt;nest_asyncio&lt;/a&gt; allows pypeteer to run in the notebook but then I get this error:
 &lt;/p&gt;
@@ -1795,13 +1795,13 @@ Which looks like it might be a pypeteer error, but tracking all this down is tak
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgdff301e" class="outline-2"&gt;
-&lt;h2 id="orgdff301e"&gt;Middle&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgdff301e"&gt;
+&lt;div id="outline-container-orge649fde" class="outline-2"&gt;
+&lt;h2 id="orge649fde"&gt;Middle&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orge649fde"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org829e3a6" class="outline-3"&gt;
-&lt;h3 id="org829e3a6"&gt;Grabbing Some HTML&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org829e3a6"&gt;
+&lt;div id="outline-container-org34633ce" class="outline-3"&gt;
+&lt;h3 id="org34633ce"&gt;Grabbing Some HTML&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org34633ce"&gt;
 &lt;p&gt;
 Just let selenium render the JQuery tables for us.
 &lt;/p&gt;
@@ -1812,9 +1812,9 @@ Just let selenium render the JQuery tables for us.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org47fefa0" class="outline-3"&gt;
-&lt;h3 id="org47fefa0"&gt;Building the Table&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org47fefa0"&gt;
+&lt;div id="outline-container-org2b0889a" class="outline-3"&gt;
+&lt;h3 id="org2b0889a"&gt;Building the Table&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org2b0889a"&gt;
 &lt;p&gt;
 After giving up on Requests-HTML I was using &lt;a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/#searching-the-tree"&gt;Beautiful Soup&lt;/a&gt; to pull out the table so I could give it to pandas, but then I looked at the pandas documentation and it turns out they already do this, so you don't need to, but you do need to know how many tables there are and which one you want (it returns a list of dataframes). In this case I want the last one. 
 &lt;/p&gt;
@@ -1870,9 +1870,9 @@ That's a little odd looking.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgf53dedc" class="outline-3"&gt;
-&lt;h3 id="orgf53dedc"&gt;Cleaning Up the Table&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgf53dedc"&gt;
+&lt;div id="outline-container-org3527939" class="outline-3"&gt;
+&lt;h3 id="org3527939"&gt;Cleaning Up the Table&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org3527939"&gt;
 &lt;p&gt;
 First, what's with all the &lt;code&gt;A&lt;/code&gt; entries in the header?
 &lt;/p&gt;
@@ -1954,9 +1954,9 @@ Index(['Animal', 'Young', 'Female', 'Male', 'Collective noun',
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgf8eb8ac" class="outline-3"&gt;
-&lt;h3 id="orgf8eb8ac"&gt;Meats&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgf8eb8ac"&gt;
+&lt;div id="outline-container-orgf43e2c6" class="outline-3"&gt;
+&lt;h3 id="orgf43e2c6"&gt;Meats&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgf43e2c6"&gt;
 &lt;p&gt;
 At this point I don't know what I really want to do with this. I was originally going to just save the animal names but now the other stuff looks kind of interesting. As an aside I had to look up &lt;a href="https://en.wikipedia.org/wiki/Collateral_adjective"&gt;Collateral Adjective&lt;/a&gt; on wikipedia:
 &lt;/p&gt;
@@ -2035,9 +2035,9 @@ Oops. Maybe I should have looked at the table more closely.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org5e8534d" class="outline-3"&gt;
-&lt;h3 id="org5e8534d"&gt;Again, But With Soup This Time&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org5e8534d"&gt;
+&lt;div id="outline-container-orgc01f2d9" class="outline-3"&gt;
+&lt;h3 id="orgc01f2d9"&gt;Again, But With Soup This Time&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgc01f2d9"&gt;
 &lt;p&gt;
 Let's see if using Beautiful Soup will help clean up the dataset a little.
 &lt;/p&gt;
@@ -2194,7 +2194,7 @@ There are twenty-four entries in our table that have a noun referring to the ani
     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Animal&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Meat&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;pre class="example"&gt;
+&lt;pre class="example" id="orgdf3c006"&gt;
 Cattle[note 3] (list): beef veal
 Chicken (list): poultry
 Deer: venison humble (organ meat)
@@ -2255,7 +2255,7 @@ So now there's another problem - there are footnotes and links that makes things
     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Animal&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Meat&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;pre class="example"&gt;
+&lt;pre class="example" id="org6c0fb58"&gt;
 Cattle  : beef veal
 Chicken : poultry
 Deer: venison humble (organ meat)
@@ -2362,7 +2362,7 @@ So that fixes the smashing together, time to get rid of the footnotes and links 
 &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;table&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loc&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;32&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;32&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;pre class="example"&gt;
+&lt;pre class="example" id="orgb3c08f0"&gt;
                    Animal     Young   Female  Male  \
 32  Cattle[note 3] (list)  calf[31]  cow[32]  bull   
 
@@ -2389,7 +2389,7 @@ And once again, the meats.
     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Animal&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Meat&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;pre class="example"&gt;
+&lt;pre class="example" id="orgfe376e1"&gt;
 Cattle  : beef veal
 Chicken : poultry
 Deer: venison humble (organ meat)
@@ -2436,7 +2436,7 @@ This isn't quite the nice set that I was hoping for, but, oh well. Maybe just on
     &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Animal&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Meat&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;pre class="example"&gt;
+&lt;pre class="example" id="org410202b"&gt;
 Cattle: beef veal
 Chicken: poultry
 Deer: venison humble (organ meat)
@@ -2466,9 +2466,9 @@ Whale: blubber
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org1000ea6" class="outline-2"&gt;
-&lt;h2 id="org1000ea6"&gt;End&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org1000ea6"&gt;
+&lt;div id="outline-container-org1ee1b0e" class="outline-2"&gt;
+&lt;h2 id="org1ee1b0e"&gt;End&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org1ee1b0e"&gt;
 &lt;p&gt;
 And now to save it for later.
 &lt;/p&gt;

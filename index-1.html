@@ -12,16 +12,7 @@
 <meta content="Nikola (getnikola.com)" name="generator">
 <link href="rss.xml" hreflang="en" rel="alternate" title="RSS" type="application/rss+xml">
 <link href="https://necromuralist.github.io/Ape-Iron/index-1.html" rel="canonical">
-<link href="index-2.html" rel="prev" type="text/html"><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]-->
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script><!--
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"
-</script>
-
-<script type="text/javascript" async
-  src="../../../assets/javascript/p5.min.js"
-</script>
---><!-- favicons -->
+<link href="." rel="prev" type="text/html"><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><!-- favicons -->
 <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
 <link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
 <link href="favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
@@ -54,6 +45,1557 @@
 <div class="postindex">
 <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article">
 <header>
+<h1 class="p-name entry-title"><a class="u-url" href="posts/image-testing/">Image Testing</a></h1>
+<div class="metadata">
+<p class="byline author vcard"><span class="byline-name fn" itemprop="author">Cloistered Monkey</span></p>
+<p class="dateline"><a href="posts/image-testing/" rel="bookmark"><time class="published dt-published" datetime="2021-02-11T17:03:44-08:00" itemprop="datePublished" title="2021-02-11 17:03">2021-02-11 17:03</time> <span class="updated">(updated <time class="dt-updated" datetime="2021-11-08T00:00:00-08:00" itemprop="dateUpdated" title="2021-11-08 00:00">2021-11-08 00:00</time>)</span></a></p>
+</div>
+</header>
+<div class="p-summary entry-summary">
+<div class="outline-2" id="outline-container-orgc0b1a0b">
+<h2 id="orgc0b1a0b">Thumbnail With Baguette Box</h2>
+<div class="outline-text-2" id="text-orgc0b1a0b">
+<p>This is a look at using an <a href="https://getnikola.com/handbook.html#embedding-images">embedded image</a> from the <code>images</code> folder. If you put the files in the <code>images</code> folder then it automatically creates thumbnails and a slide-show, but there's a little trick to getting the folder references right.</p>
+</div>
+<div class="outline-3" id="outline-container-org29c36c8">
+<h3 id="org29c36c8">HTML</h3>
+<div class="outline-text-3" id="text-org29c36c8">
+<p>If you use HTML you can just assume that the <code>images</code> folder is at the root of the site (make sure to set the class to "reference").</p>
+<pre class="example" id="orgccabf2b">
+&lt;a class="reference" href="/images/eyeball-man.webp" alt="Eyeball Man"&gt;&lt;img src="/images/eyeball-man.thumbnail.webp"&gt;&lt;/a&gt;
+</pre>
+<a alt="Eyeball Man" class="reference" href="images/eyeball-man.webp"><img src="images/eyeball-man.thumbnail.webp"></a></div>
+</div>
+<div class="outline-3" id="outline-container-orgcd867cf">
+<h3 id="orgcd867cf">The Thumbnail Shortcode</h3>
+<div class="outline-text-3" id="text-orgcd867cf">
+<p>It took me a while to stumble upon this, but there is an <code>image</code> shortcode for those of us not using ReST (although it isn't directly linked to in the documentation for the ReST directive, from what I could tell). So if you want to do it the easier way:</p>
+<ul class="org-ul">
+<li>Put the original image in the <code>images</code> folder</li>
+<li>use the shortcode:</li>
+</ul>
+<p>{{% thumbnail "/images/eyeball-man.webp" alt="Eyeball Man" title="Eyeball Man" %}}{{% /thumbnail %}}</p>
+<p>This will give you a thumbnail which will produce a pop-up to the original image when it's clicked. In this case the original pencil doodle was about the size of the end of my thumb so there's no real yount to the pop-up. I just used the image to have something to experiment with.</p>
+<p><a class="image-reference" href="images/eyeball-man.webp"><img alt="Eyeball Man" src="images/eyeball-man.thumbnail.webp"></a></p>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org21f38f2">
+<h2 id="org21f38f2">More Notes</h2>
+<div class="outline-text-2" id="text-org21f38f2">
+<ul class="org-ul">
+<li>The <code>alt</code> attribute adds a title to the images in the slide show</li>
+<li>Nikola builds the slideshow from all the images on the page. So if you only have one post open, it will show the post's images, but if you are in the blog-post index and there's more than one post shown, it will pick up the images from all the posts.</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article">
+<header>
+<h1 class="p-name entry-title"><a class="u-url" href="posts/making-comics/">Making Comics</a></h1>
+<div class="metadata">
+<p class="byline author vcard"><span class="byline-name fn" itemprop="author">Cloistered Monkey</span></p>
+<p class="dateline"><a href="posts/making-comics/" rel="bookmark"><time class="published dt-published" datetime="2020-09-20T18:17:42-07:00" itemprop="datePublished" title="2020-09-20 18:17">2020-09-20 18:17</time></a></p>
+</div>
+</header>
+<div class="p-summary entry-summary">
+<div class="outline-2" id="outline-container-org39bc604">
+<h2 id="org39bc604">Biblography</h2>
+<div class="outline-text-2" id="text-org39bc604">
+<ul class="org-ul">
+<li>Barry L. Making comics. Montreal, Quebec: Drawn & Quarterly; 2019. 198 p.</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article">
+<header>
+<h1 class="p-name entry-title"><a class="u-url" href="posts/wikipedia-list-of-countries/">Wikipedia List of Countries</a></h1>
+<div class="metadata">
+<p class="byline author vcard"><span class="byline-name fn" itemprop="author">Cloistered Monkey</span></p>
+<p class="dateline"><a href="posts/wikipedia-list-of-countries/" rel="bookmark"><time class="published dt-published" datetime="2020-09-18T20:27:51-07:00" itemprop="datePublished" title="2020-09-18 20:27">2020-09-18 20:27</time></a></p>
+</div>
+</header>
+<div class="p-summary entry-summary">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="posts/wikipedia-list-of-countries/#orgf1a0f3f">Beginning</a>
+<ul>
+<li><a href="posts/wikipedia-list-of-countries/#orgfaf79e8">Set Up</a></li>
+</ul>
+</li>
+<li><a href="posts/wikipedia-list-of-countries/#org7319cbe">Middle</a>
+<ul>
+<li><a href="posts/wikipedia-list-of-countries/#orgb2b0c79">Grabbing Some HTML</a></li>
+<li><a href="posts/wikipedia-list-of-countries/#orgd6b8c2f">Plotting</a></li>
+<li><a href="posts/wikipedia-list-of-countries/#orgc9a83a4">Just the Population Table</a></li>
+<li><a href="posts/wikipedia-list-of-countries/#org40f3f53">Countries by Area</a></li>
+</ul>
+</li>
+<li><a href="posts/wikipedia-list-of-countries/#orge37a384">Plotting Again</a>
+<ul>
+<li><a href="posts/wikipedia-list-of-countries/#org271fd5a">By Area</a></li>
+<li><a href="posts/wikipedia-list-of-countries/#orgdc321d2">By Population</a></li>
+<li><a href="posts/wikipedia-list-of-countries/#org2db1491">By Density</a></li>
+</ul>
+</li>
+<li><a href="posts/wikipedia-list-of-countries/#orgc682e6d">End</a></li>
+</ul>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgf1a0f3f">
+<h2 id="orgf1a0f3f">Beginning</h2>
+<div class="outline-text-2" id="text-orgf1a0f3f"></div>
+<div class="outline-3" id="outline-container-orgfaf79e8">
+<h3 id="orgfaf79e8">Set Up</h3>
+<div class="outline-text-3" id="text-orgfaf79e8"></div>
+<div class="outline-4" id="outline-container-org3edb78b">
+<h4 id="org3edb78b">Imports</h4>
+<div class="outline-text-4" id="text-org3edb78b">
+<div class="highlight">
+<pre><span></span><span class="c1"># python</span>
+<span class="kn">from</span> <span class="nn">argparse</span> <span class="kn">import</span> <span class="n">Namespace</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="c1"># pypi</span>
+<span class="kn">from</span> <span class="nn">bokeh.models</span> <span class="kn">import</span> <span class="n">HoverTool</span>
+<span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+<span class="kn">from</span> <span class="nn">tabulate</span> <span class="kn">import</span> <span class="n">tabulate</span>
+
+<span class="kn">import</span> <span class="nn">hvplot.pandas</span>
+<span class="kn">import</span> <span class="nn">pandas</span>
+
+<span class="c1"># others</span>
+<span class="kn">from</span> <span class="nn">graeae</span> <span class="kn">import</span> <span class="n">EmbedHoloviews</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-orged855e8">
+<h4 id="orged855e8">Plotting</h4>
+<div class="outline-text-4" id="text-orged855e8">
+<div class="highlight">
+<pre><span></span><span class="n">SLUG</span> <span class="o">=</span> <span class="s2">"wikipedia-list-of-countries"</span>
+<span class="n">Embed</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">EmbedHoloviews</span><span class="p">,</span> <span class="n">folder_path</span><span class="o">=</span><span class="sa">f</span><span class="s2">"files/posts/</span><span class="si">{</span><span class="n">SLUG</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="n">Plot</span> <span class="o">=</span> <span class="n">Namespace</span><span class="p">(</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">990</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">780</span><span class="p">,</span>
+    <span class="n">fontscale</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-org45c02b5">
+<h4 id="org45c02b5">Set Up Tabulate</h4>
+<div class="outline-text-4" id="text-org45c02b5">
+<p>This is just to make printing the pandas data-frames a little easier. <a href="https://github.com/nnicandro/emacs-jupyter">emacs-jupyter</a> actually does a pretty good job of rendering them as HTML like a regular jupyter notebook, but this makes it a little more readable while in emacs, plus I can control things better.</p>
+<div class="highlight">
+<pre><span></span><span class="n">TABLE</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">tabulate</span><span class="p">,</span> <span class="n">showindex</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">tablefmt</span><span class="o">=</span><span class="s2">"orgtbl"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="s2">"keys"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-orga9d431b">
+<h4 id="orga9d431b">Set Up Selenium</h4>
+<div class="outline-text-4" id="text-orga9d431b">
+<div class="highlight">
+<pre><span></span><span class="n">options</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">FirefoxOptions</span><span class="p">()</span>
+<span class="n">options</span><span class="o">.</span><span class="n">headless</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Firefox</span><span class="p">(</span><span class="n">firefox_options</span><span class="o">=</span><span class="n">options</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org7319cbe">
+<h2 id="org7319cbe">Middle</h2>
+<div class="outline-text-2" id="text-org7319cbe"></div>
+<div class="outline-3" id="outline-container-orgb2b0c79">
+<h3 id="orgb2b0c79">Grabbing Some HTML</h3>
+<div class="outline-text-3" id="text-orgb2b0c79"></div>
+<div class="outline-4" id="outline-container-org05af6c8">
+<h4 id="org05af6c8">Build the Table</h4>
+<div class="outline-text-4" id="text-org05af6c8">
+<p>The tables are created using javascript so we need to use Selenium (or something else that handles javascript) to get the page for us.</p>
+<div class="highlight">
+<pre><span></span><span class="n">URL</span> <span class="o">=</span> <span class="s2">"https://www.wikiwand.com/en/List_of_countries_and_dependencies_by_population_density"</span>
+<span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span>
+</pre></div>
+<p>Now we can let pandas convert the table to a data-frame. In this case there's multiple tables on the page but I only want the first one.</p>
+<div class="highlight">
+<pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="n">browser</span><span class="o">.</span><span class="n">page_source</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">TABLE</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)))</span>
+</pre></div>
+<pre class="example">
+| ('Rank', 'Rank')   | ('Country (or dependent territory)', 'Country (or dependent territory)')   |   ('Area', 'km2') |   ('Area', 'mi2') |   ('Population', 'Population') |   ('Density', 'pop./km2') |   ('Density', 'pop./mi2') | ('Date', 'Date')   | ('Population source', 'Population source')   |
+|--------------------+----------------------------------------------------------------------------+-------------------+-------------------+--------------------------------+---------------------------+---------------------------+--------------------+----------------------------------------------|
+| –                  | Macau (China)                                                              |             115.3 |                45 |                         696100 |                     21158 |                     54799 | September 30, 2019 | Official quarterly estimate                  |
+</pre>
+<p>That kind of worked but the column names are odd, and I don't want all of them anyway so I'll fix that.</p>
+<div class="highlight">
+<pre><span></span><span class="n">table</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">column</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">table</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">TABLE</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)))</span>
+</pre></div>
+<table border="2" cellpadding="6" cellspacing="0" frame="hsides" rules="groups">
+<colgroup>
+<col class="org-left">
+<col class="org-left">
+<col class="org-right">
+<col class="org-right">
+<col class="org-right">
+<col class="org-right">
+<col class="org-right">
+<col class="org-left">
+<col class="org-left"></colgroup>
+<thead>
+<tr>
+<th class="org-left" scope="col">Rank</th>
+<th class="org-left" scope="col">Country (or dependent territory)</th>
+<th class="org-right" scope="col">Area</th>
+<th class="org-right" scope="col">Area</th>
+<th class="org-right" scope="col">Population</th>
+<th class="org-right" scope="col">Density</th>
+<th class="org-right" scope="col">Density</th>
+<th class="org-left" scope="col">Date</th>
+<th class="org-left" scope="col">Population source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">–</td>
+<td class="org-left">Macau (China)</td>
+<td class="org-right">115.3</td>
+<td class="org-right">45</td>
+<td class="org-right">696100</td>
+<td class="org-right">21158</td>
+<td class="org-right">54799</td>
+<td class="org-left">September 30, 2019</td>
+<td class="org-left">Official quarterly estimate</td>
+</tr>
+</tbody>
+</table>
+<p>Now, I messed up the units for area and density, but I'm not good with the metric system and Density is a calculated column anyway, so maybe I should get rid of some columns to make it easier.</p>
+<div class="highlight">
+<pre><span></span><span class="n">Columns</span> <span class="o">=</span> <span class="n">Namespace</span><span class="p">(</span>
+    <span class="n">rank</span><span class="o">=</span><span class="s2">"Rank"</span><span class="p">,</span>
+    <span class="n">date</span><span class="o">=</span><span class="s2">"Date"</span><span class="p">,</span>
+    <span class="n">source</span><span class="o">=</span><span class="s2">"Population source"</span><span class="p">,</span>
+    <span class="n">area</span><span class="o">=</span><span class="s2">"Area (square miles)"</span><span class="p">,</span>
+    <span class="n">area_cleaned</span> <span class="o">=</span> <span class="s2">"Area"</span><span class="p">,</span>
+    <span class="n">density</span><span class="o">=</span><span class="s2">"Density (population/square miles)"</span><span class="p">,</span>
+    <span class="n">density_cleaned</span> <span class="o">=</span> <span class="s2">"Density"</span><span class="p">,</span>
+    <span class="n">country</span><span class="o">=</span><span class="s2">"Country (or dependent territory)"</span><span class="p">,</span>
+    <span class="n">country_cleaned</span> <span class="o">=</span> <span class="s2">"Country"</span><span class="p">,</span>
+    <span class="n">population</span><span class="o">=</span><span class="s2">"Population"</span><span class="p">,</span>
+    <span class="p">)</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="n">columns</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+
+<span class="n">columns</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"remove"</span>
+<span class="n">columns</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">Columns</span><span class="o">.</span><span class="n">area</span>
+<span class="n">columns</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"remove2"</span>
+<span class="n">columns</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="n">Columns</span><span class="o">.</span><span class="n">density</span>
+<span class="n">table</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">columns</span>
+
+<span class="k">del</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="s2">"remove"</span><span class="p">])</span>
+<span class="k">del</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="s2">"remove2"</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">TABLE</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)))</span>
+</pre></div>
+<pre class="example">
+| Rank   | Country (or dependent territory)   |   Area (square miles) |   Population |   Density (population/square miles) | Date               | Population source           |
+|--------+------------------------------------+-----------------------+--------------+-------------------------------------+--------------------+-----------------------------|
+| –      | Macau (China)                      |                    45 |       696100 |                               54799 | September 30, 2019 | Official quarterly estimate |
+</pre></div>
+</div>
+<div class="outline-4" id="outline-container-org568d2ed">
+<h4 id="org568d2ed">The Last Two Rows</h4>
+<div class="outline-text-4" id="text-org568d2ed">
+<p>I guess because the table is so long Wikipedia repeats the header at the bottom of the table.</p>
+<div class="highlight">
+<pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">TABLE</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]))</span>
+</pre></div>
+<table border="2" cellpadding="6" cellspacing="0" frame="hsides" rules="groups">
+<colgroup>
+<col class="org-left">
+<col class="org-left">
+<col class="org-left">
+<col class="org-left">
+<col class="org-left">
+<col class="org-left">
+<col class="org-left"></colgroup>
+<thead>
+<tr>
+<th class="org-left" scope="col">Rank</th>
+<th class="org-left" scope="col">Country (or dependent territory)</th>
+<th class="org-left" scope="col">Area (square miles)</th>
+<th class="org-left" scope="col">Population</th>
+<th class="org-left" scope="col">Density (population/square miles)</th>
+<th class="org-left" scope="col">Date</th>
+<th class="org-left" scope="col">Population source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Rank</td>
+<td class="org-left">Country (or dependent territory)</td>
+<td class="org-left">mi2</td>
+<td class="org-left">Population</td>
+<td class="org-left">pop./mi2</td>
+<td class="org-left">Date</td>
+<td class="org-left">Population source</td>
+</tr>
+<tr>
+<td class="org-left">Rank</td>
+<td class="org-left">Country (or dependent territory)</td>
+<td class="org-left">Area</td>
+<td class="org-left">Population</td>
+<td class="org-left">Density</td>
+<td class="org-left">Date</td>
+<td class="org-left">Population source</td>
+</tr>
+</tbody>
+</table>
+<p>So we have to remove them and also convert the numeric columns to numeric types since pandas had to render them all as objects (strings).</p>
+<div class="highlight">
+<pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">TABLE</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]))</span>
+</pre></div>
+<table border="2" cellpadding="6" cellspacing="0" frame="hsides" rules="groups">
+<colgroup>
+<col class="org-left">
+<col class="org-left">
+<col class="org-right">
+<col class="org-right">
+<col class="org-right">
+<col class="org-left">
+<col class="org-left"></colgroup>
+<thead>
+<tr>
+<th class="org-left" scope="col">Rank</th>
+<th class="org-left" scope="col">Country (or dependent territory)</th>
+<th class="org-right" scope="col">Area (square miles)</th>
+<th class="org-right" scope="col">Population</th>
+<th class="org-right" scope="col">Density (population/square miles)</th>
+<th class="org-left" scope="col">Date</th>
+<th class="org-left" scope="col">Population source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">–</td>
+<td class="org-left">Svalbard and Jan Mayen (Norway)</td>
+<td class="org-right">23706</td>
+<td class="org-right">2655</td>
+<td class="org-right">0.1</td>
+<td class="org-left">September 1, 2012</td>
+<td class="org-left">Official estimate</td>
+</tr>
+<tr>
+<td class="org-left">–</td>
+<td class="org-left">Greenland (Denmark)</td>
+<td class="org-right">836297</td>
+<td class="org-right">55877</td>
+<td class="org-right">0.08</td>
+<td class="org-left">January 1, 2018</td>
+<td class="org-left">Official estimate</td>
+</tr>
+</tbody>
+</table>
+<p>I'm guessing that there's no fractional populations, but if you look at the areas some of them are non-integers.</p>
+<div class="highlight">
+<pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">area</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+</pre></div>
+<pre class="example">
+0.19
+</pre>
+<p>So only the population is an integer (I'm assuming).</p>
+<div class="highlight">
+<pre><span></span><span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">area</span><span class="p">,</span> <span class="n">Columns</span><span class="o">.</span><span class="n">density</span><span class="p">]:</span>
+    <span class="n">table</span><span class="p">[</span><span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">table</span><span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">population</span><span class="p">]</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">population</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orgd6b8c2f">
+<h3 id="orgd6b8c2f">Plotting</h3>
+<div class="outline-text-3" id="text-orgd6b8c2f">
+<p>This is just to take a look.</p>
+</div>
+<div class="outline-4" id="outline-container-orga08c568">
+<h4 id="orga08c568">By Area</h4>
+<div class="outline-text-4" id="text-orga08c568">
+<p>First I'll sort the table by area using <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.sort_values.html">sort_values</a>.</p>
+<div class="highlight">
+<pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">area</span><span class="p">)</span>
+<span class="n">plotter</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span>
+    <span class="n">Columns</span><span class="o">.</span><span class="n">area</span><span class="p">:</span> <span class="n">Columns</span><span class="o">.</span><span class="n">area_cleaned</span><span class="p">,</span>
+    <span class="n">Columns</span><span class="o">.</span><span class="n">density</span><span class="p">:</span> <span class="n">Columns</span><span class="o">.</span><span class="n">density_cleaned</span><span class="p">,</span>
+    <span class="n">Columns</span><span class="o">.</span><span class="n">country</span><span class="p">:</span> <span class="n">Columns</span><span class="o">.</span><span class="n">country_cleaned</span><span class="p">,</span>
+<span class="p">})</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="n">country</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"@</span><span class="si">{</span><span class="n">Columns</span><span class="o">.</span><span class="n">country_cleaned</span><span class="si">}</span><span class="s2">"</span>
+<span class="n">population</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"@</span><span class="si">{</span><span class="n">Columns</span><span class="o">.</span><span class="n">population</span><span class="si">}</span><span class="se">{{</span><span class="s2">0,0</span><span class="se">}}</span><span class="s2">"</span>
+<span class="n">density</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"@</span><span class="se">{{</span><span class="si">{</span><span class="n">Columns</span><span class="o">.</span><span class="n">density_cleaned</span><span class="si">}</span><span class="se">}}</span><span class="s2">"</span>
+<span class="n">area</span> <span class="o">=</span>  <span class="sa">f</span><span class="s2">"@</span><span class="si">{</span><span class="n">Columns</span><span class="o">.</span><span class="n">area_cleaned</span><span class="si">}</span><span class="se">{{</span><span class="s2">0,0.00</span><span class="se">}}</span><span class="s2"> (Square Miles)"</span>
+<span class="n">hover</span> <span class="o">=</span> <span class="n">HoverTool</span><span class="p">(</span><span class="n">tooltips</span><span class="o">=</span><span class="p">[</span>
+    <span class="p">(</span><span class="s2">"Country"</span><span class="p">,</span> <span class="n">country</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"Area"</span><span class="p">,</span> <span class="n">area</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"Population"</span><span class="p">,</span> <span class="n">population</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"Density"</span><span class="p">,</span> <span class="n">density</span><span class="p">)</span>
+<span class="p">])</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="n">plot</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">country_cleaned</span><span class="p">,</span>
+                           <span class="n">y</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">area_cleaned</span><span class="p">,</span>
+                           <span class="n">hover_cols</span><span class="o">=</span><span class="p">[</span>
+                               <span class="n">Columns</span><span class="o">.</span><span class="n">population</span><span class="p">,</span>
+                               <span class="n">Columns</span><span class="o">.</span><span class="n">density_cleaned</span>
+                           <span class="p">])</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span>
+                               <span class="n">title</span><span class="o">=</span><span class="s2">"Countries by Area"</span><span class="p">,</span>
+                               <span class="n">width</span><span class="o">=</span><span class="n">Plot</span><span class="o">.</span><span class="n">width</span><span class="p">,</span>
+                               <span class="n">height</span><span class="o">=</span><span class="n">Plot</span><span class="o">.</span><span class="n">height</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span>
+                               <span class="n">tools</span><span class="o">=</span><span class="p">[</span><span class="n">hover</span><span class="p">],</span>
+                           <span class="p">)</span>
+
+<span class="n">outcome</span> <span class="o">=</span> <span class="n">Embed</span><span class="p">(</span><span class="n">plot</span><span class="o">=</span><span class="n">plot</span><span class="p">,</span> <span class="n">file_name</span><span class="o">=</span><span class="s2">"countries_by_area"</span><span class="p">)()</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">outcome</span><span class="p">)</span>
+</pre></div>
+<object data="posts/wikipedia-list-of-countries/countries_by_area.html" height="800" style="width:100%" type="text/html">
+<p>Figure Missing</p>
+</object>
+<p>Well, that's not so easy to read. Maybe just the top and bottom ten.</p>
+<div class="highlight">
+<pre><span></span><span class="n">subset</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">:]</span>
+<span class="n">plot</span> <span class="o">=</span> <span class="n">subset</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">country_cleaned</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">area_cleaned</span><span class="p">,</span>
+                          <span class="n">hover_cols</span><span class="o">=</span><span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">population</span><span class="p">,</span>
+                                      <span class="n">Columns</span><span class="o">.</span><span class="n">density_cleaned</span><span class="p">])</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">"Top Ten Countries by Area"</span><span class="p">,</span>
+    <span class="n">width</span><span class="o">=</span><span class="n">Plot</span><span class="o">.</span><span class="n">width</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="n">Plot</span><span class="o">.</span><span class="n">height</span><span class="p">,</span>
+    <span class="n">fontscale</span><span class="o">=</span><span class="n">Plot</span><span class="o">.</span><span class="n">fontscale</span><span class="p">,</span>
+    <span class="n">xrotation</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span>
+    <span class="n">tools</span><span class="o">=</span><span class="p">[</span><span class="n">hover</span><span class="p">],</span>
+<span class="p">)</span>
+
+<span class="n">outcome</span> <span class="o">=</span> <span class="n">Embed</span><span class="p">(</span><span class="n">plot</span><span class="o">=</span><span class="n">plot</span><span class="p">,</span> <span class="n">file_name</span><span class="o">=</span><span class="s2">"top_ten_countries_by_area"</span><span class="p">)()</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">outcome</span><span class="p">)</span>
+</pre></div>
+<object data="posts/wikipedia-list-of-countries/top_ten_countries_by_area.html" height="800" style="width:100%" type="text/html">
+<p>Figure Missing</p>
+</object>
+<p>So, this shows us a few things to fix. One, the first row is likely just the sum of the others, I would think… But even if it isn't it's so big that it kind of throws stuff off. Also we could probably suck out Antarctica from the second row to make the table match the one Wikipedia has of just countries by area.</p>
+<p>The other thing is that there are reference to notes that I don't know that I want.</p>
+<div class="highlight">
+<pre><span></span><span class="n">numeric</span> <span class="o">=</span> <span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">area_cleaned</span><span class="p">,</span> <span class="n">Columns</span><span class="o">.</span><span class="n">population</span><span class="p">,</span> <span class="n">Columns</span><span class="o">.</span><span class="n">density_cleaned</span><span class="p">]</span>
+<span class="n">columns</span><span class="o">=</span><span class="p">{</span>
+    <span class="n">Columns</span><span class="o">.</span><span class="n">area</span><span class="p">:</span> <span class="n">Columns</span><span class="o">.</span><span class="n">area_cleaned</span><span class="p">,</span>
+    <span class="n">Columns</span><span class="o">.</span><span class="n">density</span><span class="p">:</span> <span class="n">Columns</span><span class="o">.</span><span class="n">density_cleaned</span><span class="p">,</span>
+    <span class="n">Columns</span><span class="o">.</span><span class="n">country</span><span class="p">:</span> <span class="n">Columns</span><span class="o">.</span><span class="n">country_cleaned</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">world</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">numeric</span><span class="p">]</span>
+<span class="n">without_antarctica</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">][</span><span class="n">numeric</span><span class="p">]</span>
+<span class="n">antarctica</span> <span class="o">=</span> <span class="n">world</span> <span class="o">-</span> <span class="n">without_antarctica</span>
+<span class="n">antarctica</span><span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">rank</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"-"</span>
+<span class="n">antarctica</span><span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">country</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"Antarctica"</span>
+<span class="n">antarctica</span><span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">date</span><span class="p">]</span> <span class="o">=</span> <span class="n">plotter</span><span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">date</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">antarctica</span><span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">source</span><span class="p">]</span> <span class="o">=</span> <span class="n">plotter</span><span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">source</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">antarctica</span> <span class="o">=</span> <span class="n">antarctica</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="p">)</span>
+<span class="n">antarctica</span> <span class="o">=</span> <span class="n">antarctica</span><span class="p">[</span><span class="n">plotter</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
+<span class="n">cleaned</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">cleaned</span> <span class="o">=</span> <span class="n">cleaned</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">antarctica</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">cleaned</span> <span class="o">=</span> <span class="n">cleaned</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">antarctica</span><span class="p">)</span>
+</pre></div>
+<pre class="example">
+Rank                                             -
+Country                                 Antarctica
+Area                                      5.41e+06
+Population                                       0
+Density                                        -14
+Date                            September 19, 2020
+Population source    USCB's World population clock
+dtype: object
+</pre>
+<div class="highlight">
+<pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Area Difference: </span><span class="si">{</span><span class="n">world</span><span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">area_cleaned</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">cleaned</span><span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">area_cleaned</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Population Difference: </span><span class="si">{</span><span class="n">world</span><span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">population</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">cleaned</span><span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">population</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+<pre class="example">
+Area Difference: -554,000.57
+Population Difference: 168,435,684
+</pre>
+<p>So, it doesn't actually match the way I thought. I guess there are parts of the world that aren't part of a country… That's a huge difference in population, though… I'll have to investigate that separately.</p>
+</div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orgc9a83a4">
+<h3 id="orgc9a83a4">Just the Population Table</h3>
+<div class="outline-text-3" id="text-orgc9a83a4">
+<p>For some reason pandas is acting up here so I had to separate the building of the dataframe and re-running the code blocks a few times. It even said that pandas couldn't find html5lib, which is kind of weird since the earlier <code>read_html</code> call worked…</p>
+<div class="highlight">
+<pre><span></span><span class="n">URL</span> <span class="o">=</span> <span class="s2">"https://www.wikiwand.com/en/List_of_countries_and_dependencies_by_population"</span>
+<span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span>
+</pre></div>
+<p>Now that I think about it, maybe it takes some time for the javascript to render so you need to have a pause, especially if the internet connection is acting up.</p>
+<div class="highlight">
+<pre><span></span><span class="n">tables</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="n">browser</span><span class="o">.</span><span class="n">page_source</span><span class="p">)</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="n">by_population</span> <span class="o">=</span> <span class="n">tables</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">TABLE</span><span class="p">(</span><span class="n">by_population</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)))</span>
+</pre></div>
+<table border="2" cellpadding="6" cellspacing="0" frame="hsides" rules="groups">
+<colgroup>
+<col class="org-right">
+<col class="org-left">
+<col class="org-right">
+<col class="org-right">
+<col class="org-left">
+<col class="org-left"></colgroup>
+<thead>
+<tr>
+<th class="org-right" scope="col">Rank</th>
+<th class="org-left" scope="col">Country(or dependent territory)</th>
+<th class="org-right" scope="col">Population</th>
+<th class="org-right" scope="col">% of world</th>
+<th class="org-left" scope="col">Date</th>
+<th class="org-left" scope="col">Source(official or UN)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">China[b]</td>
+<td class="org-right">1404513080</td>
+<td class="org-right">nan</td>
+<td class="org-left">20 Sep 2020</td>
+<td class="org-left">National population clock[3]</td>
+</tr>
+</tbody>
+</table>
+<p>Pandas doesn't seem to be able to handle the "% of world" column - probably because they put the percent symbol in the rows for some reason.</p>
+<div class="highlight">
+<pre><span></span><span class="n">population_2</span> <span class="o">=</span> <span class="n">by_population</span><span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">population</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">world</span><span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">population</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">population_2</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">cleaned</span><span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">population</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">population_2</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+<pre class="example">
+-7,693,448,437
+-7,861,884,121
+</pre>
+<p>What?</p>
+<div class="highlight">
+<pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">population_2</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+<pre class="example">
+15,507,529,605
+</pre>
+<p>According to the Wikipedia page the world population is 7,814,267,000 - so something isn't right here.</p>
+<div class="highlight">
+<pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">by_population</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cleaned</span><span class="p">))</span>
+</pre></div>
+<pre class="example">
+242
+252
+</pre>
+<p>They also don't have the same number of countries (it should be off by 1 because of Antarctica, not by 10).</p>
+<div class="highlight">
+<pre><span></span><span class="n">countries</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">cleaned</span><span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">country_cleaned</span><span class="p">])</span>
+
+<span class="c1"># the new table doesn't have a space between Country and the parenthesis</span>
+<span class="n">countries_2</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">by_population</span><span class="p">[</span><span class="s2">"Country(or dependent territory)"</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">countries</span> <span class="o">-</span> <span class="n">countries_2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">countries_2</span> <span class="o">-</span> <span class="n">countries</span><span class="p">)</span>
+</pre></div>
+<pre class="example">
+{'Northern Cyprus[note 4]', 'Western Sahara[note 12]', 'Taiwan', 'British Virgin Islands (United Kingdom)', 'Morocco', 'Bonaire (Netherlands)', 'Jersey (United Kingdom)', 'Cyprus', 'Anguilla (United Kingdom)', 'Isle of Man (United Kingdom)', 'Russia[note 11]', 'Wallis & Futuna (France)', 'Saba (Netherlands)', 'United States', 'Transnistria[note 3]', 'Vatican City[note 1]', 'Somaliland[note 8]', 'United States Virgin Islands (United States)', 'France', 'Turks and Caicos Islands (United Kingdom)', 'Cook Islands (New Zealand)', 'Democratic Republic of the Congo', 'Mayotte (France)', 'Tanzania', 'China', 'Guam (United States)', 'Falkland Islands (United Kingdom)', 'Guernsey (United Kingdom)', 'Northern Mariana Islands (United States)', 'Netherlands', 'Serbia', 'Republic of the Congo', 'Pitcairn Islands (United Kingdom)', 'Timor-Leste', 'Kosovo[note 2]', 'Eswatini (Swaziland)', 'Niue (New Zealand)', 'Denmark', 'Gibraltar (United Kingdom)', 'Saint Helena, Ascension and Tristan da Cunha (United Kingdom)', 'Finland', 'Pakistan', 'American Samoa (United States)', 'Sint Eustatius (Netherlands)', 'Bermuda (United Kingdom)', 'India', 'Abkhazia[note 6]', 'United Kingdom', 'Cayman Islands (United Kingdom)', 'Puerto Rico (United States)', 'Moldova', 'French Guiana (France)', 'South Ossetia[note 9]', 'Guadeloupe (France)', 'Ukraine [note 5]', 'Georgia', 'Svalbard and Jan Mayen (Norway)', 'Somalia', 'Tokelau (New Zealand)', 'Réunion (France)', 'Uruguay[note 7][clarification needed]', 'Martinique (France)', 'Federated States of Micronesia', 'Montserrat (United Kingdom)', 'Artsakh[note 10]', 'Antarctica'}
+
+{'Pakistan[e]', 'India[c]', 'DR Congo', 'Falkland Islands (UK)', 'United Kingdom[h]', 'Wallis and Futuna (France)', 'Puerto Rico (US)', 'East Timor', 'Republic of Artsakh[z]', 'China[b]', 'Taiwan[l]', 'South Ossetia[aa]', 'Tokelau (NZ)', 'World', 'Ukraine[j]', 'Netherlands[m]', 'Saint Helena, Ascensionand Tristan da Cunha (UK)', 'American Samoa (US)', 'Tanzania[i]', 'Finland[q]', 'Vatican City[ab]', 'U.S. Virgin Islands (US)', 'Morocco[k]', 'Transnistria[w]', 'Somalia[n]', 'Abkhazia[y]', 'Cayman Islands (UK)', 'Gibraltar (UK)', 'Serbia[o]', 'Uruguay', 'Cook Islands (NZ)', 'Northern Cyprus[x]', 'Eswatini', 'Guernsey (UK)', 'Congo', 'Russia[f]', 'Bermuda (UK)', 'Pitcairn Islands (UK)', 'Guam (US)', 'Montserrat (UK)', 'Moldova[s]', 'Kosovo[t]', 'Denmark[p]', 'Jersey (UK)', 'France[g]', 'Isle of Man (UK)', 'Cyprus[u]', 'Anguilla (UK)', 'Georgia[r]', 'Western Sahara[v]', 'Northern Mariana Islands (US)', 'F.S. Micronesia', 'United States[d]', 'Turks and Caicos Islands (UK)', 'Niue (NZ)', 'British Virgin Islands (UK)'}
+</pre>
+<p>Some of that is just their notes being added, and an inconsistency of naming, e.g. United Kingdom vs UK. but the population only set also seems to break up things a little differently - they consider the countries within the Netherlands to be separate, for instance. This is messier than I thought, and I don't know how to reconcile the population explosion.</p>
+<p>Okay, I just noticed something.</p>
+<div class="highlight">
+<pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">TABLE</span><span class="p">(</span><span class="n">by_population</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">1</span><span class="p">)))</span>
+</pre></div>
+<table border="2" cellpadding="6" cellspacing="0" frame="hsides" rules="groups">
+<colgroup>
+<col class="org-right">
+<col class="org-left">
+<col class="org-right">
+<col class="org-right">
+<col class="org-left">
+<col class="org-left"></colgroup>
+<thead>
+<tr>
+<th class="org-right" scope="col">Rank</th>
+<th class="org-left" scope="col">Country(or dependent territory)</th>
+<th class="org-right" scope="col">Population</th>
+<th class="org-right" scope="col">% of world</th>
+<th class="org-left" scope="col">Date</th>
+<th class="org-left" scope="col">Source(official or UN)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">nan</td>
+<td class="org-left">World</td>
+<td class="org-right">7814267000</td>
+<td class="org-right">100%</td>
+<td class="org-left">19 Sep 2020</td>
+<td class="org-left">UN Projection[202]</td>
+</tr>
+</tbody>
+</table>
+<p>They copied the header here too, but pandas was able to parse the numbers (probably because the headers only have one row).</p>
+<div class="highlight">
+<pre><span></span><span class="n">world_2</span> <span class="o">=</span> <span class="n">by_population</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">by_population</span> <span class="o">=</span> <span class="n">by_population</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="n">population_2</span> <span class="o">=</span> <span class="n">by_population</span><span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">population</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">world</span><span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">population</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">population_2</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">cleaned</span><span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">population</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">population_2</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">population_2</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+<pre class="example">
+121,019,395
+-47,416,289
+7,693,262,605
+</pre>
+<p>The second table is short too, but it still has more than the original table… Maybe I just don't care about the numbers, as long as they're rankable. Although the fact that the tables have different numbers of countries isn't reassuring…</p>
+<p>I think I'll see if making a combined table myself would be better. But first let's see what percentage of the population is missing.</p>
+<div class="highlight">
+<pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"By Population Table: </span><span class="si">{</span><span class="p">(</span><span class="n">by_population</span><span class="o">.</span><span class="n">Population</span><span class="o">/</span><span class="n">world_2</span><span class="o">.</span><span class="n">Population</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="si">:</span><span class="s2">0.2f</span><span class="si">}</span><span class="s2"> %"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"By Density Table: </span><span class="si">{</span><span class="p">(</span><span class="n">cleaned</span><span class="o">.</span><span class="n">Population</span><span class="o">/</span><span class="n">world_2</span><span class="o">.</span><span class="n">Population</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="si">:</span><span class="s2">0.2f</span><span class="si">}</span><span class="s2"> %"</span><span class="p">)</span>
+</pre></div>
+<pre class="example">
+By Population Table: 98.45 %
+By Density Table: 97.84 %
+</pre></div>
+</div>
+<div class="outline-3" id="outline-container-org40f3f53">
+<h3 id="org40f3f53">Countries by Area</h3>
+<div class="outline-text-3" id="text-org40f3f53">
+<div class="highlight">
+<pre><span></span><span class="n">URL</span> <span class="o">=</span> <span class="s2">"https://www.wikiwand.com/en/List_of_countries_and_dependencies_by_area"</span>
+<span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="n">tables</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="n">browser</span><span class="o">.</span><span class="n">page_source</span><span class="p">)</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="n">by_area</span> <span class="o">=</span> <span class="n">tables</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">TABLE</span><span class="p">(</span><span class="n">by_area</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)))</span>
+</pre></div>
+<table border="2" cellpadding="6" cellspacing="0" frame="hsides" rules="groups">
+<colgroup>
+<col class="org-right">
+<col class="org-left">
+<col class="org-left">
+<col class="org-left">
+<col class="org-left">
+<col class="org-right">
+<col class="org-right"></colgroup>
+<thead>
+<tr>
+<th class="org-right" scope="col">Rank</th>
+<th class="org-left" scope="col">Country / Dependency</th>
+<th class="org-left" scope="col">Total in km2 (mi2)</th>
+<th class="org-left" scope="col">Land in km2 (mi2)</th>
+<th class="org-left" scope="col">Water in km2 (mi2)</th>
+<th class="org-right" scope="col">% water</th>
+<th class="org-right" scope="col">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">nan</td>
+<td class="org-left">World</td>
+<td class="org-left">510,072,000 (196,940,000)</td>
+<td class="org-left">148,940,000 (57,510,000)</td>
+<td class="org-left">361,132,000 (139,434,000)</td>
+<td class="org-right">70.8</td>
+<td class="org-right">nan</td>
+</tr>
+</tbody>
+</table>
+<p>So once again we have a summation in there, but we have a bigger problem in that they combine the units in the same columns…</p>
+<div class="highlight">
+<pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">by_area</span><span class="p">))</span>
+</pre></div>
+<pre class="example">
+264
+</pre>
+<p>Okay, so now we have another problem in that all three sets have differing numbers of entries. I'm guessing that trying to reconcile the country names is going to be a nightmare so I think I'll have to stick with the original table. I just looked at the Wikipedia page and this table includes "unrecognized states" which is probably why it has more countries. Maybe it's these unrecognized states that makes up the shortcoming in the population and area. Maybe.</p>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orge37a384">
+<h2 id="orge37a384">Plotting Again</h2>
+<div class="outline-text-2" id="text-orge37a384"></div>
+<div class="outline-3" id="outline-container-org271fd5a">
+<h3 id="org271fd5a">By Area</h3>
+<div class="outline-text-3" id="text-org271fd5a"></div>
+<div class="outline-4" id="outline-container-org4cf7487">
+<h4 id="org4cf7487">Biggest</h4>
+<div class="outline-text-4" id="text-org4cf7487">
+<div class="highlight">
+<pre><span></span><span class="n">cleaned</span> <span class="o">=</span> <span class="n">cleaned</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">area_cleaned</span><span class="p">)</span>
+<span class="n">subset</span> <span class="o">=</span> <span class="n">cleaned</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">:]</span>
+<span class="n">plot</span> <span class="o">=</span> <span class="n">subset</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">country_cleaned</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">area_cleaned</span><span class="p">,</span>
+                          <span class="n">hover_cols</span><span class="o">=</span><span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">population</span><span class="p">,</span>
+                                      <span class="n">Columns</span><span class="o">.</span><span class="n">density_cleaned</span><span class="p">])</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span>
+                                          <span class="n">title</span><span class="o">=</span><span class="s2">"Top Ten Countries by Area"</span><span class="p">,</span>
+                                          <span class="n">width</span><span class="o">=</span><span class="n">Plot</span><span class="o">.</span><span class="n">width</span><span class="p">,</span>
+                                          <span class="n">height</span><span class="o">=</span><span class="n">Plot</span><span class="o">.</span><span class="n">height</span><span class="p">,</span>
+                                          <span class="n">fontscale</span><span class="o">=</span><span class="n">Plot</span><span class="o">.</span><span class="n">fontscale</span><span class="p">,</span>
+                                          <span class="n">tools</span><span class="o">=</span><span class="p">[</span><span class="n">hover</span><span class="p">],</span>
+                                          <span class="n">xrotation</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">outcome</span> <span class="o">=</span> <span class="n">Embed</span><span class="p">(</span><span class="n">plot</span><span class="o">=</span><span class="n">plot</span><span class="p">,</span> <span class="n">file_name</span><span class="o">=</span><span class="s2">"top_ten_countries_by_area_cleaned"</span><span class="p">)()</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">outcome</span><span class="p">)</span>
+</pre></div>
+<object data="posts/wikipedia-list-of-countries/top_ten_countries_by_area_cleaned.html" height="800" style="width:100%" type="text/html">
+<p>Figure Missing</p>
+</object>
+<p>Okay, so it looks like I forgot to clean out the note references in the country names. Also, Russia as bigger than Antarctica? Go figure. I'm also surprised that the United States has more area than China. Actually I was surprised by this whole thing. I guess I never really looked too closely at the relative sizes of countries before, and area's a tough thing to estimate visually.</p>
+</div>
+</div>
+<div class="outline-4" id="outline-container-orgbc908bd">
+<h4 id="orgbc908bd">Getting Rid of the Notes</h4>
+<div class="outline-text-4" id="text-orgbc908bd">
+<div class="highlight">
+<pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="n">cleaned</span><span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">country_cleaned</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">"["</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">cleaned</span><span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">country_cleaned</span><span class="p">]</span> <span class="o">=</span> <span class="n">names</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-orgcc18624">
+<h4 id="orgcc18624">Smallest</h4>
+<div class="outline-text-4" id="text-orgcc18624">
+<div class="highlight">
+<pre><span></span><span class="n">subset</span> <span class="o">=</span> <span class="n">cleaned</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">area_cleaned</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">:]</span>
+<span class="n">plot</span> <span class="o">=</span> <span class="n">subset</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">country_cleaned</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">area_cleaned</span><span class="p">)</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">"Bottom Ten Countries by Area"</span><span class="p">,</span>
+    <span class="n">width</span><span class="o">=</span><span class="n">Plot</span><span class="o">.</span><span class="n">width</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="n">Plot</span><span class="o">.</span><span class="n">height</span><span class="p">,</span>
+    <span class="n">fontscale</span><span class="o">=</span><span class="n">Plot</span><span class="o">.</span><span class="n">fontscale</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">outcome</span> <span class="o">=</span> <span class="n">Embed</span><span class="p">(</span><span class="n">plot</span><span class="o">=</span><span class="n">plot</span><span class="p">,</span> <span class="n">file_name</span><span class="o">=</span><span class="s2">"bottom_ten_countries_by_area_cleaned"</span><span class="p">)()</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">outcome</span><span class="p">)</span>
+</pre></div>
+<object data="posts/wikipedia-list-of-countries/bottom_ten_countries_by_area_cleaned.html" height="800" style="width:100%" type="text/html">
+<p>Figure Missing</p>
+</object></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orgdc321d2">
+<h3 id="orgdc321d2">By Population</h3>
+<div class="outline-text-3" id="text-orgdc321d2"></div>
+<div class="outline-4" id="outline-container-org7345660">
+<h4 id="org7345660">Most Populated</h4>
+<div class="outline-text-4" id="text-org7345660">
+<div class="highlight">
+<pre><span></span><span class="n">subset</span> <span class="o">=</span> <span class="n">cleaned</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">population</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">:]</span>
+<span class="n">population_columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">area_cleaned</span><span class="p">,</span>
+                      <span class="n">Columns</span><span class="o">.</span><span class="n">density_cleaned</span><span class="p">]</span>
+<span class="n">plot</span> <span class="o">=</span> <span class="n">subset</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">country_cleaned</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">population</span><span class="p">,</span>
+                          <span class="n">hover_cols</span><span class="o">=</span><span class="n">population_columns</span><span class="p">)</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span>
+                                          <span class="n">title</span><span class="o">=</span><span class="s2">"Top Ten Countries by Population"</span><span class="p">,</span>
+                                          <span class="n">width</span><span class="o">=</span><span class="n">Plot</span><span class="o">.</span><span class="n">width</span><span class="p">,</span>
+                                          <span class="n">height</span><span class="o">=</span><span class="n">Plot</span><span class="o">.</span><span class="n">height</span><span class="p">,</span>
+                                          <span class="n">fontscale</span><span class="o">=</span><span class="n">Plot</span><span class="o">.</span><span class="n">fontscale</span><span class="p">,</span>
+                                          <span class="n">tools</span><span class="o">=</span><span class="p">[</span><span class="n">hover</span><span class="p">],</span>
+                                          <span class="n">xrotation</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">outcome</span> <span class="o">=</span> <span class="n">Embed</span><span class="p">(</span><span class="n">plot</span><span class="o">=</span><span class="n">plot</span><span class="p">,</span> <span class="n">file_name</span><span class="o">=</span><span class="s2">"top_ten_countries_by_population"</span><span class="p">)()</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">outcome</span><span class="p">)</span>
+</pre></div>
+<object data="posts/wikipedia-list-of-countries/top_ten_countries_by_population.html" height="800" style="width:100%" type="text/html">
+<p>Figure Missing</p>
+</object>
+<p>I had encountered this list before, when reading <i>Memory Craft</i> by Lynne Kelly, but it still surprises me that the United States is third and that Bangladesh has more people than Russia.</p>
+</div>
+</div>
+<div class="outline-4" id="outline-container-org896838c">
+<h4 id="org896838c">Least Populous</h4>
+<div class="outline-text-4" id="text-org896838c">
+<div class="highlight">
+<pre><span></span><span class="n">subset</span> <span class="o">=</span> <span class="n">cleaned</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">population</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">:]</span>
+<span class="n">plot</span> <span class="o">=</span> <span class="n">subset</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">country_cleaned</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">population</span><span class="p">,</span>
+                          <span class="n">hover_cols</span><span class="o">=</span><span class="n">population_columns</span><span class="p">)</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span>
+                              <span class="n">title</span><span class="o">=</span><span class="s2">"Bottom Ten Countries by Population"</span><span class="p">,</span>
+                              <span class="n">width</span><span class="o">=</span><span class="n">Plot</span><span class="o">.</span><span class="n">width</span><span class="p">,</span>
+                              <span class="n">height</span><span class="o">=</span><span class="n">Plot</span><span class="o">.</span><span class="n">height</span><span class="p">,</span>
+                              <span class="n">fontscale</span><span class="o">=</span><span class="n">Plot</span><span class="o">.</span><span class="n">fontscale</span><span class="p">,</span>
+                              <span class="n">tools</span><span class="o">=</span><span class="p">[</span><span class="n">hover</span><span class="p">],</span>
+<span class="p">)</span>
+
+<span class="n">outcome</span> <span class="o">=</span> <span class="n">Embed</span><span class="p">(</span><span class="n">plot</span><span class="o">=</span><span class="n">plot</span><span class="p">,</span> <span class="n">file_name</span><span class="o">=</span><span class="s2">"bottom_ten_countries_by_population"</span><span class="p">)()</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">outcome</span><span class="p">)</span>
+</pre></div>
+<object data="posts/wikipedia-list-of-countries/bottom_ten_countries_by_population.html" height="800" style="width:100%" type="text/html">
+<p>Figure Missing</p>
+</object></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org2db1491">
+<h3 id="org2db1491">By Density</h3>
+<div class="outline-text-3" id="text-org2db1491"></div>
+<div class="outline-4" id="outline-container-org5a37648">
+<h4 id="org5a37648">Densest</h4>
+<div class="outline-text-4" id="text-org5a37648">
+<div class="highlight">
+<pre><span></span><span class="n">density_columns</span><span class="o">=</span><span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">population</span><span class="p">,</span> <span class="n">Columns</span><span class="o">.</span><span class="n">area_cleaned</span><span class="p">]</span>
+<span class="n">subset</span> <span class="o">=</span> <span class="n">cleaned</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">density_cleaned</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">:]</span>
+<span class="n">plot</span> <span class="o">=</span> <span class="n">subset</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">country_cleaned</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">density_cleaned</span><span class="p">,</span>
+                          <span class="n">hover_cols</span><span class="o">=</span><span class="n">density_columns</span><span class="p">)</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span>
+                              <span class="n">title</span><span class="o">=</span><span class="s2">"Top Ten Countries by Population Density"</span><span class="p">,</span>
+                              <span class="n">width</span><span class="o">=</span><span class="n">Plot</span><span class="o">.</span><span class="n">width</span><span class="p">,</span>
+                              <span class="n">height</span><span class="o">=</span><span class="n">Plot</span><span class="o">.</span><span class="n">height</span><span class="p">,</span>
+                              <span class="n">fontscale</span><span class="o">=</span><span class="n">Plot</span><span class="o">.</span><span class="n">fontscale</span><span class="p">,</span>
+                              <span class="n">tools</span><span class="o">=</span><span class="p">[</span><span class="n">hover</span><span class="p">],</span>
+<span class="p">)</span>
+
+<span class="n">outcome</span> <span class="o">=</span> <span class="n">Embed</span><span class="p">(</span><span class="n">plot</span><span class="o">=</span><span class="n">plot</span><span class="p">,</span> <span class="n">file_name</span><span class="o">=</span><span class="s2">"top_ten_countries_by_population_density"</span><span class="p">)()</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">outcome</span><span class="p">)</span>
+</pre></div>
+<object data="posts/wikipedia-list-of-countries/top_ten_countries_by_population_density.html" height="800" style="width:100%" type="text/html">
+<p>Figure Missing</p>
+</object>
+<p>It's sort of interesting that the two most dense countries are both known for their gambling.</p>
+</div>
+</div>
+<div class="outline-4" id="outline-container-orgbc1db2f">
+<h4 id="orgbc1db2f">Sparsest</h4>
+<div class="outline-text-4" id="text-orgbc1db2f">
+<p>First, because of the way I calculated Antarctica it currently has a negative number (-14) for density, which is a little odd so I'll set it to 0.</p>
+<div class="highlight">
+<pre><span></span><span class="n">cleaned</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">cleaned</span><span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">country_cleaned</span><span class="p">]</span><span class="o">==</span><span class="s2">"Antarctica"</span><span class="p">,</span> <span class="n">Columns</span><span class="o">.</span><span class="n">density_cleaned</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="n">subset</span> <span class="o">=</span> <span class="n">cleaned</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">density_cleaned</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">:]</span>
+<span class="n">plot</span> <span class="o">=</span> <span class="n">subset</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">country_cleaned</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">density_cleaned</span><span class="p">,</span>
+                          <span class="n">hover_cols</span><span class="o">=</span><span class="n">density_columns</span><span class="p">)</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span>
+                              <span class="n">title</span><span class="o">=</span><span class="s2">"Bottom Ten Countries by Population Density"</span><span class="p">,</span>
+                              <span class="n">width</span><span class="o">=</span><span class="n">Plot</span><span class="o">.</span><span class="n">width</span><span class="p">,</span>
+                              <span class="n">height</span><span class="o">=</span><span class="n">Plot</span><span class="o">.</span><span class="n">height</span><span class="p">,</span>
+                              <span class="n">fontscale</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span>
+                              <span class="n">tools</span><span class="o">=</span><span class="p">[</span><span class="n">hover</span><span class="p">],</span>
+                              <span class="n">yrotation</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">outcome</span> <span class="o">=</span> <span class="n">Embed</span><span class="p">(</span><span class="n">plot</span><span class="o">=</span><span class="n">plot</span><span class="p">,</span> <span class="n">file_name</span><span class="o">=</span><span class="s2">"bottom_ten_countries_by_population_density"</span><span class="p">)()</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">outcome</span><span class="p">)</span>
+</pre></div>
+<object data="posts/wikipedia-list-of-countries/bottom_ten_countries_by_population_density.html" height="800" style="width:100%" type="text/html">
+<p>Figure Missing</p>
+</object></div>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgc682e6d">
+<h2 id="orgc682e6d">End</h2>
+<div class="outline-text-2" id="text-orgc682e6d">
+<p>Well, the point wasn't really just to look at the list (there is a Wikipedia page there already, after all) but to have something that I could mess with locally, so I'll save it now, but first I'll do a little more cleaning.</p>
+<p>Do I need the rank? Nah.</p>
+<div class="highlight">
+<pre><span></span><span class="k">del</span><span class="p">(</span><span class="n">cleaned</span><span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">rank</span><span class="p">])</span>
+</pre></div>
+<p>I was going to remove the density and re-calculate it but for some reason they don't differ that much, but it might make a difference in the rankings for less dense countries so I'll keep the original column.</p>
+<p>Since I'm going to save it to a csv I'll parse the date first.</p>
+<div class="highlight">
+<pre><span></span><span class="n">cleaned</span><span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">date</span><span class="p">]</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">cleaned</span><span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">date</span><span class="p">])</span>
+</pre></div>
+<p>Even though the table is meant for population density I think I'll save it sorted by area.</p>
+<div class="highlight">
+<pre><span></span><span class="n">cleaned</span> <span class="o">=</span> <span class="n">cleaned</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">area_cleaned</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+<p>And now to save it.</p>
+<div class="highlight">
+<pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">"apeiron/wikipedia"</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">path</span><span class="o">.</span><span class="n">is_dir</span><span class="p">()</span>
+<span class="n">cleaned</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">path</span><span class="o">/</span><span class="s2">"countries-by-area-population-density.csv"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</article>
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article">
+<header>
+<h1 class="p-name entry-title"><a class="u-url" href="posts/in-the-land-before-the-monkey/">In the time of Boar and Monkey</a></h1>
+<div class="metadata">
+<p class="byline author vcard"><span class="byline-name fn" itemprop="author">Cloistered Monkey</span></p>
+<p class="dateline"><a href="posts/in-the-land-before-the-monkey/" rel="bookmark"><time class="published dt-published" datetime="2020-09-09T13:12:13-07:00" itemprop="datePublished" title="2020-09-09 13:12">2020-09-09 13:12</time></a></p>
+</div>
+</header>
+<div class="p-summary entry-summary">
+<p class="verse">In the time of boar and Monkey,<br>
+When Death became a painter,<br>
+Love forgot its mother's name,<br>
+And new memories burn fainter.<br>
+<br>
+Sitting on the front porch,<br>
+Eating screaming greens,<br>
+We sang a song of six-fingers,<br>
+In unkown Cantonese.<br>
+<br>
+Down on the mountain,<br>
+Riding to the Top,<br>
+Father rode side-saddle,<br>
+The Other rode to crop.<br>
+<br>
+Covid came for cannabis,<br>
+And stayed around for meth,<br>
+Our planet burned around us,<br>
+While Juniors breathed out death.<br>
+<br>
+The rage didn't kill us,<br>
+It had no monopoly,<br>
+I watched it all through opaque glass,<br>
+Looking out for me.<br>
+<br>
+Still the Rabbit sits backwards-look-away<br>
+Muttering her grumbles,<br>
+Through her dark of day,<br>
+And the Spiders sing around my head -<br>
+"We will never go away."<br></p>
+</div>
+</article>
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article">
+<header>
+<h1 class="p-name entry-title"><a class="u-url" href="posts/pulling-top-100-names/">Pulling Top Names From the Past 100 Years</a></h1>
+<div class="metadata">
+<p class="byline author vcard"><span class="byline-name fn" itemprop="author">Cloistered Monkey</span></p>
+<p class="dateline"><a href="posts/pulling-top-100-names/" rel="bookmark"><time class="published dt-published" datetime="2020-08-18T17:33:38-07:00" itemprop="datePublished" title="2020-08-18 17:33">2020-08-18 17:33</time></a></p>
+</div>
+</header>
+<div class="p-summary entry-summary">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="posts/pulling-top-100-names/#org5334da0">Beginning</a>
+<ul>
+<li><a href="posts/pulling-top-100-names/#org33a5687">Set Up</a></li>
+</ul>
+</li>
+<li><a href="posts/pulling-top-100-names/#orgb378d49">Middle</a>
+<ul>
+<li><a href="posts/pulling-top-100-names/#orgbc9b2b6">Pulling the Table</a></li>
+<li><a href="posts/pulling-top-100-names/#org2022cde">Cleaning Up the Table</a></li>
+<li><a href="posts/pulling-top-100-names/#orgc15d8ab">Some Plotting</a></li>
+</ul>
+</li>
+<li><a href="posts/pulling-top-100-names/#org433c8d7">End</a></li>
+</ul>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org5334da0">
+<h2 id="org5334da0">Beginning</h2>
+<div class="outline-text-2" id="text-org5334da0"></div>
+<div class="outline-3" id="outline-container-org33a5687">
+<h3 id="org33a5687">Set Up</h3>
+<div class="outline-text-3" id="text-org33a5687"></div>
+<div class="outline-4" id="outline-container-org7a5b0ad">
+<h4 id="org7a5b0ad">Imports</h4>
+<div class="outline-text-4" id="text-org7a5b0ad">
+<div class="highlight">
+<pre><span></span><span class="c1"># python</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
+
+<span class="c1"># pypi</span>
+<span class="kn">import</span> <span class="nn">hvplot.pandas</span>
+<span class="kn">import</span> <span class="nn">pandas</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="kn">from</span> <span class="nn">graeae</span> <span class="kn">import</span> <span class="n">EmbedHoloviews</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-orgc0a78b0">
+<h4 id="orgc0a78b0">Plotting</h4>
+<div class="outline-text-4" id="text-orgc0a78b0">
+<div class="highlight">
+<pre><span></span><span class="n">SLUG</span> <span class="o">=</span> <span class="s2">"pulling-top-100-names"</span>
+<span class="n">Embed</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">EmbedHoloviews</span><span class="p">,</span> <span class="n">folder_path</span><span class="o">=</span><span class="sa">f</span><span class="s2">"files/posts/</span><span class="si">{</span><span class="n">SLUG</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgb378d49">
+<h2 id="orgb378d49">Middle</h2>
+<div class="outline-text-2" id="text-orgb378d49"></div>
+<div class="outline-3" id="outline-container-orgbc9b2b6">
+<h3 id="orgbc9b2b6">Pulling the Table</h3>
+<div class="outline-text-3" id="text-orgbc9b2b6"></div>
+<div class="outline-4" id="outline-container-org05e9948">
+<h4 id="org05e9948">Trying a Naive Request</h4>
+<div class="outline-text-4" id="text-org05e9948">
+<div class="highlight">
+<pre><span></span><span class="n">URL</span> <span class="o">=</span> <span class="s2">"https://www.ssa.gov/OACT/babynames/decades/century.html"</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">response</span><span class="o">.</span><span class="n">ok</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="n">tables</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tables</span><span class="p">))</span>
+</pre></div>
+<pre class="example">
+1
+</pre>
+<div class="highlight">
+<pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">tables</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+<pre class="example">
+  Unnamed: 0_level_0  Males          Females         
+                Rank   Name   Number    Name   Number
+0                1.0  James  4764644    Mary  3328565
+</pre>
+<p>So it looks like it's a plain table so we don't need Selenium or something else to render javascript, but the header is a little messed up.</p>
+</div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org2022cde">
+<h3 id="org2022cde">Cleaning Up the Table</h3>
+<div class="outline-text-3" id="text-org2022cde">
+<div class="highlight">
+<pre><span></span><span class="n">males</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">table</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]]</span>
+<span class="n">females</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">table</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">3</span><span class="p">:]]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">males</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+<pre class="example">
+   Males         
+    Name   Number
+0  James  4764644
+</pre></div>
+<div class="outline-4" id="outline-container-org6af0206">
+<h4 id="org6af0206">The Last Row</h4>
+<div class="outline-text-4" id="text-org6af0206">
+<div class="highlight">
+<pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">males</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+<pre class="example">
+Males  Name      Source: 100% sample based on Social Security c...
+       Number    Source: 100% sample based on Social Security c...
+Name: 100, dtype: object
+</pre>
+<div class="highlight">
+<pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">1</span><span class="p">)[</span><span class="n">table</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+<pre class="example">
+Source: 100% sample based on Social Security card application data as of of March 2019. See the limitations of  this data source.
+</pre>
+<p>That's interesting, but it doesn't help with what I want, which is just the names.</p>
+<div class="highlight">
+<pre><span></span><span class="n">males</span> <span class="o">=</span> <span class="n">males</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">females</span> <span class="o">=</span> <span class="n">females</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">males</span><span class="p">)</span> <span class="o">==</span> <span class="mi">100</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">females</span><span class="p">)</span> <span class="o">==</span> <span class="mi">100</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">females</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+<pre class="example">
+  Females         
+     Name   Number
+0    Mary  3328565
+</pre>
+<p>So, now to re-add the rank and add gender columns so the multi-level column headers can be re-done.</p>
+<div class="highlight">
+<pre><span></span><span class="n">males</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"name"</span><span class="p">,</span> <span class="s2">"count"</span><span class="p">]</span>
+<span class="n">females</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"name"</span><span class="p">,</span> <span class="s2">"count"</span><span class="p">]</span>
+<span class="n">males</span><span class="p">[</span><span class="s2">"gender"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"male"</span>
+<span class="n">females</span><span class="p">[</span><span class="s2">"gender"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"female"</span>
+
+<span class="n">males</span><span class="p">[</span><span class="s2">"rank"</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">101</span><span class="p">))</span>
+<span class="n">females</span><span class="p">[</span><span class="s2">"rank"</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">101</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">males</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+<pre class="example">
+    name    count gender  rank
+0  James  4764644   male     1
+</pre>
+<p>Now to re-combine them.</p>
+<div class="highlight">
+<pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">males</span><span class="p">,</span> <span class="n">females</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orgc15d8ab">
+<h3 id="orgc15d8ab">Some Plotting</h3>
+<div class="outline-text-3" id="text-orgc15d8ab">
+<p>Before we can plot them we have to change the <code>count</code> column to be (you guessed it) a number since that last row with the source information prevents pandas' ability to convert the column itself.</p>
+<div class="highlight">
+<pre><span></span><span class="n">names</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s2">"count"</span><span class="p">]</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="s2">"count"</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="n">plot</span> <span class="o">=</span> <span class="n">names</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">"rank"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"count"</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="s2">"gender"</span><span class="p">)</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">"Top Male and Female Names of the Last 100 Years"</span><span class="p">,</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">990</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">780</span><span class="p">,</span>
+    <span class="n">fontscale</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">outcome</span> <span class="o">=</span> <span class="n">Embed</span><span class="p">(</span><span class="n">plot</span><span class="o">=</span><span class="n">plot</span><span class="p">,</span> <span class="n">file_name</span><span class="o">=</span><span class="s2">"gender_plot"</span><span class="p">)()</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">outcome</span><span class="p">)</span>
+</pre></div>
+<object data="posts/pulling-top-100-names/gender_plot.html" height="800" style="width:100%" type="text/html">
+<p>Figure Missing</p>
+</object>
+<p>Well, pretend that you don't see the x-ticks… It's interesting that the highest ranked male names have a higher count than the highest ranked female names.</p>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org433c8d7">
+<h2 id="org433c8d7">End</h2>
+<div class="outline-text-2" id="text-org433c8d7">
+<p>Time to save the table.</p>
+<div class="highlight">
+<pre><span></span><span class="n">names</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">"apeiron/top_100_ssa_names.csv"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</article>
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article">
+<header>
+<h1 class="p-name entry-title"><a class="u-url" href="posts/pulling-legendary-creatures-from-wikipedia/">Pulling Legendary Creatures From Wikipedia</a></h1>
+<div class="metadata">
+<p class="byline author vcard"><span class="byline-name fn" itemprop="author">Cloistered Monkey</span></p>
+<p class="dateline"><a href="posts/pulling-legendary-creatures-from-wikipedia/" rel="bookmark"><time class="published dt-published" datetime="2020-08-06T15:04:35-07:00" itemprop="datePublished" title="2020-08-06 15:04">2020-08-06 15:04</time></a></p>
+</div>
+</header>
+<div class="p-summary entry-summary">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="posts/pulling-legendary-creatures-from-wikipedia/#org6bd5eb7">Beginning</a>
+<ul>
+<li><a href="posts/pulling-legendary-creatures-from-wikipedia/#org01ca81c">Set Up</a></li>
+</ul>
+</li>
+<li><a href="posts/pulling-legendary-creatures-from-wikipedia/#org84ba9bb">Middle</a>
+<ul>
+<li><a href="posts/pulling-legendary-creatures-from-wikipedia/#org07b2f2a">Grab the Page and Make Some Soup</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org6bd5eb7">
+<h2 id="org6bd5eb7">Beginning</h2>
+<div class="outline-text-2" id="text-org6bd5eb7"></div>
+<div class="outline-3" id="outline-container-org01ca81c">
+<h3 id="org01ca81c">Set Up</h3>
+<div class="outline-text-3" id="text-org01ca81c"></div>
+<div class="outline-4" id="outline-container-org5719b25">
+<h4 id="org5719b25">Imports</h4>
+<div class="outline-text-4" id="text-org5719b25">
+<div class="highlight">
+<pre><span></span><span class="c1"># python</span>
+<span class="kn">from</span> <span class="nn">argparse</span> <span class="kn">import</span> <span class="n">Namespace</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="c1"># pypi</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span><span class="p">,</span> <span class="n">UnicodeDammit</span>
+<span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+<span class="kn">from</span> <span class="nn">tabulate</span> <span class="kn">import</span> <span class="n">tabulate</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-orgd1481c0">
+<h4 id="orgd1481c0">Tabulate</h4>
+<div class="outline-text-4" id="text-orgd1481c0">
+<div class="highlight">
+<pre><span></span><span class="n">TABLE</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">tabulate</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="s2">"keys"</span><span class="p">,</span> <span class="n">tablefmt</span><span class="o">=</span><span class="s2">"orgtbl"</span><span class="p">,</span> <span class="n">showindex</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-org5d7af4a">
+<h4 id="org5d7af4a">Selenium</h4>
+<div class="outline-text-4" id="text-org5d7af4a">
+<p>I'll use a headless instance of selenium-firefox to grab and render the wikipedia page.</p>
+<div class="highlight">
+<pre><span></span><span class="n">options</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">FirefoxOptions</span><span class="p">()</span>
+<span class="n">options</span><span class="o">.</span><span class="n">headless</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Firefox</span><span class="p">(</span><span class="n">firefox_options</span><span class="o">=</span><span class="n">options</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org84ba9bb">
+<h2 id="org84ba9bb">Middle</h2>
+<div class="outline-text-2" id="text-org84ba9bb"></div>
+<div class="outline-3" id="outline-container-org07b2f2a">
+<h3 id="org07b2f2a">Grab the Page and Make Some Soup</h3>
+<div class="outline-text-3" id="text-org07b2f2a">
+<div class="highlight">
+<pre><span></span><span class="n">URL</span> <span class="o">=</span> <span class="s2">"https://en.wikipedia.org/wiki/List_of_legendary_creatures_by_type"</span>
+
+<span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span>
+</pre></div>
+<p>This page is a little odd in that it uses tables but the tables then contain unordered lists which seem to give pandas a hard time, so I'll have to poke around a little bit using Beautiful Soup first to figure it out.</p>
+<div class="highlight">
+<pre><span></span><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">browser</span><span class="o">.</span><span class="n">page_source</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="outline-4" id="outline-container-org31564b4">
+<h4 id="org31564b4">Looking at the Headings</h4>
+<div class="outline-text-4" id="text-org31564b4">
+<p>The level-2 headlines describe different ways to catalog the creatures, in addition they have "span" tags within them that have the "mw-class" associated with them so we can grab those tags using Beautiful Soup's <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/#css-selectors">select</a> method, which uses CSS selectors.</p>
+<div class="highlight">
+<pre><span></span><span class="n">headlines</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">"h2 span.mw-headline"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">headline</span> <span class="ow">in</span> <span class="n">headlines</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">" - </span><span class="si">{</span><span class="n">headline</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+<ul class="org-ul">
+<li>&lt;span class="mw-headline" id="Animals,_creatures_associated_with"&gt;Animals, creatures associated with&lt;/span&gt;</li>
+<li>&lt;span class="mw-headline" id="Artificial_creatures"&gt;Artificial creatures&lt;/span&gt;</li>
+<li>&lt;span class="mw-headline" id="Body_parts,_creatures_associated_with"&gt;Body parts, creatures associated with&lt;/span&gt;</li>
+<li>&lt;span class="mw-headline" id="Concepts,_creatures_associated_with"&gt;Concepts, creatures associated with&lt;/span&gt;</li>
+<li>&lt;span class="mw-headline" id="Demons"&gt;Demons&lt;/span&gt;</li>
+<li>&lt;span class="mw-headline" id="Elements,_creatures_associated_with"&gt;Elements, creatures associated with&lt;/span&gt;</li>
+<li>&lt;span class="mw-headline" id="Habitats,_creatures_associated_with"&gt;Habitats, creatures associated with&lt;/span&gt;</li>
+<li>&lt;span class="mw-headline" id="Humanoids"&gt;Humanoids&lt;/span&gt;</li>
+<li>&lt;span class="mw-headline" id="Hybrids"&gt;Hybrids&lt;/span&gt;</li>
+<li>&lt;span class="mw-headline" id="Astronomical_objects,_creatures_associated_with"&gt;Astronomical objects, creatures associated with&lt;/span&gt;</li>
+<li>&lt;span class="mw-headline" id="World"&gt;World&lt;/span&gt;</li>
+<li>&lt;span class="mw-headline" id="Creatures_associated_with_Plants"&gt;Creatures associated with Plants&lt;/span&gt;</li>
+<li>&lt;span class="mw-headline" id="Shapeshifters"&gt;Shapeshifters&lt;/span&gt;</li>
+<li>&lt;span class="mw-headline" id="Creatures_associated_with_Times"&gt;Creatures associated with Times&lt;/span&gt;</li>
+<li>&lt;span class="mw-headline" id="Undead"&gt;Undead&lt;/span&gt;</li>
+<li>&lt;span class="mw-headline" id="Miscellaneous"&gt;Miscellaneous&lt;/span&gt;</li>
+<li>&lt;span class="mw-headline" id="References"&gt;References&lt;/span&gt;</li>
+</ul>
+<p>We don't need references, but the other headlines might be helpful in categorizing these animals. Unfortunately the headings are above the sections with the stuff we want - they aren't parents of the sections so to get the actual parts we're going to need to do something else.</p>
+</div>
+</div>
+<div class="outline-4" id="outline-container-org44f733a">
+<h4 id="org44f733a">Tables</h4>
+<div class="outline-text-4" id="text-org44f733a">
+<p>I'll grab all the tables then filter out the ones I don't want - the first three tables are admonitions that the page might not be up to snuff and the last four are references and links to other pages.</p>
+<div class="highlight">
+<pre><span></span><span class="n">tables</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">"table"</span><span class="p">)</span>
+<span class="n">tables</span> <span class="o">=</span> <span class="n">tables</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tables</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-org8d9f8f5">
+<h4 id="org8d9f8f5">The Table-Indices</h4>
+<div class="outline-text-4" id="text-org8d9f8f5">
+<div class="highlight">
+<pre><span></span><span class="n">Table</span> <span class="o">=</span> <span class="n">Namespace</span><span class="p">(</span>
+    <span class="n">aquatic</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">arthropods</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">bears</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-org9128f07">
+<h4 id="org9128f07">Animals Associated With</h4>
+<div class="outline-text-4" id="text-org9128f07"></div>
+<ul class="org-ul">
+<li><a id="orgfbee0b4"></a>Aquatic and Marine Animals<br>
+<div class="outline-text-5" id="text-orgfbee0b4">
+<div class="highlight">
+<pre><span></span><span class="n">PATTERN</span> <span class="o">=</span> <span class="s2">"\w+"</span>
+<span class="n">WEIRD</span> <span class="o">=</span> <span class="s2">"</span><span class="se">\xa0</span><span class="s2">"</span>
+<span class="n">ERASE</span> <span class="o">=</span> <span class="s2">""</span>
+
+<span class="n">table</span> <span class="o">=</span> <span class="n">tables</span><span class="p">[</span><span class="n">Table</span><span class="o">.</span><span class="n">aquatic</span><span class="p">]</span>
+<span class="n">items</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">"li"</span><span class="p">)</span>
+<span class="n">DASH</span> <span class="o">=</span> <span class="n">items</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="p">[</span><span class="mi">23</span><span class="p">]</span>
+<span class="n">animals</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">origin</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">description</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">WEIRD</span><span class="p">,</span> <span class="n">ERASE</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">DASH</span><span class="p">,</span> <span class="n">ERASE</span><span class="p">)</span>
+    <span class="n">tokens</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">" ("</span><span class="p">)</span>
+    <span class="n">two_tokens</span> <span class="o">=</span> <span class="n">tokens</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">")"</span><span class="p">)</span>
+    <span class="n">animals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tokens</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+    <span class="n">origin</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">two_tokens</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+    <span class="n">description</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">two_tokens</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+
+<span class="n">beasts</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span>
+    <span class="n">animal</span><span class="o">=</span><span class="n">animals</span><span class="p">,</span>
+    <span class="n">origin</span><span class="o">=</span><span class="n">origin</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">))</span>
+<span class="n">beasts</span><span class="p">[</span><span class="s2">"type"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"Aquatic"</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">TABLE</span><span class="p">(</span><span class="n">beasts</span><span class="p">))</span>
+</pre></div>
+<table border="2" cellpadding="6" cellspacing="0" frame="hsides" rules="groups">
+<colgroup>
+<col class="org-left">
+<col class="org-left">
+<col class="org-left">
+<col class="org-left"></colgroup>
+<thead>
+<tr>
+<th class="org-left" scope="col">animal</th>
+<th class="org-left" scope="col">origin</th>
+<th class="org-left" scope="col">description</th>
+<th class="org-left" scope="col">type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Bake-kujira</td>
+<td class="org-left">Japanese</td>
+<td class="org-left">ghost whale</td>
+<td class="org-left">Aquatic</td>
+</tr>
+<tr>
+<td class="org-left">Ceffyl Dŵr</td>
+<td class="org-left">Welsh</td>
+<td class="org-left">water horse</td>
+<td class="org-left">Aquatic</td>
+</tr>
+<tr>
+<td class="org-left">Encantado</td>
+<td class="org-left">Brazil</td>
+<td class="org-left">shapeshifting trickster dolphins</td>
+<td class="org-left">Aquatic</td>
+</tr>
+<tr>
+<td class="org-left">Kelpie</td>
+<td class="org-left">Scottish</td>
+<td class="org-left">water horse</td>
+<td class="org-left">Aquatic</td>
+</tr>
+<tr>
+<td class="org-left">Kushtaka</td>
+<td class="org-left">Tlingit</td>
+<td class="org-left">shapeshifting "land otter man"</td>
+<td class="org-left">Aquatic</td>
+</tr>
+<tr>
+<td class="org-left">Selkie</td>
+<td class="org-left">Scottish</td>
+<td class="org-left">shapeshifting seal people</td>
+<td class="org-left">Aquatic</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li><a id="org2fa2358"></a>Arthropods<br>
+<div class="outline-text-5" id="text-org2fa2358">
+<div class="highlight">
+<pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">tables</span><span class="p">[</span><span class="n">Table</span><span class="o">.</span><span class="n">arthropods</span><span class="p">]</span>
+<span class="n">animal</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">origin</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">description</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">table</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">"li"</span><span class="p">):</span>
+    <span class="n">first</span><span class="p">,</span> <span class="n">last</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">"("</span><span class="p">)</span>
+    <span class="n">second</span><span class="p">,</span> <span class="n">third</span> <span class="o">=</span> <span class="n">last</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">WEIRD</span><span class="si">}{</span><span class="n">DASH</span><span class="si">}</span><span class="s2"> "</span><span class="p">)</span>
+    <span class="n">first</span> <span class="o">=</span> <span class="n">first</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">second</span> <span class="o">=</span> <span class="n">second</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">")"</span><span class="p">,</span> <span class="n">ERASE</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">third</span> <span class="o">=</span> <span class="n">third</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">animal</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">first</span><span class="p">)</span>
+    <span class="n">origin</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">second</span><span class="p">)</span>
+    <span class="n">description</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">third</span><span class="p">)</span>
+
+<span class="n">to_append</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span>
+    <span class="nb">dict</span><span class="p">(</span>
+        <span class="n">animal</span><span class="o">=</span><span class="n">animal</span><span class="p">,</span>
+        <span class="n">origin</span><span class="o">=</span><span class="n">origin</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="n">description</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+<span class="n">to_append</span><span class="p">[</span><span class="s2">"type"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"Arthropod"</span>
+<span class="n">beasts</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">beasts</span><span class="p">,</span> <span class="n">to_append</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">TABLE</span><span class="p">(</span><span class="n">to_append</span><span class="p">))</span>
+</pre></div>
+<table border="2" cellpadding="6" cellspacing="0" frame="hsides" rules="groups">
+<colgroup>
+<col class="org-left">
+<col class="org-left">
+<col class="org-left">
+<col class="org-left"></colgroup>
+<thead>
+<tr>
+<th class="org-left" scope="col">animal</th>
+<th class="org-left" scope="col">origin</th>
+<th class="org-left" scope="col">description</th>
+<th class="org-left" scope="col">type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Anansi</td>
+<td class="org-left">West African</td>
+<td class="org-left">trickster spider</td>
+<td class="org-left">Arthropod</td>
+</tr>
+<tr>
+<td class="org-left">Arachne</td>
+<td class="org-left">Greek</td>
+<td class="org-left">weaver cursed into a spider</td>
+<td class="org-left">Arthropod</td>
+</tr>
+<tr>
+<td class="org-left">Khepri</td>
+<td class="org-left">Ancient Egyptian</td>
+<td class="org-left">beetle who pushes the sun</td>
+<td class="org-left">Arthropod</td>
+</tr>
+<tr>
+<td class="org-left">Tsuchigumo</td>
+<td class="org-left">Japanese</td>
+<td class="org-left">shapeshifting giant spider</td>
+<td class="org-left">Arthropod</td>
+</tr>
+<tr>
+<td class="org-left">Myrmecoleon</td>
+<td class="org-left">Christian</td>
+<td class="org-left">ant-lion</td>
+<td class="org-left">Arthropod</td>
+</tr>
+<tr>
+<td class="org-left">Myrmidons</td>
+<td class="org-left">Greek</td>
+<td class="org-left">warriors created from ants by Zeus</td>
+<td class="org-left">Arthropod</td>
+</tr>
+<tr>
+<td class="org-left">Jorōgumo</td>
+<td class="org-left">Japanese</td>
+<td class="org-left">ghost woman who shapeshifts into a spider</td>
+<td class="org-left">Arthropod</td>
+</tr>
+<tr>
+<td class="org-left">Karkinos</td>
+<td class="org-left">Greek</td>
+<td class="org-left">Cancer the crab</td>
+<td class="org-left">Arthropod</td>
+</tr>
+<tr>
+<td class="org-left">Mothman</td>
+<td class="org-left">American cryptid</td>
+<td class="org-left">man with moth wings and features</td>
+<td class="org-left">Arthropod</td>
+</tr>
+<tr>
+<td class="org-left">Pabilsag</td>
+<td class="org-left">Babylonian</td>
+<td class="org-left">Sagittarius-like creature with scorpion tail</td>
+<td class="org-left">Arthropod</td>
+</tr>
+<tr>
+<td class="org-left">Scorpion man</td>
+<td class="org-left">Babylonian</td>
+<td class="org-left">protector of travellers</td>
+<td class="org-left">Arthropod</td>
+</tr>
+<tr>
+<td class="org-left">Selket</td>
+<td class="org-left">Ancient Egyptian</td>
+<td class="org-left">scorpion death/healing goddess</td>
+<td class="org-left">Arthropod</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li><a id="orge771068"></a>Bears<br>
+<div class="outline-text-5" id="text-orge771068">
+<div class="highlight">
+<pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">tables</span><span class="p">[</span><span class="n">Table</span><span class="o">.</span><span class="n">bears</span><span class="p">]</span>
+<span class="n">animal</span><span class="p">,</span> <span class="n">origin</span><span class="p">,</span> <span class="n">description</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">table</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">"li"</span><span class="p">):</span>
+    <span class="n">first</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">"("</span><span class="p">)</span>
+    <span class="n">second</span><span class="p">,</span> <span class="n">third</span> <span class="o">=</span> <span class="n">right</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">f</span><span class="s2">")</span><span class="si">{</span><span class="n">WEIRD</span><span class="si">}{</span><span class="n">DASH</span><span class="si">}</span><span class="s2"> "</span><span class="p">)</span>
+    <span class="n">animal</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">first</span><span class="p">)</span>
+    <span class="n">origin</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">second</span><span class="p">)</span>
+    <span class="n">description</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">third</span><span class="p">)</span>
+<span class="n">to_append</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span>
+    <span class="nb">dict</span><span class="p">(</span><span class="n">animal</span><span class="o">=</span><span class="n">animal</span><span class="p">,</span>
+         <span class="n">origin</span><span class="o">=</span><span class="n">origin</span><span class="p">,</span>
+         <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">beasts</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">beasts</span><span class="p">,</span> <span class="n">to_append</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">TABLE</span><span class="p">(</span><span class="n">to_append</span><span class="p">))</span>
+</pre></div>
+<table border="2" cellpadding="6" cellspacing="0" frame="hsides" rules="groups">
+<colgroup>
+<col class="org-left">
+<col class="org-left">
+<col class="org-left"></colgroup>
+<thead>
+<tr>
+<th class="org-left" scope="col">animal</th>
+<th class="org-left" scope="col">origin</th>
+<th class="org-left" scope="col">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Bugbear</td>
+<td class="org-left">Celtic</td>
+<td class="org-left">child-eating hobgoblin</td>
+</tr>
+<tr>
+<td class="org-left">Callisto</td>
+<td class="org-left">Greek</td>
+<td class="org-left">A nymph who was turned into a bear by Hera.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article">
+<header>
 <h1 class="p-name entry-title"><a class="u-url" href="posts/pulling-a-list-of-animals-from-wikipedia/">Pulling A List of Animals From Wikipedia</a></h1>
 <div class="metadata">
 <p class="byline author vcard"><span class="byline-name fn" itemprop="author">Cloistered Monkey</span></p>
@@ -61,39 +1603,39 @@
 </div>
 </header>
 <div class="p-summary entry-summary">
-<div id="table-of-contents">
+<div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents">
+<div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#org6401ad7">Beginning</a>
+<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#orgd11799d">Beginning</a>
 <ul>
-<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#org157536c">Set Up</a></li>
+<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#org078c464">Set Up</a></li>
 </ul>
 </li>
-<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#orgdff301e">Middle</a>
+<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#orge649fde">Middle</a>
 <ul>
-<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#org829e3a6">Grabbing Some HTML</a></li>
-<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#org47fefa0">Building the Table</a></li>
-<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#orgf53dedc">Cleaning Up the Table</a></li>
-<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#orgf8eb8ac">Meats</a></li>
-<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#org5e8534d">Again, But With Soup This Time</a></li>
+<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#org34633ce">Grabbing Some HTML</a></li>
+<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#org2b0889a">Building the Table</a></li>
+<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#org3527939">Cleaning Up the Table</a></li>
+<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#orgf43e2c6">Meats</a></li>
+<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#orgc01f2d9">Again, But With Soup This Time</a></li>
 </ul>
 </li>
-<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#org1000ea6">End</a></li>
+<li><a href="posts/pulling-a-list-of-animals-from-wikipedia/#org1ee1b0e">End</a></li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org6401ad7">
-<h2 id="org6401ad7">Beginning</h2>
-<div class="outline-text-2" id="text-org6401ad7">
+<div class="outline-2" id="outline-container-orgd11799d">
+<h2 id="orgd11799d">Beginning</h2>
+<div class="outline-text-2" id="text-orgd11799d">
 <p>As part of my pursuit of randomness I'm creating lists of things to select from. In this case I wanted a list of animals to create a <i>Visual Alphabet</i> and I decided to grab one from wikipedia. This is what I did.</p>
 </div>
-<div class="outline-3" id="outline-container-org157536c">
-<h3 id="org157536c">Set Up</h3>
-<div class="outline-text-3" id="text-org157536c"></div>
-<div class="outline-4" id="outline-container-org2fe9365">
-<h4 id="org2fe9365">Imports</h4>
-<div class="outline-text-4" id="text-org2fe9365">
+<div class="outline-3" id="outline-container-org078c464">
+<h3 id="org078c464">Set Up</h3>
+<div class="outline-text-3" id="text-org078c464"></div>
+<div class="outline-4" id="outline-container-org3bfeb21">
+<h4 id="org3bfeb21">Imports</h4>
+<div class="outline-text-4" id="text-org3bfeb21">
 <div class="highlight">
 <pre><span></span><span class="c1"># python</span>
 <span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
@@ -117,18 +1659,18 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgd900a2b">
-<h4 id="orgd900a2b">Set Up Tabulate</h4>
-<div class="outline-text-4" id="text-orgd900a2b">
+<div class="outline-4" id="outline-container-org42546a9">
+<h4 id="org42546a9">Set Up Tabulate</h4>
+<div class="outline-text-4" id="text-org42546a9">
 <p>This is just to make printing the pandas data-frames a little easier. <a href="https://github.com/nnicandro/emacs-jupyter">emacs-jupyter</a> actually does a pretty good job of rendering them as HTML like a regular jupyter notebook, but this makes it a little more readable while in emacs, plus I can control things better.</p>
 <div class="highlight">
 <pre><span></span><span class="n">TABLE</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">tabulate</span><span class="p">,</span> <span class="n">showindex</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">tablefmt</span><span class="o">=</span><span class="s2">"orgtbl"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="s2">"keys"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org0c4fa9f">
-<h4 id="org0c4fa9f">Set Up Selenium</h4>
-<div class="outline-text-4" id="text-org0c4fa9f">
+<div class="outline-4" id="outline-container-org133e123">
+<h4 id="org133e123">Set Up Selenium</h4>
+<div class="outline-text-4" id="text-org133e123">
 <p>I started this using Requests-HTML because wikipedia uses JQuery to render the tables and Requests-HTML it uses <a href="https://pyppeteer.github.io/pyppeteer/index.html">pyppeteer</a> to render javascript (as opposed to the reqular requests that just does an HTTP GET and so leaves the tables un-rendered). Unfortunately I can't get it to work in a jupyter notebook. One problem is that both jupyter and Requests-HTML use asyncio - using <a href="https://github.com/erdewit/nest_asyncio">nest_asyncio</a> allows pypeteer to run in the notebook but then I get this error:</p>
 <div class="highlight">
 <pre><span></span><span class="ne">AttributeError</span><span class="p">:</span> <span class="s1">'coroutine'</span> <span class="nb">object</span> <span class="n">has</span> <span class="n">no</span> <span class="n">attribute</span> <span class="s1">'newPage'</span>
@@ -143,12 +1685,12 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgdff301e">
-<h2 id="orgdff301e">Middle</h2>
-<div class="outline-text-2" id="text-orgdff301e"></div>
-<div class="outline-3" id="outline-container-org829e3a6">
-<h3 id="org829e3a6">Grabbing Some HTML</h3>
-<div class="outline-text-3" id="text-org829e3a6">
+<div class="outline-2" id="outline-container-orge649fde">
+<h2 id="orge649fde">Middle</h2>
+<div class="outline-text-2" id="text-orge649fde"></div>
+<div class="outline-3" id="outline-container-org34633ce">
+<h3 id="org34633ce">Grabbing Some HTML</h3>
+<div class="outline-text-3" id="text-org34633ce">
 <p>Just let selenium render the JQuery tables for us.</p>
 <div class="highlight">
 <pre><span></span><span class="n">URL</span> <span class="o">=</span> <span class="s2">"https://en.wikipedia.org/wiki/List_of_animal_names"</span>
@@ -156,9 +1698,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org47fefa0">
-<h3 id="org47fefa0">Building the Table</h3>
-<div class="outline-text-3" id="text-org47fefa0">
+<div class="outline-3" id="outline-container-org2b0889a">
+<h3 id="org2b0889a">Building the Table</h3>
+<div class="outline-text-3" id="text-org2b0889a">
 <p>After giving up on Requests-HTML I was using <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/#searching-the-tree">Beautiful Soup</a> to pull out the table so I could give it to pandas, but then I looked at the pandas documentation and it turns out they already do this, so you don't need to, but you do need to know how many tables there are and which one you want (it returns a list of dataframes). In this case I want the last one.</p>
 <div class="highlight">
 <pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="n">browser</span><span class="o">.</span><span class="n">page_source</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
@@ -199,9 +1741,9 @@
 <p>That's a little odd looking.</p>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgf53dedc">
-<h3 id="orgf53dedc">Cleaning Up the Table</h3>
-<div class="outline-text-3" id="text-orgf53dedc">
+<div class="outline-3" id="outline-container-org3527939">
+<h3 id="org3527939">Cleaning Up the Table</h3>
+<div class="outline-text-3" id="text-org3527939">
 <p>First, what's with all the <code>A</code> entries in the header?</p>
 <div class="highlight">
 <pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
@@ -263,9 +1805,9 @@ Index(['Animal', 'Young', 'Female', 'Male', 'Collective noun',
 </table>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgf8eb8ac">
-<h3 id="orgf8eb8ac">Meats</h3>
-<div class="outline-text-3" id="text-orgf8eb8ac">
+<div class="outline-3" id="outline-container-orgf43e2c6">
+<h3 id="orgf43e2c6">Meats</h3>
+<div class="outline-text-3" id="text-orgf43e2c6">
 <p>At this point I don't know what I really want to do with this. I was originally going to just save the animal names but now the other stuff looks kind of interesting. As an aside I had to look up <a href="https://en.wikipedia.org/wiki/Collateral_adjective">Collateral Adjective</a> on wikipedia:</p>
 <blockquote>
 <p>A collateral adjective is an adjective that is identified with a particular noun in meaning, but that is not derived from that noun.</p>
@@ -317,9 +1859,9 @@ Index(['Animal', 'Young', 'Female', 'Male', 'Collective noun',
 <p>Oops. Maybe I should have looked at the table more closely.</p>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org5e8534d">
-<h3 id="org5e8534d">Again, But With Soup This Time</h3>
-<div class="outline-text-3" id="text-org5e8534d">
+<div class="outline-3" id="outline-container-orgc01f2d9">
+<h3 id="orgc01f2d9">Again, But With Soup This Time</h3>
+<div class="outline-text-3" id="text-orgc01f2d9">
 <p>Let's see if using Beautiful Soup will help clean up the dataset a little.</p>
 <div class="highlight">
 <pre><span></span><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">browser</span><span class="o">.</span><span class="n">page_source</span><span class="p">)</span>
@@ -430,7 +1972,7 @@ Index(['Animal', 'Young', 'Female', 'Male', 'Collective noun',
 <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">meats</span><span class="o">.</span><span class="n">itertuples</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">row</span><span class="o">.</span><span class="n">Animal</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">row</span><span class="o">.</span><span class="n">Meat</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
-<pre class="example">
+<pre class="example" id="orgdf3c006">
 Cattle[note 3] (list): beef veal
 Chicken (list): poultry
 Deer: venison humble (organ meat)
@@ -485,7 +2027,7 @@ Whale: blubber
 <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">meats</span><span class="o">.</span><span class="n">itertuples</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">row</span><span class="o">.</span><span class="n">Animal</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">row</span><span class="o">.</span><span class="n">Meat</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
-<pre class="example">
+<pre class="example" id="org6c0fb58">
 Cattle  : beef veal
 Chicken : poultry
 Deer: venison humble (organ meat)
@@ -574,7 +2116,7 @@ Whale: blubber
 <span class="nb">print</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">32</span><span class="p">:</span><span class="mi">32</span><span class="p">])</span>
 </pre></div>
-<pre class="example">
+<pre class="example" id="orgb3c08f0">
                    Animal     Young   Female  Male  \
 32  Cattle[note 3] (list)  calf[31]  cow[32]  bull   
 
@@ -597,7 +2139,7 @@ Whale: blubber
 <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">meats</span><span class="o">.</span><span class="n">itertuples</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">row</span><span class="o">.</span><span class="n">Animal</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">row</span><span class="o">.</span><span class="n">Meat</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
-<pre class="example">
+<pre class="example" id="orgfe376e1">
 Cattle  : beef veal
 Chicken : poultry
 Deer: venison humble (organ meat)
@@ -640,7 +2182,7 @@ Whale: blubber
 <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">meats</span><span class="o">.</span><span class="n">itertuples</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">row</span><span class="o">.</span><span class="n">Animal</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">row</span><span class="o">.</span><span class="n">Meat</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
-<pre class="example">
+<pre class="example" id="org410202b">
 Cattle: beef veal
 Chicken: poultry
 Deer: venison humble (organ meat)
@@ -668,9 +2210,9 @@ Whale: blubber
 </pre></div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org1000ea6">
-<h2 id="org1000ea6">End</h2>
-<div class="outline-text-2" id="text-org1000ea6">
+<div class="outline-2" id="outline-container-org1ee1b0e">
+<h2 id="org1ee1b0e">End</h2>
+<div class="outline-text-2" id="text-org1ee1b0e">
 <p>And now to save it for later.</p>
 <div class="highlight">
 <pre><span></span><span class="n">load_dotenv</span><span class="p">()</span>
@@ -725,7 +2267,7 @@ Name: 59, dtype: object
 </article>
 </div>
 <ul class="pager postindexpager clearfix">
-<li class="previous"><a href="index-2.html" rel="prev">Newer posts</a></li>
+<li class="previous"><a href="." rel="prev">Newer posts</a></li>
 </ul>
 <!--End of body content-->
 <footer id="footer">Contents © 2023 Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a>

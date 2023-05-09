@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron (Posts about testing)</title><link>https://necromuralist.github.io/Ape-Iron/</link><description></description><atom:link href="https://necromuralist.github.io/Ape-Iron/categories/testing.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;Cloistered Monkey&lt;/a&gt; &lt;p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"&gt;&lt;a property="dct:title" rel="cc:attributionURL" href="https://necromuralist.github.io/Ape-Iron/"&gt;Ape Iron&lt;/a&gt; by &lt;a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/necromuralist"&gt;The Cloistered Monkey&lt;/a&gt; is licensed under &lt;a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY 4.0&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;&lt;/a&gt;&lt;/p&gt;</copyright><lastBuildDate>Wed, 15 Mar 2023 01:52:19 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Bubba Test</title><link>https://necromuralist.github.io/Ape-Iron/posts/bubba-test/</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="outline-container-orgbcad24d" class="outline-2"&gt;
-&lt;h2 id="orgbcad24d"&gt;Big Bubba&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgbcad24d"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron (Posts about testing)</title><link>https://necromuralist.github.io/Ape-Iron/</link><description></description><atom:link href="https://necromuralist.github.io/Ape-Iron/categories/testing.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;Cloistered Monkey&lt;/a&gt; &lt;p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"&gt;&lt;a property="dct:title" rel="cc:attributionURL" href="https://necromuralist.github.io/Ape-Iron/"&gt;Ape Iron&lt;/a&gt; by &lt;a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/necromuralist"&gt;The Cloistered Monkey&lt;/a&gt; is licensed under &lt;a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY 4.0&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;&lt;/a&gt;&lt;/p&gt;</copyright><lastBuildDate>Tue, 09 May 2023 20:04:55 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Bubba Test</title><link>https://necromuralist.github.io/Ape-Iron/posts/bubba-test/</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="outline-container-org5175ef8" class="outline-2"&gt;
+&lt;h2 id="org5175ef8"&gt;Big Bubba&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org5175ef8"&gt;
 &lt;p&gt;
 This is a webp image converted from a 600 dpi scanned image that was converted to grayscale using gimp.
 &lt;/p&gt;
@@ -18,9 +18,9 @@ This is a webp image converted from a 600 dpi scanned image that was converted t
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org0e42e62" class="outline-2"&gt;
-&lt;h2 id="org0e42e62"&gt;Smaller Bubba&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org0e42e62"&gt;
+&lt;div id="outline-container-orge61d6d8" class="outline-2"&gt;
+&lt;h2 id="orge61d6d8"&gt;Smaller Bubba&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orge61d6d8"&gt;
 &lt;p&gt;
 This is the same image but scaled down to a width of 2,500 pixels.
 &lt;/p&gt;
@@ -36,9 +36,9 @@ This is the same image but scaled down to a width of 2,500 pixels.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orge2bcfc3" class="outline-2"&gt;
-&lt;h2 id="orge2bcfc3"&gt;Hosted On PCloud&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orge2bcfc3"&gt;
+&lt;div id="outline-container-orgbddcbdf" class="outline-2"&gt;
+&lt;h2 id="orgbddcbdf"&gt;Hosted On PCloud&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgbddcbdf"&gt;
 &lt;p&gt;
 This is the smaller image hosted on pcloud instead of as part of this repository. To do this you need to go to put the image in the pCloud "Public Folder" and then go to the pcloud website to get the URL. The "Link For Websites" they give you is an anchor so you can download the image (or whatever file you're sharing, so you need to grap the URL and put it in an &lt;code&gt;img&lt;/code&gt; tag instead).
 &lt;/p&gt;
@@ -48,16 +48,16 @@ This is the smaller image hosted on pcloud instead of as part of this repository
 &lt;/div&gt;
 
 
-&lt;div id="outline-container-org4524674" class="outline-2"&gt;
-&lt;h2 id="org4524674"&gt;Conclusion&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org4524674"&gt;
+&lt;div id="outline-container-org13bb64d" class="outline-2"&gt;
+&lt;h2 id="org13bb64d"&gt;Conclusion&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org13bb64d"&gt;
 &lt;p&gt;
 The intention here was to figure out either what size to make the image so that it won't eat up my GitHub quota or to see how well putting it on pCloud would work. This particular image might not have been the best test for this, though, as the file size endede up being small enough that worrying about using an external image host is maybe not worth the time spent thinking about it. But I'll keep testing as I make the images more complex and perhaps at some point it will make sense to use an external host. In the mean time, using the bigger file didn't really improve the image so at least I know that using 2,500 pixels for the width is good enough.
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><category>comics</category><category>testing</category><guid>https://necromuralist.github.io/Ape-Iron/posts/bubba-test/</guid><pubDate>Wed, 15 Mar 2023 01:04:56 GMT</pubDate></item><item><title>Bag Man</title><link>https://necromuralist.github.io/Ape-Iron/posts/bag-man/</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="outline-container-org0c3bbdf" class="outline-2"&gt;
-&lt;h2 id="org0c3bbdf"&gt;The Bag Man&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org0c3bbdf"&gt;
+&lt;/div&gt;</description><category>comics</category><category>testing</category><guid>https://necromuralist.github.io/Ape-Iron/posts/bubba-test/</guid><pubDate>Wed, 15 Mar 2023 01:04:56 GMT</pubDate></item><item><title>Bag Man</title><link>https://necromuralist.github.io/Ape-Iron/posts/bag-man/</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="outline-container-org692023c" class="outline-2"&gt;
+&lt;h2 id="org692023c"&gt;The Bag Man&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org692023c"&gt;
 &lt;p&gt;
 This post was created to see what happens in the slideshow if you put all the image files in the &lt;code&gt;images&lt;/code&gt; folder without sub-folders, it's a companion to the &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/image-testing/"&gt;Image Testing&lt;/a&gt; post.
 &lt;/p&gt;
@@ -68,14 +68,14 @@ This post was created to see what happens in the slideshow if you put all the im
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgb908801" class="outline-2"&gt;
-&lt;h2 id="orgb908801"&gt;The Bag Man Without Thumbnails&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgb908801"&gt;
+&lt;div id="outline-container-org39f46a3" class="outline-2"&gt;
+&lt;h2 id="org39f46a3"&gt;The Bag Man Without Thumbnails&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org39f46a3"&gt;
 &lt;p&gt;
 If you want to just display the image they recommend you put it in the &lt;code&gt;files&lt;/code&gt; folder, but you can still reference it in the images folder too, but you need to be aware of the fact that the folder path has to change. This org-reference:
 &lt;/p&gt;
 
-&lt;pre class="example"&gt;
+&lt;pre class="example" id="org0d93db7"&gt;
 [[img-url:../../images/bag-man.webp]]
 &lt;/pre&gt;
 
@@ -89,9 +89,9 @@ Will include this (full-sized) image (&lt;b&gt;&lt;b&gt;note:&lt;/b&gt;&lt;/b&gt
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgc4090f2" class="outline-2"&gt;
-&lt;h2 id="orgc4090f2"&gt;Bag-Man Re-Crafted&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgc4090f2"&gt;
+&lt;div id="outline-container-org26e5a14" class="outline-2"&gt;
+&lt;h2 id="org26e5a14"&gt;Bag-Man Re-Crafted&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org26e5a14"&gt;
 &lt;p&gt;
 This was a tracing of the bag man onto kraft paper to mess around with gouache.
 &lt;/p&gt;
@@ -100,31 +100,31 @@ This was a tracing of the bag man onto kraft paper to mess around with gouache.
 &lt;a href="https://necromuralist.github.io/Ape-Iron/images/bag-man-kraft.webp" class="image-reference"&gt;&lt;img src="https://necromuralist.github.io/Ape-Iron/images/bag-man-kraft.thumbnail.webp" alt="Bag-Man &amp;amp; Purse-Dog On Kraft Paper"&gt;&lt;/a&gt;
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><category>images</category><category>testing</category><guid>https://necromuralist.github.io/Ape-Iron/posts/bag-man/</guid><pubDate>Fri, 12 Feb 2021 02:03:27 GMT</pubDate></item><item><title>Image Testing</title><link>https://necromuralist.github.io/Ape-Iron/posts/image-testing/</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="outline-container-org9cd1d65" class="outline-2"&gt;
-&lt;h2 id="org9cd1d65"&gt;Thumbnail With Baguette Box&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org9cd1d65"&gt;
+&lt;/div&gt;</description><category>images</category><category>testing</category><guid>https://necromuralist.github.io/Ape-Iron/posts/bag-man/</guid><pubDate>Fri, 12 Feb 2021 02:03:27 GMT</pubDate></item><item><title>Image Testing</title><link>https://necromuralist.github.io/Ape-Iron/posts/image-testing/</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="outline-container-orgc0b1a0b" class="outline-2"&gt;
+&lt;h2 id="orgc0b1a0b"&gt;Thumbnail With Baguette Box&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgc0b1a0b"&gt;
 &lt;p&gt;
 This is a look at using an &lt;a href="https://getnikola.com/handbook.html#embedding-images"&gt;embedded image&lt;/a&gt; from the &lt;code&gt;images&lt;/code&gt; folder. If you put the files in the &lt;code&gt;images&lt;/code&gt; folder then it automatically creates thumbnails and a slide-show, but there's a little trick to getting the folder references right. 
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgc4aa039" class="outline-3"&gt;
-&lt;h3 id="orgc4aa039"&gt;HTML&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgc4aa039"&gt;
+&lt;div id="outline-container-org29c36c8" class="outline-3"&gt;
+&lt;h3 id="org29c36c8"&gt;HTML&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org29c36c8"&gt;
 &lt;p&gt;
 If you use HTML you can just assume that the &lt;code&gt;images&lt;/code&gt; folder is at the root of the site (make sure to set the class to "reference").
 &lt;/p&gt;
 
-&lt;pre class="example"&gt;
+&lt;pre class="example" id="orgccabf2b"&gt;
 &amp;lt;a class="reference" href="/images/eyeball-man.webp" alt="Eyeball Man"&amp;gt;&amp;lt;img src="/images/eyeball-man.thumbnail.webp"&amp;gt;&amp;lt;/a&amp;gt;
 &lt;/pre&gt;
 
 &lt;a class="reference" href="https://necromuralist.github.io/Ape-Iron/images/eyeball-man.webp" alt="Eyeball Man"&gt;&lt;img src="https://necromuralist.github.io/Ape-Iron/images/eyeball-man.thumbnail.webp"&gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org8eedc77" class="outline-3"&gt;
-&lt;h3 id="org8eedc77"&gt;The Thumbnail Shortcode&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org8eedc77"&gt;
+&lt;div id="outline-container-orgcd867cf" class="outline-3"&gt;
+&lt;h3 id="orgcd867cf"&gt;The Thumbnail Shortcode&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgcd867cf"&gt;
 &lt;p&gt;
 It took me a while to stumble upon this, but there is an &lt;code&gt;image&lt;/code&gt; shortcode for those of us not using ReST (although it isn't directly linked to in the documentation for the ReST directive, from what I could tell). So if you want to do it the easier way:
 &lt;/p&gt;
@@ -148,9 +148,9 @@ This will give you a thumbnail which will produce a pop-up to the original image
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org281729f" class="outline-2"&gt;
-&lt;h2 id="org281729f"&gt;More Notes&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org281729f"&gt;
+&lt;div id="outline-container-org21f38f2" class="outline-2"&gt;
+&lt;h2 id="org21f38f2"&gt;More Notes&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org21f38f2"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;The &lt;code&gt;alt&lt;/code&gt; attribute adds a title to the images in the slide show&lt;/li&gt;
 &lt;li&gt;Nikola builds the slideshow from all the images on the page. So if you only have one post open, it will show the post's images, but if you are in the blog-post index and there's more than one post shown, it will pick up the images from all the posts.&lt;/li&gt;
