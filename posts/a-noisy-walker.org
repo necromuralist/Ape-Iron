@@ -1,0 +1,64 @@
+#+BEGIN_COMMENT
+.. title: A Noisy Walker
+.. slug: a-noisy-walker
+.. date: 2023-05-10 18:16:09 UTC-07:00
+.. tags: p5,nature of code,noise
+.. category: P5
+.. link: 
+.. description: A Noise Walker. 
+.. type: text
+.. status: 
+.. updated: 
+.. template: p5.tmpl
+#+END_COMMENT
+
+**Note To Viewers At Home:** This sketch disturbs my rabbit. Viewer discretion is advised.
+
+{{% javascripttag source="walker.js" %}}
+{{% p5div source="sketch.js" divid="noisy-walker" %}}
+
+#+begin_src js :tangle ../files/posts/a-noisy-walker/walker.js
+class NoiseWalker {
+  constructor(p5) {
+    this.p5 = p5
+    this.position = p5.createVector(p5.width / 2, p5.height / 2);
+    // Perlin noise x and y offset
+    this.noff = p5.createVector(p5.random(1000), p5.random(1000));
+  }
+
+  display() {
+    this.p5.strokeWeight(2);
+    this.p5.fill("cornflowerblue");
+    this.p5.stroke("black");
+    this.p5.ellipse(this.position.x, this.position.y, 48, 48);
+  }
+  
+
+  walk() {
+    // Noise returns a value between 0 and 1
+    this.position.x = this.p5.map(this.p5.noise(this.noff.x), 0, 1, 0, this.p5.width);
+    this.position.y = this.p5.map(this.p5.noise(this.noff.y), 0, 1, 0, this.p5.height);
+    this.noff.add(0.01, 0.01, 0);
+  }
+}
+
+#+end_src
+
+#+begin_src js :tangle ../files/posts/a-noisy-walker/sketch.js
+function noise_walk(p5js) {
+  let walker;
+
+  p5js.setup = function() {
+    p5js.createCanvas(1000, 400); // creating canvas of size 640 x 240
+    walker = new NoiseWalker(p5js); // creating an instance/object of class Walker
+    p5js.background("white");
+  } // end setup
+
+  p5js.draw = function() {
+    walker.walk();
+    walker.display();
+  }
+} // end noise_walker
+
+new p5(noise_walk, "noisy-walker")
+#+end_src
