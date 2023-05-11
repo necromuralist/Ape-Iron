@@ -148,7 +148,7 @@ p5js.setup = function() {
       document.getElementById(WALKER_SKETCH_DIV).offsetWidth, HEIGHT);
   walker = new Walker(p5js.width/2, p5js.height/2, STEP_LIMIT, p5js);
   p5js.background(WHITE);
-} // end seutp
+} // end setup
 #+end_src
 
 ** Draw
@@ -167,8 +167,8 @@ And there it is. One thing to note is that there's no checking of the position t
 
 * Sources
 ** The Coding Train
-- 1.1 What is a Vector? [Internet]. [cited 2023 May 9]. Available from: https://thecodingtrain.com
+- What is a Vector? [Internet]. [cited 2023 May 9]. Available from: https://thecodingtrain.com
 
 ** P5 Reference
-- reference | createVector() [Internet]. [cited 2023 May 9]. Available from: https://p5js.org/reference/#/p5/createVector
-- reference | p5.Vector [Internet]. [cited 2023 May 9]. Available from: https://p5js.org/reference/#/p5.Vector
+- P5 reference | createVector() [Internet]. [cited 2023 May 9]. Available from: https://p5js.org/reference/#/p5/createVector
+- P5 reference | p5.Vector [Internet]. [cited 2023 May 9]. Available from: https://p5js.org/reference/#/p5.Vector

@@ -13,7 +13,7 @@ function random_walk(p5js){
         document.getElementById(WALKER_SKETCH_DIV).offsetWidth, HEIGHT);
     walker = new Walker(p5js.width/2, p5js.height/2, STEP_LIMIT, p5js);
     p5js.background(WHITE);
-  } // end seutp 
+  } // end setup 
 
   /** Draw a frame */
   p5js.draw = function() {
