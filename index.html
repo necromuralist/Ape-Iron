@@ -17,7 +17,8 @@
 <link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
 <link href="favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
 <link href="site.webmanifest" rel="manifest">
-<link href="posts/a-random-walker/" rel="prefetch" type="text/html">
+<link href="posts/a-noisy-walker/" rel="prefetch" type="text/html">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
 </head>
@@ -48,6 +49,192 @@
 <div class="postindex">
 <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article">
 <header>
+<h1 class="p-name entry-title"><a class="u-url" href="posts/a-noisy-walker/">A Noisy Walker</a></h1>
+<div class="metadata">
+<p class="byline author vcard"><span class="byline-name fn" itemprop="author">Cloistered Monkey</span></p>
+<p class="dateline"><a href="posts/a-noisy-walker/" rel="bookmark"><time class="published dt-published" datetime="2023-05-10T18:16:09-07:00" itemprop="datePublished" title="2023-05-10 18:16">2023-05-10 18:16</time></a></p>
+</div>
+</header>
+<div class="p-summary entry-summary">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="posts/a-noisy-walker/#orgd403616">The Noise Walker</a>
+<ul>
+<li><a href="posts/a-noisy-walker/#org8cf435d">Noise Value Offset</a></li>
+<li><a href="posts/a-noisy-walker/#org5e20d93">Walk</a></li>
+<li><a href="posts/a-noisy-walker/#org336cb79">Show Yourself</a></li>
+</ul>
+</li>
+<li><a href="posts/a-noisy-walker/#org4a511bc">The Sketch</a>
+<ul>
+<li><a href="posts/a-noisy-walker/#org1e7b40b">Set Up</a></li>
+<li><a href="posts/a-noisy-walker/#orgf3f6122">Draw</a></li>
+</ul>
+</li>
+<li><a href="posts/a-noisy-walker/#orgbff167f">The End</a></li>
+<li><a href="posts/a-noisy-walker/#org0d21558">Sources</a></li>
+</ul>
+</div>
+</div>
+<p><b>Note To Viewers At Home:</b> This sketch disturbs my rabbit. Viewer discretion is advised.</p>
+<p>
+<script language="javascript" src="posts/a-noisy-walker/walker.js" type="text/javascript"></script>
+<script language="javascript" src="posts/a-noisy-walker/sketch.js" type="text/javascript"></script></p>
+<div id="noisy-walker"></div>
+<p>This is a follow-up to the <a href="posts/a-random-walker/">Random Walker</a> post. In that previous post I made a walker that moved randomly in any (2D) direction. In this post I'll make a walker that moves according to values given by the p5 <a href="https://p5js.org/reference/#/p5/noise">noise</a> function. This is a pretty straight repeat of what's in the <a href="https://nature-of-code-2nd-edition.netlify.app/introduction/">introduction to the Nature of Code</a>.</p>
+<div class="outline-2" id="outline-container-orgd403616">
+<h2 id="orgd403616">The Noise Walker</h2>
+<div class="outline-text-2" id="text-orgd403616">
+<p>The NoiseWalker keeps track of its position on the canvas as well as moving itself and plotting a circle in its current location. Its constructor starts it at the center of the canvas and creates a noise-offset vector to hold the inputs to the noise function. The noise-offset vector is initially given random x and y values so they aren't the same - since <code>noise</code> is a function if we passed in the same value to it for both x and y they would both get the same value out of it and we'd end up with a diagonal line instead of something that looks random-ish the way that we want.</p>
+<p>The first call to the <code>walk</code> method will clobber the initial <i>x</i> and <i>y</i> positions so setting it to the center of the canvas isn't really important.</p>
+<div class="highlight">
+<pre><span></span><span class="cm">/**  a noise-based walker */</span>
+<span class="kd">class</span><span class="w"> </span><span class="nx">NoiseWalker</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="cm">/** create the Noise Walker</span>
+<span class="cm">   * @param: p5 - a p5.js instance</span>
+<span class="cm">   * @param: slider - widget to get the amount of noise offset change</span>
+<span class="cm">   * @param: stroke_weight: how thick to make the circle line</span>
+<span class="cm">   * @param: diameter of the circle</span>
+<span class="cm">   * @param: fill_color: color to fill the circle</span>
+<span class="cm">   * @param: stroke_color - color for the circle's line</span>
+<span class="cm">   */</span>
+<span class="w">  </span><span class="kr">constructor</span><span class="p">({</span><span class="nx">p5</span><span class="p">,</span>
+<span class="w">               </span><span class="nx">slider</span><span class="p">,</span>
+<span class="w">               </span><span class="nx">stroke_weight</span><span class="o">=</span><span class="mf">1</span><span class="p">,</span>
+<span class="w">               </span><span class="nx">diameter</span><span class="o">=</span><span class="mf">24</span><span class="p">,</span>
+<span class="w">               </span><span class="nx">fill_color</span><span class="o">=</span><span class="s2">"cornflowerblue"</span><span class="p">,</span>
+<span class="w">               </span><span class="nx">stroke_color</span><span class="o">=</span><span class="s2">"black"</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{})</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">noise_upper_bound</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="o">**</span><span class="mf">5</span>
+
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">p5</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">slider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">slider</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">stroke_weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">stroke_weight</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">diameter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">diameter</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">fill_color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fill_color</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">stroke_color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">stroke_color</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">p5</span><span class="p">.</span><span class="nx">createVector</span><span class="p">(</span><span class="nx">p5</span><span class="p">.</span><span class="nx">width</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">p5</span><span class="p">.</span><span class="nx">height</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">noise_offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">p5</span><span class="p">.</span><span class="nx">createVector</span><span class="p">(</span><span class="nx">p5</span><span class="p">.</span><span class="nx">random</span><span class="p">(</span><span class="nx">noise_upper_bound</span><span class="p">),</span>
+<span class="w">                                        </span><span class="nx">p5</span><span class="p">.</span><span class="nx">random</span><span class="p">(</span><span class="nx">noise_upper_bound</span><span class="p">));</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="c1">// end constructor</span>
+</pre></div>
+</div>
+<div class="outline-3" id="outline-container-org8cf435d">
+<h3 id="org8cf435d">Noise Value Offset</h3>
+<div class="outline-text-3" id="text-org8cf435d">
+<p>This property will return the current value of the slider. It's maybe overkill, but I'm trying to re-learn javascript along with p5 and follow along with <i>The Nature of Code</i> so I need things to be extra-obvious, sometimes.</p>
+<div class="highlight">
+<pre><span></span><span class="cm">/** getter for amount to add to the noise offset</span>
+<span class="cm"> * @returns {number}: amount to add to the noise offset on walking</span>
+<span class="cm">*/</span>
+<span class="nx">get</span><span class="w"> </span><span class="nx">noise_offset_change</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">slider</span><span class="p">.</span><span class="nx">value</span><span class="p">();</span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// end get noise_offset_change</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org5e20d93">
+<h3 id="org5e20d93">Walk</h3>
+<div class="outline-text-3" id="text-org5e20d93">
+<p>The <code>walk</code> method moves the walker by adding some noise to its position. The <code>noise</code> function outputs a value from 0 to 1 so I'll use it as a scale factor for the width and height of the canvas to get the new location of the walker. Note that we're not using the prior position of the walker when calculating the new one, just the noise.</p>
+<div class="highlight">
+<pre><span></span><span class="cm">/** update the position and noise offset */</span>
+<span class="nx">walk</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">noise</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">noise_offset</span><span class="p">.</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">width</span><span class="p">;</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">noise</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">noise_offset</span><span class="p">.</span><span class="nx">y</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">height</span><span class="p">;</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">noise_offset</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">noise_offset_change</span><span class="p">,</span>
+<span class="w">                        </span><span class="k">this</span><span class="p">.</span><span class="nx">noise_offset_change</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// end walk</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org336cb79">
+<h3 id="org336cb79">Show Yourself</h3>
+<div class="outline-text-3" id="text-org336cb79">
+<p>The Noise Walker's <code>show_yourself</code> method draws a circle wherever the walker happens to be at the moment. Nothing fancy.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">show_yourself</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">strokeWeight</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">stroke_weight</span><span class="p">);</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">fill_color</span><span class="p">);</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">stroke</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">stroke_color</span><span class="p">);</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">circle</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">diameter</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// end show_yourself</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org4a511bc">
+<h2 id="org4a511bc">The Sketch</h2>
+<div class="outline-text-2" id="text-org4a511bc">
+<p>I'll put the sketch in a function named "noise_walk".</p>
+<div class="highlight">
+<pre><span></span><span class="nx">NOISY_WALKER_DIV</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"noisy-walker"</span><span class="p">;</span>
+
+<span class="cm">/** a sketch to make a circle-drawing walker that moves with noise */</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">noise_walk</span><span class="p">(</span><span class="nx">p5js</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">walker</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="outline-3" id="outline-container-org1e7b40b">
+<h3 id="org1e7b40b">Set Up</h3>
+<div class="outline-text-3" id="text-org1e7b40b">
+<p>The <code>setup</code> method will create the canvas, a slider which the user can use to change the size of the steps the walker takes along the noise offset, and the walker itself. The canvas and slider are placed based on the order in which you create them. In this case I wanted the slider underneath the canvas so I had to define it after the canvas (but before the walker since I pass it to the walker).</p>
+<div class="highlight">
+<pre><span></span><span class="cm">/** setup the canvas, walker, and slider */</span>
+<span class="nx">p5js</span><span class="p">.</span><span class="nx">setup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">medium_teal_blue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">p5js</span><span class="p">.</span><span class="nx">color</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">89</span><span class="p">,</span><span class="w"> </span><span class="mf">179</span><span class="p">,</span><span class="w"> </span><span class="mf">100</span><span class="p">);</span>
+
+<span class="w">  </span><span class="nx">p5js</span><span class="p">.</span><span class="nx">createCanvas</span><span class="p">(</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">NOISY_WALKER_DIV</span><span class="p">).</span><span class="nx">offsetWidth</span><span class="p">,</span>
+<span class="w">    </span><span class="mf">400</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// a slider to let the user change how much the noise is changing</span>
+<span class="w">  </span><span class="nx">slider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">p5js</span><span class="p">.</span><span class="nx">createSlider</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.01</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">slider</span><span class="p">.</span><span class="nx">style</span><span class="p">(</span><span class="s2">"width"</span><span class="p">,</span><span class="w"> </span><span class="s2">"500px"</span><span class="p">);</span>
+
+<span class="w">  </span><span class="nx">walker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">NoiseWalker</span><span class="p">({</span><span class="nx">p5</span><span class="o">:</span><span class="w"> </span><span class="nx">p5js</span><span class="p">,</span>
+<span class="w">                            </span><span class="nx">slider</span><span class="o">:</span><span class="w"> </span><span class="nx">slider</span><span class="p">,</span>
+<span class="w">                            </span><span class="nx">fill_color</span><span class="o">:</span><span class="nx">medium_teal_blue</span><span class="p">});</span>
+<span class="w">  </span><span class="nx">p5js</span><span class="p">.</span><span class="nx">background</span><span class="p">(</span><span class="s2">"white"</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// end setup</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orgf3f6122">
+<h3 id="orgf3f6122">Draw</h3>
+<div class="outline-text-3" id="text-orgf3f6122">
+<p>The draw function moves and shows the walker.</p>
+<div class="highlight">
+<pre><span></span><span class="cm">/** move and draw the walker */</span>
+<span class="nx">p5js</span><span class="p">.</span><span class="nx">draw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">walker</span><span class="p">.</span><span class="nx">walk</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">walker</span><span class="p">.</span><span class="nx">show_yourself</span><span class="p">();</span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// end draw</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgbff167f">
+<h2 id="orgbff167f">The End</h2>
+<div class="outline-text-2" id="text-orgbff167f">
+<p>And there's the code for the sketch at the top of the page.</p>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org0d21558">
+<h2 id="org0d21558">Sources</h2>
+<div class="outline-text-2" id="text-org0d21558">
+<ul class="org-ul">
+<li>Nature of Code [Internet]. [cited 2023 May 11]. Available from: <a href="https://nature-of-code-2nd-edition.netlify.app/">https://nature-of-code-2nd-edition.netlify.app/</a></li>
+<li>p5 reference | noise() [Internet]. [cited 2023 Apr 25]. Available from: <a href="https://p5js.org/reference/#/p5/noise">https://p5js.org/reference/#/p5/noise</a></li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article">
+<header>
 <h1 class="p-name entry-title"><a class="u-url" href="posts/a-random-walker/">A Random Walk(er)</a></h1>
 <div class="metadata">
 <p class="byline author vcard"><span class="byline-name fn" itemprop="author">Cloistered Monkey</span></p>
@@ -61,14 +248,14 @@
 <div id="random-walker-sketch"></div>
 <p>This is a look at the <a href="https://thecodingtrain.com/tracks/the-nature-of-code-2/noc/1-vectors/1-what-is-a-vector">What Is A Vector</a> lesson on The Coding Train, part of the Nature of Code series. It's used in the series to show how to use vectors instead of object properties (e.g. maintaining and updating <code>this.x</code> and <code>this.y</code>) to hold the position of an object on the canvas.</p>
 <p>I'm going to illustrate this by creating an object that takes a <a href="https://en.wikipedia.org/wiki/Random_walk?useskin=vector">random walk</a>.</p>
-<div class="outline-2" id="outline-container-orgf73033a">
-<h2 id="orgf73033a">The Walker</h2>
-<div class="outline-text-2" id="text-orgf73033a">
+<div class="outline-2" id="outline-container-org654b3a8">
+<h2 id="org654b3a8">The Walker</h2>
+<div class="outline-text-2" id="text-org654b3a8">
 <p>First up is a Walker class that keeps track of its position on the canvas, updates the position, and draws itself. I'm thinking that drawing itself doesn't seem right, but I suppose since we're only creating one object moving the drawing outside of the class is more work than what's needed.</p>
 </div>
-<div class="outline-3" id="outline-container-orgbf8e8a1">
-<h3 id="orgbf8e8a1">The Constructor</h3>
-<div class="outline-text-3" id="text-orgbf8e8a1">
+<div class="outline-3" id="outline-container-orgf2a40b4">
+<h3 id="orgf2a40b4">The Constructor</h3>
+<div class="outline-text-3" id="text-orgf2a40b4">
 <div class="highlight">
 <pre><span></span><span class="cm">/** The Random Walker */</span>
 <span class="kd">class</span><span class="w"> </span><span class="nx">Walker</span><span class="w"> </span><span class="p">{</span>
@@ -88,9 +275,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgbcd1ad2">
-<h3 id="orgbcd1ad2">The Step Property</h3>
-<div class="outline-text-3" id="text-orgbcd1ad2">
+<div class="outline-3" id="outline-container-org4350bec">
+<h3 id="org4350bec">The Step Property</h3>
+<div class="outline-text-3" id="text-org4350bec">
 <p>In the Coding Train video he increments the coordinates of the position vector separately, but since this is supposed to be about vectors I thought it should add another vector. This one was a little bit of a head-scratcher at first, though. <code>p5</code> will make a two-dimensional vector for you with the x and y values set to some random value from -1 to 1 (it's a unit vector set to a random angle) using <a href="https://p5js.org/reference/#/p5.Vector/random2D">p5.Vector.random2D</a>. But the <code>p5</code> we need to use isn't our <code>p5</code> but rather the global p5 object. The <code>p5</code> instance we hold doesn't have the <code>Vector</code> class definition, for some reason (which is why you need to use <code>createVector</code> I guess).</p>
 <p>Since the random values are from -1 to 1 I'm multiplying it by a user-specified integer to get a bigger step.</p>
 <div class="highlight">
@@ -103,9 +290,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgf96fb79">
-<h3 id="orgf96fb79">The Update Method</h3>
-<div class="outline-text-3" id="text-orgf96fb79">
+<div class="outline-3" id="outline-container-org5f35ae1">
+<h3 id="org5f35ae1">The Update Method</h3>
+<div class="outline-text-3" id="text-org5f35ae1">
 <p>It would have been nice if p5 vectors could be added using operators, but instead we need to use the <code>add</code> method. Weirdly, <a href="https://p5js.org/reference/#/p5.Vector/add">the Vector.add documentation</a> doesn't cover the case where you pass a vector to another vector's <code>add</code> method, only the cases where you're adding the arguments separately, adding an array of values, or adding two vectors using the <code>p5.Vector.add</code> static method. It appears to do an in-place update, though, so I'll assume that that's what it does.</p>
 <div class="highlight">
 <pre><span></span><span class="cm">/** Add the ~next_step~ vector to the ~position~ vector, updating in-place */</span>
@@ -115,9 +302,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orga7617b7">
-<h3 id="orga7617b7">The Show Method</h3>
-<div class="outline-text-3" id="text-orga7617b7">
+<div class="outline-3" id="outline-container-orgf51cf10">
+<h3 id="orgf51cf10">The Show Method</h3>
+<div class="outline-text-3" id="text-orgf51cf10">
 <p>This is where the walker draws itself. Even though we're using a vector to hold the position, you still need to unpack the coordinates when calling the <code>point</code> method.</p>
 <div class="highlight">
 <pre><span></span><span class="cm">/** Draw the position as a point */</span>
@@ -129,9 +316,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orge0ec307">
-<h3 id="orge0ec307">Move and Show</h3>
-<div class="outline-text-3" id="text-orge0ec307">
+<div class="outline-3" id="outline-container-org01bd2a1">
+<h3 id="org01bd2a1">Move and Show</h3>
+<div class="outline-text-3" id="text-org01bd2a1">
 <p>Not really needed, but I'd rather make one function call for the user to move the walker and have it draw itself.</p>
 <div class="highlight">
 <pre><span></span><span class="cm">/**Convenience method to call ~update~ and ~show~ */</span>
@@ -143,14 +330,14 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org8681e75">
-<h2 id="org8681e75">The Sketch</h2>
-<div class="outline-text-2" id="text-org8681e75">
+<div class="outline-2" id="outline-container-org07d46ea">
+<h2 id="org07d46ea">The Sketch</h2>
+<div class="outline-text-2" id="text-org07d46ea">
 <p>Now the sketch. It seems a little awkward, but since the Walker definition is in a separate file from the sketch definition we need to remember add a <code>script</code> tag to the HTML for both of them. I guess you can think of that as the equivalent of an import, although it feels weird somehow.</p>
 </div>
-<div class="outline-3" id="outline-container-org1573dd2">
-<h3 id="org1573dd2">Some Constants</h3>
-<div class="outline-text-3" id="text-org1573dd2">
+<div class="outline-3" id="outline-container-org09a516e">
+<h3 id="org09a516e">Some Constants</h3>
+<div class="outline-text-3" id="text-org09a516e">
 <div class="highlight">
 <pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">WALKER_SKETCH_DIV</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"random-walker-sketch"</span><span class="p">;</span>
 <span class="kd">const</span><span class="w"> </span><span class="nx">HEIGHT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">400</span><span class="p">;</span>
@@ -159,9 +346,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orga1852e6">
-<h3 id="orga1852e6">The Sketch Function</h3>
-<div class="outline-text-3" id="text-orga1852e6">
+<div class="outline-3" id="outline-container-orgde941dc">
+<h3 id="orgde941dc">The Sketch Function</h3>
+<div class="outline-text-3" id="text-orgde941dc">
 <p>Nothing fancy here, we're just declaring the function and the <code>walker</code> variable to hold our Walker object.</p>
 <div class="highlight">
 <pre><span></span><span class="cm">/** Sketch of a Random Walk */</span>
@@ -170,9 +357,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgce66cc1">
-<h3 id="orgce66cc1">Set Up</h3>
-<div class="outline-text-3" id="text-orgce66cc1">
+<div class="outline-3" id="outline-container-org964aef0">
+<h3 id="org964aef0">Set Up</h3>
+<div class="outline-text-3" id="text-org964aef0">
 <p>Set up the sketch by drawing the canvas and creating a Walker.</p>
 <div class="highlight">
 <pre><span></span><span class="cm">/** Initial setup of the canvas and Walker */</span>
@@ -181,13 +368,13 @@
 <span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">WALKER_SKETCH_DIV</span><span class="p">).</span><span class="nx">offsetWidth</span><span class="p">,</span><span class="w"> </span><span class="nx">HEIGHT</span><span class="p">);</span>
 <span class="w">  </span><span class="nx">walker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Walker</span><span class="p">(</span><span class="nx">p5js</span><span class="p">.</span><span class="nx">width</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">p5js</span><span class="p">.</span><span class="nx">height</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">STEP_LIMIT</span><span class="p">,</span><span class="w"> </span><span class="nx">p5js</span><span class="p">);</span>
 <span class="w">  </span><span class="nx">p5js</span><span class="p">.</span><span class="nx">background</span><span class="p">(</span><span class="nx">WHITE</span><span class="p">);</span>
-<span class="p">}</span><span class="w"> </span><span class="c1">// end seutp</span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// end setup</span>
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgec09ff4">
-<h3 id="orgec09ff4">Draw</h3>
-<div class="outline-text-3" id="text-orgec09ff4">
+<div class="outline-3" id="outline-container-org69c5a09">
+<h3 id="org69c5a09">Draw</h3>
+<div class="outline-text-3" id="text-org69c5a09">
 <p>Our <code>draw</code> function defers to the walker to do everything.</p>
 <div class="highlight">
 <pre><span></span><span class="cm">/** Draw a frame */</span>
@@ -198,29 +385,29 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org12cbc59">
-<h2 id="org12cbc59">The End</h2>
-<div class="outline-text-2" id="text-org12cbc59">
+<div class="outline-2" id="outline-container-org96bef6c">
+<h2 id="org96bef6c">The End</h2>
+<div class="outline-text-2" id="text-org96bef6c">
 <p>And there it is. One thing to note is that there's no checking of the position to see if it's wandered off the canvas so it's possible that it will wander completely off and updates won't be visible.</p>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgef3e4e9">
-<h2 id="orgef3e4e9">Sources</h2>
-<div class="outline-text-2" id="text-orgef3e4e9"></div>
-<div class="outline-3" id="outline-container-org5fb0aa0">
-<h3 id="org5fb0aa0">The Coding Train</h3>
-<div class="outline-text-3" id="text-org5fb0aa0">
+<div class="outline-2" id="outline-container-orgc249726">
+<h2 id="orgc249726">Sources</h2>
+<div class="outline-text-2" id="text-orgc249726"></div>
+<div class="outline-3" id="outline-container-orgd6f317f">
+<h3 id="orgd6f317f">The Coding Train</h3>
+<div class="outline-text-3" id="text-orgd6f317f">
 <ul class="org-ul">
-<li>1.1 What is a Vector? [Internet]. [cited 2023 May 9]. Available from: <a href="https://thecodingtrain.com">https://thecodingtrain.com</a></li>
+<li>What is a Vector? [Internet]. [cited 2023 May 9]. Available from: <a href="https://thecodingtrain.com">https://thecodingtrain.com</a></li>
 </ul>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org3bc5219">
-<h3 id="org3bc5219">P5 Reference</h3>
-<div class="outline-text-3" id="text-org3bc5219">
+<div class="outline-3" id="outline-container-org30d44a4">
+<h3 id="org30d44a4">P5 Reference</h3>
+<div class="outline-text-3" id="text-org30d44a4">
 <ul class="org-ul">
-<li>reference | createVector() [Internet]. [cited 2023 May 9]. Available from: <a href="https://p5js.org/reference/#/p5/createVector">https://p5js.org/reference/#/p5/createVector</a></li>
-<li>reference | p5.Vector [Internet]. [cited 2023 May 9]. Available from: <a href="https://p5js.org/reference/#/p5.Vector">https://p5js.org/reference/#/p5.Vector</a></li>
+<li>P5 reference | createVector() [Internet]. [cited 2023 May 9]. Available from: <a href="https://p5js.org/reference/#/p5/createVector">https://p5js.org/reference/#/p5/createVector</a></li>
+<li>P5 reference | p5.Vector [Internet]. [cited 2023 May 9]. Available from: <a href="https://p5js.org/reference/#/p5.Vector">https://p5js.org/reference/#/p5.Vector</a></li>
 </ul>
 </div>
 </div>
@@ -630,42 +817,6 @@
 <div class="p-summary entry-summary">
 <p><a class="image-reference" href="images/line-walk-1.webp"><img alt="Line Walk" src="images/line-walk-1.thumbnail.webp"></a></p>
 <p>No meaning, just taking a line for a walk.</p>
-</div>
-</article>
-<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article">
-<header>
-<h1 class="p-name entry-title"><a class="u-url" href="posts/bag-man/">Bag Man</a></h1>
-<div class="metadata">
-<p class="byline author vcard"><span class="byline-name fn" itemprop="author">Cloistered Monkey</span></p>
-<p class="dateline"><a href="posts/bag-man/" rel="bookmark"><time class="published dt-published" datetime="2021-02-11T18:03:27-08:00" itemprop="datePublished" title="2021-02-11 18:03">2021-02-11 18:03</time></a></p>
-</div>
-</header>
-<div class="p-summary entry-summary">
-<div class="outline-2" id="outline-container-org692023c">
-<h2 id="org692023c">The Bag Man</h2>
-<div class="outline-text-2" id="text-org692023c">
-<p>This post was created to see what happens in the slideshow if you put all the image files in the <code>images</code> folder without sub-folders, it's a companion to the <a href="posts/image-testing/">Image Testing</a> post.</p>
-<p><a class="image-reference" href="images/bag-man.webp"><img alt="Bag-Man With Purse-Dog" src="images/bag-man.thumbnail.webp"></a></p>
-</div>
-</div>
-<div class="outline-2" id="outline-container-org39f46a3">
-<h2 id="org39f46a3">The Bag Man Without Thumbnails</h2>
-<div class="outline-text-2" id="text-org39f46a3">
-<p>If you want to just display the image they recommend you put it in the <code>files</code> folder, but you can still reference it in the images folder too, but you need to be aware of the fact that the folder path has to change. This org-reference:</p>
-<pre class="example" id="org0d93db7">
-[[img-url:../../images/bag-man.webp]]
-</pre>
-<p>Will include this (full-sized) image (<b>note:</b> The path to the images folder is based on where the post is, if the post was in a subfolder you'd have to go up three directories, not two).</p>
-<p alt="Bag Man Big" class="reference"><img alt="nil" src="images/bag-man.webp"></p>
-</div>
-</div>
-<div class="outline-2" id="outline-container-org26e5a14">
-<h2 id="org26e5a14">Bag-Man Re-Crafted</h2>
-<div class="outline-text-2" id="text-org26e5a14">
-<p>This was a tracing of the bag man onto kraft paper to mess around with gouache.</p>
-<p><a class="image-reference" href="images/bag-man-kraft.webp"><img alt="Bag-Man &amp; Purse-Dog On Kraft Paper" src="images/bag-man-kraft.thumbnail.webp"></a></p>
-</div>
-</div>
 </div>
 </article>
 </div>
