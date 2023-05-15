@@ -3,7 +3,7 @@
 .. slug: graphing-p5-noise
 .. date: 2023-04-24 11:47:11 UTC-07:00
 .. tags: p5.js,noise,graphing
-.. category: P5.js
+.. category: Noise
 .. link:
 .. description: Graphing the P5 noise function.
 .. type: text

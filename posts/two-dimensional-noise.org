@@ -1,0 +1,56 @@
+#+BEGIN_COMMENT
+.. title: Two-Dimensional Noise
+.. slug: two-dimensional-noise
+.. date: 2023-05-14 15:41:16 UTC-07:00
+.. tags: nature of code,p5.js,noise
+.. category: Noise
+.. link: 
+.. description: Graphing p5.js noise on two-dimensions.
+.. type: text
+.. status: 
+.. updated: 
+.. template: p5.tmpl
+#+END_COMMENT
+#+OPTIONS: ^:{}
+#+TOC: headlines 3
+
+* Introduction
+This is yet another copy and redo of a sketch from [[https://nature-of-code-2nd-edition.netlify.app/][the Nature of Code]]. This time it's an extension of a prior post on {{% lancelot title="making a one-dimensional noise graph" %}}graphing-p5-noise{{% /lancelot %}}.
+
+* Static Version
+{{% p5div source="simple-sketch.js" divid="simple-2d-noise-graph" %}}
+
+#+begin_src js :tangle ../files/posts/two-dimensional-noise/simple-sketch.js  :exports none
+function simple_sketch(p5) {
+  p5.setup = function() {
+    p5.createCanvas(1000, 400);
+    p5.background("white");
+  } //end setup
+
+  p5.draw = function() {
+    p5.loadPixels();
+    let offset_x = 0.0;
+
+    for (let x = 0; x < p5.width; x++) {
+      let offset_y = 0.0;
+
+      for (let y = 0; y < p5.height; y++) {
+        let brightness = p5.noise(offset_x, offset_y) * 255
+        p5.set(x, y, p5.floor(brightness));
+        offset_y += 0.01;
+      } //end y-for
+      offset_x += 0.01;
+    } // end x-for
+
+    p5.updatePixels();
+    p5.noLoop();
+  } // end draw
+}// end simple_sketch
+
+
+new p5(simple_sketch, "simple-2d-noise-graph");
+#+end_src
+
+* Sources
+
+- Nature of Code [Internet]. [cited 2023 May 11]. Available from: https://nature-of-code-2nd-edition.netlify.app/
