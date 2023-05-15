@@ -1,7 +1,6 @@
 function simple_sketch(p5) {
   p5.setup = function() {
     p5.createCanvas(1000, 400);
-    p5.background("white");
   } //end setup
 
   p5.draw = function() {

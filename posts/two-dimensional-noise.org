@@ -17,14 +17,13 @@
 * Introduction
 This is yet another copy and redo of a sketch from [[https://nature-of-code-2nd-edition.netlify.app/][the Nature of Code]]. This time it's an extension of a prior post on {{% lancelot title="making a one-dimensional noise graph" %}}graphing-p5-noise{{% /lancelot %}}.
 
-* Static Version
+* Static Version (Using Set)
 {{% p5div source="simple-sketch.js" divid="simple-2d-noise-graph" %}}
 
 #+begin_src js :tangle ../files/posts/two-dimensional-noise/simple-sketch.js  :exports none
 function simple_sketch(p5) {
   p5.setup = function() {
     p5.createCanvas(1000, 400);
-    p5.background("white");
   } //end setup
 
   p5.draw = function() {
@@ -51,6 +50,64 @@ function simple_sketch(p5) {
 new p5(simple_sketch, "simple-2d-noise-graph");
 #+end_src
 
+* Static Version Setting Pixels
+{{% p5div source="static-sketch-pixels.js" divid="static-2d-noise-graph-pixels" %}}
+
+#+begin_src js :tangle ../files/posts/two-dimensional-noise/static-sketch-pixels.js :exports none
+/** Draw static 2D noise using pixel array*/
+function static_pixels(p5) {
+  const OFFSET_INCREMENT = 0.01;
+  const WIDTH = 1000;
+  const HEIGHT = 400;
+
+  /** creates the canvas */
+  p5.setup = function() {
+    p5.pixelDensity(1);
+    p5.createCanvas(WIDTH, HEIGHT);
+
+    // since we're not setting the alpha channel we need to set the background
+    p5.background("white");
+  } // end setup
+
+  /** draw the noise */
+  p5.draw = function() {
+    const RED = 0;
+    const GREEN = 1;
+    const BLUE = 2;
+    const CELLS_FOR_PIXEL = 4;
+    const RGB_MAX = 255;
+
+    let intensity;
+    let pixel_index;
+    let offset_x = 0;
+    let offset_y;
+
+    p5.loadPixels();
+
+    for (let x=0; x < p5.width; x++) {
+      offset_y = 0;
+
+      for (let y=0; y < p5.height; y++) {
+        pixel_index = (x + y * p5.width) * CELLS_FOR_PIXEL;
+        intensity = p5.floor(p5.noise(offset_x, offset_y) * RGB_MAX);
+        p5.pixels[pixel_index + RED] = intensity;
+        p5.pixels[pixel_index + GREEN] = intensity;
+        p5.pixels[pixel_index + BLUE] = intensity;
+
+        offset_y += OFFSET_INCREMENT;
+      } // end y for
+      offset_x += OFFSET_INCREMENT;
+    }// end x for
+    p5.updatePixels();
+    p5.noLoop();
+  } // end draw
+
+} // end static_pixels
+
+new p5(static_pixels, "static-2d-noise-graph-pixels");
+#+end_src
 * Sources
 
 - Nature of Code [Internet]. [cited 2023 May 11]. Available from: https://nature-of-code-2nd-edition.netlify.app/
+- p5 reference | pixelDensity() [Internet]. [cited 2023 May 15]. Available from: https://p5js.org/reference/#/p5/pixelDensity
+- p5 reference | pixels [Internet]. [cited 2023 May 15]. Available from: https://p5js.org/reference/#/p5/pixels
