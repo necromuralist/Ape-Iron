@@ -36,22 +36,24 @@
 
   // draw the noise graph
   <<p5js-draw>>
-  <<setup-the-next-frame>>
+    <<setup-the-next-frame>>
 
-  // begin one graph plot
-  <<plot-this-frame-begin>>
+    // begin one graph plot
+    <<plot-this-frame-begin>>
 
-  <<plot-this-frame-for-loop>>
+    <<plot-this-frame-for-loop>>
 
     <<plot-this-frame-y>>
     <<plot-this-frame-vertex>>
     <<plot-this-frame-x-update>>
   }
-  <<plot-this-frame-end-shape>>
+    <<plot-this-frame-end-shape>>
   // end one graph plot
 
   // move the input to the noise function over one step
-  <<move-the-noise-input>>
+    <<move-the-noise-input>>
+
+    <<slider-label>>
   } // end draw
 } // end noise_graph
 
@@ -164,6 +166,8 @@ We'll paint the canvas with a semi-opaque white on every refresh so that you can
 
 #+begin_src js :exports code :noweb-ref setup-the-next-frame
 p5js.background(BACKGROUND_COLOR, OPACITY);
+p5js.noFill();
+p5js.stroke(LINE_COLOR);
 let noise_step_size = slider.value();
 let y;
 #+end_src
@@ -204,6 +208,19 @@ X_NOISE_COORDINATE_START += noise_step_size;
 #+end_src
 
 I'm not showing the closing braces (~}~) to end the functions but at this point we close the ~draw~ and ~noise_graph~ functions, ending our definitions for the sketch.
+
+** Slider Label
+
+#+begin_src js :exports code :noweb-ref slider-label
+p5js.textSize(32);
+p5js.textAlign(p5js.CENTER);
+p5js.fill("white");
+p5js.noStroke()
+p5js.rect(p5js.width/2 + 20, p5js.height - 35 , 250, 30);
+p5js.fill("black");
+p5js.text(`Noise Change: ${slider.value().toFixed(3)}`,
+            p5js.width/2 , p5js.height - 10);
+#+end_src
 ** Once Again But As a Picture
 
 [[img-url:noise-for-loop-1250.webp][for-loop-diagram]]

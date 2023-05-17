@@ -15,14 +15,14 @@ class NoiseWalker {
                fill_color="cornflowerblue",
                stroke_color="black"} = {}) {
     let noise_upper_bound = 10**5
-    
+
     this.p5 = p5;
     this.slider = slider;
     this.stroke_weight = stroke_weight;
     this.diameter = diameter;
     this.fill_color = fill_color;
     this.stroke_color = stroke_color;
-    
+
     this.position = p5.createVector(p5.width / 2, p5.height / 2);
     this.noise_offset = p5.createVector(p5.random(noise_upper_bound),
                                         p5.random(noise_upper_bound));
@@ -34,7 +34,7 @@ class NoiseWalker {
   get noise_offset_change() {
     return this.slider.value();
   } // end get noise_offset_change
-  
+
   /** update the position and noise offset */
   walk() {
     this.position.x = this.p5.noise(this.noise_offset.x) * this.p5.width;
@@ -42,7 +42,7 @@ class NoiseWalker {
     this.noise_offset.add(this.noise_offset_change,
                           this.noise_offset_change);
   } // end walk
-  
+
   show_yourself() {
     this.p5.strokeWeight(this.stroke_weight);
     this.p5.fill(this.fill_color);

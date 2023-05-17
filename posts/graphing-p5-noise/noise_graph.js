@@ -37,25 +37,36 @@ function noise_graph(p5js){
 
   // draw the noise graph
   p5js.draw = function() {
-  p5js.background(BACKGROUND_COLOR, OPACITY);
-  let noise_step_size = slider.value();
-  let y;
+    p5js.background(BACKGROUND_COLOR, OPACITY);
+    p5js.noFill();
+    p5js.stroke(LINE_COLOR);
+    let noise_step_size = slider.value();
+    let y;
 
-  // begin one graph plot
-  p5js.beginShape();
+    // begin one graph plot
+    p5js.beginShape();
 
-  for (let x = 0; x < p5js.width; x++) {
+    for (let x = 0; x < p5js.width; x++) {
 
     y = p5js.noise(X_NOISE_COORDINATE_START + x * noise_step_size)
       * p5js.height;
     p5js.vertex(x, y);
     
   }
-  p5js.endShape();
+    p5js.endShape();
   // end one graph plot
 
   // move the input to the noise function over one step
-  X_NOISE_COORDINATE_START += noise_step_size;
+    X_NOISE_COORDINATE_START += noise_step_size;
+
+    p5js.textSize(32);
+    p5js.textAlign(p5js.CENTER);
+    p5js.fill("white");
+    p5js.noStroke()
+    p5js.rect(p5js.width/2 + 20, p5js.height - 35 , 250, 30);
+    p5js.fill("black");
+    p5js.text(`Noise Change: ${slider.value().toFixed(3)}`,
+                p5js.width/2 , p5js.height - 10);
   } // end draw
 } // end noise_graph
 
