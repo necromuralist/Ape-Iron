@@ -19,13 +19,15 @@ This is yet another copy and redo of a sketch from [[https://nature-of-code-2nd-
 
 * Static Version (Using Set)
 
-{{% javascripttag source="noise-plotter.js" %}}
 {{% p5div source="simple-sketch.js" divid="simple-2d-noise-graph" %}}
 
 #+begin_src js :tangle ../files/posts/two-dimensional-noise/simple-sketch.js  :exports none
+const STATIC_NOISE_GRAPH_DIV = "simple-2d-noise-graph";
 function simple_sketch(p5) {
   p5.setup = function() {
-    p5.createCanvas(1000, 400);
+    p5.createCanvas(
+      document.getElementById(STATIC_NOISE_GRAPH_DIV).offsetWidth,
+      400);
   } //end setup
 
   p5.draw = function() {
@@ -49,18 +51,19 @@ function simple_sketch(p5) {
 }// end simple_sketch
 
 
-new p5(simple_sketch, "simple-2d-noise-graph");
+new p5(simple_sketch, STATIC_NOISE_GRAPH_DIV);
 #+end_src
 
 * Static Version Setting Pixels
+{{% javascripttag source="noise-plotter.js" %}}
 {{% p5div source="static-sketch-pixels.js" divid="static-2d-noise-graph-pixels" %}}
 
 *Note for later:* You have to either set the background or the alpha channel in the pixel array. Leaving both out won't show anything.
 
 #+begin_src js :tangle ../files/posts/two-dimensional-noise/static-sketch-pixels.js :exports none
+const STATIC_NOISE_PIXELS_DIV = "static-2d-noise-graph-pixels";
 /** Draw static 2D noise using pixel array*/
 function static_pixels(p5) {
-  const WIDTH = 1000;
   const HEIGHT = 400;
 
   let plotter;
@@ -68,7 +71,9 @@ function static_pixels(p5) {
   /** creates the canvas */
   p5.setup = function() {
     p5.pixelDensity(1);
-    p5.createCanvas(WIDTH, HEIGHT);
+    p5.createCanvas(
+      document.getElementById(STATIC_NOISE_PIXELS_DIV).offsetWidth,
+      HEIGHT);
     plotter = new NoisePlotter(p5);
   } // end setup
 
@@ -80,7 +85,7 @@ function static_pixels(p5) {
 
 } // end static_pixels
 
-new p5(static_pixels, "static-2d-noise-graph-pixels");
+new p5(static_pixels, STATIC_NOISE_PIXELS_DIV);
 #+end_src
 
 ** Noise Plotter
@@ -127,6 +132,109 @@ NoisePlotter.prototype.RGB_MAX = 255;
 
 #+begin_src js :noweb-ref noise-plotter-class
 #+end_src
+* Moving Version
+{{% javascripttag source="moving-noise.js" %}}
+{{% p5div source="moving-sketch-pixels.js" divid="moving-2d-noise-graph-pixels" %}}
+
+
+#+begin_src js :tangle ../files/posts/two-dimensional-noise/moving-sketch-pixels.js :exports none
+/** Draw static 2D noise using pixel array*/
+const MOVING_NOISE_DIV = "moving-2d-noise-graph-pixels"
+
+
+function moving_pixels(p5) {
+  const WIDTH = 1000;
+  const HEIGHT = 400;
+  
+  let slider;
+  let plotter;
+
+  /** creates the canvas */
+  p5.setup = function() {
+    p5.pixelDensity(1);
+    p5.createCanvas(
+      document.getElementById(MOVING_NOISE_DIV).offsetWidth,
+      HEIGHT);
+    
+    slider = p5.createSlider(0, 1, 0.01, 0);
+    slider.style("width", "500px");
+    p5.fill("white");
+    p5.textAlign(p5.CENTER);
+    p5.textSize(32);
+    p5.noStroke()
+    plotter = new MovingNoise(p5, slider, 102, 102);
+  } // end setup
+
+  /** draw the noise */
+  p5.draw = function() {
+    plotter.draw();
+
+    // add a label to show the amount the noise changes
+    p5.text(`Noise Change: ${slider.value().toFixed(3)}`,
+            p5.width/2 , p5.height - 10);
+  } // end draw
+
+} // end static_pixels
+
+let move_p5 = new p5(moving_pixels, MOVING_NOISE_DIV);
+#+end_src
+
+** Moving Noise Plotter
+
+#+begin_src js :tangle ../files/posts/two-dimensional-noise/moving-noise.js
+RED = 0;
+GREEN = 1;
+BLUE = 2;
+ALPHA = 3;
+CELLS_PER_PIXEL = 4;
+RGB_MAX = 255;
+
+class MovingNoise {
+  constructor(p5, slider,
+              red=255,
+              green=255,
+              blue=255,
+             y_start_offset = 1000) {
+    this.p5 = p5
+    this.slider = slider;
+    this.red_fraction = red/255;
+    this.green_fraction = green/255;
+    this.blue_fraction = blue/255;
+    this.y_start_offset = y_start_offset;
+    this.noise_start = 0;
+  } // end constructur
+
+  draw() {
+    let offset_y = this.noise_start + this.y_start_offset;
+    let offset_x;
+    let pixel_index;
+    let intensity;
+    let increment = this.slider.value();
+    
+    this.p5.loadPixels();    
+    
+    for (let y=0; y < this.p5.height; y++) {
+      offset_x = this.noise_start;
+      for (let x=0; x < this.p5.width; x++) {
+        pixel_index = (x + y * this.p5.width) * CELLS_PER_PIXEL;
+        intensity = this.p5.noise(offset_x, offset_y) * RGB_MAX;
+        this.p5.pixels[pixel_index + RED] = (intensity *
+                                                  this.red_fraction);
+        this.p5.pixels[pixel_index + GREEN] = (intensity *
+                                                    this.green_fraction);
+        this.p5.pixels[pixel_index + BLUE] = (intensity *
+                                                   this.blue_fraction);
+        this.p5.pixels[pixel_index + ALPHA] = RGB_MAX;
+        offset_x += increment;        
+      } // end x for
+      offset_y += increment;
+    }// end x for
+    this.p5.updatePixels();
+    this.noise_start += increment;
+  } // end draw
+} // end NoisePlotter
+#+end_src
+
 * Sources
 
 - Nature of Code [Internet]. [cited 2023 May 11]. Available from: https://nature-of-code-2nd-edition.netlify.app/

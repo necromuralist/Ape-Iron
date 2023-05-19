@@ -1,6 +1,6 @@
+const STATIC_NOISE_PIXELS_DIV = "static-2d-noise-graph-pixels";
 /** Draw static 2D noise using pixel array*/
 function static_pixels(p5) {
-  const WIDTH = 1000;
   const HEIGHT = 400;
 
   let plotter;
@@ -8,7 +8,9 @@ function static_pixels(p5) {
   /** creates the canvas */
   p5.setup = function() {
     p5.pixelDensity(1);
-    p5.createCanvas(WIDTH, HEIGHT);
+    p5.createCanvas(
+      document.getElementById(STATIC_NOISE_PIXELS_DIV).offsetWidth,
+      HEIGHT);
     plotter = new NoisePlotter(p5);
   } // end setup
 
@@ -20,4 +22,4 @@ function static_pixels(p5) {
 
 } // end static_pixels
 
-new p5(static_pixels, "static-2d-noise-graph-pixels");
+new p5(static_pixels, STATIC_NOISE_PIXELS_DIV);

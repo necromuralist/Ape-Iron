@@ -1,6 +1,9 @@
+const STATIC_NOISE_GRAPH_DIV = "simple-2d-noise-graph";
 function simple_sketch(p5) {
   p5.setup = function() {
-    p5.createCanvas(1000, 400);
+    p5.createCanvas(
+      document.getElementById(STATIC_NOISE_GRAPH_DIV).offsetWidth,
+      400);
   } //end setup
 
   p5.draw = function() {
@@ -24,4 +27,4 @@ function simple_sketch(p5) {
 }// end simple_sketch
 
 
-new p5(simple_sketch, "simple-2d-noise-graph");
+new p5(simple_sketch, STATIC_NOISE_GRAPH_DIV);

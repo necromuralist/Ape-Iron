@@ -28,6 +28,7 @@ function noise_walk(p5js) {
   p5js.draw = function() {
     walker.walk();
     walker.show_yourself();
+    
     p5js.textSize(32);
     p5js.textAlign(p5js.CENTER);
     p5js.fill("white");
