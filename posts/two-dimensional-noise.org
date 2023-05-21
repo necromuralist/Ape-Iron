@@ -22,24 +22,45 @@ This is yet another copy and redo of a sketch from [[https://nature-of-code-2nd-
 {{% p5div source="simple-sketch.js" divid="simple-2d-noise-graph" %}}
 
 #+begin_src js :tangle ../files/posts/two-dimensional-noise/simple-sketch.js  :exports none
+<<simple-sketch-closure>>
+
+  <<simple-sketch-setup>>
+
+  <<simple-sketch-draw>>
+}// end simple_sketch
+
+<<simple-sketch-instance>>
+#+end_src
+
+** The Closure Function
+#+begin_src js :noweb-ref simple-sketch-closure
 const STATIC_NOISE_GRAPH_DIV = "simple-2d-noise-graph";
 function simple_sketch(p5) {
-  p5.setup = function() {
-    p5.createCanvas(
-      document.getElementById(STATIC_NOISE_GRAPH_DIV).offsetWidth,
-      400);
-  } //end setup
+#+end_src
 
-  p5.draw = function() {
+** Set Up
+
+#+begin_src js :noweb-ref simple-sketch-setup
+p5.setup = function() {
+  p5.createCanvas(
+    document.getElementById(STATIC_NOISE_GRAPH_DIV).offsetWidth,
+    400);
+} //end setup
+
+#+end_src
+
+#+begin_src js :noweb-ref simple-sketch-draw
+p5.draw = function() {
+  let offset_x = 0.0;
+
     p5.loadPixels();
-    let offset_x = 0.0;
 
     for (let x = 0; x < p5.width; x++) {
       let offset_y = 0.0;
 
       for (let y = 0; y < p5.height; y++) {
-        let brightness = p5.noise(offset_x, offset_y) * 255
-        p5.set(x, y, p5.floor(brightness));
+        let intensity = p5.noise(offset_x, offset_y) * 255
+        p5.set(x, y, p5.floor(intensity));
         offset_y += 0.01;
       } //end y-for
       offset_x += 0.01;
@@ -48,94 +69,174 @@ function simple_sketch(p5) {
     p5.updatePixels();
     p5.noLoop();
   } // end draw
-}// end simple_sketch
-
-
-new p5(simple_sketch, STATIC_NOISE_GRAPH_DIV);
 #+end_src
 
+** The P5 Instance
+
+#+begin_src js :noweb-ref simple-sketch-instance
+new p5(simple_sketch, STATIC_NOISE_GRAPH_DIV);
+#+end_src
 * Static Version Setting Pixels
+{{% javascripttag source="pixel-constants.js" %}}
 {{% javascripttag source="noise-plotter.js" %}}
 {{% p5div source="static-sketch-pixels.js" divid="static-2d-noise-graph-pixels" %}}
 
+** The Sketch
 *Note for later:* You have to either set the background or the alpha channel in the pixel array. Leaving both out won't show anything.
 
+
 #+begin_src js :tangle ../files/posts/two-dimensional-noise/static-sketch-pixels.js :exports none
+<<static-pixels-function>>
+  
+  /** creates the canvas */
+  <<static-pixels-setup>>
+  
+  /** draw the noise */
+  <<static-pixels-draw>>
+} // end static_pixels
+
+<<static-pixels-p5>>
+#+end_src
+
+*** The Closure Function
+
+#+begin_src js :noweb-ref static-pixels-function
 const STATIC_NOISE_PIXELS_DIV = "static-2d-noise-graph-pixels";
 /** Draw static 2D noise using pixel array*/
 function static_pixels(p5) {
   const HEIGHT = 400;
 
   let plotter;
+  let slider;
+#+end_src
 
-  /** creates the canvas */
-  p5.setup = function() {
-    p5.pixelDensity(1);
-    p5.createCanvas(
-      document.getElementById(STATIC_NOISE_PIXELS_DIV).offsetWidth,
-      HEIGHT);
-    plotter = new NoisePlotter(p5);
-  } // end setup
+*** Set Up
 
-  /** draw the noise */
+#+begin_src js :noweb-ref static-pixels-setup
+p5.setup = function() {
+  p5.pixelDensity(1);
+  
+  p5.createCanvas(
+    document.getElementById(STATIC_NOISE_PIXELS_DIV).offsetWidth,
+    HEIGHT);
+  
+  slider = p5.createSlider(SLIDER.min,
+                           SLIDER.max,
+                           SLIDER.default_value,
+                           SLIDER.step_size);
+  slider.style("width", "500px");
+  
+  slider.input(() => p5.redraw());
+  
+  p5.fill("white");
+  p5.textAlign(p5.CENTER);
+  p5.textSize(32);
+  p5.noStroke()
+  
+  plotter = new NoisePlotter(p5, slider);
+  p5.noLoop();
+} // end setup
+#+end_src
+
+*** Draw
+
+#+begin_src js :noweb-ref static-pixels-draw
   p5.draw = function() {
     plotter.draw();
+    // add a label to show the amount the noise changes
+    p5.text(`Noise Change: ${slider.value().toFixed(3)}`,
+            p5.width/2 , p5.height - 10);
     p5.noLoop();
   } // end draw
+#+end_src
 
-} // end static_pixels
+*** The P5 Instance
 
+#+begin_src js :noweb-ref static-pixels-p5
 new p5(static_pixels, STATIC_NOISE_PIXELS_DIV);
+#+end_src
+
+** Some Constants
+
+#+begin_src js :tangle ../files/posts/two-dimensional-noise/pixel-constants.js :exports none
+const PIXEL_ARRAY = {
+  RED: 0,
+  GREEN : 1,
+  BLUE : 2,
+  ALPHA : 3,
+  CELLS_PER_PIXEL : 4,
+  RGB_MAX : 255,
+} // end PIXEL_ARRAY
+
+const SLIDER = {
+  min: 0,
+  max: 1,
+  default_value: 0.01,
+  step_size: 0,
+} // end SLIDER_SETTINGS
 #+end_src
 
 ** Noise Plotter
 
-#+begin_src js :tangle ../files/posts/two-dimensional-noise/noise-plotter.js
-class NoisePlotter {
-  constructor(p5, offset_increment=0.01) {
-    this.p5 = p5
-    this.offset_increment = offset_increment;
-  } // end constructur
+#+begin_src js :tangle ../files/posts/two-dimensional-noise/noise-plotter.js :exports none
+<<noise-plotter-class>>
 
-  draw() {
-    let offset_y = 0;
-    let offset_x;
-    let pixel_index;
-    let intensity;
-    
-    this.p5.loadPixels();
+  <<noise-plotter-draw>>
 
-    for (let y=0; y < this.p5.height; y++) {
-      offset_x = 0;
-      for (let x=0; x < this.p5.width; x++) {
-        pixel_index = (x + y * this.p5.width) * this.CELLS_PER_PIXEL;
-        intensity = this.p5.noise(offset_x, offset_y) * this.RGB_MAX;
-        this.p5.pixels[pixel_index + this.RED] = intensity;
-        this.p5.pixels[pixel_index + this.GREEN] = intensity;
-        this.p5.pixels[pixel_index + this.BLUE] = intensity;
-        this.p5.pixels[pixel_index + this.ALPHA] = this.RGB_MAX;
-        offset_x += this.offset_increment;        
-      } // end x for
-      offset_y += this.offset_increment;
-    }// end x for
-    this.p5.updatePixels();
-  } // end draw
 } // end NoisePlotter
-
-NoisePlotter.prototype.RED = 0;
-NoisePlotter.prototype.GREEN = 1;
-NoisePlotter.prototype.BLUE = 2;
-NoisePlotter.prototype.ALPHA = 3;
-NoisePlotter.prototype.CELLS_PER_PIXEL = 4;
-NoisePlotter.prototype.RGB_MAX = 255;
 #+end_src
 
+*** The Noise Plotter Class
 #+begin_src js :noweb-ref noise-plotter-class
+class NoisePlotter {
+  constructor(p5, slider) {
+    this.slider = slider;
+    this.p5 = p5
+  } // end constructur
 #+end_src
+
+*** The Draw Method
+
+#+begin_src js :noweb-ref noise-plotter-draw
+draw() {
+  let offset_y = 0;
+  let offset_x;
+  let pixel_index;
+  let intensity;
+  let offset_increment = this.slider.value()
+  
+  this.p5.loadPixels();
+  
+  for (let y=0; y < this.p5.height; y++) {
+    offset_x = 0;
+    for (let x=0; x < this.p5.width; x++) {
+      pixel_index = (x + y * this.p5.width) * PIXEL_ARRAY.CELLS_PER_PIXEL;
+      intensity = this.p5.noise(offset_x, offset_y) * PIXEL_ARRAY.RGB_MAX;
+      this.p5.pixels[pixel_index +
+                     PIXEL_ARRAY.RED] = intensity;
+      this.p5.pixels[pixel_index +
+                     PIXEL_ARRAY.GREEN] = intensity;
+      this.p5.pixels[pixel_index +
+                     PIXEL_ARRAY.BLUE] = intensity;
+      this.p5.pixels[pixel_index +
+                     PIXEL_ARRAY.ALPHA] = PIXEL_ARRAY.RGB_MAX;
+      offset_x += offset_increment;        
+    } // end x for
+    offset_y += offset_increment;
+  }// end x for
+  this.p5.updatePixels();
+} // end draw
+#+end_src
+
 * Moving Version
 {{% javascripttag source="moving-noise.js" %}}
 {{% p5div source="moving-sketch-pixels.js" divid="moving-2d-noise-graph-pixels" %}}
 
+#+begin_export html
+<p id="moving-slider" ></p>
+#+end_export
+
+** The Sketch
 
 #+begin_src js :tangle ../files/posts/two-dimensional-noise/moving-sketch-pixels.js :exports none
 /** Draw static 2D noise using pixel array*/
@@ -143,26 +244,32 @@ const MOVING_NOISE_DIV = "moving-2d-noise-graph-pixels"
 
 
 function moving_pixels(p5) {
-  const WIDTH = 1000;
   const HEIGHT = 400;
+  const WIDTH = 500;
   
-  let slider;
   let plotter;
+  let slider;
 
   /** creates the canvas */
   p5.setup = function() {
     p5.pixelDensity(1);
     p5.createCanvas(
-      document.getElementById(MOVING_NOISE_DIV).offsetWidth,
+      //document.getElementById(MOVING_NOISE_DIV).offsetWidth,
+      WIDTH,
       HEIGHT);
     
-    slider = p5.createSlider(0, 1, 0.01, 0);
+    slider = p5.createSlider(SLIDER.min,
+                             SLIDER.max,
+                             SLIDER.default_value,
+                             SLIDER.step_size).parent("moving-slider");
     slider.style("width", "500px");
+    
     p5.fill("white");
     p5.textAlign(p5.CENTER);
     p5.textSize(32);
     p5.noStroke()
-    plotter = new MovingNoise(p5, slider, 102, 102);
+    plotter = new MovingNoise({p5:p5, slider:slider,
+                               red:102, green:102});
   } // end setup
 
   /** draw the noise */
@@ -179,27 +286,27 @@ function moving_pixels(p5) {
 let move_p5 = new p5(moving_pixels, MOVING_NOISE_DIV);
 #+end_src
 
+Check the framerate in the browser's javascript console with
+
+#+begin_src js
+move_p5.frameRate();
+#+end_src
+
 ** Moving Noise Plotter
 
 #+begin_src js :tangle ../files/posts/two-dimensional-noise/moving-noise.js
-RED = 0;
-GREEN = 1;
-BLUE = 2;
-ALPHA = 3;
-CELLS_PER_PIXEL = 4;
-RGB_MAX = 255;
-
 class MovingNoise {
-  constructor(p5, slider,
-              red=255,
-              green=255,
-              blue=255,
-             y_start_offset = 1000) {
+  constructor({p5=undefined,
+               slider=undefined,
+               red=PIXEL_ARRAY.RGB_MAX,
+               green=PIXEL_ARRAY.RGB_MAX,
+               blue= PIXEL_ARRAY.RGB_MAX,
+               y_start_offset=1000} = {}) {
     this.p5 = p5
     this.slider = slider;
-    this.red_fraction = red/255;
-    this.green_fraction = green/255;
-    this.blue_fraction = blue/255;
+    this.red_fraction = red/PIXEL_ARRAY.RGB_MAX;
+    this.green_fraction = green/PIXEL_ARRAY.RGB_MAX;
+    this.blue_fraction = blue/PIXEL_ARRAY.RGB_MAX;
     this.y_start_offset = y_start_offset;
     this.noise_start = 0;
   } // end constructur
@@ -216,15 +323,15 @@ class MovingNoise {
     for (let y=0; y < this.p5.height; y++) {
       offset_x = this.noise_start;
       for (let x=0; x < this.p5.width; x++) {
-        pixel_index = (x + y * this.p5.width) * CELLS_PER_PIXEL;
-        intensity = this.p5.noise(offset_x, offset_y) * RGB_MAX;
-        this.p5.pixels[pixel_index + RED] = (intensity *
+        pixel_index = (x + y * this.p5.width) * PIXEL_ARRAY.CELLS_PER_PIXEL;
+        intensity = this.p5.noise(offset_x, offset_y) * PIXEL_ARRAY.RGB_MAX;
+        this.p5.pixels[pixel_index + PIXEL_ARRAY.RED] = (intensity *
                                                   this.red_fraction);
-        this.p5.pixels[pixel_index + GREEN] = (intensity *
+        this.p5.pixels[pixel_index + PIXEL_ARRAY.GREEN] = (intensity *
                                                     this.green_fraction);
-        this.p5.pixels[pixel_index + BLUE] = (intensity *
+        this.p5.pixels[pixel_index + PIXEL_ARRAY.BLUE] = (intensity *
                                                    this.blue_fraction);
-        this.p5.pixels[pixel_index + ALPHA] = RGB_MAX;
+        this.p5.pixels[pixel_index + PIXEL_ARRAY.ALPHA] = PIXEL_ARRAY.RGB_MAX;
         offset_x += increment;        
       } // end x for
       offset_y += increment;
@@ -243,3 +350,6 @@ class MovingNoise {
 - pixel | Etymology, origin and meaning of pixel by etymonline [Internet]. [cited 2023 May 16]. Available from: https://www.etymonline.com/word/pixel
 - Pixel density - Wikipedia [Internet]. [cited 2023 May 16]. Available from: https://en.wikipedia.org/w/index.php?title=Pixel_density&useskin=vector
 - Uint8ClampedArray - JavaScript | MDN [Internet]. 2023 [cited 2023 May 16]. Available from: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
+- Frame rate - Firefox Developer Tools | MDN [Internet]. [cited 2023 May 19]. Available from: https://www.devdoc.net/web/developer.mozilla.org/en-US/docs/Tools/Performance/Frame_rate.html
+- When p5js slider value is released function? [Internet]. Processing Foundation. 2021 [cited 2023 May 21]. Available from: https://discourse.processing.org/t/when-p5js-slider-value-is-released-function/30581
+- p5 reference | input() [Internet]. [cited 2023 May 21]. Available from: https://p5js.org/reference/#/p5/input
