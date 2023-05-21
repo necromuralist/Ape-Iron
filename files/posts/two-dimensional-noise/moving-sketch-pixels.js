@@ -1,7 +1,6 @@
 /** Draw static 2D noise using pixel array*/
 const MOVING_NOISE_DIV = "moving-2d-noise-graph-pixels"
 
-
 function moving_pixels(p5) {
   const HEIGHT = 400;
   const WIDTH = 500;
@@ -13,7 +12,6 @@ function moving_pixels(p5) {
   p5.setup = function() {
     p5.pixelDensity(1);
     p5.createCanvas(
-      //document.getElementById(MOVING_NOISE_DIV).offsetWidth,
       WIDTH,
       HEIGHT);
     
@@ -24,9 +22,9 @@ function moving_pixels(p5) {
     slider.style("width", "500px");
     
     p5.fill("white");
+    p5.stroke("white");
     p5.textAlign(p5.CENTER);
     p5.textSize(32);
-    p5.noStroke()
     plotter = new MovingNoise({p5:p5, slider:slider,
                                red:102, green:102});
   } // end setup

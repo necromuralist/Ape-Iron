@@ -23,6 +23,7 @@ function static_pixels(p5) {
     slider.input(() => p5.redraw());
     
     p5.fill("white");
+    p5.stroke("white");
     p5.textAlign(p5.CENTER);
     p5.textSize(32);
     p5.noStroke()
