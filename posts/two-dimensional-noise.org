@@ -185,7 +185,7 @@ const SLIDER = {
 } // end SLIDER_SETTINGS
 #+end_src
 
-These are the same values I used in the previous noise-sketches. ~step_size~ just means that I'm not setting one so p5 can use whatever the default value is - the documentation says it's continuous but it seems to be jump a bit when I use it.
+These are the same values I used in the previous noise-sketches. A ~step_size~ of 0 just means that I'm not setting one so p5 can use whatever the default value is - the documentation says it's continuous but it seems to jump a bit when I use it.
 
 ** The Sketch
 *Note for later:* You have to either set the background or the alpha channel in the pixel array. Leaving both out won't show anything.
@@ -239,7 +239,7 @@ function static_pixels(p5) {
   let slider;
 #+end_src
 
-Once again, this is the sketch function that gets passed to a p5 constructor. I decided to create a class to handle the drawing of the visualization so the ~plotter~ variable is going to handle that. I'm also going to add a slider so that a user can change the amount the input to the noise changes, which is what the ~silder~ variable is for.
+Once again, this is the sketch function that gets passed to a p5 constructor. I decided to create a class to handle the drawing of the visualization so the ~plotter~ variable is going to hold an instance of that. I'm also going to add a slider so that a user can change the amount the input to the noise changes, which is what the ~silder~ variable is for.
 
 *** Set Up
 
@@ -257,7 +257,7 @@ p5.pixelDensity(1);
 
 To draw the noise I'm going to set the values in the ~pixels~ array directly but that's actually not so straightforward as you might think. When we refer to a pixel, there's two things to consider -  there's a /logical/ pixel, which is what we referred to using the ~set~ function, and what most people probably think of when working with p5 - it's the (x, y) coordinate you've come to know and love, but that pixel doesn't necessarily map one-to-one with the physical pixels in a display. Because of this, the size of the ~pixels~ array and the number of cells within the array dedicated to each pixel depends on the display.
 
-The [[https://p5js.org/reference/#/p5/pixels][pixels]] documentation shows the proper way to do it, which requires you to check the [[https://p5js.org/reference/#/p5/pixelDensity][pixelDensity]] and then for each logical pixel you would loop over the sub-pixels that represent it... Maybe some other time. For now, setting ~pixelDensity(1)~ will turn off matching the pixel density of the user's display and let us just worry about the one logical pixel. I don't know if that means it wont' take advantage of a higher density display or not, but p5 is about making it easier to code visualizations, not high performance (to me, anyway).
+The [[https://p5js.org/reference/#/p5/pixels][pixels]] documentation shows the proper way to do it, which requires you to check the [[https://p5js.org/reference/#/p5/pixelDensity][pixelDensity]] and then for each logical pixel you would loop over the sub-pixels that represent it... Maybe some other time. For now, setting ~pixelDensity(1)~ will turn off matching the pixel density of the user's display and let us just worry about the one logical pixel. I don't know if that means it wont' take advantage of a higher density display or not, but p5 is about making it easier to code visualizations, not high performance (to me, anyway) - and as we'll see, the for-loops we're using are already slow enough, adding two more nested loops will just make things even slower.
 
 **** The Canvas
 #+begin_src js :noweb-ref static-pixels-canvas
@@ -283,9 +283,11 @@ This is also a pretty straight-forward slider (although I think that just droppi
 slider.input(() => p5.redraw());
 #+end_src
 
-This uses javascript's crazy [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions][arrow function]] (not that the idea itself doesn't make sense, but the syntax and the fact that there's so many ways to declare functions seems baffling to me). Since this is a mostly static drawing I'm going to turn off re-drawing the canvas, but this callback tells p5 that if the user changes the slider's value then it should re-draw the canvas. There's also a ~changed~ function, but that doesn't change until you let go of the mouse, while this lets you see the changes as you drag the slider.
+This uses javascript's crazy [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions][arrow function]] syntax (not that I think the idea behind it is crazy, but the weird looking syntax and the fact that there's so many ways to declare functions seems to make the language too complicated for the little advantage you get with all the variations).
 
-[[https://p5js.org/reference/#/p5/input][input]] and [[https://p5js.org/reference/#/p5/changed][changed]] don't show up under the ~slider~ documentation but rather under the ~DOM~ category of the documentation so I don't know how anyone is supposed to know that they exist without searching forum posts...
+Since this is a mostly static drawing I'm going to turn off re-drawing the canvas, but this callback tells p5 that if the user changes the slider's value then it should re-draw the canvas. p5 also has a similar functoin called ~changed~, but that doesn't trigger the callback until you let go of the mouse button, while this lets you see the changes as you drag the slider.
+
+*Note:* [[https://p5js.org/reference/#/p5/input][input]] and [[https://p5js.org/reference/#/p5/changed][changed]] don't show up under the ~slider~ documentation but rather under the ~DOM~ category of the documentation so I don't know how anyone is supposed to know that they exist without searching forum posts, and seems to suggest that there might be other features of the p5 language that exist but aren't well documented so it's just luck if you figure out that they are there...
 
 **** Text Setup
 #+begin_src js :noweb-ref static-pixels-text-setup
@@ -303,7 +305,7 @@ This uses javascript's crazy [[https://developer.mozilla.org/en-US/docs/Web/Java
 plotter = new NoisePlotter(p5, slider);
 #+end_src
 
-I thought that it was getting cluttered up enough that it would make sense to break the plotting of the noise into a class, since I prefer an object-oriented approach.
+I thought that it was getting cluttered up enough that it would make sense to break the plotting of the noise into a class, since I findi it easier to work with an object-oriented approach.
 
 **** No Loop
 #+begin_src js :noweb-ref static-pixels-no-loop
@@ -311,7 +313,7 @@ I thought that it was getting cluttered up enough that it would make sense to br
 } // end setup
 #+end_src
 
-The last thing in the setup is turning off the looping. I'm still not clear on what the difference is between putting it here and in the ~draw~ function. It seems to work the same in both cases.
+The last thing in the setup is turning off the re-drawing of the canvas. I'm still not clear on what the difference is between putting it here and in the ~draw~ function. It seems to work the same in both cases.
 
 *** Draw
 
@@ -326,7 +328,7 @@ Now, our draw function.
   } // end draw
 #+end_src
 
-Because I'm deferring most of the plotting to the ~NoisePlotter~ object it just calls it and then sets the text to let the user know what the current slider setting is.
+Because I'm deferring most of the plotting to the ~NoisePlotter~ object it just calls its ~draw~ method and then sets the text to let the user know what the current slider setting is.
 
 *** The P5 Instance
 
@@ -387,9 +389,9 @@ draw() {
 
 The variables:
 
-- ~intensity~: RGB value(s)
-- ~column_offset~: y-input for the noise function
-- ~offset_increment~: how much to increase the noise function inputs in the loops
+- ~intensity~: This will hold the RGB value(s) that we set the pixels to based on noise
+- ~column_offset~: The y-input for the noise function
+- ~offset_increment~: How much to increase the noise function inputs (the offsets) in the loops
 - ~row_offset~: x-input for the noise function
 - ~pixel_index~: Starting index in the ~pixels~ array for our pixel
 
