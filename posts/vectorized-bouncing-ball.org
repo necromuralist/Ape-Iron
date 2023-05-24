@@ -1,0 +1,104 @@
+#+BEGIN_COMMENT
+.. title: Vectorized Bouncing Ball
+.. slug: vectorized-bouncing-ball
+.. date: 2023-05-24 14:51:19 UTC-07:00
+.. tags: nature of code,p5.js,vectors
+.. category: Vectors
+.. link: 
+.. description: A bouncing ball using vectors.
+.. type: text
+.. status: 
+.. updated: 
+.. template: p5.tmpl
+#+END_COMMENT
+
+* The Sketch
+{{% javascripttag source="vectorized-ball.js" %}}
+{{% p5div source="vectorized-bouncing-ball-sketch.js" divid="vectorized-bouncing-ball" %}}
+
+#+begin_src js :tangle ../files/posts/vectorized-bouncing-ball/vectorized-ball.js
+const TURN_AROUND = -1;
+
+
+/** vectorized ball */
+class Ball {
+  /** ball constructor */
+  constructor(p5, position, velocity, color, diameter) {
+    this.p5 = p5;
+    this.position = position;
+    this.velocity = velocity;
+    this.color = color;
+    this.diameter = diameter;
+  } // end constructor
+
+  get is_too_far_horizontally() {
+    return ((this.position.x < 0) ||
+            (this.position.x > this.p5.width));
+  } // end is_too_far_horizontally
+
+  get is_too_far_vertically() {
+    return ((this.position.y < 0) ||
+            (this.position.y > this.p5.height));
+  } // end is_too_far_vertically
+
+  update() {
+    this.position.add(this.velocity);
+
+    if (this.is_too_far_horizontally) {
+      this.velocity.x *= TURN_AROUND;
+    }
+    if (this.is_too_far_vertically) {
+      this.velocity.y *= TURN_AROUND;
+    }    
+  } // end update
+
+  draw() {
+    this.p5.stroke("black");
+    this.p5.fill(this.color);
+    this.p5.circle(this.position.x, this.position.y, this.diameter);
+  } // end draw
+
+  move_and_draw_thine_self() {
+    this.update();
+    this.draw();
+  } // end draw_thine_self
+} // end Ball
+#+end_src
+
+#+begin_src js :tangle ../files/posts/vectorized-bouncing-ball/vectorized-bouncing-ball-sketch.js
+const BOUNCY_SKETCH_DIV = "vectorized-bouncing-ball";
+
+/** sketch for a bouncing ball using vectors */
+function bouncy_sketch(p5) {
+  const DIAMETER = 50;
+  const HEIGHT = 400;
+  const CIRCLE_COLOR = p5.color(77, 166, 255);
+  
+  let position;
+  let velocity;
+  let ball;
+ 
+
+  /** setup the sketch */
+  p5.setup = function() {
+    p5.createCanvas(
+      document.getElementById(BOUNCY_SKETCH_DIV).offsetWidth,
+      HEIGHT
+    );
+    position = p5.createVector(p5.width/2, p5.height/2);
+    velocity = p5.createVector(2, 5);
+    ball = new Ball(p5, position, velocity, CIRCLE_COLOR, DIAMETER);
+  } // end setup
+
+  /** draw the ball */
+  p5.draw = function() {
+    p5.background(255, 100);
+    ball.move_and_draw_thine_self();
+  } // end draw
+} // end bouncy_sketch
+
+let bouncy_p5 = new p5(bouncy_sketch, BOUNCY_SKETCH_DIV);
+#+end_src
+* Sources
+- Nature of Code [Internet]. [cited 2023 May 11]. Available from: https://nature-of-code-2nd-edition.netlify.app/
+- p5 reference | createVector() [Internet]. [cited 2023 May 9]. Available from: https://p5js.org/reference/#/p5/createVector
