@@ -22,7 +22,7 @@ class Ball {
             (this.position.y > this.p5.height));
   } // end is_too_far_vertically
 
-  update() {
+  move() {
     this.position.add(this.velocity);
 
     if (this.is_too_far_horizontally) {
@@ -40,7 +40,7 @@ class Ball {
   } // end draw
 
   move_and_draw_thine_self() {
-    this.update();
+    this.move();
     this.draw();
   } // end draw_thine_self
 } // end Ball

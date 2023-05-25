@@ -4,11 +4,13 @@ const BOUNCY_SKETCH_DIV = "vectorized-bouncing-ball";
 function bouncy_sketch(p5) {
   const DIAMETER = 50;
   const HEIGHT = 400;
-  const CIRCLE_COLOR = p5.color(77, 166, 255);
+  const BLUE = p5.color(77, 166, 255);
+  const RED = p5.color(175, 0, 42);
   
   let position;
   let velocity;
-  let ball;
+  let blue_ball;
+  let red_ball;
  
 
   /** setup the sketch */
@@ -19,13 +21,19 @@ function bouncy_sketch(p5) {
     );
     position = p5.createVector(p5.width/2, p5.height/2);
     velocity = p5.createVector(2, 5);
-    ball = new Ball(p5, position, velocity, CIRCLE_COLOR, DIAMETER);
+
+    position_red = position.copy();
+    velocity_red = p5.createVector(-2.5, -5.5);
+
+    blue_ball = new Ball(p5, position, velocity, BLUE, DIAMETER);
+    red_ball = new Ball(p5, position_red, velocity_red, RED, DIAMETER);
   } // end setup
 
   /** draw the ball */
   p5.draw = function() {
     p5.background(255, 100);
-    ball.move_and_draw_thine_self();
+    blue_ball.move_and_draw_thine_self();
+    red_ball.move_and_draw_thine_self();
   } // end draw
 } // end bouncy_sketch
 
