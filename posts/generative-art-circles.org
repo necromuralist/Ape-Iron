@@ -8,34 +8,93 @@
 .. description: Drawing circles in p5 with trigonometry.
 .. type: text
 .. status: 
-.. updated: 
+.. updated:
+.. has_math: True
 .. template: p5.tmpl
 #+END_COMMENT
+#+OPTIONS: ^:{}
+#+TOC: headlines 2
 
 * A Circle
 
 This is a starting point for looking at cyclic sketches. In this case it's just a circle but it's a basic concept that I'll probably use more of later so I thought I'd make a dedicated post for it. In particular it uses [[https://en.wikipedia.org/wiki/Polar_coordinate_system?useskin=vector][Polar Coordinates]] which might come in handy.
 
-{{% p5div source="circle.js" divid="hard-circle" %}}
+{{% p5div source="circle.js" divid="5fa2c81b-hard-circle" %}}
 
-#+begin_src js :tangle ../files/posts/generative-art-circles/circle.js
-const CIRCLE_DIV = "hard-circle";
+#+begin_src js :tangle ../files/posts/generative-art-circles/circle.js :exports none
+<<circle-closure>>
+    <<circle-constants>>
 
-function circle(p5){
-  const DEGREES_IN_A_CIRCLE = 360;
-  const RADIUS = 100;
-  const SMALL_DIAMETER = 10;
-  const STEP = 5;
-  const TO_RADIANS = (2 * Math.PI)/ DEGREES_IN_A_CIRCLE;
-  const WIDTH = 3 * RADIUS;
-  
-  let center_x;
-  let center_y;
-  let slider;;
-  let start = 0
-  
+    <<circle-variables>>
+
+  <<circle-setup>>
+
+  <<circle-draw>>
+    <<circle-for>>
+    <<circle-coordinates>>
+    <<circle-point-and-line>>
+
+    <<circle-background>>
+    } // end for
+    <<circle-move-start>>
+  } // end draw
+} // end circle
+
+let circle_p5 = new p5(circle_the_hard_way, CIRCLE_DIV)
+#+end_src
+
+* Closure, Constants, and Variables
+
+We begin in the usual way with a variable to hold the ~div id~ that the sketch will go into and declaring the function that will hold our sketch tode.
+
+#+begin_src js :noweb-ref circle-closure
+const CIRCLE_DIV = "5fa2c81b-hard-circle";
+
+function circle_the_hard_way(p5){
+#+end_src
+
+** Constants
+Next I'll declare some constants, both to maybe remind me what the values represent when I use them later and to have a place where I can change the values as I experiment with what looks interesting.
+
+#+begin_src js :noweb-ref circle-constants
+const DEGREES_IN_A_CIRCLE = 360;
+const RADIUS = 100;
+const SMALL_DIAMETER = 10;
+const STEP = 5;
+const TO_RADIANS = (2 * Math.PI)/ DEGREES_IN_A_CIRCLE;
+const WIDTH = 3 * RADIUS;
+const HEIGHT = WIDTH;
+#+end_src
+
+ - The ~RADIUS~ holds the radius of the circle we're going to draw
+ - ~SMALL_DIAMETER~ holds the diameter of the circles I'm going to use to draw the main circle.
+ - ~STEP~ holds the number of degrees I'm going to rotate the starting point of the circle every time it's re-drawn
+ - ~WITDH~ and ~HEIGHT~ are the dimensions of the canvas
+
+
+ To make it less confusing I'll refer to the small circles that make up the big cicrle as "points" most of the time.
+ 
+** Variables
+The variables are:
+
+ - ~center_x~, ~center_y~: the center coordinates for the circle. These could be constants but I usually set them in the ~setup~.
+ - ~slider~: to hold a slider that will set how many degrees we'll rotate between drawing points on the circle
+ - ~start~: the angle at which we'll start drawing the circle.
+
+#+begin_src js :noweb-ref circle-variables
+let center_x;
+let center_y;
+let slider;
+let start = 0;
+#+end_src
+
+* Set Up
+
+Our ~setup~ function creates the canvas, sets the colors and creates the slider to let the user change how big a jump we take between drawing points on the circle
+
+#+begin_src js :noweb-ref circle-setup
   p5.setup = function() {
-    p5.createCanvas(WIDTH, 400);
+    p5.createCanvas(WIDTH, HEIGHT);
     p5.background("white");
     p5.stroke("black");
     p5.fill("black");
@@ -43,26 +102,95 @@ function circle(p5){
     center_y = p5.height/2;
     slider = p5.createSlider(
       1,
-      364,
+      360,
       2,
       1);
 slider.style("width", "500px");
   } // end setup
-
-  
-  p5.draw = function() {
-    for (let angle=start; angle <= DEGREES_IN_A_CIRCLE + start; angle += slider.value()) {
-      radians = angle * TO_RADIANS;
-      x = center_x + RADIUS * Math.cos(radians);
-      y = center_y + RADIUS * Math.sin(radians);
-      p5.line(center_x, center_y, x, y);
-      p5.circle(x, y, SMALL_DIAMETER);
-      p5.background(255, 10);
-    } // end for
-    start = (start + STEP) % 360 ;
-  } // end draw
-} // end circle
-
-let circle_p5 = new p5(circle, CIRCLE_DIV)
 #+end_src
 
+* Draw
+
+The ~draw~ function draws a circle using circles and a line showing the raduis.
+
+#+begin_src js :noweb-ref circle-draw
+p5.draw = function() {
+#+end_src
+
+** Looping Around the Circle
+
+We're going to rotate around the circle once using the ~start~ value as the angle to start at and the value the slider's set at for the number of degrees we move between drawing the points on the circle. To make it easier to think about I'm using degrees in the for-loop but the /sin/ and /cos/ functions expect radians so we need to convert the degrees. Since the circumference of a circle is both $360^\circ$ and $2\pi$ we can use a straight ratio to convert them.
+
+\[
+\textit{radians} = \textit{degrees} \times \frac{2 \pi}{360}
+\]
+
+This is usually written using a half-circle $\left(\frac{\pi}{180}\right)$ but I find it easier to remember the whole circle for some reason.
+
+#+begin_src js :noweb-ref circle-for
+for (let angle=start; angle <= DEGREES_IN_A_CIRCLE + start;
+     angle += slider.value()) {
+  radians = angle * TO_RADIANS;
+#+end_src
+
+** The Coordinates of the Circle's Points
+
+The coordinates for our point are calculated using the trigonometric definitions for /sin/ and /cos/.
+
+\begin{align}
+\cos \theta &= \frac{adjacent}{hypotenuse} \\
+\textit{adjacent} &= \textit{hypotenuse} \times \cos \theta
+\end{align}
+
+\begin{align}
+\sin \theta &= \frac{opposite}{hypotenuse}\\
+\textit{opposite} &= \textit{hypoteuse} \times \sin \theta
+\end{align}
+
+Using the /radius/ we want as the /hypotenuse/ and the /adjacent/ and /opposite/ values as the /x/ and /y/ coordinates we can re-write the equations as:
+
+\begin{align}
+x &= r \cos \theta \\
+y &= r \sin \theta
+\end{align}
+
+But since our coordinate system starts in the top left corner we have to add an offset to move the center of the circle to the center of the canvas.
+
+\begin{align}
+x &= \textit{center}_x + r \cos \theta \\
+y &= \textit{center}_y + r \sin \theta
+\end{align}
+
+#+begin_src js :noweb-ref circle-coordinates
+x = center_x + RADIUS * Math.cos(radians);
+y = center_y + RADIUS * Math.sin(radians);
+#+end_src
+
+** Now We Draw
+Now that we have our /x/ and /y/ coordinates for the next point on the circle we can draw it.
+
+#+begin_src js :noweb-ref circle-point-and-line
+p5.line(center_x, center_y, x, y);
+p5.circle(x, y, SMALL_DIAMETER);
+#+end_src
+** And the Rest
+
+If we just draw the points and line we'll end up with a black dot, which still shows that it's working, but kind of negates the point of using something animated, so I'll draw a white background that's mostly transparent so we can see things move.
+
+#+begin_src js :noweb-ref circle-background
+p5.background(255, 10);
+#+end_src
+
+And now I'll increment the ~start~ angle so the next time we draw a circle it will be rotated a little bit from where it started this time through the loop.
+
+#+begin_src js :noweb-ref circle-move-start
+start = (start + STEP) % 360 ;
+#+end_src
+
+* Closing Up
+And there we have the circle. I had two main reasons for doing this exercise - one was to have a starting point for making noisier shapes and the other was to remind myself of how to make cyclical values so that I can use it as input for functions that I want to have repeat themselves.
+
+* References
+
+ - {{% doc %}}bibliography-generative-art{{% /doc %}}
+ - {{% doc %}}bibliography-the-nature-of-code{{% /doc %}}

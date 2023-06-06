@@ -1,0 +1,29 @@
+#+BEGIN_COMMENT
+.. title: The Nature of Code
+.. slug: bibliography-the-nature-of-code
+.. date: 2023-06-06 13:55:23 UTC-07:00
+.. tags: bibliography,p5.js,book
+.. category: Bibliography
+.. link: 
+.. description: A bibliography page for the Nature of Code.
+.. type: text
+.. status: 
+.. updated: 
+
+#+END_COMMENT
+
+#+OPTIONS: ^:{}
+#+TOC: headlines 2
+
+* The Book
+The product page for the book points to the older version of the book.
+
+- Nature of Code [Internet]. [cited 2023 May 11]. Available from: https://natureofcode.com
+
+The version I'm looking at is the second edition which uses p5.js.
+
+- https://nature-of-code-2nd-edition.netlify.app/ : the hosted book
+- https://github.com/nature-of-code/noc-book-2023: the repository for the book
+- https://github.com/nature-of-code/noc-examples-p5.js: The p5.js version of the examples in the book(s)
+
+  Daniel Shiffman also has a website called [[https://thecodingtrain.com/][the Coding Train]] with videos about programming. There is a Nature of Code "track" (https://thecodingtrain.com/tracks/the-nature-of-code-2) but it only goes part of the way through chapter 1.
