@@ -1,0 +1,50 @@
+#+BEGIN_COMMENT
+.. title: Generative Art
+.. slug: bibliography-generative-art
+.. date: 2023-06-04 12:58:39 UTC-07:00
+.. tags: citation,generative art,book
+.. category: Generative Art
+.. link: 
+.. description: A reference to the book Generative Art.
+.. type: text
+.. status: 
+.. updated: 
+
+#+END_COMMENT
+
+* The Book
+ - Pearson M. Generative art: a practical guide using processing. Shelter Island, NY : London: Manning ; Pearson Education [distributor]; 2011. 197 pages
+
+* The Author's Site(s)
+** Zen Bullets (probably)
+The Zen Bullets site doesn't have the author's name listed on it (that I could see) but there's references to this being his pen-name (e.g. on [[https://leanpub.com/u/zenbullets][leanpub]]) and the works look about right.
+
+- http://zenbullets.com/ : This appears to be the author's main site
+- http://zenbullets.com/abandonedart/ : This is a sub-section of the site that appears to match what's in the book (images only).
+- https://github.com/calculata/AbandonedArt: This is a github page with the processing sketches that the [[https://manning-content.s3.amazonaws.com/download/7/0151371-391d-43c6-b978-3b5ae90c7a73/Pearson_Errata.html][book's errata page]] links to.
+
+
+The Zen Bullets site uses a very small font and you can't scroll the menu on the left if you increase the font size and it pushes the text off the pgae so you it's pretty hard to read the navigational text beyond the top items in the menu, but all the links appear to be to interesting stuff so it's worth it to just click on the links even if you can't read them.
+  
+** Abandoned Art (Possibly Truly Abandoned)
+*Warning:* uBlock Origin blocks this site because the web-host it uses is listed as untrustworthy, so I haven't actually seen the page, but it's listed in the book and the book's [[https://www.manning.com/books/generative-art][product page]]  so I'm including it mostly to remind myself not to go there, even though they tell you to (the errata page does have a a note saying the site's license is expired, but they didn't fix the main page).
+
+- abandonedart.org
+- https://www.scam-detector.com/validator/iyfbodn-com-review/
+
+* Other Artist's Mentioned In the Book
+
+These are ones that I could find dedicated sites for. The earliest pioneers (other than Manfred Mohr and Paul Brown) don't seem to have websites with their work.
+
+- [[https://www.syedrezaali.com/][Reza Ali]]
+- [[http://www.paul-brown.com/][Paul Brown]]: The site looks like it was built in the 1990's so I found it too painful to look through, but there's a lot there.
+- [[http://sub.blue/][Tom Beddard]]: His site, Sub.Blue (http only).
+- [[https://roberthodgin.com/][Robert Hodgin]]
+- [[http://www.aaronkoblin.com/][Aaron Koblin]]: The link is to his web-site ([[https://en.wikipedia.org/wiki/Aaron_Koblin?useskin=vector][wikipedia page]]).
+- [[http://www.emohr.com/][Manfred Mohr]]: His site has works going back to the 1960's (switched to computers in 1969). Many have descriptions of what the algorithm does.
+- [[https://reas.com/][Casey Reas]]: One of the creators of Processing.
+- [[https://www.saint-clair.net/][Jerome Saint-Clair]]: The newest work on the site is from 2012 so he's either inactive or this is an old site.
+- [[https://www.infinite.center/][Jared Tarbell]]: His site "Infinite Center" (latest post January 8, 2020). Is this [[http://www.complexification.net/programmer.html][one of the founders of etsy]]?. Also [[http://www.complexification.net/gallery/][complexification.net]] (2012, no https). The sketchs on the old site are java applets so you have to open the applet (which won't run) then copy the source and run it as java.
+- [[https://github.com/blprnt][Jer Thorp]]: The link is to his github repositories, I couldn't find a web-page for him. There's a [[https://www.reddit.com/domain/blog.blprnt.com/][reddit page]] for his blog, but the blog is gone and the reddit threads are old.
+- [[https://mariuswatz.com/][Marius Waltz]] : The site only has some work representing what he does, doing an image search with his name and the title of a piece (e.g. Grid Distortion) will pull up more variations.
+- [[https://winterbloed.be/][Frederik Vanhoutte]]: I didn't see his name on the site (/winterbloed.be/) but /Winterbloed/ appears to be his pen-name. (http only)
