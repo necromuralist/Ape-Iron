@@ -7,11 +7,19 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/bibliography.xml</loc>
-  <lastmod>2023-05-09T20:04:00Z</lastmod>
+  <lastmod>2023-06-06T21:14:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/book.xml</loc>
+  <lastmod>2023-06-06T21:14:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_abecedarium.xml</loc>
+  <lastmod>2023-06-03T23:06:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_bibliography.xml</loc>
-  <lastmod>2023-05-09T20:04:00Z</lastmod>
+  <lastmod>2023-06-06T21:14:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_comics.xml</loc>
@@ -26,16 +34,20 @@
   <lastmod>2023-05-09T20:04:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_generative-art.xml</loc>
+  <lastmod>2023-06-06T21:14:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_noise.xml</loc>
-  <lastmod>2023-05-17T23:26:00Z</lastmod>
+  <lastmod>2023-05-23T20:11:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_p5.xml</loc>
-  <lastmod>2023-05-17T23:15:00Z</lastmod>
+  <lastmod>2023-06-04T19:49:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_p5js.xml</loc>
-  <lastmod>2023-05-17T23:30:00Z</lastmod>
+  <lastmod>2023-06-03T23:06:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_scraping.xml</loc>
@@ -50,6 +62,14 @@
   <lastmod>2023-05-09T20:04:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_vectors.xml</loc>
+  <lastmod>2023-05-25T00:01:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/citation.xml</loc>
+  <lastmod>2023-06-06T18:24:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/comics.xml</loc>
   <lastmod>2023-05-09T20:04:00Z</lastmod>
  </sitemap>
@@ -62,12 +82,16 @@
   <lastmod>2023-05-09T20:04:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/generative-art.xml</loc>
+  <lastmod>2023-06-06T21:14:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/gouache.xml</loc>
   <lastmod>2023-05-09T20:04:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/graphing.xml</loc>
-  <lastmod>2023-05-17T23:30:00Z</lastmod>
+  <lastmod>2023-06-03T23:06:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/grisaille.xml</loc>
@@ -95,19 +119,19 @@
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/nature-of-code.xml</loc>
-  <lastmod>2023-05-17T23:30:00Z</lastmod>
+  <lastmod>2023-06-04T19:49:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/noise.xml</loc>
-  <lastmod>2023-05-17T23:30:00Z</lastmod>
+  <lastmod>2023-06-04T19:49:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/p5.xml</loc>
-  <lastmod>2023-05-17T23:15:00Z</lastmod>
+  <lastmod>2023-06-04T19:49:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/p5js.xml</loc>
-  <lastmod>2023-05-17T23:30:00Z</lastmod>
+  <lastmod>2023-06-06T21:14:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/perspective.xml</loc>
@@ -138,6 +162,10 @@
   <lastmod>2023-05-09T20:04:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/vectors.xml</loc>
+  <lastmod>2023-05-25T00:01:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/watercolor.xml</loc>
   <lastmod>2023-05-09T20:04:00Z</lastmod>
  </sitemap>
@@ -147,10 +175,10 @@
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/rss.xml</loc>
-  <lastmod>2023-05-17T23:30:00Z</lastmod>
+  <lastmod>2023-06-06T21:14:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/sitemap.xml</loc>
-  <lastmod>2023-05-17T23:30:00Z</lastmod>
+  <lastmod>2023-06-06T21:14:00Z</lastmod>
  </sitemap>
 </sitemapindex>

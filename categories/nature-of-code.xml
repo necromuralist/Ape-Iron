@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron (Posts about nature of code)</title><link>https://necromuralist.github.io/Ape-Iron/</link><description></description><atom:link href="https://necromuralist.github.io/Ape-Iron/categories/nature-of-code.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;Cloistered Monkey&lt;/a&gt; &lt;p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"&gt;&lt;a property="dct:title" rel="cc:attributionURL" href="https://necromuralist.github.io/Ape-Iron/"&gt;Ape Iron&lt;/a&gt; by &lt;a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/necromuralist"&gt;The Cloistered Monkey&lt;/a&gt; is licensed under &lt;a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY 4.0&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;&lt;/a&gt;&lt;/p&gt;</copyright><lastBuildDate>Wed, 17 May 2023 23:30:44 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>A Noisy Walker</title><link>https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron (Posts about nature of code)</title><link>https://necromuralist.github.io/Ape-Iron/</link><description></description><atom:link href="https://necromuralist.github.io/Ape-Iron/categories/nature-of-code.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;Cloistered Monkey&lt;/a&gt; &lt;p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"&gt;&lt;a property="dct:title" rel="cc:attributionURL" href="https://necromuralist.github.io/Ape-Iron/"&gt;Ape Iron&lt;/a&gt; by &lt;a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/necromuralist"&gt;The Cloistered Monkey&lt;/a&gt; is licensed under &lt;a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY 4.0&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;&lt;/a&gt;&lt;/p&gt;</copyright><lastBuildDate>Sun, 04 Jun 2023 19:49:16 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>A Noisy Walker</title><link>https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/#orgf158d22"&gt;The Noise Walker&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/#org8c5e6cc"&gt;The Noise Walker&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/#orga575feb"&gt;Noise Value Offset&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/#orga229b65"&gt;Walk&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/#org4b34d1d"&gt;Show Yourself&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/#orgaf23b64"&gt;Noise Value Offset&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/#orgdaad61d"&gt;Walk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/#org3376801"&gt;Show Yourself&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/#org4ba1f0f"&gt;The Sketch&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/#org8643d4c"&gt;The Sketch&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/#org1d30925"&gt;Set Up&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/#org136493f"&gt;Draw&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/#org7b09d31"&gt;Set Up&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/#org18de00c"&gt;Draw&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/#org2205560"&gt;The End&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/#org157a409"&gt;Sources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/#org8958a77"&gt;The End&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/#org4014256"&gt;Sources&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -30,16 +30,16 @@
 &lt;script language="javascript" type="text/javascript" src="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/walker.js"&gt;&lt;/script&gt;
 &lt;script language="javascript" type="text/javascript" src="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/sketch.js"&gt;&lt;/script&gt;
 
-&lt;/p&gt;&lt;div id="noisy-walker"&gt;&lt;/div&gt;
+&lt;/p&gt;&lt;div class="p5js" id="noisy-walker"&gt;&lt;/div&gt;
 
 
 &lt;p&gt;
 This is a follow-up to the &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-random-walker/"&gt;Random Walker&lt;/a&gt; post. In that previous post I made a walker that moved randomly in any (2D) direction. In this post I'll make a walker that moves according to values given by the p5 &lt;a href="https://p5js.org/reference/#/p5/noise"&gt;noise&lt;/a&gt; function. This is a pretty straight repeat of what's in the &lt;a href="https://nature-of-code-2nd-edition.netlify.app/introduction/"&gt;introduction to the Nature of Code&lt;/a&gt;.
 &lt;/p&gt;
 
-&lt;div id="outline-container-orgf158d22" class="outline-2"&gt;
-&lt;h2 id="orgf158d22"&gt;The Noise Walker&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgf158d22"&gt;
+&lt;div id="outline-container-org8c5e6cc" class="outline-2"&gt;
+&lt;h2 id="org8c5e6cc"&gt;The Noise Walker&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org8c5e6cc"&gt;
 &lt;p&gt;
 The NoiseWalker keeps track of its position on the canvas as well as moving itself and plotting a circle in its current location. Its constructor starts it at the center of the canvas and creates a noise-offset vector to hold the inputs to the noise function. The noise-offset vector is initially given random x and y values so they aren't the same - since &lt;code&gt;noise&lt;/code&gt; is a function if we passed in the same value to it for both x and y they would both get the same value out of it and we'd end up with a diagonal line instead of something that looks random-ish the way that we want.
 &lt;/p&gt;
@@ -80,9 +80,9 @@ The first call to the &lt;code&gt;walk&lt;/code&gt; method will clobber the init
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orga575feb" class="outline-3"&gt;
-&lt;h3 id="orga575feb"&gt;Noise Value Offset&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orga575feb"&gt;
+&lt;div id="outline-container-orgaf23b64" class="outline-3"&gt;
+&lt;h3 id="orgaf23b64"&gt;Noise Value Offset&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgaf23b64"&gt;
 &lt;p&gt;
 This property will return the current value of the slider. It's maybe overkill, but I'm trying to re-learn javascript along with p5 and follow along with &lt;i&gt;The Nature of Code&lt;/i&gt; so I need things to be extra-obvious, sometimes.
 &lt;/p&gt;
@@ -97,9 +97,9 @@ This property will return the current value of the slider. It's maybe overkill, 
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orga229b65" class="outline-3"&gt;
-&lt;h3 id="orga229b65"&gt;Walk&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orga229b65"&gt;
+&lt;div id="outline-container-orgdaad61d" class="outline-3"&gt;
+&lt;h3 id="orgdaad61d"&gt;Walk&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgdaad61d"&gt;
 &lt;p&gt;
 The &lt;code&gt;walk&lt;/code&gt; method moves the walker by adding some noise to its position. The &lt;code&gt;noise&lt;/code&gt; function outputs a value from 0 to 1 so I'll use it as a scale factor for the width and height of the canvas to get the new location of the walker. Note that we're not using the prior position of the walker when calculating the new one, just the noise.
 &lt;/p&gt;
@@ -114,9 +114,9 @@ The &lt;code&gt;walk&lt;/code&gt; method moves the walker by adding some noise t
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org4b34d1d" class="outline-3"&gt;
-&lt;h3 id="org4b34d1d"&gt;Show Yourself&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org4b34d1d"&gt;
+&lt;div id="outline-container-org3376801" class="outline-3"&gt;
+&lt;h3 id="org3376801"&gt;Show Yourself&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org3376801"&gt;
 &lt;p&gt;
 The Noise Walker's &lt;code&gt;show_yourself&lt;/code&gt; method draws a circle wherever the walker happens to be at the moment. Nothing fancy.
 &lt;/p&gt;
@@ -131,9 +131,9 @@ The Noise Walker's &lt;code&gt;show_yourself&lt;/code&gt; method draws a circle 
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org4ba1f0f" class="outline-2"&gt;
-&lt;h2 id="org4ba1f0f"&gt;The Sketch&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org4ba1f0f"&gt;
+&lt;div id="outline-container-org8643d4c" class="outline-2"&gt;
+&lt;h2 id="org8643d4c"&gt;The Sketch&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org8643d4c"&gt;
 &lt;p&gt;
 I'll put the sketch in a function named "noise_walk".
 &lt;/p&gt;
@@ -150,9 +150,9 @@ I'll put the sketch in a function named "noise_walk".
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org1d30925" class="outline-3"&gt;
-&lt;h3 id="org1d30925"&gt;Set Up&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org1d30925"&gt;
+&lt;div id="outline-container-org7b09d31" class="outline-3"&gt;
+&lt;h3 id="org7b09d31"&gt;Set Up&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org7b09d31"&gt;
 &lt;p&gt;
 The &lt;code&gt;setup&lt;/code&gt; method will create the canvas, a slider which the user can use to change the size of the steps the walker takes along the noise offset, and the walker itself. The canvas and slider are placed based on the order in which you create them. In this case I wanted the slider underneath the canvas so I had to define it after the canvas (but before the walker since I pass it to the walker).
 &lt;/p&gt;
@@ -176,9 +176,9 @@ The &lt;code&gt;setup&lt;/code&gt; method will create the canvas, a slider which
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org136493f" class="outline-3"&gt;
-&lt;h3 id="org136493f"&gt;Draw&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org136493f"&gt;
+&lt;div id="outline-container-org18de00c" class="outline-3"&gt;
+&lt;h3 id="org18de00c"&gt;Draw&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org18de00c"&gt;
 &lt;p&gt;
 The draw function moves and shows the walker.
 &lt;/p&gt;
@@ -200,18 +200,18 @@ The draw function moves and shows the walker.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org2205560" class="outline-2"&gt;
-&lt;h2 id="org2205560"&gt;The End&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org2205560"&gt;
+&lt;div id="outline-container-org8958a77" class="outline-2"&gt;
+&lt;h2 id="org8958a77"&gt;The End&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org8958a77"&gt;
 &lt;p&gt;
 And there's the code for the sketch at the top of the page.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org157a409" class="outline-2"&gt;
-&lt;h2 id="org157a409"&gt;Sources&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org157a409"&gt;
+&lt;div id="outline-container-org4014256" class="outline-2"&gt;
+&lt;h2 id="org4014256"&gt;Sources&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org4014256"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;Nature of Code [Internet]. [cited 2023 May 11]. Available from: &lt;a href="https://nature-of-code-2nd-edition.netlify.app/"&gt;https://nature-of-code-2nd-edition.netlify.app/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;p5 reference | noise() [Internet]. [cited 2023 Apr 25]. Available from: &lt;a href="https://p5js.org/reference/#/p5/noise"&gt;https://p5js.org/reference/#/p5/noise&lt;/a&gt;&lt;/li&gt;
@@ -221,7 +221,7 @@ And there's the code for the sketch at the top of the page.
 &lt;script language="javascript" type="text/javascript" src="https://necromuralist.github.io/Ape-Iron/posts/a-random-walker/walker.js"&gt;&lt;/script&gt;
 &lt;script language="javascript" type="text/javascript" src="https://necromuralist.github.io/Ape-Iron/posts/a-random-walker/sketch.js"&gt;&lt;/script&gt;
 
-&lt;/p&gt;&lt;div id="random-walker-sketch"&gt;&lt;/div&gt;
+&lt;/p&gt;&lt;div class="p5js" id="random-walker-sketch"&gt;&lt;/div&gt;
 
 
 &lt;p&gt;
@@ -232,18 +232,18 @@ This is a look at the &lt;a href="https://thecodingtrain.com/tracks/the-nature-o
 I'm going to illustrate this by creating an object that takes a &lt;a href="https://en.wikipedia.org/wiki/Random_walk?useskin=vector"&gt;random walk&lt;/a&gt;.
 &lt;/p&gt;
 
-&lt;div id="outline-container-org654b3a8" class="outline-2"&gt;
-&lt;h2 id="org654b3a8"&gt;The Walker&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org654b3a8"&gt;
+&lt;div id="outline-container-org1c138df" class="outline-2"&gt;
+&lt;h2 id="org1c138df"&gt;The Walker&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org1c138df"&gt;
 &lt;p&gt;
 First up is a Walker class that keeps track of its position on the canvas, updates the position, and draws itself. I'm thinking that drawing itself doesn't seem right, but I suppose since we're only creating one object moving the drawing outside of the class is more work than what's needed.
 &lt;/p&gt;
 &lt;/div&gt;
 
 
-&lt;div id="outline-container-orgf2a40b4" class="outline-3"&gt;
-&lt;h3 id="orgf2a40b4"&gt;The Constructor&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgf2a40b4"&gt;
+&lt;div id="outline-container-orge3112f1" class="outline-3"&gt;
+&lt;h3 id="orge3112f1"&gt;The Constructor&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orge3112f1"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cm"&gt;/** The Random Walker */&lt;/span&gt;
 &lt;span class="kd"&gt;class&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;Walker&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="cm"&gt;/** Create the walker&lt;/span&gt;
@@ -263,9 +263,9 @@ First up is a Walker class that keeps track of its position on the canvas, updat
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org4350bec" class="outline-3"&gt;
-&lt;h3 id="org4350bec"&gt;The Step Property&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org4350bec"&gt;
+&lt;div id="outline-container-orge1fb4d9" class="outline-3"&gt;
+&lt;h3 id="orge1fb4d9"&gt;The Step Property&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orge1fb4d9"&gt;
 &lt;p&gt;
 In the Coding Train video he increments the coordinates of the position vector separately, but since this is supposed to be about vectors I thought it should add another vector. This one was a little bit of a head-scratcher at first, though. &lt;code&gt;p5&lt;/code&gt; will make a two-dimensional vector for you with the x and y values set to some random value from -1 to 1 (it's a unit vector set to a random angle) using &lt;a href="https://p5js.org/reference/#/p5.Vector/random2D"&gt;p5.Vector.random2D&lt;/a&gt;. But the &lt;code&gt;p5&lt;/code&gt; we need to use isn't our &lt;code&gt;p5&lt;/code&gt; but rather the global p5 object. The &lt;code&gt;p5&lt;/code&gt; instance we hold doesn't have the &lt;code&gt;Vector&lt;/code&gt; class definition, for some reason (which is why you need to use &lt;code&gt;createVector&lt;/code&gt; I guess).
 &lt;/p&gt;
@@ -284,9 +284,9 @@ Since the random values are from -1 to 1 I'm multiplying it by a user-specified 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org5f35ae1" class="outline-3"&gt;
-&lt;h3 id="org5f35ae1"&gt;The Update Method&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org5f35ae1"&gt;
+&lt;div id="outline-container-org255d1dd" class="outline-3"&gt;
+&lt;h3 id="org255d1dd"&gt;The Update Method&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org255d1dd"&gt;
 &lt;p&gt;
 It would have been nice if p5 vectors could be added using operators, but instead we need to use the &lt;code&gt;add&lt;/code&gt; method. Weirdly, &lt;a href="https://p5js.org/reference/#/p5.Vector/add"&gt;the Vector.add documentation&lt;/a&gt; doesn't cover the case where you pass a vector to another vector's &lt;code&gt;add&lt;/code&gt; method, only the cases where you're adding the arguments separately, adding an array of values, or adding two vectors using the &lt;code&gt;p5.Vector.add&lt;/code&gt;  static method. It appears to do an in-place update, though, so I'll assume that that's what it does.
 &lt;/p&gt;
@@ -299,9 +299,9 @@ It would have been nice if p5 vectors could be added using operators, but instea
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgf51cf10" class="outline-3"&gt;
-&lt;h3 id="orgf51cf10"&gt;The Show Method&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgf51cf10"&gt;
+&lt;div id="outline-container-org6e1b327" class="outline-3"&gt;
+&lt;h3 id="org6e1b327"&gt;The Show Method&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org6e1b327"&gt;
 &lt;p&gt;
 This is where the walker draws itself. Even though we're using a vector to hold the position, you still need to unpack the coordinates when calling the &lt;code&gt;point&lt;/code&gt; method.
 &lt;/p&gt;
@@ -316,9 +316,9 @@ This is where the walker draws itself. Even though we're using a vector to hold 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org01bd2a1" class="outline-3"&gt;
-&lt;h3 id="org01bd2a1"&gt;Move and Show&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org01bd2a1"&gt;
+&lt;div id="outline-container-org408958f" class="outline-3"&gt;
+&lt;h3 id="org408958f"&gt;Move and Show&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org408958f"&gt;
 &lt;p&gt;
 Not really needed, but I'd rather make one function call for the user to move the walker and have it draw itself.
 &lt;/p&gt;
@@ -332,17 +332,17 @@ Not really needed, but I'd rather make one function call for the user to move th
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org07d46ea" class="outline-2"&gt;
-&lt;h2 id="org07d46ea"&gt;The Sketch&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org07d46ea"&gt;
+&lt;div id="outline-container-orgec8f6e6" class="outline-2"&gt;
+&lt;h2 id="orgec8f6e6"&gt;The Sketch&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgec8f6e6"&gt;
 &lt;p&gt;
 Now the sketch. It seems a little awkward, but since the Walker definition is in a separate file from the sketch definition we need to remember add a &lt;code&gt;script&lt;/code&gt; tag to the HTML for both of them. I guess you can think of that as the equivalent of an import, although it feels weird somehow.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org09a516e" class="outline-3"&gt;
-&lt;h3 id="org09a516e"&gt;Some Constants&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org09a516e"&gt;
+&lt;div id="outline-container-org12664ac" class="outline-3"&gt;
+&lt;h3 id="org12664ac"&gt;Some Constants&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org12664ac"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;WALKER_SKETCH_DIV&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"random-walker-sketch"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;HEIGHT&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;400&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;STEP_LIMIT&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;5&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -351,9 +351,9 @@ Now the sketch. It seems a little awkward, but since the Walker definition is in
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgde941dc" class="outline-3"&gt;
-&lt;h3 id="orgde941dc"&gt;The Sketch Function&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgde941dc"&gt;
+&lt;div id="outline-container-orga3db8dd" class="outline-3"&gt;
+&lt;h3 id="orga3db8dd"&gt;The Sketch Function&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orga3db8dd"&gt;
 &lt;p&gt;
 Nothing fancy here, we're just declaring the function and the &lt;code&gt;walker&lt;/code&gt; variable to hold our Walker object.
 &lt;/p&gt;
@@ -365,9 +365,9 @@ Nothing fancy here, we're just declaring the function and the &lt;code&gt;walker
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org964aef0" class="outline-3"&gt;
-&lt;h3 id="org964aef0"&gt;Set Up&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org964aef0"&gt;
+&lt;div id="outline-container-org793b480" class="outline-3"&gt;
+&lt;h3 id="org793b480"&gt;Set Up&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org793b480"&gt;
 &lt;p&gt;
 Set up the sketch by drawing the canvas and creating a Walker.
 &lt;/p&gt;
@@ -383,9 +383,9 @@ Set up the sketch by drawing the canvas and creating a Walker.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org69c5a09" class="outline-3"&gt;
-&lt;h3 id="org69c5a09"&gt;Draw&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org69c5a09"&gt;
+&lt;div id="outline-container-org6fb2b44" class="outline-3"&gt;
+&lt;h3 id="org6fb2b44"&gt;Draw&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org6fb2b44"&gt;
 &lt;p&gt;
 Our &lt;code&gt;draw&lt;/code&gt; function defers to the walker to do everything.
 &lt;/p&gt;
@@ -399,31 +399,31 @@ Our &lt;code&gt;draw&lt;/code&gt; function defers to the walker to do everything
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org96bef6c" class="outline-2"&gt;
-&lt;h2 id="org96bef6c"&gt;The End&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org96bef6c"&gt;
+&lt;div id="outline-container-orgd50e9b5" class="outline-2"&gt;
+&lt;h2 id="orgd50e9b5"&gt;The End&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgd50e9b5"&gt;
 &lt;p&gt;
 And there it is. One thing to note is that there's no checking of the position to see if it's wandered off the canvas so it's possible that it will wander completely off and updates won't be visible.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgc249726" class="outline-2"&gt;
-&lt;h2 id="orgc249726"&gt;Sources&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgc249726"&gt;
+&lt;div id="outline-container-org2f90f34" class="outline-2"&gt;
+&lt;h2 id="org2f90f34"&gt;Sources&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org2f90f34"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgd6f317f" class="outline-3"&gt;
-&lt;h3 id="orgd6f317f"&gt;The Coding Train&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgd6f317f"&gt;
+&lt;div id="outline-container-org59adc43" class="outline-3"&gt;
+&lt;h3 id="org59adc43"&gt;The Coding Train&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org59adc43"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;What is a Vector? [Internet]. [cited 2023 May 9]. Available from: &lt;a href="https://thecodingtrain.com"&gt;https://thecodingtrain.com&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org30d44a4" class="outline-3"&gt;
-&lt;h3 id="org30d44a4"&gt;P5 Reference&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org30d44a4"&gt;
+&lt;div id="outline-container-orga9b57f8" class="outline-3"&gt;
+&lt;h3 id="orga9b57f8"&gt;P5 Reference&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orga9b57f8"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;P5 reference | createVector() [Internet]. [cited 2023 May 9]. Available from: &lt;a href="https://p5js.org/reference/#/p5/createVector"&gt;https://p5js.org/reference/#/p5/createVector&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;P5 reference | p5.Vector [Internet]. [cited 2023 May 9]. Available from: &lt;a href="https://p5js.org/reference/#/p5.Vector"&gt;https://p5js.org/reference/#/p5.Vector&lt;/a&gt;&lt;/li&gt;

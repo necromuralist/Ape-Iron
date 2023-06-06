@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/</loc>
-  <lastmod>2023-05-09T23:22:00Z</lastmod>
+  <lastmod>2023-06-01T19:18:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/2020/</loc>
@@ -23,15 +23,23 @@
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/archive.html</loc>
-  <lastmod>2023-05-17T23:30:00Z</lastmod>
+  <lastmod>2023-06-06T21:14:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/</loc>
-  <lastmod>2023-05-14T22:59:00Z</lastmod>
+  <lastmod>2023-06-04T23:55:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/bibliography/</loc>
   <lastmod>2023-05-09T20:04:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/book/</loc>
+  <lastmod>2023-06-04T23:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_abecedarium/</loc>
+  <lastmod>2023-05-27T18:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_bibliography/</loc>
@@ -50,8 +58,12 @@
   <lastmod>2023-05-09T20:04:00Z</lastmod>
  </url>
  <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_generative-art/</loc>
+  <lastmod>2023-06-03T23:06:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_noise/</loc>
-  <lastmod>2023-05-14T22:59:00Z</lastmod>
+  <lastmod>2023-05-18T22:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_p5/</loc>
@@ -74,6 +86,14 @@
   <lastmod>2023-05-09T20:04:00Z</lastmod>
  </url>
  <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_vectors/</loc>
+  <lastmod>2023-05-24T22:13:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/citation/</loc>
+  <lastmod>2023-06-04T23:55:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/comics/</loc>
   <lastmod>2023-05-09T20:04:00Z</lastmod>
  </url>
@@ -84,6 +104,10 @@
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/doodle/</loc>
   <lastmod>2023-05-09T20:04:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/generative-art/</loc>
+  <lastmod>2023-06-03T23:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/gouache/</loc>
@@ -162,6 +186,10 @@
   <lastmod>2023-05-09T20:04:00Z</lastmod>
  </url>
  <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/vectors/</loc>
+  <lastmod>2023-05-24T22:13:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/watercolor/</loc>
   <lastmod>2023-05-09T20:04:00Z</lastmod>
  </url>
@@ -171,7 +199,11 @@
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/index-1.html</loc>
-  <lastmod>2023-05-17T23:30:00Z</lastmod>
+  <lastmod>2023-06-04T23:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/index-2.html</loc>
+  <lastmod>2023-06-06T21:14:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/</loc>
@@ -184,6 +216,14 @@
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/posts/bag-man/</loc>
   <lastmod>2023-05-09T20:04:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/posts/bibliography-generative-art/</loc>
+  <lastmod>2023-06-04T23:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/posts/bibliography-the-nature-of-code/</loc>
+  <lastmod>2023-06-06T21:14:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/posts/bubba-test/</loc>
@@ -200,6 +240,10 @@
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/posts/dog-man/</loc>
   <lastmod>2023-05-09T20:04:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/</loc>
+  <lastmod>2023-06-04T23:55:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/</loc>
@@ -230,8 +274,16 @@
   <lastmod>2023-05-09T20:04:00Z</lastmod>
  </url>
  <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/posts/noise-test/</loc>
+  <lastmod>2023-05-22T22:24:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://necromuralist.github.io/Ape-Iron/posts/pulling-a-list-of-animals-from-wikipedia/</loc>
   <lastmod>2023-05-09T20:04:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/</loc>
+  <lastmod>2023-05-27T18:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/posts/pulling-legendary-creatures-from-wikipedia/</loc>
@@ -247,7 +299,11 @@
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/</loc>
-  <lastmod>2023-05-17T02:48:00Z</lastmod>
+  <lastmod>2023-05-21T22:40:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/posts/vectorized-bouncing-ball/</loc>
+  <lastmod>2023-05-24T23:39:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/posts/wikipedia-list-of-countries/</loc>

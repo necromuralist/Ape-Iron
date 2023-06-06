@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron (Posts about Generative Art)</title><link>https://necromuralist.github.io/Ape-Iron/</link><description></description><atom:link href="https://necromuralist.github.io/Ape-Iron/categories/cat_generative-art.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;Cloistered Monkey&lt;/a&gt; &lt;p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"&gt;&lt;a property="dct:title" rel="cc:attributionURL" href="https://necromuralist.github.io/Ape-Iron/"&gt;Ape Iron&lt;/a&gt; by &lt;a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/necromuralist"&gt;The Cloistered Monkey&lt;/a&gt; is licensed under &lt;a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY 4.0&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;&lt;/a&gt;&lt;/p&gt;</copyright><lastBuildDate>Tue, 06 Jun 2023 21:21:43 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Generative Art</title><link>https://necromuralist.github.io/Ape-Iron/posts/bibliography-generative-art/</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="outline-container-org1fcefd8" class="outline-2"&gt;
+&lt;h2 id="org1fcefd8"&gt;The Book&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org1fcefd8"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Pearson M. Generative art: a practical guide using processing. Shelter Island, NY : London: Manning ; Pearson Education [distributor]; 2011. 197 pages&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orga23ccda" class="outline-2"&gt;
+&lt;h2 id="orga23ccda"&gt;The Author's Site(s)&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orga23ccda"&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-orgfa2398e" class="outline-3"&gt;
+&lt;h3 id="orgfa2398e"&gt;Zen Bullets (probably)&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgfa2398e"&gt;
+&lt;p&gt;
+The Zen Bullets site doesn't have the author's name listed on it (that I could see) but there's references to this being his pen-name (e.g. on &lt;a href="https://leanpub.com/u/zenbullets"&gt;leanpub&lt;/a&gt;) and the works look about right.
+&lt;/p&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;a href="http://zenbullets.com/"&gt;http://zenbullets.com/&lt;/a&gt; : This appears to be the author's main site&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://zenbullets.com/abandonedart/"&gt;http://zenbullets.com/abandonedart/&lt;/a&gt; : This is a sub-section of the site that appears to match what's in the book (images only).&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/calculata/AbandonedArt"&gt;https://github.com/calculata/AbandonedArt&lt;/a&gt;: This is a github page with the processing sketches that the &lt;a href="https://manning-content.s3.amazonaws.com/download/7/0151371-391d-43c6-b978-3b5ae90c7a73/Pearson_Errata.html"&gt;book's errata page&lt;/a&gt; links to.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;
+The Zen Bullets site uses a very small font and you can't scroll the menu on the left if you increase the font size and it pushes the text off the pgae so you it's pretty hard to read the navigational text beyond the top items in the menu, but all the links appear to be to interesting stuff so it's worth it to just click on the links even if you can't read them.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org701a9ca" class="outline-3"&gt;
+&lt;h3 id="org701a9ca"&gt;Abandoned Art (Possibly Truly Abandoned)&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org701a9ca"&gt;
+&lt;p&gt;
+&lt;b&gt;Warning:&lt;/b&gt; uBlock Origin blocks this site because the web-host it uses is listed as untrustworthy, so I haven't actually seen the page, but it's listed in the book and the book's &lt;a href="https://www.manning.com/books/generative-art"&gt;product page&lt;/a&gt;  so I'm including it mostly to remind myself not to go there, even though they tell you to (the errata page does have a a note saying the site's license is expired, but they didn't fix the main page).
+&lt;/p&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;abandonedart.org&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.scam-detector.com/validator/iyfbodn-com-review/"&gt;https://www.scam-detector.com/validator/iyfbodn-com-review/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org844acc6" class="outline-2"&gt;
+&lt;h2 id="org844acc6"&gt;Other Artist's Mentioned In the Book&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org844acc6"&gt;
+&lt;p&gt;
+These are ones that I could find dedicated sites for. The earliest pioneers (other than Manfred Mohr and Paul Brown) don't seem to have websites with their work.
+&lt;/p&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;a href="https://www.syedrezaali.com/"&gt;Reza Ali&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.paul-brown.com/"&gt;Paul Brown&lt;/a&gt;: The site looks like it was built in the 1990's so I found it too painful to look through, but there's a lot there.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://sub.blue/"&gt;Tom Beddard&lt;/a&gt;: His site, Sub.Blue (http only).&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://roberthodgin.com/"&gt;Robert Hodgin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.aaronkoblin.com/"&gt;Aaron Koblin&lt;/a&gt;: The link is to his web-site (&lt;a href="https://en.wikipedia.org/wiki/Aaron_Koblin?useskin=vector"&gt;wikipedia page&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.emohr.com/"&gt;Manfred Mohr&lt;/a&gt;: His site has works going back to the 1960's (switched to computers in 1969). Many have descriptions of what the algorithm does.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://reas.com/"&gt;Casey Reas&lt;/a&gt;: One of the creators of Processing.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.saint-clair.net/"&gt;Jerome Saint-Clair&lt;/a&gt;: The newest work on the site is from 2012 so he's either inactive or this is an old site.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.infinite.center/"&gt;Jared Tarbell&lt;/a&gt;: His site "Infinite Center" (latest post January 8, 2020). Is this &lt;a href="http://www.complexification.net/programmer.html"&gt;one of the founders of etsy&lt;/a&gt;?. Also &lt;a href="http://www.complexification.net/gallery/"&gt;complexification.net&lt;/a&gt; (2012, no https). The sketchs on the old site are java applets so you have to open the applet (which won't run) then copy the source and run it as java.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/blprnt"&gt;Jer Thorp&lt;/a&gt;: The link is to his github repositories, I couldn't find a web-page for him. There's a &lt;a href="https://www.reddit.com/domain/blog.blprnt.com/"&gt;reddit page&lt;/a&gt; for his blog, but the blog is gone and the reddit threads are old.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://mariuswatz.com/"&gt;Marius Waltz&lt;/a&gt; : The site only has some work representing what he does, doing an image search with his name and the title of a piece (e.g. Grid Distortion) will pull up more variations.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://winterbloed.be/"&gt;Frederik Vanhoutte&lt;/a&gt;: I didn't see his name on the site (&lt;i&gt;winterbloed.be&lt;/i&gt;) but &lt;i&gt;Winterbloed&lt;/i&gt; appears to be his pen-name. (http only)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><category>book</category><category>citation</category><category>generative art</category><guid>https://necromuralist.github.io/Ape-Iron/posts/bibliography-generative-art/</guid><pubDate>Sun, 04 Jun 2023 19:58:39 GMT</pubDate></item><item><title>Generative Art Circles</title><link>https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;div id="text-table-of-contents" role="doc-toc"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/#org382b5f0"&gt;A Circle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/#orgec58139"&gt;Closure, Constants, and Variables&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/#org62d4dee"&gt;Constants&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/#org32d3d63"&gt;Variables&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/#orgeb47783"&gt;Set Up&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/#org167ee21"&gt;Draw&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/#org6842b21"&gt;Looping Around the Circle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/#orgabced83"&gt;The Coordinates of the Circle's Points&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/#orgd70e204"&gt;Now We Draw&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/#orgb2bff6a"&gt;And the Rest&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/#orgf65535f"&gt;Closing Up&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/#org7221be3"&gt;References&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org382b5f0" class="outline-2"&gt;
+&lt;h2 id="org382b5f0"&gt;A Circle&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org382b5f0"&gt;
+&lt;p&gt;
+This is a starting point for looking at cyclic sketches. In this case it's just a circle but it's a basic concept that I'll probably use more of later so I thought I'd make a dedicated post for it. In particular it uses &lt;a href="https://en.wikipedia.org/wiki/Polar_coordinate_system?useskin=vector"&gt;Polar Coordinates&lt;/a&gt; which might come in handy.
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;script language="javascript" type="text/javascript" src="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/circle.js"&gt;&lt;/script&gt;
+
+&lt;/p&gt;&lt;div class="p5js" id="5fa2c81b-hard-circle"&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgec58139" class="outline-2"&gt;
+&lt;h2 id="orgec58139"&gt;Closure, Constants, and Variables&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgec58139"&gt;
+&lt;p&gt;
+We begin in the usual way with a variable to hold the &lt;code&gt;div id&lt;/code&gt; that the sketch will go into and declaring the function that will hold our sketch tode.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;CIRCLE_DIV&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"5fa2c81b-hard-circle"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;circle_the_hard_way&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org62d4dee" class="outline-3"&gt;
+&lt;h3 id="org62d4dee"&gt;Constants&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org62d4dee"&gt;
+&lt;p&gt;
+Next I'll declare some constants, both to maybe remind me what the values represent when I use them later and to have a place where I can change the values as I experiment with what looks interesting.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;DEGREES_IN_A_CIRCLE&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;360&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;RADIUS&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;100&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;SMALL_DIAMETER&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;STEP&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;5&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;TO_RADIANS&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;Math&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;PI&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;DEGREES_IN_A_CIRCLE&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;WIDTH&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;3&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;RADIUS&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;HEIGHT&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;WIDTH&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;The &lt;code&gt;RADIUS&lt;/code&gt; holds the radius of the circle we're going to draw&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SMALL_DIAMETER&lt;/code&gt; holds the diameter of the circles I'm going to use to draw the main circle.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;STEP&lt;/code&gt; holds the number of degrees I'm going to rotate the starting point of the circle every time it's re-drawn&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;WITDH&lt;/code&gt; and &lt;code&gt;HEIGHT&lt;/code&gt; are the dimensions of the canvas&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;
+To make it less confusing I'll refer to the small circles that make up the big cicrle as "points" most of the time.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org32d3d63" class="outline-3"&gt;
+&lt;h3 id="org32d3d63"&gt;Variables&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org32d3d63"&gt;
+&lt;p&gt;
+The variables are:
+&lt;/p&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;code&gt;center_x&lt;/code&gt;, &lt;code&gt;center_y&lt;/code&gt;: the center coordinates for the circle. These could be constants but I usually set them in the &lt;code&gt;setup&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;slider&lt;/code&gt;: to hold a slider that will set how many degrees we'll rotate between drawing points on the circle&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;start&lt;/code&gt;: the angle at which we'll start drawing the circle.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;center_x&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;center_y&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;slider&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;start&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgeb47783" class="outline-2"&gt;
+&lt;h2 id="orgeb47783"&gt;Set Up&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgeb47783"&gt;
+&lt;p&gt;
+Our &lt;code&gt;setup&lt;/code&gt; function creates the canvas, sets the colors and creates the slider to let the user change how big a jump we take between drawing points on the circle
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;setup&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;createCanvas&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;WIDTH&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;HEIGHT&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;background&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"white"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;stroke&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"black"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;fill&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"black"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;center_x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;width&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;center_y&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;height&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;slider&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;createSlider&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="mf"&gt;360&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="nx"&gt;slider&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;style&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"width"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"500px"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// end setup&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org167ee21" class="outline-2"&gt;
+&lt;h2 id="org167ee21"&gt;Draw&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org167ee21"&gt;
+&lt;p&gt;
+The &lt;code&gt;draw&lt;/code&gt; function draws a circle using circles and a line showing the raduis.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;draw&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org6842b21" class="outline-3"&gt;
+&lt;h3 id="org6842b21"&gt;Looping Around the Circle&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org6842b21"&gt;
+&lt;p&gt;
+We're going to rotate around the circle once using the &lt;code&gt;start&lt;/code&gt; value as the angle to start at and the value the slider's set at for the number of degrees we move between drawing the points on the circle. To make it easier to think about I'm using degrees in the for-loop but the &lt;i&gt;sin&lt;/i&gt; and &lt;i&gt;cos&lt;/i&gt; functions expect radians so we need to convert the degrees. Since the circumference of a circle is both \(360^\circ\) and \(2\pi\) we can use a straight ratio to convert them.
+&lt;/p&gt;
+
+&lt;p&gt;
+\[
+\textit{radians} = \textit{degrees} \times \frac{2 \pi}{360}
+\]
+&lt;/p&gt;
+
+&lt;p&gt;
+This is usually written using a half-circle \(\left(\frac{\pi}{180}\right)\) but I find it easier to remember the whole circle for some reason.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;angle&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nx"&gt;start&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;angle&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;DEGREES_IN_A_CIRCLE&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;start&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="nx"&gt;angle&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;slider&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;value&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;radians&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;angle&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;TO_RADIANS&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgabced83" class="outline-3"&gt;
+&lt;h3 id="orgabced83"&gt;The Coordinates of the Circle's Points&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgabced83"&gt;
+&lt;p&gt;
+The coordinates for our point are calculated using the trigonometric definitions for &lt;i&gt;sin&lt;/i&gt; and &lt;i&gt;cos&lt;/i&gt;.
+&lt;/p&gt;
+
+\begin{align}
+\cos \theta &amp;amp;= \frac{adjacent}{hypotenuse} \\
+\textit{adjacent} &amp;amp;= \textit{hypotenuse} \times \cos \theta
+\end{align}
+
+\begin{align}
+\sin \theta &amp;amp;= \frac{opposite}{hypotenuse}\\
+\textit{opposite} &amp;amp;= \textit{hypoteuse} \times \sin \theta
+\end{align}
+
+&lt;p&gt;
+Using the &lt;i&gt;radius&lt;/i&gt; we want as the &lt;i&gt;hypotenuse&lt;/i&gt; and the &lt;i&gt;adjacent&lt;/i&gt; and &lt;i&gt;opposite&lt;/i&gt; values as the &lt;i&gt;x&lt;/i&gt; and &lt;i&gt;y&lt;/i&gt; coordinates we can re-write the equations as:
+&lt;/p&gt;
+
+\begin{align}
+x &amp;amp;= r \cos \theta \\
+y &amp;amp;= r \sin \theta
+\end{align}
+
+&lt;p&gt;
+But since our coordinate system starts in the top left corner we have to add an offset to move the center of the circle to the center of the canvas.
+&lt;/p&gt;
+
+\begin{align}
+x &amp;amp;= \textit{center}_x + r \cos \theta \\
+y &amp;amp;= \textit{center}_y + r \sin \theta
+\end{align}
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;center_x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;RADIUS&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;Math&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;cos&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;radians&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="nx"&gt;y&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;center_y&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;RADIUS&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;Math&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;radians&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgd70e204" class="outline-3"&gt;
+&lt;h3 id="orgd70e204"&gt;Now We Draw&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgd70e204"&gt;
+&lt;p&gt;
+Now that we have our &lt;i&gt;x&lt;/i&gt; and &lt;i&gt;y&lt;/i&gt; coordinates for the next point on the circle we can draw it.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;line&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;center_x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;center_y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;y&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;circle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;SMALL_DIAMETER&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-orgb2bff6a" class="outline-3"&gt;
+&lt;h3 id="orgb2bff6a"&gt;And the Rest&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgb2bff6a"&gt;
+&lt;p&gt;
+If we just draw the points and line we'll end up with a black dot, which still shows that it's working, but kind of negates the point of using something animated, so I'll draw a white background that's mostly transparent so we can see things move.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;background&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;255&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;
+And now I'll increment the &lt;code&gt;start&lt;/code&gt; angle so the next time we draw a circle it will be rotated a little bit from where it started this time through the loop.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;start&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;start&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;STEP&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;360&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgf65535f" class="outline-2"&gt;
+&lt;h2 id="orgf65535f"&gt;Closing Up&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgf65535f"&gt;
+&lt;p&gt;
+And there we have the circle. I had two main reasons for doing this exercise - one was to have a starting point for making noisier shapes and the other was to remind myself of how to make cyclical values so that I can use it as input for functions that I want to have repeat themselves.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org7221be3" class="outline-2"&gt;
+&lt;h2 id="org7221be3"&gt;References&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org7221be3"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bibliography-generative-art/"&gt;Generative Art&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bibliography-the-nature-of-code/"&gt;The Nature of Code&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><category>generative art</category><category>p5.js</category><guid>https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/</guid><pubDate>Sat, 03 Jun 2023 22:58:01 GMT</pubDate></item></channel></rss>

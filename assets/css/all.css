@@ -1103,3 +1103,20 @@ img {
     max-width: 1224px;
 }
 
+ /* P5.js */
+ /* The div that holds the sketch (set in the shortcode) */
+ /*
+ .p5js {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;   
+ }
+*/
+ 
+ /* the canvas with the sketch (p5.js sets this class) */
+ .p5Canvas {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+ }
+

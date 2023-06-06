@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+<head>
+<meta charset="utf-8">
+<meta content="Drawing circles in p5 with trigonometry." name="description">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Generative Art Circles | Ape Iron</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<meta content="#5670d4" name="theme-color">
+<meta content="Nikola (getnikola.com)" name="generator">
+<link href="../../rss.xml" hreflang="en" rel="alternate" title="RSS" type="application/rss+xml">
+<link href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/" rel="canonical"><!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><!-- favicons -->
+<link href="../../apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+<link href="../../favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="../../favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="../../site.webmanifest" rel="manifest">
+<meta content="Cloistered Monkey" name="author">
+<link href="../pulling-images-for-the-abecedarium/" rel="prev" title="Pulling Images For the Abecedarium" type="text/html">
+<link href="../bibliography-generative-art/" rel="next" title="Generative Art" type="text/html">
+<meta content="Ape Iron" property="og:site_name">
+<meta content="Generative Art Circles" property="og:title">
+<meta content="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/" property="og:url">
+<meta content="Drawing circles in p5 with trigonometry." property="og:description">
+<meta content="article" property="og:type">
+<meta content="2023-06-03T15:58:01-07:00" property="article:published_time">
+<meta content="generative art" property="article:tag">
+<meta content="p5.js" property="article:tag">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+</head>
+<body>
+<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a> <!-- Menubar -->
+<nav class="navbar navbar-expand-md static-top mb-4 navbar-light bg-light">
+<div class="container"><!-- This keeps the margins nice -->
+ <a class="navbar-brand" href="../../"><span id="blog-title">Ape Iron</span></a> <button aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#bs-navbar" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="bs-navbar">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item"><a class="nav-link" href="../../archive.html">Archive</a></li>
+<li class="nav-item"><a class="nav-link" href="../../categories/">Tags</a></li>
+<li class="nav-item"><a class="nav-link" href="../../rss.xml">RSS feed</a></li>
+<li class="nav-item dropdown"><a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Pages</a>
+<div class="dropdown-menu"><a class="dropdown-item" href="https://necromuralist.github.io/">Cloistered Monkey</a></div>
+</li>
+</ul>
+<!-- DuckDuckGo custom search -->
+<form action="https://duckduckgo.com/" class="navbar-form pull-left" id="search" method="get" name="search"><input name="sites" type="hidden" value="https://necromuralist.github.io/Ape-Iron/"><input name="k8" type="hidden" value="#444444"><input name="k9" type="hidden" value="#D51920"><input name="kt" type="hidden" value="h"><input class="span2" maxlength="255" name="q" placeholder="Search…" type="text"><input style="visibility: hidden;display:none" type="submit" value="DuckDuckGo Search"></form>
+<!-- End of custom search -->
+<ul class="navbar-nav navbar-right">
+<li class="nav-item"><a class="nav-link" href="index.org" id="sourcelink">Source</a></li>
+</ul>
+</div>
+<!-- /.navbar-collapse --></div>
+<!-- /.container --></nav>
+<!-- End of Menubar -->
+<div class="container" id="content" role="main">
+<div class="body-content"><!--Body content-->
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article">
+<header>
+<h1 class="p-name entry-title" itemprop="headline name"><a class="u-url" href=".">Generative Art Circles</a></h1>
+<div class="metadata">
+<p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">Cloistered Monkey</span></p>
+<p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2023-06-03T15:58:01-07:00" itemprop="datePublished" title="2023-06-03 15:58">2023-06-03 15:58</time></a></p>
+<p class="sourceline"><a class="sourcelink" href="index.org">Source</a></p>
+</div>
+</header>
+<div class="e-content entry-content" itemprop="articleBody text">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org382b5f0">A Circle</a></li>
+<li><a href="#orgec58139">Closure, Constants, and Variables</a>
+<ul>
+<li><a href="#org62d4dee">Constants</a></li>
+<li><a href="#org32d3d63">Variables</a></li>
+</ul>
+</li>
+<li><a href="#orgeb47783">Set Up</a></li>
+<li><a href="#org167ee21">Draw</a>
+<ul>
+<li><a href="#org6842b21">Looping Around the Circle</a></li>
+<li><a href="#orgabced83">The Coordinates of the Circle's Points</a></li>
+<li><a href="#orgd70e204">Now We Draw</a></li>
+<li><a href="#orgb2bff6a">And the Rest</a></li>
+</ul>
+</li>
+<li><a href="#orgf65535f">Closing Up</a></li>
+<li><a href="#org7221be3">References</a></li>
+</ul>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org382b5f0">
+<h2 id="org382b5f0">A Circle</h2>
+<div class="outline-text-2" id="text-org382b5f0">
+<p>This is a starting point for looking at cyclic sketches. In this case it's just a circle but it's a basic concept that I'll probably use more of later so I thought I'd make a dedicated post for it. In particular it uses <a href="https://en.wikipedia.org/wiki/Polar_coordinate_system?useskin=vector">Polar Coordinates</a> which might come in handy.</p>
+<p>
+<script language="javascript" src="circle.js" type="text/javascript"></script></p>
+<div class="p5js" id="5fa2c81b-hard-circle"></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgec58139">
+<h2 id="orgec58139">Closure, Constants, and Variables</h2>
+<div class="outline-text-2" id="text-orgec58139">
+<p>We begin in the usual way with a variable to hold the <code>div id</code> that the sketch will go into and declaring the function that will hold our sketch tode.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">CIRCLE_DIV</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"5fa2c81b-hard-circle"</span><span class="p">;</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">circle_the_hard_way</span><span class="p">(</span><span class="nx">p5</span><span class="p">){</span>
+</pre></div>
+</div>
+<div class="outline-3" id="outline-container-org62d4dee">
+<h3 id="org62d4dee">Constants</h3>
+<div class="outline-text-3" id="text-org62d4dee">
+<p>Next I'll declare some constants, both to maybe remind me what the values represent when I use them later and to have a place where I can change the values as I experiment with what looks interesting.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">DEGREES_IN_A_CIRCLE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">360</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">RADIUS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">100</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">SMALL_DIAMETER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">STEP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">TO_RADIANS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="p">)</span><span class="o">/</span><span class="w"> </span><span class="nx">DEGREES_IN_A_CIRCLE</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">WIDTH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">RADIUS</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">HEIGHT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">WIDTH</span><span class="p">;</span>
+</pre></div>
+<ul class="org-ul">
+<li>The <code>RADIUS</code> holds the radius of the circle we're going to draw</li>
+<li><code>SMALL_DIAMETER</code> holds the diameter of the circles I'm going to use to draw the main circle.</li>
+<li><code>STEP</code> holds the number of degrees I'm going to rotate the starting point of the circle every time it's re-drawn</li>
+<li><code>WITDH</code> and <code>HEIGHT</code> are the dimensions of the canvas</li>
+</ul>
+<p>To make it less confusing I'll refer to the small circles that make up the big cicrle as "points" most of the time.</p>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org32d3d63">
+<h3 id="org32d3d63">Variables</h3>
+<div class="outline-text-3" id="text-org32d3d63">
+<p>The variables are:</p>
+<ul class="org-ul">
+<li><code>center_x</code>, <code>center_y</code>: the center coordinates for the circle. These could be constants but I usually set them in the <code>setup</code>.</li>
+<li><code>slider</code>: to hold a slider that will set how many degrees we'll rotate between drawing points on the circle</li>
+<li><code>start</code>: the angle at which we'll start drawing the circle.</li>
+</ul>
+<div class="highlight">
+<pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">center_x</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">center_y</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">slider</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgeb47783">
+<h2 id="orgeb47783">Set Up</h2>
+<div class="outline-text-2" id="text-orgeb47783">
+<p>Our <code>setup</code> function creates the canvas, sets the colors and creates the slider to let the user change how big a jump we take between drawing points on the circle</p>
+<div class="highlight">
+<pre><span></span><span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">setup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">p5</span><span class="p">.</span><span class="nx">createCanvas</span><span class="p">(</span><span class="nx">WIDTH</span><span class="p">,</span><span class="w"> </span><span class="nx">HEIGHT</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">p5</span><span class="p">.</span><span class="nx">background</span><span class="p">(</span><span class="s2">"white"</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">p5</span><span class="p">.</span><span class="nx">stroke</span><span class="p">(</span><span class="s2">"black"</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">p5</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s2">"black"</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">center_x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">p5</span><span class="p">.</span><span class="nx">width</span><span class="o">/</span><span class="mf">2</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">center_y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">p5</span><span class="p">.</span><span class="nx">height</span><span class="o">/</span><span class="mf">2</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">slider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">p5</span><span class="p">.</span><span class="nx">createSlider</span><span class="p">(</span>
+<span class="w">      </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">      </span><span class="mf">360</span><span class="p">,</span>
+<span class="w">      </span><span class="mf">2</span><span class="p">,</span>
+<span class="w">      </span><span class="mf">1</span><span class="p">);</span>
+<span class="nx">slider</span><span class="p">.</span><span class="nx">style</span><span class="p">(</span><span class="s2">"width"</span><span class="p">,</span><span class="w"> </span><span class="s2">"500px"</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="c1">// end setup</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org167ee21">
+<h2 id="org167ee21">Draw</h2>
+<div class="outline-text-2" id="text-org167ee21">
+<p>The <code>draw</code> function draws a circle using circles and a line showing the raduis.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">draw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</pre></div>
+</div>
+<div class="outline-3" id="outline-container-org6842b21">
+<h3 id="org6842b21">Looping Around the Circle</h3>
+<div class="outline-text-3" id="text-org6842b21">
+<p>We're going to rotate around the circle once using the <code>start</code> value as the angle to start at and the value the slider's set at for the number of degrees we move between drawing the points on the circle. To make it easier to think about I'm using degrees in the for-loop but the <i>sin</i> and <i>cos</i> functions expect radians so we need to convert the degrees. Since the circumference of a circle is both \(360^\circ\) and \(2\pi\) we can use a straight ratio to convert them.</p>
+<p>\[ \textit{radians} = \textit{degrees} \times \frac{2 \pi}{360} \]</p>
+<p>This is usually written using a half-circle \(\left(\frac{\pi}{180}\right)\) but I find it easier to remember the whole circle for some reason.</p>
+<div class="highlight">
+<pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">angle</span><span class="o">=</span><span class="nx">start</span><span class="p">;</span><span class="w"> </span><span class="nx">angle</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nx">DEGREES_IN_A_CIRCLE</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">start</span><span class="p">;</span>
+<span class="w">     </span><span class="nx">angle</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">slider</span><span class="p">.</span><span class="nx">value</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">radians</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">angle</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">TO_RADIANS</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orgabced83">
+<h3 id="orgabced83">The Coordinates of the Circle's Points</h3>
+<div class="outline-text-3" id="text-orgabced83">
+<p>The coordinates for our point are calculated using the trigonometric definitions for <i>sin</i> and <i>cos</i>.</p>
+\begin{align} \cos \theta &amp;= \frac{adjacent}{hypotenuse} \\ \textit{adjacent} &amp;= \textit{hypotenuse} \times \cos \theta \end{align} \begin{align} \sin \theta &amp;= \frac{opposite}{hypotenuse}\\ \textit{opposite} &amp;= \textit{hypoteuse} \times \sin \theta \end{align}
+<p>Using the <i>radius</i> we want as the <i>hypotenuse</i> and the <i>adjacent</i> and <i>opposite</i> values as the <i>x</i> and <i>y</i> coordinates we can re-write the equations as:</p>
+\begin{align} x &amp;= r \cos \theta \\ y &amp;= r \sin \theta \end{align}
+<p>But since our coordinate system starts in the top left corner we have to add an offset to move the center of the circle to the center of the canvas.</p>
+\begin{align} x &amp;= \textit{center}_x + r \cos \theta \\ y &amp;= \textit{center}_y + r \sin \theta \end{align}
+<div class="highlight">
+<pre><span></span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">center_x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">RADIUS</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">cos</span><span class="p">(</span><span class="nx">radians</span><span class="p">);</span>
+<span class="nx">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">center_y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">RADIUS</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nx">radians</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orgd70e204">
+<h3 id="orgd70e204">Now We Draw</h3>
+<div class="outline-text-3" id="text-orgd70e204">
+<p>Now that we have our <i>x</i> and <i>y</i> coordinates for the next point on the circle we can draw it.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">line</span><span class="p">(</span><span class="nx">center_x</span><span class="p">,</span><span class="w"> </span><span class="nx">center_y</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="p">);</span>
+<span class="nx">p5</span><span class="p">.</span><span class="nx">circle</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="p">,</span><span class="w"> </span><span class="nx">SMALL_DIAMETER</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orgb2bff6a">
+<h3 id="orgb2bff6a">And the Rest</h3>
+<div class="outline-text-3" id="text-orgb2bff6a">
+<p>If we just draw the points and line we'll end up with a black dot, which still shows that it's working, but kind of negates the point of using something animated, so I'll draw a white background that's mostly transparent so we can see things move.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">background</span><span class="p">(</span><span class="mf">255</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
+</pre></div>
+<p>And now I'll increment the <code>start</code> angle so the next time we draw a circle it will be rotated a little bit from where it started this time through the loop.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">start</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">STEP</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">360</span><span class="w"> </span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgf65535f">
+<h2 id="orgf65535f">Closing Up</h2>
+<div class="outline-text-2" id="text-orgf65535f">
+<p>And there we have the circle. I had two main reasons for doing this exercise - one was to have a starting point for making noisier shapes and the other was to remind myself of how to make cyclical values so that I can use it as input for functions that I want to have repeat themselves.</p>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org7221be3">
+<h2 id="org7221be3">References</h2>
+<div class="outline-text-2" id="text-org7221be3">
+<ul class="org-ul">
+<li><a href="../bibliography-generative-art/">Generative Art</a></li>
+<li><a href="../bibliography-the-nature-of-code/">The Nature of Code</a></li>
+</ul>
+</div>
+</div>
+</div>
+<aside class="postpromonav">
+<nav>
+<ul class="tags" itemprop="keywords">
+<li><a class="tag p-category" href="../../categories/generative-art/" rel="tag">generative art</a></li>
+<li><a class="tag p-category" href="../../categories/p5js/" rel="tag">p5.js</a></li>
+</ul>
+<ul class="pager hidden-print">
+<li class="previous"><a href="../pulling-images-for-the-abecedarium/" rel="prev" title="Pulling Images For the Abecedarium">Previous post</a></li>
+<li class="next"><a href="../bibliography-generative-art/" rel="next" title="Generative Art">Next post</a></li>
+</ul>
+</nav>
+</aside>
+<script crossorigin="anonymous" integrity="sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
+</script></article>
+<!--End of body content-->
+<footer id="footer">Contents © 2023 Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a>
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a href="https://necromuralist.github.io/Ape-Iron/" property="dct:title" rel="cc:attributionURL">Ape Iron</a> by <a href="https://github.com/necromuralist" property="cc:attributionName" rel="cc:attributionURL dct:creator">The Cloistered Monkey</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" rel="license noopener noreferrer" style="display:inline-block;" target="_blank">CC BY 4.0<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"></a></p>
+</footer>
+</div>
+</div>
+<script src="../../assets/js/all-nocdn.js"></script>
+<script>
+
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+</script>
+</body>
+</html>
