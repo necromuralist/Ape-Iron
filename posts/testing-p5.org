@@ -1,0 +1,249 @@
+#+BEGIN_COMMENT
+.. title: Testing P5 with Mocha and Chai
+.. slug: bdd-testing-p5
+.. date: 2023-06-09 14:03:10 UTC-07:00
+.. tags: p5.js,javascript,testing
+.. category: Testing
+.. link: 
+.. description: Going through the p5js.org test-driven development tutorial.
+.. type: text
+.. status: 
+.. updated: 
+.. template: p5.tmpl
+#+END_COMMENT
+
+
+{{% p5div source="sketch.js" divid="6a5fb18a-bdd-sketch" %}}
+
+
+* The Sketch
+This is for a unit test tutorial. It should create a rectangle and allow you to iterate over every single color.
+
+#+begin_src js :tangle ../files/posts/bdd-testing-p5/sketch.js :exports none
+BDD_SKETCH_DIV = "6a5fb18a-bdd-sketch"
+<<sketch-function-declaration>>
+
+<<sketch-setup>>
+
+<<sketch-draw>>
+
+} // end flashing_rectangle
+
+<<sketch-color-increaser-constructor>>
+
+<<sketch-export-color-increaser>>
+new p5(flashing_square, BDD_SKETCH_DIV)
+#+end_src
+
+** The Sketch Function
+#+begin_src js :noweb-ref sketch-function-declaration
+function flashing_square(p5js) {
+  const RED = 0;
+  const BLUE = 1;
+  const GREEN = 2;
+  const RGB_MAXIMUM = 255;
+  const RGB_MINIMUM = 0;
+  const SIZE = 500;
+  
+  let fill_color;
+  let color_increment = 1;
+#+end_src
+
+** The ~setup~ Function
+#+begin_src js :noweb-ref sketch-setup
+p5js.setup = function() {
+  p5js.createCanvas(SIZE, SIZE);
+  p5js.background("black");
+  fill_color = p5js.color(RGB_MINIMUM,
+                          RGB_MINIMUM,
+                          RGB_MINIMUM,
+                          RGB_MAXIMUM);
+  p5js.noStroke();
+}
+#+end_src
+
+** The ~draw~ Function
+
+#+begin_src js :noweb-ref sketch-draw
+p5js.draw = function() {
+  p5js.fill(fill_color);
+  p5js.square(0, 0, SIZE);
+
+  fill_color.levels[RED] += color_increment;
+  
+  if (fill_color.levels[RED] > RGB_MAXIMUM) {
+    fill_color.levels[RED] = RGB_MINIMUM;
+    fill_color.levels[BLUE] += color_increment;
+  }
+  
+  if (fill_color.levels[BLUE] > RGB_MAXIMUM) {
+    fill_color.levels[BLUE] = RGB_MINIMUM;
+    fill_color.levels[GREEN] = (
+      fill_color.levels[GREEN] + color_increment) % RGB_MAXIMUM;
+  }
+} // end draw
+#+end_src
+* The Tests
+
+I'm running the tests using [[https://nodemon.io/][nodemon]]. I created a ~package.json~ file which points to the folder with the test code in it.
+
+#+begin_src js :tangle ../p5tests/package.json
+{
+  "scripts": {
+    "test": "nodemon --watch . --exec 'mocha ./test* || true'"
+  }
+}
+#+end_src
+
+Weirdly, the mocha documentation doesn't put curly braces outside of the "scripts" attribute, but this will cause ~npm~ to throw an error saying that it isn't valid JSON. Anyway, to run the tests I go into the folder above the test-folder and run ~npm~.
+
+#+begin_src fish
+npm test
+#+end_src
+
+#+begin_src js :tangle ../p5tests/test_color_example/test.js :exports none
+<<test-strict>>
+
+<<test-imports>>
+
+<<test-import-color-increaser>>
+
+<<test-mock-color>>
+
+<<test-color-increaser-tests>>
+  <<test-color-increaser-exists>>
+ 
+  <<test-color-increment-argument>>
+  
+  <<test-color-object>>
+}); // end test color incrementer
+#+end_src
+** Put It In Strict Mode
+The tests will be put into [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode][Strict Mode]]. So our mistakes will be more evident, hopefully.
+
+#+begin_src js :noweb-ref test-strict
+"use strict";
+#+end_src
+
+** Import Chai
+We're going to use the [[https://en.wikipedia.org/wiki/Behavior-driven_development?useskin=vector][Behavior-Driven Development]] (BDD) version of [[https://www.chaijs.com/api/bdd/][Chai]] to make our assertions about what we expect the code to be doing. Also, since I'm using the instance-mode p5 syntax, but p5 is being pulled into the HTML via a CDN we need to create a mock object for it which I'll do using [[https://sinonjs.org/][sinon]].
+
+#+begin_src js :noweb-ref test-imports
+const expect = require("chai").expect;
+const sinon = require("sinon");
+global.p5 = sinon.stub();
+#+end_src
+
+** Import Color Increaser Class
+This is going to look a little hairy, but the sketch is in a folder created for this post:
+
+- ~files/posts/bdd-testing-p5/~
+
+But the test-code is in a different folder.
+
+- ~p5tests/test_color_example/~
+
+That sits next to the ~files~ folder. So our test code has to go up two levels and then back down into the ~files~ to get the sketch code.
+
+#+begin_src js :noweb-ref test-import-color-increaser
+const ColorIncreaser = require('../../files/posts/bdd-testing-p5/sketch');
+#+end_src
+
+Note that the path is relative to where the test javascript is, not where I'm running ~mocha~.
+
+* Test the Color Increaser
+We'll create a new instance of the ColorIncreaser class before every test.
+
+** Mock Color
+
+We don't want to use any p5 objects in the testing so we'll make a fake [[https://p5js.org/reference/#/p5/color][color]] object, implementing its undocumented (as far as I can tell) ~levels~ attribute as an [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array][Array]].
+
+#+begin_src js :noweb-ref test-mock-color
+class MockColor {
+  constructor(red, blue, green, alpha){
+    this.levels = [
+      red,
+      blue,
+      green,
+      alpha
+      ]
+  } // end constructor
+ }// end mock_color
+#+end_src
+
+#+begin_src js :noweb-ref test-color-increaser-tests
+describe('ColorIncreaser tests', function() {
+  let color_increaser;
+  let color_increment;
+  let color_mock;
+  
+  beforeEach(function() {
+    color_increment = Math.floor(Math.random() * 200);
+    color_mock = new MockColor(0, 0, 0, 255);
+    color_increaser = new ColorIncreaser(color_increment, color_mock);
+  });
+#+end_src
+
+** Does It Exist?
+Our first test makes sure that we were able to create the ColorIncreaser object. This is actually a little bit of a fake because the ~beforeEach~ will fail if we can't create the object.
+
+#+begin_src js :noweb-ref test-color-increaser-exists
+  it('should be an object', function(done) {
+    expect(color_increaser).to.be.a('object');
+    done();
+  });
+#+end_src
+
+** The ColorIncreaser Class
+To get it to pass we need to define the class and its constructor and make it exportable.
+
+#+begin_src js :noweb-ref sketch-color-increaser-constructor
+class ColorIncreaser {
+  constructor(color_increment, color) {
+    this.color_increment = color_increment;
+    this.color = color;
+  }// end constructor
+} // end ColorIncreaser
+#+end_src
+
+** Export the Color Increaser
+
+The code to export the ColorIncreaser class definition given in the tutorial will raise an error outside of node.js - so it works for testing but causes a ~ReferenceError~ in the browser (when using a non-node server anyway) so to prevent that from happening I'll do the export only of the ~module~ is defined, which indicates that this is being used in node.
+
+#+begin_src js :noweb-ref sketch-export-color-increaser
+if (typeof module != "undefined") {
+  module.exports = ColorIncreaser;
+}
+#+end_src
+
+** Does it take an increment amount?
+
+#+begin_src js :noweb-ref test-color-increment-argument
+it("should set the color_increment",
+   function(done){
+     expect(color_increaser.color_increment).to.be.equal(color_increment);
+     done();
+   }
+  )
+#+end_src
+** Does it take a color?
+
+#+begin_src js :noweb-ref test-color-object
+it("should set the color object",
+  function(done){
+    expect(color_increaser.color).to.be.eql(color_mock);
+    done();
+  }
+)
+#+end_src
+* Sources
+
+- Behavior-driven development. In: Wikipedia [Internet]. 2023 [cited 2023 Jun 9]. Available from: https://en.wikipedia.org/w/index.php?title=Behavior-driven_development&oldid=1158619924
+  
+- Expect / Should - Chai [Internet]. [cited 2023 Jun 9]. Available from: https://www.chaijs.com/api/bdd/
+
+- nodemon [Internet]. [cited 2023 Jun 9]. Available from: https://nodemon.io/
+  
+- Sinon.JS - Standalone test fakes, spies, stubs and mocks for JavaScript. Works with any unit testing framework. [Internet]. [cited 2023 Jun 9]. Available from: https://sinonjs.org/
+
+- Unit Testing and Test Driven Development | p5.js [Internet]. [cited 2023 Jun 8]. Available from: https://p5js.org/learn/tdd.html
