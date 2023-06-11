@@ -15,75 +15,11 @@
 
 {{% p5div source="sketch.js" divid="6a5fb18a-bdd-sketch" %}}
 
+* What This Is
 
-* The Sketch
-This is for a unit test tutorial. It should create a rectangle and allow you to iterate over every single color.
+This is a walk-through of the [[https://p5js.org/learn/tdd.html][test-driven development example]] on the p5js site. The color changing square above is created by exhaustively stepping through the RGB values for a p5 [[https://p5js.org/reference/#/p5.Color][color]]. The site documentation doesn't seem to tell you that the name of the color array, instead telling you to use setter methods, but the tutorial indicates that the array is stored as an attribute of the color object named ~levels~ so we'll be working with that to change the colors.
 
-#+begin_src js :tangle ../files/posts/bdd-testing-p5/sketch.js :exports none
-BDD_SKETCH_DIV = "6a5fb18a-bdd-sketch"
-<<sketch-function-declaration>>
-
-<<sketch-setup>>
-
-<<sketch-draw>>
-
-} // end flashing_rectangle
-
-<<sketch-color-increaser-constructor>>
-
-<<sketch-export-color-increaser>>
-new p5(flashing_square, BDD_SKETCH_DIV)
-#+end_src
-
-** The Sketch Function
-#+begin_src js :noweb-ref sketch-function-declaration
-function flashing_square(p5js) {
-  const RED = 0;
-  const BLUE = 1;
-  const GREEN = 2;
-  const RGB_MAXIMUM = 255;
-  const RGB_MINIMUM = 0;
-  const SIZE = 500;
-  
-  let fill_color;
-  let color_increment = 1;
-#+end_src
-
-** The ~setup~ Function
-#+begin_src js :noweb-ref sketch-setup
-p5js.setup = function() {
-  p5js.createCanvas(SIZE, SIZE);
-  p5js.background("black");
-  fill_color = p5js.color(RGB_MINIMUM,
-                          RGB_MINIMUM,
-                          RGB_MINIMUM,
-                          RGB_MAXIMUM);
-  p5js.noStroke();
-}
-#+end_src
-
-** The ~draw~ Function
-
-#+begin_src js :noweb-ref sketch-draw
-p5js.draw = function() {
-  p5js.fill(fill_color);
-  p5js.square(0, 0, SIZE);
-
-  fill_color.levels[RED] += color_increment;
-  
-  if (fill_color.levels[RED] > RGB_MAXIMUM) {
-    fill_color.levels[RED] = RGB_MINIMUM;
-    fill_color.levels[BLUE] += color_increment;
-  }
-  
-  if (fill_color.levels[BLUE] > RGB_MAXIMUM) {
-    fill_color.levels[BLUE] = RGB_MINIMUM;
-    fill_color.levels[GREEN] = (
-      fill_color.levels[GREEN] + color_increment) % RGB_MAXIMUM;
-  }
-} // end draw
-#+end_src
-* The Tests
+* Setting Up The Tests
 
 I'm running the tests using [[https://nodemon.io/][nodemon]]. I created a ~package.json~ file which points to the folder with the test code in it.
 
@@ -95,7 +31,7 @@ I'm running the tests using [[https://nodemon.io/][nodemon]]. I created a ~packa
 }
 #+end_src
 
-Weirdly, the mocha documentation doesn't put curly braces outside of the "scripts" attribute, but this will cause ~npm~ to throw an error saying that it isn't valid JSON. Anyway, to run the tests I go into the folder above the test-folder and run ~npm~.
+Weirdly, the mocha [[https://mochajs.org/#getting-started][Getting Started]] documentation doesn't put curly braces outside of the "scripts" attribute, but this will cause ~npm~ to throw an error saying that it isn't valid JSON. Maybe they figure you'd just know it. Or maybe they expect that you'd install ~mocha~ locally so there'd be an existing ~package.json~ that you just have to edit. Anyway, to run the tests I go into the folder above the test-folder and run ~npm~.
 
 #+begin_src fish
 npm test
@@ -105,6 +41,7 @@ npm test
 <<test-strict>>
 
 <<test-imports>>
+<<test-import-sinon>>
 
 <<test-import-color-increaser>>
 
@@ -116,26 +53,39 @@ npm test
   <<test-color-increment-argument>>
   
   <<test-color-object>>
+
+  <<test-increaser-increases>>
+
+  <<test-increase-past-red>>
+
+  <<test-increase-past-green>>
+
+  <<test-increase-past-blue>>
 }); // end test color incrementer
 #+end_src
 ** Put It In Strict Mode
-The tests will be put into [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode][Strict Mode]]. So our mistakes will be more evident, hopefully.
+The tests will be put into [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode][Strict Mode]], making our mistakes will be more evident, hopefully, so at the top of the ~test.js~ file is this line.
 
 #+begin_src js :noweb-ref test-strict
 "use strict";
 #+end_src
 
-** Import Chai
-We're going to use the [[https://en.wikipedia.org/wiki/Behavior-driven_development?useskin=vector][Behavior-Driven Development]] (BDD) version of [[https://www.chaijs.com/api/bdd/][Chai]] to make our assertions about what we expect the code to be doing. Also, since I'm using the instance-mode p5 syntax, but p5 is being pulled into the HTML via a CDN we need to create a mock object for it which I'll do using [[https://sinonjs.org/][sinon]].
+** Import Chai and Sinon
+We're going to use the [[https://en.wikipedia.org/wiki/Behavior-driven_development?useskin=vector][Behavior-Driven Development]] (BDD) version of [[https://www.chaijs.com/api/bdd/][Chai]] to make our assertions about what we expect the code to be doing. 
 
 #+begin_src js :noweb-ref test-imports
 const expect = require("chai").expect;
+#+end_src
+
+Also, since I'm using the instance-mode p5 syntax, but p5 is being pulled into the HTML via a CDN the test code won't know what the ~p5~ object is and raise an error so we need to create a mock object for it which I'll do using [[https://sinonjs.org/][sinon]].
+
+#+begin_src js :noweb-ref test-import-sinon
 const sinon = require("sinon");
 global.p5 = sinon.stub();
 #+end_src
 
 ** Import Color Increaser Class
-This is going to look a little hairy, but the sketch is in a folder created for this post:
+We're going to create a ~ColorIncreaser~ class that does the incrementing of the colors which we need to import into the test code to work with it. Our import is going to look a little funky, though, because the sketch is in a folder created for this post.
 
 - ~files/posts/bdd-testing-p5/~
 
@@ -143,16 +93,16 @@ But the test-code is in a different folder.
 
 - ~p5tests/test_color_example/~
 
-That sits next to the ~files~ folder. So our test code has to go up two levels and then back down into the ~files~ to get the sketch code.
+This folder sits next to the ~files~ folder. So our test code has to go up two levels and then back down into the ~files~ to get the sketch code.
 
 #+begin_src js :noweb-ref test-import-color-increaser
 const ColorIncreaser = require('../../files/posts/bdd-testing-p5/sketch');
 #+end_src
 
-Note that the path is relative to where the test javascript is, not where I'm running ~mocha~.
+Note that the path is relative to where the javascript file with the tests is, not where I'm running ~mocha~. Also, although it looks like a file reference, the file is called ~sketch.js~, but we're treating it as a module so we don't put the file extension on it.
 
-* Test the Color Increaser
-We'll create a new instance of the ColorIncreaser class before every test.
+* Testing the Color Increaser
+Now we'll write the tests and implement the ~ColorIncreaser~ class along with it.
 
 ** Mock Color
 
@@ -160,32 +110,44 @@ We don't want to use any p5 objects in the testing so we'll make a fake [[https:
 
 #+begin_src js :noweb-ref test-mock-color
 class MockColor {
-  constructor(red, blue, green, alpha){
+  constructor(red, green, blue, alpha){
     this.levels = [
       red,
-      blue,
       green,
+      blue,
       alpha
       ]
   } // end constructor
  }// end mock_color
 #+end_src
+** Setting Up the Tests
+
+The ~describe~ function encompasses all our tests. Besides setting some constants we're also defining a ~beforeEach~ function to create a new ~ColorIncreaser~ object before running each test so it won't have any changes we make in the other tests spilling over.
 
 #+begin_src js :noweb-ref test-color-increaser-tests
 describe('ColorIncreaser tests', function() {
+  const RGB_MIN = 0;
+  const RGB_MAX = 255;
+  const RED = 0;
+  const GREEN = 1;
+  const BLUE = 2;
+  const ALPHA = 3;
+  const CHANNELS = [RED, GREEN, BLUE, ALPHA];
+  const COLOR_INCREMENT = 1;
+  
   let color_increaser;
-  let color_increment;
   let color_mock;
   
   beforeEach(function() {
-    color_increment = Math.floor(Math.random() * 200);
-    color_mock = new MockColor(0, 0, 0, 255);
-    color_increaser = new ColorIncreaser(color_increment, color_mock);
+    color_mock = new MockColor(RGB_MIN, RGB_MIN,
+                               RGB_MIN, RGB_MAX);
+    color_increaser = new ColorIncreaser(COLOR_INCREMENT,
+                                         color_mock);
   });
 #+end_src
 
 ** Does It Exist?
-Our first test makes sure that we were able to create the ColorIncreaser object. This is actually a little bit of a fake because the ~beforeEach~ will fail if we can't create the object.
+Our first test makes sure that we were able to create the ColorIncreaser object. This is actually a little bit of a fake because the ~beforeEach~ will fail if we can't create the object and it won't actually reach this test. I suppose you could still break it by making a function named ~ColorIncreaser~ instead of a class, but I won't go that route.
 
 #+begin_src js :noweb-ref test-color-increaser-exists
   it('should be an object', function(done) {
@@ -195,7 +157,24 @@ Our first test makes sure that we were able to create the ColorIncreaser object.
 #+end_src
 
 ** The ColorIncreaser Class
-To get it to pass we need to define the class and its constructor and make it exportable.
+So now I'll define the class and its constructor and make it exportable. It's a pretty basic class, heres a class diagram of it's attributes.
+
+#+begin_src plantuml :file ../files/posts/bdd-testing-p5/color-increaser.png :exports none
+!theme mars
+ColorIncreaser o- p5.Color
+ColorIncreaser : Integer color_increment
+ColorIncreaser : p5.Color color
+ColorIncreaser : None increase()
+
+p5.Color : Array levels
+#+end_src
+
+#+RESULTS:
+[[file:../files/posts/bdd-testing-p5/color-increaser.png]]
+
+[[img-url:color-increaser.png][Color Increaser class diagram]]
+
+And here's the constructor definition.
 
 #+begin_src js :noweb-ref sketch-color-increaser-constructor
 class ColorIncreaser {
@@ -203,30 +182,23 @@ class ColorIncreaser {
     this.color_increment = color_increment;
     this.color = color;
   }// end constructor
-} // end ColorIncreaser
-#+end_src
-
-** Export the Color Increaser
-
-The code to export the ColorIncreaser class definition given in the tutorial will raise an error outside of node.js - so it works for testing but causes a ~ReferenceError~ in the browser (when using a non-node server anyway) so to prevent that from happening I'll do the export only of the ~module~ is defined, which indicates that this is being used in node.
-
-#+begin_src js :noweb-ref sketch-export-color-increaser
-if (typeof module != "undefined") {
-  module.exports = ColorIncreaser;
-}
 #+end_src
 
 ** Does it take an increment amount?
+This is just a sanity check to make sure that the constructor actually saved the increment amount we passed in.
 
 #+begin_src js :noweb-ref test-color-increment-argument
 it("should set the color_increment",
    function(done){
-     expect(color_increaser.color_increment).to.be.equal(color_increment);
+     expect(color_increaser.color_increment).to.equal(COLOR_INCREMENT);
      done();
    }
   )
 #+end_src
+
 ** Does it take a color?
+
+This is another check to make sure the constructor saved the color object that got passed in. I couldn't find a same-object checker in ~chai~ but the ~eql~ is described as a check that the objects are "deeply-equal" which I assume is the same thing. 
 
 #+begin_src js :noweb-ref test-color-object
 it("should set the color object",
@@ -236,6 +208,270 @@ it("should set the color object",
   }
 )
 #+end_src
+
+** The Increaser
+We're going to implement a method for the ~ColorIncreaser~ that will increment the color-array so let's check that it works.
+
+*** Does the increaser increase?
+Until it increments the red channel past 255 the other channels don't change so we'll first test that only the red channel changes up until that point.
+
+#+begin_src js :noweb-ref test-increaser-increases
+it ("should increment red only up until 255",
+    function(done){
+      for (let count=RGB_MIN; count < RGB_MAX; count +=1) {
+        color_increaser.increase();
+      }
+      let expected = [RGB_MAX, RGB_MIN, RGB_MIN, RGB_MAX]
+      
+      CHANNELS.forEach((channel, index) => expect(
+        color_increaser.color.levels[channel]).to.equal(expected[index]));
+
+      done();
+    }
+   )
+#+end_src
+
+*** The Color-Increaser Method
+
+So now I'll add the ~increase~ method to the ~ColorIncreaser~ class which adds the ~color_increment~ to the red-channel when it's called.
+
+#+begin_src js :noweb-ref sketch-color-increaser-increase
+increase() {
+  this.color.levels[CHANNELS.RED] += this.color_increment;
+#+end_src
+
+** Does it wrap red back to 255 when it hits 256?
+
+The channels can only go up to 255 so once we hit 256:
+ - red wraps back to 0
+ - green increments one
+
+The tutorial uses for-loops to actually step through and increment the color until it passes the limit but I'll cheat and just set the red-channel to the limit and then increment it.
+
+These are our expected values before and after the call to ~increase~.
+
+| Channel | Before Increase | After Increase |
+|---------+-----------------+----------------|
+| Red     |             255 |              0 |
+| Green   |               0 |              1 |
+| Blue    |               0 |              0 |
+| Alpha   | 255             |            255 |
+
+
+#+begin_src js :noweb-ref test-increase-past-red
+it ("should wrap red when it hits 256",
+    function(done) {
+      color_increaser.color.levels[RED] = RGB_MAX;
+      color_increaser.increase();
+      let expected = [RGB_MIN, COLOR_INCREMENT,
+                      RGB_MIN, RGB_MAX];
+      CHANNELS.forEach((channel, index) => expect(
+        color_increaser.color.levels[channel]).to.equal(expected[index]));
+      done();
+    }
+   );
+#+end_src
+
+*** The Wrap-Red Conditional
+Within the ~increase~ method we add this little chunk after incrementing the red channel.
+
+#+begin_src js :noweb-ref sketch-color-increaser-red-wrap
+if (this.color.levels[CHANNELS.RED] > CHANNELS.MAXIMUM) {
+  this.color.levels[CHANNELS.RED] = CHANNELS.MINIMUM;
+  this.color.levels[CHANNELS.GREEN] += this.color_increment;
+}
+#+end_src
+
+** Does Green Wrap Too?
+As with red, the green channel can only go up to 255 so once we increase green to 256:
+
+ - wrap green back to 0
+ - increment blue
+
+Also, since we only increment green if red hits 256 it wraps back to 0 too. Once again, I'm forgoing looping and incrementing and instead just setting the red and green channels to their limits and then calling ~increase~.
+
+These are our expected values before and after the call to ~increase~.
+
+| Channel | Before Increase | After Increase |
+|---------+-----------------+----------------|
+| Red     |             255 |              0 |
+| Green   |             255 |              0 |
+| Blue    |               0 |              1 |
+| Alpha   |             255 |            255 |
+
+
+#+begin_src js :noweb-ref test-increase-past-green
+it("should wrap green and increase blue if green exceeds 255",
+   function(done) {
+     color_increaser.color.levels[RED] = RGB_MAX;
+     color_increaser.color.levels[GREEN] = RGB_MAX;
+     
+     color_increaser.increase();
+     
+     let expected = [RGB_MIN, RGB_MIN,
+                     COLOR_INCREMENT, RGB_MAX];
+     
+      CHANNELS.forEach((channel, index) => expect(
+        color_increaser.color.levels[channel]).to.equal(
+          expected[index]));
+    done();
+   }
+  );
+#+end_src
+*** The Wrap-Green Conditional
+Now within the ~increase~ method we add this little chunk after incrementing the red channel to check the green channel.
+
+#+begin_src js :noweb-ref sketch-color-increaser-green-wrap
+if (this.color.levels[CHANNELS.GREEN] > CHANNELS.MAXIMUM) {
+  this.color.levels[CHANNELS.GREEN] = CHANNELS.MINIMUM;
+  this.color.levels[CHANNELS.BLUE] += this.color_increment;
+}
+#+end_src
+
+** Does Blue Wrap Too?
+As with red and green, the blue channel can only go up to 255 so once we increase blue to 256:
+
+ - wrap all three channels back to 0
+
+These are our expected values before and after the call to ~increase~.
+
+| Channel | Before Increase | After Increase |
+|---------+-----------------+----------------|
+| Red     |             255 |              0 |
+| Green   |             255 |              0 |
+| Blue    |             255 |              0 |
+| Alpha   |             255 |            255 |
+
+
+#+begin_src js :noweb-ref test-increase-past-blue
+it("should wrap all colors when blue exceeds 255",
+   function(done) {
+     CHANNELS.forEach(
+       channel => color_increaser.color.levels[channel] = RGB_MAX);
+
+     color_increaser.increase();
+     
+     let expected = [RGB_MIN, RGB_MIN, RGB_MIN,
+                     RGB_MAX];
+     
+      CHANNELS.forEach((channel, index) => expect(
+        color_increaser.color.levels[channel]).to.equal(
+          expected[index]));
+     
+    done();
+   }
+  );
+#+end_src
+*** The Wrap-Blue Conditional
+
+I originally just used a modulus to keep blue within range, but since we're allowing the user to change the increment this might not always go back to zero so here's the conditional that resets the blue channel if it exceeds the limit.
+
+#+begin_src js :noweb-ref sketch-color-increaser-blue-wrap
+if (this.color.levels[CHANNELS.BLUE] > CHANNELS.MAXIMUM) {
+  this.color.levels[CHANNELS.BLUE] = CHANNELS.MINIMUM;
+}
+#+end_src
+
+And there we have our exhaustive channel incrementer.
+
+** Export the Color Increaser
+
+The implementation so far is good enough to get the code working within the p5 sketch, which would normally be the ultimate goal. But in order for the test code to be able to import the ~ColorIncreaser~ (using the ~require~ function) we need to add a line in the file with the ~ColorIncreaser~ definition to export it.
+
+The code  given in the tutorial will raise an error outside of node.js - so it works for testing but causes a ~ReferenceError~ in the browser (when using a python-based server anyway) so to prevent that from happening I added a check that wiill only do the export only if the ~module~ is defined, which indicates that this is being used in node (or I messed up and defined it somewhere else).
+
+#+begin_src js :noweb-ref sketch-export-color-increaser
+if (typeof module != "undefined") {
+  module.exports = ColorIncreaser;
+}
+#+end_src
+
+* The Sketch
+Now that we have the Increaser we can add it to a sketch to change the colors of the square that we're drawing.
+
+#+begin_src js :tangle ../files/posts/bdd-testing-p5/sketch.js :exports none
+BDD_SKETCH_DIV = "6a5fb18a-bdd-sketch"
+
+<<sketch-channel-constants>>
+
+
+<<sketch-function-declaration>>
+
+<<sketch-setup>>
+
+<<sketch-draw>>
+
+} // end flashing_rectangle
+
+<<sketch-color-increaser-constructor>>
+
+  <<sketch-color-increaser-increase>>
+
+    <<sketch-color-increaser-red-wrap>>
+
+    <<sketch-color-increaser-green-wrap>>
+
+    <<sketch-color-increaser-blue-wrap>>
+  } // end increase
+} // end ColorIncreaser
+
+<<sketch-export-color-increaser>>
+new p5(flashing_square, BDD_SKETCH_DIV)
+#+end_src
+** Channel Constants
+I have a tendency to flip values around so I like to create objects to hold values that get used repeatedly.
+
+#+begin_src js :noweb-ref sketch-channel-constants
+const CHANNELS = {
+  RED: 0,
+  GREEN: 1,
+  BLUE: 2,
+  ALPHA: 3,
+  MAXIMUM: 255,
+  MINIMUM: 0
+};
+#+end_src
+
+** The Sketch Function
+As I noted before, I'm using the instance-mode syntax for the sketch so this is the function that holds the ~setup~ and ~draw~ functions.
+
+#+begin_src js :noweb-ref sketch-function-declaration
+function flashing_square(p5js) {
+  const SIZE = 500;
+  
+  let color_increaser;
+#+end_src
+
+** The ~setup~ Function
+The setup  creates the canvas and color increaser instance.
+
+#+begin_src js :noweb-ref sketch-setup
+p5js.setup = function() {
+  p5js.createCanvas(SIZE, SIZE);
+  p5js.background("black");
+  color_increaser = new ColorIncreaser(
+    1,
+    p5js.color(
+      CHANNELS.MINIMUM,
+      CHANNELS.MINIMUM,
+      CHANNELS.MINIMUM,
+      CHANNELS.MAXIMUM));
+}
+#+end_src
+
+** The ~draw~ Function
+The draw sets the background color and increases its value once per frame.
+
+#+begin_src js :noweb-ref sketch-draw
+p5js.draw = function() {
+  p5js.background(color_increaser.color)
+  color_increaser.increase()
+}
+#+end_src
+
+* The End
+So, there you go. The sketch wasn't so exciting, but the main value in going through the exercise, I think, was being able to get the javascript testing infrastructure working and getting back into using chai and sinon and the crazy world of module imports in javascript.
+
 * Sources
 
 - Behavior-driven development. In: Wikipedia [Internet]. 2023 [cited 2023 Jun 9]. Available from: https://en.wikipedia.org/w/index.php?title=Behavior-driven_development&oldid=1158619924

@@ -1,42 +1,36 @@
 BDD_SKETCH_DIV = "6a5fb18a-bdd-sketch"
+
+const CHANNELS = {
+  RED: 0,
+  GREEN: 1,
+  BLUE: 2,
+  ALPHA: 3,
+  MAXIMUM: 255,
+  MINIMUM: 0
+};
+
+
 function flashing_square(p5js) {
-  const RED = 0;
-  const BLUE = 1;
-  const GREEN = 2;
-  const RGB_MAXIMUM = 255;
-  const RGB_MINIMUM = 0;
   const SIZE = 500;
   
-  let fill_color;
-  let color_increment = 1;
+  let color_increaser;
 
 p5js.setup = function() {
   p5js.createCanvas(SIZE, SIZE);
   p5js.background("black");
-  fill_color = p5js.color(RGB_MINIMUM,
-                          RGB_MINIMUM,
-                          RGB_MINIMUM,
-                          RGB_MAXIMUM);
-  p5js.noStroke();
+  color_increaser = new ColorIncreaser(
+    1,
+    p5js.color(
+      CHANNELS.MINIMUM,
+      CHANNELS.MINIMUM,
+      CHANNELS.MINIMUM,
+      CHANNELS.MAXIMUM));
 }
 
 p5js.draw = function() {
-  p5js.fill(fill_color);
-  p5js.square(0, 0, SIZE);
-
-  fill_color.levels[RED] += color_increment;
-  
-  if (fill_color.levels[RED] > RGB_MAXIMUM) {
-    fill_color.levels[RED] = RGB_MINIMUM;
-    fill_color.levels[BLUE] += color_increment;
-  }
-  
-  if (fill_color.levels[BLUE] > RGB_MAXIMUM) {
-    fill_color.levels[BLUE] = RGB_MINIMUM;
-    fill_color.levels[GREEN] = (
-      fill_color.levels[GREEN] + color_increment) % RGB_MAXIMUM;
-  }
-} // end draw
+  p5js.background(color_increaser.color)
+  color_increaser.increase()
+}
 
 } // end flashing_rectangle
 
@@ -45,6 +39,24 @@ class ColorIncreaser {
     this.color_increment = color_increment;
     this.color = color;
   }// end constructor
+
+  increase() {
+    this.color.levels[CHANNELS.RED] += this.color_increment;
+
+    if (this.color.levels[CHANNELS.RED] > CHANNELS.MAXIMUM) {
+      this.color.levels[CHANNELS.RED] = CHANNELS.MINIMUM;
+      this.color.levels[CHANNELS.GREEN] += this.color_increment;
+    }
+
+    if (this.color.levels[CHANNELS.GREEN] > CHANNELS.MAXIMUM) {
+      this.color.levels[CHANNELS.GREEN] = CHANNELS.MINIMUM;
+      this.color.levels[CHANNELS.BLUE] += this.color_increment;
+    }
+
+    if (this.color.levels[CHANNELS.BLUE] > CHANNELS.MAXIMUM) {
+      this.color.levels[CHANNELS.BLUE] = CHANNELS.MINIMUM;
+    }
+  } // end increase
 } // end ColorIncreaser
 
 if (typeof module != "undefined") {
