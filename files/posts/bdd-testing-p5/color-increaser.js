@@ -33,9 +33,8 @@ class ColorIncreaser {
 
   next() {
     this.increase();
-
     return this.color;
- };  //end next
+  };  //end next
 }; // end ColorIncreaser
 
 if (typeof module != "undefined") {

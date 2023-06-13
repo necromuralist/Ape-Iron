@@ -11,17 +11,27 @@
 .. updated:
 .. template: p5.tmpl
 #+END_COMMENT
+#+OPTIONS: ^:{}
+#+TOC: headlines 2
 
 {{% javascripttag source="color-increaser.js" %}}
 {{% p5div source="sketch.js" divid="6a5fb18a-bdd-sketch" %}}
 
 * What This Is
 
-This is a walk-through of the [[https://p5js.org/learn/tdd.html][test-driven development example]] on the p5js site. The color changing square above is created by exhaustively stepping through the RGB values for a p5 [[https://p5js.org/reference/#/p5.Color][color]]. The site documentation doesn't seem to tell you that the name of the color array, instead telling you to use setter methods, but the tutorial indicates that the array is stored as an attribute of the color object named ~levels~ so we'll be working with that to change the colors.
+This is a walk-through of the [[https://p5js.org/learn/tdd.html][test-driven development example]] on the [[https://p5js.org/][p5js site]]. The color changing square above is created by exhaustively stepping through the RGB values for a p5 [[https://p5js.org/reference/#/p5.Color][color]]. The site documentation doesn't seem to tell you the name of the color array attribute so you can access it, instead it tells you to use setter methods, but the tutorial indicates that the array is stored as an attribute of the color object named ~levels~ so we'll be working with that to change the colors.
 
-* Setting Up The Tests
+* Setting Up the Tests
+** Running the Tests
+To run the tests I'll use three things:
 
-I'm running the tests using [[https://nodemon.io/][nodemon]]. I created a ~package.json~ file which points to the folder with the test code in it.
+ - [[https://mochajs.org/][mocha]]: the framework to define the tests
+ - [[https://nodemon.io/][nodemon]]: a program that watches our code and re-runs mocha if something changes
+ - [[https://docs.npmjs.com/][npm]]: the node-package-manager which will run nodemon to run mocha
+
+~npm~ comes with and works with [[https://nodejs.dev/en/][node]] so I guess we really need four things.
+   
+To run the tests I created a ~package.json~ file which points to the folder with the test code in it (or any folder next to the ~package.json~ file whose name starts with ~test~).
 
 #+begin_src js :tangle ../tests/package.json
 {
@@ -31,7 +41,7 @@ I'm running the tests using [[https://nodemon.io/][nodemon]]. I created a ~packa
 }
 #+end_src
 
-Weirdly, the mocha [[https://mochajs.org/#getting-started][Getting Started]] documentation doesn't put curly braces outside of the "scripts" attribute, but this will cause ~npm~ to throw an error saying that it isn't valid JSON. Maybe they figure you'd just know it. Or maybe they expect that you'd install ~mocha~ locally so there'd be an existing ~package.json~ that you just have to edit. Anyway, to run the tests I go into the folder above the test-folder and run ~npm~.
+Weirdly, the mocha [[https://mochajs.org/#getting-started][Getting Started]] documentation has an example ~package.json~ snippet to run ~mocha~ which doesn't put curly braces outside of the "scripts" attribute, but this will cause ~npm~ to throw an error saying that it isn't valid JSON. Maybe they figure you'd just know it. Or maybe they expect that you'd install ~mocha~ locally so there'd be an existing ~package.json~ that you just have to edit. Anyway, to run the tests I go into the folder above the test-folder and run ~npm~ like this:
 
 #+begin_src fish
 npm test
@@ -49,11 +59,13 @@ npm test
 
 <<test-color-increaser-tests>>
 
-  <<test-color-increaser-exists>>
+  <<test-color-increaser-constructor>>
+    <<test-color-increaser-exists>>
 
-  <<test-color-increment-argument>>
+    <<test-color-increment-argument>>
 
-  <<test-color-object>>
+    <<test-color-object>>
+  }); // end test constructor
 
   <<test-describe-increaser>>
     <<test-increaser-increases>>
@@ -72,31 +84,35 @@ npm test
   }); // end next method tests
 }); // end test color incrementer
 #+end_src
-** Put It In Strict Mode
-The tests will be put into [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode][Strict Mode]], making our mistakes will be more evident, hopefully, so at the top of the ~test.js~ file is this line.
+** Writing the Test File
+*** Put It In Strict Mode
+Javascript can be pretty lenient about letting what might be considered mistakes pass through without raising an error. I'll put the test-code into [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode][Strict Mode]], making our mistakes more evident, hopefully, by putting this line at the top of the ~test.js~ file:
 
 #+begin_src js :noweb-ref test-strict
 "use strict";
 #+end_src
 
 ** Import Chai and Sinon
-We're going to use the [[https://en.wikipedia.org/wiki/Behavior-driven_development?useskin=vector][Behavior-Driven Development]] (BDD) version of [[https://www.chaijs.com/api/bdd/][Chai]] to make our assertions about what we expect the code to be doing.
+I'm going to use the [[https://en.wikipedia.org/wiki/Behavior-driven_development?useskin=vector][Behavior-Driven Development]] (BDD) version of [[https://www.chaijs.com/api/bdd/][Chai]] to make our assertions about what we expect the code to be doing.
 
 #+begin_src js :noweb-ref test-imports
 const expect = require("chai").expect;
 #+end_src
 
-Also, since I'm using the instance-mode p5 syntax, but p5 is being pulled into the HTML via a CDN the test code won't know what the ~p5~ object is and raise an error so we need to create a mock object for it which I'll do using [[https://sinonjs.org/][sinon]].
+I'm also going to stub some methods using [[https://sinonjs.org/][sinon]].
 
 #+begin_src js :noweb-ref test-import-sinon
 const sinon = require("sinon");
-//global.p5 = sinon.stub();
 #+end_src
 
-**Note:** I moved the ~ColorIncreaser~ into its own file so there's no longer a need to mock ~p5~. This is here in case I need to remember how to do it later.
+**Note:** I originally had the ~ColorIncreaser~ class that I'm going to test in the same file as the sketch which caused an error because the sketch refers to a ~p5~ object that gets pulled in from a CDN by an HTML tag. I later decided to move it into its own file so there's no longer a need to mock ~p5~, but if you ever need to do it you can add this line before importing anything from the sketch file:
 
-** Import Color Increaser Class
-We're going to create a ~ColorIncreaser~ class that does the incrementing of the colors which we need to import into the test code to work with it. Our import is going to look a little funky, though, because the sketch is in a folder created for this post.
+#+begin_src js
+global.p5 = sinon.stub();
+#+end_src
+
+** Import the Color Increaser Class
+We're going to create a ~ColorIncreaser~ class which we need to import into the test code. Our import is going to look a little funky, though, because the sketch is in a folder created for this post.
 
 - ~files/posts/bdd-testing-p5/~
 
@@ -110,10 +126,17 @@ This folder sits next to the ~files~ folder. So our test code has to go up two l
 const ColorIncreaser = require('../../files/posts/bdd-testing-p5/color-increaser');
 #+end_src
 
-Note that the path is relative to where the javascript file with the tests is, not where I'm running ~mocha~. Also, although it looks like a file reference, the file is called ~sketch.js~, but we're treating it as a module so we don't put the file extension on it.
+Note that the path is relative to where the javascript file with the tests is, not where I'm running ~mocha~. Also, although it looks like a file reference, the file is called ~color-increaser.js~, but we're treating it as a module so we don't put the file extension on it.
+
+Also, in order to be able to import the class we need to set it as exportable in the file where the class is defined - but I'll show that after the class is defined.
+
+* The Whole Code Module
+Since this is about coding test-driven I'm going to show the tests and then the implementation that gets written to pass the test. This makes it kind of disorienting to read so I thought I'd show the entire ~color-increaser.js~ file that's being created here exactly as it ends up once it's all done.
+
+#+INCLUDE: ../files/posts/bdd-testing-p5/color-increaser.js src js
 
 * Channel Constants
-I have a tendency to flip values around so I like to create objects to hold values that get used repeatedly. This goes into the same module as the Color Increaser class.
+I have a tendency to flip values around (sometimes it seems like blue should come before green, for example) so I like to create objects to hold values that get used repeatedly. This at the top of the same module as the Color Increaser class.
 
 #+begin_src js :noweb-ref sketch-channel-constants
 const CHANNELS = {
@@ -127,7 +150,6 @@ const CHANNELS = {
 #+end_src
 * Testing and Implementing the Color Increaser
 Now we'll write the tests and implement the ~ColorIncreaser~ class along with it.
-
 
 #+begin_src js :tangle ../files/posts/bdd-testing-p5/color-increaser.js :exports none
 <<sketch-channel-constants>>
@@ -144,9 +166,8 @@ Now we'll write the tests and implement the ~ColorIncreaser~ class along with it
   } // end increase
 
   <<sketch-next-method>>
-
     <<sketch-next-return>>
- };  //end next
+  };  //end next
 }; // end ColorIncreaser
 
 <<sketch-export-color-increaser>>
@@ -167,12 +188,13 @@ class MockColor {
   } // end constructor
  }// end mock_color
 #+end_src
+
 ** Setting Up the Tests
 
-The ~describe~ function encompasses all our tests. Besides setting some constants we're also defining a ~beforeEach~ function to create a new ~ColorIncreaser~ object before running each test so it won't have any changes we make in the other tests spilling over.
+~mocha~'s ~describe~ function acts like a header around our tests. Within it I'm setting some constants and also defining a ~beforeEach~ function which will create a new ~ColorIncreaser~ object before running each test so it won't have any changes we make in the other tests spilling over. Although I could import the ~CHANNELS~ object with the constants I thought it'd be a better check to create a new set to double-check what's going on in the code being tested.
 
 #+begin_src js :noweb-ref test-color-increaser-tests
-describe('ColorIncreaser', function() {
+describe('Given the ColorIncreaser class definition', function() {
   const [RGB_MIN, RGB_MAX ]= [0, 255];
   const [RED, GREEN, BLUE, ALPHA] = [0, 1, 2, 3];
   const CHANNELS = [RED, GREEN, BLUE, ALPHA];
@@ -189,35 +211,54 @@ describe('ColorIncreaser', function() {
   });
 #+end_src
 
-** Does It Exist?
-Our first test makes sure that we were able to create the ColorIncreaser object. This is actually a little bit of a fake because the ~beforeEach~ will fail if we can't create the object and it won't actually reach this test. I suppose you could still break it by making a function named ~ColorIncreaser~ instead of a class, but I won't go that route.
+
+** Does the ColorIncreaser Exist?
+Our first test makes sure that we were able to create the ~ColorIncreaser~ object. This is actually a little bit of a fake because the ~beforeEach~ will fail if we can't create the object and it won't actually reach this test. I suppose you could still break it by making a function named ~ColorIncreaser~ instead of a class so this acts as an extra check.
+
+First we make a section header to make it a little clearer (it doesn't actually affect the tests, just the output after the test is run).
+
+#+begin_src js :noweb-ref test-color-increaser-constructor
+describe("When the ColorIncreaser is constructed",
+          function() {
+#+end_src
+
+And then the actual test to see if the constructor created an object.
 
 #+begin_src js :noweb-ref test-color-increaser-exists
-it('should be an object', function(done) {
+it ("Then it should be an object", function(done) {
   expect(color_increaser).to.be.a('object');
   done();
 });
 #+end_src
 
+Mocha will [[https://mochajs.org/#asynchronous-code][run the tests asynchronously]] (parallel and out of order) so we need to accept the ~done~ function and then call it when the test is finished so mocha knows that the test is done.
+
 ** The ColorIncreaser Class
-So now I'll define the class and its constructor and make it exportable. It's a pretty basic class, heres a class diagram of it's attributes.
+
+Now that we have the test I'll define the class and its constructor. It's a pretty basic class, here's a class diagram of its attributes.
 
 #+begin_src plantuml :file ../files/posts/bdd-testing-p5/color-increaser.png :exports none
 !theme mars
-ColorIncreaser o- p5.Color
-ColorIncreaser : Integer color_increment
-ColorIncreaser : p5.Color color
-ColorIncreaser : None increase()
+class ColorIncreaser {
+  color_increment : Integer
+  color : p5.Color 
+  increase() : None 
+  next() : p5.Color 
+}
 
-p5.Color : Array levels
+ColorIncreaser o- p5.Color
+
+class p5.Color {
+  levels : Array
+}
 #+end_src
 
 #+RESULTS:
 [[file:../files/posts/bdd-testing-p5/color-increaser.png]]
 
-[[img-url:color-increaser.png][Color Increaser class diagram]]
+[[img-url:color-increaser.webp][Color Increaser class diagram]]
 
-And here's the constructor definition.
+And here's the class and constructor definition.
 
 #+begin_src js :noweb-ref sketch-color-increaser-constructor
 class ColorIncreaser {
@@ -231,7 +272,7 @@ class ColorIncreaser {
 This is just a sanity check to make sure that the constructor actually saved the increment amount we passed in.
 
 #+begin_src js :noweb-ref test-color-increment-argument
-it("should set the color_increment",
+it("And it should set the color_increment",
    function(done){
      expect(color_increaser.color_increment).to.equal(COLOR_INCREMENT);
      done();
@@ -243,7 +284,7 @@ it("should set the color_increment",
 This is another check to make sure the constructor saved the color object that got passed in. I couldn't find a same-object checker in ~chai~ but the ~eql~ is described as a check that the objects are "deeply-equal" which I assume is the same thing.
 
 #+begin_src js :noweb-ref test-color-object
-it("should set the color object",
+it("And set the color attribute",
   function(done){
     expect(color_increaser.color).to.be.eql(color_mock);
     done();
@@ -251,17 +292,20 @@ it("should set the color object",
 #+end_src
 
 ** The Increaser
-We're going to implement a method for the ~ColorIncreaser~ that will increment the color-array so let's check that it works.
+We're going to implement a method for the ~ColorIncreaser~ that will increment the color-array so let's check that it works. It sort of treats the three color channels (Red, Green, and Blue... we'll pretend Alpha doesn't exist) like a three-digit number using base 255 instead of 10 and with the digits being BGR. So we start with all three channels at 0, then we increment red from 0 to 255 and when it hits 256 we set it back to 0 and set green to 1, then we repeat this over and over until green goes up to 256 at which point we reset both red and green to 0 and set blue to 1 and so on.
+
+
+I'll add a ~describe~ section to the tests to make it clearer where testing this method starts.
 
 #+begin_src js :noweb-ref test-describe-increaser
-describe("#increase()", function() {
+describe("And when the increase() method is called", function() {
 #+end_src
 
 *** Does the red channel increase?
 Until it increments the red channel past 255 the other channels don't change so we'll first test that only the red channel changes up until that point.
 
 #+begin_src js :noweb-ref test-increaser-increases
-it ("should increment red only up until 255",
+it ("Then it should increment red up until 255",
     function(done){
       for (let count=RGB_MIN; count < RGB_MAX; count +=1) {
         color_increaser.increase();
@@ -303,7 +347,7 @@ These are our expected values before and after the call to ~increase~.
 
 
 #+begin_src js :noweb-ref test-increase-past-red
-it ("should wrap red when it hits 256",
+it ("But red should wrap-around to 0 when it hits 256 and increment green",
     function(done) {
       color_increaser.color.levels[RED] = RGB_MAX;
       color_increaser.increase();
@@ -344,7 +388,7 @@ These are our expected values before and after the call to ~increase~.
 
 
 #+begin_src js :noweb-ref test-increase-past-green
-it("should wrap green and increase blue if green exceeds 255",
+it("And it should wrap-around green and increase blue if green exceeds 255",
    function(done) {
      color_increaser.color.levels[RED] = RGB_MAX;
      color_increaser.color.levels[GREEN] = RGB_MAX;
@@ -386,7 +430,7 @@ These are our expected values before and after the call to ~increase~.
 
 
 #+begin_src js :noweb-ref test-increase-past-blue
-it("should wrap all colors when blue exceeds 255",
+it("And it should wrap-around all colors when blue exceeds 255",
    function(done) {
      CHANNELS.forEach(
        channel => color_increaser.color.levels[channel] = RGB_MAX);
@@ -416,17 +460,17 @@ if (this.color.levels[CHANNELS.BLUE] > CHANNELS.MAXIMUM) {
 And there we have our exhaustive channel incrementer.
 
 ** The Next Method
-I'm going to implement a ~next~ method to simplify things a little. Just because.
+I'm going to implement a ~next~ method to simplify things a little. It'll call increase and the return the color object. Just because.
 
 #+begin_src js :noweb-ref test-describe-next
-describe("#next()", function() {
+describe("And when the next() method is called", function() {
 #+end_src
 
 *** Does the next method increase the color?
-To check that next calls the ~increase~ method I'll monkey-patch it with a [[https://sinonjs.org/releases/latest/spies/][sinon spy]].
+To check that next calls the ~increase~ method I'll monkey-patch it with a [[https://sinonjs.org/releases/latest/spies/][sinon spy]] and check that when we call ~next~ the ~increase~ spy gets called.
 
 #+begin_src js :noweb-ref test-next-increaser
-it("should increase the color when you call next",
+it("Then it should increase the color",
   function(done) {
     let spy = sinon.spy(color_increaser, "increase");
     color_increaser.next();
@@ -448,7 +492,7 @@ next() {
 Instead of requiring the user to make two calls I'll have the next method return the color object directly.
 
 #+begin_src js :noweb-ref test-next-return
-it ("returns the color when next is called",
+it ("And return the color",
     function(done) {
       let actual = color_increaser.next();
       expect(color_increaser.color).to.be.eql(actual);
@@ -457,6 +501,7 @@ it ("returns the color when next is called",
 #+end_src
 
 *** Return the color
+Now in our ~ColorIncreaser.next~ method we return the color.
 
 #+begin_src js :noweb-ref sketch-next-return
 return this.color;
@@ -465,7 +510,7 @@ return this.color;
 
 The implementation so far is good enough to get the code working within the p5 sketch, which would normally be the ultimate goal. But in order for the test code to be able to import the ~ColorIncreaser~ (using the ~require~ function) we need to add a line in the file with the ~ColorIncreaser~ definition to export it.
 
-The code  given in the tutorial will raise an error outside of node.js - so it works for testing but causes a ~ReferenceError~ in the browser (when using a python-based server anyway) so to prevent that from happening I added a check that wiill only do the export only if the ~module~ is defined, which indicates that this is being used in node (or I messed up and defined it somewhere else).
+The code given in the tutorial just has the export line, but this will raise an error outside of node.js - so it works for testing but causes a ~ReferenceError~ in the browser (when using a python-based server anyway) so to prevent that from happening I added a check that will do the export only if the ~module~ is defined, which is an indication that this is being used in node (or I messed up and defined it somewhere else).
 
 #+begin_src js :noweb-ref sketch-export-color-increaser
 if (typeof module != "undefined") {
@@ -473,8 +518,40 @@ if (typeof module != "undefined") {
 };
 #+end_src
 
+** Running The tests
+Now, let's see what it looks like when we run the tests.
+
+#+begin_src fish :results output :exports both
+mocha ../tests/test*
+#+end_src
+
+#+RESULTS:
+#+begin_example
+
+
+  Given the ColorIncreaser class definition
+    When the ColorIncreaser is constructed
+      ✔ Then it should be an object
+      ✔ And it should set the color_increment
+      ✔ And set the color attribute
+    And when the increase() method is called
+      ✔ Then it should increment red up until 255
+      ✔ But red should wrap-around to 0 when it hits 256 and increment green
+      ✔ And it should wrap-around green and increase blue if green exceeds 255
+      ✔ And it should wrap-around all colors when blue exceeds 255
+    And when the next() method is called
+      ✔ Then it should increase the color
+      ✔ And return the color
+
+
+  9 passing (11ms)
+
+#+end_example
+
+The output in the terminal has some color added to the text so it looks prettier, but otherwise that's the output of running our tests.
+
 * The Sketch
-Now that we have the Increaser we can add it to a sketch to change the colors of the square that we're drawing.
+Now that we have the ~ColorIncreaser~ we can add it to a sketch to change the colors of the square that we're drawing.
 
 #+begin_src js :tangle ../files/posts/bdd-testing-p5/sketch.js :exports none
 BDD_SKETCH_DIV = "6a5fb18a-bdd-sketch"
