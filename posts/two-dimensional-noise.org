@@ -20,7 +20,7 @@ This is yet another copy and redo of a sketch from [[https://nature-of-code-2nd-
 
 * Static Version (Using Set)
 
-This first sketch is a static two-dimensional visualization of the p5 ~noise~  function, with the pixels of the canvas set to a level of gray (from black to white) based on the noise. I'll be doing the sketch again using a different method but this first one uses the (ambiguously named) [[https://p5js.org/reference/#/p5/set][set]] function that lets you set the grayscale or RGB-Alpha value for a single [[https://en.wikipedia.org/wiki/Pixel?useskin=vector#Logical_pixel][logical pixel]] (because different displays have different pixel-densities, there might be more "physical" pixels dedicated to each logical one, giving you better resolution). The ~set~ function is the simplest way to set a pixel, but, as noted in the p5 documentation, it adds overhead so there's another recommended way to do it if you need it to go faster. For static images (as this is) it's fast enough, though.
+This first sketch is a static two-dimensional visualization of the p5 ~noise~  function, with the pixels of the canvas set to a level of gray (from black to white) based on the noise. I'll be doing the sketch again using a different method but this first one uses the (ambiguously named) [[https://p5js.org/reference/#/p5/set][set]] function that lets you set the grayscale or RGB-Alpha value for a single [[https://en.wikipedia.org/wiki/Pixel?useskin=vector#Logical_pixel][logical pixel]] (because different displays have different pixel-densities, there might be more "physical" pixels dedicated to each logical one, giving you better resolution). The ~set~ function is the simplest way to set a pixel, but, as noted in the p5 documentation, it adds overhead so there's another recommended way to do it if you need it to go faster (which is what the next section - [[Static Version Setting Pixels]] - is about). For static images (as this is) it's fast enough, though.
 
 #+begin_src js :tangle ../files/posts/two-dimensional-noise/simple-sketch.js  :exports none
 const STATIC_NOISE_GRAPH_DIV = "simple-2d-noise-graph";
@@ -59,10 +59,14 @@ This is the basic function that we pass to the ~p5~ constructor to create our sk
 
 #+begin_src js :noweb-ref simple-sketch-closure
 function simple_sketch(p5) {
+  const MAXIMUM_INTENSITY = 255;
+  const NOISE_OFFSET_INCREMENT = 0.01;
 #+end_src
 
+We're only going to set the grayscale channel which has a maximum value of 255, thus the ~MAXIMUM_INTENSITY~ multiplied by noise will be what we use to figure out what value to set each pixel. The ~NOISE_OFFSET_INCREMENT~ is the amount that we're going to increase the x and y values as we step through the noise-space. 
+
 ** Set Up
-First I'll define the p5 ~setup~ funciton. All it does is create the canvas that's the width of the div container. I'm using a variable ~STATIC_NOISE_GRAPH_DIV~ that I didn't show, but it just has the HTML div ID that will hold the sketch.
+First I'll define the p5 ~setup~ function. All it does is create the canvas that's the width of the div container. I'm using a variable ~STATIC_NOISE_GRAPH_DIV~ that I didn't show, but it just has the HTML div ID that will hold the sketch.
 
 #+begin_src js :noweb-ref simple-sketch-setup
 p5.setup = function() {
@@ -83,9 +87,9 @@ p5.draw = function() {
   let row_offset;
 #+end_src
 
-Besides defining the function I'm declaring a variable, ~column_offset~ that holds the x-input value for the ~noise~ function, as well as ~row_offset~ which will hold the y-input. For the y-input value I'm going to repatedly loop from 0 through \(0.01 \times \textit{height} \). If my understanding of how the noise function works is correct, changing the x-inputs moves you to a different part of the gradient so repeating the y-inputs won't cause a repetition of the noise outputs.
+Besides defining the function I'm declaring a variable, ~column_offset~ that holds the x-input value for the ~noise~ function, as well as ~row_offset~ which will hold the y-input. 
 
-I'm also creating a variable, ~intensity~ to hold the RGB setting we're going to use. It get's passed immediately to ~set~ once the value is created so it isn't really needed, I just created it for clarity.
+I'm also creating a variable, ~intensity~ to hold the RGB setting we're going to use. It gets passed immediately to ~set~ once the value is created so it isn't really needed, I just created it for clarity.
 
 *** Load Pixels
 
@@ -103,23 +107,23 @@ for (let column = 0; column < p5.width; column++) {
   for (let row = 0; row < p5.height; row++) {
 #+end_src
 
-Since we're setting each of the pixels in the canvas I'll use two for-loops, traversing each column from top row to bottom row before moving on to the next column. I had previously followed the convention of using ~x~ for columns and ~y~ for rows, but I think calling them ~columns~ and ~rows~ will be a little clearer when we get to the next sketch. Maybe.
+Since we're setting each of the pixels in the canvas I'll use two for-loops, traversing each column from top row to bottom row before moving on to the next column. I had previously followed the convention of using ~x~ for columns and ~y~ for rows, but I think calling them ~columns~ and ~rows~ will be a little clearer when we get to the next sketch.
 
 *** Set the Intensity
 
 #+begin_src js :noweb-ref simple-sketch-intensity
-let intensity = p5.noise(column_offset, row_offset) * 255;
+let intensity = p5.noise(column_offset, row_offset) * MAXIMUM_INTENSITY;
 p5.set(column, row, intensity);
 #+end_src
 
-The ~intensity~ for each pixel is the noise at the offset for that column-row pair multiplied by 255 (since noise goes from \(0 \ldots 1\) and RGB-Alpha goes from \(0 \ldots 255\)). Once we get it we can ~set~ it at the matching ~column~ and ~row~ coordinate. The ~intensity~ is going to be a float, but as we'll see in the next sktech that won't matter, since the ~pixels~ array casts values to an integer, although I suppose if it were more important we might want to control it using floor, ceiling, or round. But since this is using noise I don't imagine we'd know the difference.
+The ~intensity~ for each pixel is the noise at the offset for that column-row pair multiplied by the MAXIMUM_INTENSITY (255) (since noise goes from \(0 \ldots 1\) and RGB-Alpha goes from \(0 \ldots 255\).) this gives us a fractional value of the MAXIMUM_INTENSITY. Once we get it we can ~set~ it at the matching ~column~ and ~row~ coordinate. The ~intensity~ is going to be a float, but as we'll see in the next sktech that won't matter, since the ~pixels~ array casts values to an integer, although I suppose if it were more important we might want to control it using floor, ceiling, or round. But since this is using noise I don't imagine we'd know the difference.
 
 *** End the For-Loops
 #+begin_src js :noweb-ref simple-sketch-end-for-loops
-    row_offset += 0.01;
+    row_offset += NOISE_OFFSET_INCREMENT;
   } //end row-for
 
-  column_offset += 0.01;
+  column_offset += NOISE_OFFSET_INCREMENT;
 } // end column-for
 #+end_src
 
@@ -143,7 +147,7 @@ new p5(simple_sketch, STATIC_NOISE_GRAPH_DIV);
 
 {{% p5div source="simple-sketch.js" divid="simple-2d-noise-graph" %}}
 
-And there you go. Now onto the pixel array version.
+And there you go. Now onto a version that sets the pixel array directly without using the ~set~ method.
 
 * Static Version Setting Pixels
 {{% javascripttag source="pixel-constants.js" %}}
@@ -187,8 +191,90 @@ const SLIDER = {
 
 These are the same values I used in the previous noise-sketches. A ~step_size~ of 0 just means that I'm not setting one so p5 can use whatever the default value is - the documentation says it's continuous but it seems to jump a bit when I use it.
 
+** Noise Plotter
+
+The Noise Plotter class is going to draw the two-dimensional noise-visualization using the current slider value as the step-size to change the noise input.
+
+#+begin_src js :tangle ../files/posts/two-dimensional-noise/noise-plotter.js :exports none
+/** Plot Two-Dimensional Noise */
+<<noise-plotter-class>>
+
+  /** Construct the Noise Plotter
+   ,* Params:
+   ,*  - p5: p5 instance object
+   ,*  - slider: slider to grab the noise-offset increment value
+  ,*/
+  <<noise-plotter-constructor>>
+
+  <<noise-plotter-draw>>
+
+    <<noise-plotter-draw-load-pixels>>
+} // end NoisePlotter
+#+end_src
+
+*** The Noise Plotter Class
+So, let's get started with the class definition.
+
+#+begin_src js :noweb-ref noise-plotter-class
+class NoisePlotter {
+#+end_src
+
+There's nothing really being done in the constructor except storing the p5 and slider objects for later.
+
+#+begin_src js :noweb-ref noise-plotter-class
+  constructor(p5, slider) {
+    this.slider = slider;
+    this.p5 = p5
+  } // end constructur
+#+end_src
+
+*** The Draw Method
+This is the workhorse that does all the plotting.
+
+#+begin_src js :noweb-ref noise-plotter-draw
+draw() {
+  let intensity;
+  let column_offset;
+  let offset_increment = this.slider.value()
+  let row_offset = 0;
+  let pixel_index;
+#+end_src
+
+The variables:
+
+- ~intensity~: This will hold the RGB value(s) that we set the pixels to based on noise
+- ~column_offset~: The y-input for the noise function
+- ~offset_increment~: How much to increase the noise function inputs (the offsets) in the loops
+- ~row_offset~: x-input for the noise function
+- ~pixel_index~: Starting index in the ~pixels~ array for our pixel
+
+That last variable might take some explaining, so maybe here's a good spot to dump my understanding of how this works.
+
+#+begin_src js :noweb-ref noise-plotter-draw-load-pixels
+  this.p5.loadPixels();
+  
+  for (let y=0; y < this.p5.height; y++) {
+    column_offset = 0;
+    for (let x=0; x < this.p5.width; x++) {
+      pixel_index = (x + y * this.p5.width) * PIXEL_ARRAY.CELLS_PER_PIXEL;
+      intensity = this.p5.noise(column_offset, row_offset) * PIXEL_ARRAY.RGB_MAX;
+      this.p5.pixels[pixel_index +
+                     PIXEL_ARRAY.RED] = intensity;
+      this.p5.pixels[pixel_index +
+                     PIXEL_ARRAY.GREEN] = intensity;
+      this.p5.pixels[pixel_index +
+                     PIXEL_ARRAY.BLUE] = intensity;
+      this.p5.pixels[pixel_index +
+                     PIXEL_ARRAY.ALPHA] = PIXEL_ARRAY.RGB_MAX;
+      column_offset += offset_increment;        
+    } // end x for
+    row_offset += offset_increment;
+  }// end x for
+  this.p5.updatePixels();
+} // end draw
+#+end_src
 ** The Sketch
-*Note for later:* You have to either set the background or the alpha channel in the pixel array. Leaving both out won't show anything.
+*Note for later:* You have to either set the background or the set the alpha channel in the pixel array. Leaving both out won't show anything.
 
 
 #+begin_src js :tangle ../files/posts/two-dimensional-noise/static-sketch-pixels.js :exports none
@@ -257,7 +343,7 @@ p5.pixelDensity(1);
 
 To draw the noise I'm going to set the values in the ~pixels~ array directly but that's actually not so straightforward as you might think. When we refer to a pixel, there's two things to consider -  there's a /logical/ pixel, which is what we referred to using the ~set~ function, and what most people probably think of when working with p5 - it's the (x, y) coordinate you've come to know and love, but that pixel doesn't necessarily map one-to-one with the physical pixels in a display. Because of this, the size of the ~pixels~ array and the number of cells within the array dedicated to each pixel depends on the display.
 
-The [[https://p5js.org/reference/#/p5/pixels][pixels]] documentation shows the proper way to do it, which requires you to check the [[https://p5js.org/reference/#/p5/pixelDensity][pixelDensity]] and then for each logical pixel you would loop over the sub-pixels that represent it... Maybe some other time. For now, setting ~pixelDensity(1)~ will turn off matching the pixel density of the user's display and let us just worry about the one logical pixel. I don't know if that means it wont' take advantage of a higher density display or not, but p5 is about making it easier to code visualizations, not high performance (to me, anyway) - and as we'll see, the for-loops we're using are already slow enough, adding two more nested loops will just make things even slower.
+The [[https://p5js.org/reference/#/p5/pixels][pixels]] documentation shows the proper way to set all the physical pixels, which requires you to check the [[https://p5js.org/reference/#/p5/pixelDensity][pixelDensity]] and then for each logical pixel you would loop over the sub-pixels that represent it... maybe some other time. For now, setting ~pixelDensity(1)~ will turn off matching the pixel density of the user's display and let us just worry about the one logical pixel. I don't know if that means it wont' take advantage of a higher density display or not, but p5 is about making it easier to code visualizations, not high performance (to me, anyway) - and as we'll see, the for-loops we're using are already slow enough, adding two more nested loops will just make things even slower.
 
 **** The Canvas
 #+begin_src js :noweb-ref static-pixels-canvas
@@ -279,18 +365,18 @@ slider.style("width", "500px");
 
 This is also a pretty straight-forward slider (although I think that just dropping it in after the canvas like this isn't what you're supposed to do). The main difference is that I'm adding a callback:
 
-#+begin_src js :noweb-ref static-pixels-
+#+begin_src js :noweb-ref static-pixels-slider-callback
 slider.input(() => p5.redraw());
 #+end_src
 
 This uses javascript's crazy [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions][arrow function]] syntax (not that I think the idea behind it is crazy, but the weird looking syntax and the fact that there's so many ways to declare functions seems to make the language too complicated for the little advantage you get with all the variations).
 
-Since this is a mostly static drawing I'm going to turn off re-drawing the canvas, but this callback tells p5 that if the user changes the slider's value then it should re-draw the canvas. p5 also has a similar functoin called ~changed~, but that doesn't trigger the callback until you let go of the mouse button, while this lets you see the changes as you drag the slider.
+Since this is a mostly static drawing I'm going to turn off re-drawing the canvas, but this callback tells p5 that if the user changes the slider's value then it should re-draw the canvas. p5 also has a similar function called ~changed~, but that doesn't trigger the callback until you let go of the mouse button, while ~input~ lets you see the changes as you drag the slider.
 
-*Note:* [[https://p5js.org/reference/#/p5/input][input]] and [[https://p5js.org/reference/#/p5/changed][changed]] don't show up under the ~slider~ documentation but rather under the ~DOM~ category of the documentation so I don't know how anyone is supposed to know that they exist without searching forum posts, and seems to suggest that there might be other features of the p5 language that exist but aren't well documented so it's just luck if you figure out that they are there...
+*Note:* [[https://p5js.org/reference/#/p5/input][input]] and [[https://p5js.org/reference/#/p5/changed][changed]] don't show up under the ~slider~ documentation but rather under the ~DOM~ category of the documentation so I don't know how anyone is supposed to know that they exist without searching forum posts. This seems to suggest that there might be other features of the p5 language that exist but aren't well documented so it's just luck if you figure out that they are there...
 
 **** Text Setup
-#+begin_src js :noweb-ref static-pixels-text-setup
+#+begin_src js :noweb-ref static-pixels-slider-text-setup
   p5.fill("white");
   p5.stroke("white");
   p5.textAlign(p5.CENTER);
@@ -298,17 +384,17 @@ Since this is a mostly static drawing I'm going to turn off re-drawing the canva
   p5.noStroke()
   #+end_src
 
-  This sets the values that I'll use to show what the current slider value is to the user. Since I'm setting the pixel array values directly and not calling any functions like ~stroke~ or ~fill~ to do the visualization setting it here will stick for the life of the sketch.
+  This sets the values that I'll use to show what the current slider value is to the user. Since I'm setting the pixel array values directly and not calling any functions like ~stroke~ or ~fill~ to do the visualization, setting it here will stick for the life of the sketch.
 
 **** A Noise Plotter
-#+begin_src js :noweb-ref static-pixels-noise-plotter
+#+begin_src js :noweb-ref static-pixels-slider-noise-plotter
 plotter = new NoisePlotter(p5, slider);
 #+end_src
 
 I thought that it was getting cluttered up enough that it would make sense to break the plotting of the noise into a class, since I findi it easier to work with an object-oriented approach.
 
 **** No Loop
-#+begin_src js :noweb-ref static-pixels-no-loop
+#+begin_src js :noweb-ref static-pixels-slider-no-loop
   p5.noLoop();
 } // end setup
 #+end_src
@@ -338,90 +424,10 @@ new p5(static_pixels, STATIC_NOISE_PIXELS_DIV);
 
 And then we create the p5 object...
 
-** Noise Plotter
-
-The Noise Plotter class is going to draw the two-dimensional noise-visualization using the current slider value as the step-size to change the noise input.
-
-#+begin_src js :tangle ../files/posts/two-dimensional-noise/noise-plotter.js :exports none
-/** Plot Two-Dimensional Noise */
-<<noise-plotter-class>>
-
-  /** Construct the Noise Plotter
-   ,* Params:
-   ,*  - p5: p5 instance object
-   ,*  - slider: slider to grab the noise-offset increment value
-  ,*/
-  <<noise-plotter-constructor>>
-
-  <<noise-plotter-draw>>
-
-    <<noise-plotter-draw-load-pixels>>
-} // end NoisePlotter
-#+end_src
-
-*** The Noise Plotter Class
-So, let's get started with the class definition.
-
-#+begin_src js :noweb-ref noise-plotter-class
-class NoisePlotter {
-#+end_src
-
-There's nothing really being done in the constructor except storing the p5 and slider objects for later.
-
-#+begin_src js :noweb-ref noise-plotter-class
-  constructor(p5, slider) {
-    this.slider = slider;
-    this.p5 = p5
-  } // end constructur
-#+end_src
-
-*** The Draw Method
-This is the workhorse that does all the plotting.
-
-#+begin_src js :noweb-ref noise-plotter-draw
-draw() {
-  let intensity;
-  let column_offset;
-  let offset_increment = this.slider.value()
-  let row_offset = 0;
-  let pixel_index;
-#+end_src
-
-The variables:
-
-- ~intensity~: This will hold the RGB value(s) that we set the pixels to based on noise
-- ~column_offset~: The y-input for the noise function
-- ~offset_increment~: How much to increase the noise function inputs (the offsets) in the loops
-- ~row_offset~: x-input for the noise function
-- ~pixel_index~: Starting index in the ~pixels~ array for our pixel
-
-That last variable might take some explaining, so maybe here's a good spot to dump my understanding of how this works.
-
-#+begin_src js :noweb-ref noise-plotter-draw-load-pixels
-  this.p5.loadPixels();
-  
-  for (let y=0; y < this.p5.height; y++) {
-    offset_x = 0;
-    for (let x=0; x < this.p5.width; x++) {
-      pixel_index = (x + y * this.p5.width) * PIXEL_ARRAY.CELLS_PER_PIXEL;
-      intensity = this.p5.noise(offset_x, offset_y) * PIXEL_ARRAY.RGB_MAX;
-      this.p5.pixels[pixel_index +
-                     PIXEL_ARRAY.RED] = intensity;
-      this.p5.pixels[pixel_index +
-                     PIXEL_ARRAY.GREEN] = intensity;
-      this.p5.pixels[pixel_index +
-                     PIXEL_ARRAY.BLUE] = intensity;
-      this.p5.pixels[pixel_index +
-                     PIXEL_ARRAY.ALPHA] = PIXEL_ARRAY.RGB_MAX;
-      offset_x += offset_increment;        
-    } // end x for
-    offset_y += offset_increment;
-  }// end x for
-  this.p5.updatePixels();
-} // end draw
-#+end_src
+** The Output
 
 {{% p5div source="static-sketch-pixels.js" divid="static-2d-noise-graph-pixels" %}}
+
 * Moving Version
 {{% javascripttag source="moving-noise.js" %}}
 {{% p5div source="moving-sketch-pixels.js" divid="moving-2d-noise-graph-pixels" %}}

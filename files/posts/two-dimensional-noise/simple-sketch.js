@@ -6,6 +6,8 @@ const STATIC_NOISE_GRAPH_DIV = "simple-2d-noise-graph";
  * - p5: A p5 instance object
 */
 function simple_sketch(p5) {
+  const MAXIMUM_INTENSITY = 255;
+  const NOISE_OFFSET_INCREMENT = 0.01;
 
   /** Create the canvas */
   p5.setup = function() {
@@ -27,13 +29,13 @@ function simple_sketch(p5) {
     
       for (let row = 0; row < p5.height; row++) {
 
-        let intensity = p5.noise(column_offset, row_offset) * 255;
+        let intensity = p5.noise(column_offset, row_offset) * MAXIMUM_INTENSITY;
         p5.set(column, row, intensity);
   
-        row_offset += 0.01;
+        row_offset += NOISE_OFFSET_INCREMENT;
       } //end row-for
     
-      column_offset += 0.01;
+      column_offset += NOISE_OFFSET_INCREMENT;
     } // end column-for
 
     p5.updatePixels();

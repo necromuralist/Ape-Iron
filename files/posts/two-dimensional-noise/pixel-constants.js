@@ -1,3 +1,4 @@
+/** Some constants to use when setting values in the pixels array */
 const PIXEL_ARRAY = {
   RED: 0,
   GREEN : 1,
@@ -7,6 +8,7 @@ const PIXEL_ARRAY = {
   RGB_MAX : 255,
 } // end PIXEL_ARRAY
 
+/** Constants to use when setting up the sliders */
 const SLIDER = {
   min: 0,
   max: 1,
