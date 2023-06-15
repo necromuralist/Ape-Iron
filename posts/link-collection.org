@@ -1,0 +1,23 @@
+#+BEGIN_COMMENT
+.. title: Link Collection
+.. slug: link-collection
+.. date: 2023-06-14 12:14:06 UTC-07:00
+.. tags: links,reference,bookmark
+.. category: Bookmarks
+.. link: 
+.. description: A collection of links to check out.
+.. type: text
+.. status: 
+.. updated: 
+
+#+END_COMMENT
+#+OPTIONS: ^:{}
+#+TOC: headlines 2
+
+* Design Patterns
+- [[https://www.patterns.dev/][patterns.dev]]: An online book of patterns for JavaScript and React.
+
+* Creative Coding
+ - [[https://github.com/terkelg/awesome-creative-coding][Awesome Creative Coding]]: A collection of links on github.
+ - [[https://awesomeopensource.com/project/terkelg/awesome-creative-coding][Awesome Creative Coding Again]]: This looks like the same list but on [[https://awesomeopensource.com/][Awesome Open Source]] so there might be more cross-linked pages.
+ - [[https://thelumiereguy.github.io/CreativeCodingExamples/][Creative Coding Examples]]: Short page of examples.
