@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron (Posts about Bookmarks)</title><link>https://necromuralist.github.io/Ape-Iron/</link><description></description><atom:link href="https://necromuralist.github.io/Ape-Iron/categories/cat_bookmarks.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;Cloistered Monkey&lt;/a&gt; &lt;p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"&gt;&lt;a property="dct:title" rel="cc:attributionURL" href="https://necromuralist.github.io/Ape-Iron/"&gt;Ape Iron&lt;/a&gt; by &lt;a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/necromuralist"&gt;The Cloistered Monkey&lt;/a&gt; is licensed under &lt;a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY 4.0&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;&lt;/a&gt;&lt;/p&gt;</copyright><lastBuildDate>Thu, 15 Jun 2023 20:30:13 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Link Collection</title><link>https://necromuralist.github.io/Ape-Iron/posts/link-collection/</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;div id="text-table-of-contents" role="doc-toc"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/link-collection/#org1b7e570"&gt;Design Patterns&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/link-collection/#org172177b"&gt;Creative Coding&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org1b7e570" class="outline-2"&gt;
+&lt;h2 id="org1b7e570"&gt;Design Patterns&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org1b7e570"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;a href="https://www.patterns.dev/"&gt;patterns.dev&lt;/a&gt;: An online book of patterns for JavaScript and React.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org172177b" class="outline-2"&gt;
+&lt;h2 id="org172177b"&gt;Creative Coding&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org172177b"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;a href="https://github.com/terkelg/awesome-creative-coding"&gt;Awesome Creative Coding&lt;/a&gt;: A collection of links on github.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://awesomeopensource.com/project/terkelg/awesome-creative-coding"&gt;Awesome Creative Coding Again&lt;/a&gt;: This looks like the same list but on &lt;a href="https://awesomeopensource.com/"&gt;Awesome Open Source&lt;/a&gt; so there might be more cross-linked pages.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://thelumiereguy.github.io/CreativeCodingExamples/"&gt;Creative Coding Examples&lt;/a&gt;: Short page of examples.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><category>bookmark</category><category>links</category><category>reference</category><guid>https://necromuralist.github.io/Ape-Iron/posts/link-collection/</guid><pubDate>Wed, 14 Jun 2023 19:14:06 GMT</pubDate></item></channel></rss>

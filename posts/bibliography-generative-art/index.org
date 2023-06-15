@@ -30,7 +30,7 @@ The Zen Bullets site uses a very small font and you can't scroll the menu on the
 *Warning:* uBlock Origin blocks this site because the web-host it uses is listed as untrustworthy, so I haven't actually seen the page, but it's listed in the book and the book's [[https://www.manning.com/books/generative-art][product page]]  so I'm including it mostly to remind myself not to go there, even though they tell you to (the errata page does have a a note saying the site's license is expired, but they didn't fix the main page).
 
 - abandonedart.org
-- https://www.scam-detector.com/validator/iyfbodn-com-review/
+- https://www.scam-detector.com/validator/iyfbodn-com-review/ : Describes the reason why the web-host is considered untrustworthy.
 
 * Other Artist's Mentioned In the Book
 
