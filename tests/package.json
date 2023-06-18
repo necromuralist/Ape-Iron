@@ -1,5 +1,8 @@
 {
   "scripts": {
     "test": "nodemon --watch . --exec 'mocha ./test* || true'"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^9.1.2"
   }
 }
