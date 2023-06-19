@@ -3,7 +3,7 @@
 const expect = require("chai").expect;
 const sinon = require("sinon");
 
-const ColorIncreaser = require('../../files/posts/bdd-testing-p5/color-increaser');
+const ColorIncreaser = require('../../../files/posts/bdd-testing-p5/color-increaser');
 
 class MockColor {
   constructor(red, green, blue, alpha){

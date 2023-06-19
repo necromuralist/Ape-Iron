@@ -47,7 +47,7 @@ Weirdly, the mocha [[https://mochajs.org/#getting-started][Getting Started]] doc
 npm test
 #+end_src
 
-#+begin_src js :tangle ../tests/test-bdd-testing-p5/test.js :exports none
+#+begin_src js :tangle ../tests/mocha-tests/test-bdd-testing-p5/test.js :exports none
 <<test-strict>>
 
 <<test-imports>>
@@ -118,12 +118,12 @@ We're going to create a ~ColorIncreaser~ class which we need to import into the 
 
 But the test-code is in a different folder.
 
-- ~tests/test-bdd-testing-p5/~
+- ~tests/mocha-tests/test-bdd-testing-p5/~
 
 This folder sits next to the ~files~ folder. So our test code has to go up two levels and then back down into the ~files~ to get the sketch code.
 
 #+begin_src js :noweb-ref test-import-color-increaser
-const ColorIncreaser = require('../../files/posts/bdd-testing-p5/color-increaser');
+const ColorIncreaser = require('../../../files/posts/bdd-testing-p5/color-increaser');
 #+end_src
 
 Note that the path is relative to where the javascript file with the tests is, not where I'm running ~mocha~. Also, although it looks like a file reference, the file is called ~color-increaser.js~, but we're treating it as a module so we don't put the file extension on it.

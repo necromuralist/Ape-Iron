@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "test": "nodemon --watch . --exec cucumber-js ./test*"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^9.1.2"
+  }
+}

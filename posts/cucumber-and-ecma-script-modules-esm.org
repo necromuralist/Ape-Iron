@@ -13,6 +13,48 @@
 #+END_COMMENT
 #+OPTIONS: ^:{}
 #+TOC: headlines 2
+* The Feature File
+
+#+begin_src gherkin :tangle ../tests/cucumber-tests/test-cucumber-and-ecma-script-modules-esm/greetings.feature
+Feature: Greeting
+
+Scenario: Say hello
+When the greeter says hello
+#+end_src
+
+* The Test Steps
+
+#+begin_src js :tangle ../tests/cucumber-tests/test-cucumber-and-ecma-script-modules-esm/steps.js
+const assert = require( "assert");
+const When = require("@cucumber/cucumber").When;
+const Then = require("@cucumber/cucumber").Then;
+const Greeter = require( "../../../files/posts/cucumber-and-ecma-script-modules-esm/greetings.js");
+
+When("the greeter says hello", function () {
+  this.whatIHeard = new Greeter().sayHello();
+});
+
+Then(
+  "I should have heard {string}",
+  function (expectedResponse) {
+    assert.equal(this.whatIHeard, expectedResponse);
+  }
+);
+#+end_src
+
+* The Greeter
+
+#+begin_src js :tangle ../files/posts/cucumber-and-ecma-script-modules-esm/greetings.js
+class Greeter {
+    sayHello() {
+        return "hello";
+    }
+}
+
+if (typeof module != "undefined" ) {
+  module.exports = Greeter;
+};
+#+end_src
 * Links
 - Cucumber [Internet]. Cucumber; 2023 [cited 2023 Jun 17]. Available from: https://github.com/cucumber/cucumber-js
 - Cucumber-JS Examples [Internet]. Cucumber; 2023 [cited 2023 Jun 17]. Available from: https://github.com/cucumber/cucumber-js-examples
