@@ -1,3 +1,4 @@
-module.exports = {
-  default: "--publish-quiet",
+export default {
+    import: ['test*/**/*.js'],
+    publishQuiet: true
 }

@@ -1,8 +1,11 @@
 {
+  "type": "module",
+  "private": true,
   "scripts": {
     "test": "nodemon --watch . --exec cucumber-js ./test*"
   },
   "devDependencies": {
-    "@cucumber/cucumber": "^9.1.2"
+    "@cucumber/cucumber": "^9.1.2",
+    "chai": "^4.3.7"
   }
 }

@@ -1,15 +1,17 @@
-const assert = require( "assert");
-const When = require("@cucumber/cucumber").When;
-const Then = require("@cucumber/cucumber").Then;
-const Greeter = require( "../../../files/posts/cucumber-and-ecma-script-modules-esm/greetings.js");
+import { expect } from "chai";
+import { Given, When, Then } from "@cucumber/cucumber";
+import { Greeter } from  "../../../files/posts/cucumber-and-ecma-script-modules-esm/greetings.js";
 
-When("the greeter says hello", function () {
-  this.whatIHeard = new Greeter().sayHello();
+Given("a greeter", function() {
+  this.greeter = new Greeter();
 });
 
-Then(
-  "I should have heard {string}",
-  function (expectedResponse) {
-    assert.equal(this.whatIHeard, expectedResponse);
+When("the greeter greets me", function () {
+  this.is_what_i_heard = this.greeter.greetings();
+});
+
+Then("I should hear {string}",
+  function (what_he_should_have_said) {
+    expect(this.is_what_i_heard).to.equal(what_he_should_have_said);
   }
 );

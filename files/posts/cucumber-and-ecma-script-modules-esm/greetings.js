@@ -1,9 +1,7 @@
 class Greeter {
-    sayHello() {
-        return "hello";
+    greetings() {
+        return "Go away.";
     }
 }
 
-if (typeof module != "undefined" ) {
-  module.exports = Greeter;
-};
+export { Greeter };
