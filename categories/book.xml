@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron (Posts about book)</title><link>https://necromuralist.github.io/Ape-Iron/</link><description></description><atom:link href="https://necromuralist.github.io/Ape-Iron/categories/book.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;Cloistered Monkey&lt;/a&gt; &lt;p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"&gt;&lt;a property="dct:title" rel="cc:attributionURL" href="https://necromuralist.github.io/Ape-Iron/"&gt;Ape Iron&lt;/a&gt; by &lt;a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/necromuralist"&gt;The Cloistered Monkey&lt;/a&gt; is licensed under &lt;a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY 4.0&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;&lt;/a&gt;&lt;/p&gt;</copyright><lastBuildDate>Thu, 15 Jun 2023 21:42:55 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>The Nature of Code</title><link>https://necromuralist.github.io/Ape-Iron/posts/bibliography-the-nature-of-code/</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron (Posts about book)</title><link>https://necromuralist.github.io/Ape-Iron/</link><description></description><atom:link href="https://necromuralist.github.io/Ape-Iron/categories/book.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;Cloistered Monkey&lt;/a&gt; &lt;p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"&gt;&lt;a property="dct:title" rel="cc:attributionURL" href="https://necromuralist.github.io/Ape-Iron/"&gt;Ape Iron&lt;/a&gt; by &lt;a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/necromuralist"&gt;The Cloistered Monkey&lt;/a&gt; is licensed under &lt;a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY 4.0&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;&lt;/a&gt;&lt;/p&gt;</copyright><lastBuildDate>Sun, 18 Jun 2023 22:23:04 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>The Nature of Code</title><link>https://necromuralist.github.io/Ape-Iron/posts/bibliography-the-nature-of-code/</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
@@ -35,22 +35,22 @@ Daniel Shiffman also has a website called &lt;a href="https://thecodingtrain.com
 &lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><category>bibliography</category><category>book</category><category>p5.js</category><guid>https://necromuralist.github.io/Ape-Iron/posts/bibliography-the-nature-of-code/</guid><pubDate>Tue, 06 Jun 2023 20:55:23 GMT</pubDate></item><item><title>Generative Art</title><link>https://necromuralist.github.io/Ape-Iron/posts/bibliography-generative-art/</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="outline-container-orgcfa07b2" class="outline-2"&gt;
-&lt;h2 id="orgcfa07b2"&gt;The Book&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgcfa07b2"&gt;
+&lt;/div&gt;</description><category>bibliography</category><category>book</category><category>p5.js</category><guid>https://necromuralist.github.io/Ape-Iron/posts/bibliography-the-nature-of-code/</guid><pubDate>Tue, 06 Jun 2023 20:55:23 GMT</pubDate></item><item><title>Generative Art</title><link>https://necromuralist.github.io/Ape-Iron/posts/bibliography-generative-art/</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="outline-container-org5367562" class="outline-2"&gt;
+&lt;h2 id="org5367562"&gt;The Book&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org5367562"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;Pearson M. Generative art: a practical guide using processing. Shelter Island, NY : London: Manning ; Pearson Education [distributor]; 2011. 197 pages&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org6c4ee8e" class="outline-2"&gt;
-&lt;h2 id="org6c4ee8e"&gt;The Author's Site(s)&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org6c4ee8e"&gt;
+&lt;div id="outline-container-org303e5a3" class="outline-2"&gt;
+&lt;h2 id="org303e5a3"&gt;The Author's Site(s)&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org303e5a3"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org950555e" class="outline-3"&gt;
-&lt;h3 id="org950555e"&gt;Zen Bullets (probably)&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org950555e"&gt;
+&lt;div id="outline-container-orgfe5455a" class="outline-3"&gt;
+&lt;h3 id="orgfe5455a"&gt;Zen Bullets (probably)&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgfe5455a"&gt;
 &lt;p&gt;
 The Zen Bullets site doesn't have the author's name listed on it (that I could see) but there's references to this being his pen-name (e.g. on &lt;a href="https://leanpub.com/u/zenbullets"&gt;leanpub&lt;/a&gt;) and the works look about right.
 &lt;/p&gt;
@@ -68,9 +68,9 @@ The Zen Bullets site uses a very small font and you can't scroll the menu on the
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org45a39ef" class="outline-3"&gt;
-&lt;h3 id="org45a39ef"&gt;Abandoned Art (Possibly Truly Abandoned)&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org45a39ef"&gt;
+&lt;div id="outline-container-orge489fc6" class="outline-3"&gt;
+&lt;h3 id="orge489fc6"&gt;Abandoned Art (Possibly Truly Abandoned)&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orge489fc6"&gt;
 &lt;p&gt;
 &lt;b&gt;Warning:&lt;/b&gt; uBlock Origin blocks this site because the web-host it uses is listed as untrustworthy, so I haven't actually seen the page, but it's listed in the book and the book's &lt;a href="https://www.manning.com/books/generative-art"&gt;product page&lt;/a&gt;  so I'm including it mostly to remind myself not to go there, even though they tell you to (the errata page does have a a note saying the site's license is expired, but they didn't fix the main page).
 &lt;/p&gt;
@@ -83,9 +83,9 @@ The Zen Bullets site uses a very small font and you can't scroll the menu on the
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgfb780f0" class="outline-2"&gt;
-&lt;h2 id="orgfb780f0"&gt;Other Artist's Mentioned In the Book&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgfb780f0"&gt;
+&lt;div id="outline-container-org2c208a4" class="outline-2"&gt;
+&lt;h2 id="org2c208a4"&gt;Other Artist's Mentioned In the Book&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org2c208a4"&gt;
 &lt;p&gt;
 These are ones that I could find dedicated sites for. The earliest pioneers (other than Manfred Mohr and Paul Brown) don't seem to have websites with their work.
 &lt;/p&gt;

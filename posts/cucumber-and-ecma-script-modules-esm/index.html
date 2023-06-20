@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+<head>
+<meta charset="utf-8">
+<meta content="Trying out the cucumber example using ECMA Modules." name="description">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Cucumber and Ecma Script Modules (ESM) In a Nikola Post | Ape Iron</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<meta content="#5670d4" name="theme-color">
+<meta content="Nikola (getnikola.com)" name="generator">
+<link href="../../rss.xml" hreflang="en" rel="alternate" title="RSS" type="application/rss+xml">
+<link href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/" rel="canonical"><!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><!-- favicons -->
+<link href="../../apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+<link href="../../favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="../../favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="../../site.webmanifest" rel="manifest">
+<meta content="Cloistered Monkey" name="author">
+<link href="../link-collection/" rel="prev" title="Link Collection" type="text/html">
+<meta content="Ape Iron" property="og:site_name">
+<meta content="Cucumber and Ecma Script Modules (ESM) In a Nikola Post" property="og:title">
+<meta content="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/" property="og:url">
+<meta content="Trying out the cucumber example using ECMA Modules." property="og:description">
+<meta content="article" property="og:type">
+<meta content="2023-06-15T16:21:32-07:00" property="article:published_time">
+<meta content="bdd" property="article:tag">
+<meta content="cucumber" property="article:tag">
+<meta content="javascript" property="article:tag">
+<meta content="p5.js" property="article:tag">
+<meta content="testing" property="article:tag">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+</head>
+<body>
+<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a> <!-- Menubar -->
+<nav class="navbar navbar-expand-md static-top mb-4 navbar-light bg-light">
+<div class="container"><!-- This keeps the margins nice -->
+ <a class="navbar-brand" href="../../"><span id="blog-title">Ape Iron</span></a> <button aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#bs-navbar" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="bs-navbar">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item"><a class="nav-link" href="../../archive.html">Archive</a></li>
+<li class="nav-item"><a class="nav-link" href="../../categories/">Tags</a></li>
+<li class="nav-item"><a class="nav-link" href="../../rss.xml">RSS feed</a></li>
+<li class="nav-item dropdown"><a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Pages</a>
+<div class="dropdown-menu"><a class="dropdown-item" href="https://necromuralist.github.io/">Cloistered Monkey</a></div>
+</li>
+</ul>
+<!-- DuckDuckGo custom search -->
+<form action="https://duckduckgo.com/" class="navbar-form pull-left" id="search" method="get" name="search"><input name="sites" type="hidden" value="https://necromuralist.github.io/Ape-Iron/"><input name="k8" type="hidden" value="#444444"><input name="k9" type="hidden" value="#D51920"><input name="kt" type="hidden" value="h"><input class="span2" maxlength="255" name="q" placeholder="Search…" type="text"><input style="visibility: hidden;display:none" type="submit" value="DuckDuckGo Search"></form>
+<!-- End of custom search -->
+<ul class="navbar-nav navbar-right">
+<li class="nav-item"><a class="nav-link" href="index.org" id="sourcelink">Source</a></li>
+</ul>
+</div>
+<!-- /.navbar-collapse --></div>
+<!-- /.container --></nav>
+<!-- End of Menubar -->
+<div class="container" id="content" role="main">
+<div class="body-content"><!--Body content-->
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article">
+<header>
+<h1 class="p-name entry-title" itemprop="headline name"><a class="u-url" href=".">Cucumber and Ecma Script Modules (ESM) In a Nikola Post</a></h1>
+<div class="metadata">
+<p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">Cloistered Monkey</span></p>
+<p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2023-06-15T16:21:32-07:00" itemprop="datePublished" title="2023-06-15 16:21">2023-06-15 16:21</time></a></p>
+<p class="sourceline"><a class="sourcelink" href="index.org">Source</a></p>
+</div>
+</header>
+<div class="e-content entry-content" itemprop="articleBody text">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgb0244f7">What Is This, Then?</a></li>
+<li><a href="#orgc7949d1">Setting Up</a>
+<ul>
+<li><a href="#org02c9dda">The Cucumber.js Configuration</a></li>
+<li><a href="#org7894bc5">The Testing package.json</a></li>
+</ul>
+</li>
+<li><a href="#org346a872">The Test Files</a>
+<ul>
+<li><a href="#org3a99fd9">The Feature File</a></li>
+<li><a href="#org250ef9a">The Test Steps</a></li>
+<li><a href="#org9120f9e">The Imports</a></li>
+<li><a href="#orgf46bebc">Given</a></li>
+<li><a href="#org158fbbf">When</a></li>
+<li><a href="#orgade0020">Then</a></li>
+</ul>
+</li>
+<li><a href="#orgf443c12">The Greeter</a></li>
+<li><a href="#orge475579">The Greeter package.json</a></li>
+<li><a href="#org9538db1">Now the Other Hard Part</a>
+<ul>
+<li><a href="#org239e82f">First Let's Setup the Sketch Tag</a></li>
+<li><a href="#org007218d">Now Let's Use It</a></li>
+</ul>
+</li>
+<li><a href="#org9ddde0a">What Have We Learned?</a></li>
+<li><a href="#org0ead99d">Links</a></li>
+</ul>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgb0244f7">
+<h2 id="orgb0244f7">What Is This, Then?</h2>
+<div class="outline-text-2" id="text-orgb0244f7">
+<p>This is a re-do of the cucumber.js example testing for <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript/ECMAScript Modules (ESM)</a>. Just copying the files exactly as they're given in the <a href="https://github.com/cucumber/cucumber-js-examples">cucumber.js github repository</a> works pretty much without problem, but since I'm doing this messy thing with writing javascript in these blog posts instead of as part of a code-project, it took a little more work than I would have liked.</p>
+<p>I had <a href="../bdd-testing-p5/">previously tried</a> to get ESM modules to work with <a href="https://mochajs.org/">mocha</a> but gave up and went back to using the <a href="https://en.wikipedia.org/wiki/CommonJS?useskin=vector">CommonJS</a> syntax instead (which I just read is meant to work outside the brouwser and not in it, which explains some of the trouble I ran into). This time I seem to have gotten the ESM style of modules working with <a href="https://cucumber.io/docs/installation/javascript/">cucumber.js</a>, but it \(\textit{is}\) a bit convoluted and maybe not really a good idea to do it this way. So here we go.</p>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgc7949d1">
+<h2 id="orgc7949d1">Setting Up</h2>
+<div class="outline-text-2" id="text-orgc7949d1">
+<p>The cucumber.js page has instructions on installing it, so I won't go over it. It's mostly just <code>npm install cucumber --save-dev</code>. I seem to remember that they said somewhere not to install it globally, but I can't remember now where I saw it. Once I installed it, I had to edit a couple of files to get it working the way I wanted it to.</p>
+</div>
+<div class="outline-3" id="outline-container-org02c9dda">
+<h3 id="org02c9dda">The Cucumber.js Configuration</h3>
+<div class="outline-text-3" id="text-org02c9dda">
+<p><code>cucumber.js</code> uses a configuration file named… <code>cucumber.js</code> that you put where you run the tests. I'm going to put cucumber test-files into folders whose names will have the form <code>test-&lt;slug&gt;</code>, where <code>slug</code> is the slug for the post where I define the javascript and tests in, so in order to get <code>cucumber</code> to find them, I need to change the glob in the <code>import</code> line to match.</p>
+<div class="highlight">
+<pre><span></span><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">import</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">'test*/**/*.js'</span><span class="p">],</span>
+<span class="w">    </span><span class="nx">publishQuiet</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+<p>This file is using the ESM syntax (using an <code>export</code> statement) instead of the CJS form of setting <code>module.export</code>. We're going to have to make all the code match the ESM form, mixing and matching causes cucumber to crash throwing errors saying it was expecting an ESM module.</p>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org7894bc5">
+<h3 id="org7894bc5">The Testing package.json</h3>
+<div class="outline-text-3" id="text-org7894bc5">
+<p>Next we need a <code>package.json</code> file next to the <code>cucumber.js</code> file. There's two changes I made.</p>
+<ul class="org-ul">
+<li><code>"type": "module"</code> tells cucumber (or node?) that we'll be using ESM, not CJS</li>
+<li>I'm running it with <a href="https://nodemon.io/">nodemon</a> so the "test" attribute gets the command to run and its arguments.</li>
+</ul>
+<div class="highlight">
+<pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="s2">"type"</span><span class="o">:</span><span class="w"> </span><span class="s2">"module"</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">"private"</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">"scripts"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">"test"</span><span class="o">:</span><span class="w"> </span><span class="s2">"nodemon --watch . --exec cucumber-js ./test*"</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="s2">"devDependencies"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">"@cucumber/cucumber"</span><span class="o">:</span><span class="w"> </span><span class="s2">"^9.1.2"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"chai"</span><span class="o">:</span><span class="w"> </span><span class="s2">"^4.3.7"</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<p>I had previously installed <code>chai</code> globally and it was working with <code>mocha</code> but for mysterious reasons this time I got a "Module not found" error (maybe because I installed <code>cucumber</code> locally) so I installed it locally too.</p>
+<p>So far, this is what I've edited in the testing directory.</p>
+<pre class="example" id="orga37db16">
+cucumber.js
+package.json
+</pre>
+<p>There's also a <code>package-lock.json</code> and <code>node_modules/</code> which were created as part of installing <code>cucumber</code> and <code>chai</code> but I don't touch those.</p>
+<p>Now that we have this setup we can run the test-runner using <code>npm</code>.</p>
+<pre class="example" id="orge6a9c5f">
+npm test
+</pre>
+<p>Cucumber runs once and then will re-run the testing every time we make a change to our files. I'm not sure how the magic gets done but it even detects when I make changes to the javascript being tested after I moved it outside of the testing folder.</p>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org346a872">
+<h2 id="org346a872">The Test Files</h2>
+<div class="outline-text-2" id="text-org346a872">
+<p>The slug for this post is <code>cucumber-and-ecma-script-modules-esm</code> so the testing files are going into a folder named <code>test-cucumber-and-ecma-script-modules-esm</code> which sits next to the <code>cucumber.js</code> files and the <code>package.json</code> files that I just mentioned.</p>
+</div>
+<div class="outline-3" id="outline-container-org3a99fd9">
+<h3 id="org3a99fd9">The Feature File</h3>
+<div class="outline-text-3" id="text-org3a99fd9">
+<p>We're going to make a Greeter class that does one thing: greets users. Cucumber will look for files that have the <code>.feature</code> file extension and parse the keywords to figure out what tests to expect. Here's the one for our greeter (in the file <code>greetings.feature</code>).</p>
+<div class="highlight">
+<pre><span></span>Feature: Greeting
+
+Scenario: Say hello
+
+Given a greeter
+When the greeter greets me
+Then I should hear "Go away."
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org250ef9a">
+<h3 id="org250ef9a">The Test Steps</h3>
+<div class="outline-text-3" id="text-org250ef9a">
+<p>Now that we have a feature file we have to write the tests that match it. In our feature file we used three special keywords - <code>Given</code>, <code>When</code> and <code>Then</code> - which have to match functions in our test file to pass the cucumber tests, which I'll put in a file called <code>steps.js</code>. In the example code they put it in a folder named <code>steps</code>, which makes sense if you have more than one folder but this'll do for now.</p>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org9120f9e">
+<h3 id="org9120f9e">The Imports</h3>
+<div class="outline-text-3" id="text-org9120f9e">
+<p>These are the ESM style imports. The <code>Greeter</code> import statement is long because it's in a file accessible to this post rather than being next to the test-code so I have to pass in the path relative to where the <code>steps.js</code> file is.</p>
+<div class="highlight">
+<pre><span></span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">expect</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"chai"</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Given</span><span class="p">,</span><span class="w"> </span><span class="nx">When</span><span class="p">,</span><span class="w"> </span><span class="nx">Then</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@cucumber/cucumber"</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Greeter</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w">  </span><span class="s2">"../../../files/posts/cucumber-and-ecma-script-modules-esm/greetings.js"</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orgf46bebc">
+<h3 id="orgf46bebc">Given</h3>
+<div class="outline-text-3" id="text-orgf46bebc">
+<p>Our <code>given</code> function just creates a Greeter instance. There are also functions like <code>Before</code> and <code>BeforeAll</code> that let you do something once befare each Scenario (or all Scenarios), but we only have one scenario and it sounds clearer to me to say "Given a greeter…".</p>
+<div class="highlight">
+<pre><span></span><span class="nx">Given</span><span class="p">(</span><span class="s2">"a greeter"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">greeter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Greeter</span><span class="p">();</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org158fbbf">
+<h3 id="org158fbbf">When</h3>
+<div class="outline-text-3" id="text-org158fbbf">
+<p>Our <code>when</code> calls the <code>greetings</code> method and saves the output so we can check it in our <code>Then</code> function.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">When</span><span class="p">(</span><span class="s2">"the greeter greets me"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">is_what_i_heard</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">greeter</span><span class="p">.</span><span class="nx">greetings</span><span class="p">();</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orgade0020">
+<h3 id="orgade0020">Then</h3>
+<div class="outline-text-3" id="text-orgade0020">
+<p>Our last function is interesting in that it uses what they call <a href="https://github.com/cucumber/cucumber-expressions#readme">cucumber-expressions</a>, which allow you to put types into the string definition to tell it what to look for in the feature definition so we don't have to set the exact value. In this case our feature file says <code>Then I should hear "Go away."</code> The end of the statement is in quotes so cucumber knows that it's a string so we can replace it with <code>{string}</code> when we define the function and cucumber will pass in the expected string as an argument to the function that we pass to the <code>Then</code> function. Then we can use the passed-in value rather than hard-coding the expected string into our test. In this case the parameter <code>what_he_should_have_said</code> will have the string "Go away." in it, extracted (without the quotes) from our feature file definition.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">Then</span><span class="p">(</span><span class="s2">"I should hear {string}"</span><span class="p">,</span>
+<span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">what_he_should_have_said</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">expect</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">is_what_i_heard</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="nx">what_he_should_have_said</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">);</span>
+</pre></div>
+<p>So far this is the basic structure of our testing folder (ignoring stuff that I didn't create or edit).</p>
+<pre class="example" id="org6401abc">
+cucumber.js
+package.json
+test-cucumber-and-ecma-script-modules-esm/
+  greetings.feature
+  steps.js
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgf443c12">
+<h2 id="orgf443c12">The Greeter</h2>
+<div class="outline-text-2" id="text-orgf443c12">
+<p>Based on our test, this is what our Greeter class should look like.</p>
+<p><img alt="nil" src="greeter.png"></p>
+<p>Now let's define the Greeter (the software under test). Initially, just to see if it worked, I put it next to the test files the way that the example did, but the point of this is to get the javascript into the post so we can work with P5, so its final resting place is in a file named <code>greetings.js</code> in the folder where <a href="https://getnikola.com/">nikola</a> will look for files when I build the site.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">Greeter</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">greetings</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s2">"Go away."</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">export</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Greeter</span><span class="w"> </span><span class="p">};</span>
+</pre></div>
+<p>In order for the class-definition (or anything else we define) to be importable elsewhere we have to declare it exportable. In the example code they used the syntax:</p>
+<div class="highlight">
+<pre><span></span><span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">Greeter</span><span class="w"> </span><span class="p">{</span>
+</pre></div>
+<p>when defining the class, but, as seems to be the way with javascript, there's multiple ways to do exports (and imports), each of which probably has some subtle different use, but which is more than I want to know about at this point, so I decided to settle on this syntax:</p>
+<div class="highlight">
+<pre><span></span><span class="k">export</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Greeter</span><span class="w"> </span><span class="p">};</span>
+</pre></div>
+<p>(making a separate export line at the bottom of the file) for two reasons:</p>
+<ul class="org-ul">
+<li>If you have multiple things to export you can put them all in the curly braces so it's in one statement instead of scattered around the file</li>
+<li>This leaves class definitions looking the same as they did before I decided to try messing with modules.</li>
+</ul>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orge475579">
+<h2 id="orge475579">The Greeter package.json</h2>
+<div class="outline-text-2" id="text-orge475579">
+<p>This next bit took me a while to figure out. If you put the <code>Greeter</code> definition into a subfolder below where we're running the tests, it will recognize our <code>greeter.js</code> file as an ESM module just fine. But, if you move it into a folder outside our tests as I did, node (or cucumber) suddenly won't be able to tell that it's an ESM module.</p>
+<p>It will helpfully tell you to change the file extension from <code>.js</code> to <code>.mjs</code>, which doesn't work, and offer you a different import syntax to use, which also doesn't work, and to tell you to put <code>"type": "module"</code> into the <code>package.json</code> file… which turns out to <i>sort of</i> be the answer.</p>
+<p>If you look at the <code>package.json</code> I edited in the section above to run the tests you'll see that it already has the <code>"type": "module"</code> line in it, which I assume is why the tests were running before I moved <code>greetings.js</code>. But it turns out that to get the tests to recognize the <code>greetings.js</code> file as an ESM module once I moved it I also had to put a <code>package.json</code> file next to it that identified it as an ESM module. Like so:</p>
+<div class="highlight">
+<pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="s2">"type"</span><span class="o">:</span><span class="w"> </span><span class="s2">"module"</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">"private"</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+<p>I suppose, maybe it's a little like an <code>__init__.py</code> file in python that tells python to recognize a folder as a module (package?). Or maybe not. Anyway, going now and looking at the output of the tests - Hokey Shmokes, Bullwinkle! It works!</p>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org9538db1">
+<h2 id="org9538db1">Now the Other Hard Part</h2>
+<div class="outline-text-2" id="text-org9538db1">
+<p>Okay, so the testing is working now, but just running tests is sort of meaningless (no offense to testers), the real point of it all is to get the tested javascript back into this post and use it.</p>
+</div>
+<div class="outline-3" id="outline-container-org239e82f">
+<h3 id="org239e82f">First Let's Setup the Sketch Tag</h3>
+<div class="outline-text-3" id="text-org239e82f">
+<p>According to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">mozilla</a>, <code>&lt;script&gt;</code> tags are assumed to be javascript if you don't set a MIME type (and so they tell you not to set the <code>type</code> argument if it's a regular script) but to let the browser know it's a module you have to set the attribute <code>type="module"</code> in the tag. I'm going to use a convoluted name for the actual p5 sketch file that I'm making, but for demonstration's sake let's pretend it's called <code>sketch.js</code>, then the HTML tag to include it in this post would look like this.</p>
+<div class="highlight">
+<pre><span></span>&lt;script src="sketch.js" type="module"&gt;&lt;/script&gt;
+</pre></div>
+<p>The <code>Greeter</code> class itself is going to be imported into our sketch module so we don't refer to it in the HTML.</p>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org007218d">
+<h3 id="org007218d">Now Let's Use It</h3>
+<div class="outline-text-3" id="text-org007218d">
+<p>We'll import the <code>Greeter</code> into the sketch, setup the canvas, and then display the greeter's greetings on the canvas.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">GREETINGS_DIV</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"db4ce169-greetings-sketch"</span><span class="p">;</span>
+
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Greeter</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"./greetings.js"</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">greetings_sketch</span><span class="p">(</span><span class="nx">p5js</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">p5js</span><span class="p">.</span><span class="nx">setup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">p5js</span><span class="p">.</span><span class="nx">createCanvas</span><span class="p">(</span><span class="mf">175</span><span class="p">,</span><span class="w"> </span><span class="mf">50</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">p5js</span><span class="p">.</span><span class="nx">background</span><span class="p">(</span><span class="s2">"gainsboro"</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">p5js</span><span class="p">.</span><span class="nx">textSize</span><span class="p">(</span><span class="mf">32</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">p5js</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">103</span><span class="p">,</span><span class="w"> </span><span class="mf">153</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">peter_the_greeter_says</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Greeter</span><span class="p">();</span><span class="w">    </span>
+<span class="w">    </span><span class="nx">p5js</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="nx">peter_the_greeter_says</span><span class="p">.</span><span class="nx">greetings</span><span class="p">(),</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">p5js</span><span class="p">.</span><span class="nx">noLoop</span><span class="p">();</span>
+<span class="w">  </span><span class="p">};</span><span class="c1">// setup</span>
+<span class="p">};</span><span class="w"> </span><span class="c1">// greetings_sketch</span>
+
+<span class="ow">new</span><span class="w"> </span><span class="nx">p5</span><span class="p">(</span><span class="nx">greetings_sketch</span><span class="p">,</span><span class="w"> </span><span class="nx">GREETINGS_DIV</span><span class="p">);</span>
+</pre></div>
+<p>And now, here's the sketch.</p>
+<p>
+<script src="db4ce169-sketch.js" type="module"></script></p>
+<div class="p5js" id="db4ce169-greetings-sketch"></div>
+<p>Impressed?</p>
+<p>Just for completeness, the folder with the code for the post has these files in it.</p>
+<pre class="example" id="org9804d2d">
+greeter.js
+sketch.js
+package.json
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org9ddde0a">
+<h2 id="org9ddde0a">What Have We Learned?</h2>
+<div class="outline-text-2" id="text-org9ddde0a">
+<p>This was an exercise in seeing if I could get cucumber.js and ESM modules working. In particular it was about testing code that gets included in this post and used by p5. This was a pretty simple example, but it seems to work so I'll take it as a start that I can reference when going back to work with more complex p5 code.</p>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org0ead99d">
+<h2 id="org0ead99d">Links</h2>
+<div class="outline-text-2" id="text-org0ead99d">
+<p>These are (mostly) referred to in the body of the post, and the body also has links not in here, but for future reference, this should be enough to get back up to speed.</p>
+<ul class="org-ul">
+<li>Cucumber.js [Internet]. Cucumber; 2023 [cited 2023 Jun 17]. Available from: <a href="https://github.com/cucumber/cucumber-js">https://github.com/cucumber/cucumber-js</a></li>
+<li>Cucumber-JS Examples [Internet]. Cucumber; 2023 [cited 2023 Jun 17]. Available from: <a href="https://github.com/cucumber/cucumber-js-examples">https://github.com/cucumber/cucumber-js-examples</a></li>
+<li>ES modules: A cartoon deep-dive – Mozilla Hacks - the Web developer blog [Internet]. Mozilla Hacks – the Web developer blog. [cited 2023 Jun 19]. Available from: <a href="https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive">https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive</a></li>
+<li>JavaScript modules - JavaScript | MDN [Internet]. 2023 [cited 2023 Jun 19]. Available from: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules</a></li>
+<li>CommonJS. In: Wikipedia [Internet]. 2023 [cited 2023 Jun 19]. Available from: <a href="https://en.wikipedia.org/w/index.php?title=CommonJS&amp;oldid=1154931652">https://en.wikipedia.org/w/index.php?title=CommonJS&amp;oldid=1154931652</a></li>
+</ul>
+</div>
+</div>
+</div>
+<aside class="postpromonav">
+<nav>
+<ul class="tags" itemprop="keywords">
+<li><a class="tag p-category" href="../../categories/bdd/" rel="tag">bdd</a></li>
+<li><a class="tag p-category" href="../../categories/cucumber/" rel="tag">cucumber</a></li>
+<li><a class="tag p-category" href="../../categories/javascript/" rel="tag">javascript</a></li>
+<li><a class="tag p-category" href="../../categories/p5js/" rel="tag">p5.js</a></li>
+<li><a class="tag p-category" href="../../categories/testing/" rel="tag">testing</a></li>
+</ul>
+<ul class="pager hidden-print">
+<li class="previous"><a href="../link-collection/" rel="prev" title="Link Collection">Previous post</a></li>
+</ul>
+</nav>
+</aside>
+</article>
+<!--End of body content-->
+<footer id="footer">Contents © 2023 Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a>
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a href="https://necromuralist.github.io/Ape-Iron/" property="dct:title" rel="cc:attributionURL">Ape Iron</a> by <a href="https://github.com/necromuralist" property="cc:attributionName" rel="cc:attributionURL dct:creator">The Cloistered Monkey</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" rel="license noopener noreferrer" style="display:inline-block;" target="_blank">CC BY 4.0<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"></a></p>
+</footer>
+</div>
+</div>
+<script src="../../assets/js/all-nocdn.js"></script>
+<script>
+
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+</script>
+</body>
+</html>

@@ -69,39 +69,39 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org382b5f0">A Circle</a></li>
-<li><a href="#orgec58139">Closure, Constants, and Variables</a>
+<li><a href="#orgd88491c">A Circle</a></li>
+<li><a href="#orgcbbe731">Closure, Constants, and Variables</a>
 <ul>
-<li><a href="#org62d4dee">Constants</a></li>
-<li><a href="#org32d3d63">Variables</a></li>
+<li><a href="#orgd997913">Constants</a></li>
+<li><a href="#orgdf97d46">Variables</a></li>
 </ul>
 </li>
-<li><a href="#orgeb47783">Set Up</a></li>
-<li><a href="#org167ee21">Draw</a>
+<li><a href="#org8e35013">Set Up</a></li>
+<li><a href="#orgf6de061">Draw</a>
 <ul>
-<li><a href="#org6842b21">Looping Around the Circle</a></li>
-<li><a href="#orgabced83">The Coordinates of the Circle's Points</a></li>
-<li><a href="#orgd70e204">Now We Draw</a></li>
-<li><a href="#orgb2bff6a">And the Rest</a></li>
+<li><a href="#org03c2d05">Looping Around the Circle</a></li>
+<li><a href="#org4ccada4">The Coordinates of the Circle's Points</a></li>
+<li><a href="#org46b0a50">Now We Draw</a></li>
+<li><a href="#orgcfcb54c">And the Rest</a></li>
 </ul>
 </li>
-<li><a href="#orgf65535f">Closing Up</a></li>
-<li><a href="#org7221be3">References</a></li>
+<li><a href="#org7f744e4">Closing Up</a></li>
+<li><a href="#orgdaf1360">References</a></li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org382b5f0">
-<h2 id="org382b5f0">A Circle</h2>
-<div class="outline-text-2" id="text-org382b5f0">
+<div class="outline-2" id="outline-container-orgd88491c">
+<h2 id="orgd88491c">A Circle</h2>
+<div class="outline-text-2" id="text-orgd88491c">
 <p>This is a starting point for looking at cyclic sketches. In this case it's just a circle but it's a basic concept that I'll probably use more of later so I thought I'd make a dedicated post for it. In particular it uses <a href="https://en.wikipedia.org/wiki/Polar_coordinate_system?useskin=vector">Polar Coordinates</a> which might come in handy.</p>
 <p>
-<script language="javascript" src="circle.js" type="text/javascript"></script></p>
+<script src="circle.js"></script></p>
 <div class="p5js" id="5fa2c81b-hard-circle"></div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgec58139">
-<h2 id="orgec58139">Closure, Constants, and Variables</h2>
-<div class="outline-text-2" id="text-orgec58139">
+<div class="outline-2" id="outline-container-orgcbbe731">
+<h2 id="orgcbbe731">Closure, Constants, and Variables</h2>
+<div class="outline-text-2" id="text-orgcbbe731">
 <p>We begin in the usual way with a variable to hold the <code>div id</code> that the sketch will go into and declaring the function that will hold our sketch tode.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">CIRCLE_DIV</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"5fa2c81b-hard-circle"</span><span class="p">;</span>
@@ -109,9 +109,9 @@
 <span class="kd">function</span><span class="w"> </span><span class="nx">circle_the_hard_way</span><span class="p">(</span><span class="nx">p5</span><span class="p">){</span>
 </pre></div>
 </div>
-<div class="outline-3" id="outline-container-org62d4dee">
-<h3 id="org62d4dee">Constants</h3>
-<div class="outline-text-3" id="text-org62d4dee">
+<div class="outline-3" id="outline-container-orgd997913">
+<h3 id="orgd997913">Constants</h3>
+<div class="outline-text-3" id="text-orgd997913">
 <p>Next I'll declare some constants, both to maybe remind me what the values represent when I use them later and to have a place where I can change the values as I experiment with what looks interesting.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">DEGREES_IN_A_CIRCLE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">360</span><span class="p">;</span>
@@ -131,9 +131,9 @@
 <p>To make it less confusing I'll refer to the small circles that make up the big cicrle as "points" most of the time.</p>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org32d3d63">
-<h3 id="org32d3d63">Variables</h3>
-<div class="outline-text-3" id="text-org32d3d63">
+<div class="outline-3" id="outline-container-orgdf97d46">
+<h3 id="orgdf97d46">Variables</h3>
+<div class="outline-text-3" id="text-orgdf97d46">
 <p>The variables are:</p>
 <ul class="org-ul">
 <li><code>center_x</code>, <code>center_y</code>: the center coordinates for the circle. These could be constants but I usually set them in the <code>setup</code>.</li>
@@ -149,9 +149,9 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgeb47783">
-<h2 id="orgeb47783">Set Up</h2>
-<div class="outline-text-2" id="text-orgeb47783">
+<div class="outline-2" id="outline-container-org8e35013">
+<h2 id="org8e35013">Set Up</h2>
+<div class="outline-text-2" id="text-org8e35013">
 <p>Our <code>setup</code> function creates the canvas, sets the colors and creates the slider to let the user change how big a jump we take between drawing points on the circle</p>
 <div class="highlight">
 <pre><span></span><span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">setup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -171,17 +171,17 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org167ee21">
-<h2 id="org167ee21">Draw</h2>
-<div class="outline-text-2" id="text-org167ee21">
+<div class="outline-2" id="outline-container-orgf6de061">
+<h2 id="orgf6de061">Draw</h2>
+<div class="outline-text-2" id="text-orgf6de061">
 <p>The <code>draw</code> function draws a circle using circles and a line showing the raduis.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">draw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 </pre></div>
 </div>
-<div class="outline-3" id="outline-container-org6842b21">
-<h3 id="org6842b21">Looping Around the Circle</h3>
-<div class="outline-text-3" id="text-org6842b21">
+<div class="outline-3" id="outline-container-org03c2d05">
+<h3 id="org03c2d05">Looping Around the Circle</h3>
+<div class="outline-text-3" id="text-org03c2d05">
 <p>We're going to rotate around the circle once using the <code>start</code> value as the angle to start at and the value the slider's set at for the number of degrees we move between drawing the points on the circle. To make it easier to think about I'm using degrees in the for-loop but the <i>sin</i> and <i>cos</i> functions expect radians so we need to convert the degrees. Since the circumference of a circle is both \(360^\circ\) and \(2\pi\) we can use a straight ratio to convert them.</p>
 <p>\[ \textit{radians} = \textit{degrees} \times \frac{2 \pi}{360} \]</p>
 <p>This is usually written using a half-circle \(\left(\frac{\pi}{180}\right)\) but I find it easier to remember the whole circle for some reason.</p>
@@ -192,9 +192,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgabced83">
-<h3 id="orgabced83">The Coordinates of the Circle's Points</h3>
-<div class="outline-text-3" id="text-orgabced83">
+<div class="outline-3" id="outline-container-org4ccada4">
+<h3 id="org4ccada4">The Coordinates of the Circle's Points</h3>
+<div class="outline-text-3" id="text-org4ccada4">
 <p>The coordinates for our point are calculated using the trigonometric definitions for <i>sin</i> and <i>cos</i>.</p>
 \begin{align} \cos \theta &amp;= \frac{adjacent}{hypotenuse} \\ \textit{adjacent} &amp;= \textit{hypotenuse} \times \cos \theta \end{align} \begin{align} \sin \theta &amp;= \frac{opposite}{hypotenuse}\\ \textit{opposite} &amp;= \textit{hypoteuse} \times \sin \theta \end{align}
 <p>Using the <i>radius</i> we want as the <i>hypotenuse</i> and the <i>adjacent</i> and <i>opposite</i> values as the <i>x</i> and <i>y</i> coordinates we can re-write the equations as:</p>
@@ -207,9 +207,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgd70e204">
-<h3 id="orgd70e204">Now We Draw</h3>
-<div class="outline-text-3" id="text-orgd70e204">
+<div class="outline-3" id="outline-container-org46b0a50">
+<h3 id="org46b0a50">Now We Draw</h3>
+<div class="outline-text-3" id="text-org46b0a50">
 <p>Now that we have our <i>x</i> and <i>y</i> coordinates for the next point on the circle we can draw it.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">line</span><span class="p">(</span><span class="nx">center_x</span><span class="p">,</span><span class="w"> </span><span class="nx">center_y</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="p">);</span>
@@ -217,9 +217,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgb2bff6a">
-<h3 id="orgb2bff6a">And the Rest</h3>
-<div class="outline-text-3" id="text-orgb2bff6a">
+<div class="outline-3" id="outline-container-orgcfcb54c">
+<h3 id="orgcfcb54c">And the Rest</h3>
+<div class="outline-text-3" id="text-orgcfcb54c">
 <p>If we just draw the points and line we'll end up with a black dot, which still shows that it's working, but kind of negates the point of using something animated, so I'll draw a white background that's mostly transparent so we can see things move.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">background</span><span class="p">(</span><span class="mf">255</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
@@ -231,15 +231,15 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgf65535f">
-<h2 id="orgf65535f">Closing Up</h2>
-<div class="outline-text-2" id="text-orgf65535f">
+<div class="outline-2" id="outline-container-org7f744e4">
+<h2 id="org7f744e4">Closing Up</h2>
+<div class="outline-text-2" id="text-org7f744e4">
 <p>And there we have the circle. I had two main reasons for doing this exercise - one was to have a starting point for making noisier shapes and the other was to remind myself of how to make cyclical values so that I can use it as input for functions that I want to have repeat themselves.</p>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org7221be3">
-<h2 id="org7221be3">References</h2>
-<div class="outline-text-2" id="text-org7221be3">
+<div class="outline-2" id="outline-container-orgdaf1360">
+<h2 id="orgdaf1360">References</h2>
+<div class="outline-text-2" id="text-orgdaf1360">
 <ul class="org-ul">
 <li><a href="../bibliography-generative-art/">Generative Art</a></li>
 <li><a href="../bibliography-the-nature-of-code/">The Nature of Code</a></li>
