@@ -142,8 +142,12 @@ NAVIGATION_LINKS = {
         (
           (
               ("https://necromuralist.github.io/", "Cloistered Monkey"),
+              ("https://necromuralist.github.io/Beach-Pig-Thigh/", "Beach Pig Thigh & Rump"),
+              ("https://necromuralist.github.io/Bowling-For-Data/", "Bowling For Data"),
+              ("https://necromuralist.github.io/Neurotic-Networking/", "Neurotic Networking"),
+              ("https://necromuralist.github.io/Visions-Voices-Data/", "Visions, Voices, Data")
           ),
-            "Pages"
+            "Monkey Pages"
         ),
     ),
 }
@@ -1003,7 +1007,7 @@ COMMENT_SYSTEM_ID = ""
 # http://mysite/foo/bar/index.html => http://mysite/foo/bar/
 # (Uses the INDEX_FILE setting, so if that is, say, default.html,
 # it will instead /foo/default.html => /foo)
-STRIP_INDEXES = True
+STRIP_INDEXES = False
 
 # List of files relative to the server root (!) that will be asked to be excluded
 # from indexing and other robotic spidering. * is supported. Will only be effective
