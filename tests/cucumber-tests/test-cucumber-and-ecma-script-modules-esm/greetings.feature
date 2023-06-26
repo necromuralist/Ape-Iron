@@ -1,6 +1,6 @@
 Feature: Greeting
 
-Scenario: Say hello
+Scenario: The Greeter Greets
 
 Given a greeter
 When the greeter greets me
