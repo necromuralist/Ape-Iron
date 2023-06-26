@@ -88,7 +88,7 @@ We're going to make a Greeter class that does one thing: greets users. Cucumber 
 #+begin_src gherkin :tangle ../tests/cucumber-tests/test-cucumber-and-ecma-script-modules-esm/greetings.feature
 Feature: Greeting
 
-Scenario: Say hello
+Scenario: The Greeter Greets
 
 Given a greeter
 When the greeter greets me
@@ -230,7 +230,7 @@ According to [[https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script]
 <script src="sketch.js" type="module"></script>
 #+end_src
 
-The ~Greeter~ class itself is going to be imported into our sketch module so we don't refer to it in the HTML.
+The ~Greeter~ class is going to be imported into our sketch module so we don't refer to it in the HTML.
 
 ** Now Let's Use It
 

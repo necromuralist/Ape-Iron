@@ -1,63 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron</title><link>https://necromuralist.github.io/Ape-Iron/</link><description>Ironies of the Ape.</description><atom:link href="https://necromuralist.github.io/Ape-Iron/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;Cloistered Monkey&lt;/a&gt; &lt;p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"&gt;&lt;a property="dct:title" rel="cc:attributionURL" href="https://necromuralist.github.io/Ape-Iron/"&gt;Ape Iron&lt;/a&gt; by &lt;a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/necromuralist"&gt;The Cloistered Monkey&lt;/a&gt; is licensed under &lt;a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY 4.0&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;&lt;/a&gt;&lt;/p&gt;</copyright><lastBuildDate>Sun, 25 Jun 2023 21:42:01 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Cucumber and Ecma Script Modules (ESM) In a Nikola Post</title><link>https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron</title><link>https://necromuralist.github.io/Ape-Iron/</link><description>Ironies of the Ape.</description><atom:link href="https://necromuralist.github.io/Ape-Iron/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;Cloistered Monkey&lt;/a&gt; &lt;p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"&gt;&lt;a property="dct:title" rel="cc:attributionURL" href="https://necromuralist.github.io/Ape-Iron/"&gt;Ape Iron&lt;/a&gt; by &lt;a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/necromuralist"&gt;The Cloistered Monkey&lt;/a&gt; is licensed under &lt;a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY 4.0&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;&lt;/a&gt;&lt;/p&gt;</copyright><lastBuildDate>Mon, 26 Jun 2023 21:26:50 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Cucumber and Ecma Script Modules (ESM) In a Nikola Post</title><link>https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#orgb0244f7"&gt;What Is This, Then?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#orgc7949d1"&gt;Setting Up&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org148b44f"&gt;What Is This, Then?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#orgc49db0a"&gt;Setting Up&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org02c9dda"&gt;The Cucumber.js Configuration&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org7894bc5"&gt;The Testing package.json&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org2a68787"&gt;The Cucumber.js Configuration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org9e96e13"&gt;The Testing package.json&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org346a872"&gt;The Test Files&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org838f4df"&gt;The Test Files&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org3a99fd9"&gt;The Feature File&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org250ef9a"&gt;The Test Steps&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org9120f9e"&gt;The Imports&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#orgf46bebc"&gt;Given&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org158fbbf"&gt;When&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#orgade0020"&gt;Then&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org1504487"&gt;The Feature File&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#orgf64b109"&gt;The Test Steps&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#orge78ec02"&gt;The Imports&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org422ceea"&gt;Given&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org8b26654"&gt;When&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org6c19963"&gt;Then&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#orgf443c12"&gt;The Greeter&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#orge475579"&gt;The Greeter package.json&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org9538db1"&gt;Now the Other Hard Part&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org37279e7"&gt;The Greeter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org3184112"&gt;The Greeter package.json&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#orgf0dafc7"&gt;Now the Other Hard Part&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org239e82f"&gt;First Let's Setup the Sketch Tag&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org007218d"&gt;Now Let's Use It&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org1e3a50f"&gt;First Let's Setup the Sketch Tag&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org1d84485"&gt;Now Let's Use It&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org9ddde0a"&gt;What Have We Learned?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org0ead99d"&gt;Links&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org3ebf1e9"&gt;What Have We Learned?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org405b2d8"&gt;Links&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgb0244f7" class="outline-2"&gt;
-&lt;h2 id="orgb0244f7"&gt;What Is This, Then?&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgb0244f7"&gt;
+&lt;div id="outline-container-org148b44f" class="outline-2"&gt;
+&lt;h2 id="org148b44f"&gt;What Is This, Then?&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org148b44f"&gt;
 &lt;p&gt;
 This is a re-do of the cucumber.js example testing for &lt;a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules"&gt;JavaScript/ECMAScript Modules (ESM)&lt;/a&gt;. Just copying the files exactly as they're given in the &lt;a href="https://github.com/cucumber/cucumber-js-examples"&gt;cucumber.js github repository&lt;/a&gt; works pretty much without problem, but since I'm doing this messy thing with writing javascript in these blog posts instead of as part of a code-project, it took a little more work than I would have liked.
 &lt;/p&gt;
 
 &lt;p&gt;
-I had &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/"&gt;previously tried&lt;/a&gt; to get ESM modules to work with &lt;a href="https://mochajs.org/"&gt;mocha&lt;/a&gt; but gave up and went back to using the &lt;a href="https://en.wikipedia.org/wiki/CommonJS?useskin=vector"&gt;CommonJS&lt;/a&gt; syntax instead (which I just read is meant to work outside the brouwser and not in it, which explains some of the trouble I ran into). This time I seem to have gotten the ESM style of modules working with &lt;a href="https://cucumber.io/docs/installation/javascript/"&gt;cucumber.js&lt;/a&gt;, but it \(\textit{is}\) a bit convoluted and maybe not really a good idea to do it this way. So here we go.
+I had &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html"&gt;previously tried&lt;/a&gt; to get ESM modules to work with &lt;a href="https://mochajs.org/"&gt;mocha&lt;/a&gt; but gave up and went back to using the &lt;a href="https://en.wikipedia.org/wiki/CommonJS?useskin=vector"&gt;CommonJS&lt;/a&gt; syntax instead (which I just read is meant to work outside the brouwser and not in it, which explains some of the trouble I ran into). This time I seem to have gotten the ESM style of modules working with &lt;a href="https://cucumber.io/docs/installation/javascript/"&gt;cucumber.js&lt;/a&gt;, but it \(\textit{is}\) a bit convoluted and maybe not really a good idea to do it this way. So here we go.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgc7949d1" class="outline-2"&gt;
-&lt;h2 id="orgc7949d1"&gt;Setting Up&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgc7949d1"&gt;
+&lt;div id="outline-container-orgc49db0a" class="outline-2"&gt;
+&lt;h2 id="orgc49db0a"&gt;Setting Up&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgc49db0a"&gt;
 &lt;p&gt;
 The cucumber.js page has instructions on installing it, so I won't go over it. It's mostly just &lt;code&gt;npm install cucumber --save-dev&lt;/code&gt;. I seem to remember that they said somewhere not to install it globally, but I can't remember now where I saw it. Once I installed it, I had to edit a couple of files to get it working the way I wanted it to.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org02c9dda" class="outline-3"&gt;
-&lt;h3 id="org02c9dda"&gt;The Cucumber.js Configuration&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org02c9dda"&gt;
+&lt;div id="outline-container-org2a68787" class="outline-3"&gt;
+&lt;h3 id="org2a68787"&gt;The Cucumber.js Configuration&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org2a68787"&gt;
 &lt;p&gt;
 &lt;code&gt;cucumber.js&lt;/code&gt; uses a configuration file named… &lt;code&gt;cucumber.js&lt;/code&gt; that you put where you run the tests. I'm going to put cucumber test-files into folders whose names will have the form &lt;code&gt;test-&amp;lt;slug&amp;gt;&lt;/code&gt;, where &lt;code&gt;slug&lt;/code&gt; is the slug for the post where I define the javascript and tests in, so in order to get &lt;code&gt;cucumber&lt;/code&gt; to find them, I need to change the glob in the &lt;code&gt;import&lt;/code&gt; line to match.
 &lt;/p&gt;
@@ -74,9 +74,9 @@ This file is using the ESM syntax (using an &lt;code&gt;export&lt;/code&gt; stat
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org7894bc5" class="outline-3"&gt;
-&lt;h3 id="org7894bc5"&gt;The Testing package.json&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org7894bc5"&gt;
+&lt;div id="outline-container-org9e96e13" class="outline-3"&gt;
+&lt;h3 id="org9e96e13"&gt;The Testing package.json&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org9e96e13"&gt;
 &lt;p&gt;
 Next we need a &lt;code&gt;package.json&lt;/code&gt; file next to the &lt;code&gt;cucumber.js&lt;/code&gt; file. There's two changes I made.
 &lt;/p&gt;
@@ -107,7 +107,7 @@ I had previously installed &lt;code&gt;chai&lt;/code&gt; globally and it was wor
 So far, this is what I've edited in the testing directory.
 &lt;/p&gt;
 
-&lt;pre class="example" id="orga37db16"&gt;
+&lt;pre class="example" id="orgc8ae248"&gt;
 cucumber.js
 package.json
 &lt;/pre&gt;
@@ -120,7 +120,7 @@ There's also a &lt;code&gt;package-lock.json&lt;/code&gt; and &lt;code&gt;node_m
 Now that we have this setup we can run the test-runner using &lt;code&gt;npm&lt;/code&gt;.
 &lt;/p&gt;
 
-&lt;pre class="example" id="orge6a9c5f"&gt;
+&lt;pre class="example" id="org831b88e"&gt;
 npm test
 &lt;/pre&gt;
 
@@ -131,44 +131,44 @@ Cucumber runs once and then will re-run the testing every time we make a change 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org346a872" class="outline-2"&gt;
-&lt;h2 id="org346a872"&gt;The Test Files&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org346a872"&gt;
+&lt;div id="outline-container-org838f4df" class="outline-2"&gt;
+&lt;h2 id="org838f4df"&gt;The Test Files&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org838f4df"&gt;
 &lt;p&gt;
 The slug for this post is &lt;code&gt;cucumber-and-ecma-script-modules-esm&lt;/code&gt; so the testing files are going into a folder named &lt;code&gt;test-cucumber-and-ecma-script-modules-esm&lt;/code&gt; which sits next to the &lt;code&gt;cucumber.js&lt;/code&gt; files and the &lt;code&gt;package.json&lt;/code&gt; files that I just mentioned.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org3a99fd9" class="outline-3"&gt;
-&lt;h3 id="org3a99fd9"&gt;The Feature File&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org3a99fd9"&gt;
+&lt;div id="outline-container-org1504487" class="outline-3"&gt;
+&lt;h3 id="org1504487"&gt;The Feature File&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org1504487"&gt;
 &lt;p&gt;
 We're going to make a Greeter class that does one thing: greets users. Cucumber will look for files that have the &lt;code&gt;.feature&lt;/code&gt; file extension and parse the keywords to figure out what tests to expect. Here's the one for our greeter (in the file &lt;code&gt;greetings.feature&lt;/code&gt;).
 &lt;/p&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Feature: Greeting
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;Feature:&lt;/span&gt;&lt;span class="nf"&gt; Greeting&lt;/span&gt;
 
-Scenario: Say hello
+&lt;span class="k"&gt;Scenario:&lt;/span&gt;&lt;span class="nf"&gt; The Greeter Greets&lt;/span&gt;
 
-Given a greeter
-When the greeter greets me
-Then I should hear "Go away."
+&lt;span class="k"&gt;Given &lt;/span&gt;&lt;span class="nf"&gt;a greeter&lt;/span&gt;
+&lt;span class="k"&gt;When &lt;/span&gt;&lt;span class="nf"&gt;the greeter greets me&lt;/span&gt;
+&lt;span class="k"&gt;Then &lt;/span&gt;&lt;span class="nf"&gt;I should hear "&lt;/span&gt;&lt;span class="s"&gt;Go away.&lt;/span&gt;&lt;span class="nf"&gt;"&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org250ef9a" class="outline-3"&gt;
-&lt;h3 id="org250ef9a"&gt;The Test Steps&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org250ef9a"&gt;
+&lt;div id="outline-container-orgf64b109" class="outline-3"&gt;
+&lt;h3 id="orgf64b109"&gt;The Test Steps&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgf64b109"&gt;
 &lt;p&gt;
 Now that we have a feature file we have to write the tests that match it. In our feature file we used three special keywords - &lt;code&gt;Given&lt;/code&gt;, &lt;code&gt;When&lt;/code&gt; and &lt;code&gt;Then&lt;/code&gt; - which have to match functions in our test file to pass the cucumber tests, which I'll put in a file called &lt;code&gt;steps.js&lt;/code&gt;. In the example code they put it in a folder named &lt;code&gt;steps&lt;/code&gt;, which makes sense if you have more than one folder but this'll do for now.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org9120f9e" class="outline-3"&gt;
-&lt;h3 id="org9120f9e"&gt;The Imports&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org9120f9e"&gt;
+&lt;div id="outline-container-orge78ec02" class="outline-3"&gt;
+&lt;h3 id="orge78ec02"&gt;The Imports&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orge78ec02"&gt;
 &lt;p&gt;
 These are the ESM style imports. The &lt;code&gt;Greeter&lt;/code&gt; import statement is long because it's in a file accessible to this post rather than being next to the test-code so I have to pass in the path relative to where the &lt;code&gt;steps.js&lt;/code&gt; file is.
 &lt;/p&gt;
@@ -179,9 +179,9 @@ These are the ESM style imports. The &lt;code&gt;Greeter&lt;/code&gt; import sta
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgf46bebc" class="outline-3"&gt;
-&lt;h3 id="orgf46bebc"&gt;Given&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgf46bebc"&gt;
+&lt;div id="outline-container-org422ceea" class="outline-3"&gt;
+&lt;h3 id="org422ceea"&gt;Given&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org422ceea"&gt;
 &lt;p&gt;
 Our &lt;code&gt;given&lt;/code&gt; function just creates a Greeter instance. There are also functions like &lt;code&gt;Before&lt;/code&gt; and &lt;code&gt;BeforeAll&lt;/code&gt; that let you do something once befare each Scenario (or all Scenarios), but we only have one scenario and it sounds clearer to me to say "Given a greeter…".
 &lt;/p&gt;
@@ -193,9 +193,9 @@ Our &lt;code&gt;given&lt;/code&gt; function just creates a Greeter instance. The
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org158fbbf" class="outline-3"&gt;
-&lt;h3 id="org158fbbf"&gt;When&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org158fbbf"&gt;
+&lt;div id="outline-container-org8b26654" class="outline-3"&gt;
+&lt;h3 id="org8b26654"&gt;When&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org8b26654"&gt;
 &lt;p&gt;
 Our &lt;code&gt;when&lt;/code&gt; calls the &lt;code&gt;greetings&lt;/code&gt; method and saves the output so we can check it in our &lt;code&gt;Then&lt;/code&gt; function.
 &lt;/p&gt;
@@ -207,9 +207,9 @@ Our &lt;code&gt;when&lt;/code&gt; calls the &lt;code&gt;greetings&lt;/code&gt; m
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgade0020" class="outline-3"&gt;
-&lt;h3 id="orgade0020"&gt;Then&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgade0020"&gt;
+&lt;div id="outline-container-org6c19963" class="outline-3"&gt;
+&lt;h3 id="org6c19963"&gt;Then&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org6c19963"&gt;
 &lt;p&gt;
 Our last function is interesting in that it uses what they call &lt;a href="https://github.com/cucumber/cucumber-expressions#readme"&gt;cucumber-expressions&lt;/a&gt;, which allow you to put types into the string definition to tell it what to look for in the feature definition so we don't have to set the exact value. In this case our feature file says &lt;code&gt;Then I should hear "Go away."&lt;/code&gt; The end of the statement is in quotes so cucumber knows that it's a string so we can replace it with &lt;code&gt;{string}&lt;/code&gt; when we define the function and cucumber will pass in the expected string as an argument to the function that we pass to the &lt;code&gt;Then&lt;/code&gt; function. Then we can use the passed-in value rather than hard-coding the expected string into our test. In this case the parameter &lt;code&gt;what_he_should_have_said&lt;/code&gt; will have the string "Go away." in it, extracted (without the quotes) from our feature file definition.
 &lt;/p&gt;
@@ -225,7 +225,7 @@ Our last function is interesting in that it uses what they call &lt;a href="http
 So far this is the basic structure of our testing folder (ignoring stuff that I didn't create or edit).
 &lt;/p&gt;
 
-&lt;pre class="example" id="org6401abc"&gt;
+&lt;pre class="example" id="org3b23798"&gt;
 cucumber.js
 package.json
 test-cucumber-and-ecma-script-modules-esm/
@@ -236,9 +236,9 @@ test-cucumber-and-ecma-script-modules-esm/
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgf443c12" class="outline-2"&gt;
-&lt;h2 id="orgf443c12"&gt;The Greeter&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgf443c12"&gt;
+&lt;div id="outline-container-org37279e7" class="outline-2"&gt;
+&lt;h2 id="org37279e7"&gt;The Greeter&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org37279e7"&gt;
 &lt;p&gt;
 Based on our test, this is what our Greeter class should look like.
 &lt;/p&gt;
@@ -285,9 +285,9 @@ when defining the class, but, as seems to be the way with javascript, there's mu
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orge475579" class="outline-2"&gt;
-&lt;h2 id="orge475579"&gt;The Greeter package.json&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orge475579"&gt;
+&lt;div id="outline-container-org3184112" class="outline-2"&gt;
+&lt;h2 id="org3184112"&gt;The Greeter package.json&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org3184112"&gt;
 &lt;p&gt;
 This next bit took me a while to figure out. If you put the &lt;code&gt;Greeter&lt;/code&gt; definition into a subfolder below where we're running the tests, it will recognize our &lt;code&gt;greeter.js&lt;/code&gt; file as an ESM module just fine. But, if you move it into a folder outside our tests as I did, node (or cucumber) suddenly won't be able to tell that it's an ESM module.
 &lt;/p&gt;
@@ -312,33 +312,33 @@ I suppose, maybe it's a little like an &lt;code&gt;__init__.py&lt;/code&gt; file
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org9538db1" class="outline-2"&gt;
-&lt;h2 id="org9538db1"&gt;Now the Other Hard Part&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org9538db1"&gt;
+&lt;div id="outline-container-orgf0dafc7" class="outline-2"&gt;
+&lt;h2 id="orgf0dafc7"&gt;Now the Other Hard Part&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgf0dafc7"&gt;
 &lt;p&gt;
 Okay, so the testing is working now, but just running tests is sort of meaningless (no offense to testers), the real point of it all is to get the tested javascript back into this post and use it.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org239e82f" class="outline-3"&gt;
-&lt;h3 id="org239e82f"&gt;First Let's Setup the Sketch Tag&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org239e82f"&gt;
+&lt;div id="outline-container-org1e3a50f" class="outline-3"&gt;
+&lt;h3 id="org1e3a50f"&gt;First Let's Setup the Sketch Tag&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org1e3a50f"&gt;
 &lt;p&gt;
 According to &lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script"&gt;mozilla&lt;/a&gt;, &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; tags are assumed to be javascript if you don't set a MIME type (and so they tell you not to set the &lt;code&gt;type&lt;/code&gt; argument if it's a regular script) but to let the browser know it's a module you have to set the attribute &lt;code&gt;type="module"&lt;/code&gt; in the tag. I'm going to use a convoluted name for the actual p5 sketch file that I'm making, but for demonstration's sake let's pretend it's called &lt;code&gt;sketch.js&lt;/code&gt;, then the HTML tag to include it in this post would look like this.
 &lt;/p&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;lt;script src="sketch.js" type="module"&amp;gt;&amp;lt;/script&amp;gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"sketch.js"&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"module"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;
-The &lt;code&gt;Greeter&lt;/code&gt; class itself is going to be imported into our sketch module so we don't refer to it in the HTML.
+The &lt;code&gt;Greeter&lt;/code&gt; class is going to be imported into our sketch module so we don't refer to it in the HTML.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org007218d" class="outline-3"&gt;
-&lt;h3 id="org007218d"&gt;Now Let's Use It&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org007218d"&gt;
+&lt;div id="outline-container-org1d84485" class="outline-3"&gt;
+&lt;h3 id="org1d84485"&gt;Now Let's Use It&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org1d84485"&gt;
 &lt;p&gt;
 We'll import the &lt;code&gt;Greeter&lt;/code&gt; into the sketch, setup the canvas, and then display the greeter's greetings on the canvas.
 &lt;/p&gt;
@@ -381,7 +381,7 @@ Impressed?
 Just for completeness, the folder with the code for the post has these files in it.
 &lt;/p&gt;
 
-&lt;pre class="example" id="org9804d2d"&gt;
+&lt;pre class="example" id="org1264842"&gt;
 greeter.js
 sketch.js
 package.json
@@ -389,18 +389,18 @@ package.json
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org9ddde0a" class="outline-2"&gt;
-&lt;h2 id="org9ddde0a"&gt;What Have We Learned?&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org9ddde0a"&gt;
+&lt;div id="outline-container-org3ebf1e9" class="outline-2"&gt;
+&lt;h2 id="org3ebf1e9"&gt;What Have We Learned?&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org3ebf1e9"&gt;
 &lt;p&gt;
 This was an exercise in seeing if I could get cucumber.js and ESM modules working. In particular it was about testing code that gets included in this post and used by p5. This was a pretty simple example, but it seems to work so I'll take it as a start that I can reference when going back to work with more complex p5 code.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org0ead99d" class="outline-2"&gt;
-&lt;h2 id="org0ead99d"&gt;Links&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org0ead99d"&gt;
+&lt;div id="outline-container-org405b2d8" class="outline-2"&gt;
+&lt;h2 id="org405b2d8"&gt;Links&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org405b2d8"&gt;
 &lt;p&gt;
 These are (mostly) referred to in the body of the post, and the body also has links not in here, but for future reference, this should be enough to get back up to speed.
 &lt;/p&gt;
