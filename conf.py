@@ -941,14 +941,6 @@ LICENSE = '''
 <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1">
 <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p> 
 '''
-# LICENSE = '''
-# <div id="license"xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under
-# <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0
-# <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1">
-# <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a>
-# </div>
-# '''
-
 # A small copyright notice for the page footer (in HTML).
 # (translatable)
 CONTENT_FOOTER = 'Scribbles by <a href="mailto:{email}">{author}</a> &copy; {date} - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         {license}'
