@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron</title><link>https://necromuralist.github.io/Ape-Iron/</link><description>Ironies of the Ape.</description><atom:link href="https://necromuralist.github.io/Ape-Iron/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;Cloistered Monkey&lt;/a&gt; &lt;p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"&gt;&lt;a property="dct:title" rel="cc:attributionURL" href="https://necromuralist.github.io/Ape-Iron/"&gt;Ape Iron&lt;/a&gt; by &lt;a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/necromuralist"&gt;The Cloistered Monkey&lt;/a&gt; is licensed under &lt;a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY 4.0&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;&lt;/a&gt;&lt;/p&gt;</copyright><lastBuildDate>Mon, 26 Jun 2023 21:26:50 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Cucumber and Ecma Script Modules (ESM) In a Nikola Post</title><link>https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron</title><link>https://necromuralist.github.io/Ape-Iron/</link><description>Ironies of the Ape.</description><atom:link href="https://necromuralist.github.io/Ape-Iron/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;The Cloistered Monkey&lt;/a&gt; 
+&lt;div id="license" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"&gt;&lt;span property="dct:title"&gt;Ape-Iron&lt;/span&gt; is licensed under
+&lt;a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY-SA 4.0
+&lt;img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;
+&lt;img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;
+&lt;img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"&gt;&lt;/a&gt;&lt;/p&gt; 
+</copyright><lastBuildDate>Sat, 01 Jul 2023 20:55:17 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Cucumber and Ecma Script Modules (ESM) In a Nikola Post</title><link>https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
@@ -413,7 +419,7 @@ These are (mostly) referred to in the body of the post, and the body also has li
 &lt;li&gt;CommonJS. In: Wikipedia [Internet]. 2023 [cited 2023 Jun 19]. Available from: &lt;a href="https://en.wikipedia.org/w/index.php?title=CommonJS&amp;amp;oldid=1154931652"&gt;https://en.wikipedia.org/w/index.php?title=CommonJS&amp;amp;oldid=1154931652&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><category>bdd</category><category>cucumber</category><category>javascript</category><category>p5.js</category><category>testing</category><guid>https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html</guid><pubDate>Thu, 15 Jun 2023 23:21:32 GMT</pubDate></item><item><title>Link Collection</title><link>https://necromuralist.github.io/Ape-Iron/posts/link-collection/index.html</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
+&lt;/div&gt;</description><category>bdd</category><category>cucumber</category><category>javascript</category><category>p5.js</category><category>testing</category><guid>https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html</guid><pubDate>Thu, 15 Jun 2023 23:21:32 GMT</pubDate></item><item><title>Link Collection</title><link>https://necromuralist.github.io/Ape-Iron/posts/link-collection/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
@@ -441,48 +447,48 @@ These are (mostly) referred to in the body of the post, and the body also has li
 &lt;li&gt;&lt;a href="https://thelumiereguy.github.io/CreativeCodingExamples/"&gt;Creative Coding Examples&lt;/a&gt;: Short page of examples.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><category>bookmark</category><category>links</category><category>reference</category><guid>https://necromuralist.github.io/Ape-Iron/posts/link-collection/index.html</guid><pubDate>Wed, 14 Jun 2023 19:14:06 GMT</pubDate></item><item><title>Testing P5 with Mocha and Chai</title><link>https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
+&lt;/div&gt;</description><category>bookmark</category><category>links</category><category>reference</category><guid>https://necromuralist.github.io/Ape-Iron/posts/link-collection/index.html</guid><pubDate>Wed, 14 Jun 2023 19:14:06 GMT</pubDate></item><item><title>Testing P5 with Mocha and Chai</title><link>https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org485e924"&gt;What This Is&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgf28fc9b"&gt;Setting Up the Tests&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgb4db9dc"&gt;What This Is&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orga414a3e"&gt;Setting Up the Tests&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org7db12d9"&gt;Running the Tests&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org2586ed6"&gt;Writing the Test File&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org49e00a6"&gt;Import Chai and Sinon&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orga02d251"&gt;Import the Color Increaser Class&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org3be5456"&gt;Running the Tests&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orge5276fc"&gt;Writing the Test File&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org87492f3"&gt;Import Chai and Sinon&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org102e6a3"&gt;Import the Color Increaser Class&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgc1570ec"&gt;The Whole Code Module&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgfe47b8d"&gt;Channel Constants&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgfa81f39"&gt;Testing and Implementing the Color Increaser&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgae5cdab"&gt;The Whole Code Module&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgd4e0b0b"&gt;Channel Constants&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgdd31627"&gt;Testing and Implementing the Color Increaser&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org31a6653"&gt;Mock Color&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org8ab844e"&gt;Setting Up the Tests&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org9b853ea"&gt;Does the ColorIncreaser Exist?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org81a8ae9"&gt;The ColorIncreaser Class&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org598aebc"&gt;Does it take an increment amount?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org20b4b4b"&gt;Does it take a color?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgf7fb929"&gt;The Increaser&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgdbab8ba"&gt;Does it wrap red back to 255 when it hits 256?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgbb9a2f3"&gt;Does Green Wrap Too?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgd77acf8"&gt;Does Blue Wrap Too?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org7075328"&gt;The Next Method&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgbbb394f"&gt;Does next return the color?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgc81898b"&gt;Export the Color Increaser&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org1604e7a"&gt;Running The tests&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgec4313a"&gt;Mock Color&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org47e53c0"&gt;Setting Up the Tests&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org643514e"&gt;Does the ColorIncreaser Exist?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgc2df984"&gt;The ColorIncreaser Class&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgfed60a1"&gt;Does it take an increment amount?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org1e80c51"&gt;Does it take a color?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org6729073"&gt;The Increaser&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgf9e20a7"&gt;Does it wrap red back to 255 when it hits 256?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org4de833a"&gt;Does Green Wrap Too?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org126642b"&gt;Does Blue Wrap Too?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org93558d6"&gt;The Next Method&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgbeb447b"&gt;Does next return the color?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org3c2a359"&gt;Export the Color Increaser&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org7759460"&gt;Running The tests&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org5904558"&gt;The Sketch&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgb3d06a2"&gt;The Sketch&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org0b2e7d6"&gt;The Sketch Function&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org0684069"&gt;The &lt;code&gt;setup&lt;/code&gt; Function&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org4e12bd0"&gt;The &lt;code&gt;draw&lt;/code&gt; Function&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org6e10dbe"&gt;The Sketch Function&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgd6b58b9"&gt;The &lt;code&gt;setup&lt;/code&gt; Function&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org66da868"&gt;The &lt;code&gt;draw&lt;/code&gt; Function&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org0771b69"&gt;The End&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org6bf6830"&gt;Sources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org22015bb"&gt;The End&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org2367191"&gt;Sources&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -494,22 +500,22 @@ These are (mostly) referred to in the body of the post, and the body also has li
 &lt;/p&gt;&lt;div class="p5js" id="6a5fb18a-bdd-sketch"&gt;&lt;/div&gt;
 
 
-&lt;div id="outline-container-org485e924" class="outline-2"&gt;
-&lt;h2 id="org485e924"&gt;What This Is&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org485e924"&gt;
+&lt;div id="outline-container-orgb4db9dc" class="outline-2"&gt;
+&lt;h2 id="orgb4db9dc"&gt;What This Is&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgb4db9dc"&gt;
 &lt;p&gt;
 This is a walk-through of the &lt;a href="https://p5js.org/learn/tdd.html"&gt;test-driven development example&lt;/a&gt; on the &lt;a href="https://p5js.org/"&gt;p5js site&lt;/a&gt;. The color changing square above is created by exhaustively stepping through the RGB values for a p5 &lt;a href="https://p5js.org/reference/#/p5.Color"&gt;color&lt;/a&gt;. The site documentation doesn't seem to tell you the name of the color array attribute so you can access it, instead it tells you to use setter methods, but the tutorial indicates that the array is stored as an attribute of the color object named &lt;code&gt;levels&lt;/code&gt; so we'll be working with that to change the colors.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgf28fc9b" class="outline-2"&gt;
-&lt;h2 id="orgf28fc9b"&gt;Setting Up the Tests&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgf28fc9b"&gt;
+&lt;div id="outline-container-orga414a3e" class="outline-2"&gt;
+&lt;h2 id="orga414a3e"&gt;Setting Up the Tests&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orga414a3e"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org7db12d9" class="outline-3"&gt;
-&lt;h3 id="org7db12d9"&gt;Running the Tests&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org7db12d9"&gt;
+&lt;div id="outline-container-org3be5456" class="outline-3"&gt;
+&lt;h3 id="org3be5456"&gt;Running the Tests&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org3be5456"&gt;
 &lt;p&gt;
 To run the tests I'll use three things:
 &lt;/p&gt;
@@ -544,13 +550,13 @@ Weirdly, the mocha &lt;a href="https://mochajs.org/#getting-started"&gt;Getting 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org2586ed6" class="outline-3"&gt;
-&lt;h3 id="org2586ed6"&gt;Writing the Test File&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org2586ed6"&gt;
+&lt;div id="outline-container-orge5276fc" class="outline-3"&gt;
+&lt;h3 id="orge5276fc"&gt;Writing the Test File&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orge5276fc"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org806d7a3" class="outline-4"&gt;
-&lt;h4 id="org806d7a3"&gt;Put It In Strict Mode&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org806d7a3"&gt;
+&lt;div id="outline-container-orge446307" class="outline-4"&gt;
+&lt;h4 id="orge446307"&gt;Put It In Strict Mode&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orge446307"&gt;
 &lt;p&gt;
 Javascript can be pretty lenient about letting what might be considered mistakes pass through without raising an error. I'll put the test-code into &lt;a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode"&gt;Strict Mode&lt;/a&gt;, making our mistakes more evident, hopefully, by putting this line at the top of the &lt;code&gt;test.js&lt;/code&gt; file:
 &lt;/p&gt;
@@ -561,9 +567,9 @@ Javascript can be pretty lenient about letting what might be considered mistakes
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org49e00a6" class="outline-3"&gt;
-&lt;h3 id="org49e00a6"&gt;Import Chai and Sinon&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org49e00a6"&gt;
+&lt;div id="outline-container-org87492f3" class="outline-3"&gt;
+&lt;h3 id="org87492f3"&gt;Import Chai and Sinon&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org87492f3"&gt;
 &lt;p&gt;
 I'm going to use the &lt;a href="https://en.wikipedia.org/wiki/Behavior-driven_development?useskin=vector"&gt;Behavior-Driven Development&lt;/a&gt; (BDD) version of &lt;a href="https://www.chaijs.com/api/bdd/"&gt;Chai&lt;/a&gt; to make our assertions about what we expect the code to be doing.
 &lt;/p&gt;
@@ -587,9 +593,9 @@ I'm also going to stub some methods using &lt;a href="https://sinonjs.org/"&gt;s
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orga02d251" class="outline-3"&gt;
-&lt;h3 id="orga02d251"&gt;Import the Color Increaser Class&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orga02d251"&gt;
+&lt;div id="outline-container-org102e6a3" class="outline-3"&gt;
+&lt;h3 id="org102e6a3"&gt;Import the Color Increaser Class&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org102e6a3"&gt;
 &lt;p&gt;
 We're going to create a &lt;code&gt;ColorIncreaser&lt;/code&gt; class which we need to import into the test code. Our import is going to look a little funky, though, because the sketch is in a folder created for this post.
 &lt;/p&gt;
@@ -624,9 +630,9 @@ Also, in order to be able to import the class we need to set it as exportable in
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgc1570ec" class="outline-2"&gt;
-&lt;h2 id="orgc1570ec"&gt;The Whole Code Module&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgc1570ec"&gt;
+&lt;div id="outline-container-orgae5cdab" class="outline-2"&gt;
+&lt;h2 id="orgae5cdab"&gt;The Whole Code Module&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgae5cdab"&gt;
 &lt;p&gt;
 Since this is about coding test-driven I'm going to show the tests and then the implementation that gets written to pass the test. This makes it kind of disorienting to read so I thought I'd show the entire &lt;code&gt;color-increaser.js&lt;/code&gt; file that's being created here exactly as it ends up once it's all done.
 &lt;/p&gt;
@@ -677,9 +683,9 @@ Since this is about coding test-driven I'm going to show the tests and then the 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgfe47b8d" class="outline-2"&gt;
-&lt;h2 id="orgfe47b8d"&gt;Channel Constants&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgfe47b8d"&gt;
+&lt;div id="outline-container-orgd4e0b0b" class="outline-2"&gt;
+&lt;h2 id="orgd4e0b0b"&gt;Channel Constants&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgd4e0b0b"&gt;
 &lt;p&gt;
 I have a tendency to flip values around (sometimes it seems like blue should come before green, for example) so I like to create objects to hold values that get used repeatedly. This at the top of the same module as the Color Increaser class.
 &lt;/p&gt;
@@ -695,17 +701,17 @@ I have a tendency to flip values around (sometimes it seems like blue should com
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgfa81f39" class="outline-2"&gt;
-&lt;h2 id="orgfa81f39"&gt;Testing and Implementing the Color Increaser&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgfa81f39"&gt;
+&lt;div id="outline-container-orgdd31627" class="outline-2"&gt;
+&lt;h2 id="orgdd31627"&gt;Testing and Implementing the Color Increaser&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgdd31627"&gt;
 &lt;p&gt;
 Now we'll write the tests and implement the &lt;code&gt;ColorIncreaser&lt;/code&gt; class along with it.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org31a6653" class="outline-3"&gt;
-&lt;h3 id="org31a6653"&gt;Mock Color&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org31a6653"&gt;
+&lt;div id="outline-container-orgec4313a" class="outline-3"&gt;
+&lt;h3 id="orgec4313a"&gt;Mock Color&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgec4313a"&gt;
 &lt;p&gt;
 We don't want to use any p5 objects in the testing so we'll make a fake &lt;a href="https://p5js.org/reference/#/p5/color"&gt;color&lt;/a&gt; object, implementing its undocumented (as far as I can tell) &lt;code&gt;levels&lt;/code&gt; attribute as an &lt;a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"&gt;Array&lt;/a&gt;.
 &lt;/p&gt;
@@ -724,9 +730,9 @@ We don't want to use any p5 objects in the testing so we'll make a fake &lt;a hr
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org8ab844e" class="outline-3"&gt;
-&lt;h3 id="org8ab844e"&gt;Setting Up the Tests&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org8ab844e"&gt;
+&lt;div id="outline-container-org47e53c0" class="outline-3"&gt;
+&lt;h3 id="org47e53c0"&gt;Setting Up the Tests&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org47e53c0"&gt;
 &lt;p&gt;
 &lt;code&gt;mocha&lt;/code&gt;'s &lt;code&gt;describe&lt;/code&gt; function acts like a header around our tests. Within it I'm setting some constants and also defining a &lt;code&gt;beforeEach&lt;/code&gt; function which will create a new &lt;code&gt;ColorIncreaser&lt;/code&gt; object before running each test so it won't have any changes we make in the other tests spilling over. Although I could import the &lt;code&gt;CHANNELS&lt;/code&gt; object with the constants I thought it'd be a better check to create a new set to double-check what's going on in the code being tested.
 &lt;/p&gt;
@@ -751,9 +757,9 @@ We don't want to use any p5 objects in the testing so we'll make a fake &lt;a hr
 &lt;/div&gt;
 
 
-&lt;div id="outline-container-org9b853ea" class="outline-3"&gt;
-&lt;h3 id="org9b853ea"&gt;Does the ColorIncreaser Exist?&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org9b853ea"&gt;
+&lt;div id="outline-container-org643514e" class="outline-3"&gt;
+&lt;h3 id="org643514e"&gt;Does the ColorIncreaser Exist?&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org643514e"&gt;
 &lt;p&gt;
 Our first test makes sure that we were able to create the &lt;code&gt;ColorIncreaser&lt;/code&gt; object. This is actually a little bit of a fake because the &lt;code&gt;beforeEach&lt;/code&gt; will fail if we can't create the object and it won't actually reach this test. I suppose you could still break it by making a function named &lt;code&gt;ColorIncreaser&lt;/code&gt; instead of a class so this acts as an extra check.
 &lt;/p&gt;
@@ -782,9 +788,9 @@ Mocha will &lt;a href="https://mochajs.org/#asynchronous-code"&gt;run the tests 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org81a8ae9" class="outline-3"&gt;
-&lt;h3 id="org81a8ae9"&gt;The ColorIncreaser Class&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org81a8ae9"&gt;
+&lt;div id="outline-container-orgc2df984" class="outline-3"&gt;
+&lt;h3 id="orgc2df984"&gt;The ColorIncreaser Class&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgc2df984"&gt;
 &lt;p&gt;
 Now that we have the test I'll define the class and its constructor. It's a pretty basic class, here's a class diagram of its attributes.
 &lt;/p&gt;
@@ -806,9 +812,9 @@ And here's the class and constructor definition.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org598aebc" class="outline-3"&gt;
-&lt;h3 id="org598aebc"&gt;Does it take an increment amount?&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org598aebc"&gt;
+&lt;div id="outline-container-orgfed60a1" class="outline-3"&gt;
+&lt;h3 id="orgfed60a1"&gt;Does it take an increment amount?&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgfed60a1"&gt;
 &lt;p&gt;
 This is just a sanity check to make sure that the constructor actually saved the increment amount we passed in.
 &lt;/p&gt;
@@ -822,9 +828,9 @@ This is just a sanity check to make sure that the constructor actually saved the
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org20b4b4b" class="outline-3"&gt;
-&lt;h3 id="org20b4b4b"&gt;Does it take a color?&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org20b4b4b"&gt;
+&lt;div id="outline-container-org1e80c51" class="outline-3"&gt;
+&lt;h3 id="org1e80c51"&gt;Does it take a color?&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org1e80c51"&gt;
 &lt;p&gt;
 This is another check to make sure the constructor saved the color object that got passed in. I couldn't find a same-object checker in &lt;code&gt;chai&lt;/code&gt; but the &lt;code&gt;eql&lt;/code&gt; is described as a check that the objects are "deeply-equal" which I assume is the same thing.
 &lt;/p&gt;
@@ -838,9 +844,9 @@ This is another check to make sure the constructor saved the color object that g
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgf7fb929" class="outline-3"&gt;
-&lt;h3 id="orgf7fb929"&gt;The Increaser&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgf7fb929"&gt;
+&lt;div id="outline-container-org6729073" class="outline-3"&gt;
+&lt;h3 id="org6729073"&gt;The Increaser&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org6729073"&gt;
 &lt;p&gt;
 We're going to implement a method for the &lt;code&gt;ColorIncreaser&lt;/code&gt; that will increment the color-array so let's check that it works. It sort of treats the three color channels (Red, Green, and Blue… we'll pretend Alpha doesn't exist) like a three-digit number using base 255 instead of 10 and with the digits being BGR. So we start with all three channels at 0, then we increment red from 0 to 255 and when it hits 256 we set it back to 0 and set green to 1, then we repeat this over and over until green goes up to 256 at which point we reset both red and green to 0 and set blue to 1 and so on.
 &lt;/p&gt;
@@ -854,9 +860,9 @@ I'll add a &lt;code&gt;describe&lt;/code&gt; section to the tests to make it cle
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgbdfe2a9" class="outline-4"&gt;
-&lt;h4 id="orgbdfe2a9"&gt;Does the red channel increase?&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgbdfe2a9"&gt;
+&lt;div id="outline-container-orge08b844" class="outline-4"&gt;
+&lt;h4 id="orge08b844"&gt;Does the red channel increase?&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orge08b844"&gt;
 &lt;p&gt;
 Until it increments the red channel past 255 the other channels don't change so we'll first test that only the red channel changes up until that point.
 &lt;/p&gt;
@@ -877,9 +883,9 @@ Until it increments the red channel past 255 the other channels don't change so 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org29e271a" class="outline-4"&gt;
-&lt;h4 id="org29e271a"&gt;The Color-Increaser Method&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org29e271a"&gt;
+&lt;div id="outline-container-org65c69ca" class="outline-4"&gt;
+&lt;h4 id="org65c69ca"&gt;The Color-Increaser Method&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org65c69ca"&gt;
 &lt;p&gt;
 So now I'll add the &lt;code&gt;increase&lt;/code&gt; method to the &lt;code&gt;ColorIncreaser&lt;/code&gt; class which adds the &lt;code&gt;color_increment&lt;/code&gt; to the red-channel when it's called.
 &lt;/p&gt;
@@ -891,9 +897,9 @@ So now I'll add the &lt;code&gt;increase&lt;/code&gt; method to the &lt;code&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgdbab8ba" class="outline-3"&gt;
-&lt;h3 id="orgdbab8ba"&gt;Does it wrap red back to 255 when it hits 256?&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgdbab8ba"&gt;
+&lt;div id="outline-container-orgf9e20a7" class="outline-3"&gt;
+&lt;h3 id="orgf9e20a7"&gt;Does it wrap red back to 255 when it hits 256?&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgf9e20a7"&gt;
 &lt;p&gt;
 The channels can only go up to 255 so once we hit 256:
 &lt;/p&gt;
@@ -968,9 +974,9 @@ These are our expected values before and after the call to &lt;code&gt;increase&
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org5326c60" class="outline-4"&gt;
-&lt;h4 id="org5326c60"&gt;The Wrap-Red Conditional&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org5326c60"&gt;
+&lt;div id="outline-container-org0a4509d" class="outline-4"&gt;
+&lt;h4 id="org0a4509d"&gt;The Wrap-Red Conditional&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org0a4509d"&gt;
 &lt;p&gt;
 Within the &lt;code&gt;increase&lt;/code&gt; method we add this little chunk after incrementing the red channel.
 &lt;/p&gt;
@@ -984,9 +990,9 @@ Within the &lt;code&gt;increase&lt;/code&gt; method we add this little chunk aft
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgbb9a2f3" class="outline-3"&gt;
-&lt;h3 id="orgbb9a2f3"&gt;Does Green Wrap Too?&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgbb9a2f3"&gt;
+&lt;div id="outline-container-org4de833a" class="outline-3"&gt;
+&lt;h3 id="org4de833a"&gt;Does Green Wrap Too?&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org4de833a"&gt;
 &lt;p&gt;
 As with red, the green channel can only go up to 255 so once we increase green to 256:
 &lt;/p&gt;
@@ -1066,9 +1072,9 @@ These are our expected values before and after the call to &lt;code&gt;increase&
 &lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="p"&gt;});&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgeb4223f" class="outline-4"&gt;
-&lt;h4 id="orgeb4223f"&gt;The Wrap-Green Conditional&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgeb4223f"&gt;
+&lt;div id="outline-container-org64d4982" class="outline-4"&gt;
+&lt;h4 id="org64d4982"&gt;The Wrap-Green Conditional&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org64d4982"&gt;
 &lt;p&gt;
 Now within the &lt;code&gt;increase&lt;/code&gt; method we add this little chunk after incrementing the red channel to check the green channel.
 &lt;/p&gt;
@@ -1082,9 +1088,9 @@ Now within the &lt;code&gt;increase&lt;/code&gt; method we add this little chunk
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgd77acf8" class="outline-3"&gt;
-&lt;h3 id="orgd77acf8"&gt;Does Blue Wrap Too?&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgd77acf8"&gt;
+&lt;div id="outline-container-org126642b" class="outline-3"&gt;
+&lt;h3 id="org126642b"&gt;Does Blue Wrap Too?&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org126642b"&gt;
 &lt;p&gt;
 As with red and green, the blue channel can only go up to 255 so once we increase blue to 256:
 &lt;/p&gt;
@@ -1160,9 +1166,9 @@ These are our expected values before and after the call to &lt;code&gt;increase&
 &lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="p"&gt;});&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org35797a7" class="outline-4"&gt;
-&lt;h4 id="org35797a7"&gt;The Wrap-Blue Conditional&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org35797a7"&gt;
+&lt;div id="outline-container-orgfec3498" class="outline-4"&gt;
+&lt;h4 id="orgfec3498"&gt;The Wrap-Blue Conditional&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgfec3498"&gt;
 &lt;p&gt;
 I originally just used a modulus to keep blue within range, but since we're allowing the user to change the increment this might not always go back to zero so here's the conditional that resets the blue channel if it exceeds the limit.
 &lt;/p&gt;
@@ -1179,9 +1185,9 @@ And there we have our exhaustive channel incrementer.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org7075328" class="outline-3"&gt;
-&lt;h3 id="org7075328"&gt;The Next Method&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org7075328"&gt;
+&lt;div id="outline-container-org93558d6" class="outline-3"&gt;
+&lt;h3 id="org93558d6"&gt;The Next Method&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org93558d6"&gt;
 &lt;p&gt;
 I'm going to implement a &lt;code&gt;next&lt;/code&gt; method to simplify things a little. It'll call increase and the return the color object. Just because.
 &lt;/p&gt;
@@ -1190,9 +1196,9 @@ I'm going to implement a &lt;code&gt;next&lt;/code&gt; method to simplify things
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org865e79e" class="outline-4"&gt;
-&lt;h4 id="org865e79e"&gt;Does the next method increase the color?&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org865e79e"&gt;
+&lt;div id="outline-container-orgaeaf23b" class="outline-4"&gt;
+&lt;h4 id="orgaeaf23b"&gt;Does the next method increase the color?&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgaeaf23b"&gt;
 &lt;p&gt;
 To check that next calls the &lt;code&gt;increase&lt;/code&gt; method I'll monkey-patch it with a &lt;a href="https://sinonjs.org/releases/latest/spies/"&gt;sinon spy&lt;/a&gt; and check that when we call &lt;code&gt;next&lt;/code&gt; the &lt;code&gt;increase&lt;/code&gt; spy gets called.
 &lt;/p&gt;
@@ -1209,9 +1215,9 @@ To check that next calls the &lt;code&gt;increase&lt;/code&gt; method I'll monke
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org438665c" class="outline-4"&gt;
-&lt;h4 id="org438665c"&gt;The Next Method&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org438665c"&gt;
+&lt;div id="outline-container-orgca05cdb" class="outline-4"&gt;
+&lt;h4 id="orgca05cdb"&gt;The Next Method&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgca05cdb"&gt;
 &lt;p&gt;
 Now I'll implement the &lt;code&gt;next&lt;/code&gt; method and have it call the &lt;code&gt;increase&lt;/code&gt; method.
 &lt;/p&gt;
@@ -1223,9 +1229,9 @@ Now I'll implement the &lt;code&gt;next&lt;/code&gt; method and have it call the
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgbbb394f" class="outline-3"&gt;
-&lt;h3 id="orgbbb394f"&gt;Does next return the color?&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgbbb394f"&gt;
+&lt;div id="outline-container-orgbeb447b" class="outline-3"&gt;
+&lt;h3 id="orgbeb447b"&gt;Does next return the color?&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgbeb447b"&gt;
 &lt;p&gt;
 Instead of requiring the user to make two calls I'll have the next method return the color object directly.
 &lt;/p&gt;
@@ -1239,9 +1245,9 @@ Instead of requiring the user to make two calls I'll have the next method return
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org4f13b3e" class="outline-4"&gt;
-&lt;h4 id="org4f13b3e"&gt;Return the color&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org4f13b3e"&gt;
+&lt;div id="outline-container-org15d4fe9" class="outline-4"&gt;
+&lt;h4 id="org15d4fe9"&gt;Return the color&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org15d4fe9"&gt;
 &lt;p&gt;
 Now in our &lt;code&gt;ColorIncreaser.next&lt;/code&gt; method we return the color.
 &lt;/p&gt;
@@ -1251,9 +1257,9 @@ Now in our &lt;code&gt;ColorIncreaser.next&lt;/code&gt; method we return the col
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgc81898b" class="outline-3"&gt;
-&lt;h3 id="orgc81898b"&gt;Export the Color Increaser&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgc81898b"&gt;
+&lt;div id="outline-container-org3c2a359" class="outline-3"&gt;
+&lt;h3 id="org3c2a359"&gt;Export the Color Increaser&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org3c2a359"&gt;
 &lt;p&gt;
 The implementation so far is good enough to get the code working within the p5 sketch, which would normally be the ultimate goal. But in order for the test code to be able to import the &lt;code&gt;ColorIncreaser&lt;/code&gt; (using the &lt;code&gt;require&lt;/code&gt; function) we need to add a line in the file with the &lt;code&gt;ColorIncreaser&lt;/code&gt; definition to export it.
 &lt;/p&gt;
@@ -1269,9 +1275,9 @@ The code given in the tutorial just has the export line, but this will raise an 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org1604e7a" class="outline-3"&gt;
-&lt;h3 id="org1604e7a"&gt;Running The tests&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org1604e7a"&gt;
+&lt;div id="outline-container-org7759460" class="outline-3"&gt;
+&lt;h3 id="org7759460"&gt;Running The tests&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org7759460"&gt;
 &lt;p&gt;
 Now, let's see what it looks like when we run the tests.
 &lt;/p&gt;
@@ -1279,7 +1285,7 @@ Now, let's see what it looks like when we run the tests.
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mocha ../tests/test*
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;pre class="example" id="org9a1ac08"&gt;
+&lt;pre class="example" id="orgfd6797a"&gt;
 
 
 Given the ColorIncreaser class definition
@@ -1308,17 +1314,17 @@ The output in the terminal has some color added to the text so it looks prettier
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org5904558" class="outline-2"&gt;
-&lt;h2 id="org5904558"&gt;The Sketch&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org5904558"&gt;
+&lt;div id="outline-container-orgb3d06a2" class="outline-2"&gt;
+&lt;h2 id="orgb3d06a2"&gt;The Sketch&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgb3d06a2"&gt;
 &lt;p&gt;
 Now that we have the &lt;code&gt;ColorIncreaser&lt;/code&gt; we can add it to a sketch to change the colors of the square that we're drawing.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org0b2e7d6" class="outline-3"&gt;
-&lt;h3 id="org0b2e7d6"&gt;The Sketch Function&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org0b2e7d6"&gt;
+&lt;div id="outline-container-org6e10dbe" class="outline-3"&gt;
+&lt;h3 id="org6e10dbe"&gt;The Sketch Function&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org6e10dbe"&gt;
 &lt;p&gt;
 As I noted before, I'm using the instance-mode syntax for the sketch so this is the function that holds the &lt;code&gt;setup&lt;/code&gt; and &lt;code&gt;draw&lt;/code&gt; functions.
 &lt;/p&gt;
@@ -1331,9 +1337,9 @@ As I noted before, I'm using the instance-mode syntax for the sketch so this is 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org0684069" class="outline-3"&gt;
-&lt;h3 id="org0684069"&gt;The &lt;code&gt;setup&lt;/code&gt; Function&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org0684069"&gt;
+&lt;div id="outline-container-orgd6b58b9" class="outline-3"&gt;
+&lt;h3 id="orgd6b58b9"&gt;The &lt;code&gt;setup&lt;/code&gt; Function&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgd6b58b9"&gt;
 &lt;p&gt;
 The setup  creates the canvas and color increaser instance.
 &lt;/p&gt;
@@ -1353,9 +1359,9 @@ The setup  creates the canvas and color increaser instance.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org4e12bd0" class="outline-3"&gt;
-&lt;h3 id="org4e12bd0"&gt;The &lt;code&gt;draw&lt;/code&gt; Function&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org4e12bd0"&gt;
+&lt;div id="outline-container-org66da868" class="outline-3"&gt;
+&lt;h3 id="org66da868"&gt;The &lt;code&gt;draw&lt;/code&gt; Function&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org66da868"&gt;
 &lt;p&gt;
 The draw sets the background color and increases its value once per frame.
 &lt;/p&gt;
@@ -1368,18 +1374,18 @@ The draw sets the background color and increases its value once per frame.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org0771b69" class="outline-2"&gt;
-&lt;h2 id="org0771b69"&gt;The End&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org0771b69"&gt;
+&lt;div id="outline-container-org22015bb" class="outline-2"&gt;
+&lt;h2 id="org22015bb"&gt;The End&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org22015bb"&gt;
 &lt;p&gt;
 So, there you go. The sketch wasn't so exciting, but the main value in going through the exercise, I think, was being able to get the javascript testing infrastructure working and getting back into using chai and sinon and the crazy world of module imports in javascript.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org6bf6830" class="outline-2"&gt;
-&lt;h2 id="org6bf6830"&gt;Sources&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org6bf6830"&gt;
+&lt;div id="outline-container-org2367191" class="outline-2"&gt;
+&lt;h2 id="org2367191"&gt;Sources&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org2367191"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;Behavior-driven development. In: Wikipedia [Internet]. 2023 [cited 2023 Jun 9]. Available from: &lt;a href="https://en.wikipedia.org/w/index.php?title=Behavior-driven_development&amp;amp;oldid=1158619924"&gt;https://en.wikipedia.org/w/index.php?title=Behavior-driven_development&amp;amp;oldid=1158619924&lt;/a&gt;&lt;/li&gt;
 
@@ -1392,7 +1398,7 @@ So, there you go. The sketch wasn't so exciting, but the main value in going thr
 &lt;li&gt;Unit Testing and Test Driven Development | p5.js [Internet]. [cited 2023 Jun 8]. Available from: &lt;a href="https://p5js.org/learn/tdd.html"&gt;https://p5js.org/learn/tdd.html&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><category>javascript</category><category>p5.js</category><category>testing</category><guid>https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html</guid><pubDate>Fri, 09 Jun 2023 21:03:10 GMT</pubDate></item><item><title>The Nature of Code</title><link>https://necromuralist.github.io/Ape-Iron/posts/bibliography-the-nature-of-code/index.html</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
+&lt;/div&gt;</description><category>javascript</category><category>p5.js</category><category>testing</category><guid>https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html</guid><pubDate>Fri, 09 Jun 2023 21:03:10 GMT</pubDate></item><item><title>The Nature of Code</title><link>https://necromuralist.github.io/Ape-Iron/posts/bibliography-the-nature-of-code/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
@@ -1428,7 +1434,7 @@ Daniel Shiffman also has a website called &lt;a href="https://thecodingtrain.com
 &lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><category>bibliography</category><category>book</category><category>p5.js</category><guid>https://necromuralist.github.io/Ape-Iron/posts/bibliography-the-nature-of-code/index.html</guid><pubDate>Tue, 06 Jun 2023 20:55:23 GMT</pubDate></item><item><title>Generative Art</title><link>https://necromuralist.github.io/Ape-Iron/posts/bibliography-generative-art/index.html</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="outline-container-org5367562" class="outline-2"&gt;
+&lt;/div&gt;</description><category>bibliography</category><category>book</category><category>p5.js</category><guid>https://necromuralist.github.io/Ape-Iron/posts/bibliography-the-nature-of-code/index.html</guid><pubDate>Tue, 06 Jun 2023 20:55:23 GMT</pubDate></item><item><title>Generative Art</title><link>https://necromuralist.github.io/Ape-Iron/posts/bibliography-generative-art/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="outline-container-org5367562" class="outline-2"&gt;
 &lt;h2 id="org5367562"&gt;The Book&lt;/h2&gt;
 &lt;div class="outline-text-2" id="text-org5367562"&gt;
 &lt;ul class="org-ul"&gt;
@@ -1498,35 +1504,35 @@ These are ones that I could find dedicated sites for. The earliest pioneers (oth
 &lt;li&gt;&lt;a href="https://winterbloed.be/"&gt;Frederik Vanhoutte&lt;/a&gt;: I didn't see his name on the site (&lt;i&gt;winterbloed.be&lt;/i&gt;) but &lt;i&gt;Winterbloed&lt;/i&gt; appears to be his pen-name. (http only)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><category>book</category><category>citation</category><category>generative art</category><guid>https://necromuralist.github.io/Ape-Iron/posts/bibliography-generative-art/index.html</guid><pubDate>Sun, 04 Jun 2023 19:58:39 GMT</pubDate></item><item><title>Generative Art Circles</title><link>https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
+&lt;/div&gt;</description><category>book</category><category>citation</category><category>generative art</category><guid>https://necromuralist.github.io/Ape-Iron/posts/bibliography-generative-art/index.html</guid><pubDate>Sun, 04 Jun 2023 19:58:39 GMT</pubDate></item><item><title>Generative Art Circles</title><link>https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#orgd88491c"&gt;A Circle&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#orgcbbe731"&gt;Closure, Constants, and Variables&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#org92f6d5d"&gt;A Circle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#orgb792c01"&gt;Closure, Constants, and Variables&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#orgd997913"&gt;Constants&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#orgdf97d46"&gt;Variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#org13c1115"&gt;Constants&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#orga97602d"&gt;Variables&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#org8e35013"&gt;Set Up&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#orgf6de061"&gt;Draw&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#org1b99f01"&gt;Set Up&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#org5115bc9"&gt;Draw&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#org03c2d05"&gt;Looping Around the Circle&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#org4ccada4"&gt;The Coordinates of the Circle's Points&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#org46b0a50"&gt;Now We Draw&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#orgcfcb54c"&gt;And the Rest&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#orgeec636f"&gt;Looping Around the Circle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#org4d88426"&gt;The Coordinates of the Circle's Points&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#orgb268104"&gt;Now We Draw&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#org90a00fd"&gt;And the Rest&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#org7f744e4"&gt;Closing Up&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#orgdaf1360"&gt;References&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#orgc986de8"&gt;Closing Up&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#org93a814b"&gt;References&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgd88491c" class="outline-2"&gt;
-&lt;h2 id="orgd88491c"&gt;A Circle&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgd88491c"&gt;
+&lt;div id="outline-container-org92f6d5d" class="outline-2"&gt;
+&lt;h2 id="org92f6d5d"&gt;A Circle&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org92f6d5d"&gt;
 &lt;p&gt;
 This is a starting point for looking at cyclic sketches. In this case it's just a circle but it's a basic concept that I'll probably use more of later so I thought I'd make a dedicated post for it. In particular it uses &lt;a href="https://en.wikipedia.org/wiki/Polar_coordinate_system?useskin=vector"&gt;Polar Coordinates&lt;/a&gt; which might come in handy.
 &lt;/p&gt;
@@ -1539,9 +1545,9 @@ This is a starting point for looking at cyclic sketches. In this case it's just 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgcbbe731" class="outline-2"&gt;
-&lt;h2 id="orgcbbe731"&gt;Closure, Constants, and Variables&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgcbbe731"&gt;
+&lt;div id="outline-container-orgb792c01" class="outline-2"&gt;
+&lt;h2 id="orgb792c01"&gt;Closure, Constants, and Variables&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgb792c01"&gt;
 &lt;p&gt;
 We begin in the usual way with a variable to hold the &lt;code&gt;div id&lt;/code&gt; that the sketch will go into and declaring the function that will hold our sketch tode.
 &lt;/p&gt;
@@ -1552,9 +1558,9 @@ We begin in the usual way with a variable to hold the &lt;code&gt;div id&lt;/cod
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgd997913" class="outline-3"&gt;
-&lt;h3 id="orgd997913"&gt;Constants&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgd997913"&gt;
+&lt;div id="outline-container-org13c1115" class="outline-3"&gt;
+&lt;h3 id="org13c1115"&gt;Constants&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org13c1115"&gt;
 &lt;p&gt;
 Next I'll declare some constants, both to maybe remind me what the values represent when I use them later and to have a place where I can change the values as I experiment with what looks interesting.
 &lt;/p&gt;
@@ -1582,9 +1588,9 @@ To make it less confusing I'll refer to the small circles that make up the big c
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgdf97d46" class="outline-3"&gt;
-&lt;h3 id="orgdf97d46"&gt;Variables&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgdf97d46"&gt;
+&lt;div id="outline-container-orga97602d" class="outline-3"&gt;
+&lt;h3 id="orga97602d"&gt;Variables&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orga97602d"&gt;
 &lt;p&gt;
 The variables are:
 &lt;/p&gt;
@@ -1604,9 +1610,9 @@ The variables are:
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org8e35013" class="outline-2"&gt;
-&lt;h2 id="org8e35013"&gt;Set Up&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org8e35013"&gt;
+&lt;div id="outline-container-org1b99f01" class="outline-2"&gt;
+&lt;h2 id="org1b99f01"&gt;Set Up&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org1b99f01"&gt;
 &lt;p&gt;
 Our &lt;code&gt;setup&lt;/code&gt; function creates the canvas, sets the colors and creates the slider to let the user change how big a jump we take between drawing points on the circle
 &lt;/p&gt;
@@ -1629,9 +1635,9 @@ Our &lt;code&gt;setup&lt;/code&gt; function creates the canvas, sets the colors 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgf6de061" class="outline-2"&gt;
-&lt;h2 id="orgf6de061"&gt;Draw&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgf6de061"&gt;
+&lt;div id="outline-container-org5115bc9" class="outline-2"&gt;
+&lt;h2 id="org5115bc9"&gt;Draw&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org5115bc9"&gt;
 &lt;p&gt;
 The &lt;code&gt;draw&lt;/code&gt; function draws a circle using circles and a line showing the raduis.
 &lt;/p&gt;
@@ -1640,9 +1646,9 @@ The &lt;code&gt;draw&lt;/code&gt; function draws a circle using circles and a li
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org03c2d05" class="outline-3"&gt;
-&lt;h3 id="org03c2d05"&gt;Looping Around the Circle&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org03c2d05"&gt;
+&lt;div id="outline-container-orgeec636f" class="outline-3"&gt;
+&lt;h3 id="orgeec636f"&gt;Looping Around the Circle&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgeec636f"&gt;
 &lt;p&gt;
 We're going to rotate around the circle once using the &lt;code&gt;start&lt;/code&gt; value as the angle to start at and the value the slider's set at for the number of degrees we move between drawing the points on the circle. To make it easier to think about I'm using degrees in the for-loop but the &lt;i&gt;sin&lt;/i&gt; and &lt;i&gt;cos&lt;/i&gt; functions expect radians so we need to convert the degrees. Since the circumference of a circle is both \(360^\circ\) and \(2\pi\) we can use a straight ratio to convert them.
 &lt;/p&gt;
@@ -1664,9 +1670,9 @@ This is usually written using a half-circle \(\left(\frac{\pi}{180}\right)\) but
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org4ccada4" class="outline-3"&gt;
-&lt;h3 id="org4ccada4"&gt;The Coordinates of the Circle's Points&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org4ccada4"&gt;
+&lt;div id="outline-container-org4d88426" class="outline-3"&gt;
+&lt;h3 id="org4d88426"&gt;The Coordinates of the Circle's Points&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org4d88426"&gt;
 &lt;p&gt;
 The coordinates for our point are calculated using the trigonometric definitions for &lt;i&gt;sin&lt;/i&gt; and &lt;i&gt;cos&lt;/i&gt;.
 &lt;/p&gt;
@@ -1705,9 +1711,9 @@ y &amp;amp;= \textit{center}_y + r \sin \theta
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org46b0a50" class="outline-3"&gt;
-&lt;h3 id="org46b0a50"&gt;Now We Draw&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org46b0a50"&gt;
+&lt;div id="outline-container-orgb268104" class="outline-3"&gt;
+&lt;h3 id="orgb268104"&gt;Now We Draw&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgb268104"&gt;
 &lt;p&gt;
 Now that we have our &lt;i&gt;x&lt;/i&gt; and &lt;i&gt;y&lt;/i&gt; coordinates for the next point on the circle we can draw it.
 &lt;/p&gt;
@@ -1717,9 +1723,9 @@ Now that we have our &lt;i&gt;x&lt;/i&gt; and &lt;i&gt;y&lt;/i&gt; coordinates f
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgcfcb54c" class="outline-3"&gt;
-&lt;h3 id="orgcfcb54c"&gt;And the Rest&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgcfcb54c"&gt;
+&lt;div id="outline-container-org90a00fd" class="outline-3"&gt;
+&lt;h3 id="org90a00fd"&gt;And the Rest&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org90a00fd"&gt;
 &lt;p&gt;
 If we just draw the points and line we'll end up with a black dot, which still shows that it's working, but kind of negates the point of using something animated, so I'll draw a white background that's mostly transparent so we can see things move.
 &lt;/p&gt;
@@ -1737,24 +1743,24 @@ And now I'll increment the &lt;code&gt;start&lt;/code&gt; angle so the next time
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org7f744e4" class="outline-2"&gt;
-&lt;h2 id="org7f744e4"&gt;Closing Up&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org7f744e4"&gt;
+&lt;div id="outline-container-orgc986de8" class="outline-2"&gt;
+&lt;h2 id="orgc986de8"&gt;Closing Up&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgc986de8"&gt;
 &lt;p&gt;
 And there we have the circle. I had two main reasons for doing this exercise - one was to have a starting point for making noisier shapes and the other was to remind myself of how to make cyclical values so that I can use it as input for functions that I want to have repeat themselves.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgdaf1360" class="outline-2"&gt;
-&lt;h2 id="orgdaf1360"&gt;References&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgdaf1360"&gt;
+&lt;div id="outline-container-org93a814b" class="outline-2"&gt;
+&lt;h2 id="org93a814b"&gt;References&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org93a814b"&gt;
 &lt;ul class="org-ul"&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bibliography-generative-art/"&gt;Generative Art&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bibliography-the-nature-of-code/"&gt;The Nature of Code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bibliography-generative-art/index.html"&gt;Generative Art&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bibliography-the-nature-of-code/index.html"&gt;The Nature of Code&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><category>generative art</category><category>p5.js</category><guid>https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html</guid><pubDate>Sat, 03 Jun 2023 22:58:01 GMT</pubDate></item><item><title>Pulling Images For the Abecedarium</title><link>https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
+&lt;/div&gt;</description><category>generative art</category><category>p5.js</category><guid>https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html</guid><pubDate>Sat, 03 Jun 2023 22:58:01 GMT</pubDate></item><item><title>Pulling Images For the Abecedarium</title><link>https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
@@ -2431,25 +2437,25 @@ Despite putting &lt;code&gt;type=photo&lt;/code&gt; in there, the cow output had
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;get_images&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"zebu"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><guid>https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html</guid><pubDate>Thu, 25 May 2023 22:20:54 GMT</pubDate></item><item><title>A Noisy Walker</title><link>https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
+&lt;/div&gt;</description><guid>https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html</guid><pubDate>Thu, 25 May 2023 22:20:54 GMT</pubDate></item><item><title>A Noisy Walker</title><link>https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#org06509fe"&gt;The Noise Walker&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#org812c995"&gt;The Noise Walker&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#org9c5d78d"&gt;Noise Value Offset&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#org3d5f02c"&gt;Walk&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#orgf28ce22"&gt;Show Yourself&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#org8d9499c"&gt;Noise Value Offset&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#orgc811118"&gt;Walk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#org9059d48"&gt;Show Yourself&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#org4628008"&gt;The Sketch&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#org5a43606"&gt;The Sketch&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#orga6c4036"&gt;Set Up&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#org8145807"&gt;Draw&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#org1c86f1b"&gt;Set Up&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#orgef39318"&gt;Draw&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#orgc776a51"&gt;The End&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#org7d9b6fe"&gt;Sources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#orgec4eae0"&gt;The End&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#orga67f29a"&gt;Sources&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -2466,12 +2472,12 @@ Despite putting &lt;code&gt;type=photo&lt;/code&gt; in there, the cow output had
 
 
 &lt;p&gt;
-This is a follow-up to the &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-random-walker/"&gt;Random Walker&lt;/a&gt; post. In that previous post I made a walker that moved randomly in any (2D) direction. In this post I'll make a walker that moves according to values given by the p5 &lt;a href="https://p5js.org/reference/#/p5/noise"&gt;noise&lt;/a&gt; function. This is a pretty straight repeat of what's in the &lt;a href="https://nature-of-code-2nd-edition.netlify.app/introduction/"&gt;introduction to the Nature of Code&lt;/a&gt;.
+This is a follow-up to the &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-random-walker/index.html"&gt;Random Walker&lt;/a&gt; post. In that previous post I made a walker that moved randomly in any (2D) direction. In this post I'll make a walker that moves according to values given by the p5 &lt;a href="https://p5js.org/reference/#/p5/noise"&gt;noise&lt;/a&gt; function. This is a pretty straight repeat of what's in the &lt;a href="https://nature-of-code-2nd-edition.netlify.app/introduction/"&gt;introduction to the Nature of Code&lt;/a&gt;.
 &lt;/p&gt;
 
-&lt;div id="outline-container-org06509fe" class="outline-2"&gt;
-&lt;h2 id="org06509fe"&gt;The Noise Walker&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org06509fe"&gt;
+&lt;div id="outline-container-org812c995" class="outline-2"&gt;
+&lt;h2 id="org812c995"&gt;The Noise Walker&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org812c995"&gt;
 &lt;p&gt;
 The NoiseWalker keeps track of its position on the canvas as well as moving itself and plotting a circle in its current location. Its constructor starts it at the center of the canvas and creates a noise-offset vector to hold the inputs to the noise function. The noise-offset vector is initially given random x and y values so they aren't the same - since &lt;code&gt;noise&lt;/code&gt; is a function if we passed in the same value to it for both x and y they would both get the same value out of it and we'd end up with a diagonal line instead of something that looks random-ish the way that we want.
 &lt;/p&gt;
@@ -2512,9 +2518,9 @@ The first call to the &lt;code&gt;walk&lt;/code&gt; method will clobber the init
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org9c5d78d" class="outline-3"&gt;
-&lt;h3 id="org9c5d78d"&gt;Noise Value Offset&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org9c5d78d"&gt;
+&lt;div id="outline-container-org8d9499c" class="outline-3"&gt;
+&lt;h3 id="org8d9499c"&gt;Noise Value Offset&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org8d9499c"&gt;
 &lt;p&gt;
 This property will return the current value of the slider. It's maybe overkill, but I'm trying to re-learn javascript along with p5 and follow along with &lt;i&gt;The Nature of Code&lt;/i&gt; so I need things to be extra-obvious, sometimes.
 &lt;/p&gt;
@@ -2529,9 +2535,9 @@ This property will return the current value of the slider. It's maybe overkill, 
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org3d5f02c" class="outline-3"&gt;
-&lt;h3 id="org3d5f02c"&gt;Walk&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org3d5f02c"&gt;
+&lt;div id="outline-container-orgc811118" class="outline-3"&gt;
+&lt;h3 id="orgc811118"&gt;Walk&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgc811118"&gt;
 &lt;p&gt;
 The &lt;code&gt;walk&lt;/code&gt; method moves the walker by adding some noise to its position. The &lt;code&gt;noise&lt;/code&gt; function outputs a value from 0 to 1 so I'll use it as a scale factor for the width and height of the canvas to get the new location of the walker. Note that we're not using the prior position of the walker when calculating the new one, just the noise.
 &lt;/p&gt;
@@ -2546,9 +2552,9 @@ The &lt;code&gt;walk&lt;/code&gt; method moves the walker by adding some noise t
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgf28ce22" class="outline-3"&gt;
-&lt;h3 id="orgf28ce22"&gt;Show Yourself&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgf28ce22"&gt;
+&lt;div id="outline-container-org9059d48" class="outline-3"&gt;
+&lt;h3 id="org9059d48"&gt;Show Yourself&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org9059d48"&gt;
 &lt;p&gt;
 The Noise Walker's &lt;code&gt;show_yourself&lt;/code&gt; method draws a circle wherever the walker happens to be at the moment. Nothing fancy.
 &lt;/p&gt;
@@ -2563,9 +2569,9 @@ The Noise Walker's &lt;code&gt;show_yourself&lt;/code&gt; method draws a circle 
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org4628008" class="outline-2"&gt;
-&lt;h2 id="org4628008"&gt;The Sketch&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org4628008"&gt;
+&lt;div id="outline-container-org5a43606" class="outline-2"&gt;
+&lt;h2 id="org5a43606"&gt;The Sketch&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org5a43606"&gt;
 &lt;p&gt;
 I'll put the sketch in a function named "noise_walk".
 &lt;/p&gt;
@@ -2582,9 +2588,9 @@ I'll put the sketch in a function named "noise_walk".
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orga6c4036" class="outline-3"&gt;
-&lt;h3 id="orga6c4036"&gt;Set Up&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orga6c4036"&gt;
+&lt;div id="outline-container-org1c86f1b" class="outline-3"&gt;
+&lt;h3 id="org1c86f1b"&gt;Set Up&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org1c86f1b"&gt;
 &lt;p&gt;
 The &lt;code&gt;setup&lt;/code&gt; method will create the canvas, a slider which the user can use to change the size of the steps the walker takes along the noise offset, and the walker itself. The canvas and slider are placed based on the order in which you create them. In this case I wanted the slider underneath the canvas so I had to define it after the canvas (but before the walker since I pass it to the walker).
 &lt;/p&gt;
@@ -2608,9 +2614,9 @@ The &lt;code&gt;setup&lt;/code&gt; method will create the canvas, a slider which
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org8145807" class="outline-3"&gt;
-&lt;h3 id="org8145807"&gt;Draw&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org8145807"&gt;
+&lt;div id="outline-container-orgef39318" class="outline-3"&gt;
+&lt;h3 id="orgef39318"&gt;Draw&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgef39318"&gt;
 &lt;p&gt;
 The draw function moves and shows the walker.
 &lt;/p&gt;
@@ -2632,24 +2638,24 @@ The draw function moves and shows the walker.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgc776a51" class="outline-2"&gt;
-&lt;h2 id="orgc776a51"&gt;The End&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgc776a51"&gt;
+&lt;div id="outline-container-orgec4eae0" class="outline-2"&gt;
+&lt;h2 id="orgec4eae0"&gt;The End&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgec4eae0"&gt;
 &lt;p&gt;
 And there's the code for the sketch at the top of the page.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org7d9b6fe" class="outline-2"&gt;
-&lt;h2 id="org7d9b6fe"&gt;Sources&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org7d9b6fe"&gt;
+&lt;div id="outline-container-orga67f29a" class="outline-2"&gt;
+&lt;h2 id="orga67f29a"&gt;Sources&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orga67f29a"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;Nature of Code [Internet]. [cited 2023 May 11]. Available from: &lt;a href="https://nature-of-code-2nd-edition.netlify.app/"&gt;https://nature-of-code-2nd-edition.netlify.app/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;p5 reference | noise() [Internet]. [cited 2023 Apr 25]. Available from: &lt;a href="https://p5js.org/reference/#/p5/noise"&gt;https://p5js.org/reference/#/p5/noise&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><category>nature of code</category><category>noise</category><category>p5</category><guid>https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html</guid><pubDate>Thu, 11 May 2023 01:16:09 GMT</pubDate></item><item><title>A Random Walk(er)</title><link>https://necromuralist.github.io/Ape-Iron/posts/a-random-walker/index.html</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;p&gt;
+&lt;/div&gt;</description><category>nature of code</category><category>noise</category><category>p5</category><guid>https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html</guid><pubDate>Thu, 11 May 2023 01:16:09 GMT</pubDate></item><item><title>A Random Walk(er)</title><link>https://necromuralist.github.io/Ape-Iron/posts/a-random-walker/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;p&gt;
 &lt;script src="https://necromuralist.github.io/Ape-Iron/posts/a-random-walker/walker.js"&gt;&lt;/script&gt;
 &lt;script src="https://necromuralist.github.io/Ape-Iron/posts/a-random-walker/sketch.js"&gt;&lt;/script&gt;
 
@@ -2664,18 +2670,18 @@ This is a look at the &lt;a href="https://thecodingtrain.com/tracks/the-nature-o
 I'm going to illustrate this by creating an object that takes a &lt;a href="https://en.wikipedia.org/wiki/Random_walk?useskin=vector"&gt;random walk&lt;/a&gt;.
 &lt;/p&gt;
 
-&lt;div id="outline-container-org90db340" class="outline-2"&gt;
-&lt;h2 id="org90db340"&gt;The Walker&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org90db340"&gt;
+&lt;div id="outline-container-org4cffbf3" class="outline-2"&gt;
+&lt;h2 id="org4cffbf3"&gt;The Walker&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org4cffbf3"&gt;
 &lt;p&gt;
 First up is a Walker class that keeps track of its position on the canvas, updates the position, and draws itself. I'm thinking that drawing itself doesn't seem right, but I suppose since we're only creating one object moving the drawing outside of the class is more work than what's needed.
 &lt;/p&gt;
 &lt;/div&gt;
 
 
-&lt;div id="outline-container-org05c1fee" class="outline-3"&gt;
-&lt;h3 id="org05c1fee"&gt;The Constructor&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org05c1fee"&gt;
+&lt;div id="outline-container-org306bca8" class="outline-3"&gt;
+&lt;h3 id="org306bca8"&gt;The Constructor&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org306bca8"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cm"&gt;/** The Random Walker */&lt;/span&gt;
 &lt;span class="kd"&gt;class&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;Walker&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="cm"&gt;/** Create the walker&lt;/span&gt;
@@ -2695,9 +2701,9 @@ First up is a Walker class that keeps track of its position on the canvas, updat
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgedaff31" class="outline-3"&gt;
-&lt;h3 id="orgedaff31"&gt;The Step Property&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgedaff31"&gt;
+&lt;div id="outline-container-orga1b71b6" class="outline-3"&gt;
+&lt;h3 id="orga1b71b6"&gt;The Step Property&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orga1b71b6"&gt;
 &lt;p&gt;
 In the Coding Train video he increments the coordinates of the position vector separately, but since this is supposed to be about vectors I thought it should add another vector. This one was a little bit of a head-scratcher at first, though. &lt;code&gt;p5&lt;/code&gt; will make a two-dimensional vector for you with the x and y values set to some random value from -1 to 1 (it's a unit vector set to a random angle) using &lt;a href="https://p5js.org/reference/#/p5.Vector/random2D"&gt;p5.Vector.random2D&lt;/a&gt;. But the &lt;code&gt;p5&lt;/code&gt; we need to use isn't our &lt;code&gt;p5&lt;/code&gt; but rather the global p5 object. The &lt;code&gt;p5&lt;/code&gt; instance we hold doesn't have the &lt;code&gt;Vector&lt;/code&gt; class definition, for some reason (which is why you need to use &lt;code&gt;createVector&lt;/code&gt; I guess).
 &lt;/p&gt;
@@ -2716,9 +2722,9 @@ Since the random values are from -1 to 1 I'm multiplying it by a user-specified 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org6242d38" class="outline-3"&gt;
-&lt;h3 id="org6242d38"&gt;The Update Method&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org6242d38"&gt;
+&lt;div id="outline-container-org72538cc" class="outline-3"&gt;
+&lt;h3 id="org72538cc"&gt;The Update Method&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org72538cc"&gt;
 &lt;p&gt;
 It would have been nice if p5 vectors could be added using operators, but instead we need to use the &lt;code&gt;add&lt;/code&gt; method. Weirdly, &lt;a href="https://p5js.org/reference/#/p5.Vector/add"&gt;the Vector.add documentation&lt;/a&gt; doesn't cover the case where you pass a vector to another vector's &lt;code&gt;add&lt;/code&gt; method, only the cases where you're adding the arguments separately, adding an array of values, or adding two vectors using the &lt;code&gt;p5.Vector.add&lt;/code&gt;  static method. It appears to do an in-place update, though, so I'll assume that that's what it does.
 &lt;/p&gt;
@@ -2731,9 +2737,9 @@ It would have been nice if p5 vectors could be added using operators, but instea
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org570b35a" class="outline-3"&gt;
-&lt;h3 id="org570b35a"&gt;The Show Method&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org570b35a"&gt;
+&lt;div id="outline-container-orgbfa167e" class="outline-3"&gt;
+&lt;h3 id="orgbfa167e"&gt;The Show Method&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgbfa167e"&gt;
 &lt;p&gt;
 This is where the walker draws itself. Even though we're using a vector to hold the position, you still need to unpack the coordinates when calling the &lt;code&gt;point&lt;/code&gt; method.
 &lt;/p&gt;
@@ -2748,9 +2754,9 @@ This is where the walker draws itself. Even though we're using a vector to hold 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org29f3701" class="outline-3"&gt;
-&lt;h3 id="org29f3701"&gt;Move and Show&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org29f3701"&gt;
+&lt;div id="outline-container-org3714b81" class="outline-3"&gt;
+&lt;h3 id="org3714b81"&gt;Move and Show&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org3714b81"&gt;
 &lt;p&gt;
 Not really needed, but I'd rather make one function call for the user to move the walker and have it draw itself.
 &lt;/p&gt;
@@ -2764,17 +2770,17 @@ Not really needed, but I'd rather make one function call for the user to move th
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org9c34139" class="outline-2"&gt;
-&lt;h2 id="org9c34139"&gt;The Sketch&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org9c34139"&gt;
+&lt;div id="outline-container-org149787a" class="outline-2"&gt;
+&lt;h2 id="org149787a"&gt;The Sketch&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org149787a"&gt;
 &lt;p&gt;
 Now the sketch. It seems a little awkward, but since the Walker definition is in a separate file from the sketch definition we need to remember add a &lt;code&gt;script&lt;/code&gt; tag to the HTML for both of them. I guess you can think of that as the equivalent of an import, although it feels weird somehow.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org36d8630" class="outline-3"&gt;
-&lt;h3 id="org36d8630"&gt;Some Constants&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org36d8630"&gt;
+&lt;div id="outline-container-org2bebcbd" class="outline-3"&gt;
+&lt;h3 id="org2bebcbd"&gt;Some Constants&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org2bebcbd"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;WALKER_SKETCH_DIV&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"random-walker-sketch"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;HEIGHT&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;400&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;STEP_LIMIT&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;5&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -2783,9 +2789,9 @@ Now the sketch. It seems a little awkward, but since the Walker definition is in
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org1315a67" class="outline-3"&gt;
-&lt;h3 id="org1315a67"&gt;The Sketch Function&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org1315a67"&gt;
+&lt;div id="outline-container-org8016790" class="outline-3"&gt;
+&lt;h3 id="org8016790"&gt;The Sketch Function&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org8016790"&gt;
 &lt;p&gt;
 Nothing fancy here, we're just declaring the function and the &lt;code&gt;walker&lt;/code&gt; variable to hold our Walker object.
 &lt;/p&gt;
@@ -2797,9 +2803,9 @@ Nothing fancy here, we're just declaring the function and the &lt;code&gt;walker
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orge2749c6" class="outline-3"&gt;
-&lt;h3 id="orge2749c6"&gt;Set Up&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orge2749c6"&gt;
+&lt;div id="outline-container-org27bf659" class="outline-3"&gt;
+&lt;h3 id="org27bf659"&gt;Set Up&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org27bf659"&gt;
 &lt;p&gt;
 Set up the sketch by drawing the canvas and creating a Walker.
 &lt;/p&gt;
@@ -2815,9 +2821,9 @@ Set up the sketch by drawing the canvas and creating a Walker.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org8431479" class="outline-3"&gt;
-&lt;h3 id="org8431479"&gt;Draw&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org8431479"&gt;
+&lt;div id="outline-container-org0a17da0" class="outline-3"&gt;
+&lt;h3 id="org0a17da0"&gt;Draw&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org0a17da0"&gt;
 &lt;p&gt;
 Our &lt;code&gt;draw&lt;/code&gt; function defers to the walker to do everything.
 &lt;/p&gt;
@@ -2831,74 +2837,74 @@ Our &lt;code&gt;draw&lt;/code&gt; function defers to the walker to do everything
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgc17c5d7" class="outline-2"&gt;
-&lt;h2 id="orgc17c5d7"&gt;The End&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgc17c5d7"&gt;
+&lt;div id="outline-container-orgdd77bae" class="outline-2"&gt;
+&lt;h2 id="orgdd77bae"&gt;The End&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgdd77bae"&gt;
 &lt;p&gt;
 And there it is. One thing to note is that there's no checking of the position to see if it's wandered off the canvas so it's possible that it will wander completely off and updates won't be visible.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org2f4269a" class="outline-2"&gt;
-&lt;h2 id="org2f4269a"&gt;Sources&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org2f4269a"&gt;
+&lt;div id="outline-container-orgc478d7c" class="outline-2"&gt;
+&lt;h2 id="orgc478d7c"&gt;Sources&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgc478d7c"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org5bedee9" class="outline-3"&gt;
-&lt;h3 id="org5bedee9"&gt;The Coding Train&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org5bedee9"&gt;
+&lt;div id="outline-container-org700f2e3" class="outline-3"&gt;
+&lt;h3 id="org700f2e3"&gt;The Coding Train&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org700f2e3"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;What is a Vector? [Internet]. [cited 2023 May 9]. Available from: &lt;a href="https://thecodingtrain.com"&gt;https://thecodingtrain.com&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org404440a" class="outline-3"&gt;
-&lt;h3 id="org404440a"&gt;P5 Reference&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org404440a"&gt;
+&lt;div id="outline-container-org32bd9c4" class="outline-3"&gt;
+&lt;h3 id="org32bd9c4"&gt;P5 Reference&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org32bd9c4"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;P5 reference | createVector() [Internet]. [cited 2023 May 9]. Available from: &lt;a href="https://p5js.org/reference/#/p5/createVector"&gt;https://p5js.org/reference/#/p5/createVector&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;P5 reference | p5.Vector [Internet]. [cited 2023 May 9]. Available from: &lt;a href="https://p5js.org/reference/#/p5.Vector"&gt;https://p5js.org/reference/#/p5.Vector&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><category>nature of code</category><category>p5</category><guid>https://necromuralist.github.io/Ape-Iron/posts/a-random-walker/index.html</guid><pubDate>Tue, 09 May 2023 20:07:44 GMT</pubDate></item><item><title>Graphing P5 Noise</title><link>https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
+&lt;/div&gt;</description><category>nature of code</category><category>p5</category><guid>https://necromuralist.github.io/Ape-Iron/posts/a-random-walker/index.html</guid><pubDate>Tue, 09 May 2023 20:07:44 GMT</pubDate></item><item><title>Graphing P5 Noise</title><link>https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgef6d1d5"&gt;What Is This About?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgdb3bf8d"&gt;Setup The Sketch&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org6b4debc"&gt;What Is This About?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orge68d066"&gt;Setup The Sketch&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org8ad9d93"&gt;Name The Parent DIV&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org3ea1835"&gt;The Instance Container Function&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org14bb447"&gt;Name The Parent DIV&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgf867bf4"&gt;The Instance Container Function&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org2bc23d3"&gt;Constants and Variables&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgf7bbdf3"&gt;Constants and Variables&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgd96bf07"&gt;The Noise Space&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org0436ad5"&gt;The Slider&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgc57de98"&gt;Colors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org424d223"&gt;The Noise Space&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org6a8e84d"&gt;The Slider&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org6572cf8"&gt;Colors&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org0e1a831"&gt;Setup&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org2a99f17"&gt;Setup&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org8dbc48c"&gt;Canvas and Line&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org2b4df2f"&gt;Slider&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org0929dd4"&gt;Canvas and Line&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orga7a147e"&gt;Slider&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org970d74b"&gt;Draw&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org956189e"&gt;Draw&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org08637e7"&gt;The Draw Function&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org3ba4781"&gt;Setup The Next Frame&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orga823d0a"&gt;Plot Next Frame&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org26a1d0a"&gt;Move the Noise Input&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org23d68fb"&gt;Slider Label&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgfa4c00c"&gt;Once Again But As a Picture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org457adfc"&gt;The Draw Function&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgaad5426"&gt;Setup The Next Frame&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org078a79d"&gt;Plot Next Frame&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org6bac0ad"&gt;Move the Noise Input&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgbf981bf"&gt;Slider Label&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org2014195"&gt;Once Again But As a Picture&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org6695ab5"&gt;Make The Sketch Object&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgafb6415"&gt;And That's It, Then&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org1f0ce6b"&gt;Sources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org9538842"&gt;Make The Sketch Object&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgc18426a"&gt;And That's It, Then&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgdda5dfe"&gt;Sources&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -2911,9 +2917,9 @@ And there it is. One thing to note is that there's no checking of the position t
 The slider controls how big a step the graph takes along the &lt;code&gt;noise&lt;/code&gt; space with each move to the right along the x-axis (moving the slider to the right makes the steps bigger so the line looks noisier). 
 &lt;/p&gt;
 
-&lt;div id="outline-container-orgef6d1d5" class="outline-2"&gt;
-&lt;h2 id="orgef6d1d5"&gt;What Is This About?&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgef6d1d5"&gt;
+&lt;div id="outline-container-org6b4debc" class="outline-2"&gt;
+&lt;h2 id="org6b4debc"&gt;What Is This About?&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org6b4debc"&gt;
 &lt;p&gt;
 The plot is a visualization of the p5.js &lt;a href="https://p5js.org/reference/#/p5/noise"&gt;noise&lt;/a&gt; function. I got the idea for it from &lt;a href="https://thecodingtrain.com/tracks/the-nature-of-code-2/noc/perlin/graphing-1d-perlin-noise"&gt;the Coding Train&lt;/a&gt; but the author of that site explains it by talking about it in a video so I thought I'd re-do it so I can understand what the code is doing a little better. The &lt;a href="https://p5js.org/reference/#/p5/noise"&gt;p5 documentation&lt;/a&gt; and the &lt;b&gt;Coding Train&lt;/b&gt; both describe the &lt;code&gt;noise&lt;/code&gt; function as producing &lt;a href="https://en.wikipedia.org/w/index.php?title=Perlin_noise&amp;amp;oldid=1148235423"&gt;Perlin noise&lt;/a&gt;, and Dan Shiffman (the &lt;b&gt;Coding Train&lt;/b&gt; author) even goes on to point out that it's the original version of perlin noise from 1983 and in a later video he shows how to implement &lt;a href="https://en.wikipedia.org/w/index.php?title=Simplex_noise&amp;amp;oldid=1103667712"&gt;Simplex Noise&lt;/a&gt;, an improved version created by Ken Perlin, the author of the original Perlin Noise. On the github site for Processing, however, there are two issues that claim that processing's &lt;code&gt;noise&lt;/code&gt; isn't really &lt;i&gt;perlin&lt;/i&gt; noise but rather a form of &lt;a href="https://en.wikipedia.org/w/index.php?title=Value_noise&amp;amp;oldid=1024311499"&gt;Value Noise&lt;/a&gt;. 
 &lt;/p&gt;
@@ -2924,16 +2930,16 @@ I don't know enough to know what's right, so I'll just call it noise or p5's noi
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgdb3bf8d" class="outline-2"&gt;
-&lt;h2 id="orgdb3bf8d"&gt;Setup The Sketch&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgdb3bf8d"&gt;
+&lt;div id="outline-container-orge68d066" class="outline-2"&gt;
+&lt;h2 id="orge68d066"&gt;Setup The Sketch&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orge68d066"&gt;
 &lt;p&gt;
 Now on to the code. This first section isn't really about plotting the graph but rather about setting up the P5 sketch in the HTML.
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org8ad9d93" class="outline-3"&gt;
-&lt;h3 id="org8ad9d93"&gt;Name The Parent DIV&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org8ad9d93"&gt;
+&lt;div id="outline-container-org14bb447" class="outline-3"&gt;
+&lt;h3 id="org14bb447"&gt;Name The Parent DIV&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org14bb447"&gt;
 &lt;p&gt;
 We're making a &lt;code&gt;div&lt;/code&gt; to stick the sketch into the page so here's the ID we'll use for that &lt;code&gt;div&lt;/code&gt; so the code can refer to it.
 &lt;/p&gt;
@@ -2942,9 +2948,9 @@ We're making a &lt;code&gt;div&lt;/code&gt; to stick the sketch into the page so
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org3ea1835" class="outline-3"&gt;
-&lt;h3 id="org3ea1835"&gt;The Instance Container Function&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org3ea1835"&gt;
+&lt;div id="outline-container-orgf867bf4" class="outline-3"&gt;
+&lt;h3 id="orgf867bf4"&gt;The Instance Container Function&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgf867bf4"&gt;
 &lt;p&gt;
 To keep all the variables for the sketch contained in its scope we're going to use a function (&lt;code&gt;noise_graph&lt;/code&gt;) to act as a closure.
 &lt;/p&gt;
@@ -2954,17 +2960,17 @@ To keep all the variables for the sketch contained in its scope we're going to u
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org2bc23d3" class="outline-2"&gt;
-&lt;h2 id="org2bc23d3"&gt;Constants and Variables&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org2bc23d3"&gt;
+&lt;div id="outline-container-orgf7bbdf3" class="outline-2"&gt;
+&lt;h2 id="orgf7bbdf3"&gt;Constants and Variables&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgf7bbdf3"&gt;
 &lt;p&gt;
 Now we're into the p5 sketch code (contained within &lt;code&gt;noise_graph&lt;/code&gt;). Before defining the &lt;code&gt;setup&lt;/code&gt; and &lt;code&gt;draw&lt;/code&gt; methods let's define some variables that we can use within them.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgd96bf07" class="outline-3"&gt;
-&lt;h3 id="orgd96bf07"&gt;The Noise Space&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgd96bf07"&gt;
+&lt;div id="outline-container-org424d223" class="outline-3"&gt;
+&lt;h3 id="org424d223"&gt;The Noise Space&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org424d223"&gt;
 &lt;p&gt;
 The inputs to the &lt;code&gt;noise&lt;/code&gt; function are what we'll call the &lt;code&gt;X_NOISE_COORDINATE&lt;/code&gt; (or variations on that name, anyway). Every time the canvas gets re-drawn we'll re-draw the graph by putting in a sequence of x-values starting at &lt;code&gt;STARTING_X_NOISE_COORDINATE&lt;/code&gt; and incrementing it by &lt;code&gt;X_NOISE_COORDINATE_STEP_SIZE&lt;/code&gt; as we move along the x-axis of the canvas.
 &lt;/p&gt;
@@ -2982,9 +2988,9 @@ The &lt;code&gt;X_NOISE_COORDINATE_STEP_SIZE&lt;/code&gt; is sort of a re-mappin
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org0436ad5" class="outline-3"&gt;
-&lt;h3 id="org0436ad5"&gt;The Slider&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org0436ad5"&gt;
+&lt;div id="outline-container-org6a8e84d" class="outline-3"&gt;
+&lt;h3 id="org6a8e84d"&gt;The Slider&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org6a8e84d"&gt;
 &lt;p&gt;
 These are some variables so we can add a slider to allow the user to change the step-size to increment the noise input. The slider step size of 0 means that there will be a continuous change in the value as the slider is moved, as opposed to giving it discrete values to jump to.
 &lt;/p&gt;
@@ -2999,9 +3005,9 @@ These are some variables so we can add a slider to allow the user to change the 
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgc57de98" class="outline-3"&gt;
-&lt;h3 id="orgc57de98"&gt;Colors&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgc57de98"&gt;
+&lt;div id="outline-container-org6572cf8" class="outline-3"&gt;
+&lt;h3 id="org6572cf8"&gt;Colors&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org6572cf8"&gt;
 &lt;p&gt;
 These are the color settings for the plot.
 &lt;/p&gt;
@@ -3015,9 +3021,9 @@ These are the color settings for the plot.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org0e1a831" class="outline-2"&gt;
-&lt;h2 id="org0e1a831"&gt;Setup&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org0e1a831"&gt;
+&lt;div id="outline-container-org2a99f17" class="outline-2"&gt;
+&lt;h2 id="org2a99f17"&gt;Setup&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org2a99f17"&gt;
 &lt;p&gt;
 Now we'll monkey-patch the &lt;code&gt;setup&lt;/code&gt; function that gets called once at the start of the animation.
 &lt;/p&gt;
@@ -3025,9 +3031,9 @@ Now we'll monkey-patch the &lt;code&gt;setup&lt;/code&gt; function that gets cal
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;setup&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org8dbc48c" class="outline-3"&gt;
-&lt;h3 id="org8dbc48c"&gt;Canvas and Line&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org8dbc48c"&gt;
+&lt;div id="outline-container-org0929dd4" class="outline-3"&gt;
+&lt;h3 id="org0929dd4"&gt;Canvas and Line&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org0929dd4"&gt;
 &lt;p&gt;
 The only possibly not-so-obvious thing here should be the &lt;code&gt;document.getElementById(NOISE_GRAPH_DIV).offsetWidth&lt;/code&gt; argument to the &lt;code&gt;createCanvas&lt;/code&gt; method which grabs the width of the container in which the plot is being put (not the width of the entire window).
 &lt;/p&gt;
@@ -3039,9 +3045,9 @@ The only possibly not-so-obvious thing here should be the &lt;code&gt;document.g
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org2b4df2f" class="outline-3"&gt;
-&lt;h3 id="org2b4df2f"&gt;Slider&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org2b4df2f"&gt;
+&lt;div id="outline-container-orga7a147e" class="outline-3"&gt;
+&lt;h3 id="orga7a147e"&gt;Slider&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orga7a147e"&gt;
 &lt;p&gt;
 Now we'll create the slider to let the user play with the step-size for the noise input.
 &lt;/p&gt;
@@ -3056,16 +3062,16 @@ Now we'll create the slider to let the user play with the step-size for the nois
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org970d74b" class="outline-2"&gt;
-&lt;h2 id="org970d74b"&gt;Draw&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org970d74b"&gt;
+&lt;div id="outline-container-org956189e" class="outline-2"&gt;
+&lt;h2 id="org956189e"&gt;Draw&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org956189e"&gt;
 &lt;p&gt;
 Here's where we define the &lt;code&gt;draw&lt;/code&gt; function that gets called repeatedly to animate our sketch.
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org08637e7" class="outline-3"&gt;
-&lt;h3 id="org08637e7"&gt;The Draw Function&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org08637e7"&gt;
+&lt;div id="outline-container-org457adfc" class="outline-3"&gt;
+&lt;h3 id="org457adfc"&gt;The Draw Function&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org457adfc"&gt;
 &lt;p&gt;
 Monkey patch the &lt;code&gt;draw&lt;/code&gt; method on the &lt;code&gt;p5&lt;/code&gt; object.
 &lt;/p&gt;
@@ -3074,9 +3080,9 @@ Monkey patch the &lt;code&gt;draw&lt;/code&gt; method on the &lt;code&gt;p5&lt;/
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org3ba4781" class="outline-3"&gt;
-&lt;h3 id="org3ba4781"&gt;Setup The Next Frame&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org3ba4781"&gt;
+&lt;div id="outline-container-orgaad5426" class="outline-3"&gt;
+&lt;h3 id="orgaad5426"&gt;Setup The Next Frame&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgaad5426"&gt;
 &lt;p&gt;
 We'll paint the canvas with a semi-opaque white on every refresh so that you can sort of see how the graph changes with each loop. We also create some variables:
 &lt;/p&gt;
@@ -3094,9 +3100,9 @@ We'll paint the canvas with a semi-opaque white on every refresh so that you can
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orga823d0a" class="outline-3"&gt;
-&lt;h3 id="orga823d0a"&gt;Plot Next Frame&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orga823d0a"&gt;
+&lt;div id="outline-container-org078a79d" class="outline-3"&gt;
+&lt;h3 id="org078a79d"&gt;Plot Next Frame&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org078a79d"&gt;
 &lt;p&gt;
 Here's where we plot the graph. We're going to draw the graph using connected line segments so before the loop starts we'll tell p5 to start the shape.
 &lt;/p&gt;
@@ -3133,9 +3139,9 @@ That's the end of the for-loop. Now, outside of the loop we call &lt;code&gt;end
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org26a1d0a" class="outline-3"&gt;
-&lt;h3 id="org26a1d0a"&gt;Move the Noise Input&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org26a1d0a"&gt;
+&lt;div id="outline-container-org6bac0ad" class="outline-3"&gt;
+&lt;h3 id="org6bac0ad"&gt;Move the Noise Input&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org6bac0ad"&gt;
 &lt;p&gt;
 Now we'll move the input for the noise function at the start of the graph a little. If we didn't the input to the noise function as we went through the loop would always be the same so our plot would just draw the same thing over and over again (well, if we move the slider to change the &lt;code&gt;noise_step_size&lt;/code&gt; it wouldn't be exactly the same, but the starting point would always be the same).
 &lt;/p&gt;
@@ -3148,9 +3154,9 @@ I'm not showing the closing braces (&lt;code&gt;}&lt;/code&gt;) to end the funct
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org23d68fb" class="outline-3"&gt;
-&lt;h3 id="org23d68fb"&gt;Slider Label&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org23d68fb"&gt;
+&lt;div id="outline-container-orgbf981bf" class="outline-3"&gt;
+&lt;h3 id="orgbf981bf"&gt;Slider Label&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgbf981bf"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;textSize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;32&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;textAlign&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;CENTER&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;fill&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"white"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
@@ -3162,9 +3168,9 @@ I'm not showing the closing braces (&lt;code&gt;}&lt;/code&gt;) to end the funct
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgfa4c00c" class="outline-3"&gt;
-&lt;h3 id="orgfa4c00c"&gt;Once Again But As a Picture&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgfa4c00c"&gt;
+&lt;div id="outline-container-org2014195" class="outline-3"&gt;
+&lt;h3 id="org2014195"&gt;Once Again But As a Picture&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org2014195"&gt;
 &lt;p&gt;
 &lt;img src="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/noise-for-loop-1250.webp" alt="for-loop-diagram"&gt;
 &lt;/p&gt;
@@ -3172,9 +3178,9 @@ I'm not showing the closing braces (&lt;code&gt;}&lt;/code&gt;) to end the funct
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org6695ab5" class="outline-2"&gt;
-&lt;h2 id="org6695ab5"&gt;Make The Sketch Object&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org6695ab5"&gt;
+&lt;div id="outline-container-org9538842" class="outline-2"&gt;
+&lt;h2 id="org9538842"&gt;Make The Sketch Object&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org9538842"&gt;
 &lt;p&gt;
 Next we pass our sketch definition to &lt;code&gt;p5&lt;/code&gt; to build it and attach it to our HTML div.
 &lt;/p&gt;
@@ -3182,17 +3188,17 @@ Next we pass our sketch definition to &lt;code&gt;p5&lt;/code&gt; to build it an
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgafb6415" class="outline-2"&gt;
-&lt;h2 id="orgafb6415"&gt;And That's It, Then&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgafb6415"&gt;
+&lt;div id="outline-container-orgc18426a" class="outline-2"&gt;
+&lt;h2 id="orgc18426a"&gt;And That's It, Then&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgc18426a"&gt;
 &lt;p&gt;
 At this point we should have a graph that helps to visualize how the &lt;code&gt;noise&lt;/code&gt; function changes over one-dimension. Noise to the aside, it's also a useful template for plotting any kind of graph, you'd just have to change the setting of the &lt;code&gt;y&lt;/code&gt; value to whatever other function you want to visualize.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org1f0ce6b" class="outline-2"&gt;
-&lt;h2 id="org1f0ce6b"&gt;Sources&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org1f0ce6b"&gt;
+&lt;div id="outline-container-orgdda5dfe" class="outline-2"&gt;
+&lt;h2 id="orgdda5dfe"&gt;Sources&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgdda5dfe"&gt;
 &lt;p&gt;
 P5 Reference:
 &lt;/p&gt;

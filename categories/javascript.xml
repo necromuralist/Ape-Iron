@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron (Posts about javascript)</title><link>https://necromuralist.github.io/Ape-Iron/</link><description></description><atom:link href="https://necromuralist.github.io/Ape-Iron/categories/javascript.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;Cloistered Monkey&lt;/a&gt; &lt;p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"&gt;&lt;a property="dct:title" rel="cc:attributionURL" href="https://necromuralist.github.io/Ape-Iron/"&gt;Ape Iron&lt;/a&gt; by &lt;a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/necromuralist"&gt;The Cloistered Monkey&lt;/a&gt; is licensed under &lt;a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY 4.0&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;&lt;img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;&lt;/a&gt;&lt;/p&gt;</copyright><lastBuildDate>Mon, 26 Jun 2023 21:26:50 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Cucumber and Ecma Script Modules (ESM) In a Nikola Post</title><link>https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron (Posts about javascript)</title><link>https://necromuralist.github.io/Ape-Iron/</link><description></description><atom:link href="https://necromuralist.github.io/Ape-Iron/categories/javascript.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;The Cloistered Monkey&lt;/a&gt; 
+&lt;div id="license" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"&gt;&lt;span property="dct:title"&gt;Ape-Iron&lt;/span&gt; is licensed under
+&lt;a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY-SA 4.0
+&lt;img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;
+&lt;img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;
+&lt;img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"&gt;&lt;/a&gt;&lt;/p&gt; 
+</copyright><lastBuildDate>Sat, 01 Jul 2023 20:55:17 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Cucumber and Ecma Script Modules (ESM) In a Nikola Post</title><link>https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
@@ -413,48 +419,48 @@ These are (mostly) referred to in the body of the post, and the body also has li
 &lt;li&gt;CommonJS. In: Wikipedia [Internet]. 2023 [cited 2023 Jun 19]. Available from: &lt;a href="https://en.wikipedia.org/w/index.php?title=CommonJS&amp;amp;oldid=1154931652"&gt;https://en.wikipedia.org/w/index.php?title=CommonJS&amp;amp;oldid=1154931652&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><category>bdd</category><category>cucumber</category><category>javascript</category><category>p5.js</category><category>testing</category><guid>https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html</guid><pubDate>Thu, 15 Jun 2023 23:21:32 GMT</pubDate></item><item><title>Testing P5 with Mocha and Chai</title><link>https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html</link><dc:creator>Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
+&lt;/div&gt;</description><category>bdd</category><category>cucumber</category><category>javascript</category><category>p5.js</category><category>testing</category><guid>https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html</guid><pubDate>Thu, 15 Jun 2023 23:21:32 GMT</pubDate></item><item><title>Testing P5 with Mocha and Chai</title><link>https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org485e924"&gt;What This Is&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgf28fc9b"&gt;Setting Up the Tests&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgb4db9dc"&gt;What This Is&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orga414a3e"&gt;Setting Up the Tests&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org7db12d9"&gt;Running the Tests&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org2586ed6"&gt;Writing the Test File&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org49e00a6"&gt;Import Chai and Sinon&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orga02d251"&gt;Import the Color Increaser Class&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org3be5456"&gt;Running the Tests&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orge5276fc"&gt;Writing the Test File&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org87492f3"&gt;Import Chai and Sinon&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org102e6a3"&gt;Import the Color Increaser Class&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgc1570ec"&gt;The Whole Code Module&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgfe47b8d"&gt;Channel Constants&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgfa81f39"&gt;Testing and Implementing the Color Increaser&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgae5cdab"&gt;The Whole Code Module&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgd4e0b0b"&gt;Channel Constants&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgdd31627"&gt;Testing and Implementing the Color Increaser&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org31a6653"&gt;Mock Color&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org8ab844e"&gt;Setting Up the Tests&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org9b853ea"&gt;Does the ColorIncreaser Exist?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org81a8ae9"&gt;The ColorIncreaser Class&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org598aebc"&gt;Does it take an increment amount?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org20b4b4b"&gt;Does it take a color?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgf7fb929"&gt;The Increaser&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgdbab8ba"&gt;Does it wrap red back to 255 when it hits 256?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgbb9a2f3"&gt;Does Green Wrap Too?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgd77acf8"&gt;Does Blue Wrap Too?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org7075328"&gt;The Next Method&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgbbb394f"&gt;Does next return the color?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgc81898b"&gt;Export the Color Increaser&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org1604e7a"&gt;Running The tests&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgec4313a"&gt;Mock Color&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org47e53c0"&gt;Setting Up the Tests&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org643514e"&gt;Does the ColorIncreaser Exist?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgc2df984"&gt;The ColorIncreaser Class&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgfed60a1"&gt;Does it take an increment amount?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org1e80c51"&gt;Does it take a color?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org6729073"&gt;The Increaser&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgf9e20a7"&gt;Does it wrap red back to 255 when it hits 256?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org4de833a"&gt;Does Green Wrap Too?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org126642b"&gt;Does Blue Wrap Too?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org93558d6"&gt;The Next Method&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgbeb447b"&gt;Does next return the color?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org3c2a359"&gt;Export the Color Increaser&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org7759460"&gt;Running The tests&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org5904558"&gt;The Sketch&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgb3d06a2"&gt;The Sketch&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org0b2e7d6"&gt;The Sketch Function&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org0684069"&gt;The &lt;code&gt;setup&lt;/code&gt; Function&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org4e12bd0"&gt;The &lt;code&gt;draw&lt;/code&gt; Function&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org6e10dbe"&gt;The Sketch Function&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgd6b58b9"&gt;The &lt;code&gt;setup&lt;/code&gt; Function&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org66da868"&gt;The &lt;code&gt;draw&lt;/code&gt; Function&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org0771b69"&gt;The End&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org6bf6830"&gt;Sources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org22015bb"&gt;The End&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org2367191"&gt;Sources&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -466,22 +472,22 @@ These are (mostly) referred to in the body of the post, and the body also has li
 &lt;/p&gt;&lt;div class="p5js" id="6a5fb18a-bdd-sketch"&gt;&lt;/div&gt;
 
 
-&lt;div id="outline-container-org485e924" class="outline-2"&gt;
-&lt;h2 id="org485e924"&gt;What This Is&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org485e924"&gt;
+&lt;div id="outline-container-orgb4db9dc" class="outline-2"&gt;
+&lt;h2 id="orgb4db9dc"&gt;What This Is&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgb4db9dc"&gt;
 &lt;p&gt;
 This is a walk-through of the &lt;a href="https://p5js.org/learn/tdd.html"&gt;test-driven development example&lt;/a&gt; on the &lt;a href="https://p5js.org/"&gt;p5js site&lt;/a&gt;. The color changing square above is created by exhaustively stepping through the RGB values for a p5 &lt;a href="https://p5js.org/reference/#/p5.Color"&gt;color&lt;/a&gt;. The site documentation doesn't seem to tell you the name of the color array attribute so you can access it, instead it tells you to use setter methods, but the tutorial indicates that the array is stored as an attribute of the color object named &lt;code&gt;levels&lt;/code&gt; so we'll be working with that to change the colors.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgf28fc9b" class="outline-2"&gt;
-&lt;h2 id="orgf28fc9b"&gt;Setting Up the Tests&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgf28fc9b"&gt;
+&lt;div id="outline-container-orga414a3e" class="outline-2"&gt;
+&lt;h2 id="orga414a3e"&gt;Setting Up the Tests&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orga414a3e"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org7db12d9" class="outline-3"&gt;
-&lt;h3 id="org7db12d9"&gt;Running the Tests&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org7db12d9"&gt;
+&lt;div id="outline-container-org3be5456" class="outline-3"&gt;
+&lt;h3 id="org3be5456"&gt;Running the Tests&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org3be5456"&gt;
 &lt;p&gt;
 To run the tests I'll use three things:
 &lt;/p&gt;
@@ -516,13 +522,13 @@ Weirdly, the mocha &lt;a href="https://mochajs.org/#getting-started"&gt;Getting 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org2586ed6" class="outline-3"&gt;
-&lt;h3 id="org2586ed6"&gt;Writing the Test File&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org2586ed6"&gt;
+&lt;div id="outline-container-orge5276fc" class="outline-3"&gt;
+&lt;h3 id="orge5276fc"&gt;Writing the Test File&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orge5276fc"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org806d7a3" class="outline-4"&gt;
-&lt;h4 id="org806d7a3"&gt;Put It In Strict Mode&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org806d7a3"&gt;
+&lt;div id="outline-container-orge446307" class="outline-4"&gt;
+&lt;h4 id="orge446307"&gt;Put It In Strict Mode&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orge446307"&gt;
 &lt;p&gt;
 Javascript can be pretty lenient about letting what might be considered mistakes pass through without raising an error. I'll put the test-code into &lt;a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode"&gt;Strict Mode&lt;/a&gt;, making our mistakes more evident, hopefully, by putting this line at the top of the &lt;code&gt;test.js&lt;/code&gt; file:
 &lt;/p&gt;
@@ -533,9 +539,9 @@ Javascript can be pretty lenient about letting what might be considered mistakes
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org49e00a6" class="outline-3"&gt;
-&lt;h3 id="org49e00a6"&gt;Import Chai and Sinon&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org49e00a6"&gt;
+&lt;div id="outline-container-org87492f3" class="outline-3"&gt;
+&lt;h3 id="org87492f3"&gt;Import Chai and Sinon&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org87492f3"&gt;
 &lt;p&gt;
 I'm going to use the &lt;a href="https://en.wikipedia.org/wiki/Behavior-driven_development?useskin=vector"&gt;Behavior-Driven Development&lt;/a&gt; (BDD) version of &lt;a href="https://www.chaijs.com/api/bdd/"&gt;Chai&lt;/a&gt; to make our assertions about what we expect the code to be doing.
 &lt;/p&gt;
@@ -559,9 +565,9 @@ I'm also going to stub some methods using &lt;a href="https://sinonjs.org/"&gt;s
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orga02d251" class="outline-3"&gt;
-&lt;h3 id="orga02d251"&gt;Import the Color Increaser Class&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orga02d251"&gt;
+&lt;div id="outline-container-org102e6a3" class="outline-3"&gt;
+&lt;h3 id="org102e6a3"&gt;Import the Color Increaser Class&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org102e6a3"&gt;
 &lt;p&gt;
 We're going to create a &lt;code&gt;ColorIncreaser&lt;/code&gt; class which we need to import into the test code. Our import is going to look a little funky, though, because the sketch is in a folder created for this post.
 &lt;/p&gt;
@@ -596,9 +602,9 @@ Also, in order to be able to import the class we need to set it as exportable in
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgc1570ec" class="outline-2"&gt;
-&lt;h2 id="orgc1570ec"&gt;The Whole Code Module&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgc1570ec"&gt;
+&lt;div id="outline-container-orgae5cdab" class="outline-2"&gt;
+&lt;h2 id="orgae5cdab"&gt;The Whole Code Module&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgae5cdab"&gt;
 &lt;p&gt;
 Since this is about coding test-driven I'm going to show the tests and then the implementation that gets written to pass the test. This makes it kind of disorienting to read so I thought I'd show the entire &lt;code&gt;color-increaser.js&lt;/code&gt; file that's being created here exactly as it ends up once it's all done.
 &lt;/p&gt;
@@ -649,9 +655,9 @@ Since this is about coding test-driven I'm going to show the tests and then the 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgfe47b8d" class="outline-2"&gt;
-&lt;h2 id="orgfe47b8d"&gt;Channel Constants&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgfe47b8d"&gt;
+&lt;div id="outline-container-orgd4e0b0b" class="outline-2"&gt;
+&lt;h2 id="orgd4e0b0b"&gt;Channel Constants&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgd4e0b0b"&gt;
 &lt;p&gt;
 I have a tendency to flip values around (sometimes it seems like blue should come before green, for example) so I like to create objects to hold values that get used repeatedly. This at the top of the same module as the Color Increaser class.
 &lt;/p&gt;
@@ -667,17 +673,17 @@ I have a tendency to flip values around (sometimes it seems like blue should com
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgfa81f39" class="outline-2"&gt;
-&lt;h2 id="orgfa81f39"&gt;Testing and Implementing the Color Increaser&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgfa81f39"&gt;
+&lt;div id="outline-container-orgdd31627" class="outline-2"&gt;
+&lt;h2 id="orgdd31627"&gt;Testing and Implementing the Color Increaser&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgdd31627"&gt;
 &lt;p&gt;
 Now we'll write the tests and implement the &lt;code&gt;ColorIncreaser&lt;/code&gt; class along with it.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org31a6653" class="outline-3"&gt;
-&lt;h3 id="org31a6653"&gt;Mock Color&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org31a6653"&gt;
+&lt;div id="outline-container-orgec4313a" class="outline-3"&gt;
+&lt;h3 id="orgec4313a"&gt;Mock Color&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgec4313a"&gt;
 &lt;p&gt;
 We don't want to use any p5 objects in the testing so we'll make a fake &lt;a href="https://p5js.org/reference/#/p5/color"&gt;color&lt;/a&gt; object, implementing its undocumented (as far as I can tell) &lt;code&gt;levels&lt;/code&gt; attribute as an &lt;a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"&gt;Array&lt;/a&gt;.
 &lt;/p&gt;
@@ -696,9 +702,9 @@ We don't want to use any p5 objects in the testing so we'll make a fake &lt;a hr
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org8ab844e" class="outline-3"&gt;
-&lt;h3 id="org8ab844e"&gt;Setting Up the Tests&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org8ab844e"&gt;
+&lt;div id="outline-container-org47e53c0" class="outline-3"&gt;
+&lt;h3 id="org47e53c0"&gt;Setting Up the Tests&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org47e53c0"&gt;
 &lt;p&gt;
 &lt;code&gt;mocha&lt;/code&gt;'s &lt;code&gt;describe&lt;/code&gt; function acts like a header around our tests. Within it I'm setting some constants and also defining a &lt;code&gt;beforeEach&lt;/code&gt; function which will create a new &lt;code&gt;ColorIncreaser&lt;/code&gt; object before running each test so it won't have any changes we make in the other tests spilling over. Although I could import the &lt;code&gt;CHANNELS&lt;/code&gt; object with the constants I thought it'd be a better check to create a new set to double-check what's going on in the code being tested.
 &lt;/p&gt;
@@ -723,9 +729,9 @@ We don't want to use any p5 objects in the testing so we'll make a fake &lt;a hr
 &lt;/div&gt;
 
 
-&lt;div id="outline-container-org9b853ea" class="outline-3"&gt;
-&lt;h3 id="org9b853ea"&gt;Does the ColorIncreaser Exist?&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org9b853ea"&gt;
+&lt;div id="outline-container-org643514e" class="outline-3"&gt;
+&lt;h3 id="org643514e"&gt;Does the ColorIncreaser Exist?&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org643514e"&gt;
 &lt;p&gt;
 Our first test makes sure that we were able to create the &lt;code&gt;ColorIncreaser&lt;/code&gt; object. This is actually a little bit of a fake because the &lt;code&gt;beforeEach&lt;/code&gt; will fail if we can't create the object and it won't actually reach this test. I suppose you could still break it by making a function named &lt;code&gt;ColorIncreaser&lt;/code&gt; instead of a class so this acts as an extra check.
 &lt;/p&gt;
@@ -754,9 +760,9 @@ Mocha will &lt;a href="https://mochajs.org/#asynchronous-code"&gt;run the tests 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org81a8ae9" class="outline-3"&gt;
-&lt;h3 id="org81a8ae9"&gt;The ColorIncreaser Class&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org81a8ae9"&gt;
+&lt;div id="outline-container-orgc2df984" class="outline-3"&gt;
+&lt;h3 id="orgc2df984"&gt;The ColorIncreaser Class&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgc2df984"&gt;
 &lt;p&gt;
 Now that we have the test I'll define the class and its constructor. It's a pretty basic class, here's a class diagram of its attributes.
 &lt;/p&gt;
@@ -778,9 +784,9 @@ And here's the class and constructor definition.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org598aebc" class="outline-3"&gt;
-&lt;h3 id="org598aebc"&gt;Does it take an increment amount?&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org598aebc"&gt;
+&lt;div id="outline-container-orgfed60a1" class="outline-3"&gt;
+&lt;h3 id="orgfed60a1"&gt;Does it take an increment amount?&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgfed60a1"&gt;
 &lt;p&gt;
 This is just a sanity check to make sure that the constructor actually saved the increment amount we passed in.
 &lt;/p&gt;
@@ -794,9 +800,9 @@ This is just a sanity check to make sure that the constructor actually saved the
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org20b4b4b" class="outline-3"&gt;
-&lt;h3 id="org20b4b4b"&gt;Does it take a color?&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org20b4b4b"&gt;
+&lt;div id="outline-container-org1e80c51" class="outline-3"&gt;
+&lt;h3 id="org1e80c51"&gt;Does it take a color?&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org1e80c51"&gt;
 &lt;p&gt;
 This is another check to make sure the constructor saved the color object that got passed in. I couldn't find a same-object checker in &lt;code&gt;chai&lt;/code&gt; but the &lt;code&gt;eql&lt;/code&gt; is described as a check that the objects are "deeply-equal" which I assume is the same thing.
 &lt;/p&gt;
@@ -810,9 +816,9 @@ This is another check to make sure the constructor saved the color object that g
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgf7fb929" class="outline-3"&gt;
-&lt;h3 id="orgf7fb929"&gt;The Increaser&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgf7fb929"&gt;
+&lt;div id="outline-container-org6729073" class="outline-3"&gt;
+&lt;h3 id="org6729073"&gt;The Increaser&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org6729073"&gt;
 &lt;p&gt;
 We're going to implement a method for the &lt;code&gt;ColorIncreaser&lt;/code&gt; that will increment the color-array so let's check that it works. It sort of treats the three color channels (Red, Green, and Blue… we'll pretend Alpha doesn't exist) like a three-digit number using base 255 instead of 10 and with the digits being BGR. So we start with all three channels at 0, then we increment red from 0 to 255 and when it hits 256 we set it back to 0 and set green to 1, then we repeat this over and over until green goes up to 256 at which point we reset both red and green to 0 and set blue to 1 and so on.
 &lt;/p&gt;
@@ -826,9 +832,9 @@ I'll add a &lt;code&gt;describe&lt;/code&gt; section to the tests to make it cle
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgbdfe2a9" class="outline-4"&gt;
-&lt;h4 id="orgbdfe2a9"&gt;Does the red channel increase?&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgbdfe2a9"&gt;
+&lt;div id="outline-container-orge08b844" class="outline-4"&gt;
+&lt;h4 id="orge08b844"&gt;Does the red channel increase?&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orge08b844"&gt;
 &lt;p&gt;
 Until it increments the red channel past 255 the other channels don't change so we'll first test that only the red channel changes up until that point.
 &lt;/p&gt;
@@ -849,9 +855,9 @@ Until it increments the red channel past 255 the other channels don't change so 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org29e271a" class="outline-4"&gt;
-&lt;h4 id="org29e271a"&gt;The Color-Increaser Method&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org29e271a"&gt;
+&lt;div id="outline-container-org65c69ca" class="outline-4"&gt;
+&lt;h4 id="org65c69ca"&gt;The Color-Increaser Method&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org65c69ca"&gt;
 &lt;p&gt;
 So now I'll add the &lt;code&gt;increase&lt;/code&gt; method to the &lt;code&gt;ColorIncreaser&lt;/code&gt; class which adds the &lt;code&gt;color_increment&lt;/code&gt; to the red-channel when it's called.
 &lt;/p&gt;
@@ -863,9 +869,9 @@ So now I'll add the &lt;code&gt;increase&lt;/code&gt; method to the &lt;code&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgdbab8ba" class="outline-3"&gt;
-&lt;h3 id="orgdbab8ba"&gt;Does it wrap red back to 255 when it hits 256?&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgdbab8ba"&gt;
+&lt;div id="outline-container-orgf9e20a7" class="outline-3"&gt;
+&lt;h3 id="orgf9e20a7"&gt;Does it wrap red back to 255 when it hits 256?&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgf9e20a7"&gt;
 &lt;p&gt;
 The channels can only go up to 255 so once we hit 256:
 &lt;/p&gt;
@@ -940,9 +946,9 @@ These are our expected values before and after the call to &lt;code&gt;increase&
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org5326c60" class="outline-4"&gt;
-&lt;h4 id="org5326c60"&gt;The Wrap-Red Conditional&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org5326c60"&gt;
+&lt;div id="outline-container-org0a4509d" class="outline-4"&gt;
+&lt;h4 id="org0a4509d"&gt;The Wrap-Red Conditional&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org0a4509d"&gt;
 &lt;p&gt;
 Within the &lt;code&gt;increase&lt;/code&gt; method we add this little chunk after incrementing the red channel.
 &lt;/p&gt;
@@ -956,9 +962,9 @@ Within the &lt;code&gt;increase&lt;/code&gt; method we add this little chunk aft
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgbb9a2f3" class="outline-3"&gt;
-&lt;h3 id="orgbb9a2f3"&gt;Does Green Wrap Too?&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgbb9a2f3"&gt;
+&lt;div id="outline-container-org4de833a" class="outline-3"&gt;
+&lt;h3 id="org4de833a"&gt;Does Green Wrap Too?&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org4de833a"&gt;
 &lt;p&gt;
 As with red, the green channel can only go up to 255 so once we increase green to 256:
 &lt;/p&gt;
@@ -1038,9 +1044,9 @@ These are our expected values before and after the call to &lt;code&gt;increase&
 &lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="p"&gt;});&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgeb4223f" class="outline-4"&gt;
-&lt;h4 id="orgeb4223f"&gt;The Wrap-Green Conditional&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgeb4223f"&gt;
+&lt;div id="outline-container-org64d4982" class="outline-4"&gt;
+&lt;h4 id="org64d4982"&gt;The Wrap-Green Conditional&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org64d4982"&gt;
 &lt;p&gt;
 Now within the &lt;code&gt;increase&lt;/code&gt; method we add this little chunk after incrementing the red channel to check the green channel.
 &lt;/p&gt;
@@ -1054,9 +1060,9 @@ Now within the &lt;code&gt;increase&lt;/code&gt; method we add this little chunk
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgd77acf8" class="outline-3"&gt;
-&lt;h3 id="orgd77acf8"&gt;Does Blue Wrap Too?&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgd77acf8"&gt;
+&lt;div id="outline-container-org126642b" class="outline-3"&gt;
+&lt;h3 id="org126642b"&gt;Does Blue Wrap Too?&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org126642b"&gt;
 &lt;p&gt;
 As with red and green, the blue channel can only go up to 255 so once we increase blue to 256:
 &lt;/p&gt;
@@ -1132,9 +1138,9 @@ These are our expected values before and after the call to &lt;code&gt;increase&
 &lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="p"&gt;});&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org35797a7" class="outline-4"&gt;
-&lt;h4 id="org35797a7"&gt;The Wrap-Blue Conditional&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org35797a7"&gt;
+&lt;div id="outline-container-orgfec3498" class="outline-4"&gt;
+&lt;h4 id="orgfec3498"&gt;The Wrap-Blue Conditional&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgfec3498"&gt;
 &lt;p&gt;
 I originally just used a modulus to keep blue within range, but since we're allowing the user to change the increment this might not always go back to zero so here's the conditional that resets the blue channel if it exceeds the limit.
 &lt;/p&gt;
@@ -1151,9 +1157,9 @@ And there we have our exhaustive channel incrementer.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org7075328" class="outline-3"&gt;
-&lt;h3 id="org7075328"&gt;The Next Method&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org7075328"&gt;
+&lt;div id="outline-container-org93558d6" class="outline-3"&gt;
+&lt;h3 id="org93558d6"&gt;The Next Method&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org93558d6"&gt;
 &lt;p&gt;
 I'm going to implement a &lt;code&gt;next&lt;/code&gt; method to simplify things a little. It'll call increase and the return the color object. Just because.
 &lt;/p&gt;
@@ -1162,9 +1168,9 @@ I'm going to implement a &lt;code&gt;next&lt;/code&gt; method to simplify things
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org865e79e" class="outline-4"&gt;
-&lt;h4 id="org865e79e"&gt;Does the next method increase the color?&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org865e79e"&gt;
+&lt;div id="outline-container-orgaeaf23b" class="outline-4"&gt;
+&lt;h4 id="orgaeaf23b"&gt;Does the next method increase the color?&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgaeaf23b"&gt;
 &lt;p&gt;
 To check that next calls the &lt;code&gt;increase&lt;/code&gt; method I'll monkey-patch it with a &lt;a href="https://sinonjs.org/releases/latest/spies/"&gt;sinon spy&lt;/a&gt; and check that when we call &lt;code&gt;next&lt;/code&gt; the &lt;code&gt;increase&lt;/code&gt; spy gets called.
 &lt;/p&gt;
@@ -1181,9 +1187,9 @@ To check that next calls the &lt;code&gt;increase&lt;/code&gt; method I'll monke
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org438665c" class="outline-4"&gt;
-&lt;h4 id="org438665c"&gt;The Next Method&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org438665c"&gt;
+&lt;div id="outline-container-orgca05cdb" class="outline-4"&gt;
+&lt;h4 id="orgca05cdb"&gt;The Next Method&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgca05cdb"&gt;
 &lt;p&gt;
 Now I'll implement the &lt;code&gt;next&lt;/code&gt; method and have it call the &lt;code&gt;increase&lt;/code&gt; method.
 &lt;/p&gt;
@@ -1195,9 +1201,9 @@ Now I'll implement the &lt;code&gt;next&lt;/code&gt; method and have it call the
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgbbb394f" class="outline-3"&gt;
-&lt;h3 id="orgbbb394f"&gt;Does next return the color?&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgbbb394f"&gt;
+&lt;div id="outline-container-orgbeb447b" class="outline-3"&gt;
+&lt;h3 id="orgbeb447b"&gt;Does next return the color?&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgbeb447b"&gt;
 &lt;p&gt;
 Instead of requiring the user to make two calls I'll have the next method return the color object directly.
 &lt;/p&gt;
@@ -1211,9 +1217,9 @@ Instead of requiring the user to make two calls I'll have the next method return
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org4f13b3e" class="outline-4"&gt;
-&lt;h4 id="org4f13b3e"&gt;Return the color&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org4f13b3e"&gt;
+&lt;div id="outline-container-org15d4fe9" class="outline-4"&gt;
+&lt;h4 id="org15d4fe9"&gt;Return the color&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org15d4fe9"&gt;
 &lt;p&gt;
 Now in our &lt;code&gt;ColorIncreaser.next&lt;/code&gt; method we return the color.
 &lt;/p&gt;
@@ -1223,9 +1229,9 @@ Now in our &lt;code&gt;ColorIncreaser.next&lt;/code&gt; method we return the col
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgc81898b" class="outline-3"&gt;
-&lt;h3 id="orgc81898b"&gt;Export the Color Increaser&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgc81898b"&gt;
+&lt;div id="outline-container-org3c2a359" class="outline-3"&gt;
+&lt;h3 id="org3c2a359"&gt;Export the Color Increaser&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org3c2a359"&gt;
 &lt;p&gt;
 The implementation so far is good enough to get the code working within the p5 sketch, which would normally be the ultimate goal. But in order for the test code to be able to import the &lt;code&gt;ColorIncreaser&lt;/code&gt; (using the &lt;code&gt;require&lt;/code&gt; function) we need to add a line in the file with the &lt;code&gt;ColorIncreaser&lt;/code&gt; definition to export it.
 &lt;/p&gt;
@@ -1241,9 +1247,9 @@ The code given in the tutorial just has the export line, but this will raise an 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org1604e7a" class="outline-3"&gt;
-&lt;h3 id="org1604e7a"&gt;Running The tests&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org1604e7a"&gt;
+&lt;div id="outline-container-org7759460" class="outline-3"&gt;
+&lt;h3 id="org7759460"&gt;Running The tests&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org7759460"&gt;
 &lt;p&gt;
 Now, let's see what it looks like when we run the tests.
 &lt;/p&gt;
@@ -1251,7 +1257,7 @@ Now, let's see what it looks like when we run the tests.
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mocha ../tests/test*
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;pre class="example" id="org9a1ac08"&gt;
+&lt;pre class="example" id="orgfd6797a"&gt;
 
 
 Given the ColorIncreaser class definition
@@ -1280,17 +1286,17 @@ The output in the terminal has some color added to the text so it looks prettier
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org5904558" class="outline-2"&gt;
-&lt;h2 id="org5904558"&gt;The Sketch&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org5904558"&gt;
+&lt;div id="outline-container-orgb3d06a2" class="outline-2"&gt;
+&lt;h2 id="orgb3d06a2"&gt;The Sketch&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgb3d06a2"&gt;
 &lt;p&gt;
 Now that we have the &lt;code&gt;ColorIncreaser&lt;/code&gt; we can add it to a sketch to change the colors of the square that we're drawing.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org0b2e7d6" class="outline-3"&gt;
-&lt;h3 id="org0b2e7d6"&gt;The Sketch Function&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org0b2e7d6"&gt;
+&lt;div id="outline-container-org6e10dbe" class="outline-3"&gt;
+&lt;h3 id="org6e10dbe"&gt;The Sketch Function&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org6e10dbe"&gt;
 &lt;p&gt;
 As I noted before, I'm using the instance-mode syntax for the sketch so this is the function that holds the &lt;code&gt;setup&lt;/code&gt; and &lt;code&gt;draw&lt;/code&gt; functions.
 &lt;/p&gt;
@@ -1303,9 +1309,9 @@ As I noted before, I'm using the instance-mode syntax for the sketch so this is 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org0684069" class="outline-3"&gt;
-&lt;h3 id="org0684069"&gt;The &lt;code&gt;setup&lt;/code&gt; Function&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org0684069"&gt;
+&lt;div id="outline-container-orgd6b58b9" class="outline-3"&gt;
+&lt;h3 id="orgd6b58b9"&gt;The &lt;code&gt;setup&lt;/code&gt; Function&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgd6b58b9"&gt;
 &lt;p&gt;
 The setup  creates the canvas and color increaser instance.
 &lt;/p&gt;
@@ -1325,9 +1331,9 @@ The setup  creates the canvas and color increaser instance.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org4e12bd0" class="outline-3"&gt;
-&lt;h3 id="org4e12bd0"&gt;The &lt;code&gt;draw&lt;/code&gt; Function&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org4e12bd0"&gt;
+&lt;div id="outline-container-org66da868" class="outline-3"&gt;
+&lt;h3 id="org66da868"&gt;The &lt;code&gt;draw&lt;/code&gt; Function&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org66da868"&gt;
 &lt;p&gt;
 The draw sets the background color and increases its value once per frame.
 &lt;/p&gt;
@@ -1340,18 +1346,18 @@ The draw sets the background color and increases its value once per frame.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org0771b69" class="outline-2"&gt;
-&lt;h2 id="org0771b69"&gt;The End&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org0771b69"&gt;
+&lt;div id="outline-container-org22015bb" class="outline-2"&gt;
+&lt;h2 id="org22015bb"&gt;The End&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org22015bb"&gt;
 &lt;p&gt;
 So, there you go. The sketch wasn't so exciting, but the main value in going through the exercise, I think, was being able to get the javascript testing infrastructure working and getting back into using chai and sinon and the crazy world of module imports in javascript.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org6bf6830" class="outline-2"&gt;
-&lt;h2 id="org6bf6830"&gt;Sources&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org6bf6830"&gt;
+&lt;div id="outline-container-org2367191" class="outline-2"&gt;
+&lt;h2 id="org2367191"&gt;Sources&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org2367191"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;Behavior-driven development. In: Wikipedia [Internet]. 2023 [cited 2023 Jun 9]. Available from: &lt;a href="https://en.wikipedia.org/w/index.php?title=Behavior-driven_development&amp;amp;oldid=1158619924"&gt;https://en.wikipedia.org/w/index.php?title=Behavior-driven_development&amp;amp;oldid=1158619924&lt;/a&gt;&lt;/li&gt;
 

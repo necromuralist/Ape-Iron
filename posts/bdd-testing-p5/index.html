@@ -70,44 +70,44 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="index.html#org485e924">What This Is</a></li>
-<li><a href="index.html#orgf28fc9b">Setting Up the Tests</a>
+<li><a href="index.html#orgb4db9dc">What This Is</a></li>
+<li><a href="index.html#orga414a3e">Setting Up the Tests</a>
 <ul>
-<li><a href="index.html#org7db12d9">Running the Tests</a></li>
-<li><a href="index.html#org2586ed6">Writing the Test File</a></li>
-<li><a href="index.html#org49e00a6">Import Chai and Sinon</a></li>
-<li><a href="index.html#orga02d251">Import the Color Increaser Class</a></li>
+<li><a href="index.html#org3be5456">Running the Tests</a></li>
+<li><a href="index.html#orge5276fc">Writing the Test File</a></li>
+<li><a href="index.html#org87492f3">Import Chai and Sinon</a></li>
+<li><a href="index.html#org102e6a3">Import the Color Increaser Class</a></li>
 </ul>
 </li>
-<li><a href="index.html#orgc1570ec">The Whole Code Module</a></li>
-<li><a href="index.html#orgfe47b8d">Channel Constants</a></li>
-<li><a href="index.html#orgfa81f39">Testing and Implementing the Color Increaser</a>
+<li><a href="index.html#orgae5cdab">The Whole Code Module</a></li>
+<li><a href="index.html#orgd4e0b0b">Channel Constants</a></li>
+<li><a href="index.html#orgdd31627">Testing and Implementing the Color Increaser</a>
 <ul>
-<li><a href="index.html#org31a6653">Mock Color</a></li>
-<li><a href="index.html#org8ab844e">Setting Up the Tests</a></li>
-<li><a href="index.html#org9b853ea">Does the ColorIncreaser Exist?</a></li>
-<li><a href="index.html#org81a8ae9">The ColorIncreaser Class</a></li>
-<li><a href="index.html#org598aebc">Does it take an increment amount?</a></li>
-<li><a href="index.html#org20b4b4b">Does it take a color?</a></li>
-<li><a href="index.html#orgf7fb929">The Increaser</a></li>
-<li><a href="index.html#orgdbab8ba">Does it wrap red back to 255 when it hits 256?</a></li>
-<li><a href="index.html#orgbb9a2f3">Does Green Wrap Too?</a></li>
-<li><a href="index.html#orgd77acf8">Does Blue Wrap Too?</a></li>
-<li><a href="index.html#org7075328">The Next Method</a></li>
-<li><a href="index.html#orgbbb394f">Does next return the color?</a></li>
-<li><a href="index.html#orgc81898b">Export the Color Increaser</a></li>
-<li><a href="index.html#org1604e7a">Running The tests</a></li>
+<li><a href="index.html#orgec4313a">Mock Color</a></li>
+<li><a href="index.html#org47e53c0">Setting Up the Tests</a></li>
+<li><a href="index.html#org643514e">Does the ColorIncreaser Exist?</a></li>
+<li><a href="index.html#orgc2df984">The ColorIncreaser Class</a></li>
+<li><a href="index.html#orgfed60a1">Does it take an increment amount?</a></li>
+<li><a href="index.html#org1e80c51">Does it take a color?</a></li>
+<li><a href="index.html#org6729073">The Increaser</a></li>
+<li><a href="index.html#orgf9e20a7">Does it wrap red back to 255 when it hits 256?</a></li>
+<li><a href="index.html#org4de833a">Does Green Wrap Too?</a></li>
+<li><a href="index.html#org126642b">Does Blue Wrap Too?</a></li>
+<li><a href="index.html#org93558d6">The Next Method</a></li>
+<li><a href="index.html#orgbeb447b">Does next return the color?</a></li>
+<li><a href="index.html#org3c2a359">Export the Color Increaser</a></li>
+<li><a href="index.html#org7759460">Running The tests</a></li>
 </ul>
 </li>
-<li><a href="index.html#org5904558">The Sketch</a>
+<li><a href="index.html#orgb3d06a2">The Sketch</a>
 <ul>
-<li><a href="index.html#org0b2e7d6">The Sketch Function</a></li>
-<li><a href="index.html#org0684069">The <code>setup</code> Function</a></li>
-<li><a href="index.html#org4e12bd0">The <code>draw</code> Function</a></li>
+<li><a href="index.html#org6e10dbe">The Sketch Function</a></li>
+<li><a href="index.html#orgd6b58b9">The <code>setup</code> Function</a></li>
+<li><a href="index.html#org66da868">The <code>draw</code> Function</a></li>
 </ul>
 </li>
-<li><a href="index.html#org0771b69">The End</a></li>
-<li><a href="index.html#org6bf6830">Sources</a></li>
+<li><a href="index.html#org22015bb">The End</a></li>
+<li><a href="index.html#org2367191">Sources</a></li>
 </ul>
 </div>
 </div>
@@ -115,18 +115,18 @@
 <script src="color-increaser.js"></script>
 <script src="sketch.js"></script></p>
 <div class="p5js" id="6a5fb18a-bdd-sketch"></div>
-<div class="outline-2" id="outline-container-org485e924">
-<h2 id="org485e924">What This Is</h2>
-<div class="outline-text-2" id="text-org485e924">
+<div class="outline-2" id="outline-container-orgb4db9dc">
+<h2 id="orgb4db9dc">What This Is</h2>
+<div class="outline-text-2" id="text-orgb4db9dc">
 <p>This is a walk-through of the <a href="https://p5js.org/learn/tdd.html">test-driven development example</a> on the <a href="https://p5js.org/">p5js site</a>. The color changing square above is created by exhaustively stepping through the RGB values for a p5 <a href="https://p5js.org/reference/#/p5.Color">color</a>. The site documentation doesn't seem to tell you the name of the color array attribute so you can access it, instead it tells you to use setter methods, but the tutorial indicates that the array is stored as an attribute of the color object named <code>levels</code> so we'll be working with that to change the colors.</p>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgf28fc9b">
-<h2 id="orgf28fc9b">Setting Up the Tests</h2>
-<div class="outline-text-2" id="text-orgf28fc9b"></div>
-<div class="outline-3" id="outline-container-org7db12d9">
-<h3 id="org7db12d9">Running the Tests</h3>
-<div class="outline-text-3" id="text-org7db12d9">
+<div class="outline-2" id="outline-container-orga414a3e">
+<h2 id="orga414a3e">Setting Up the Tests</h2>
+<div class="outline-text-2" id="text-orga414a3e"></div>
+<div class="outline-3" id="outline-container-org3be5456">
+<h3 id="org3be5456">Running the Tests</h3>
+<div class="outline-text-3" id="text-org3be5456">
 <p>To run the tests I'll use three things:</p>
 <ul class="org-ul">
 <li><a href="https://mochajs.org/">mocha</a>: the framework to define the tests</li>
@@ -148,12 +148,12 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org2586ed6">
-<h3 id="org2586ed6">Writing the Test File</h3>
-<div class="outline-text-3" id="text-org2586ed6"></div>
-<div class="outline-4" id="outline-container-org806d7a3">
-<h4 id="org806d7a3">Put It In Strict Mode</h4>
-<div class="outline-text-4" id="text-org806d7a3">
+<div class="outline-3" id="outline-container-orge5276fc">
+<h3 id="orge5276fc">Writing the Test File</h3>
+<div class="outline-text-3" id="text-orge5276fc"></div>
+<div class="outline-4" id="outline-container-orge446307">
+<h4 id="orge446307">Put It In Strict Mode</h4>
+<div class="outline-text-4" id="text-orge446307">
 <p>Javascript can be pretty lenient about letting what might be considered mistakes pass through without raising an error. I'll put the test-code into <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">Strict Mode</a>, making our mistakes more evident, hopefully, by putting this line at the top of the <code>test.js</code> file:</p>
 <div class="highlight">
 <pre><span></span><span class="s2">"use strict"</span><span class="p">;</span>
@@ -161,9 +161,9 @@
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org49e00a6">
-<h3 id="org49e00a6">Import Chai and Sinon</h3>
-<div class="outline-text-3" id="text-org49e00a6">
+<div class="outline-3" id="outline-container-org87492f3">
+<h3 id="org87492f3">Import Chai and Sinon</h3>
+<div class="outline-text-3" id="text-org87492f3">
 <p>I'm going to use the <a href="https://en.wikipedia.org/wiki/Behavior-driven_development?useskin=vector">Behavior-Driven Development</a> (BDD) version of <a href="https://www.chaijs.com/api/bdd/">Chai</a> to make our assertions about what we expect the code to be doing.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">expect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">"chai"</span><span class="p">).</span><span class="nx">expect</span><span class="p">;</span>
@@ -178,9 +178,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orga02d251">
-<h3 id="orga02d251">Import the Color Increaser Class</h3>
-<div class="outline-text-3" id="text-orga02d251">
+<div class="outline-3" id="outline-container-org102e6a3">
+<h3 id="org102e6a3">Import the Color Increaser Class</h3>
+<div class="outline-text-3" id="text-org102e6a3">
 <p>We're going to create a <code>ColorIncreaser</code> class which we need to import into the test code. Our import is going to look a little funky, though, because the sketch is in a folder created for this post.</p>
 <ul class="org-ul">
 <li><code>files/posts/bdd-testing-p5/</code></li>
@@ -198,9 +198,9 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgc1570ec">
-<h2 id="orgc1570ec">The Whole Code Module</h2>
-<div class="outline-text-2" id="text-orgc1570ec">
+<div class="outline-2" id="outline-container-orgae5cdab">
+<h2 id="orgae5cdab">The Whole Code Module</h2>
+<div class="outline-text-2" id="text-orgae5cdab">
 <p>Since this is about coding test-driven I'm going to show the tests and then the implementation that gets written to pass the test. This makes it kind of disorienting to read so I thought I'd show the entire <code>color-increaser.js</code> file that's being created here exactly as it ends up once it's all done.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">CHANNELS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
@@ -248,9 +248,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgfe47b8d">
-<h2 id="orgfe47b8d">Channel Constants</h2>
-<div class="outline-text-2" id="text-orgfe47b8d">
+<div class="outline-2" id="outline-container-orgd4e0b0b">
+<h2 id="orgd4e0b0b">Channel Constants</h2>
+<div class="outline-text-2" id="text-orgd4e0b0b">
 <p>I have a tendency to flip values around (sometimes it seems like blue should come before green, for example) so I like to create objects to hold values that get used repeatedly. This at the top of the same module as the Color Increaser class.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">CHANNELS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
@@ -264,14 +264,14 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgfa81f39">
-<h2 id="orgfa81f39">Testing and Implementing the Color Increaser</h2>
-<div class="outline-text-2" id="text-orgfa81f39">
+<div class="outline-2" id="outline-container-orgdd31627">
+<h2 id="orgdd31627">Testing and Implementing the Color Increaser</h2>
+<div class="outline-text-2" id="text-orgdd31627">
 <p>Now we'll write the tests and implement the <code>ColorIncreaser</code> class along with it.</p>
 </div>
-<div class="outline-3" id="outline-container-org31a6653">
-<h3 id="org31a6653">Mock Color</h3>
-<div class="outline-text-3" id="text-org31a6653">
+<div class="outline-3" id="outline-container-orgec4313a">
+<h3 id="orgec4313a">Mock Color</h3>
+<div class="outline-text-3" id="text-orgec4313a">
 <p>We don't want to use any p5 objects in the testing so we'll make a fake <a href="https://p5js.org/reference/#/p5/color">color</a> object, implementing its undocumented (as far as I can tell) <code>levels</code> attribute as an <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">MockColor</span><span class="w"> </span><span class="p">{</span>
@@ -287,9 +287,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org8ab844e">
-<h3 id="org8ab844e">Setting Up the Tests</h3>
-<div class="outline-text-3" id="text-org8ab844e">
+<div class="outline-3" id="outline-container-org47e53c0">
+<h3 id="org47e53c0">Setting Up the Tests</h3>
+<div class="outline-text-3" id="text-org47e53c0">
 <p><code>mocha</code>'s <code>describe</code> function acts like a header around our tests. Within it I'm setting some constants and also defining a <code>beforeEach</code> function which will create a new <code>ColorIncreaser</code> object before running each test so it won't have any changes we make in the other tests spilling over. Although I could import the <code>CHANNELS</code> object with the constants I thought it'd be a better check to create a new set to double-check what's going on in the code being tested.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">describe</span><span class="p">(</span><span class="s1">'Given the ColorIncreaser class definition'</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -310,9 +310,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org9b853ea">
-<h3 id="org9b853ea">Does the ColorIncreaser Exist?</h3>
-<div class="outline-text-3" id="text-org9b853ea">
+<div class="outline-3" id="outline-container-org643514e">
+<h3 id="org643514e">Does the ColorIncreaser Exist?</h3>
+<div class="outline-text-3" id="text-org643514e">
 <p>Our first test makes sure that we were able to create the <code>ColorIncreaser</code> object. This is actually a little bit of a fake because the <code>beforeEach</code> will fail if we can't create the object and it won't actually reach this test. I suppose you could still break it by making a function named <code>ColorIncreaser</code> instead of a class so this acts as an extra check.</p>
 <p>First we make a section header to make it a little clearer (it doesn't actually affect the tests, just the output after the test is run).</p>
 <div class="highlight">
@@ -329,9 +329,9 @@
 <p>Mocha will <a href="https://mochajs.org/#asynchronous-code">run the tests asynchronously</a> (parallel and out of order) so we need to accept the <code>done</code> function and then call it when the test is finished so mocha knows that the test is done.</p>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org81a8ae9">
-<h3 id="org81a8ae9">The ColorIncreaser Class</h3>
-<div class="outline-text-3" id="text-org81a8ae9">
+<div class="outline-3" id="outline-container-orgc2df984">
+<h3 id="orgc2df984">The ColorIncreaser Class</h3>
+<div class="outline-text-3" id="text-orgc2df984">
 <p>Now that we have the test I'll define the class and its constructor. It's a pretty basic class, here's a class diagram of its attributes.</p>
 <p><img alt="Color Increaser class diagram" src="color-increaser.webp"></p>
 <p>And here's the class and constructor definition.</p>
@@ -344,9 +344,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org598aebc">
-<h3 id="org598aebc">Does it take an increment amount?</h3>
-<div class="outline-text-3" id="text-org598aebc">
+<div class="outline-3" id="outline-container-orgfed60a1">
+<h3 id="orgfed60a1">Does it take an increment amount?</h3>
+<div class="outline-text-3" id="text-orgfed60a1">
 <p>This is just a sanity check to make sure that the constructor actually saved the increment amount we passed in.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">it</span><span class="p">(</span><span class="s2">"And it should set the color_increment"</span><span class="p">,</span>
@@ -357,9 +357,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org20b4b4b">
-<h3 id="org20b4b4b">Does it take a color?</h3>
-<div class="outline-text-3" id="text-org20b4b4b">
+<div class="outline-3" id="outline-container-org1e80c51">
+<h3 id="org1e80c51">Does it take a color?</h3>
+<div class="outline-text-3" id="text-org1e80c51">
 <p>This is another check to make sure the constructor saved the color object that got passed in. I couldn't find a same-object checker in <code>chai</code> but the <code>eql</code> is described as a check that the objects are "deeply-equal" which I assume is the same thing.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">it</span><span class="p">(</span><span class="s2">"And set the color attribute"</span><span class="p">,</span>
@@ -370,18 +370,18 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgf7fb929">
-<h3 id="orgf7fb929">The Increaser</h3>
-<div class="outline-text-3" id="text-orgf7fb929">
+<div class="outline-3" id="outline-container-org6729073">
+<h3 id="org6729073">The Increaser</h3>
+<div class="outline-text-3" id="text-org6729073">
 <p>We're going to implement a method for the <code>ColorIncreaser</code> that will increment the color-array so let's check that it works. It sort of treats the three color channels (Red, Green, and Blue… we'll pretend Alpha doesn't exist) like a three-digit number using base 255 instead of 10 and with the digits being BGR. So we start with all three channels at 0, then we increment red from 0 to 255 and when it hits 256 we set it back to 0 and set green to 1, then we repeat this over and over until green goes up to 256 at which point we reset both red and green to 0 and set blue to 1 and so on.</p>
 <p>I'll add a <code>describe</code> section to the tests to make it clearer where testing this method starts.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">describe</span><span class="p">(</span><span class="s2">"And when the increase() method is called"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 </pre></div>
 </div>
-<div class="outline-4" id="outline-container-orgbdfe2a9">
-<h4 id="orgbdfe2a9">Does the red channel increase?</h4>
-<div class="outline-text-4" id="text-orgbdfe2a9">
+<div class="outline-4" id="outline-container-orge08b844">
+<h4 id="orge08b844">Does the red channel increase?</h4>
+<div class="outline-text-4" id="text-orge08b844">
 <p>Until it increments the red channel past 255 the other channels don't change so we'll first test that only the red channel changes up until that point.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">it</span><span class="w"> </span><span class="p">(</span><span class="s2">"Then it should increment red up until 255"</span><span class="p">,</span>
@@ -399,9 +399,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org29e271a">
-<h4 id="org29e271a">The Color-Increaser Method</h4>
-<div class="outline-text-4" id="text-org29e271a">
+<div class="outline-4" id="outline-container-org65c69ca">
+<h4 id="org65c69ca">The Color-Increaser Method</h4>
+<div class="outline-text-4" id="text-org65c69ca">
 <p>So now I'll add the <code>increase</code> method to the <code>ColorIncreaser</code> class which adds the <code>color_increment</code> to the red-channel when it's called.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">increase</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -410,9 +410,9 @@
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgdbab8ba">
-<h3 id="orgdbab8ba">Does it wrap red back to 255 when it hits 256?</h3>
-<div class="outline-text-3" id="text-orgdbab8ba">
+<div class="outline-3" id="outline-container-orgf9e20a7">
+<h3 id="orgf9e20a7">Does it wrap red back to 255 when it hits 256?</h3>
+<div class="outline-text-3" id="text-orgf9e20a7">
 <p>The channels can only go up to 255 so once we hit 256:</p>
 <ul class="org-ul">
 <li>red wraps back to 0</li>
@@ -468,9 +468,9 @@
 <span class="w">    </span><span class="p">});</span>
 </pre></div>
 </div>
-<div class="outline-4" id="outline-container-org5326c60">
-<h4 id="org5326c60">The Wrap-Red Conditional</h4>
-<div class="outline-text-4" id="text-org5326c60">
+<div class="outline-4" id="outline-container-org0a4509d">
+<h4 id="org0a4509d">The Wrap-Red Conditional</h4>
+<div class="outline-text-4" id="text-org0a4509d">
 <p>Within the <code>increase</code> method we add this little chunk after incrementing the red channel.</p>
 <div class="highlight">
 <pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">RED</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">MAXIMUM</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -481,9 +481,9 @@
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgbb9a2f3">
-<h3 id="orgbb9a2f3">Does Green Wrap Too?</h3>
-<div class="outline-text-3" id="text-orgbb9a2f3">
+<div class="outline-3" id="outline-container-org4de833a">
+<h3 id="org4de833a">Does Green Wrap Too?</h3>
+<div class="outline-text-3" id="text-org4de833a">
 <p>As with red, the green channel can only go up to 255 so once we increase green to 256:</p>
 <ul class="org-ul">
 <li>wrap green back to 0</li>
@@ -544,9 +544,9 @@
 <span class="w">   </span><span class="p">});</span>
 </pre></div>
 </div>
-<div class="outline-4" id="outline-container-orgeb4223f">
-<h4 id="orgeb4223f">The Wrap-Green Conditional</h4>
-<div class="outline-text-4" id="text-orgeb4223f">
+<div class="outline-4" id="outline-container-org64d4982">
+<h4 id="org64d4982">The Wrap-Green Conditional</h4>
+<div class="outline-text-4" id="text-org64d4982">
 <p>Now within the <code>increase</code> method we add this little chunk after incrementing the red channel to check the green channel.</p>
 <div class="highlight">
 <pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">GREEN</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">MAXIMUM</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -557,9 +557,9 @@
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgd77acf8">
-<h3 id="orgd77acf8">Does Blue Wrap Too?</h3>
-<div class="outline-text-3" id="text-orgd77acf8">
+<div class="outline-3" id="outline-container-org126642b">
+<h3 id="org126642b">Does Blue Wrap Too?</h3>
+<div class="outline-text-3" id="text-org126642b">
 <p>As with red and green, the blue channel can only go up to 255 so once we increase blue to 256:</p>
 <ul class="org-ul">
 <li>wrap all three channels back to 0</li>
@@ -619,9 +619,9 @@
 <span class="w">   </span><span class="p">});</span>
 </pre></div>
 </div>
-<div class="outline-4" id="outline-container-org35797a7">
-<h4 id="org35797a7">The Wrap-Blue Conditional</h4>
-<div class="outline-text-4" id="text-org35797a7">
+<div class="outline-4" id="outline-container-orgfec3498">
+<h4 id="orgfec3498">The Wrap-Blue Conditional</h4>
+<div class="outline-text-4" id="text-orgfec3498">
 <p>I originally just used a modulus to keep blue within range, but since we're allowing the user to change the increment this might not always go back to zero so here's the conditional that resets the blue channel if it exceeds the limit.</p>
 <div class="highlight">
 <pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">BLUE</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">MAXIMUM</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -632,17 +632,17 @@
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org7075328">
-<h3 id="org7075328">The Next Method</h3>
-<div class="outline-text-3" id="text-org7075328">
+<div class="outline-3" id="outline-container-org93558d6">
+<h3 id="org93558d6">The Next Method</h3>
+<div class="outline-text-3" id="text-org93558d6">
 <p>I'm going to implement a <code>next</code> method to simplify things a little. It'll call increase and the return the color object. Just because.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">describe</span><span class="p">(</span><span class="s2">"And when the next() method is called"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 </pre></div>
 </div>
-<div class="outline-4" id="outline-container-org865e79e">
-<h4 id="org865e79e">Does the next method increase the color?</h4>
-<div class="outline-text-4" id="text-org865e79e">
+<div class="outline-4" id="outline-container-orgaeaf23b">
+<h4 id="orgaeaf23b">Does the next method increase the color?</h4>
+<div class="outline-text-4" id="text-orgaeaf23b">
 <p>To check that next calls the <code>increase</code> method I'll monkey-patch it with a <a href="https://sinonjs.org/releases/latest/spies/">sinon spy</a> and check that when we call <code>next</code> the <code>increase</code> spy gets called.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">it</span><span class="p">(</span><span class="s2">"Then it should increase the color"</span><span class="p">,</span>
@@ -656,9 +656,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org438665c">
-<h4 id="org438665c">The Next Method</h4>
-<div class="outline-text-4" id="text-org438665c">
+<div class="outline-4" id="outline-container-orgca05cdb">
+<h4 id="orgca05cdb">The Next Method</h4>
+<div class="outline-text-4" id="text-orgca05cdb">
 <p>Now I'll implement the <code>next</code> method and have it call the <code>increase</code> method.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">next</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -667,9 +667,9 @@
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgbbb394f">
-<h3 id="orgbbb394f">Does next return the color?</h3>
-<div class="outline-text-3" id="text-orgbbb394f">
+<div class="outline-3" id="outline-container-orgbeb447b">
+<h3 id="orgbeb447b">Does next return the color?</h3>
+<div class="outline-text-3" id="text-orgbeb447b">
 <p>Instead of requiring the user to make two calls I'll have the next method return the color object directly.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">it</span><span class="w"> </span><span class="p">(</span><span class="s2">"And return the color"</span><span class="p">,</span>
@@ -680,9 +680,9 @@
 <span class="w">    </span><span class="p">});</span>
 </pre></div>
 </div>
-<div class="outline-4" id="outline-container-org4f13b3e">
-<h4 id="org4f13b3e">Return the color</h4>
-<div class="outline-text-4" id="text-org4f13b3e">
+<div class="outline-4" id="outline-container-org15d4fe9">
+<h4 id="org15d4fe9">Return the color</h4>
+<div class="outline-text-4" id="text-org15d4fe9">
 <p>Now in our <code>ColorIncreaser.next</code> method we return the color.</p>
 <div class="highlight">
 <pre><span></span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">;</span>
@@ -690,9 +690,9 @@
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgc81898b">
-<h3 id="orgc81898b">Export the Color Increaser</h3>
-<div class="outline-text-3" id="text-orgc81898b">
+<div class="outline-3" id="outline-container-org3c2a359">
+<h3 id="org3c2a359">Export the Color Increaser</h3>
+<div class="outline-text-3" id="text-org3c2a359">
 <p>The implementation so far is good enough to get the code working within the p5 sketch, which would normally be the ultimate goal. But in order for the test code to be able to import the <code>ColorIncreaser</code> (using the <code>require</code> function) we need to add a line in the file with the <code>ColorIncreaser</code> definition to export it.</p>
 <p>The code given in the tutorial just has the export line, but this will raise an error outside of node.js - so it works for testing but causes a <code>ReferenceError</code> in the browser (when using a python-based server anyway) so to prevent that from happening I added a check that will do the export only if the <code>module</code> is defined, which is an indication that this is being used in node (or I messed up and defined it somewhere else).</p>
 <div class="highlight">
@@ -702,14 +702,14 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org1604e7a">
-<h3 id="org1604e7a">Running The tests</h3>
-<div class="outline-text-3" id="text-org1604e7a">
+<div class="outline-3" id="outline-container-org7759460">
+<h3 id="org7759460">Running The tests</h3>
+<div class="outline-text-3" id="text-org7759460">
 <p>Now, let's see what it looks like when we run the tests.</p>
 <div class="highlight">
 <pre><span></span>mocha ../tests/test*
 </pre></div>
-<pre class="example" id="org9a1ac08">
+<pre class="example" id="orgfd6797a">
 
 
 Given the ColorIncreaser class definition
@@ -734,14 +734,14 @@ Given the ColorIncreaser class definition
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org5904558">
-<h2 id="org5904558">The Sketch</h2>
-<div class="outline-text-2" id="text-org5904558">
+<div class="outline-2" id="outline-container-orgb3d06a2">
+<h2 id="orgb3d06a2">The Sketch</h2>
+<div class="outline-text-2" id="text-orgb3d06a2">
 <p>Now that we have the <code>ColorIncreaser</code> we can add it to a sketch to change the colors of the square that we're drawing.</p>
 </div>
-<div class="outline-3" id="outline-container-org0b2e7d6">
-<h3 id="org0b2e7d6">The Sketch Function</h3>
-<div class="outline-text-3" id="text-org0b2e7d6">
+<div class="outline-3" id="outline-container-org6e10dbe">
+<h3 id="org6e10dbe">The Sketch Function</h3>
+<div class="outline-text-3" id="text-org6e10dbe">
 <p>As I noted before, I'm using the instance-mode syntax for the sketch so this is the function that holds the <code>setup</code> and <code>draw</code> functions.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">flashing_square</span><span class="p">(</span><span class="nx">p5js</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -751,9 +751,9 @@ Given the ColorIncreaser class definition
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org0684069">
-<h3 id="org0684069">The <code>setup</code> Function</h3>
-<div class="outline-text-3" id="text-org0684069">
+<div class="outline-3" id="outline-container-orgd6b58b9">
+<h3 id="orgd6b58b9">The <code>setup</code> Function</h3>
+<div class="outline-text-3" id="text-orgd6b58b9">
 <p>The setup creates the canvas and color increaser instance.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">p5js</span><span class="p">.</span><span class="nx">setup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -770,9 +770,9 @@ Given the ColorIncreaser class definition
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org4e12bd0">
-<h3 id="org4e12bd0">The <code>draw</code> Function</h3>
-<div class="outline-text-3" id="text-org4e12bd0">
+<div class="outline-3" id="outline-container-org66da868">
+<h3 id="org66da868">The <code>draw</code> Function</h3>
+<div class="outline-text-3" id="text-org66da868">
 <p>The draw sets the background color and increases its value once per frame.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">p5js</span><span class="p">.</span><span class="nx">draw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -782,15 +782,15 @@ Given the ColorIncreaser class definition
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org0771b69">
-<h2 id="org0771b69">The End</h2>
-<div class="outline-text-2" id="text-org0771b69">
+<div class="outline-2" id="outline-container-org22015bb">
+<h2 id="org22015bb">The End</h2>
+<div class="outline-text-2" id="text-org22015bb">
 <p>So, there you go. The sketch wasn't so exciting, but the main value in going through the exercise, I think, was being able to get the javascript testing infrastructure working and getting back into using chai and sinon and the crazy world of module imports in javascript.</p>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org6bf6830">
-<h2 id="org6bf6830">Sources</h2>
-<div class="outline-text-2" id="text-org6bf6830">
+<div class="outline-2" id="outline-container-org2367191">
+<h2 id="org2367191">Sources</h2>
+<div class="outline-text-2" id="text-org2367191">
 <ul class="org-ul">
 <li>Behavior-driven development. In: Wikipedia [Internet]. 2023 [cited 2023 Jun 9]. Available from: <a href="https://en.wikipedia.org/w/index.php?title=Behavior-driven_development&amp;oldid=1158619924">https://en.wikipedia.org/w/index.php?title=Behavior-driven_development&amp;oldid=1158619924</a></li>
 <li>Expect / Should - Chai [Internet]. [cited 2023 Jun 9]. Available from: <a href="https://www.chaijs.com/api/bdd/">https://www.chaijs.com/api/bdd/</a></li>
