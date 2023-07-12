@@ -5,67 +5,67 @@
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"&gt;&lt;/a&gt;&lt;/p&gt; 
-</copyright><lastBuildDate>Sat, 01 Jul 2023 20:55:16 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Cucumber and Ecma Script Modules (ESM) In a Nikola Post</title><link>https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
+</copyright><lastBuildDate>Wed, 12 Jul 2023 21:53:56 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Cucumber and ECMA Script Modules (ESM) In a Nikola Post</title><link>https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org148b44f"&gt;What Is This, Then?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#orgc49db0a"&gt;Setting Up&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org3fe749c"&gt;What Is This, Then?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org2fac205"&gt;Setting Up&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org2a68787"&gt;The Cucumber.js Configuration&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org9e96e13"&gt;The Testing package.json&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org1915a7a"&gt;The Cucumber.js Configuration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org4b21887"&gt;The Testing package.json&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org838f4df"&gt;The Test Files&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org43065d7"&gt;The Test Files&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org1504487"&gt;The Feature File&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#orgf64b109"&gt;The Test Steps&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#orge78ec02"&gt;The Imports&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org422ceea"&gt;Given&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org8b26654"&gt;When&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org6c19963"&gt;Then&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#orgf3de125"&gt;The Feature File&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org2cb6a15"&gt;The Test Steps&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org4480993"&gt;The Imports&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#orga178df4"&gt;Given&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org47e2db7"&gt;When&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org4d941e3"&gt;Then&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org37279e7"&gt;The Greeter&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org3184112"&gt;The Greeter package.json&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#orgf0dafc7"&gt;Now the Other Hard Part&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org6203c1d"&gt;The Greeter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org227b22d"&gt;The Greeter package.json&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org7a18d5b"&gt;Now the Other Hard Part&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org1e3a50f"&gt;First Let's Setup the Sketch Tag&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org1d84485"&gt;Now Let's Use It&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org4444fb0"&gt;First Let's Setup the Sketch Tag&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org0197983"&gt;Now Let's Use It&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org3ebf1e9"&gt;What Have We Learned?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org405b2d8"&gt;Links&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org74068ed"&gt;What Have We Learned?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#orgc632222"&gt;Links&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org148b44f" class="outline-2"&gt;
-&lt;h2 id="org148b44f"&gt;What Is This, Then?&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org148b44f"&gt;
+&lt;div id="outline-container-org3fe749c" class="outline-2"&gt;
+&lt;h2 id="org3fe749c"&gt;What Is This, Then?&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org3fe749c"&gt;
 &lt;p&gt;
-This is a re-do of the cucumber.js example testing for &lt;a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules"&gt;JavaScript/ECMAScript Modules (ESM)&lt;/a&gt;. Just copying the files exactly as they're given in the &lt;a href="https://github.com/cucumber/cucumber-js-examples"&gt;cucumber.js github repository&lt;/a&gt; works pretty much without problem, but since I'm doing this messy thing with writing javascript in these blog posts instead of as part of a code-project, it took a little more work than I would have liked.
+This is a re-do of the cucumber.js example testing for &lt;a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules"&gt;JavaScript/ECMAScript Modules (ESM)&lt;/a&gt;. Just copying the files exactly as they're given in the &lt;a href="https://github.com/cucumber/cucumber-js-examples"&gt;cucumber.js GitHub repository&lt;/a&gt; works pretty much without problem, but since I'm doing this messy thing with writing JavaScript in these blog posts instead of as part of a code-project, it took a little more work than I would have liked.
 &lt;/p&gt;
 
 &lt;p&gt;
-I had &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html"&gt;previously tried&lt;/a&gt; to get ESM modules to work with &lt;a href="https://mochajs.org/"&gt;mocha&lt;/a&gt; but gave up and went back to using the &lt;a href="https://en.wikipedia.org/wiki/CommonJS?useskin=vector"&gt;CommonJS&lt;/a&gt; syntax instead (which I just read is meant to work outside the brouwser and not in it, which explains some of the trouble I ran into). This time I seem to have gotten the ESM style of modules working with &lt;a href="https://cucumber.io/docs/installation/javascript/"&gt;cucumber.js&lt;/a&gt;, but it \(\textit{is}\) a bit convoluted and maybe not really a good idea to do it this way. So here we go.
+I had &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html"&gt;previously tried&lt;/a&gt; to get ESM modules to work with &lt;a href="https://mochajs.org/"&gt;mocha&lt;/a&gt; but gave up and went back to using the &lt;a href="https://en.wikipedia.org/wiki/CommonJS?useskin=vector"&gt;CommonJS&lt;/a&gt; syntax instead (which I just read is meant to work outside the browser and not in it, which explains some of the trouble I ran into). This time I seem to have gotten the ESM style of modules working with &lt;a href="https://cucumber.io/docs/installation/javascript/"&gt;cucumber.js&lt;/a&gt;, but it \(\textit{is}\) a bit convoluted and maybe not really a good idea to do it this way. So here we go.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgc49db0a" class="outline-2"&gt;
-&lt;h2 id="orgc49db0a"&gt;Setting Up&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgc49db0a"&gt;
+&lt;div id="outline-container-org2fac205" class="outline-2"&gt;
+&lt;h2 id="org2fac205"&gt;Setting Up&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org2fac205"&gt;
 &lt;p&gt;
 The cucumber.js page has instructions on installing it, so I won't go over it. It's mostly just &lt;code&gt;npm install cucumber --save-dev&lt;/code&gt;. I seem to remember that they said somewhere not to install it globally, but I can't remember now where I saw it. Once I installed it, I had to edit a couple of files to get it working the way I wanted it to.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org2a68787" class="outline-3"&gt;
-&lt;h3 id="org2a68787"&gt;The Cucumber.js Configuration&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org2a68787"&gt;
+&lt;div id="outline-container-org1915a7a" class="outline-3"&gt;
+&lt;h3 id="org1915a7a"&gt;The Cucumber.js Configuration&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org1915a7a"&gt;
 &lt;p&gt;
-&lt;code&gt;cucumber.js&lt;/code&gt; uses a configuration file named… &lt;code&gt;cucumber.js&lt;/code&gt; that you put where you run the tests. I'm going to put cucumber test-files into folders whose names will have the form &lt;code&gt;test-&amp;lt;slug&amp;gt;&lt;/code&gt;, where &lt;code&gt;slug&lt;/code&gt; is the slug for the post where I define the javascript and tests in, so in order to get &lt;code&gt;cucumber&lt;/code&gt; to find them, I need to change the glob in the &lt;code&gt;import&lt;/code&gt; line to match.
+&lt;code&gt;cucumber.js&lt;/code&gt; uses a configuration file named… &lt;code&gt;cucumber.js&lt;/code&gt; that you put where you run the tests. I'm going to put cucumber test-files into folders whose names will have the form &lt;code&gt;test-&amp;lt;slug&amp;gt;&lt;/code&gt;, where &lt;code&gt;slug&lt;/code&gt; is the slug for the post where I define the JavaScript and tests in, so in order to get &lt;code&gt;cucumber&lt;/code&gt; to find them, I need to change the glob in the &lt;code&gt;import&lt;/code&gt; line to match.
 &lt;/p&gt;
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;export&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;default&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
@@ -80,9 +80,9 @@ This file is using the ESM syntax (using an &lt;code&gt;export&lt;/code&gt; stat
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org9e96e13" class="outline-3"&gt;
-&lt;h3 id="org9e96e13"&gt;The Testing package.json&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org9e96e13"&gt;
+&lt;div id="outline-container-org4b21887" class="outline-3"&gt;
+&lt;h3 id="org4b21887"&gt;The Testing package.json&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org4b21887"&gt;
 &lt;p&gt;
 Next we need a &lt;code&gt;package.json&lt;/code&gt; file next to the &lt;code&gt;cucumber.js&lt;/code&gt; file. There's two changes I made.
 &lt;/p&gt;
@@ -110,10 +110,10 @@ I had previously installed &lt;code&gt;chai&lt;/code&gt; globally and it was wor
 &lt;/p&gt;
 
 &lt;p&gt;
-So far, this is what I've edited in the testing directory.
+So far, these are the files that I've edited in the testing directory.
 &lt;/p&gt;
 
-&lt;pre class="example" id="orgc8ae248"&gt;
+&lt;pre class="example" id="orga19946a"&gt;
 cucumber.js
 package.json
 &lt;/pre&gt;
@@ -126,28 +126,28 @@ There's also a &lt;code&gt;package-lock.json&lt;/code&gt; and &lt;code&gt;node_m
 Now that we have this setup we can run the test-runner using &lt;code&gt;npm&lt;/code&gt;.
 &lt;/p&gt;
 
-&lt;pre class="example" id="org831b88e"&gt;
+&lt;pre class="example" id="orga1bbbc6"&gt;
 npm test
 &lt;/pre&gt;
 
 &lt;p&gt;
-Cucumber runs once and then will re-run the testing every time we make a change to our files. I'm not sure how the magic gets done but it even detects when I make changes to the javascript being tested after I moved it outside of the testing folder.
+Cucumber runs once and then will re-run the testing every time we make a change to our files. I'm not sure how the magic gets done but it even detects when I make changes to the JavaScript being tested after I moved it outside of the testing folder.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org838f4df" class="outline-2"&gt;
-&lt;h2 id="org838f4df"&gt;The Test Files&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org838f4df"&gt;
+&lt;div id="outline-container-org43065d7" class="outline-2"&gt;
+&lt;h2 id="org43065d7"&gt;The Test Files&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org43065d7"&gt;
 &lt;p&gt;
 The slug for this post is &lt;code&gt;cucumber-and-ecma-script-modules-esm&lt;/code&gt; so the testing files are going into a folder named &lt;code&gt;test-cucumber-and-ecma-script-modules-esm&lt;/code&gt; which sits next to the &lt;code&gt;cucumber.js&lt;/code&gt; files and the &lt;code&gt;package.json&lt;/code&gt; files that I just mentioned.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org1504487" class="outline-3"&gt;
-&lt;h3 id="org1504487"&gt;The Feature File&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org1504487"&gt;
+&lt;div id="outline-container-orgf3de125" class="outline-3"&gt;
+&lt;h3 id="orgf3de125"&gt;The Feature File&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgf3de125"&gt;
 &lt;p&gt;
 We're going to make a Greeter class that does one thing: greets users. Cucumber will look for files that have the &lt;code&gt;.feature&lt;/code&gt; file extension and parse the keywords to figure out what tests to expect. Here's the one for our greeter (in the file &lt;code&gt;greetings.feature&lt;/code&gt;).
 &lt;/p&gt;
@@ -163,18 +163,18 @@ We're going to make a Greeter class that does one thing: greets users. Cucumber 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgf64b109" class="outline-3"&gt;
-&lt;h3 id="orgf64b109"&gt;The Test Steps&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgf64b109"&gt;
+&lt;div id="outline-container-org2cb6a15" class="outline-3"&gt;
+&lt;h3 id="org2cb6a15"&gt;The Test Steps&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org2cb6a15"&gt;
 &lt;p&gt;
 Now that we have a feature file we have to write the tests that match it. In our feature file we used three special keywords - &lt;code&gt;Given&lt;/code&gt;, &lt;code&gt;When&lt;/code&gt; and &lt;code&gt;Then&lt;/code&gt; - which have to match functions in our test file to pass the cucumber tests, which I'll put in a file called &lt;code&gt;steps.js&lt;/code&gt;. In the example code they put it in a folder named &lt;code&gt;steps&lt;/code&gt;, which makes sense if you have more than one folder but this'll do for now.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orge78ec02" class="outline-3"&gt;
-&lt;h3 id="orge78ec02"&gt;The Imports&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orge78ec02"&gt;
+&lt;div id="outline-container-org4480993" class="outline-3"&gt;
+&lt;h3 id="org4480993"&gt;The Imports&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org4480993"&gt;
 &lt;p&gt;
 These are the ESM style imports. The &lt;code&gt;Greeter&lt;/code&gt; import statement is long because it's in a file accessible to this post rather than being next to the test-code so I have to pass in the path relative to where the &lt;code&gt;steps.js&lt;/code&gt; file is.
 &lt;/p&gt;
@@ -185,11 +185,11 @@ These are the ESM style imports. The &lt;code&gt;Greeter&lt;/code&gt; import sta
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org422ceea" class="outline-3"&gt;
-&lt;h3 id="org422ceea"&gt;Given&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org422ceea"&gt;
+&lt;div id="outline-container-orga178df4" class="outline-3"&gt;
+&lt;h3 id="orga178df4"&gt;Given&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orga178df4"&gt;
 &lt;p&gt;
-Our &lt;code&gt;given&lt;/code&gt; function just creates a Greeter instance. There are also functions like &lt;code&gt;Before&lt;/code&gt; and &lt;code&gt;BeforeAll&lt;/code&gt; that let you do something once befare each Scenario (or all Scenarios), but we only have one scenario and it sounds clearer to me to say "Given a greeter…".
+Our &lt;code&gt;given&lt;/code&gt; function just creates a Greeter instance. There are also functions like &lt;code&gt;Before&lt;/code&gt; and &lt;code&gt;BeforeAll&lt;/code&gt; that let you do something once before each Scenario (or all Scenarios), but we only have one scenario and it sounds clearer to me to say "Given a greeter…".
 &lt;/p&gt;
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;Given&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"a greeter"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
@@ -199,9 +199,9 @@ Our &lt;code&gt;given&lt;/code&gt; function just creates a Greeter instance. The
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org8b26654" class="outline-3"&gt;
-&lt;h3 id="org8b26654"&gt;When&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org8b26654"&gt;
+&lt;div id="outline-container-org47e2db7" class="outline-3"&gt;
+&lt;h3 id="org47e2db7"&gt;When&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org47e2db7"&gt;
 &lt;p&gt;
 Our &lt;code&gt;when&lt;/code&gt; calls the &lt;code&gt;greetings&lt;/code&gt; method and saves the output so we can check it in our &lt;code&gt;Then&lt;/code&gt; function.
 &lt;/p&gt;
@@ -213,9 +213,9 @@ Our &lt;code&gt;when&lt;/code&gt; calls the &lt;code&gt;greetings&lt;/code&gt; m
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org6c19963" class="outline-3"&gt;
-&lt;h3 id="org6c19963"&gt;Then&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org6c19963"&gt;
+&lt;div id="outline-container-org4d941e3" class="outline-3"&gt;
+&lt;h3 id="org4d941e3"&gt;Then&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org4d941e3"&gt;
 &lt;p&gt;
 Our last function is interesting in that it uses what they call &lt;a href="https://github.com/cucumber/cucumber-expressions#readme"&gt;cucumber-expressions&lt;/a&gt;, which allow you to put types into the string definition to tell it what to look for in the feature definition so we don't have to set the exact value. In this case our feature file says &lt;code&gt;Then I should hear "Go away."&lt;/code&gt; The end of the statement is in quotes so cucumber knows that it's a string so we can replace it with &lt;code&gt;{string}&lt;/code&gt; when we define the function and cucumber will pass in the expected string as an argument to the function that we pass to the &lt;code&gt;Then&lt;/code&gt; function. Then we can use the passed-in value rather than hard-coding the expected string into our test. In this case the parameter &lt;code&gt;what_he_should_have_said&lt;/code&gt; will have the string "Go away." in it, extracted (without the quotes) from our feature file definition.
 &lt;/p&gt;
@@ -228,10 +228,10 @@ Our last function is interesting in that it uses what they call &lt;a href="http
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;
-So far this is the basic structure of our testing folder (ignoring stuff that I didn't create or edit).
+So far this is the basic structure of our testing folder (ignoring othe stuff that I didn't create or edit).
 &lt;/p&gt;
 
-&lt;pre class="example" id="org3b23798"&gt;
+&lt;pre class="example" id="org658d0cf"&gt;
 cucumber.js
 package.json
 test-cucumber-and-ecma-script-modules-esm/
@@ -242,9 +242,9 @@ test-cucumber-and-ecma-script-modules-esm/
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org37279e7" class="outline-2"&gt;
-&lt;h2 id="org37279e7"&gt;The Greeter&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org37279e7"&gt;
+&lt;div id="outline-container-org6203c1d" class="outline-2"&gt;
+&lt;h2 id="org6203c1d"&gt;The Greeter&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org6203c1d"&gt;
 &lt;p&gt;
 Based on our test, this is what our Greeter class should look like.
 &lt;/p&gt;
@@ -254,7 +254,7 @@ Based on our test, this is what our Greeter class should look like.
 &lt;/p&gt;
 
 &lt;p&gt;
-Now let's define the Greeter (the software under test). Initially, just to see if it worked, I put it next to the test files the way that the example did, but the point of this is to get the javascript into the post so we can work with P5, so its final resting place is in a file named &lt;code&gt;greetings.js&lt;/code&gt; in the folder where &lt;a href="https://getnikola.com/"&gt;nikola&lt;/a&gt; will look for files when I build the site.
+Now let's define the Greeter (the software under test). Initially, just to see if it worked, I put it next to the test files the way that the example did, but the point of this is to get the JavaScript into the post so we can work with P5, so its final resting place is in a file named &lt;code&gt;greetings.js&lt;/code&gt; in the folder where &lt;a href="https://getnikola.com/"&gt;Nikola&lt;/a&gt; will look for files when I build the site.
 &lt;/p&gt;
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;class&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;Greeter&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
@@ -274,7 +274,7 @@ In order for the class-definition (or anything else we define) to be importable 
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;
-when defining the class, but, as seems to be the way with javascript, there's multiple ways to do exports (and imports), each of which probably has some subtle different use, but which is more than I want to know about at this point, so I decided to settle on this syntax:
+when defining the class, but, as seems to be the way with JavaScript, there's multiple ways to do exports (and imports), each of which probably has some subtle different use, but which is more than I want to know about at this point, so I decided to settle on this syntax:
 &lt;/p&gt;
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;export&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;Greeter&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;};&lt;/span&gt;
@@ -291,15 +291,15 @@ when defining the class, but, as seems to be the way with javascript, there's mu
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org3184112" class="outline-2"&gt;
-&lt;h2 id="org3184112"&gt;The Greeter package.json&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org3184112"&gt;
+&lt;div id="outline-container-org227b22d" class="outline-2"&gt;
+&lt;h2 id="org227b22d"&gt;The Greeter package.json&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org227b22d"&gt;
 &lt;p&gt;
-This next bit took me a while to figure out. If you put the &lt;code&gt;Greeter&lt;/code&gt; definition into a subfolder below where we're running the tests, it will recognize our &lt;code&gt;greeter.js&lt;/code&gt; file as an ESM module just fine. But, if you move it into a folder outside our tests as I did, node (or cucumber) suddenly won't be able to tell that it's an ESM module.
+This next bit took me a while to figure out. If you put the &lt;code&gt;Greeter&lt;/code&gt; definition into a sub-folder below where we're running the tests, it will recognize our &lt;code&gt;greeter.js&lt;/code&gt; file as an ESM module just fine. But, if you move it into a folder outside our tests as I did, node (or cucumber) suddenly won't be able to tell that it's an ESM module.
 &lt;/p&gt;
 
 &lt;p&gt;
-It will helpfully tell you to change the file extension from &lt;code&gt;.js&lt;/code&gt; to &lt;code&gt;.mjs&lt;/code&gt;, which doesn't work, and offer you a different import syntax to use, which also doesn't work, and to tell you to put &lt;code&gt;"type": "module"&lt;/code&gt; into the &lt;code&gt;package.json&lt;/code&gt; file… which turns out to &lt;i&gt;sort of&lt;/i&gt; be the answer.
+The error message will helpfully tell you to change the file extension from &lt;code&gt;.js&lt;/code&gt; to &lt;code&gt;.mjs&lt;/code&gt;, which doesn't work, and offer you a different import syntax to use, which also doesn't work, and to tell you to put &lt;code&gt;"type": "module"&lt;/code&gt; into the &lt;code&gt;package.json&lt;/code&gt; file… which turns out to &lt;i&gt;sort of&lt;/i&gt; be the answer.
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -318,19 +318,19 @@ I suppose, maybe it's a little like an &lt;code&gt;__init__.py&lt;/code&gt; file
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgf0dafc7" class="outline-2"&gt;
-&lt;h2 id="orgf0dafc7"&gt;Now the Other Hard Part&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgf0dafc7"&gt;
+&lt;div id="outline-container-org7a18d5b" class="outline-2"&gt;
+&lt;h2 id="org7a18d5b"&gt;Now the Other Hard Part&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org7a18d5b"&gt;
 &lt;p&gt;
-Okay, so the testing is working now, but just running tests is sort of meaningless (no offense to testers), the real point of it all is to get the tested javascript back into this post and use it.
+Okay, so the testing is working now, but just running tests is sort of meaningless (no offense to testers), the real point of it all is to get the tested JavaScript back into this post and use it.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org1e3a50f" class="outline-3"&gt;
-&lt;h3 id="org1e3a50f"&gt;First Let's Setup the Sketch Tag&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org1e3a50f"&gt;
+&lt;div id="outline-container-org4444fb0" class="outline-3"&gt;
+&lt;h3 id="org4444fb0"&gt;First Let's Setup the Sketch Tag&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org4444fb0"&gt;
 &lt;p&gt;
-According to &lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script"&gt;mozilla&lt;/a&gt;, &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; tags are assumed to be javascript if you don't set a MIME type (and so they tell you not to set the &lt;code&gt;type&lt;/code&gt; argument if it's a regular script) but to let the browser know it's a module you have to set the attribute &lt;code&gt;type="module"&lt;/code&gt; in the tag. I'm going to use a convoluted name for the actual p5 sketch file that I'm making, but for demonstration's sake let's pretend it's called &lt;code&gt;sketch.js&lt;/code&gt;, then the HTML tag to include it in this post would look like this.
+According to &lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script"&gt;Mozilla&lt;/a&gt;, &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; tags are assumed to be JavaScript if you don't set a MIME type (and so they tell you not to set the &lt;code&gt;type&lt;/code&gt; argument if it's a regular script) but to let the browser know it's a module you have to set the attribute &lt;code&gt;type="module"&lt;/code&gt; in the tag. I'm going to use a convoluted name for the actual p5 sketch file that I'm making, but for demonstration's sake let's pretend it's called &lt;code&gt;sketch.js&lt;/code&gt;, then the HTML tag to include it in this post would look like this.
 &lt;/p&gt;
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"sketch.js"&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"module"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
@@ -342,9 +342,9 @@ The &lt;code&gt;Greeter&lt;/code&gt; class is going to be imported into our sket
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org1d84485" class="outline-3"&gt;
-&lt;h3 id="org1d84485"&gt;Now Let's Use It&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org1d84485"&gt;
+&lt;div id="outline-container-org0197983" class="outline-3"&gt;
+&lt;h3 id="org0197983"&gt;Now Let's Use It&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org0197983"&gt;
 &lt;p&gt;
 We'll import the &lt;code&gt;Greeter&lt;/code&gt; into the sketch, setup the canvas, and then display the greeter's greetings on the canvas.
 &lt;/p&gt;
@@ -387,7 +387,7 @@ Impressed?
 Just for completeness, the folder with the code for the post has these files in it.
 &lt;/p&gt;
 
-&lt;pre class="example" id="org1264842"&gt;
+&lt;pre class="example" id="org94a6117"&gt;
 greeter.js
 sketch.js
 package.json
@@ -395,18 +395,19 @@ package.json
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org3ebf1e9" class="outline-2"&gt;
-&lt;h2 id="org3ebf1e9"&gt;What Have We Learned?&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org3ebf1e9"&gt;
+
+&lt;div id="outline-container-org74068ed" class="outline-2"&gt;
+&lt;h2 id="org74068ed"&gt;What Have We Learned?&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org74068ed"&gt;
 &lt;p&gt;
 This was an exercise in seeing if I could get cucumber.js and ESM modules working. In particular it was about testing code that gets included in this post and used by p5. This was a pretty simple example, but it seems to work so I'll take it as a start that I can reference when going back to work with more complex p5 code.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org405b2d8" class="outline-2"&gt;
-&lt;h2 id="org405b2d8"&gt;Links&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org405b2d8"&gt;
+&lt;div id="outline-container-orgc632222" class="outline-2"&gt;
+&lt;h2 id="orgc632222"&gt;Links&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgc632222"&gt;
 &lt;p&gt;
 These are (mostly) referred to in the body of the post, and the body also has links not in here, but for future reference, this should be enough to get back up to speed.
 &lt;/p&gt;
@@ -1410,31 +1411,31 @@ Daniel Shiffman also has a website called &lt;a href="https://thecodingtrain.com
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#org92f6d5d"&gt;A Circle&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#orgb792c01"&gt;Closure, Constants, and Variables&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#orgbda2f21"&gt;A Circle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#org65b30bc"&gt;Closure, Constants, and Variables&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#org13c1115"&gt;Constants&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#orga97602d"&gt;Variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#org9acba56"&gt;Constants&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#org70ca195"&gt;Variables&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#org1b99f01"&gt;Set Up&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#org5115bc9"&gt;Draw&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#org8bb903b"&gt;Set Up&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#org1353118"&gt;Draw&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#orgeec636f"&gt;Looping Around the Circle&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#org4d88426"&gt;The Coordinates of the Circle's Points&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#orgb268104"&gt;Now We Draw&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#org90a00fd"&gt;And the Rest&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#org6afe603"&gt;Looping Around the Circle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#org8cb6063"&gt;The Coordinates of the Circle's Points&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#orgbaf7e96"&gt;Now We Draw&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#org712b5e0"&gt;And the Rest&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#orgc986de8"&gt;Closing Up&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#org93a814b"&gt;References&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#org60f5eda"&gt;Closing Up&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html#orgea94878"&gt;References&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org92f6d5d" class="outline-2"&gt;
-&lt;h2 id="org92f6d5d"&gt;A Circle&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org92f6d5d"&gt;
+&lt;div id="outline-container-orgbda2f21" class="outline-2"&gt;
+&lt;h2 id="orgbda2f21"&gt;A Circle&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgbda2f21"&gt;
 &lt;p&gt;
 This is a starting point for looking at cyclic sketches. In this case it's just a circle but it's a basic concept that I'll probably use more of later so I thought I'd make a dedicated post for it. In particular it uses &lt;a href="https://en.wikipedia.org/wiki/Polar_coordinate_system?useskin=vector"&gt;Polar Coordinates&lt;/a&gt; which might come in handy.
 &lt;/p&gt;
@@ -1447,9 +1448,9 @@ This is a starting point for looking at cyclic sketches. In this case it's just 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgb792c01" class="outline-2"&gt;
-&lt;h2 id="orgb792c01"&gt;Closure, Constants, and Variables&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgb792c01"&gt;
+&lt;div id="outline-container-org65b30bc" class="outline-2"&gt;
+&lt;h2 id="org65b30bc"&gt;Closure, Constants, and Variables&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org65b30bc"&gt;
 &lt;p&gt;
 We begin in the usual way with a variable to hold the &lt;code&gt;div id&lt;/code&gt; that the sketch will go into and declaring the function that will hold our sketch tode.
 &lt;/p&gt;
@@ -1460,9 +1461,9 @@ We begin in the usual way with a variable to hold the &lt;code&gt;div id&lt;/cod
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org13c1115" class="outline-3"&gt;
-&lt;h3 id="org13c1115"&gt;Constants&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org13c1115"&gt;
+&lt;div id="outline-container-org9acba56" class="outline-3"&gt;
+&lt;h3 id="org9acba56"&gt;Constants&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org9acba56"&gt;
 &lt;p&gt;
 Next I'll declare some constants, both to maybe remind me what the values represent when I use them later and to have a place where I can change the values as I experiment with what looks interesting.
 &lt;/p&gt;
@@ -1490,9 +1491,9 @@ To make it less confusing I'll refer to the small circles that make up the big c
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orga97602d" class="outline-3"&gt;
-&lt;h3 id="orga97602d"&gt;Variables&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orga97602d"&gt;
+&lt;div id="outline-container-org70ca195" class="outline-3"&gt;
+&lt;h3 id="org70ca195"&gt;Variables&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org70ca195"&gt;
 &lt;p&gt;
 The variables are:
 &lt;/p&gt;
@@ -1512,9 +1513,9 @@ The variables are:
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org1b99f01" class="outline-2"&gt;
-&lt;h2 id="org1b99f01"&gt;Set Up&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org1b99f01"&gt;
+&lt;div id="outline-container-org8bb903b" class="outline-2"&gt;
+&lt;h2 id="org8bb903b"&gt;Set Up&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org8bb903b"&gt;
 &lt;p&gt;
 Our &lt;code&gt;setup&lt;/code&gt; function creates the canvas, sets the colors and creates the slider to let the user change how big a jump we take between drawing points on the circle
 &lt;/p&gt;
@@ -1537,9 +1538,9 @@ Our &lt;code&gt;setup&lt;/code&gt; function creates the canvas, sets the colors 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org5115bc9" class="outline-2"&gt;
-&lt;h2 id="org5115bc9"&gt;Draw&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org5115bc9"&gt;
+&lt;div id="outline-container-org1353118" class="outline-2"&gt;
+&lt;h2 id="org1353118"&gt;Draw&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org1353118"&gt;
 &lt;p&gt;
 The &lt;code&gt;draw&lt;/code&gt; function draws a circle using circles and a line showing the raduis.
 &lt;/p&gt;
@@ -1548,9 +1549,9 @@ The &lt;code&gt;draw&lt;/code&gt; function draws a circle using circles and a li
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgeec636f" class="outline-3"&gt;
-&lt;h3 id="orgeec636f"&gt;Looping Around the Circle&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgeec636f"&gt;
+&lt;div id="outline-container-org6afe603" class="outline-3"&gt;
+&lt;h3 id="org6afe603"&gt;Looping Around the Circle&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org6afe603"&gt;
 &lt;p&gt;
 We're going to rotate around the circle once using the &lt;code&gt;start&lt;/code&gt; value as the angle to start at and the value the slider's set at for the number of degrees we move between drawing the points on the circle. To make it easier to think about I'm using degrees in the for-loop but the &lt;i&gt;sin&lt;/i&gt; and &lt;i&gt;cos&lt;/i&gt; functions expect radians so we need to convert the degrees. Since the circumference of a circle is both \(360^\circ\) and \(2\pi\) we can use a straight ratio to convert them.
 &lt;/p&gt;
@@ -1572,9 +1573,9 @@ This is usually written using a half-circle \(\left(\frac{\pi}{180}\right)\) but
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org4d88426" class="outline-3"&gt;
-&lt;h3 id="org4d88426"&gt;The Coordinates of the Circle's Points&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org4d88426"&gt;
+&lt;div id="outline-container-org8cb6063" class="outline-3"&gt;
+&lt;h3 id="org8cb6063"&gt;The Coordinates of the Circle's Points&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org8cb6063"&gt;
 &lt;p&gt;
 The coordinates for our point are calculated using the trigonometric definitions for &lt;i&gt;sin&lt;/i&gt; and &lt;i&gt;cos&lt;/i&gt;.
 &lt;/p&gt;
@@ -1613,9 +1614,9 @@ y &amp;amp;= \textit{center}_y + r \sin \theta
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgb268104" class="outline-3"&gt;
-&lt;h3 id="orgb268104"&gt;Now We Draw&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgb268104"&gt;
+&lt;div id="outline-container-orgbaf7e96" class="outline-3"&gt;
+&lt;h3 id="orgbaf7e96"&gt;Now We Draw&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgbaf7e96"&gt;
 &lt;p&gt;
 Now that we have our &lt;i&gt;x&lt;/i&gt; and &lt;i&gt;y&lt;/i&gt; coordinates for the next point on the circle we can draw it.
 &lt;/p&gt;
@@ -1625,9 +1626,9 @@ Now that we have our &lt;i&gt;x&lt;/i&gt; and &lt;i&gt;y&lt;/i&gt; coordinates f
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org90a00fd" class="outline-3"&gt;
-&lt;h3 id="org90a00fd"&gt;And the Rest&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org90a00fd"&gt;
+&lt;div id="outline-container-org712b5e0" class="outline-3"&gt;
+&lt;h3 id="org712b5e0"&gt;And the Rest&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org712b5e0"&gt;
 &lt;p&gt;
 If we just draw the points and line we'll end up with a black dot, which still shows that it's working, but kind of negates the point of using something animated, so I'll draw a white background that's mostly transparent so we can see things move.
 &lt;/p&gt;
@@ -1645,18 +1646,18 @@ And now I'll increment the &lt;code&gt;start&lt;/code&gt; angle so the next time
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgc986de8" class="outline-2"&gt;
-&lt;h2 id="orgc986de8"&gt;Closing Up&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgc986de8"&gt;
+&lt;div id="outline-container-org60f5eda" class="outline-2"&gt;
+&lt;h2 id="org60f5eda"&gt;Closing Up&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org60f5eda"&gt;
 &lt;p&gt;
 And there we have the circle. I had two main reasons for doing this exercise - one was to have a starting point for making noisier shapes and the other was to remind myself of how to make cyclical values so that I can use it as input for functions that I want to have repeat themselves.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org93a814b" class="outline-2"&gt;
-&lt;h2 id="org93a814b"&gt;References&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org93a814b"&gt;
+&lt;div id="outline-container-orgea94878" class="outline-2"&gt;
+&lt;h2 id="orgea94878"&gt;References&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgea94878"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bibliography-generative-art/index.html"&gt;Generative Art&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bibliography-the-nature-of-code/index.html"&gt;The Nature of Code&lt;/a&gt;&lt;/li&gt;
@@ -1666,39 +1667,39 @@ And there we have the circle. I had two main reasons for doing this exercise - o
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org6b4debc"&gt;What Is This About?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orge68d066"&gt;Setup The Sketch&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org2e589a8"&gt;What Is This About?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgda30f35"&gt;Setup The Sketch&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org14bb447"&gt;Name The Parent DIV&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgf867bf4"&gt;The Instance Container Function&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org4d200de"&gt;Name The Parent DIV&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgb3ab210"&gt;The Instance Container Function&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgf7bbdf3"&gt;Constants and Variables&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org3d140cc"&gt;Constants and Variables&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org424d223"&gt;The Noise Space&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org6a8e84d"&gt;The Slider&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org6572cf8"&gt;Colors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org0a172a7"&gt;The Noise Space&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org073f5f3"&gt;The Slider&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org874d8a1"&gt;Colors&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org2a99f17"&gt;Setup&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org6766662"&gt;Setup&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org0929dd4"&gt;Canvas and Line&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orga7a147e"&gt;Slider&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org0a9d92d"&gt;Canvas and Line&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org285b391"&gt;Slider&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org956189e"&gt;Draw&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org08878d7"&gt;Draw&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org457adfc"&gt;The Draw Function&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgaad5426"&gt;Setup The Next Frame&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org078a79d"&gt;Plot Next Frame&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org6bac0ad"&gt;Move the Noise Input&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgbf981bf"&gt;Slider Label&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org2014195"&gt;Once Again But As a Picture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org1571af2"&gt;The Draw Function&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org910fcc7"&gt;Setup The Next Frame&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgf3a8019"&gt;Plot Next Frame&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgb9774eb"&gt;Move the Noise Input&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org7dab173"&gt;Slider Label&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org17bba92"&gt;Once Again But As a Picture&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org9538842"&gt;Make The Sketch Object&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgc18426a"&gt;And That's It, Then&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgdda5dfe"&gt;Sources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org7c2595f"&gt;Make The Sketch Object&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgba33116"&gt;And That's It, Then&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org8f61fe4"&gt;Sources&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1711,9 +1712,9 @@ And there we have the circle. I had two main reasons for doing this exercise - o
 The slider controls how big a step the graph takes along the &lt;code&gt;noise&lt;/code&gt; space with each move to the right along the x-axis (moving the slider to the right makes the steps bigger so the line looks noisier). 
 &lt;/p&gt;
 
-&lt;div id="outline-container-org6b4debc" class="outline-2"&gt;
-&lt;h2 id="org6b4debc"&gt;What Is This About?&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org6b4debc"&gt;
+&lt;div id="outline-container-org2e589a8" class="outline-2"&gt;
+&lt;h2 id="org2e589a8"&gt;What Is This About?&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org2e589a8"&gt;
 &lt;p&gt;
 The plot is a visualization of the p5.js &lt;a href="https://p5js.org/reference/#/p5/noise"&gt;noise&lt;/a&gt; function. I got the idea for it from &lt;a href="https://thecodingtrain.com/tracks/the-nature-of-code-2/noc/perlin/graphing-1d-perlin-noise"&gt;the Coding Train&lt;/a&gt; but the author of that site explains it by talking about it in a video so I thought I'd re-do it so I can understand what the code is doing a little better. The &lt;a href="https://p5js.org/reference/#/p5/noise"&gt;p5 documentation&lt;/a&gt; and the &lt;b&gt;Coding Train&lt;/b&gt; both describe the &lt;code&gt;noise&lt;/code&gt; function as producing &lt;a href="https://en.wikipedia.org/w/index.php?title=Perlin_noise&amp;amp;oldid=1148235423"&gt;Perlin noise&lt;/a&gt;, and Dan Shiffman (the &lt;b&gt;Coding Train&lt;/b&gt; author) even goes on to point out that it's the original version of perlin noise from 1983 and in a later video he shows how to implement &lt;a href="https://en.wikipedia.org/w/index.php?title=Simplex_noise&amp;amp;oldid=1103667712"&gt;Simplex Noise&lt;/a&gt;, an improved version created by Ken Perlin, the author of the original Perlin Noise. On the github site for Processing, however, there are two issues that claim that processing's &lt;code&gt;noise&lt;/code&gt; isn't really &lt;i&gt;perlin&lt;/i&gt; noise but rather a form of &lt;a href="https://en.wikipedia.org/w/index.php?title=Value_noise&amp;amp;oldid=1024311499"&gt;Value Noise&lt;/a&gt;. 
 &lt;/p&gt;
@@ -1724,16 +1725,16 @@ I don't know enough to know what's right, so I'll just call it noise or p5's noi
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orge68d066" class="outline-2"&gt;
-&lt;h2 id="orge68d066"&gt;Setup The Sketch&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orge68d066"&gt;
+&lt;div id="outline-container-orgda30f35" class="outline-2"&gt;
+&lt;h2 id="orgda30f35"&gt;Setup The Sketch&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgda30f35"&gt;
 &lt;p&gt;
 Now on to the code. This first section isn't really about plotting the graph but rather about setting up the P5 sketch in the HTML.
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org14bb447" class="outline-3"&gt;
-&lt;h3 id="org14bb447"&gt;Name The Parent DIV&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org14bb447"&gt;
+&lt;div id="outline-container-org4d200de" class="outline-3"&gt;
+&lt;h3 id="org4d200de"&gt;Name The Parent DIV&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org4d200de"&gt;
 &lt;p&gt;
 We're making a &lt;code&gt;div&lt;/code&gt; to stick the sketch into the page so here's the ID we'll use for that &lt;code&gt;div&lt;/code&gt; so the code can refer to it.
 &lt;/p&gt;
@@ -1742,9 +1743,9 @@ We're making a &lt;code&gt;div&lt;/code&gt; to stick the sketch into the page so
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgf867bf4" class="outline-3"&gt;
-&lt;h3 id="orgf867bf4"&gt;The Instance Container Function&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgf867bf4"&gt;
+&lt;div id="outline-container-orgb3ab210" class="outline-3"&gt;
+&lt;h3 id="orgb3ab210"&gt;The Instance Container Function&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgb3ab210"&gt;
 &lt;p&gt;
 To keep all the variables for the sketch contained in its scope we're going to use a function (&lt;code&gt;noise_graph&lt;/code&gt;) to act as a closure.
 &lt;/p&gt;
@@ -1754,17 +1755,17 @@ To keep all the variables for the sketch contained in its scope we're going to u
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgf7bbdf3" class="outline-2"&gt;
-&lt;h2 id="orgf7bbdf3"&gt;Constants and Variables&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgf7bbdf3"&gt;
+&lt;div id="outline-container-org3d140cc" class="outline-2"&gt;
+&lt;h2 id="org3d140cc"&gt;Constants and Variables&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org3d140cc"&gt;
 &lt;p&gt;
 Now we're into the p5 sketch code (contained within &lt;code&gt;noise_graph&lt;/code&gt;). Before defining the &lt;code&gt;setup&lt;/code&gt; and &lt;code&gt;draw&lt;/code&gt; methods let's define some variables that we can use within them.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org424d223" class="outline-3"&gt;
-&lt;h3 id="org424d223"&gt;The Noise Space&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org424d223"&gt;
+&lt;div id="outline-container-org0a172a7" class="outline-3"&gt;
+&lt;h3 id="org0a172a7"&gt;The Noise Space&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org0a172a7"&gt;
 &lt;p&gt;
 The inputs to the &lt;code&gt;noise&lt;/code&gt; function are what we'll call the &lt;code&gt;X_NOISE_COORDINATE&lt;/code&gt; (or variations on that name, anyway). Every time the canvas gets re-drawn we'll re-draw the graph by putting in a sequence of x-values starting at &lt;code&gt;STARTING_X_NOISE_COORDINATE&lt;/code&gt; and incrementing it by &lt;code&gt;X_NOISE_COORDINATE_STEP_SIZE&lt;/code&gt; as we move along the x-axis of the canvas.
 &lt;/p&gt;
@@ -1782,9 +1783,9 @@ The &lt;code&gt;X_NOISE_COORDINATE_STEP_SIZE&lt;/code&gt; is sort of a re-mappin
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org6a8e84d" class="outline-3"&gt;
-&lt;h3 id="org6a8e84d"&gt;The Slider&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org6a8e84d"&gt;
+&lt;div id="outline-container-org073f5f3" class="outline-3"&gt;
+&lt;h3 id="org073f5f3"&gt;The Slider&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org073f5f3"&gt;
 &lt;p&gt;
 These are some variables so we can add a slider to allow the user to change the step-size to increment the noise input. The slider step size of 0 means that there will be a continuous change in the value as the slider is moved, as opposed to giving it discrete values to jump to.
 &lt;/p&gt;
@@ -1799,9 +1800,9 @@ These are some variables so we can add a slider to allow the user to change the 
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org6572cf8" class="outline-3"&gt;
-&lt;h3 id="org6572cf8"&gt;Colors&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org6572cf8"&gt;
+&lt;div id="outline-container-org874d8a1" class="outline-3"&gt;
+&lt;h3 id="org874d8a1"&gt;Colors&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org874d8a1"&gt;
 &lt;p&gt;
 These are the color settings for the plot.
 &lt;/p&gt;
@@ -1815,9 +1816,9 @@ These are the color settings for the plot.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org2a99f17" class="outline-2"&gt;
-&lt;h2 id="org2a99f17"&gt;Setup&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org2a99f17"&gt;
+&lt;div id="outline-container-org6766662" class="outline-2"&gt;
+&lt;h2 id="org6766662"&gt;Setup&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org6766662"&gt;
 &lt;p&gt;
 Now we'll monkey-patch the &lt;code&gt;setup&lt;/code&gt; function that gets called once at the start of the animation.
 &lt;/p&gt;
@@ -1825,9 +1826,9 @@ Now we'll monkey-patch the &lt;code&gt;setup&lt;/code&gt; function that gets cal
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;setup&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org0929dd4" class="outline-3"&gt;
-&lt;h3 id="org0929dd4"&gt;Canvas and Line&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org0929dd4"&gt;
+&lt;div id="outline-container-org0a9d92d" class="outline-3"&gt;
+&lt;h3 id="org0a9d92d"&gt;Canvas and Line&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org0a9d92d"&gt;
 &lt;p&gt;
 The only possibly not-so-obvious thing here should be the &lt;code&gt;document.getElementById(NOISE_GRAPH_DIV).offsetWidth&lt;/code&gt; argument to the &lt;code&gt;createCanvas&lt;/code&gt; method which grabs the width of the container in which the plot is being put (not the width of the entire window).
 &lt;/p&gt;
@@ -1839,9 +1840,9 @@ The only possibly not-so-obvious thing here should be the &lt;code&gt;document.g
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orga7a147e" class="outline-3"&gt;
-&lt;h3 id="orga7a147e"&gt;Slider&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orga7a147e"&gt;
+&lt;div id="outline-container-org285b391" class="outline-3"&gt;
+&lt;h3 id="org285b391"&gt;Slider&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org285b391"&gt;
 &lt;p&gt;
 Now we'll create the slider to let the user play with the step-size for the noise input.
 &lt;/p&gt;
@@ -1856,16 +1857,16 @@ Now we'll create the slider to let the user play with the step-size for the nois
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org956189e" class="outline-2"&gt;
-&lt;h2 id="org956189e"&gt;Draw&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org956189e"&gt;
+&lt;div id="outline-container-org08878d7" class="outline-2"&gt;
+&lt;h2 id="org08878d7"&gt;Draw&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org08878d7"&gt;
 &lt;p&gt;
 Here's where we define the &lt;code&gt;draw&lt;/code&gt; function that gets called repeatedly to animate our sketch.
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org457adfc" class="outline-3"&gt;
-&lt;h3 id="org457adfc"&gt;The Draw Function&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org457adfc"&gt;
+&lt;div id="outline-container-org1571af2" class="outline-3"&gt;
+&lt;h3 id="org1571af2"&gt;The Draw Function&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org1571af2"&gt;
 &lt;p&gt;
 Monkey patch the &lt;code&gt;draw&lt;/code&gt; method on the &lt;code&gt;p5&lt;/code&gt; object.
 &lt;/p&gt;
@@ -1874,9 +1875,9 @@ Monkey patch the &lt;code&gt;draw&lt;/code&gt; method on the &lt;code&gt;p5&lt;/
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgaad5426" class="outline-3"&gt;
-&lt;h3 id="orgaad5426"&gt;Setup The Next Frame&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgaad5426"&gt;
+&lt;div id="outline-container-org910fcc7" class="outline-3"&gt;
+&lt;h3 id="org910fcc7"&gt;Setup The Next Frame&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org910fcc7"&gt;
 &lt;p&gt;
 We'll paint the canvas with a semi-opaque white on every refresh so that you can sort of see how the graph changes with each loop. We also create some variables:
 &lt;/p&gt;
@@ -1894,9 +1895,9 @@ We'll paint the canvas with a semi-opaque white on every refresh so that you can
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org078a79d" class="outline-3"&gt;
-&lt;h3 id="org078a79d"&gt;Plot Next Frame&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org078a79d"&gt;
+&lt;div id="outline-container-orgf3a8019" class="outline-3"&gt;
+&lt;h3 id="orgf3a8019"&gt;Plot Next Frame&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgf3a8019"&gt;
 &lt;p&gt;
 Here's where we plot the graph. We're going to draw the graph using connected line segments so before the loop starts we'll tell p5 to start the shape.
 &lt;/p&gt;
@@ -1933,9 +1934,9 @@ That's the end of the for-loop. Now, outside of the loop we call &lt;code&gt;end
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org6bac0ad" class="outline-3"&gt;
-&lt;h3 id="org6bac0ad"&gt;Move the Noise Input&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org6bac0ad"&gt;
+&lt;div id="outline-container-orgb9774eb" class="outline-3"&gt;
+&lt;h3 id="orgb9774eb"&gt;Move the Noise Input&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgb9774eb"&gt;
 &lt;p&gt;
 Now we'll move the input for the noise function at the start of the graph a little. If we didn't the input to the noise function as we went through the loop would always be the same so our plot would just draw the same thing over and over again (well, if we move the slider to change the &lt;code&gt;noise_step_size&lt;/code&gt; it wouldn't be exactly the same, but the starting point would always be the same).
 &lt;/p&gt;
@@ -1948,9 +1949,9 @@ I'm not showing the closing braces (&lt;code&gt;}&lt;/code&gt;) to end the funct
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgbf981bf" class="outline-3"&gt;
-&lt;h3 id="orgbf981bf"&gt;Slider Label&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgbf981bf"&gt;
+&lt;div id="outline-container-org7dab173" class="outline-3"&gt;
+&lt;h3 id="org7dab173"&gt;Slider Label&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org7dab173"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;textSize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;32&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;textAlign&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;CENTER&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;fill&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"white"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
@@ -1962,9 +1963,9 @@ I'm not showing the closing braces (&lt;code&gt;}&lt;/code&gt;) to end the funct
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org2014195" class="outline-3"&gt;
-&lt;h3 id="org2014195"&gt;Once Again But As a Picture&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org2014195"&gt;
+&lt;div id="outline-container-org17bba92" class="outline-3"&gt;
+&lt;h3 id="org17bba92"&gt;Once Again But As a Picture&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org17bba92"&gt;
 &lt;p&gt;
 &lt;img src="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/noise-for-loop-1250.webp" alt="for-loop-diagram"&gt;
 &lt;/p&gt;
@@ -1972,9 +1973,9 @@ I'm not showing the closing braces (&lt;code&gt;}&lt;/code&gt;) to end the funct
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org9538842" class="outline-2"&gt;
-&lt;h2 id="org9538842"&gt;Make The Sketch Object&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org9538842"&gt;
+&lt;div id="outline-container-org7c2595f" class="outline-2"&gt;
+&lt;h2 id="org7c2595f"&gt;Make The Sketch Object&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org7c2595f"&gt;
 &lt;p&gt;
 Next we pass our sketch definition to &lt;code&gt;p5&lt;/code&gt; to build it and attach it to our HTML div.
 &lt;/p&gt;
@@ -1982,17 +1983,17 @@ Next we pass our sketch definition to &lt;code&gt;p5&lt;/code&gt; to build it an
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgc18426a" class="outline-2"&gt;
-&lt;h2 id="orgc18426a"&gt;And That's It, Then&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgc18426a"&gt;
+&lt;div id="outline-container-orgba33116" class="outline-2"&gt;
+&lt;h2 id="orgba33116"&gt;And That's It, Then&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgba33116"&gt;
 &lt;p&gt;
 At this point we should have a graph that helps to visualize how the &lt;code&gt;noise&lt;/code&gt; function changes over one-dimension. Noise to the aside, it's also a useful template for plotting any kind of graph, you'd just have to change the setting of the &lt;code&gt;y&lt;/code&gt; value to whatever other function you want to visualize.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgdda5dfe" class="outline-2"&gt;
-&lt;h2 id="orgdda5dfe"&gt;Sources&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgdda5dfe"&gt;
+&lt;div id="outline-container-org8f61fe4" class="outline-2"&gt;
+&lt;h2 id="org8f61fe4"&gt;Sources&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org8f61fe4"&gt;
 &lt;p&gt;
 P5 Reference:
 &lt;/p&gt;
