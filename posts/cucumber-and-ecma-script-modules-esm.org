@@ -1,5 +1,5 @@
 #+BEGIN_COMMENT
-.. title: Cucumber and Ecma Script Modules (ESM) In a Nikola Post
+.. title: Cucumber and ECMA Script Modules (ESM) In a Nikola Post
 .. slug: cucumber-and-ecma-script-modules-esm
 .. date: 2023-06-15 16:21:32 UTC-07:00
 .. tags: javascript,testing,bdd,cucumber,p5.js
@@ -16,9 +16,9 @@
 
 * What Is This, Then?
 
-This is a re-do of the cucumber.js example testing for [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules][JavaScript/ECMAScript Modules (ESM)]]. Just copying the files exactly as they're given in the [[https://github.com/cucumber/cucumber-js-examples][cucumber.js github repository]] works pretty much without problem, but since I'm doing this messy thing with writing javascript in these blog posts instead of as part of a code-project, it took a little more work than I would have liked.
+This is a re-do of the cucumber.js example testing for [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules][JavaScript/ECMAScript Modules (ESM)]]. Just copying the files exactly as they're given in the [[https://github.com/cucumber/cucumber-js-examples][cucumber.js GitHub repository]] works pretty much without problem, but since I'm doing this messy thing with writing JavaScript in these blog posts instead of as part of a code-project, it took a little more work than I would have liked.
 
-I had {{% lancelot title="previously tried" %}}bdd-testing-p5{{% /lancelot %}} to get ESM modules to work with [[https://mochajs.org/][mocha]] but gave up and went back to using the [[https://en.wikipedia.org/wiki/CommonJS?useskin=vector][CommonJS]] syntax instead (which I just read is meant to work outside the brouwser and not in it, which explains some of the trouble I ran into). This time I seem to have gotten the ESM style of modules working with [[https://cucumber.io/docs/installation/javascript/][cucumber.js]], but it $\textit{is}$ a bit convoluted and maybe not really a good idea to do it this way. So here we go.
+I had {{% lancelot title="previously tried" %}}bdd-testing-p5{{% /lancelot %}} to get ESM modules to work with [[https://mochajs.org/][mocha]] but gave up and went back to using the [[https://en.wikipedia.org/wiki/CommonJS?useskin=vector][CommonJS]] syntax instead (which I just read is meant to work outside the browser and not in it, which explains some of the trouble I ran into). This time I seem to have gotten the ESM style of modules working with [[https://cucumber.io/docs/installation/javascript/][cucumber.js]], but it $\textit{is}$ a bit convoluted and maybe not really a good idea to do it this way. So here we go.
 
 * Setting Up
 
@@ -26,7 +26,7 @@ The cucumber.js page has instructions on installing it, so I won't go over it. I
 
 ** The Cucumber.js Configuration
 
-~cucumber.js~ uses a configuration file named... ~cucumber.js~ that you put where you run the tests. I'm going to put cucumber test-files into folders whose names will have the form ~test-<slug>~, where ~slug~ is the slug for the post where I define the javascript and tests in, so in order to get ~cucumber~ to find them, I need to change the glob in the ~import~ line to match.
+~cucumber.js~ uses a configuration file named... ~cucumber.js~ that you put where you run the tests. I'm going to put cucumber test-files into folders whose names will have the form ~test-<slug>~, where ~slug~ is the slug for the post where I define the JavaScript and tests in, so in order to get ~cucumber~ to find them, I need to change the glob in the ~import~ line to match.
 
 #+begin_src js :tangle ../tests/cucumber-tests/cucumber.js
 export default {
@@ -60,7 +60,7 @@ Next we need a ~package.json~ file next to the ~cucumber.js~ file. There's two c
 
 I had previously installed ~chai~ globally and it was working with ~mocha~ but for mysterious reasons this time I got a "Module not found" error (maybe because I installed ~cucumber~ locally) so I installed it locally too.
 
-So far, this is what I've edited in the testing directory.
+So far, these are the files that I've edited in the testing directory.
 
 #+begin_example fish
 cucumber.js
@@ -75,7 +75,7 @@ Now that we have this setup we can run the test-runner using ~npm~.
 npm test
 #+end_example
 
-Cucumber runs once and then will re-run the testing every time we make a change to our files. I'm not sure how the magic gets done but it even detects when I make changes to the javascript being tested after I moved it outside of the testing folder.
+Cucumber runs once and then will re-run the testing every time we make a change to our files. I'm not sure how the magic gets done but it even detects when I make changes to the JavaScript being tested after I moved it outside of the testing folder.
 
 * The Test Files
 
@@ -119,7 +119,7 @@ import { Given, When, Then } from "@cucumber/cucumber";
 import { Greeter } from  "../../../files/posts/cucumber-and-ecma-script-modules-esm/greetings.js";
 #+end_src
 ** Given
-Our ~given~ function just creates a Greeter instance. There are also functions like ~Before~ and ~BeforeAll~ that let you do something once befare each Scenario (or all Scenarios), but we only have one scenario and it sounds clearer to me to say "Given a greeter...".
+Our ~given~ function just creates a Greeter instance. There are also functions like ~Before~ and ~BeforeAll~ that let you do something once before each Scenario (or all Scenarios), but we only have one scenario and it sounds clearer to me to say "Given a greeter...".
 
 #+begin_src js :noweb-ref given
 Given("a greeter", function() {
@@ -147,7 +147,7 @@ Then("I should hear {string}",
 );
 #+end_src
 
-So far this is the basic structure of our testing folder (ignoring stuff that I didn't create or edit).
+So far this is the basic structure of our testing folder (ignoring othe stuff that I didn't create or edit).
 
 #+begin_example fish
 cucumber.js
@@ -173,7 +173,7 @@ class Greeter {
 
 [[img-url: greeter.png]]
 
-Now let's define the Greeter (the software under test). Initially, just to see if it worked, I put it next to the test files the way that the example did, but the point of this is to get the javascript into the post so we can work with P5, so its final resting place is in a file named ~greetings.js~ in the folder where [[https://getnikola.com/][nikola]] will look for files when I build the site.
+Now let's define the Greeter (the software under test). Initially, just to see if it worked, I put it next to the test files the way that the example did, but the point of this is to get the JavaScript into the post so we can work with P5, so its final resting place is in a file named ~greetings.js~ in the folder where [[https://getnikola.com/][Nikola]] will look for files when I build the site.
 
 #+begin_src js :tangle ../files/posts/cucumber-and-ecma-script-modules-esm/greetings.js
 class Greeter {
@@ -191,7 +191,7 @@ In order for the class-definition (or anything else we define) to be importable 
 export class Greeter {
 #+end_src
 
-when defining the class, but, as seems to be the way with javascript, there's multiple ways to do exports (and imports), each of which probably has some subtle different use, but which is more than I want to know about at this point, so I decided to settle on this syntax:
+when defining the class, but, as seems to be the way with JavaScript, there's multiple ways to do exports (and imports), each of which probably has some subtle different use, but which is more than I want to know about at this point, so I decided to settle on this syntax:
 
 #+begin_src js
 export { Greeter };
@@ -203,9 +203,9 @@ export { Greeter };
  - This leaves class definitions looking the same as they did before I decided to try messing with modules.
 
 * The Greeter package.json
-This next bit took me a while to figure out. If you put the ~Greeter~ definition into a subfolder below where we're running the tests, it will recognize our ~greeter.js~ file as an ESM module just fine. But, if you move it into a folder outside our tests as I did, node (or cucumber) suddenly won't be able to tell that it's an ESM module.
+This next bit took me a while to figure out. If you put the ~Greeter~ definition into a sub-folder below where we're running the tests, it will recognize our ~greeter.js~ file as an ESM module just fine. But, if you move it into a folder outside our tests as I did, node (or cucumber) suddenly won't be able to tell that it's an ESM module.
 
-It will helpfully tell you to change the file extension from ~.js~ to ~.mjs~, which doesn't work, and offer you a different import syntax to use, which also doesn't work, and to tell you to put ~"type": "module"~ into the ~package.json~ file... which turns out to /sort of/ be the answer.
+The error message will helpfully tell you to change the file extension from ~.js~ to ~.mjs~, which doesn't work, and offer you a different import syntax to use, which also doesn't work, and to tell you to put ~"type": "module"~ into the ~package.json~ file... which turns out to /sort of/ be the answer.
 
 If you look at the ~package.json~ I edited in the section above to run the tests you'll see that it already has the ~"type": "module"~ line in it, which I assume is why the tests were running before I moved ~greetings.js~. But it turns out that to get the tests to recognize the ~greetings.js~ file as an ESM module once I moved it I also had to put a ~package.json~ file next to it that identified it as an ESM module. Like so:
 
@@ -220,11 +220,11 @@ I suppose, maybe it's a little like an ~__init__.py~ file in python that tells p
 
 * Now the Other Hard Part
 
-Okay, so the testing is working now, but just running tests is sort of meaningless (no offense to testers), the real point of it all is to get the tested javascript back into this post and use it.
+Okay, so the testing is working now, but just running tests is sort of meaningless (no offense to testers), the real point of it all is to get the tested JavaScript back into this post and use it.
 
 ** First Let's Setup the Sketch Tag
 
-According to [[https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script][mozilla]], ~<script>~ tags are assumed to be javascript if you don't set a MIME type (and so they tell you not to set the ~type~ argument if it's a regular script) but to let the browser know it's a module you have to set the attribute ~type="module"~ in the tag. I'm going to use a convoluted name for the actual p5 sketch file that I'm making, but for demonstration's sake let's pretend it's called ~sketch.js~, then the HTML tag to include it in this post would look like this.
+According to [[https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script][Mozilla]], ~<script>~ tags are assumed to be JavaScript if you don't set a MIME type (and so they tell you not to set the ~type~ argument if it's a regular script) but to let the browser know it's a module you have to set the attribute ~type="module"~ in the tag. I'm going to use a convoluted name for the actual p5 sketch file that I'm making, but for demonstration's sake let's pretend it's called ~sketch.js~, then the HTML tag to include it in this post would look like this.
 
 #+begin_src html
 <script src="sketch.js" type="module"></script>
@@ -270,6 +270,7 @@ greeter.js
 sketch.js
 package.json
 #+end_example
+
 * What Have We Learned?
 
 This was an exercise in seeing if I could get cucumber.js and ESM modules working. In particular it was about testing code that gets included in this post and used by p5. This was a pretty simple example, but it seems to work so I'll take it as a start that I can reference when going back to work with more complex p5 code.
