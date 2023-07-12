@@ -234,7 +234,7 @@ see: https://superuser.com/a/727068
 /* for the Creative Commons license icons */
 #license img {
     display: inline-block;
-    height:20px !important;
+    height:20px;
     margin-left: 3px;
     margin-bottom:5px;
           }
@@ -243,7 +243,7 @@ footer {
     text-align: center;
 }
 
-/* for the imaga attribution */
+/* for the image attribution */
 
 .attribution {
     text-align: center;
