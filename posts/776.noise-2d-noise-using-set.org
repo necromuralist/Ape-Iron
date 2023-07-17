@@ -1,0 +1,145 @@
+#+BEGIN_COMMENT
+.. title: 2D Noise Using Set
+.. slug: 2d-noise-using-set
+.. date: 2023-07-16 13:44:07 UTC-07:00
+.. tags: p5.js,noise,nature of code
+.. category: Noise
+.. link: 
+.. description: Graphing the p5 Noise function using the "set" method.
+.. type: text
+.. status: 
+.. updated: 
+.. template: p5.tmpl
+#+END_COMMENT
+#+OPTIONS: ^:{}
+#+TOC: headlines 3
+
+
+This first sketch is a static two-dimensional visualization of the p5 ~noise~  function, with the pixels of the canvas set to a level of gray (from black to white) based on the noise. I'll be doing the sketch again using a different method but this first one uses the (ambiguously named) [[https://p5js.org/reference/#/p5/set][set]] function that lets you set the grayscale or RGB-Alpha value for a single [[https://en.wikipedia.org/wiki/Pixel?useskin=vector#Logical_pixel][logical pixel]] (because different displays have different pixel-densities, there might be more "physical" pixels dedicated to each logical one, giving you better resolution). The ~set~ function is the simplest way to set a pixel, but, as noted in the p5 documentation, it adds overhead so there's another recommended way to do it if you need it to go faster (which is what the next section - {{% doc %}}2d-static-noise-setting-the-pixels{{% /doc %}} - is about). For static images (as this is) it's fast enough, though.
+
+#+begin_src js :tangle ../files/posts/2d-noise-using-set/simple-sketch.js  :exports none
+const STATIC_NOISE_GRAPH_DIV = "simple-2d-noise-graph";
+
+/** Sketch to visualize 2D Noise using `set` */
+/*
+ ,* Params:
+ ,* - p5: A p5 instance object
+,*/
+<<simple-sketch-closure>>
+
+  /** Create the canvas */
+  <<simple-sketch-setup>>
+
+  /** Draw the visualization then stop the loop */
+  <<simple-sketch-draw>>
+
+    <<simple-sketch-load-pixels>>
+
+    <<simple-sketch-for-loop>>
+
+        <<simple-sketch-intensity>>
+  
+    <<simple-sketch-end-for-loops>>
+
+  <<simple-sketch-update-pixels>>
+    
+}// end simple_sketch
+
+<<simple-sketch-instance>>
+#+end_src
+
+** The Closure Function
+
+This is the basic function that we pass to the ~p5~ constructor to create our sketch.
+
+#+begin_src js :noweb-ref simple-sketch-closure
+function simple_sketch(p5) {
+  const MAXIMUM_INTENSITY = 255;
+  const NOISE_OFFSET_INCREMENT = 0.01;
+#+end_src
+
+We're only going to set the grayscale channel which has a maximum value of 255, thus the ~MAXIMUM_INTENSITY~ multiplied by noise will be what we use to figure out what value to set each pixel. The ~NOISE_OFFSET_INCREMENT~ is the amount that we're going to increase the x and y values as we step through the noise-space. 
+
+** Set Up
+First I'll define the p5 ~setup~ function. All it does is create the canvas that's the width of the div container. I'm using a variable ~STATIC_NOISE_GRAPH_DIV~ that I didn't show, but it just has the HTML div ID that will hold the sketch.
+
+#+begin_src js :noweb-ref simple-sketch-setup
+p5.setup = function() {
+  p5.createCanvas(
+    document.getElementById(STATIC_NOISE_GRAPH_DIV).offsetWidth,
+    400);
+} //end setup
+#+end_src
+
+** Draw
+
+The p5 ~draw~ function is where we do all the work of drawing the plot so I'll break it up a little bit to explain more of what's here.
+
+#+begin_src js :noweb-ref simple-sketch-draw
+p5.draw = function() {
+  let intensity;
+  let column_offset = 0.0;
+  let row_offset;
+#+end_src
+
+Besides defining the function I'm declaring a variable, ~column_offset~ that holds the x-input value for the ~noise~ function, as well as ~row_offset~ which will hold the y-input. 
+
+I'm also creating a variable, ~intensity~ to hold the RGB setting we're going to use. It gets passed immediately to ~set~ once the value is created so it isn't really needed, I just created it for clarity.
+
+*** Load Pixels
+
+#+begin_src js :noweb-ref simple-sketch-load-pixels
+p5.loadPixels();
+#+end_src
+
+Behind the scenes the ~set~ function is actually manipulating a special data-structure called [[https://p5js.org/reference/#/p5/pixels][pixels]], which I'll look at more in the next sketch. The important thing to note is that you have to load the display data into the array before you can use it (using ~loadPixels()~), even when using the ~set~ function.
+
+*** The For-Loops
+#+begin_src js :noweb-ref simple-sketch-for-loop
+for (let column = 0; column < p5.width; column++) {
+  row_offset = 0.0;
+
+  for (let row = 0; row < p5.height; row++) {
+#+end_src
+
+Since we're setting each of the pixels in the canvas I'll use two for-loops, traversing each column from top row to bottom row before moving on to the next column. I had previously followed the convention of using ~x~ for columns and ~y~ for rows, but I think calling them ~columns~ and ~rows~ will be a little clearer when we get to the next sketch.
+
+*** Set the Intensity
+
+#+begin_src js :noweb-ref simple-sketch-intensity
+let intensity = p5.noise(column_offset, row_offset) * MAXIMUM_INTENSITY;
+p5.set(column, row, intensity);
+#+end_src
+
+The ~intensity~ for each pixel is the noise at the offset for that column-row pair multiplied by the MAXIMUM_INTENSITY (255) (since noise goes from \(0 \ldots 1\) and RGB-Alpha goes from \(0 \ldots 255\).) this gives us a fractional value of the MAXIMUM_INTENSITY. Once we get it we can ~set~ it at the matching ~column~ and ~row~ coordinate. The ~intensity~ is going to be a float, but as we'll see in the next sktech that won't matter, since the ~pixels~ array casts values to an integer, although I suppose if it were more important we might want to control it using floor, ceiling, or round. But since this is using noise I don't imagine we'd know the difference.
+
+*** End the For-Loops
+#+begin_src js :noweb-ref simple-sketch-end-for-loops
+    row_offset += NOISE_OFFSET_INCREMENT;
+  } //end row-for
+
+  column_offset += NOISE_OFFSET_INCREMENT;
+} // end column-for
+#+end_src
+
+At the end of each of the for-loops we add an offset value to change the input to the ~noise~ function by a little.
+
+*** Update the Pixels and Stop the Loop
+
+#+begin_src js :noweb-ref simple-sketch-update-pixels
+  p5.updatePixels();
+  p5.noLoop();
+} // end draw
+#+end_src
+
+When we called ~loadPixels~ we loaded the ~pixels~ array, then we updated the values in the array, but that alone won't update our canvas. To update our sketch we need to tell p5 to take our array values and apply them by calling [[https://p5js.org/reference/#/p5/updatePixels][~updatePixels~]]. Additionally, since we're looping over the same for-loop values over and over, the ~noise~ output isn't going to change so I'll call ~noLoop~ to stop the updating of the canvas.
+
+Finally, I'll create the p5 instance with our sketch function, and we should be able to see the noise visualization.
+
+#+begin_src js :noweb-ref simple-sketch-instance
+new p5(simple_sketch, STATIC_NOISE_GRAPH_DIV);
+#+end_src
+
+{{% p5div source="simple-sketch.js" divid="simple-2d-noise-graph" %}}
+
+And there you go. Now onto a version that sets the pixel array directly without using the ~set~ method.

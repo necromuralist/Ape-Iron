@@ -1,0 +1,36 @@
+#+BEGIN_COMMENT
+.. title: Two-Dimensional Noise
+.. slug: two-dimensional-noise
+.. date: 2023-05-14 15:41:16 UTC-07:00
+.. tags: nature of code,p5.js,noise
+.. category: Noise
+.. link: 
+.. description: Graphing p5.js noise on two-dimensions.
+.. type: text
+.. status: 
+.. updated: 
+.. template: p5.tmpl
+.. has_math: True
+#+END_COMMENT
+#+OPTIONS: ^:{}
+#+TOC: headlines 2
+
+* Introduction
+This is yet another copy and redo of a sketch from [[https://nature-of-code-2nd-edition.netlify.app/][the Nature of Code]]. This time it's an extension of a prior post on {{% lancelot title="making a one-dimensional noise graph" %}}graphing-p5-noise{{% /lancelot %}}.
+
+- {{% doc %}}2d-noise-using-set{{% /doc %}}
+- {{% doc %}}2d-static-noise-setting-the-pixels{{% /doc %}}
+- {{% doc %}}2d-moving-noise{{% /doc %}}
+
+* Sources
+
+- Nature of Code [Internet]. [cited 2023 May 11]. Available from: https://nature-of-code-2nd-edition.netlify.app/
+- p5 reference | pixelDensity() [Internet]. [cited 2023 May 15]. Available from: https://p5js.org/reference/#/p5/pixelDensity
+- p5 reference | pixels [Internet]. [cited 2023 May 15]. Available from: https://p5js.org/reference/#/p5/pixels
+- pixel | Etymology, origin and meaning of pixel by etymonline [Internet]. [cited 2023 May 16]. Available from: https://www.etymonline.com/word/pixel
+- Pixel density - Wikipedia [Internet]. [cited 2023 May 16]. Available from: https://en.wikipedia.org/w/index.php?title=Pixel_density&useskin=vector
+- Uint8ClampedArray - JavaScript | MDN [Internet]. 2023 [cited 2023 May 16]. Available from: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
+- Frame rate - Firefox Developer Tools | MDN [Internet]. [cited 2023 May 19]. Available from: https://www.devdoc.net/web/developer.mozilla.org/en-US/docs/Tools/Performance/Frame_rate.html
+- When p5js slider value is released function? [Internet]. Processing Foundation. 2021 [cited 2023 May 21]. Available from: https://discourse.processing.org/t/when-p5js-slider-value-is-released-function/30581
+- p5 reference | input() [Internet]. [cited 2023 May 21]. Available from: https://p5js.org/reference/#/p5/input
+- p5 reference | set() [Internet]. [cited 2023 May 22]. Available from: https://p5js.org/reference/#/p5/set

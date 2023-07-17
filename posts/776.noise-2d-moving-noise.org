@@ -1,0 +1,128 @@
+#+BEGIN_COMMENT
+.. title: 2D Moving Noise
+.. slug: 2d-moving-noise
+.. date: 2023-07-16 14:26:31 UTC-07:00
+.. tags: nature of code,p5.js,noise
+.. category: Noise
+.. link: 
+.. description: Moving p5.js noise using the pixel array.
+.. type: text
+.. status: 
+.. updated: 
+.. template: p5.tmpl
+#+END_COMMENT
+#+OPTIONS: ^:{}
+#+TOC: headlines 2
+
+{{% javascripttag source="../2d-static-noise-setting-the-pixels/pixel-constants.js" %}}
+{{% javascripttag source="moving-noise.js" %}}
+{{% p5div source="moving-sketch-pixels.js" divid="moving-2d-noise-graph-pixels" %}}
+
+#+begin_export html
+<p id="moving-slider" ></p>
+#+end_export
+
+** The Sketch
+**Note for later:** Setting the canvas too wide slows the frame rate down a lot (since the x for-loop uses the width) so I needed to both shrink the canvas and add an extra div (above) to stick the slider into - because it was only showing up under the canvas before because there wasn't enough room for it to slide up alongside it.
+
+#+begin_src js :tangle ../files/posts/2d-moving-noise/moving-sketch-pixels.js :exports both
+/** Draw static 2D noise using pixel array*/
+const MOVING_NOISE_DIV = "moving-2d-noise-graph-pixels"
+
+function moving_pixels(p5) {
+  const HEIGHT = 400;
+  const WIDTH = 500;
+  
+  let plotter;
+  let slider;
+
+  /** creates the canvas */
+  p5.setup = function() {
+    p5.pixelDensity(1);
+    p5.createCanvas(
+      WIDTH,
+      HEIGHT);
+    
+    slider = p5.createSlider(SLIDER.min,
+                             SLIDER.max,
+                             SLIDER.default_value,
+                             SLIDER.step_size).parent("moving-slider");
+    slider.style("width", "500px");
+    
+    p5.fill("white");
+    p5.stroke("white");
+    p5.textAlign(p5.CENTER);
+    p5.textSize(32);
+    plotter = new MovingNoise({p5:p5, slider:slider,
+                               red:102, green:102});
+  } // end setup
+
+  /** draw the noise */
+  p5.draw = function() {
+    plotter.draw();
+
+    // add a label to show the amount the noise changes
+    p5.text(`Noise Change: ${slider.value().toFixed(3)}`,
+            p5.width/2 , p5.height - 10);
+  } // end draw
+
+} // end static_pixels
+
+let move_p5 = new p5(moving_pixels, MOVING_NOISE_DIV);
+#+end_src
+
+Check the framerate in the browser's javascript console with
+
+#+begin_src js
+move_p5.frameRate();
+#+end_src
+
+** Moving Noise Plotter
+
+#+begin_src js :tangle ../files/posts/2d-moving-noise/moving-noise.js
+class MovingNoise {
+  constructor({p5=undefined,
+               slider=undefined,
+               red=PIXEL_ARRAY.RGB_MAX,
+               green=PIXEL_ARRAY.RGB_MAX,
+               blue= PIXEL_ARRAY.RGB_MAX,
+               y_start_offset=1000} = {}) {
+    this.p5 = p5
+    this.slider = slider;
+    this.red_fraction = red/PIXEL_ARRAY.RGB_MAX;
+    this.green_fraction = green/PIXEL_ARRAY.RGB_MAX;
+    this.blue_fraction = blue/PIXEL_ARRAY.RGB_MAX;
+    this.y_start_offset = y_start_offset;
+    this.noise_start = 0;
+  } // end constructur
+
+  draw() {
+    let offset_y = this.noise_start + this.y_start_offset;
+    let offset_x;
+    let pixel_index;
+    let intensity;
+    let increment = this.slider.value();
+    
+    this.p5.loadPixels();    
+    
+    for (let y=0; y < this.p5.height; y++) {
+      offset_x = this.noise_start;
+      for (let x=0; x < this.p5.width; x++) {
+        pixel_index = (x + y * this.p5.width) * PIXEL_ARRAY.CELLS_PER_PIXEL;
+        intensity = this.p5.noise(offset_x, offset_y) * PIXEL_ARRAY.RGB_MAX;
+        this.p5.pixels[pixel_index + PIXEL_ARRAY.RED] = (intensity *
+                                                  this.red_fraction);
+        this.p5.pixels[pixel_index + PIXEL_ARRAY.GREEN] = (intensity *
+                                                    this.green_fraction);
+        this.p5.pixels[pixel_index + PIXEL_ARRAY.BLUE] = (intensity *
+                                                   this.blue_fraction);
+        this.p5.pixels[pixel_index + PIXEL_ARRAY.ALPHA] = PIXEL_ARRAY.RGB_MAX;
+        offset_x += increment;        
+      } // end x for
+      offset_y += increment;
+    }// end x for
+    this.p5.updatePixels();
+    this.noise_start += increment;
+  } // end draw
+} // end NoisePlotter
+#+end_src
