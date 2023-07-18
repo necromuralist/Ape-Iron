@@ -292,3 +292,10 @@ And then we create the p5 object...
 ** The Output
 
 {{% p5div source="static-sketch-pixels.js" divid="static-2d-noise-graph-pixels" %}}
+
+
+* Navigation Links
+
+ - {{% lancelot title="Index Post for this Series" %}}two-dimensional-noise{{% /lancelot %}}
+ - {{% lancelot title="Previously: Using the 'set' Method" %}}2d-noise-using-set{{% /lancelot %}}
+ - {{% lancelot title="Next: Moving the Noise" %}}2d-moving-noise{{% /lancelot %}}

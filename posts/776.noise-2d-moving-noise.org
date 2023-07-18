@@ -126,3 +126,10 @@ class MovingNoise {
   } // end draw
 } // end NoisePlotter
 #+end_src
+
+
+* Navigation Links
+
+ - {{% lancelot title="Index Post for this Series" %}}two-dimensional-noise{{% /lancelot %}}
+ - {{% lancelot title="Previously: Using the Pixel Array" %}}2d-static-noise-setting-the-pixels{{% /lancelot %}}
+

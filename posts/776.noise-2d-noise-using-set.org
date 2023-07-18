@@ -143,3 +143,9 @@ new p5(simple_sketch, STATIC_NOISE_GRAPH_DIV);
 {{% p5div source="simple-sketch.js" divid="simple-2d-noise-graph" %}}
 
 And there you go. Now onto a version that sets the pixel array directly without using the ~set~ method.
+
+
+* Navigation Links
+
+ - {{% lancelot title="Index Post for this Series" %}}two-dimensional-noise{{% /lancelot %}}
+ - {{% lancelot title="Next: Using the Pixel Array Instead Of 'set'" %}}2d-static-noise-setting-the-pixels{{% /lancelot %}}
