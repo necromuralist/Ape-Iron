@@ -22,7 +22,7 @@
 <p id="moving-slider" ></p>
 #+end_export
 
-** The Sketch
+* The Sketch
 **Note for later:** Setting the canvas too wide slows the frame rate down a lot (since the x for-loop uses the width) so I needed to both shrink the canvas and add an extra div (above) to stick the slider into - because it was only showing up under the canvas before because there wasn't enough room for it to slide up alongside it.
 
 #+begin_src js :tangle ../files/posts/2d-moving-noise/moving-sketch-pixels.js :exports both
@@ -77,7 +77,7 @@ Check the framerate in the browser's javascript console with
 move_p5.frameRate();
 #+end_src
 
-** Moving Noise Plotter
+* Moving Noise Plotter
 
 #+begin_src js :tangle ../files/posts/2d-moving-noise/moving-noise.js
 class MovingNoise {

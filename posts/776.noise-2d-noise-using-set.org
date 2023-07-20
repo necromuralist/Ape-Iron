@@ -132,7 +132,9 @@ At the end of each of the for-loops we add an offset value to change the input t
 } // end draw
 #+end_src
 
-When we called ~loadPixels~ we loaded the ~pixels~ array, then we updated the values in the array, but that alone won't update our canvas. To update our sketch we need to tell p5 to take our array values and apply them by calling [[https://p5js.org/reference/#/p5/updatePixels][~updatePixels~]]. Additionally, since we're looping over the same for-loop values over and over, the ~noise~ output isn't going to change so I'll call ~noLoop~ to stop the updating of the canvas.
+When we called ~loadPixels~ we loaded the ~pixels~ array, then we updated the values in the array, but that alone won't update our canvas. To update our sketch we need to tell p5 to take our array values and apply them by calling [[https://p5js.org/reference/#/p5/updatePixels][~updatePixels~]].
+
+Additionally, since we're looping over the same for-loop values over and over, the ~noise~ output isn't going to change so I'll call ~noLoop~ to stop the updating of the canvas.
 
 Finally, I'll create the p5 instance with our sketch function, and we should be able to see the noise visualization.
 

@@ -18,9 +18,9 @@
 {{% javascripttag source="pixel-constants.js" %}}
 {{% javascripttag source="noise-plotter.js" %}}
 
-This will essentially be the same sketch except instead of using the ~set~ function I'll set the values in the [[https://p5js.org/reference/#/p5/pixels][~pixels~]] array directly.
+This will essentially be the same sketch as in the {{% doc %}}2d-noise-using-set{{% /doc %}} post except instead of using the ~set~ function I'll set the values in the [[https://p5js.org/reference/#/p5/pixels][~pixels~]] array directly.
 
-** Some Constants
+* Some Constants
 
 I'm not as familiar with javascript as I am with python so I was littering constant values all over the place trying to figure where the best place to put them would be. I finally decided to create these two objects to hold some constants that I'll use when updating the pixels array and when setting the slider up.
 
@@ -56,7 +56,7 @@ const SLIDER = {
 
 These are the same values I used in the previous noise-sketches. A ~step_size~ of 0 just means that I'm not setting one so p5 can use whatever the default value is - the documentation says it's continuous but it seems to jump a bit when I use it.
 
-** Noise Plotter
+* Noise Plotter
 
 The Noise Plotter class is going to draw the two-dimensional noise-visualization using the current slider value as the step-size to change the noise input.
 
@@ -138,7 +138,7 @@ That last variable might take some explaining, so maybe here's a good spot to du
   this.p5.updatePixels();
 } // end draw
 #+end_src
-** The Sketch
+* The Sketch
 *Note for later:* You have to either set the background or the set the alpha channel in the pixel array. Leaving both out won't show anything.
 
 
@@ -289,10 +289,9 @@ new p5(static_pixels, STATIC_NOISE_PIXELS_DIV);
 
 And then we create the p5 object...
 
-** The Output
+* The Output
 
 {{% p5div source="static-sketch-pixels.js" divid="static-2d-noise-graph-pixels" %}}
-
 
 * Navigation Links
 
