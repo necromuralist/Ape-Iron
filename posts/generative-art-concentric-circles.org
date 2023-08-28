@@ -1,0 +1,58 @@
+#+BEGIN_COMMENT
+.. title: Generative Art: Concentric Circles
+.. slug: generative-art-concentric-circles
+.. date: 2023-08-28 15:19:49 UTC-07:00
+.. tags: p5.js,generative art
+.. category: Generative Art
+.. link: 
+.. description: Drawing concentric circles in p5 with trigonometry.
+.. type: text
+.. status: 
+.. updated: 
+.. template: p5.tmpl
+#+END_COMMENT
+
+{{% p5div source="concentric-circles.js" divid="03d2e681-concentric-circles" %}}
+
+#+begin_src js :tangle ../files/posts/generative-art-concentric-circles/circles.js :exports both
+const DEGREES_IN_A_CIRCLE = 360;
+const TO_RADIANS = (2 * Math.PI)/ DEGREES_IN_A_CIRCLE;
+const WIDTH = 500;
+const HEIGHT = WIDTH;
+const POINT_DIAMETER = 1;
+
+let radius = 5;
+let step = 10;
+let center_x;
+let center_y;
+
+function setup(){
+  createCanvas(WIDTH, HEIGHT);
+  background("white");
+  stroke("black");
+  fill("black");
+  center_x = width/2;
+  center_y = height/2;
+  frameRate(10);
+}
+
+function draw() {
+  let radians;
+  let x;
+  let y;
+  
+  for (let angle = 0; angle < DEGREES_IN_A_CIRCLE; angle += 1){
+    radians = angle * TO_RADIANS;
+    x = center_x + radius * Math.cos(radians);
+    y = center_y + radius * Math.sin(radians);
+    circle(x, y, POINT_DIAMETER);
+  } // end for
+  
+  radius += step;
+  background(255, 75);
+
+  if (radius >= (width/2 - step) || radius < 0) {
+    step *= -1;
+  }
+}// end draw
+#+end_src
