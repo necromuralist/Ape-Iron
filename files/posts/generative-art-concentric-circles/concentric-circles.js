@@ -1,20 +1,3 @@
-#+BEGIN_COMMENT
-.. title: Generative Art: Concentric Circles
-.. slug: generative-art-concentric-circles
-.. date: 2023-08-28 15:19:49 UTC-07:00
-.. tags: p5.js,generative art
-.. category: Generative Art
-.. link: 
-.. description: Drawing concentric circles in p5 with trigonometry.
-.. type: text
-.. status: 
-.. updated: 
-.. template: p5.tmpl
-#+END_COMMENT
-
-{{% p5div source="concentric-circles.js" divid="03d2e681-concentric-circles" %}}
-
-#+begin_src js :tangle ../files/posts/generative-art-concentric-circles/concentric-circles.js :exports both
 const CONCENTRIC_CIRCLES_DIV = "03d2e681-concentric-circles";
 
 function concentric_circles(p5){
@@ -61,4 +44,3 @@ function concentric_circles(p5){
 } // end concentric_circles
 
 let concentric_p5 = new p5(concentric_circles, CONCENTRIC_CIRCLES_DIV);
-#+end_src
