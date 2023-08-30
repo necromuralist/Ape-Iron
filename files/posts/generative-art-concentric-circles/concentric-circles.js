@@ -34,12 +34,15 @@ function concentric_circles(p5){
       p5.circle(x, y, POINT_DIAMETER);
     } // end for
   
+
+    if (radius > (WIDTH/2 - step) || radius <= 0) {
+      step *= -1;
+    }
+
     radius += step;
     p5.background(255, 75);
 
-    if (radius >= (p5.width/2 - step) || radius < 0) {
-      step *= -1;
-    }
+
   }// end draw
 } // end concentric_circles
 
