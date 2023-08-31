@@ -1,12 +1,27 @@
 const CONCENTRIC_CIRCLES_DIV = "03d2e681-concentric-circles";
 
+class ConcentricCircles {
+  degrees_in_a_circle = 360;
+  to_radians = (2 * Math.PI)/ this.degrees_in_a_circle;
+
+  constructor(p5, width=500, height=500, point_diameter=1, radius=5, step=10){
+    this.p5 = p5;
+    this.width = width;
+    this.height = height;
+    this.point_diameter=point_diameter;
+    this.radius = radius;
+    this.step = step;
+  } // constructor
+
+} // Concentric Circles
+
 function concentric_circles(p5){
   const DEGREES_IN_A_CIRCLE = 360;
   const TO_RADIANS = (2 * Math.PI)/ DEGREES_IN_A_CIRCLE;
   const WIDTH = 500;
   const HEIGHT = WIDTH;
   const POINT_DIAMETER = 1;
-
+  
   let radius = 5;
   let step = 10;
   let center_x;
@@ -46,4 +61,19 @@ function concentric_circles(p5){
   }// end draw
 } // end concentric_circles
 
+class TestThis {
+  x = 5;
+
+  constructor() {
+  }
+
+  test(){
+    console.log(this.x);
+  }
+}
+
+const t = new TestThis();
+t.test();
+const c = new ConcentricCircles();
+c.test();
 let concentric_p5 = new p5(concentric_circles, CONCENTRIC_CIRCLES_DIV);
