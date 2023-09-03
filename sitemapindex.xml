@@ -58,10 +58,6 @@
   <lastmod>2023-09-03T19:35:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_p5js.xml</loc>
-  <lastmod>2023-08-28T19:54:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_scraping.xml</loc>
   <lastmod>2023-09-03T19:35:00Z</lastmod>
  </sitemap>
@@ -199,6 +195,6 @@
  </sitemap>
  <sitemap>
   <loc>https://necromuralist.github.io/Ape-Iron/sitemap.xml</loc>
-  <lastmod>2023-09-03T19:35:00Z</lastmod>
+  <lastmod>2023-09-03T19:43:00Z</lastmod>
  </sitemap>
 </sitemapindex>
