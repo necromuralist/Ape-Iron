@@ -1,0 +1,165 @@
+#+BEGIN_COMMENT
+.. title: Generative Art: Concentric Circles
+.. slug: generative-art-concentric-circles
+.. date: 2023-08-28 15:19:49 UTC-07:00
+.. tags: p5.js,generative art
+.. category: Generative Art
+.. link: 
+.. description: Drawing concentric circles in p5 with trigonometry.
+.. type: text
+.. status: 
+.. updated: 
+.. template: p5.tmpl
+#+END_COMMENT
+
+{{% p5div source="concentric-circles.js" divid="03d2e681-concentric-circles" %}}
+
+#+begin_src js :tangle ../files/posts/generative-art-concentric-circles/concentric-circles.js :exports none
+<<sketch-div>>
+
+<<concentric-circles-class>>
+
+  <<concentric-circles-center-x>>
+
+  <<concentric-circles-center-y>>
+
+  <<concentric-circles-draw>>
+
+  <<concentric-circles-step>>
+
+} // Concentric Circles class
+
+<<concentric-circles-function>>
+  
+  <<concentric-circles-p5-setup>>
+
+  <<concentric-circles-p5-draw>>
+
+} // end concentric_circles sketch function
+
+<<concentric-circles-p5-object>>
+#+end_src
+
+#+begin_src js :noweb-ref sketch-div :exports none
+const CONCENTRIC_CIRCLES_DIV = "03d2e681-concentric-circles";
+#+end_src
+
+* Introduction
+
+This is a sketch that extends the {{% doc %}}generative-art-circles{{% /doc %}} post (slightly) to make concentric circles. I was going to make a spiral but realized after I wrote out the code that I had actually made concentric circles - so it's sort of a half-step from the circle to the spiral.
+
+* The Class
+
+The ~ConcentricCircles~ class keeps track of the parameters for the circles and draws them. Here I'm declaring the class and some fields to store the parameters.
+
+#+begin_src js :noweb-ref concentric-circles-class
+class ConcentricCircles {
+  // geometry
+  degrees_in_a_circle = 360;
+  to_radians = (2 * Math.PI)/ this.degrees_in_a_circle;
+
+  // the starting values for the circles
+  radius = 5;
+  _step = 5;
+
+  // the center of our sketch (and the circles)
+  center_x;
+  center_y;
+
+  // the size of the circle to draw  the circles
+  point_diameter = 1;
+  
+  constructor(p5, center_x, center_y, maximum_radius){
+    this.p5 = p5;
+    this.center_x = center_x;
+    this.center_y = center_y;
+    this.maximum_radius = maximum_radius;
+  } // constructor
+#+end_src
+
+The constructor takes the ~p5.js~ object and the coordinates for the center of the circlesThe constructor takes the ~p5.js~ object and the coordinates for the center of the circles (~center_x~ and ~center_y~).
+
+The ~maximum_radius~ is the value at which the circles have hit their limimt and should turn around. This is presumably half the width of the canvas, but since the ~ConcentricCircles~ class isn't creating the canvas I thought it should be the code that creates it that decides what the limit is.
+
+** The Step
+
+The ~step~ is the amount the radius increases between each circle. I put it in a getter so that it can check if the circles are at the limits of the expected maximum (or minimum) size and so should change direction (shrink instead of grow or vice-versa).
+
+#+begin_src js :noweb-ref concentric-circles-step
+get step() {
+  if (this.radius > (this.maximum_radius - this._step) || this.radius <= 0) {
+      this._step *= -1;
+    }
+  return this._step
+}
+#+end_src
+
+** The Draw
+The ~draw~ method is what the sketch function calls to tell the ~ConcentricCircles~ to draw a circle. This is the same as the sketch that drew a single circle except that the radius gets incremented at after the circle is drawn.
+
+#+begin_src js :noweb-ref concentric-circles-draw
+draw() {
+  let radians, x, y;
+
+  for (let angle = 0; angle < this.degrees_in_a_circle; angle += 1){
+      radians = angle * this.to_radians;
+      x = this.center_x + this.radius * Math.cos(radians);
+      y = this.center_y + this.radius * Math.sin(radians);
+      this.p5.circle(x, y, this.point_diameter);
+  }
+
+  this.radius += this.step;
+}
+#+end_src
+
+* The Sketch Function
+
+This is the function that gets passed to ~p5~ to execute the ~setup~ and ~draw~ methods.
+
+** Concentric Circles
+After declaring the function and some constants for the canvas, it creates an instance of the ~ConcentricCircles~ class.
+
+#+begin_src js :noweb-ref concentric-circles-function
+function concentric_circles(p5){
+  // the size of the canvas and the color of the circles
+  const WIDTH = 500;
+  const HEIGHT = WIDTH;
+  const POINT_COLOR = "RoyalBlue";
+
+  const circles = new ConcentricCircles(p5, WIDTH/2, HEIGHT/2, WIDTH/2);
+#+end_src
+
+** Set Up
+
+The ~setup~ method doesn't do anything fancy, although I did have to set the ~frameRate~ to a slower speed otherwise I couldn't see the circles being animated.
+
+#+begin_src js :noweb-ref concentric-circles-p5-setup
+p5.setup = function(){
+  p5.createCanvas(WIDTH, HEIGHT);
+  p5.background("white");
+  p5.stroke(POINT_COLOR);
+  p5.fill(POINT_COLOR);
+  p5.frameRate(10);
+} // end setup
+#+end_src
+
+** Draw
+The ~draw~ method defers to the ~ConcentricCircles.draw~ method to do the actual drawing of the circles, but I added a light white overlay so that the circles fade out and you can see the animation.
+
+#+begin_src js :noweb-ref concentric-circles-p5-draw
+p5.draw = function() {
+  circles.draw();
+  p5.background(255, 75);
+}// end draw
+#+end_src
+
+** Passing The Sketch to p5.js
+That's pretty much it for the sketch, the last thing to do is just pass the ~concentric_circles~ function to ~p5~ along with the ~id~ for the ~div~ where the sketch should go (which I defined but don't show in the post).
+
+#+begin_src js :noweb-ref concentric-circles-p5-object
+new p5(concentric_circles, CONCENTRIC_CIRCLES_DIV);
+#+end_src
+
+* The End
+
+And that's it for drawing concentric circles, now on to spirals.
