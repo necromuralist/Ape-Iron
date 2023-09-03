@@ -1,6 +1,0 @@
-#+TITLE: Classic Storymatic
-
-1. Draw two gold cards
-2. Combine the cards to make one character
-3. Draw two copper cards
-4. Let them lead you into a story.

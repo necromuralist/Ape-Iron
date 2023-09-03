@@ -1,6 +1,0 @@
-#+TITLE: Flash
-
-1. Roll two dice and multiply the numbers together.
-2. Draw cards for one of the games.
-3. Tell the story in the number of sentences you got for the product of the dice.
-4. Illustrate the story as a comic.
