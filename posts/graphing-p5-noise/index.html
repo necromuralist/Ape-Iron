@@ -70,69 +70,69 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="index.html#org2e589a8">What Is This About?</a></li>
-<li><a href="index.html#orgda30f35">Setup The Sketch</a>
+<li><a href="index.html#org7e3a212">What Is This About?</a></li>
+<li><a href="index.html#org2cca447">Setup The Sketch</a>
 <ul>
-<li><a href="index.html#org4d200de">Name The Parent DIV</a></li>
-<li><a href="index.html#orgb3ab210">The Instance Container Function</a></li>
+<li><a href="index.html#orgdd87f1e">Name The Parent DIV</a></li>
+<li><a href="index.html#org60b4e2a">The Instance Container Function</a></li>
 </ul>
 </li>
-<li><a href="index.html#org3d140cc">Constants and Variables</a>
+<li><a href="index.html#orgc8f1fef">Constants and Variables</a>
 <ul>
-<li><a href="index.html#org0a172a7">The Noise Space</a></li>
-<li><a href="index.html#org073f5f3">The Slider</a></li>
-<li><a href="index.html#org874d8a1">Colors</a></li>
+<li><a href="index.html#orgdc7d60c">The Noise Space</a></li>
+<li><a href="index.html#org2ec2e06">The Slider</a></li>
+<li><a href="index.html#orgfe3c685">Colors</a></li>
 </ul>
 </li>
-<li><a href="index.html#org6766662">Setup</a>
+<li><a href="index.html#org3464342">Setup</a>
 <ul>
-<li><a href="index.html#org0a9d92d">Canvas and Line</a></li>
-<li><a href="index.html#org285b391">Slider</a></li>
+<li><a href="index.html#org6bd202c">Canvas and Line</a></li>
+<li><a href="index.html#org24ab2bd">Slider</a></li>
 </ul>
 </li>
-<li><a href="index.html#org08878d7">Draw</a>
+<li><a href="index.html#org60e845b">Draw</a>
 <ul>
-<li><a href="index.html#org1571af2">The Draw Function</a></li>
-<li><a href="index.html#org910fcc7">Setup The Next Frame</a></li>
-<li><a href="index.html#orgf3a8019">Plot Next Frame</a></li>
-<li><a href="index.html#orgb9774eb">Move the Noise Input</a></li>
-<li><a href="index.html#org7dab173">Slider Label</a></li>
-<li><a href="index.html#org17bba92">Once Again But As a Picture</a></li>
+<li><a href="index.html#orgd992ce5">The Draw Function</a></li>
+<li><a href="index.html#org97f6dc7">Setup The Next Frame</a></li>
+<li><a href="index.html#org65a168d">Plot Next Frame</a></li>
+<li><a href="index.html#orga011fd3">Move the Noise Input</a></li>
+<li><a href="index.html#org160808f">Slider Label</a></li>
+<li><a href="index.html#orgd4bba6f">Once Again But As a Picture</a></li>
 </ul>
 </li>
-<li><a href="index.html#org7c2595f">Make The Sketch Object</a></li>
-<li><a href="index.html#orgba33116">And That's It, Then</a></li>
-<li><a href="index.html#org8f61fe4">Sources</a></li>
+<li><a href="index.html#orgee64346">Make The Sketch Object</a></li>
+<li><a href="index.html#org50166ff">And That's It, Then</a></li>
+<li><a href="index.html#orge9ba3cd">Sources</a></li>
 </ul>
 </div>
 </div>
 <script language="javascript" src="noise_graph.js" type="text/javascript"></script>
 <div id="noise-graph"></div>
 <p>The slider controls how big a step the graph takes along the <code>noise</code> space with each move to the right along the x-axis (moving the slider to the right makes the steps bigger so the line looks noisier).</p>
-<div class="outline-2" id="outline-container-org2e589a8">
-<h2 id="org2e589a8">What Is This About?</h2>
-<div class="outline-text-2" id="text-org2e589a8">
+<div class="outline-2" id="outline-container-org7e3a212">
+<h2 id="org7e3a212">What Is This About?</h2>
+<div class="outline-text-2" id="text-org7e3a212">
 <p>The plot is a visualization of the p5.js <a href="https://p5js.org/reference/#/p5/noise">noise</a> function. I got the idea for it from <a href="https://thecodingtrain.com/tracks/the-nature-of-code-2/noc/perlin/graphing-1d-perlin-noise">the Coding Train</a> but the author of that site explains it by talking about it in a video so I thought I'd re-do it so I can understand what the code is doing a little better. The <a href="https://p5js.org/reference/#/p5/noise">p5 documentation</a> and the <b>Coding Train</b> both describe the <code>noise</code> function as producing <a href="https://en.wikipedia.org/w/index.php?title=Perlin_noise&amp;oldid=1148235423">Perlin noise</a>, and Dan Shiffman (the <b>Coding Train</b> author) even goes on to point out that it's the original version of perlin noise from 1983 and in a later video he shows how to implement <a href="https://en.wikipedia.org/w/index.php?title=Simplex_noise&amp;oldid=1103667712">Simplex Noise</a>, an improved version created by Ken Perlin, the author of the original Perlin Noise. On the github site for Processing, however, there are two issues that claim that processing's <code>noise</code> isn't really <i>perlin</i> noise but rather a form of <a href="https://en.wikipedia.org/w/index.php?title=Value_noise&amp;oldid=1024311499">Value Noise</a>.</p>
 <p>I don't know enough to know what's right, so I'll just call it noise or p5's noise and not worry about which it is.</p>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgda30f35">
-<h2 id="orgda30f35">Setup The Sketch</h2>
-<div class="outline-text-2" id="text-orgda30f35">
+<div class="outline-2" id="outline-container-org2cca447">
+<h2 id="org2cca447">Setup The Sketch</h2>
+<div class="outline-text-2" id="text-org2cca447">
 <p>Now on to the code. This first section isn't really about plotting the graph but rather about setting up the P5 sketch in the HTML.</p>
 </div>
-<div class="outline-3" id="outline-container-org4d200de">
-<h3 id="org4d200de">Name The Parent DIV</h3>
-<div class="outline-text-3" id="text-org4d200de">
+<div class="outline-3" id="outline-container-orgdd87f1e">
+<h3 id="orgdd87f1e">Name The Parent DIV</h3>
+<div class="outline-text-3" id="text-orgdd87f1e">
 <p>We're making a <code>div</code> to stick the sketch into the page so here's the ID we'll use for that <code>div</code> so the code can refer to it.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">NOISE_GRAPH_DIV</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"noise-graph"</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgb3ab210">
-<h3 id="orgb3ab210">The Instance Container Function</h3>
-<div class="outline-text-3" id="text-orgb3ab210">
+<div class="outline-3" id="outline-container-org60b4e2a">
+<h3 id="org60b4e2a">The Instance Container Function</h3>
+<div class="outline-text-3" id="text-org60b4e2a">
 <p>To keep all the variables for the sketch contained in its scope we're going to use a function (<code>noise_graph</code>) to act as a closure.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">noise_graph</span><span class="p">(</span><span class="nx">p5js</span><span class="p">){</span>
@@ -140,14 +140,14 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org3d140cc">
-<h2 id="org3d140cc">Constants and Variables</h2>
-<div class="outline-text-2" id="text-org3d140cc">
+<div class="outline-2" id="outline-container-orgc8f1fef">
+<h2 id="orgc8f1fef">Constants and Variables</h2>
+<div class="outline-text-2" id="text-orgc8f1fef">
 <p>Now we're into the p5 sketch code (contained within <code>noise_graph</code>). Before defining the <code>setup</code> and <code>draw</code> methods let's define some variables that we can use within them.</p>
 </div>
-<div class="outline-3" id="outline-container-org0a172a7">
-<h3 id="org0a172a7">The Noise Space</h3>
-<div class="outline-text-3" id="text-org0a172a7">
+<div class="outline-3" id="outline-container-orgdc7d60c">
+<h3 id="orgdc7d60c">The Noise Space</h3>
+<div class="outline-text-3" id="text-orgdc7d60c">
 <p>The inputs to the <code>noise</code> function are what we'll call the <code>X_NOISE_COORDINATE</code> (or variations on that name, anyway). Every time the canvas gets re-drawn we'll re-draw the graph by putting in a sequence of x-values starting at <code>STARTING_X_NOISE_COORDINATE</code> and incrementing it by <code>X_NOISE_COORDINATE_STEP_SIZE</code> as we move along the x-axis of the canvas.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">X_NOISE_COORDINATE_START</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
@@ -157,9 +157,9 @@
 <p><i>But</i> the <code>noise</code> function is, well, a function. If you keep passing in the same value to it you'll get the same value out of it so if we just use a scaled value of the x-coordinate (\(x \times x_{noise-coordinate-step-size}\)) as our input then every time p5 re-draws the sketch it will draw the same graph, producing what looks like a static image. In order to get an animated image we'll add an initial value to the noise input (<code>NOISE-COORDINATE-START</code>) that we'll increment every time we re-start the plot so that the <code>noise</code> function starts with a different value each time we re-draw the graph. So instead of \(x \times x_{noise-coordinate-step-size}\) we use \(x_{noise-coordinate-start} + x \times x_{noise-coordinate-step-size}\) as the input to the <code>noise</code> function.</p>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org073f5f3">
-<h3 id="org073f5f3">The Slider</h3>
-<div class="outline-text-3" id="text-org073f5f3">
+<div class="outline-3" id="outline-container-org2ec2e06">
+<h3 id="org2ec2e06">The Slider</h3>
+<div class="outline-text-3" id="text-org2ec2e06">
 <p>These are some variables so we can add a slider to allow the user to change the step-size to increment the noise input. The slider step size of 0 means that there will be a continuous change in the value as the slider is moved, as opposed to giving it discrete values to jump to.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">MINIMUM_NOISE_COORDINATE_STEP_SIZE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
@@ -172,9 +172,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org874d8a1">
-<h3 id="org874d8a1">Colors</h3>
-<div class="outline-text-3" id="text-org874d8a1">
+<div class="outline-3" id="outline-container-orgfe3c685">
+<h3 id="orgfe3c685">Colors</h3>
+<div class="outline-text-3" id="text-orgfe3c685">
 <p>These are the color settings for the plot.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">BLACK</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
@@ -186,17 +186,17 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org6766662">
-<h2 id="org6766662">Setup</h2>
-<div class="outline-text-2" id="text-org6766662">
+<div class="outline-2" id="outline-container-org3464342">
+<h2 id="org3464342">Setup</h2>
+<div class="outline-text-2" id="text-org3464342">
 <p>Now we'll monkey-patch the <code>setup</code> function that gets called once at the start of the animation.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">p5js</span><span class="p">.</span><span class="nx">setup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 </pre></div>
 </div>
-<div class="outline-3" id="outline-container-org0a9d92d">
-<h3 id="org0a9d92d">Canvas and Line</h3>
-<div class="outline-text-3" id="text-org0a9d92d">
+<div class="outline-3" id="outline-container-org6bd202c">
+<h3 id="org6bd202c">Canvas and Line</h3>
+<div class="outline-text-3" id="text-org6bd202c">
 <p>The only possibly not-so-obvious thing here should be the <code>document.getElementById(NOISE_GRAPH_DIV).offsetWidth</code> argument to the <code>createCanvas</code> method which grabs the width of the container in which the plot is being put (not the width of the entire window).</p>
 <div class="highlight">
 <pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">canvas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">p5js</span><span class="p">.</span><span class="nx">createCanvas</span><span class="p">(</span>
@@ -206,9 +206,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org285b391">
-<h3 id="org285b391">Slider</h3>
-<div class="outline-text-3" id="text-org285b391">
+<div class="outline-3" id="outline-container-org24ab2bd">
+<h3 id="org24ab2bd">Slider</h3>
+<div class="outline-text-3" id="text-org24ab2bd">
 <p>Now we'll create the slider to let the user play with the step-size for the noise input.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">slider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">p5js</span><span class="p">.</span><span class="nx">createSlider</span><span class="p">(</span>
@@ -221,23 +221,23 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org08878d7">
-<h2 id="org08878d7">Draw</h2>
-<div class="outline-text-2" id="text-org08878d7">
+<div class="outline-2" id="outline-container-org60e845b">
+<h2 id="org60e845b">Draw</h2>
+<div class="outline-text-2" id="text-org60e845b">
 <p>Here's where we define the <code>draw</code> function that gets called repeatedly to animate our sketch.</p>
 </div>
-<div class="outline-3" id="outline-container-org1571af2">
-<h3 id="org1571af2">The Draw Function</h3>
-<div class="outline-text-3" id="text-org1571af2">
+<div class="outline-3" id="outline-container-orgd992ce5">
+<h3 id="orgd992ce5">The Draw Function</h3>
+<div class="outline-text-3" id="text-orgd992ce5">
 <p>Monkey patch the <code>draw</code> method on the <code>p5</code> object.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">p5js</span><span class="p">.</span><span class="nx">draw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org910fcc7">
-<h3 id="org910fcc7">Setup The Next Frame</h3>
-<div class="outline-text-3" id="text-org910fcc7">
+<div class="outline-3" id="outline-container-org97f6dc7">
+<h3 id="org97f6dc7">Setup The Next Frame</h3>
+<div class="outline-text-3" id="text-org97f6dc7">
 <p>We'll paint the canvas with a semi-opaque white on every refresh so that you can sort of see how the graph changes with each loop. We also create some variables:</p>
 <ul class="org-ul">
 <li><code>noise_step_size</code> is the amount that the <code>x_noise-coordinate</code> changes as the plot moves from left to right along the x-axis of the graph</li>
@@ -252,9 +252,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgf3a8019">
-<h3 id="orgf3a8019">Plot Next Frame</h3>
-<div class="outline-text-3" id="text-orgf3a8019">
+<div class="outline-3" id="outline-container-org65a168d">
+<h3 id="org65a168d">Plot Next Frame</h3>
+<div class="outline-text-3" id="text-org65a168d">
 <p>Here's where we plot the graph. We're going to draw the graph using connected line segments so before the loop starts we'll tell p5 to start the shape.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">p5js</span><span class="p">.</span><span class="nx">beginShape</span><span class="p">();</span>
@@ -278,9 +278,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgb9774eb">
-<h3 id="orgb9774eb">Move the Noise Input</h3>
-<div class="outline-text-3" id="text-orgb9774eb">
+<div class="outline-3" id="outline-container-orga011fd3">
+<h3 id="orga011fd3">Move the Noise Input</h3>
+<div class="outline-text-3" id="text-orga011fd3">
 <p>Now we'll move the input for the noise function at the start of the graph a little. If we didn't the input to the noise function as we went through the loop would always be the same so our plot would just draw the same thing over and over again (well, if we move the slider to change the <code>noise_step_size</code> it wouldn't be exactly the same, but the starting point would always be the same).</p>
 <div class="highlight">
 <pre><span></span><span class="nx">X_NOISE_COORDINATE_START</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">noise_step_size</span><span class="p">;</span>
@@ -288,9 +288,9 @@
 <p>I'm not showing the closing braces (<code>}</code>) to end the functions but at this point we close the <code>draw</code> and <code>noise_graph</code> functions, ending our definitions for the sketch.</p>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org7dab173">
-<h3 id="org7dab173">Slider Label</h3>
-<div class="outline-text-3" id="text-org7dab173">
+<div class="outline-3" id="outline-container-org160808f">
+<h3 id="org160808f">Slider Label</h3>
+<div class="outline-text-3" id="text-org160808f">
 <div class="highlight">
 <pre><span></span><span class="nx">p5js</span><span class="p">.</span><span class="nx">textSize</span><span class="p">(</span><span class="mf">32</span><span class="p">);</span>
 <span class="nx">p5js</span><span class="p">.</span><span class="nx">textAlign</span><span class="p">(</span><span class="nx">p5js</span><span class="p">.</span><span class="nx">CENTER</span><span class="p">);</span>
@@ -303,31 +303,31 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org17bba92">
-<h3 id="org17bba92">Once Again But As a Picture</h3>
-<div class="outline-text-3" id="text-org17bba92">
+<div class="outline-3" id="outline-container-orgd4bba6f">
+<h3 id="orgd4bba6f">Once Again But As a Picture</h3>
+<div class="outline-text-3" id="text-orgd4bba6f">
 <p><img alt="for-loop-diagram" src="noise-for-loop-1250.webp"></p>
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org7c2595f">
-<h2 id="org7c2595f">Make The Sketch Object</h2>
-<div class="outline-text-2" id="text-org7c2595f">
+<div class="outline-2" id="outline-container-orgee64346">
+<h2 id="orgee64346">Make The Sketch Object</h2>
+<div class="outline-text-2" id="text-orgee64346">
 <p>Next we pass our sketch definition to <code>p5</code> to build it and attach it to our HTML div.</p>
 <div class="highlight">
 <pre><span></span><span class="ow">new</span><span class="w"> </span><span class="nx">p5</span><span class="p">(</span><span class="nx">noise_graph</span><span class="p">,</span><span class="w"> </span><span class="nx">NOISE_GRAPH_DIV</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgba33116">
-<h2 id="orgba33116">And That's It, Then</h2>
-<div class="outline-text-2" id="text-orgba33116">
+<div class="outline-2" id="outline-container-org50166ff">
+<h2 id="org50166ff">And That's It, Then</h2>
+<div class="outline-text-2" id="text-org50166ff">
 <p>At this point we should have a graph that helps to visualize how the <code>noise</code> function changes over one-dimension. Noise to the aside, it's also a useful template for plotting any kind of graph, you'd just have to change the setting of the <code>y</code> value to whatever other function you want to visualize.</p>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org8f61fe4">
-<h2 id="org8f61fe4">Sources</h2>
-<div class="outline-text-2" id="text-org8f61fe4">
+<div class="outline-2" id="outline-container-orge9ba3cd">
+<h2 id="orge9ba3cd">Sources</h2>
+<div class="outline-text-2" id="text-orge9ba3cd">
 <p>P5 Reference:</p>
 <ul class="org-ul">
 <li>reference | noise() [Internet]. [cited 2023 Apr 25]. Available from: <a href="https://p5js.org/reference/#/p5/noise">https://p5js.org/reference/#/p5/noise</a></li>

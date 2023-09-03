@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+<head>
+<meta charset="utf-8">
+<meta content="Drawing concentric circles in p5 with trigonometry." name="description">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Generative Art: Concentric Circles | Ape Iron</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<meta content="#5670d4" name="theme-color">
+<meta content="Nikola (getnikola.com)" name="generator">
+<link href="../../rss.xml" hreflang="en" rel="alternate" title="RSS" type="application/rss+xml">
+<link href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-concentric-circles/index.html" rel="canonical"><!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><!-- favicons -->
+<link href="../../apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+<link href="../../favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="../../favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="../../site.webmanifest" rel="manifest">
+<meta content="The Cloistered Monkey" name="author">
+<link href="../generative-art-spiral/index.html" rel="prev" title="Generative Art Spiral" type="text/html">
+<meta content="Ape Iron" property="og:site_name">
+<meta content="Generative Art: Concentric Circles" property="og:title">
+<meta content="https://necromuralist.github.io/Ape-Iron/posts/generative-art-concentric-circles/index.html" property="og:url">
+<meta content="Drawing concentric circles in p5 with trigonometry." property="og:description">
+<meta content="article" property="og:type">
+<meta content="2023-08-28T15:19:49-07:00" property="article:published_time">
+<meta content="generative art" property="article:tag">
+<meta content="p5.js" property="article:tag">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+</head>
+<body>
+<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a> <!-- Menubar -->
+<nav class="navbar navbar-expand-md static-top mb-4 navbar-light bg-light">
+<div class="container"><!-- This keeps the margins nice -->
+ <a class="navbar-brand" href="../../"><span id="blog-title">Ape Iron</span></a> <button aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#bs-navbar" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="bs-navbar">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item"><a class="nav-link" href="../../archive.html">Archive</a></li>
+<li class="nav-item"><a class="nav-link" href="../../categories/">Tags</a></li>
+<li class="nav-item"><a class="nav-link" href="../../rss.xml">RSS feed</a></li>
+<li class="nav-item dropdown"><a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Monkey Pages</a>
+<div class="dropdown-menu"><a class="dropdown-item" href="https://necromuralist.github.io/">Cloistered Monkey</a> <a class="dropdown-item" href="https://necromuralist.github.io/Beach-Pig-Thigh/">Beach Pig Thigh & Rump</a> <a class="dropdown-item" href="https://necromuralist.github.io/Bowling-For-Data/">Bowling For Data</a> <a class="dropdown-item" href="https://necromuralist.github.io/Neurotic-Networking/">Neurotic Networking</a> <a class="dropdown-item" href="https://necromuralist.github.io/Visions-Voices-Data/">Visions, Voices, Data</a></div>
+</li>
+</ul>
+<!-- DuckDuckGo custom search -->
+<form action="https://duckduckgo.com/" class="navbar-form pull-left" id="search" method="get" name="search"><input name="sites" type="hidden" value="https://necromuralist.github.io/Ape-Iron/"><input name="k8" type="hidden" value="#444444"><input name="k9" type="hidden" value="#D51920"><input name="kt" type="hidden" value="h"><input class="span2" maxlength="255" name="q" placeholder="Search…" type="text"><input style="visibility: hidden;display:none" type="submit" value="DuckDuckGo Search"></form>
+<!-- End of custom search -->
+<ul class="navbar-nav navbar-right">
+<li class="nav-item"><a class="nav-link" href="index.org" id="sourcelink">Source</a></li>
+</ul>
+</div>
+<!-- /.navbar-collapse --></div>
+<!-- /.container --></nav>
+<!-- End of Menubar -->
+<div class="container" id="content" role="main">
+<div class="body-content"><!--Body content-->
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article">
+<header>
+<h1 class="p-name entry-title" itemprop="headline name"><a class="u-url" href="#">Generative Art: Concentric Circles</a></h1>
+<div class="metadata">
+<p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">The Cloistered Monkey</span></p>
+<p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2023-08-28T15:19:49-07:00" itemprop="datePublished" title="2023-08-28 15:19">2023-08-28 15:19</time></a></p>
+<p class="sourceline"><a class="sourcelink" href="index.org">Source</a></p>
+</div>
+</header>
+<div class="e-content entry-content" itemprop="articleBody text">
+<p>
+<script src="concentric-circles.js"></script></p>
+<div class="p5js" id="03d2e681-concentric-circles"></div>
+<div class="outline-2" id="outline-container-org5bd419e">
+<h2 id="org5bd419e">Introduction</h2>
+<div class="outline-text-2" id="text-org5bd419e">
+<p>This is a sketch that extends the <a href="../generative-art-circles/index.html">Generative Art Circles</a> post (slightly) to make concentric circles. I was going to make a spiral but realized after I wrote out the code that I had actually made concentric circles - so it's sort of a half-step from the circle to the spiral.</p>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgc087ddb">
+<h2 id="orgc087ddb">The Class</h2>
+<div class="outline-text-2" id="text-orgc087ddb">
+<p>The <code>ConcentricCircles</code> class keeps track of the parameters for the circles and draws them. Here I'm declaring the class and some fields to store the parameters.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">ConcentricCircles</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// geometry</span>
+<span class="w">  </span><span class="nx">degrees_in_a_circle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">360</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">to_radians</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="p">)</span><span class="o">/</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">degrees_in_a_circle</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// the starting values for the circles</span>
+<span class="w">  </span><span class="nx">radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">_step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// the center of our sketch (and the circles)</span>
+<span class="w">  </span><span class="nx">center_x</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">center_y</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// the size of the circle to draw  the circles</span>
+<span class="w">  </span><span class="nx">point_diameter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">p5</span><span class="p">,</span><span class="w"> </span><span class="nx">center_x</span><span class="p">,</span><span class="w"> </span><span class="nx">center_y</span><span class="p">,</span><span class="w"> </span><span class="nx">maximum_radius</span><span class="p">){</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">p5</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">center_x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">center_x</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">center_y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">center_y</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">maximum_radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">maximum_radius</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="c1">// constructor</span>
+</pre></div>
+<p>The constructor takes the <code>p5.js</code> object and the coordinates for the center of the circlesThe constructor takes the <code>p5.js</code> object and the coordinates for the center of the circles (<code>center_x</code> and <code>center_y</code>).</p>
+<p>The <code>maximum_radius</code> is the value at which the circles have hit their limimt and should turn around. This is presumably half the width of the canvas, but since the <code>ConcentricCircles</code> class isn't creating the canvas I thought it should be the code that creates it that decides what the limit is.</p>
+</div>
+<div class="outline-3" id="outline-container-org9cdb435">
+<h3 id="org9cdb435">The Step</h3>
+<div class="outline-text-3" id="text-org9cdb435">
+<p>The <code>step</code> is the amount the radius increases between each circle. I put it in a getter so that it can check if the circles are at the limits of the expected maximum (or minimum) size and so should change direction (shrink instead of grow or vice-versa).</p>
+<div class="highlight">
+<pre><span></span><span class="nx">get</span><span class="w"> </span><span class="nx">step</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">radius</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">maximum_radius</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">_step</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">radius</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">_step</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">_step</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orga8e20db">
+<h3 id="orga8e20db">The Draw</h3>
+<div class="outline-text-3" id="text-orga8e20db">
+<p>The <code>draw</code> method is what the sketch function calls to tell the <code>ConcentricCircles</code> to draw a circle. This is the same as the sketch that drew a single circle except that the radius gets incremented at after the circle is drawn.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">radians</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="p">;</span>
+
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">angle</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">degrees_in_a_circle</span><span class="p">;</span><span class="w"> </span><span class="nx">angle</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">1</span><span class="p">){</span>
+<span class="w">      </span><span class="nx">radians</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">angle</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">to_radians</span><span class="p">;</span>
+<span class="w">      </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">center_x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">radius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">cos</span><span class="p">(</span><span class="nx">radians</span><span class="p">);</span>
+<span class="w">      </span><span class="nx">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">center_y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">radius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nx">radians</span><span class="p">);</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">circle</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">point_diameter</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">radius</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">step</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org4a1f591">
+<h2 id="org4a1f591">The Sketch Function</h2>
+<div class="outline-text-2" id="text-org4a1f591">
+<p>This is the function that gets passed to <code>p5</code> to execute the <code>setup</code> and <code>draw</code> methods.</p>
+</div>
+<div class="outline-3" id="outline-container-orgb44b85e">
+<h3 id="orgb44b85e">Concentric Circles</h3>
+<div class="outline-text-3" id="text-orgb44b85e">
+<p>After declaring the function and some constants for the canvas, it creates an instance of the <code>ConcentricCircles</code> class.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">concentric_circles</span><span class="p">(</span><span class="nx">p5</span><span class="p">){</span>
+<span class="w">  </span><span class="c1">// the size of the canvas and the color of the circles</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">WIDTH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">500</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">HEIGHT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">WIDTH</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">POINT_COLOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"RoyalBlue"</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">circles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ConcentricCircles</span><span class="p">(</span><span class="nx">p5</span><span class="p">,</span><span class="w"> </span><span class="nx">WIDTH</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">HEIGHT</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">WIDTH</span><span class="o">/</span><span class="mf">2</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org8134e7b">
+<h3 id="org8134e7b">Set Up</h3>
+<div class="outline-text-3" id="text-org8134e7b">
+<p>The <code>setup</code> method doesn't do anything fancy, although I did have to set the <code>frameRate</code> to a slower speed otherwise I couldn't see the circles being animated.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">setup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(){</span>
+<span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">createCanvas</span><span class="p">(</span><span class="nx">WIDTH</span><span class="p">,</span><span class="w"> </span><span class="nx">HEIGHT</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">background</span><span class="p">(</span><span class="s2">"white"</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">stroke</span><span class="p">(</span><span class="nx">POINT_COLOR</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="nx">POINT_COLOR</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">frameRate</span><span class="p">(</span><span class="mf">10</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// end setup</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org3dd7303">
+<h3 id="org3dd7303">Draw</h3>
+<div class="outline-text-3" id="text-org3dd7303">
+<p>The <code>draw</code> method defers to the <code>ConcentricCircles.draw</code> method to do the actual drawing of the circles, but I added a light white overlay so that the circles fade out and you can see the animation.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">draw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">circles</span><span class="p">.</span><span class="nx">draw</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">background</span><span class="p">(</span><span class="mf">255</span><span class="p">,</span><span class="w"> </span><span class="mf">75</span><span class="p">);</span>
+<span class="p">}</span><span class="c1">// end draw</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org21311af">
+<h3 id="org21311af">Passing The Sketch to p5.js</h3>
+<div class="outline-text-3" id="text-org21311af">
+<p>That's pretty much it for the sketch, the last thing to do is just pass the <code>concentric_circles</code> function to <code>p5</code> along with the <code>id</code> for the <code>div</code> where the sketch should go (which I defined but don't show in the post).</p>
+<div class="highlight">
+<pre><span></span><span class="ow">new</span><span class="w"> </span><span class="nx">p5</span><span class="p">(</span><span class="nx">concentric_circles</span><span class="p">,</span><span class="w"> </span><span class="nx">CONCENTRIC_CIRCLES_DIV</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org2fef9d9">
+<h2 id="org2fef9d9">The End</h2>
+<div class="outline-text-2" id="text-org2fef9d9">
+<p>And that's it for drawing concentric circles, now on to spirals.</p>
+</div>
+</div>
+</div>
+<aside class="postpromonav">
+<nav>
+<ul class="tags" itemprop="keywords">
+<li><a class="tag p-category" href="../../categories/generative-art/index.html" rel="tag">generative art</a></li>
+<li><a class="tag p-category" href="../../categories/p5js/index.html" rel="tag">p5.js</a></li>
+</ul>
+<ul class="pager hidden-print">
+<li class="previous"><a href="../generative-art-spiral/index.html" rel="prev" title="Generative Art Spiral">Previous post</a></li>
+</ul>
+</nav>
+</aside>
+</article>
+<!--End of body content-->
+<footer id="footer">Scribbles by <a href="mailto:cloisteredmonkey.jmark@slmail.me">The Cloistered Monkey</a> © 2023 - Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a>
+<div id="license" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Ape-Iron</span> is licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" rel="license noopener noreferrer" style="display:inline-block;" target="_blank">CC BY-SA 4.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></div>
+</footer>
+</div>
+<script src="../../assets/js/all-nocdn.js"></script>
+<script>
+
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+</script></div>
+</body>
+</html>
