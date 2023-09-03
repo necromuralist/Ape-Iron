@@ -7,7 +7,7 @@ class ConcentricCircles {
 
   // the starting values for the circles
   radius = 5;
-  _step = 10;
+  _step = 5;
 
   // the center of our sketch (and the circles)
   _center_x;
