@@ -77,13 +77,11 @@ class ConcentricCircles {
   } // constructor
 #+end_src
 
-The constructor takes the ~p5.js~ object and the coordinates for the center of the circlesThe constructor takes the ~p5.js~ object and the coordinates for the center of the circles (~center_x~ and ~center_y~).
-
-The ~maximum_radius~ is the value at which the circles have hit their limimt and should turn around. This is presumably half the width of the canvas, but since the ~ConcentricCircles~ class isn't creating the canvas I thought it should be the code that creates it that decides what the limit is.
+The constructor takes the ~p5.js~ object and the coordinates for the center of the circles (~center_x~ and ~center_y~) as well as the ~maximum_radius~ - the value at which the circles have hit their limit and should turn around. This is presumably half the width of the canvas, but since the ~ConcentricCircles~ class isn't creating the canvas I thought it should be the code that creates the sketch that decides what the limit is.
 
 ** The Step
 
-The ~step~ is the amount the radius increases between each circle. I put it in a getter so that it can check if the circles are at the limits of the expected maximum (or minimum) size and so should change direction (shrink instead of grow or vice-versa).
+The ~step~ is the amount the radius increases between each circle. I put it in a getter so that it can check if the circles are at the limits of the expected maximum (or minimum) size and thus should change direction (shrink instead of grow or vice-versa).
 
 #+begin_src js :noweb-ref concentric-circles-step
 get step() {
@@ -95,7 +93,7 @@ get step() {
 #+end_src
 
 ** The Draw
-The ~draw~ method is what the sketch function calls to tell the ~ConcentricCircles~ to draw a circle. This is the same as the sketch that drew a single circle except that the radius gets incremented at after the circle is drawn.
+The ~draw~ method is what the sketch function calls to tell the ~ConcentricCircles~ to draw a circle. This is similar to the sketch that drew a single circle except that the radius gets incremented at after the circle is drawn.
 
 #+begin_src js :noweb-ref concentric-circles-draw
 draw() {
