@@ -1,20 +1,3 @@
-#+BEGIN_COMMENT
-.. title: Generative Art Spiral
-.. slug: generative-art-spiral
-.. date: 2023-06-17 16:38:42 UTC-07:00
-.. tags: p5.js,generative art
-.. category: Generative Art
-.. link: 
-.. description: Drawing a spiral with p5.js.
-.. type: text
-.. status: 
-.. updated: 
-.. template: p5.tmpl
-#+END_COMMENT
-
-{{% p5div source="spiral.js" divid="0a168ba9-spiral" %}}
-
-#+begin_src js :tangle ../files/posts/generative-art-spiral/spiral.js
 const SPIRAL_DIV = "0a168ba9-spiral";
 
 class Spiralizer {
@@ -95,4 +78,3 @@ function spiral_sketch(p5) {
 } // spiral_sketch
 
 new p5(spiral_sketch, SPIRAL_DIV);
-#+end_src
