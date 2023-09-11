@@ -2,7 +2,7 @@
 .. title: A Noisy Walker
 .. slug: a-noisy-walker
 .. date: 2023-05-10 18:16:09 UTC-07:00
-.. tags: p5,nature of code,noise
+.. tags: p5.js,nature of code,noise
 .. category: P5
 .. link:
 .. description: A Noise Walker.

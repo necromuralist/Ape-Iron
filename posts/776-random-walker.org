@@ -2,7 +2,7 @@
 .. title: A Random Walk(er)
 .. slug: a-random-walker
 .. date: 2023-05-09 13:07:44 UTC-07:00
-.. tags: p5,nature of code
+.. tags: p5.js,nature of code
 .. category: P5
 .. link: 
 .. description: A random walk with p5. 
