@@ -16,7 +16,7 @@ import time
 
 
 # Data about this site
-BLOG_AUTHOR = "Cloistered Monkey"  # (translatable)
+BLOG_AUTHOR = "The Cloistered Monkey"  # (translatable)
 BLOG_TITLE = "Ape Iron"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
@@ -142,8 +142,12 @@ NAVIGATION_LINKS = {
         (
           (
               ("https://necromuralist.github.io/", "Cloistered Monkey"),
+              ("https://necromuralist.github.io/Beach-Pig-Thigh/", "Beach Pig Thigh & Rump"),
+              ("https://necromuralist.github.io/Bowling-For-Data/", "Bowling For Data"),
+              ("https://necromuralist.github.io/Neurotic-Networking/", "Neurotic Networking"),
+              ("https://necromuralist.github.io/Visions-Voices-Data/", "Visions, Voices, Data")
           ),
-            "Pages"
+            "Monkey Pages"
         ),
     ),
 }
@@ -929,19 +933,17 @@ FEED_LINKS_APPEND_QUERY = False
 
 # A HTML fragment describing the license, for the sidebar.
 # (translatable)
-LICENSE = '<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://necromuralist.github.io/Ape-Iron/">Ape Iron</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/necromuralist">The Cloistered Monkey</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p>'
-# I recommend using the Creative Commons' wizard:
-# https://creativecommons.org/choose/
-# LICENSE = """
-# <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
-# <img alt="Creative Commons License BY-NC-SA"
-# style="border-width:0; margin-bottom:12px;"
-# src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a>"""
 
+LICENSE = '''
+<div id="license" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Ape-Iron</span> is licensed under
+<a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-SA 4.0
+<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1">
+<img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1">
+<img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p> 
+'''
 # A small copyright notice for the page footer (in HTML).
 # (translatable)
-CONTENT_FOOTER = 'Contents &copy; {date}         Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         {license}'
-
+CONTENT_FOOTER = 'Scribbles by <a href="mailto:{email}">{author}</a> &copy; {date} - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         {license}'
 # Things that will be passed to CONTENT_FOOTER.format().  This is done
 # for translatability, as dicts are not formattable.  Nikola will
 # intelligently format the setting properly.
@@ -1003,7 +1005,7 @@ COMMENT_SYSTEM_ID = ""
 # http://mysite/foo/bar/index.html => http://mysite/foo/bar/
 # (Uses the INDEX_FILE setting, so if that is, say, default.html,
 # it will instead /foo/default.html => /foo)
-STRIP_INDEXES = True
+STRIP_INDEXES = False
 
 # List of files relative to the server root (!) that will be asked to be excluded
 # from indexing and other robotic spidering. * is supported. Will only be effective

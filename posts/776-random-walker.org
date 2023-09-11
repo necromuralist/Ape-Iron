@@ -1,0 +1,174 @@
+#+BEGIN_COMMENT
+.. title: A Random Walk(er)
+.. slug: a-random-walker
+.. date: 2023-05-09 13:07:44 UTC-07:00
+.. tags: p5.js,nature of code
+.. category: P5
+.. link: 
+.. description: A random walk with p5. 
+.. type: text
+.. status: 
+.. updated: 
+.. template: p5.tmpl
+#+END_COMMENT
+
+{{% javascripttag source="walker.js" %}}
+{{% p5div divid="random-walker-sketch" source="sketch.js" %}}
+
+This is a look at the [[https://thecodingtrain.com/tracks/the-nature-of-code-2/noc/1-vectors/1-what-is-a-vector][What Is A Vector]] lesson on The Coding Train, part of the Nature of Code series. It's used in the series to show how to use vectors instead of object properties (e.g. maintaining and updating ~this.x~ and ~this.y~) to hold the position of an object on the canvas.
+
+I'm going to illustrate this by creating an object that takes a [[https://en.wikipedia.org/wiki/Random_walk?useskin=vector][random walk]].
+
+* The Walker
+
+First up is a Walker class that keeps track of its position on the canvas, updates the position, and draws itself. I'm thinking that drawing itself doesn't seem right, but I suppose since we're only creating one object moving the drawing outside of the class is more work than what's needed.
+
+
+#+begin_src js :tangle ../files/posts/a-random-walker/walker.js :exports none
+<<walker-constructor>>
+
+  <<walker-step>>
+
+  <<walker-update>>
+
+  <<walker-show>>
+
+  <<walker-move-and-show>>
+} // end Walker
+#+end_src
+
+** The Constructor
+#+begin_src js :noweb-ref walker-constructor
+/** The Random Walker */
+class Walker {
+  /** Create the walker
+   ,* @param {integer}: x - x-coordinate
+   ,* @param {integer}: y - y-coordinate
+   ,* @param {number}: limit - minimum and maximum for the random
+   ,* @param {integer}: p5 - p5 instance
+
+   ,* As a side effect uses x and y to create `this.position`, a vector
+   ,*/
+  constructor(x, y, limit, p5) {
+    this.position = p5.createVector(x, y);
+    this.limit = limit;
+    this.p5 = p5
+  } // end constructor
+#+end_src
+
+** The Step Property
+
+In the Coding Train video he increments the coordinates of the position vector separately, but since this is supposed to be about vectors I thought it should add another vector. This one was a little bit of a head-scratcher at first, though. ~p5~ will make a two-dimensional vector for you with the x and y values set to some random value from -1 to 1 (it's a unit vector set to a random angle) using [[https://p5js.org/reference/#/p5.Vector/random2D][p5.Vector.random2D]]. But the ~p5~ we need to use isn't our ~p5~ but rather the global p5 object. The ~p5~ instance we hold doesn't have the ~Vector~ class definition, for some reason (which is why you need to use ~createVector~ I guess).
+
+Since the random values are from -1 to 1 I'm multiplying it by a user-specified integer to get a bigger step.
+
+#+begin_src js :noweb-ref walker-step
+/** The next random step
+    @returns: p5.Vector
+,*/
+get next_step() {
+  return p5.Vector.random2D().mult(this.limit);
+} // end get next_step
+#+end_src
+
+** The Update Method
+It would have been nice if p5 vectors could be added using operators, but instead we need to use the ~add~ method. Weirdly, [[https://p5js.org/reference/#/p5.Vector/add][the Vector.add documentation]] doesn't cover the case where you pass a vector to another vector's ~add~ method, only the cases where you're adding the arguments separately, adding an array of values, or adding two vectors using the ~p5.Vector.add~  static method. It appears to do an in-place update, though, so I'll assume that that's what it does.
+
+#+begin_src js :noweb-ref walker-update
+/** Add the ~next_step~ vector to the ~position~ vector, updating in-place */
+update() {
+  this.position.add(this.next_step);
+} // end update
+
+#+end_src
+
+** The Show Method
+This is where the walker draws itself. Even though we're using a vector to hold the position, you still need to unpack the coordinates when calling the ~point~ method.
+
+#+begin_src js :noweb-ref walker-show
+/** Draw the position as a point */
+show() {
+    this.p5.stroke(0, 0, 200, 100);
+    this.p5.strokeWeight(5);
+    this.p5.point(this.position.x, this.position.y);
+  } // end show
+#+end_src
+
+** Move and Show
+
+Not really needed, but I'd rather make one function call for the user to move the walker and have it draw itself.
+
+#+begin_src js :noweb-ref walker-move-and-show
+/**Convenience method to call ~update~ and ~show~ */
+move_and_show() {
+  this.update();
+  this.show();
+} // end move_and_show
+#+end_src
+* The Sketch
+Now the sketch. It seems a little awkward, but since the Walker definition is in a separate file from the sketch definition we need to remember add a ~script~ tag to the HTML for both of them. I guess you can think of that as the equivalent of an import, although it feels weird somehow.
+
+#+begin_src js :tangle ../files/posts/a-random-walker/sketch.js :exports none
+<<random-walk-sketch-constants>>
+
+<<random-walk-sketch-function>>
+
+  <<random-walk-sketch-setup>> 
+
+  <<random-walk-sketch-draw>>
+} // end random_walk
+
+new p5(random_walk, WALKER_SKETCH_DIV);
+#+end_src
+
+** Some Constants
+#+begin_src js :noweb-ref random-walk-sketch-constants
+const WALKER_SKETCH_DIV = "random-walker-sketch";
+const HEIGHT = 400;
+const STEP_LIMIT = 5;
+const WHITE = 255;
+#+end_src
+
+** The Sketch Function
+Nothing fancy here, we're just declaring the function and the ~walker~ variable to hold our Walker object.
+
+#+begin_src js :noweb-ref random-walk-sketch-function
+/** Sketch of a Random Walk */
+function random_walk(p5js){
+  let walker;
+#+end_src
+
+** Set Up
+Set up the sketch by drawing the canvas and creating a Walker.
+
+#+begin_src js :noweb-ref random-walk-sketch-setup
+/** Initial setup of the canvas and Walker */
+p5js.setup = function() {
+    p5js.createCanvas(
+      document.getElementById(WALKER_SKETCH_DIV).offsetWidth, HEIGHT);
+  walker = new Walker(p5js.width/2, p5js.height/2, STEP_LIMIT, p5js);
+  p5js.background(WHITE);
+} // end setup
+#+end_src
+
+** Draw
+Our ~draw~ function defers to the walker to do everything.
+
+#+begin_src js :noweb-ref random-walk-sketch-draw
+/** Draw a frame */
+p5js.draw = function() {
+    walker.move_and_show();
+  } // end draw
+#+end_src
+
+* The End
+
+And there it is. One thing to note is that there's no checking of the position to see if it's wandered off the canvas so it's possible that it will wander completely off and updates won't be visible.
+
+* Sources
+** The Coding Train
+- What is a Vector? [Internet]. [cited 2023 May 9]. Available from: https://thecodingtrain.com
+
+** P5 Reference
+- P5 reference | createVector() [Internet]. [cited 2023 May 9]. Available from: https://p5js.org/reference/#/p5/createVector
+- P5 reference | p5.Vector [Internet]. [cited 2023 May 9]. Available from: https://p5js.org/reference/#/p5.Vector
