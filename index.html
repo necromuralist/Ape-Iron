@@ -61,15 +61,15 @@
 <p>
 <script src="posts/generative-art-concentric-circles/concentric-circles.js"></script></p>
 <div class="p5js" id="03d2e681-concentric-circles"></div>
-<div class="outline-2" id="outline-container-org3424348">
-<h2 id="org3424348">Introduction</h2>
-<div class="outline-text-2" id="text-org3424348">
+<div class="outline-2" id="outline-container-org9c877ef">
+<h2 id="org9c877ef">Introduction</h2>
+<div class="outline-text-2" id="text-org9c877ef">
 <p>This is a sketch that extends the <a href="posts/generative-art-circles/index.html">Generative Art Circles</a> post (slightly) to make concentric circles. I was going to make a spiral but realized after I wrote out the code that I had actually made concentric circles - so it's sort of a half-step from the circle to the spiral.</p>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgdc786cd">
-<h2 id="orgdc786cd">The Class</h2>
-<div class="outline-text-2" id="text-orgdc786cd">
+<div class="outline-2" id="outline-container-org03cd7fa">
+<h2 id="org03cd7fa">The Class</h2>
+<div class="outline-text-2" id="text-org03cd7fa">
 <p>The <code>ConcentricCircles</code> class keeps track of the parameters for the circles and draws them. Here I'm declaring the class and some fields to store the parameters.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">ConcentricCircles</span><span class="w"> </span><span class="p">{</span>
@@ -97,9 +97,9 @@
 </pre></div>
 <p>The constructor takes the <code>p5.js</code> object and the coordinates for the center of the circles (<code>center_x</code> and <code>center_y</code>) as well as the <code>maximum_radius</code> - the value at which the circles have hit their limit and should turn around. This is presumably half the width of the canvas, but since the <code>ConcentricCircles</code> class isn't creating the canvas I thought it should be the code that creates the sketch that decides what the limit is.</p>
 </div>
-<div class="outline-3" id="outline-container-org47b63d4">
-<h3 id="org47b63d4">The Step</h3>
-<div class="outline-text-3" id="text-org47b63d4">
+<div class="outline-3" id="outline-container-orgf209634">
+<h3 id="orgf209634">The Step</h3>
+<div class="outline-text-3" id="text-orgf209634">
 <p>The <code>step</code> is the amount the radius increases between each circle. I put it in a getter so that it can check if the circles are at the limits of the expected maximum (or minimum) size and thus should change direction (shrink instead of grow or vice-versa).</p>
 <div class="highlight">
 <pre><span></span><span class="nx">get</span><span class="w"> </span><span class="nx">step</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -111,9 +111,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgde5d43c">
-<h3 id="orgde5d43c">The Draw</h3>
-<div class="outline-text-3" id="text-orgde5d43c">
+<div class="outline-3" id="outline-container-org97434b5">
+<h3 id="org97434b5">The Draw</h3>
+<div class="outline-text-3" id="text-org97434b5">
 <p>The <code>draw</code> method is what the sketch function calls to tell the <code>ConcentricCircles</code> to draw a circle. This is similar to the sketch that drew a single circle except that the radius gets incremented at after the circle is drawn.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -132,14 +132,14 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org326bb36">
-<h2 id="org326bb36">The Sketch Function</h2>
-<div class="outline-text-2" id="text-org326bb36">
+<div class="outline-2" id="outline-container-org5772706">
+<h2 id="org5772706">The Sketch Function</h2>
+<div class="outline-text-2" id="text-org5772706">
 <p>This is the function that gets passed to <code>p5</code> to execute the <code>setup</code> and <code>draw</code> methods.</p>
 </div>
-<div class="outline-3" id="outline-container-org265da92">
-<h3 id="org265da92">Concentric Circles</h3>
-<div class="outline-text-3" id="text-org265da92">
+<div class="outline-3" id="outline-container-orge84fcb0">
+<h3 id="orge84fcb0">Concentric Circles</h3>
+<div class="outline-text-3" id="text-orge84fcb0">
 <p>After declaring the function and some constants for the canvas, it creates an instance of the <code>ConcentricCircles</code> class.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">concentric_circles</span><span class="p">(</span><span class="nx">p5</span><span class="p">){</span>
@@ -152,9 +152,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org42153f9">
-<h3 id="org42153f9">Set Up</h3>
-<div class="outline-text-3" id="text-org42153f9">
+<div class="outline-3" id="outline-container-orga5dce1a">
+<h3 id="orga5dce1a">Set Up</h3>
+<div class="outline-text-3" id="text-orga5dce1a">
 <p>The <code>setup</code> method doesn't do anything fancy, although I did have to set the <code>frameRate</code> to a slower speed otherwise I couldn't see the circles being animated.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">setup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(){</span>
@@ -167,9 +167,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org36dbae3">
-<h3 id="org36dbae3">Draw</h3>
-<div class="outline-text-3" id="text-org36dbae3">
+<div class="outline-3" id="outline-container-org3e59974">
+<h3 id="org3e59974">Draw</h3>
+<div class="outline-text-3" id="text-org3e59974">
 <p>The <code>draw</code> method defers to the <code>ConcentricCircles.draw</code> method to do the actual drawing of the circles, but I added a light white overlay so that the circles fade out and you can see the animation.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">draw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -179,9 +179,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org5a02958">
-<h3 id="org5a02958">Passing The Sketch to p5.js</h3>
-<div class="outline-text-3" id="text-org5a02958">
+<div class="outline-3" id="outline-container-org11ce38c">
+<h3 id="org11ce38c">Passing The Sketch to p5.js</h3>
+<div class="outline-text-3" id="text-org11ce38c">
 <p>That's pretty much it for the sketch, the last thing to do is just pass the <code>concentric_circles</code> function to <code>p5</code> along with the <code>id</code> for the <code>div</code> where the sketch should go (which I defined but don't show in the post).</p>
 <div class="highlight">
 <pre><span></span><span class="ow">new</span><span class="w"> </span><span class="nx">p5</span><span class="p">(</span><span class="nx">concentric_circles</span><span class="p">,</span><span class="w"> </span><span class="nx">CONCENTRIC_CIRCLES_DIV</span><span class="p">);</span>
@@ -189,9 +189,9 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org1ddc1e2">
-<h2 id="org1ddc1e2">The End</h2>
-<div class="outline-text-2" id="text-org1ddc1e2">
+<div class="outline-2" id="outline-container-org6a3a093">
+<h2 id="org6a3a093">The End</h2>
+<div class="outline-text-2" id="text-org6a3a093">
 <p>And that's it for drawing concentric circles, now on to spirals.</p>
 </div>
 </div>
@@ -2221,46 +2221,46 @@ Downloaded: 97
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="posts/two-dimensional-noise/index.html#orgc10d3d9">Introduction</a></li>
-<li><a href="posts/two-dimensional-noise/index.html#org39f91ac">Static Version (Using Set)</a>
+<li><a href="posts/two-dimensional-noise/index.html#org972c57a">Introduction</a></li>
+<li><a href="posts/two-dimensional-noise/index.html#org1c186d0">Static Version (Using Set)</a>
 <ul>
-<li><a href="posts/two-dimensional-noise/index.html#org92f86b5">The Closure Function</a></li>
-<li><a href="posts/two-dimensional-noise/index.html#org6a83ebf">Set Up</a></li>
-<li><a href="posts/two-dimensional-noise/index.html#org37397c3">Draw</a></li>
+<li><a href="posts/two-dimensional-noise/index.html#org7e120f7">The Closure Function</a></li>
+<li><a href="posts/two-dimensional-noise/index.html#orgb7ff164">Set Up</a></li>
+<li><a href="posts/two-dimensional-noise/index.html#org10dc9c1">Draw</a></li>
 </ul>
 </li>
-<li><a href="posts/two-dimensional-noise/index.html#org67270f5">Static Version Setting Pixels</a>
+<li><a href="posts/two-dimensional-noise/index.html#org9773ccf">Static Version Setting Pixels</a>
 <ul>
-<li><a href="posts/two-dimensional-noise/index.html#org18cb6c5">Some Constants</a></li>
-<li><a href="posts/two-dimensional-noise/index.html#orge25620c">Noise Plotter</a></li>
-<li><a href="posts/two-dimensional-noise/index.html#org3ba98c9">The Sketch</a></li>
-<li><a href="posts/two-dimensional-noise/index.html#org508db73">The Output</a></li>
+<li><a href="posts/two-dimensional-noise/index.html#orge0d2336">Some Constants</a></li>
+<li><a href="posts/two-dimensional-noise/index.html#org1f8266a">Noise Plotter</a></li>
+<li><a href="posts/two-dimensional-noise/index.html#orga672a68">The Sketch</a></li>
+<li><a href="posts/two-dimensional-noise/index.html#org0274576">The Output</a></li>
 </ul>
 </li>
-<li><a href="posts/two-dimensional-noise/index.html#orgd0be0d0">Moving Version</a>
+<li><a href="posts/two-dimensional-noise/index.html#orgf78a654">Moving Version</a>
 <ul>
-<li><a href="posts/two-dimensional-noise/index.html#orgdbd4709">The Sketch</a></li>
-<li><a href="posts/two-dimensional-noise/index.html#org168e8ca">Moving Noise Plotter</a></li>
+<li><a href="posts/two-dimensional-noise/index.html#orgc88417a">The Sketch</a></li>
+<li><a href="posts/two-dimensional-noise/index.html#org91b90d6">Moving Noise Plotter</a></li>
 </ul>
 </li>
-<li><a href="posts/two-dimensional-noise/index.html#orgec29935">Sources</a></li>
+<li><a href="posts/two-dimensional-noise/index.html#org1127f72">Sources</a></li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgc10d3d9">
-<h2 id="orgc10d3d9">Introduction</h2>
-<div class="outline-text-2" id="text-orgc10d3d9">
+<div class="outline-2" id="outline-container-org972c57a">
+<h2 id="org972c57a">Introduction</h2>
+<div class="outline-text-2" id="text-org972c57a">
 <p>This is yet another copy and redo of a sketch from <a href="https://nature-of-code-2nd-edition.netlify.app/">the Nature of Code</a>. This time it's an extension of a prior post on <a href="posts/graphing-p5-noise/index.html">making a one-dimensional noise graph</a>.</p>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org39f91ac">
-<h2 id="org39f91ac">Static Version (Using Set)</h2>
-<div class="outline-text-2" id="text-org39f91ac">
-<p>This first sketch is a static two-dimensional visualization of the p5 <code>noise</code> function, with the pixels of the canvas set to a level of gray (from black to white) based on the noise. I'll be doing the sketch again using a different method but this first one uses the (ambiguously named) <a href="https://p5js.org/reference/#/p5/set">set</a> function that lets you set the grayscale or RGB-Alpha value for a single <a href="https://en.wikipedia.org/wiki/Pixel?useskin=vector#Logical_pixel">logical pixel</a> (because different displays have different pixel-densities, there might be more "physical" pixels dedicated to each logical one, giving you better resolution). The <code>set</code> function is the simplest way to set a pixel, but, as noted in the p5 documentation, it adds overhead so there's another recommended way to do it if you need it to go faster (which is what the next section - <a href="posts/two-dimensional-noise/index.html#org67270f5">Static Version Setting Pixels</a> - is about). For static images (as this is) it's fast enough, though.</p>
+<div class="outline-2" id="outline-container-org1c186d0">
+<h2 id="org1c186d0">Static Version (Using Set)</h2>
+<div class="outline-text-2" id="text-org1c186d0">
+<p>This first sketch is a static two-dimensional visualization of the p5 <code>noise</code> function, with the pixels of the canvas set to a level of gray (from black to white) based on the noise. I'll be doing the sketch again using a different method but this first one uses the (ambiguously named) <a href="https://p5js.org/reference/#/p5/set">set</a> function that lets you set the grayscale or RGB-Alpha value for a single <a href="https://en.wikipedia.org/wiki/Pixel?useskin=vector#Logical_pixel">logical pixel</a> (because different displays have different pixel-densities, there might be more "physical" pixels dedicated to each logical one, giving you better resolution). The <code>set</code> function is the simplest way to set a pixel, but, as noted in the p5 documentation, it adds overhead so there's another recommended way to do it if you need it to go faster (which is what the next section - <a href="posts/two-dimensional-noise/index.html#org9773ccf">Static Version Setting Pixels</a> - is about). For static images (as this is) it's fast enough, though.</p>
 </div>
-<div class="outline-3" id="outline-container-org92f86b5">
-<h3 id="org92f86b5">The Closure Function</h3>
-<div class="outline-text-3" id="text-org92f86b5">
+<div class="outline-3" id="outline-container-org7e120f7">
+<h3 id="org7e120f7">The Closure Function</h3>
+<div class="outline-text-3" id="text-org7e120f7">
 <p>This is the basic function that we pass to the <code>p5</code> constructor to create our sketch.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">simple_sketch</span><span class="p">(</span><span class="nx">p5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -2270,9 +2270,9 @@ Downloaded: 97
 <p>We're only going to set the grayscale channel which has a maximum value of 255, thus the <code>MAXIMUM_INTENSITY</code> multiplied by noise will be what we use to figure out what value to set each pixel. The <code>NOISE_OFFSET_INCREMENT</code> is the amount that we're going to increase the x and y values as we step through the noise-space.</p>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org6a83ebf">
-<h3 id="org6a83ebf">Set Up</h3>
-<div class="outline-text-3" id="text-org6a83ebf">
+<div class="outline-3" id="outline-container-orgb7ff164">
+<h3 id="orgb7ff164">Set Up</h3>
+<div class="outline-text-3" id="text-orgb7ff164">
 <p>First I'll define the p5 <code>setup</code> function. All it does is create the canvas that's the width of the div container. I'm using a variable <code>STATIC_NOISE_GRAPH_DIV</code> that I didn't show, but it just has the HTML div ID that will hold the sketch.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">setup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -2283,9 +2283,9 @@ Downloaded: 97
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org37397c3">
-<h3 id="org37397c3">Draw</h3>
-<div class="outline-text-3" id="text-org37397c3">
+<div class="outline-3" id="outline-container-org10dc9c1">
+<h3 id="org10dc9c1">Draw</h3>
+<div class="outline-text-3" id="text-org10dc9c1">
 <p>The p5 <code>draw</code> function is where we do all the work of drawing the plot so I'll break it up a little bit to explain more of what's here.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">draw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -2296,18 +2296,18 @@ Downloaded: 97
 <p>Besides defining the function I'm declaring a variable, <code>column_offset</code> that holds the x-input value for the <code>noise</code> function, as well as <code>row_offset</code> which will hold the y-input.</p>
 <p>I'm also creating a variable, <code>intensity</code> to hold the RGB setting we're going to use. It gets passed immediately to <code>set</code> once the value is created so it isn't really needed, I just created it for clarity.</p>
 </div>
-<div class="outline-4" id="outline-container-org2b41b57">
-<h4 id="org2b41b57">Load Pixels</h4>
-<div class="outline-text-4" id="text-org2b41b57">
+<div class="outline-4" id="outline-container-org4b6aef2">
+<h4 id="org4b6aef2">Load Pixels</h4>
+<div class="outline-text-4" id="text-org4b6aef2">
 <div class="highlight">
 <pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">loadPixels</span><span class="p">();</span>
 </pre></div>
 <p>Behind the scenes the <code>set</code> function is actually manipulating a special data-structure called <a href="https://p5js.org/reference/#/p5/pixels">pixels</a>, which I'll look at more in the next sketch. The important thing to note is that you have to load the display data into the array before you can use it (using <code>loadPixels()</code>), even when using the <code>set</code> function.</p>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org4ce6a9c">
-<h4 id="org4ce6a9c">The For-Loops</h4>
-<div class="outline-text-4" id="text-org4ce6a9c">
+<div class="outline-4" id="outline-container-org2dc0bd5">
+<h4 id="org2dc0bd5">The For-Loops</h4>
+<div class="outline-text-4" id="text-org2dc0bd5">
 <div class="highlight">
 <pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">column</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">column</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">p5</span><span class="p">.</span><span class="nx">width</span><span class="p">;</span><span class="w"> </span><span class="nx">column</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="nx">row_offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
@@ -2317,9 +2317,9 @@ Downloaded: 97
 <p>Since we're setting each of the pixels in the canvas I'll use two for-loops, traversing each column from top row to bottom row before moving on to the next column. I had previously followed the convention of using <code>x</code> for columns and <code>y</code> for rows, but I think calling them <code>columns</code> and <code>rows</code> will be a little clearer when we get to the next sketch.</p>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgc111c42">
-<h4 id="orgc111c42">Set the Intensity</h4>
-<div class="outline-text-4" id="text-orgc111c42">
+<div class="outline-4" id="outline-container-orge0c5326">
+<h4 id="orge0c5326">Set the Intensity</h4>
+<div class="outline-text-4" id="text-orge0c5326">
 <div class="highlight">
 <pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">intensity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">p5</span><span class="p">.</span><span class="nx">noise</span><span class="p">(</span><span class="nx">column_offset</span><span class="p">,</span><span class="w"> </span><span class="nx">row_offset</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">MAXIMUM_INTENSITY</span><span class="p">;</span>
 <span class="nx">p5</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">column</span><span class="p">,</span><span class="w"> </span><span class="nx">row</span><span class="p">,</span><span class="w"> </span><span class="nx">intensity</span><span class="p">);</span>
@@ -2327,9 +2327,9 @@ Downloaded: 97
 <p>The <code>intensity</code> for each pixel is the noise at the offset for that column-row pair multiplied by the MAXIMUM_INTENSITY (255) (since noise goes from \(0 \ldots 1\) and RGB-Alpha goes from \(0 \ldots 255\).) this gives us a fractional value of the MAXIMUM_INTENSITY. Once we get it we can <code>set</code> it at the matching <code>column</code> and <code>row</code> coordinate. The <code>intensity</code> is going to be a float, but as we'll see in the next sktech that won't matter, since the <code>pixels</code> array casts values to an integer, although I suppose if it were more important we might want to control it using floor, ceiling, or round. But since this is using noise I don't imagine we'd know the difference.</p>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org3a66702">
-<h4 id="org3a66702">End the For-Loops</h4>
-<div class="outline-text-4" id="text-org3a66702">
+<div class="outline-4" id="outline-container-org94abb15">
+<h4 id="org94abb15">End the For-Loops</h4>
+<div class="outline-text-4" id="text-org94abb15">
 <div class="highlight">
 <pre><span></span><span class="w">    </span><span class="nx">row_offset</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">NOISE_OFFSET_INCREMENT</span><span class="p">;</span>
 <span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="c1">//end row-for</span>
@@ -2340,9 +2340,9 @@ Downloaded: 97
 <p>At the end of each of the for-loops we add an offset value to change the input to the <code>noise</code> function by a little.</p>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org76d49b2">
-<h4 id="org76d49b2">Update the Pixels and Stop the Loop</h4>
-<div class="outline-text-4" id="text-org76d49b2">
+<div class="outline-4" id="outline-container-orgdddf208">
+<h4 id="orgdddf208">Update the Pixels and Stop the Loop</h4>
+<div class="outline-text-4" id="text-orgdddf208">
 <div class="highlight">
 <pre><span></span><span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">updatePixels</span><span class="p">();</span>
 <span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">noLoop</span><span class="p">();</span>
@@ -2361,17 +2361,17 @@ Downloaded: 97
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org67270f5">
-<h2 id="org67270f5">Static Version Setting Pixels</h2>
-<div class="outline-text-2" id="text-org67270f5">
+<div class="outline-2" id="outline-container-org9773ccf">
+<h2 id="org9773ccf">Static Version Setting Pixels</h2>
+<div class="outline-text-2" id="text-org9773ccf">
 <p>
 <script src="posts/two-dimensional-noise/pixel-constants.js"></script>
 <script src="posts/two-dimensional-noise/noise-plotter.js"></script></p>
 <p>This will essentially be the same sketch except instead of using the <code>set</code> function I'll set the values in the <a href="https://p5js.org/reference/#/p5/pixels"><code>pixels</code></a> array directly.</p>
 </div>
-<div class="outline-3" id="outline-container-org18cb6c5">
-<h3 id="org18cb6c5">Some Constants</h3>
-<div class="outline-text-3" id="text-org18cb6c5">
+<div class="outline-3" id="outline-container-orge0d2336">
+<h3 id="orge0d2336">Some Constants</h3>
+<div class="outline-text-3" id="text-orge0d2336">
 <p>I'm not as familiar with javascript as I am with python so I was littering constant values all over the place trying to figure where the best place to put them would be. I finally decided to create these two objects to hold some constants that I'll use when updating the pixels array and when setting the slider up.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">PIXEL_ARRAY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
@@ -2395,14 +2395,14 @@ Downloaded: 97
 <p>These are the same values I used in the previous noise-sketches. A <code>step_size</code> of 0 just means that I'm not setting one so p5 can use whatever the default value is - the documentation says it's continuous but it seems to jump a bit when I use it.</p>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orge25620c">
-<h3 id="orge25620c">Noise Plotter</h3>
-<div class="outline-text-3" id="text-orge25620c">
+<div class="outline-3" id="outline-container-org1f8266a">
+<h3 id="org1f8266a">Noise Plotter</h3>
+<div class="outline-text-3" id="text-org1f8266a">
 <p>The Noise Plotter class is going to draw the two-dimensional noise-visualization using the current slider value as the step-size to change the noise input.</p>
 </div>
-<div class="outline-4" id="outline-container-orga33186e">
-<h4 id="orga33186e">The Noise Plotter Class</h4>
-<div class="outline-text-4" id="text-orga33186e">
+<div class="outline-4" id="outline-container-org38b322b">
+<h4 id="org38b322b">The Noise Plotter Class</h4>
+<div class="outline-text-4" id="text-org38b322b">
 <p>So, let's get started with the class definition.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">NoisePlotter</span><span class="w"> </span><span class="p">{</span>
@@ -2416,9 +2416,9 @@ Downloaded: 97
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org3afe76f">
-<h4 id="org3afe76f">The Draw Method</h4>
-<div class="outline-text-4" id="text-org3afe76f">
+<div class="outline-4" id="outline-container-org9d34695">
+<h4 id="org9d34695">The Draw Method</h4>
+<div class="outline-text-4" id="text-org9d34695">
 <p>This is the workhorse that does all the plotting.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -2444,7 +2444,8 @@ Downloaded: 97
 <span class="w">    </span><span class="nx">column_offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">x</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">width</span><span class="p">;</span><span class="w"> </span><span class="nx">x</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nx">pixel_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">width</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">PIXEL_ARRAY</span><span class="p">.</span><span class="nx">CELLS_PER_PIXEL</span><span class="p">;</span>
-<span class="w">      </span><span class="nx">intensity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">noise</span><span class="p">(</span><span class="nx">column_offset</span><span class="p">,</span><span class="w"> </span><span class="nx">row_offset</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">PIXEL_ARRAY</span><span class="p">.</span><span class="nx">RGB_MAX</span><span class="p">;</span>
+<span class="w">      </span><span class="nx">intensity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">noise</span><span class="p">(</span><span class="nx">column_offset</span><span class="p">,</span><span class="w"> </span><span class="nx">row_offset</span><span class="p">)</span>
+<span class="w">                   </span><span class="o">*</span><span class="w"> </span><span class="nx">PIXEL_ARRAY</span><span class="p">.</span><span class="nx">RGB_MAX</span><span class="p">);</span>
 <span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">pixels</span><span class="p">[</span><span class="nx">pixel_index</span><span class="w"> </span><span class="o">+</span>
 <span class="w">                     </span><span class="nx">PIXEL_ARRAY</span><span class="p">.</span><span class="nx">RED</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">intensity</span><span class="p">;</span>
 <span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">pixels</span><span class="p">[</span><span class="nx">pixel_index</span><span class="w"> </span><span class="o">+</span>
@@ -2463,14 +2464,14 @@ Downloaded: 97
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org3ba98c9">
-<h3 id="org3ba98c9">The Sketch</h3>
-<div class="outline-text-3" id="text-org3ba98c9">
+<div class="outline-3" id="outline-container-orga672a68">
+<h3 id="orga672a68">The Sketch</h3>
+<div class="outline-text-3" id="text-orga672a68">
 <p><b>Note for later:</b> You have to either set the background or the set the alpha channel in the pixel array. Leaving both out won't show anything.</p>
 </div>
-<div class="outline-4" id="outline-container-orgd545749">
-<h4 id="orgd545749">The Closure Function</h4>
-<div class="outline-text-4" id="text-orgd545749">
+<div class="outline-4" id="outline-container-org85f497c">
+<h4 id="org85f497c">The Closure Function</h4>
+<div class="outline-text-4" id="text-org85f497c">
 <div class="highlight">
 <pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">static_pixels</span><span class="p">(</span><span class="nx">p5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">HEIGHT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">400</span><span class="p">;</span>
@@ -2481,17 +2482,17 @@ Downloaded: 97
 <p>Once again, this is the sketch function that gets passed to a p5 constructor. I decided to create a class to handle the drawing of the visualization so the <code>plotter</code> variable is going to hold an instance of that. I'm also going to add a slider so that a user can change the amount the input to the noise changes, which is what the <code>silder</code> variable is for.</p>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgce6a53a">
-<h4 id="orgce6a53a">Set Up</h4>
-<div class="outline-text-4" id="text-orgce6a53a">
+<div class="outline-4" id="outline-container-org689826d">
+<h4 id="org689826d">Set Up</h4>
+<div class="outline-text-4" id="text-org689826d">
 <div class="highlight">
 <pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">setup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 </pre></div>
 <p>Just the basic p5 setup function.</p>
 </div>
 <ul class="org-ul">
-<li><a id="orgfcc739c"></a>You Are My Density<br>
-<div class="outline-text-5" id="text-orgfcc739c">
+<li><a id="orgf354608"></a>You Are My Density<br>
+<div class="outline-text-5" id="text-orgf354608">
 <div class="highlight">
 <pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">pixelDensity</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
 </pre></div>
@@ -2499,8 +2500,8 @@ Downloaded: 97
 <p>The <a href="https://p5js.org/reference/#/p5/pixels">pixels</a> documentation shows the proper way to set all the physical pixels, which requires you to check the <a href="https://p5js.org/reference/#/p5/pixelDensity">pixelDensity</a> and then for each logical pixel you would loop over the sub-pixels that represent it… maybe some other time. For now, setting <code>pixelDensity(1)</code> will turn off matching the pixel density of the user's display and let us just worry about the one logical pixel. I don't know if that means it wont' take advantage of a higher density display or not, but p5 is about making it easier to code visualizations, not high performance (to me, anyway) - and as we'll see, the for-loops we're using are already slow enough, adding two more nested loops will just make things even slower.</p>
 </div>
 </li>
-<li><a id="org6c05d2d"></a>The Canvas<br>
-<div class="outline-text-5" id="text-org6c05d2d">
+<li><a id="orgd676731"></a>The Canvas<br>
+<div class="outline-text-5" id="text-orgd676731">
 <div class="highlight">
 <pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">createCanvas</span><span class="p">(</span>
 <span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">STATIC_NOISE_PIXELS_DIV</span><span class="p">).</span><span class="nx">offsetWidth</span><span class="p">,</span>
@@ -2509,8 +2510,8 @@ Downloaded: 97
 <p>This is the usual code I use, nothing fancy.</p>
 </div>
 </li>
-<li><a id="orgbd2406e"></a>The Slider<br>
-<div class="outline-text-5" id="text-orgbd2406e">
+<li><a id="org27a7813"></a>The Slider<br>
+<div class="outline-text-5" id="text-org27a7813">
 <div class="highlight">
 <pre><span></span><span class="nx">slider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">p5</span><span class="p">.</span><span class="nx">createSlider</span><span class="p">(</span><span class="nx">SLIDER</span><span class="p">.</span><span class="nx">min</span><span class="p">,</span>
 <span class="w">                         </span><span class="nx">SLIDER</span><span class="p">.</span><span class="nx">max</span><span class="p">,</span>
@@ -2527,8 +2528,8 @@ Downloaded: 97
 <p><b>Note:</b> <a href="https://p5js.org/reference/#/p5/input">input</a> and <a href="https://p5js.org/reference/#/p5/changed">changed</a> don't show up under the <code>slider</code> documentation but rather under the <code>DOM</code> category of the documentation so I don't know how anyone is supposed to know that they exist without searching forum posts. This seems to suggest that there might be other features of the p5 language that exist but aren't well documented so it's just luck if you figure out that they are there…</p>
 </div>
 </li>
-<li><a id="orgd2e526c"></a>Text Setup<br>
-<div class="outline-text-5" id="text-orgd2e526c">
+<li><a id="org41fd953"></a>Text Setup<br>
+<div class="outline-text-5" id="text-org41fd953">
 <div class="highlight">
 <pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s2">"white"</span><span class="p">);</span>
 <span class="nx">p5</span><span class="p">.</span><span class="nx">stroke</span><span class="p">(</span><span class="s2">"white"</span><span class="p">);</span>
@@ -2539,16 +2540,16 @@ Downloaded: 97
 <p>This sets the values that I'll use to show what the current slider value is to the user. Since I'm setting the pixel array values directly and not calling any functions like <code>stroke</code> or <code>fill</code> to do the visualization, setting it here will stick for the life of the sketch.</p>
 </div>
 </li>
-<li><a id="org80d6583"></a>A Noise Plotter<br>
-<div class="outline-text-5" id="text-org80d6583">
+<li><a id="org54103cc"></a>A Noise Plotter<br>
+<div class="outline-text-5" id="text-org54103cc">
 <div class="highlight">
 <pre><span></span><span class="nx">plotter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">NoisePlotter</span><span class="p">(</span><span class="nx">p5</span><span class="p">,</span><span class="w"> </span><span class="nx">slider</span><span class="p">);</span>
 </pre></div>
 <p>I thought that it was getting cluttered up enough that it would make sense to break the plotting of the noise into a class, since I findi it easier to work with an object-oriented approach.</p>
 </div>
 </li>
-<li><a id="orgdf09ab0"></a>No Loop<br>
-<div class="outline-text-5" id="text-orgdf09ab0">
+<li><a id="orgf928535"></a>No Loop<br>
+<div class="outline-text-5" id="text-orgf928535">
 <div class="highlight">
 <pre><span></span><span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">noLoop</span><span class="p">();</span>
 <span class="p">}</span><span class="w"> </span><span class="c1">// end setup</span>
@@ -2558,9 +2559,9 @@ Downloaded: 97
 </li>
 </ul>
 </div>
-<div class="outline-4" id="outline-container-org6973b86">
-<h4 id="org6973b86">Draw</h4>
-<div class="outline-text-4" id="text-org6973b86">
+<div class="outline-4" id="outline-container-org8bc7ceb">
+<h4 id="org8bc7ceb">Draw</h4>
+<div class="outline-text-4" id="text-org8bc7ceb">
 <p>Now, our draw function.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">draw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -2573,9 +2574,9 @@ Downloaded: 97
 <p>Because I'm deferring most of the plotting to the <code>NoisePlotter</code> object it just calls its <code>draw</code> method and then sets the text to let the user know what the current slider setting is.</p>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgc98061b">
-<h4 id="orgc98061b">The P5 Instance</h4>
-<div class="outline-text-4" id="text-orgc98061b">
+<div class="outline-4" id="outline-container-orgc1b7fb2">
+<h4 id="orgc1b7fb2">The P5 Instance</h4>
+<div class="outline-text-4" id="text-orgc1b7fb2">
 <div class="highlight">
 <pre><span></span><span class="ow">new</span><span class="w"> </span><span class="nx">p5</span><span class="p">(</span><span class="nx">static_pixels</span><span class="p">,</span><span class="w"> </span><span class="nx">STATIC_NOISE_PIXELS_DIV</span><span class="p">);</span>
 </pre></div>
@@ -2583,27 +2584,27 @@ Downloaded: 97
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org508db73">
-<h3 id="org508db73">The Output</h3>
-<div class="outline-text-3" id="text-org508db73">
+<div class="outline-3" id="outline-container-org0274576">
+<h3 id="org0274576">The Output</h3>
+<div class="outline-text-3" id="text-org0274576">
 <p>
 <script src="posts/two-dimensional-noise/static-sketch-pixels.js"></script></p>
 <div class="p5js" id="static-2d-noise-graph-pixels"></div>
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgd0be0d0">
-<h2 id="orgd0be0d0">Moving Version</h2>
-<div class="outline-text-2" id="text-orgd0be0d0">
+<div class="outline-2" id="outline-container-orgf78a654">
+<h2 id="orgf78a654">Moving Version</h2>
+<div class="outline-text-2" id="text-orgf78a654">
 <p>
 <script src="posts/two-dimensional-noise/moving-noise.js"></script>
 <script src="posts/two-dimensional-noise/moving-sketch-pixels.js"></script></p>
 <div class="p5js" id="moving-2d-noise-graph-pixels"></div>
 <p id="moving-slider"></p>
 </div>
-<div class="outline-3" id="outline-container-orgdbd4709">
-<h3 id="orgdbd4709">The Sketch</h3>
-<div class="outline-text-3" id="text-orgdbd4709">
+<div class="outline-3" id="outline-container-orgc88417a">
+<h3 id="orgc88417a">The Sketch</h3>
+<div class="outline-text-3" id="text-orgc88417a">
 <p><b>Note for later:</b> Setting the canvas too wide slows the frame rate down a lot (since the x for-loop uses the width) so I needed to both shrink the canvas and add an extra div (above) to stick the slider into - because it was only showing up under the canvas before because there wasn't enough room for it to slide up alongside it.</p>
 <p>Check the framerate in the browser's javascript console with</p>
 <div class="highlight">
@@ -2611,9 +2612,9 @@ Downloaded: 97
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org168e8ca">
-<h3 id="org168e8ca">Moving Noise Plotter</h3>
-<div class="outline-text-3" id="text-org168e8ca">
+<div class="outline-3" id="outline-container-org91b90d6">
+<h3 id="org91b90d6">Moving Noise Plotter</h3>
+<div class="outline-text-3" id="text-org91b90d6">
 <div class="highlight">
 <pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">MovingNoise</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kr">constructor</span><span class="p">({</span><span class="nx">p5</span><span class="o">=</span><span class="kc">undefined</span><span class="p">,</span>
@@ -2664,9 +2665,9 @@ Downloaded: 97
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgec29935">
-<h2 id="orgec29935">Sources</h2>
-<div class="outline-text-2" id="text-orgec29935">
+<div class="outline-2" id="outline-container-org1127f72">
+<h2 id="org1127f72">Sources</h2>
+<div class="outline-text-2" id="text-org1127f72">
 <ul class="org-ul">
 <li>Nature of Code [Internet]. [cited 2023 May 11]. Available from: <a href="https://nature-of-code-2nd-edition.netlify.app/">https://nature-of-code-2nd-edition.netlify.app/</a></li>
 <li>p5 reference | pixelDensity() [Internet]. [cited 2023 May 15]. Available from: <a href="https://p5js.org/reference/#/p5/pixelDensity">https://p5js.org/reference/#/p5/pixelDensity</a></li>
