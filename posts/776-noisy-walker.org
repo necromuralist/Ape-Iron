@@ -3,7 +3,7 @@
 .. slug: a-noisy-walker
 .. date: 2023-05-10 18:16:09 UTC-07:00
 .. tags: p5.js,nature of code,noise
-.. category: P5.js
+.. category: Generative Art
 .. link:
 .. description: A Noise Walker.
 .. type: text
