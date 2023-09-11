@@ -257,7 +257,8 @@ That last variable might take some explaining, so maybe here's a good spot to du
     column_offset = 0;
     for (let x=0; x < this.p5.width; x++) {
       pixel_index = (x + y * this.p5.width) * PIXEL_ARRAY.CELLS_PER_PIXEL;
-      intensity = this.p5.noise(column_offset, row_offset) * PIXEL_ARRAY.RGB_MAX;
+      intensity = (this.p5.noise(column_offset, row_offset)
+                   ,* PIXEL_ARRAY.RGB_MAX);
       this.p5.pixels[pixel_index +
                      PIXEL_ARRAY.RED] = intensity;
       this.p5.pixels[pixel_index +
