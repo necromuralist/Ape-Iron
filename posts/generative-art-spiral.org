@@ -51,6 +51,8 @@
 
   <<spiral-sketch-setup-slider-parents>>
 
+  <<spiral-sketch-setup-text-select>>
+
   <<spiral-sketch-setup-spiralizer>>
 
   <<spiral-sketch-draw>>
@@ -239,7 +241,11 @@ circle_slider = p5.createSlider(
 angle_slider.parent(SPIRAL_ANGLE_SLIDER);
 radius_slider.parent(SPIRAL_RADIUS_SLIDER);
 circle_slider.parent(SPIRAL_CIRCLE_SLIDER);
+#+end_src
 
+*** Grab the Divs For the Slider Labels
+
+#+begin_src js :noweb-ref spiral-sketch-setup-text-select
 angle_text = p5.select(SPIRAL_ANGLE_TEXT);
 radius_text = p5.select(SPIRAL_RADIUS_TEXT);
 circle_text = p5.select(SPIRAL_CIRCLE_TEXT);
