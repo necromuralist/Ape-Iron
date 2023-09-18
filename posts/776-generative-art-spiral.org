@@ -15,12 +15,14 @@
 {{% p5div source="spiral.js" divid="spiral-0a168ba9" %}}
 
 #+begin_export html
-<div id="angle-slider-0a168ba9"></div>
 <div id="angle-text-0a168ba9"></div>
-<div id="radius-slider-0a168ba9"></div>
+<div id="angle-slider-0a168ba9"></div>
+
 <div id="radius-text-0a168ba9"></div>
-<div id="circle-slider-0a168ba9"></div>
+<div id="radius-slider-0a168ba9"></div>
+
 <div id="circle-text-0a168ba9"></div>
+<div id="circle-slider-0a168ba9"></div>
 #+end_export
 
 #+begin_src js :tangle ../files/posts/generative-art-spiral/spiral.js :exports none
@@ -44,7 +46,7 @@
 
   <<spiralizer-draw>>
 
-  <<spiralyzer-reset>>
+  <<spiralizer-reset>>
 
 } // spiralizer
 
@@ -64,10 +66,6 @@
   <<spiral-sketch-setup>>
 
   <<spiral-sketch-setup-sliders>>
-
-  <<spiral-sketch-setup-slider-parents>>
-
-  <<spiral-sketch-setup-text-select>>
 
   <<spiral-sketch-setup-spiralizer>>
 
@@ -113,7 +111,6 @@ const SPIRAL_CIRCLE_TEXT = "#circle-text-0a168ba9";
 
 * The Sliders Settings
 
-
 ** Angle Slider
 
 The values used to create the angle-increment slider.
@@ -126,6 +123,8 @@ const ANGLE_SLIDER = {
   step_size: 0,
   label: "Angle Increment",
   precision: 2,
+  slider_div: SPIRAL_ANGLE_SLIDER,
+  caption_div: SPIRAL_ANGLE_TEXT
 }
 #+end_src
 
@@ -140,7 +139,9 @@ const RADIUS_SLIDER = {
   default_value: 1,
   step_size: 0,
   label: "Radius Increment",
-  precision: 2
+  precision: 2,
+  slider_div: SPIRAL_RADIUS_SLIDER,
+  caption_div: SPIRAL_RADIUS_TEXT
 }
 #+end_src
 
@@ -155,8 +156,74 @@ const CIRCLE_SLIDER = {
   default_value: 1,
   step_size: 0,
   label: "Point Diameter",
-  precision: 2
+  precision: 2,
+  slider_div: SPIRAL_CIRCLE_SLIDER,
+  caption_div: SPIRAL_CIRCLE_TEXT
 }
+#+end_src
+
+* Slidini
+** The Class Declaration
+#+begin_src js :noweb-ref slidini
+class Slidini {
+  _slider = null;
+  _caption = null;
+#+end_src
+
+** The Constructor
+
+#+begin_src js :noweb-ref slidini-constructor
+constructor(settings, p5) {
+  this.settings = settings;
+  this.p5 = p5;
+} // constructor
+#+end_src
+
+** The Slider
+
+#+begin_src js :noweb-ref slidini-get-slider
+get slider() {
+  if (this._slider === null) {
+    // create the slider
+    this._slider = this.p5.createSlider(
+      this.settings.min,
+      this.settings.max,
+      this.settings.default_value,
+      this.settings.step_size,
+    );
+
+    // attach it to the div tag
+    this._slider.parent(this.settings.slider_div);
+
+    // set the callback to change label on update
+    this._slider.input(() => this.update_caption());
+
+    // add the label to the slider
+    this.update_caption();
+  }
+  return this._slider;
+}
+#+end_src
+
+** The Caption
+
+#+begin_src js :noweb-ref slidini-get-caption
+get caption() {
+  if (this._caption === null) {
+    this._caption = this.p5.select(this.settings.caption_div);
+  }
+  return this._caption;
+}
+#+end_src
+
+** The Caption Updater
+
+#+begin_src js :noweb-ref slidini-update-caption
+update_caption() {
+  this.caption.html(
+    `${this.settings.label}: ` +
+      `${this.slider.value().toFixed(this.settings.precision)}`);
+} // update_caption
 #+end_src
 
 * The Spiralizer
@@ -226,67 +293,6 @@ reset() {
   this.angle = 0;
 } // end reset
 #+end_src
-* Slidini
-** The Class Declaration
-#+begin_src js :noweb-ref slidini
-class slidini {
-  _slider;
-  _caption;
-#+end_src
-
-** The Constructor
-
-#+begin_src js :noweb-ref slidini-constructor
-constructor(slider_div_id, caption_div_id, label, p5) {
-  this.slider_div_id = slider_div_id;
-  this.caption_div_id = caption_div_id;
-  this.settings = settings;
-} // constructor
-#+end_src
-
-** The Slider
-
-#+begin_src js :noweb-ref slidini-get-slider
-get slider() {
-  if (this._slider === undefined) {
-    // create the slider
-    this._slider = this.p5.createSlider(
-      this.settings.min,
-      this.settings.max,
-      this.settings.default_value,
-      this.settings.step_size,
-    );
-
-    // attach it to the div tag
-    this._slider.parent(this.slider_div_id);
-
-    // set the callback to change label on update
-    this._slider.input(() => this.update_caption());
-  }
-  return this._slider;
-}
-#+end_src
-
-** The Caption
-
-#+begin_src js :noweb-ref slidini-get-caption
-get caption() {
-  if (this._caption === undefined) {
-    this._caption = this.p5.select(this.caption_div_id);
-  }
-  return this._caption;
-}
-#+end_src
-
-** The Caption Updater
-
-#+begin_src js :noweb-ref slidini-update-caption
-update_caption() {
-  this.caption.html(`${this.settings.label}` +
-                    `${this.slider.value().toFixed(this.settings.precision)}`)
-} // update_caption
-#+end_src
-
 * The Spiral Sketch
 
 ** Function Declaration
@@ -299,9 +305,9 @@ function spiral_sketch(p5) {
   const POINT_COLOR = "RoyalBlue";
   
   let spiralizer;
-  let angle_slider, angle_text;
-  let radius_slider, radius_text;
-  let circle_slider, circle_text;
+  let angle_slider;
+  let radius_slider;
+  let circle_slider;
 #+end_src
 
 ** Setup
@@ -316,50 +322,17 @@ p5.setup = function(){
 
 *** Create The Sliders
 #+begin_src js :noweb-ref spiral-sketch-setup-sliders
-angle_slider = p5.createSlider(
-  ANGLE_SLIDER.min,
-  ANGLE_SLIDER.max,
-  ANGLE_SLIDER.default_value,
-  ANGLE_SLIDER.step_size,
-); // angle increment slider
-  
-radius_slider = p5.createSlider(
-  RADIUS_SLIDER.min,
-  RADIUS_SLIDER.max,
-  RADIUS_SLIDER.default_value,
-  RADIUS_SLIDER.step_size,
-); // radius increment slider
-
-circle_slider = p5.createSlider(
-  CIRCLE_SLIDER.min,
-  CIRCLE_SLIDER.max,
-  CIRCLE_SLIDER.default_value,
-  CIRCLE_SLIDER.step_size,
-); // point diameter
-#+end_src
-
-*** Attach the Sliders to the Divs
-
-#+begin_src js :noweb-ref spiral-sketch-setup-slider-parents
-angle_slider.parent(SPIRAL_ANGLE_SLIDER);
-radius_slider.parent(SPIRAL_RADIUS_SLIDER);
-circle_slider.parent(SPIRAL_CIRCLE_SLIDER);
-#+end_src
-
-*** Grab the Divs For the Slider Labels
-
-#+begin_src js :noweb-ref spiral-sketch-setup-text-select
-angle_text = p5.select(SPIRAL_ANGLE_TEXT);
-radius_text = p5.select(SPIRAL_RADIUS_TEXT);
-circle_text = p5.select(SPIRAL_CIRCLE_TEXT);
+angle_slider = new Slidini(ANGLE_SLIDER, p5);  
+radius_slider = new Slidini(RADIUS_SLIDER, p5);
+circle_slider = new Slidini(CIRCLE_SLIDER, p5);
 #+end_src
 
 *** Create the Spiralizer and End the Setup
 #+begin_src js :noweb-ref spiral-sketch-setup-spiralizer
 spiralizer = new Spiralizer(p5, WIDTH/2, HEIGHT/2, WIDTH/2,
-                            angle_slider,
-                            radius_slider,
-                            circle_slider);
+                            angle_slider.slider,
+                            radius_slider.slider,
+                            circle_slider.slider);
 
 } // end setup
 #+end_src
@@ -370,15 +343,6 @@ spiralizer = new Spiralizer(p5, WIDTH/2, HEIGHT/2, WIDTH/2,
 p5.draw = function() {
   spiralizer.draw();
   p5.background(255, 5);
-  angle_text.html(`Angle Increment: ` +
-                  `${angle_slider.value().toFixed(ANGLE_SLIDER.precision)}`
-                 );
-  radius_text.html(`Radius Increment: ` +
-                   `${radius_slider.value().toFixed(RADIUS_SLIDER.precision)}`
-                  );
-  circle_text.html(`Point Diameter: ` +
-                   `${circle_slider.value().toFixed(CIRCLE_SLIDER.precision)}`
-                  );
 }// end draw
 #+end_src
 
@@ -386,8 +350,8 @@ p5.draw = function() {
 
 #+begin_src js :noweb-ref spiral-sketch-double-clicked
 p5.doubleClicked = function() {
-  p5.background("white");
   spiralizer.reset();
+  p5.background("white");
 } // end doubleClicked
 #+end_src
 

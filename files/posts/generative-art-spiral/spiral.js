@@ -15,6 +15,8 @@ const ANGLE_SLIDER = {
   step_size: 0,
   label: "Angle Increment",
   precision: 2,
+  slider_div: SPIRAL_ANGLE_SLIDER,
+  caption_div: SPIRAL_ANGLE_TEXT
 }
 
 const RADIUS_SLIDER = {
@@ -23,7 +25,9 @@ const RADIUS_SLIDER = {
   default_value: 1,
   step_size: 0,
   label: "Radius Increment",
-  precision: 2
+  precision: 2,
+  slider_div: SPIRAL_RADIUS_SLIDER,
+  caption_div: SPIRAL_RADIUS_TEXT
 }
 
 const CIRCLE_SLIDER = {
@@ -32,7 +36,9 @@ const CIRCLE_SLIDER = {
   default_value: 1,
   step_size: 0,
   label: "Point Diameter",
-  precision: 2
+  precision: 2,
+  slider_div: SPIRAL_CIRCLE_SLIDER,
+  caption_div: SPIRAL_CIRCLE_TEXT
 }
 
 class Spiralizer {
@@ -80,22 +86,24 @@ class Spiralizer {
     }
   } // end draw
 
-  
+  reset() {
+    this.radius = this.radius_increment.value();
+    this.angle = 0;
+  } // end reset
 
 } // spiralizer
 
-class slidini {
-  _slider;
-  _caption;
+class Slidini {
+  _slider = null;
+  _caption = null;
 
-  constructor(slider_div_id, caption_div_id, label, p5) {
-    this.slider_div_id = slider_div_id;
-    this.caption_div_id = caption_div_id;
+  constructor(settings, p5) {
     this.settings = settings;
+    this.p5 = p5;
   } // constructor
 
   get slider() {
-    if (this._slider === undefined) {
+    if (this._slider === null) {
       // create the slider
       this._slider = this.p5.createSlider(
         this.settings.min,
@@ -105,24 +113,28 @@ class slidini {
       );
   
       // attach it to the div tag
-      this._slider.parent(this.slider_div_id);
+      this._slider.parent(this.settings.slider_div);
   
       // set the callback to change label on update
       this._slider.input(() => this.update_caption());
+  
+      // add the label to the slider
+      this.update_caption();
     }
     return this._slider;
   }
 
   get caption() {
-    if (this._caption === undefined) {
-      this._caption = this.p5.select(this.caption_div_id);
+    if (this._caption === null) {
+      this._caption = this.p5.select(this.settings.caption_div);
     }
     return this._caption;
   }
 
   update_caption() {
-    this.caption.html(`${this.settings.label}` +
-                      `${this.slider.value().toFixed(this.settings.precision)}`)
+    this.caption.html(
+      `${this.settings.label}: ` +
+        `${this.slider.value().toFixed(this.settings.precision)}`);
   } // update_caption
 } // slidini
 
@@ -133,9 +145,9 @@ function spiral_sketch(p5) {
   const POINT_COLOR = "RoyalBlue";
   
   let spiralizer;
-  let angle_slider, angle_text;
-  let radius_slider, radius_text;
-  let circle_slider, circle_text;
+  let angle_slider;
+  let radius_slider;
+  let circle_slider;
 
   p5.setup = function(){
     p5.createCanvas(WIDTH, HEIGHT);
@@ -143,59 +155,25 @@ function spiral_sketch(p5) {
     p5.stroke(POINT_COLOR);
     p5.fill(POINT_COLOR);
 
-  angle_slider = p5.createSlider(
-    ANGLE_SLIDER.min,
-    ANGLE_SLIDER.max,
-    ANGLE_SLIDER.default_value,
-    ANGLE_SLIDER.step_size,
-  ); // angle increment slider
-    
-  radius_slider = p5.createSlider(
-    RADIUS_SLIDER.min,
-    RADIUS_SLIDER.max,
-    RADIUS_SLIDER.default_value,
-    RADIUS_SLIDER.step_size,
-  ); // radius increment slider
-  
-  circle_slider = p5.createSlider(
-    CIRCLE_SLIDER.min,
-    CIRCLE_SLIDER.max,
-    CIRCLE_SLIDER.default_value,
-    CIRCLE_SLIDER.step_size,
-  ); // point diameter
-
-  angle_slider.parent(SPIRAL_ANGLE_SLIDER);
-  radius_slider.parent(SPIRAL_RADIUS_SLIDER);
-  circle_slider.parent(SPIRAL_CIRCLE_SLIDER);
-
-  angle_text = p5.select(SPIRAL_ANGLE_TEXT);
-  radius_text = p5.select(SPIRAL_RADIUS_TEXT);
-  circle_text = p5.select(SPIRAL_CIRCLE_TEXT);
+  angle_slider = new Slidini(ANGLE_SLIDER, p5);  
+  radius_slider = new Slidini(RADIUS_SLIDER, p5);
+  circle_slider = new Slidini(CIRCLE_SLIDER, p5);
 
   spiralizer = new Spiralizer(p5, WIDTH/2, HEIGHT/2, WIDTH/2,
-                              angle_slider,
-                              radius_slider,
-                              circle_slider);
+                              angle_slider.slider,
+                              radius_slider.slider,
+                              circle_slider.slider);
   
   } // end setup
 
   p5.draw = function() {
     spiralizer.draw();
     p5.background(255, 5);
-    angle_text.html(`Angle Increment: ` +
-                    `${angle_slider.value().toFixed(ANGLE_SLIDER.precision)}`
-                   );
-    radius_text.html(`Radius Increment: ` +
-                     `${radius_slider.value().toFixed(RADIUS_SLIDER.precision)}`
-                    );
-    circle_text.html(`Point Diameter: ` +
-                     `${circle_slider.value().toFixed(CIRCLE_SLIDER.precision)}`
-                    );
   }// end draw
 
   p5.doubleClicked = function() {
-    p5.background("white");
     spiralizer.reset();
+    p5.background("white");
   } // end doubleClicked
 } // spiral_sketch
 
