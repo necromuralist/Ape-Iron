@@ -2,7 +2,7 @@
 .. title: Generative Art
 .. slug: bibliography-generative-art
 .. date: 2023-06-04 12:58:39 UTC-07:00
-.. tags: citation,generative art,book
+.. tags: bibliography,generative art,book
 .. category: Generative Art
 .. link: 
 .. description: A reference to the book Generative Art.
