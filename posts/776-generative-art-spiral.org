@@ -1,5 +1,5 @@
 #+BEGIN_COMMENT
-.. title: Generative Art Spiral
+.. title: Generative Art: Spiral
 .. slug: generative-art-spiral
 .. date: 2023-06-17 16:38:42 UTC-07:00
 .. tags: p5.js,generative art
@@ -26,6 +26,12 @@
 #+begin_src js :tangle ../files/posts/generative-art-spiral/spiral.js :exports none
 <<spiral-divs>>
 
+<<sketch-div>>
+
+<<slider-divs>>
+
+<<text-divs>>
+
 <<angle-slider-values>>
 
 <<radius-slider-values>>
@@ -42,6 +48,16 @@
 
 } // spiralizer
 
+<<slidini>>
+
+  <<slidini-constructor>>
+
+  <<slidini-get-slider>>
+
+  <<slidini-get-caption>>
+
+  <<slidini-update-caption>>
+} // slidini
 
 <<spiral-sketch>>
 
@@ -63,18 +79,41 @@
 new p5(spiral_sketch, SPIRAL_DIV);
 #+end_src
 
-* The Sliders
-** The Div IDs
+* The Div IDs
+To specify where the parts of the sketch go I added some ~div~ tags to the HTML so I'm going to create some javascript constants with the div IDs to make it easier to keep track of them.
 
-#+begin_src js :noweb-ref angle-slider-values
+** The Sketch Div
+
+This is the ID for the ~div~ where the main sketch will go, it gets passed to the p5 constructor along with the sketch definition.
+
+#+begin_src js :noweb-ref sketch-div
 const SPIRAL_DIV = "spiral-0a168ba9";
+#+end_src
+
+** The Slider Divs
+I'm going to add some sliders to make it easier to adjust some of the parameters and see how that affects the sketch. These are the IDs of the ~div~ tags where I'm going to put the sliders to change some of the sketch values. The angle and radius sliders will set how much the angle and radius will change as the circle is drawn. If, for example, the angle slider is set to 5, then every point that's added will be rotated five degrees from the previous point, and if the radius is set to 5, then the radius will grow by 5 every time a point is added.
+
+The circle slider is a little different in that it sets the diameter for the circles that I'm drawing to create the spiral, so it's just an aesthetic setting.
+
+#+begin_src js :noweb-ref slider-divs
 const SPIRAL_ANGLE_SLIDER = "angle-slider-0a168ba9";
 const SPIRAL_RADIUS_SLIDER = "radius-slider-0a168ba9";
 const SPIRAL_CIRCLE_SLIDER = "circle-slider-0a168ba9";
+#+end_src
+
+** Text Divs
+
+I also created some ~div~ tags that I'll put some text into to show the current value of each of the sliders.
+
+#+begin_src js :noweb-ref text-divs
 const SPIRAL_ANGLE_TEXT = "#angle-text-0a168ba9";
 const SPIRAL_RADIUS_TEXT = "#radius-text-0a168ba9";
 const SPIRAL_CIRCLE_TEXT = "#circle-text-0a168ba9";
 #+end_src
+
+* The Sliders Settings
+
+
 ** Angle Slider
 
 The values used to create the angle-increment slider.
@@ -85,7 +124,8 @@ const ANGLE_SLIDER = {
   max: 40,
   default_value: 5,
   step_size: 0,
-  precision: 2
+  label: "Angle Increment",
+  precision: 2,
 }
 #+end_src
 
@@ -99,6 +139,7 @@ const RADIUS_SLIDER = {
   max: 20,
   default_value: 1,
   step_size: 0,
+  label: "Radius Increment",
   precision: 2
 }
 #+end_src
@@ -113,6 +154,7 @@ const CIRCLE_SLIDER = {
   max: 100,
   default_value: 1,
   step_size: 0,
+  label: "Point Diameter",
   precision: 2
 }
 #+end_src
@@ -184,6 +226,67 @@ reset() {
   this.angle = 0;
 } // end reset
 #+end_src
+* Slidini
+** The Class Declaration
+#+begin_src js :noweb-ref slidini
+class slidini {
+  _slider;
+  _caption;
+#+end_src
+
+** The Constructor
+
+#+begin_src js :noweb-ref slidini-constructor
+constructor(slider_div_id, caption_div_id, label, p5) {
+  this.slider_div_id = slider_div_id;
+  this.caption_div_id = caption_div_id;
+  this.settings = settings;
+} // constructor
+#+end_src
+
+** The Slider
+
+#+begin_src js :noweb-ref slidini-get-slider
+get slider() {
+  if (this._slider === undefined) {
+    // create the slider
+    this._slider = this.p5.createSlider(
+      this.settings.min,
+      this.settings.max,
+      this.settings.default_value,
+      this.settings.step_size,
+    );
+
+    // attach it to the div tag
+    this._slider.parent(this.slider_div_id);
+
+    // set the callback to change label on update
+    this._slider.input(() => this.update_caption());
+  }
+  return this._slider;
+}
+#+end_src
+
+** The Caption
+
+#+begin_src js :noweb-ref slidini-get-caption
+get caption() {
+  if (this._caption === undefined) {
+    this._caption = this.p5.select(this.caption_div_id);
+  }
+  return this._caption;
+}
+#+end_src
+
+** The Caption Updater
+
+#+begin_src js :noweb-ref slidini-update-caption
+update_caption() {
+  this.caption.html(`${this.settings.label}` +
+                    `${this.slider.value().toFixed(this.settings.precision)}`)
+} // update_caption
+#+end_src
+
 * The Spiral Sketch
 
 ** Function Declaration

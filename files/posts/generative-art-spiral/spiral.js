@@ -1,16 +1,20 @@
 const SPIRAL_DIV = "spiral-0a168ba9";
+
 const SPIRAL_ANGLE_SLIDER = "angle-slider-0a168ba9";
 const SPIRAL_RADIUS_SLIDER = "radius-slider-0a168ba9";
 const SPIRAL_CIRCLE_SLIDER = "circle-slider-0a168ba9";
+
 const SPIRAL_ANGLE_TEXT = "#angle-text-0a168ba9";
 const SPIRAL_RADIUS_TEXT = "#radius-text-0a168ba9";
 const SPIRAL_CIRCLE_TEXT = "#circle-text-0a168ba9";
+
 const ANGLE_SLIDER = {
   min: 0,
   max: 40,
   default_value: 5,
   step_size: 0,
-  precision: 2
+  label: "Angle Increment",
+  precision: 2,
 }
 
 const RADIUS_SLIDER = {
@@ -18,6 +22,7 @@ const RADIUS_SLIDER = {
   max: 20,
   default_value: 1,
   step_size: 0,
+  label: "Radius Increment",
   precision: 2
 }
 
@@ -26,6 +31,7 @@ const CIRCLE_SLIDER = {
   max: 100,
   default_value: 1,
   step_size: 0,
+  label: "Point Diameter",
   precision: 2
 }
 
@@ -78,6 +84,47 @@ class Spiralizer {
 
 } // spiralizer
 
+class slidini {
+  _slider;
+  _caption;
+
+  constructor(slider_div_id, caption_div_id, label, p5) {
+    this.slider_div_id = slider_div_id;
+    this.caption_div_id = caption_div_id;
+    this.settings = settings;
+  } // constructor
+
+  get slider() {
+    if (this._slider === undefined) {
+      // create the slider
+      this._slider = this.p5.createSlider(
+        this.settings.min,
+        this.settings.max,
+        this.settings.default_value,
+        this.settings.step_size,
+      );
+  
+      // attach it to the div tag
+      this._slider.parent(this.slider_div_id);
+  
+      // set the callback to change label on update
+      this._slider.input(() => this.update_caption());
+    }
+    return this._slider;
+  }
+
+  get caption() {
+    if (this._caption === undefined) {
+      this._caption = this.p5.select(this.caption_div_id);
+    }
+    return this._caption;
+  }
+
+  update_caption() {
+    this.caption.html(`${this.settings.label}` +
+                      `${this.slider.value().toFixed(this.settings.precision)}`)
+  } // update_caption
+} // slidini
 
 function spiral_sketch(p5) {
   // the size of the canvas and the color of the circles
@@ -120,7 +167,7 @@ function spiral_sketch(p5) {
   angle_slider.parent(SPIRAL_ANGLE_SLIDER);
   radius_slider.parent(SPIRAL_RADIUS_SLIDER);
   circle_slider.parent(SPIRAL_CIRCLE_SLIDER);
-  
+
   angle_text = p5.select(SPIRAL_ANGLE_TEXT);
   radius_text = p5.select(SPIRAL_RADIUS_TEXT);
   circle_text = p5.select(SPIRAL_CIRCLE_TEXT);
