@@ -36,6 +36,8 @@
 
 <<text-divs>>
 
+<<slider-settings-class>>
+  
 <<angle-slider-values>>
 
 <<radius-slider-values>>
@@ -112,7 +114,16 @@ const SPIRAL_CIRCLE_TEXT = "#circle-text-0a168ba9";
 #+end_src
 
 * The Sliders Settings
-
+** The Slider Settings
+#+begin_src js :noweb-ref slider-settings-class
+class SliderSettings {
+  check_rep(){
+    if (!this.min) {
+      throw Error(`min must be a number not ${this.min}`);
+    }
+  }
+}
+#+end_src
 ** Angle Slider
 
 The values used to create the angle-increment slider.

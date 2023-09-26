@@ -8,6 +8,14 @@ const SPIRAL_ANGLE_TEXT = "#angle-text-0a168ba9";
 const SPIRAL_RADIUS_TEXT = "#radius-text-0a168ba9";
 const SPIRAL_CIRCLE_TEXT = "#circle-text-0a168ba9";
 
+class SliderSettings {
+  check_rep(){
+    if (!this.min) {
+      throw Error(`min must be a number not ${this.min}`);
+    }
+  }
+}
+  
 const ANGLE_SLIDER = {
   min: 0,
   max: 40,
