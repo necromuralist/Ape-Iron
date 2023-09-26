@@ -11,6 +11,8 @@
 .. updated: 
 .. template: p5.tmpl
 #+END_COMMENT
+#+OPTIONS: ^:{}
+#+TOC: headlines 2
 
 {{% p5div source="spiral.js" divid="spiral-0a168ba9" %}}
 
@@ -74,7 +76,7 @@
   <<spiral-sketch-double-clicked>>
 } // spiral_sketch
 
-new p5(spiral_sketch, SPIRAL_DIV);
+<<p5-instance>>
 #+end_src
 
 * The Div IDs
@@ -82,7 +84,7 @@ To specify where the parts of the sketch go I added some ~div~ tags to the HTML 
 
 ** The Sketch Div
 
-This is the ID for the ~div~ where the main sketch will go, it gets passed to the p5 constructor along with the sketch definition.
+This is the ID for the ~div~ where the main sketch will go, it gets passed to the p5 constructor, along with the sketch definition, to create the [[*The P5 Instance][the P5 instance]].
 
 #+begin_src js :noweb-ref sketch-div
 const SPIRAL_DIV = "spiral-0a168ba9";
@@ -295,6 +297,8 @@ reset() {
 #+end_src
 * The Spiral Sketch
 
+This is going to be the sketch that we pass to [[*The P5 Instance][the P5 constructor]] to create the animation.
+
 ** Function Declaration
 
 #+begin_src js :noweb-ref spiral-sketch
@@ -355,6 +359,12 @@ p5.doubleClicked = function() {
 } // end doubleClicked
 #+end_src
 
+** The P5 Instance
+
+To create the animation I'll create a p5 object by passing in [[*The Spiral Sketch][the function from the previous section]] and [[*The Sketch Div][the div ID]] to identify where in the page the sketch should go.
+#+begin_src js :noweb-ref p5-instance
+new p5(spiral_sketch, SPIRAL_DIV);
+#+end_src
 * References
 
 - {{% doc %}}bibliography-generative-art{{% /doc %}}
