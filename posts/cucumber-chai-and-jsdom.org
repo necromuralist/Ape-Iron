@@ -250,4 +250,4 @@ Then("it throws an error.", function() {
 
 * What Have We Learned?
 
-I suppose the biggest lesson is that I shouldn't have tried so hard to fake the ~document~ object as a magic global object the way it normally is used and instead just gone for an explicit argument that gets passed to the class (or function) that needs it. I also learned that ~jsdom~ is interesting but way behind the ECMA standard, so I have to either decide to not use ECMA 6 or not rely so much on these other libraries that don't use the current standards.
+I suppose the biggest lesson is that I shouldn't have tried so hard to fake the ~document~ object as a magic global object the way it normally is used and instead just gone for an explicit argument that gets passed to the class (or function) that needs it. I also learned that ~jsdom~ is interesting but behind the ECMA standard, as were some of the other libraries I ran into in trying to solve different parts of this problem, so I have to either decide to not use ECMA 6 or not rely so much on these other libraries that don't use the current standards.
