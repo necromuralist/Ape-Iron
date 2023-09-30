@@ -1,7 +1,7 @@
 class SliderSettings {
   constructor(min, max, default_value, step_size,
               label, precision,
-              slider_div, caption_div) {
+              slider_div, caption_div, document) {
     this.min = min;
     this.max = max;
     this.default_value = default_value;
@@ -10,6 +10,7 @@ class SliderSettings {
     this.precision = precision;
     this.slider_div = slider_div;
     this.caption_div = caption_div;
+    this.document = document;
   }; // constructor
 
   throw_non_number(identifier, actual) {
@@ -31,7 +32,7 @@ class SliderSettings {
   }; // throw_not_integer
 
   throw_invalid_id(identifier, actual_id) {
-    if (document.getElementById(actual_id) === null) {
+    if (this.document.getElementById(actual_id) === null) {
       throw Error(`"${identifier}" isn't a valid ID - "${actual_id}"`);
     };
   }; // throw_invalid_id

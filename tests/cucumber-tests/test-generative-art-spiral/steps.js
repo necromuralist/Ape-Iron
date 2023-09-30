@@ -1,7 +1,13 @@
 import { JSDOM } from "jsdom";
+import { expect } from "chai";
+import { Given, When, Then } from "@cucumber/cucumber";
+import { fake, replace } from "sinon";
+import { SliderSettings } from "../../../files/posts/generative-art-spiral/slider.js";
+
+/* The fake document */
 const SLIDER_ID = "slider-div";
 const CAPTION_ID = "caption-div";
-global.document = new JSDOM(`<html>
+const document = new JSDOM(`<html>
 <head></head>
 <body>
 <div id='${SLIDER_ID}'></div>
@@ -9,15 +15,10 @@ global.document = new JSDOM(`<html>
 </body></html>`).window.document;
 
 
-import { expect } from "chai";
-import { Given, When, Then } from "@cucumber/cucumber";
-import { fake, replace } from "sinon";
-import { SliderSettings } from "../../../files/posts/generative-art-spiral/slider.js";
-
 /** min **/
 /* not set */
 Given("a Slider Settings", function() {
-  this.settings = new SliderSettings(0, 5, 3, 1, "some label", 3, "slider-div", "caption-div");
+  this.settings = new SliderSettings(0, 5, 3, 1, "some label", 3, "slider-div", "caption-div", document);
 });
 
 When("it has no min", function() {
@@ -128,8 +129,6 @@ When("it has an invalid slider div", function() {
 });
 
 Then("the invalid id should raise an exception.", function() {
-  let fake_function = fake.returns(null);
-  replace(global.document, "getElementById", fake_function);
   expect(this.settings.check_rep.bind(this.settings)).to.throw(Error);
 });
 
