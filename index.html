@@ -17,8 +17,7 @@
 <link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
 <link href="favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
 <link href="site.webmanifest" rel="manifest">
-<link href="posts/generative-art-concentric-circles/index.html" rel="prefetch" type="text/html">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+<link href="posts/cucumber-chai-and-jsdom/index.html" rel="prefetch" type="text/html">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
@@ -49,6 +48,237 @@
 <div class="container" id="content" role="main">
 <div class="body-content"><!--Body content-->
 <div class="postindex">
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article">
+<header>
+<h1 class="p-name entry-title"><a class="u-url" href="posts/cucumber-chai-and-jsdom/index.html">Cucumber, Chai, and JSDOM</a></h1>
+<div class="metadata">
+<p class="byline author vcard"><span class="byline-name fn" itemprop="author">The Cloistered Monkey</span></p>
+<p class="dateline"><a href="posts/cucumber-chai-and-jsdom/index.html" rel="bookmark"><time class="published dt-published" datetime="2023-09-27T14:30:40-07:00" itemprop="datePublished" title="2023-09-27 14:30">2023-09-27 14:30</time></a></p>
+</div>
+</header>
+<div class="p-summary entry-summary">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="posts/cucumber-chai-and-jsdom/index.html#org29a7596">What Is This About?</a>
+<ul>
+<li><a href="posts/cucumber-chai-and-jsdom/index.html#orgff46dfa">The Earlier Problem</a></li>
+<li><a href="posts/cucumber-chai-and-jsdom/index.html#org0df4ecb">The Newer Problem</a></li>
+</ul>
+</li>
+<li><a href="posts/cucumber-chai-and-jsdom/index.html#org4cff5dd">The Feature File</a></li>
+<li><a href="posts/cucumber-chai-and-jsdom/index.html#orgb4b0847">The Software Under Test</a>
+<ul>
+<li><a href="posts/cucumber-chai-and-jsdom/index.html#org81d848d">The Class Declaration</a></li>
+<li><a href="posts/cucumber-chai-and-jsdom/index.html#org5ac0cee">The Get Element Method</a></li>
+</ul>
+</li>
+<li><a href="posts/cucumber-chai-and-jsdom/index.html#org7869262">The Step File</a>
+<ul>
+<li><a href="posts/cucumber-chai-and-jsdom/index.html#org87d692f">Setting Up</a></li>
+<li><a href="posts/cucumber-chai-and-jsdom/index.html#org1b85921">The Tests</a></li>
+</ul>
+</li>
+<li><a href="posts/cucumber-chai-and-jsdom/index.html#orgef0737e">What Have We Learned?</a></li>
+</ul>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org29a7596">
+<h2 id="org29a7596">What Is This About?</h2>
+<div class="outline-text-2" id="text-org29a7596"></div>
+<div class="outline-3" id="outline-container-orgff46dfa">
+<h3 id="orgff46dfa">The Earlier Problem</h3>
+<div class="outline-text-3" id="text-orgff46dfa">
+<p>In my code from another post I used <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById">document.getElementById</a> as a check to make sure that I was passing in a valid <code>div</code> ID to <code>p5.js</code> and I decided to add some testing to make sure my validator was working as I expected. The problem was that when you run tests in <code>node.js</code> the <code>document</code> object doesn't exist. One way to get around this might be to use <code>Selenium</code> or some other browser-tester but that seemed like overkill.</p>
+<p>My first idea was that I would just mock the <code>document</code> object using <a href="https://sinonjs.org/">sinon</a> since this is a fairly easy thing to do in python (maybe not mocking <code>document</code>, specifically, since that is a javascript thing, but mocking objects in a module is fairly easy) but I simply couldn't find anything that seemed to indicate that this was possible, only posts saying that <code>sinon</code> doesn't work that way.</p>
+<p>So then I stumbled upon <a href="https://github.com/jsdom/jsdom">jsdom</a>, which appeared to be what I wanted to mock the document. The problem was that it's more of a browser simulator not a means to replace objects so I still had to figure out a way to replace the <code>document</code> that my class was expecting with the <code>jsdom</code> document. In the other post where I first used <code>jsdom</code> I followed the pattern shown in <a href="https://github.com/danielcb29/cucumberjs-jsdom-example">this github repository</a> where you stick the <code>jsdom document</code> into the <code>global</code> variable which makes it appear to be a global variable just like it is when you run the code in a browser.</p>
+<div class="highlight">
+<pre><span></span><span class="nb">global</span><span class="p">.</span><span class="nb">document</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">dom</span><span class="p">.</span><span class="nb">window</span><span class="p">.</span><span class="nb">document</span><span class="p">;</span>
+</pre></div>
+<p>Where <code>dom</code> is an instance of <code>jsdom</code> setup with some HTML to use for the testing. Amazingly this did seem to work…</p>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org0df4ecb">
+<h3 id="org0df4ecb">The Newer Problem</h3>
+<div class="outline-text-3" id="text-org0df4ecb">
+<p>Then I got to this post where I wanted to document getting <code>jsdom</code> to work and, even though I was using a simpler version of the previous post, I found that the tests were failing mysteriously (pretty much everything with javascript is mysterious to me). With a lot of troubleshooting, I managed to find out that instead of using the <code>dom</code> I was creating here it was still using the same one from the other testing. Except sometimes it was using the <code>dom</code> I defined here and these tests passed but then the other tests failed. I guess <code>global</code> means global in the truer sense, not just for the scope of a single set of tests, and there's some kind of race going on between the different pieces of code that are trying to set and use this global <code>document</code>. Oy.</p>
+<p>So, then I went looking at the <code>jsdom</code> documentation (which is pretty much just a <i>readme</i> and all the "issues" people have posted), but there was one page on their wiki titled <a href="https://github.com/jsdom/jsdom/wiki/Don't-stuff-jsdom-globals-onto-the-Node-global">Don't Stuff jsdom Globals Onto the Node Global</a>, which, I guess, means that I shouldn't have done what I did and all those Stack Overflow answers say to do. The page scolding all us silly people for using <code>global</code> did have a few examples of how they thought you should do it instead, so then I tried their solution of adding the javascript for my class to the <code>jsdom</code> object instead of using it in the <code>cucumber.js</code> test code. That way my class would have access to the <code>document</code> in their global space.</p>
+<p>Easy-peasy. Well… this produced more mysterious failures except now it was in a different place. After running their examples in the Node REPL unsuccessfully I found <a href="https://github.com/jsdom/jsdom/issues/2475">this "issue"</a> where it's explained that they don't support the <code>&lt;script type="module"&gt;</code> parameter (so you can't use ES6 imports like I do). Okay, so then I dumped the class definition to a string and added it directly, but no matter what I couldn't get <code>jsdom</code> to interpret any class I put in, although functions did work, so I came to the conclusion that they don't support javascript classes either.</p>
+<p>I couldn't find anything specific about not supporting classes, but trying to search using terms like <code>class</code> and <code>document</code> brings up so much irrelevant stuff that it's maddening to even look for anything so there might have been some skimming fatigue that blinded me to any documents about it, if they existed.</p>
+<p>But then, while fiddling with the Node REPL I found that defining the <code>document</code> before instantiating my class made it work, so I thought, okay, why am I trying so hard to do all this patching when I can just create the <code>document</code> object in my tests and then create the object under test? Well, the answer to that is - "because it doesn't work". For some reason the <code>document</code> object existed before and after creating my test object but it was always undefined within the class method I was testing. Mysterious.</p>
+<p>In the end I ended up doing an ugly workaround which didn't really even require using <code>jsdom</code>, although I guess using it at least validates that I'm using the right method name… Anyway, here it is.</p>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org4cff5dd">
+<h2 id="org4cff5dd">The Feature File</h2>
+<div class="outline-text-2" id="text-org4cff5dd">
+<p>This is a <a href="https://github.com/cucumber/cucumber-js">Cucumber.js</a> test so I'll create a simple feature file for a class that retrieves a document element and test the case where the ID is correct and the one where it is incorrect.</p>
+<div class="highlight">
+<pre><span></span><span class="k">Feature:</span><span class="nf"> An Element Getter</span>
+
+<span class="k">Scenario:</span><span class="nf"> A Valid ID</span>
+
+<span class="k">Given </span><span class="nf">an ElementGetter with the correct ID</span>
+<span class="k">When </span><span class="nf">the element is retrieved</span>
+<span class="k">Then </span><span class="nf">it is the expected element.</span>
+
+<span class="k">Scenario:</span><span class="nf"> The wrong ID.</span>
+
+<span class="k">Given </span><span class="nf">an ElementGetter with the wrong ID</span>
+<span class="k">When </span><span class="nf">the element is retrieved using the wrong ID</span>
+<span class="k">Then </span><span class="nf">it throws an error.</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgb4b0847">
+<h2 id="orgb4b0847">The Software Under Test</h2>
+<div class="outline-text-2" id="text-orgb4b0847">
+<p>Now the implementation. This is kind of a useless class, but this was supposed to be about how to get <code>jsdom</code> working so I can test code expecting a <code>document</code>.</p>
+</div>
+<div class="outline-3" id="outline-container-org81d848d">
+<h3 id="org81d848d">The Class Declaration</h3>
+<div class="outline-text-3" id="text-org81d848d">
+<p>This is the class I'm going to test.</p>
+<p><img alt="nil" src="posts/cucumber-chai-and-jsdom/element-getter.png"></p>
+<div class="highlight">
+<pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">ElementGetter</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="err">#</span><span class="nx">element</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">element_id</span><span class="p">,</span><span class="w"> </span><span class="nb">document</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">element_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">element_id</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nb">document</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">;</span>
+<span class="w">  </span><span class="p">};</span>
+</pre></div>
+<p>The constructor shows the main change I made to get it working - instead of using a global <code>document</code> I added it as an argument. I went through all that rigamarole trying to avoid this since it seemed like I was changing code just to test it, but now that I think about it, it's what I'd've done in python anyway, since I kind of don't like these "magic" objects that show up without being created or imported like they do in javascript.</p>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org5ac0cee">
+<h3 id="org5ac0cee">The Get Element Method</h3>
+<div class="outline-text-3" id="text-org5ac0cee">
+<p>I made a getter for the retrieved element. It probably would have been easier in this case if I didn't store it, since I could test both when the ID is correct and when it isn't with the same object, just by changing the <code>this.element_id</code> value, but it's a pattern I often use and it gave me the chance to test out javascripts <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields">Private Class Fields</a> syntax. To be quite honest, I think using the pound sign (<code>#</code>) is kind of ugly - I prefer the underscore - but at least I know about it.</p>
+<p>The main value in using a getter here is that it can check that the element exists, since an invalid ID passed to <code>getElementById</code> will just return a <code>null</code> object rather thhan throw in error.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">get</span><span class="w"> </span><span class="nx">element</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="err">#</span><span class="nx">element</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="err">#</span><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">element_id</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="err">#</span><span class="nx">element</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">throw</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="sb">`Unable to pull the element with ID '</span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">element_id</span><span class="si">}</span><span class="sb">'`</span><span class="p">);</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="err">#</span><span class="nx">element</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org7869262">
+<h2 id="org7869262">The Step File</h2>
+<div class="outline-text-2" id="text-org7869262">
+<p>And now the test code.</p>
+</div>
+<div class="outline-3" id="outline-container-org87d692f">
+<h3 id="org87d692f">Setting Up</h3>
+<div class="outline-text-3" id="text-org87d692f"></div>
+<div class="outline-4" id="outline-container-org2b4df39">
+<h4 id="org2b4df39">Import the Test Libraries</h4>
+<div class="outline-text-4" id="text-org2b4df39">
+<div class="highlight">
+<pre><span></span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">expect</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"chai"</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Given</span><span class="p">,</span><span class="w"> </span><span class="nx">When</span><span class="p">,</span><span class="w"> </span><span class="nx">Then</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@cucumber/cucumber"</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">JSDOM</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"jsdom"</span><span class="p">;</span>
+</pre></div>
+<p>These are the libraries that I installed to support testing. Using <code>jsdom</code> instead of creating a mock was convenient, but I might have to watch what the overhead is if I make a lot of tests that use it.</p>
+</div>
+</div>
+<div class="outline-4" id="outline-container-orgb8af286">
+<h4 id="orgb8af286">Import the Software Under Test</h4>
+<div class="outline-text-4" id="text-orgb8af286">
+<p>Now I'll import the <code>ElementGetter</code> class that I defined above. It occurs to me that for a case like this where I don't actually use the code for anything other than testing I could have put it next to the tests, but I guess this is a better dress rehearsal for really using code in a post.</p>
+<p>Note the extra step up the path (<code>../</code>) because this time I followed the <code>cucumber</code> example and put the steps in a folder named <code>steps</code> instead of in a file named <code>steps.js</code>, which might make it easier to organize in the future if I have more to test, but makes relative paths that much more painful.</p>
+<div class="highlight">
+<pre><span></span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">ElementGetter</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"../../../../files/posts/cucumber-chai-and-jsdom/puller.js"</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-orgecf2581">
+<h4 id="orgecf2581">Setup JSDOM</h4>
+<div class="outline-text-4" id="text-orgecf2581">
+<p>Here's where I create the <code>jsdom</code> object with a <code>div</code> that the <code>ElementGetter</code> can get. I'm passing in the whole HTML string but in the documentation they sometimes just pass in the body.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">EXPECTED_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"expected-div"</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nb">window</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">JSDOM</span><span class="p">(</span><span class="sb">`&lt;html&gt;</span>
+<span class="sb">&lt;head&gt;&lt;/head&gt;</span>
+<span class="sb">&lt;body&gt;</span>
+
+<span class="sb">  &lt;div id='</span><span class="si">${</span><span class="nx">EXPECTED_ID</span><span class="si">}</span><span class="sb">'&gt;&lt;/div&gt;</span>
+
+<span class="sb">&lt;/body&gt;&lt;/html&gt;`</span><span class="p">)).</span><span class="nb">window</span><span class="p">;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nb">document</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nb">document</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org1b85921">
+<h3 id="org1b85921">The Tests</h3>
+<div class="outline-text-3" id="text-org1b85921"></div>
+<div class="outline-4" id="outline-container-orgb25d8a5">
+<h4 id="orgb25d8a5">The Right ID</h4>
+<div class="outline-text-4" id="text-orgb25d8a5">
+<p>This is the first scenario where I expect the <code>ElementGetter</code> to successfully find the element. There's not a lot to test here, other than it doesn't crash.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">Given</span><span class="p">(</span><span class="s2">"an ElementGetter with the correct ID"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">puller</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ElementGetter</span><span class="p">(</span><span class="nx">EXPECTED_ID</span><span class="p">,</span><span class="w"> </span><span class="nb">document</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="nx">When</span><span class="p">(</span><span class="s2">"the element is retrieved"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">actual_element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">puller</span><span class="p">.</span><span class="nx">element</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="nx">Then</span><span class="p">(</span><span class="s2">"it is the expected element."</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">expect</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">actual_element</span><span class="p">.</span><span class="nx">id</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="nx">EXPECTED_ID</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-org21101dd">
+<h4 id="org21101dd">The Wrong ID</h4>
+<div class="outline-text-4" id="text-org21101dd">
+<p>This is the more interesting case where we give the <code>ElementGetter</code> an ID that doesn't match any element in the page.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">Given</span><span class="p">(</span><span class="s2">"an ElementGetter with the wrong ID"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">puller</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ElementGetter</span><span class="p">(</span><span class="nx">EXPECTED_ID</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"abc"</span><span class="p">,</span><span class="w"> </span><span class="nb">document</span><span class="p">);</span>
+<span class="w">  </span><span class="p">});</span>
+</pre></div>
+<p>Since I made a getter to retrieve the element, you can't pass it directly to <code>chai</code> to test - trying to pass <code>this.puller.element</code> to chai will trigger the error before chai gets it - so instead I'm using something I learned working with pytest. I'm creating a function that will retrieve the element and then passing the function to <code>chai</code> to test that it raises an error.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">When</span><span class="p">(</span><span class="s2">"the element is retrieved using the wrong ID"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">bad_call</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(){</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">puller</span><span class="p">.</span><span class="nx">element</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="nx">Then</span><span class="p">(</span><span class="s2">"it throws an error."</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">expect</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">bad_call</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="k">throw</span><span class="p">(</span><span class="ne">Error</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgef0737e">
+<h2 id="orgef0737e">What Have We Learned?</h2>
+<div class="outline-text-2" id="text-orgef0737e">
+<p>I suppose the biggest lesson is that I shouldn't have tried so hard to fake the <code>document</code> object as a magic global object the way it normally is used and instead just gone for an explicit argument that gets passed to the class (or function) that needs it. I also learned that <code>jsdom</code> is interesting but behind the ECMA standard, as were some of the other libraries I ran into in trying to solve different parts of this problem, so I have to either decide to not use ECMA 6 or not rely so much on these other libraries that don't use the current standards.</p>
+</div>
+</div>
+</div>
+</article>
 <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article">
 <header>
 <h1 class="p-name entry-title"><a class="u-url" href="posts/generative-art-concentric-circles/index.html">Generative Art: Concentric Circles</a></h1>
@@ -1339,20 +1569,20 @@ Given the ColorIncreaser class definition
 </div>
 </header>
 <div class="p-summary entry-summary">
-<div class="outline-2" id="outline-container-org6eeac2b">
-<h2 id="org6eeac2b">The Book</h2>
-<div class="outline-text-2" id="text-org6eeac2b">
+<div class="outline-2" id="outline-container-orga101bfd">
+<h2 id="orga101bfd">The Book</h2>
+<div class="outline-text-2" id="text-orga101bfd">
 <ul class="org-ul">
 <li>Pearson M. Generative art: a practical guide using processing. Shelter Island, NY : London: Manning ; Pearson Education [distributor]; 2011. 197 pages</li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgacf3f2c">
-<h2 id="orgacf3f2c">The Author's Site(s)</h2>
-<div class="outline-text-2" id="text-orgacf3f2c"></div>
-<div class="outline-3" id="outline-container-orgf94d053">
-<h3 id="orgf94d053">Zen Bullets (probably)</h3>
-<div class="outline-text-3" id="text-orgf94d053">
+<div class="outline-2" id="outline-container-org73f6242">
+<h2 id="org73f6242">The Author's Site(s)</h2>
+<div class="outline-text-2" id="text-org73f6242"></div>
+<div class="outline-3" id="outline-container-org6c6885e">
+<h3 id="org6c6885e">Zen Bullets (probably)</h3>
+<div class="outline-text-3" id="text-org6c6885e">
 <p>The Zen Bullets site doesn't have the author's name listed on it (that I could see) but there's references to this being his pen-name (e.g. on <a href="https://leanpub.com/u/zenbullets">leanpub</a>) and the works look about right.</p>
 <ul class="org-ul">
 <li><a href="http://zenbullets.com/">http://zenbullets.com/</a> : This appears to be the author's main site</li>
@@ -1362,9 +1592,9 @@ Given the ColorIncreaser class definition
 <p>The Zen Bullets site uses a very small font and you can't scroll the menu on the left if you increase the font size and it pushes the text off the pgae so you it's pretty hard to read the navigational text beyond the top items in the menu, but all the links appear to be to interesting stuff so it's worth it to just click on the links even if you can't read them.</p>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org85813e7">
-<h3 id="org85813e7">Abandoned Art (Possibly Truly Abandoned)</h3>
-<div class="outline-text-3" id="text-org85813e7">
+<div class="outline-3" id="outline-container-orge656c4b">
+<h3 id="orge656c4b">Abandoned Art (Possibly Truly Abandoned)</h3>
+<div class="outline-text-3" id="text-orge656c4b">
 <p><b>Warning:</b> uBlock Origin blocks this site because the web-host it uses is listed as untrustworthy, so I haven't actually seen the page, but it's listed in the book and the book's <a href="https://www.manning.com/books/generative-art">product page</a> so I'm including it mostly to remind myself not to go there, even though they tell you to (the errata page does have a a note saying the site's license is expired, but they didn't fix the main page).</p>
 <ul class="org-ul">
 <li>abandonedart.org</li>
@@ -1373,9 +1603,9 @@ Given the ColorIncreaser class definition
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgc9d7eeb">
-<h2 id="orgc9d7eeb">Other Artist's Mentioned In the Book</h2>
-<div class="outline-text-2" id="text-orgc9d7eeb">
+<div class="outline-2" id="outline-container-orgfc20544">
+<h2 id="orgfc20544">Other Artist's Mentioned In the Book</h2>
+<div class="outline-text-2" id="text-orgfc20544">
 <p>These are ones that I could find dedicated sites for. The earliest pioneers (other than Manfred Mohr and Paul Brown) don't seem to have websites with their work.</p>
 <ul class="org-ul">
 <li><a href="https://www.syedrezaali.com/">Reza Ali</a></li>
@@ -2204,482 +2434,6 @@ Downloaded: 97
 <div class="highlight">
 <pre><span></span><span class="n">get_images</span><span class="p">(</span><span class="s2">"zebu"</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-</article>
-<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article">
-<header>
-<h1 class="p-name entry-title"><a class="u-url" href="posts/two-dimensional-noise/index.html">Two-Dimensional Noise</a></h1>
-<div class="metadata">
-<p class="byline author vcard"><span class="byline-name fn" itemprop="author">The Cloistered Monkey</span></p>
-<p class="dateline"><a href="posts/two-dimensional-noise/index.html" rel="bookmark"><time class="published dt-published" datetime="2023-05-14T15:41:16-07:00" itemprop="datePublished" title="2023-05-14 15:41">2023-05-14 15:41</time></a></p>
-</div>
-</header>
-<div class="p-summary entry-summary">
-<div id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
-<ul>
-<li><a href="posts/two-dimensional-noise/index.html#org972c57a">Introduction</a></li>
-<li><a href="posts/two-dimensional-noise/index.html#org1c186d0">Static Version (Using Set)</a>
-<ul>
-<li><a href="posts/two-dimensional-noise/index.html#org7e120f7">The Closure Function</a></li>
-<li><a href="posts/two-dimensional-noise/index.html#orgb7ff164">Set Up</a></li>
-<li><a href="posts/two-dimensional-noise/index.html#org10dc9c1">Draw</a></li>
-</ul>
-</li>
-<li><a href="posts/two-dimensional-noise/index.html#org9773ccf">Static Version Setting Pixels</a>
-<ul>
-<li><a href="posts/two-dimensional-noise/index.html#orge0d2336">Some Constants</a></li>
-<li><a href="posts/two-dimensional-noise/index.html#org1f8266a">Noise Plotter</a></li>
-<li><a href="posts/two-dimensional-noise/index.html#orga672a68">The Sketch</a></li>
-<li><a href="posts/two-dimensional-noise/index.html#org0274576">The Output</a></li>
-</ul>
-</li>
-<li><a href="posts/two-dimensional-noise/index.html#orgf78a654">Moving Version</a>
-<ul>
-<li><a href="posts/two-dimensional-noise/index.html#orgc88417a">The Sketch</a></li>
-<li><a href="posts/two-dimensional-noise/index.html#org91b90d6">Moving Noise Plotter</a></li>
-</ul>
-</li>
-<li><a href="posts/two-dimensional-noise/index.html#org1127f72">Sources</a></li>
-</ul>
-</div>
-</div>
-<div class="outline-2" id="outline-container-org972c57a">
-<h2 id="org972c57a">Introduction</h2>
-<div class="outline-text-2" id="text-org972c57a">
-<p>This is yet another copy and redo of a sketch from <a href="https://nature-of-code-2nd-edition.netlify.app/">the Nature of Code</a>. This time it's an extension of a prior post on <a href="posts/graphing-p5-noise/index.html">making a one-dimensional noise graph</a>.</p>
-</div>
-</div>
-<div class="outline-2" id="outline-container-org1c186d0">
-<h2 id="org1c186d0">Static Version (Using Set)</h2>
-<div class="outline-text-2" id="text-org1c186d0">
-<p>This first sketch is a static two-dimensional visualization of the p5 <code>noise</code> function, with the pixels of the canvas set to a level of gray (from black to white) based on the noise. I'll be doing the sketch again using a different method but this first one uses the (ambiguously named) <a href="https://p5js.org/reference/#/p5/set">set</a> function that lets you set the grayscale or RGB-Alpha value for a single <a href="https://en.wikipedia.org/wiki/Pixel?useskin=vector#Logical_pixel">logical pixel</a> (because different displays have different pixel-densities, there might be more "physical" pixels dedicated to each logical one, giving you better resolution). The <code>set</code> function is the simplest way to set a pixel, but, as noted in the p5 documentation, it adds overhead so there's another recommended way to do it if you need it to go faster (which is what the next section - <a href="posts/two-dimensional-noise/index.html#org9773ccf">Static Version Setting Pixels</a> - is about). For static images (as this is) it's fast enough, though.</p>
-</div>
-<div class="outline-3" id="outline-container-org7e120f7">
-<h3 id="org7e120f7">The Closure Function</h3>
-<div class="outline-text-3" id="text-org7e120f7">
-<p>This is the basic function that we pass to the <code>p5</code> constructor to create our sketch.</p>
-<div class="highlight">
-<pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">simple_sketch</span><span class="p">(</span><span class="nx">p5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">MAXIMUM_INTENSITY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">255</span><span class="p">;</span>
-<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">NOISE_OFFSET_INCREMENT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.01</span><span class="p">;</span>
-</pre></div>
-<p>We're only going to set the grayscale channel which has a maximum value of 255, thus the <code>MAXIMUM_INTENSITY</code> multiplied by noise will be what we use to figure out what value to set each pixel. The <code>NOISE_OFFSET_INCREMENT</code> is the amount that we're going to increase the x and y values as we step through the noise-space.</p>
-</div>
-</div>
-<div class="outline-3" id="outline-container-orgb7ff164">
-<h3 id="orgb7ff164">Set Up</h3>
-<div class="outline-text-3" id="text-orgb7ff164">
-<p>First I'll define the p5 <code>setup</code> function. All it does is create the canvas that's the width of the div container. I'm using a variable <code>STATIC_NOISE_GRAPH_DIV</code> that I didn't show, but it just has the HTML div ID that will hold the sketch.</p>
-<div class="highlight">
-<pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">setup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">createCanvas</span><span class="p">(</span>
-<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">STATIC_NOISE_GRAPH_DIV</span><span class="p">).</span><span class="nx">offsetWidth</span><span class="p">,</span>
-<span class="w">    </span><span class="mf">400</span><span class="p">);</span>
-<span class="p">}</span><span class="w"> </span><span class="c1">//end setup</span>
-</pre></div>
-</div>
-</div>
-<div class="outline-3" id="outline-container-org10dc9c1">
-<h3 id="org10dc9c1">Draw</h3>
-<div class="outline-text-3" id="text-org10dc9c1">
-<p>The p5 <code>draw</code> function is where we do all the work of drawing the plot so I'll break it up a little bit to explain more of what's here.</p>
-<div class="highlight">
-<pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">draw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">intensity</span><span class="p">;</span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">column_offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">row_offset</span><span class="p">;</span>
-</pre></div>
-<p>Besides defining the function I'm declaring a variable, <code>column_offset</code> that holds the x-input value for the <code>noise</code> function, as well as <code>row_offset</code> which will hold the y-input.</p>
-<p>I'm also creating a variable, <code>intensity</code> to hold the RGB setting we're going to use. It gets passed immediately to <code>set</code> once the value is created so it isn't really needed, I just created it for clarity.</p>
-</div>
-<div class="outline-4" id="outline-container-org4b6aef2">
-<h4 id="org4b6aef2">Load Pixels</h4>
-<div class="outline-text-4" id="text-org4b6aef2">
-<div class="highlight">
-<pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">loadPixels</span><span class="p">();</span>
-</pre></div>
-<p>Behind the scenes the <code>set</code> function is actually manipulating a special data-structure called <a href="https://p5js.org/reference/#/p5/pixels">pixels</a>, which I'll look at more in the next sketch. The important thing to note is that you have to load the display data into the array before you can use it (using <code>loadPixels()</code>), even when using the <code>set</code> function.</p>
-</div>
-</div>
-<div class="outline-4" id="outline-container-org2dc0bd5">
-<h4 id="org2dc0bd5">The For-Loops</h4>
-<div class="outline-text-4" id="text-org2dc0bd5">
-<div class="highlight">
-<pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">column</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">column</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">p5</span><span class="p">.</span><span class="nx">width</span><span class="p">;</span><span class="w"> </span><span class="nx">column</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">row_offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
-
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">row</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">row</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">p5</span><span class="p">.</span><span class="nx">height</span><span class="p">;</span><span class="w"> </span><span class="nx">row</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</pre></div>
-<p>Since we're setting each of the pixels in the canvas I'll use two for-loops, traversing each column from top row to bottom row before moving on to the next column. I had previously followed the convention of using <code>x</code> for columns and <code>y</code> for rows, but I think calling them <code>columns</code> and <code>rows</code> will be a little clearer when we get to the next sketch.</p>
-</div>
-</div>
-<div class="outline-4" id="outline-container-orge0c5326">
-<h4 id="orge0c5326">Set the Intensity</h4>
-<div class="outline-text-4" id="text-orge0c5326">
-<div class="highlight">
-<pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">intensity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">p5</span><span class="p">.</span><span class="nx">noise</span><span class="p">(</span><span class="nx">column_offset</span><span class="p">,</span><span class="w"> </span><span class="nx">row_offset</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">MAXIMUM_INTENSITY</span><span class="p">;</span>
-<span class="nx">p5</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">column</span><span class="p">,</span><span class="w"> </span><span class="nx">row</span><span class="p">,</span><span class="w"> </span><span class="nx">intensity</span><span class="p">);</span>
-</pre></div>
-<p>The <code>intensity</code> for each pixel is the noise at the offset for that column-row pair multiplied by the MAXIMUM_INTENSITY (255) (since noise goes from \(0 \ldots 1\) and RGB-Alpha goes from \(0 \ldots 255\).) this gives us a fractional value of the MAXIMUM_INTENSITY. Once we get it we can <code>set</code> it at the matching <code>column</code> and <code>row</code> coordinate. The <code>intensity</code> is going to be a float, but as we'll see in the next sktech that won't matter, since the <code>pixels</code> array casts values to an integer, although I suppose if it were more important we might want to control it using floor, ceiling, or round. But since this is using noise I don't imagine we'd know the difference.</p>
-</div>
-</div>
-<div class="outline-4" id="outline-container-org94abb15">
-<h4 id="org94abb15">End the For-Loops</h4>
-<div class="outline-text-4" id="text-org94abb15">
-<div class="highlight">
-<pre><span></span><span class="w">    </span><span class="nx">row_offset</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">NOISE_OFFSET_INCREMENT</span><span class="p">;</span>
-<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="c1">//end row-for</span>
-
-<span class="w">  </span><span class="nx">column_offset</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">NOISE_OFFSET_INCREMENT</span><span class="p">;</span>
-<span class="p">}</span><span class="w"> </span><span class="c1">// end column-for</span>
-</pre></div>
-<p>At the end of each of the for-loops we add an offset value to change the input to the <code>noise</code> function by a little.</p>
-</div>
-</div>
-<div class="outline-4" id="outline-container-orgdddf208">
-<h4 id="orgdddf208">Update the Pixels and Stop the Loop</h4>
-<div class="outline-text-4" id="text-orgdddf208">
-<div class="highlight">
-<pre><span></span><span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">updatePixels</span><span class="p">();</span>
-<span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">noLoop</span><span class="p">();</span>
-<span class="p">}</span><span class="w"> </span><span class="c1">// end draw</span>
-</pre></div>
-<p>When we called <code>loadPixels</code> we loaded the <code>pixels</code> array, then we updated the values in the array, but that alone won't update our canvas. To update our sketch we need to tell p5 to take our array values and apply them by calling <a href="https://p5js.org/reference/#/p5/updatePixels"><code>updatePixels</code></a>. Additionally, since we're looping over the same for-loop values over and over, the <code>noise</code> output isn't going to change so I'll call <code>noLoop</code> to stop the updating of the canvas.</p>
-<p>Finally, I'll create the p5 instance with our sketch function, and we should be able to see the noise visualization.</p>
-<div class="highlight">
-<pre><span></span><span class="ow">new</span><span class="w"> </span><span class="nx">p5</span><span class="p">(</span><span class="nx">simple_sketch</span><span class="p">,</span><span class="w"> </span><span class="nx">STATIC_NOISE_GRAPH_DIV</span><span class="p">);</span>
-</pre></div>
-<p>
-<script src="posts/two-dimensional-noise/simple-sketch.js"></script></p>
-<div class="p5js" id="simple-2d-noise-graph"></div>
-<p>And there you go. Now onto a version that sets the pixel array directly without using the <code>set</code> method.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="outline-2" id="outline-container-org9773ccf">
-<h2 id="org9773ccf">Static Version Setting Pixels</h2>
-<div class="outline-text-2" id="text-org9773ccf">
-<p>
-<script src="posts/two-dimensional-noise/pixel-constants.js"></script>
-<script src="posts/two-dimensional-noise/noise-plotter.js"></script></p>
-<p>This will essentially be the same sketch except instead of using the <code>set</code> function I'll set the values in the <a href="https://p5js.org/reference/#/p5/pixels"><code>pixels</code></a> array directly.</p>
-</div>
-<div class="outline-3" id="outline-container-orge0d2336">
-<h3 id="orge0d2336">Some Constants</h3>
-<div class="outline-text-3" id="text-orge0d2336">
-<p>I'm not as familiar with javascript as I am with python so I was littering constant values all over the place trying to figure where the best place to put them would be. I finally decided to create these two objects to hold some constants that I'll use when updating the pixels array and when setting the slider up.</p>
-<div class="highlight">
-<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">PIXEL_ARRAY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">RED</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">GREEN</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">BLUE</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">ALPHA</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">CELLS_PER_PIXEL</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">RGB_MAX</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">255</span><span class="p">,</span>
-<span class="p">}</span><span class="w"> </span><span class="c1">// end PIXEL_ARRAY</span>
-</pre></div>
-<p>The RED, GREEN, BLUE, and ALPHA values are to help locate their relative location in the array (more on that later), as is the CELLS_PER_PIXEL. I made RGB_MAX is so that maybe it's a little more obvious why there's a number 255 showing up in the code.</p>
-<div class="highlight">
-<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">SLIDER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">default_value</span><span class="o">:</span><span class="w"> </span><span class="mf">0.01</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">step_size</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
-<span class="p">}</span><span class="w"> </span><span class="c1">// end SLIDER_SETTINGS</span>
-</pre></div>
-<p>These are the same values I used in the previous noise-sketches. A <code>step_size</code> of 0 just means that I'm not setting one so p5 can use whatever the default value is - the documentation says it's continuous but it seems to jump a bit when I use it.</p>
-</div>
-</div>
-<div class="outline-3" id="outline-container-org1f8266a">
-<h3 id="org1f8266a">Noise Plotter</h3>
-<div class="outline-text-3" id="text-org1f8266a">
-<p>The Noise Plotter class is going to draw the two-dimensional noise-visualization using the current slider value as the step-size to change the noise input.</p>
-</div>
-<div class="outline-4" id="outline-container-org38b322b">
-<h4 id="org38b322b">The Noise Plotter Class</h4>
-<div class="outline-text-4" id="text-org38b322b">
-<p>So, let's get started with the class definition.</p>
-<div class="highlight">
-<pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">NoisePlotter</span><span class="w"> </span><span class="p">{</span>
-</pre></div>
-<p>There's nothing really being done in the constructor except storing the p5 and slider objects for later.</p>
-<div class="highlight">
-<pre><span></span><span class="kr">constructor</span><span class="p">(</span><span class="nx">p5</span><span class="p">,</span><span class="w"> </span><span class="nx">slider</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">slider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">slider</span><span class="p">;</span>
-<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">p5</span>
-<span class="p">}</span><span class="w"> </span><span class="c1">// end constructur</span>
-</pre></div>
-</div>
-</div>
-<div class="outline-4" id="outline-container-org9d34695">
-<h4 id="org9d34695">The Draw Method</h4>
-<div class="outline-text-4" id="text-org9d34695">
-<p>This is the workhorse that does all the plotting.</p>
-<div class="highlight">
-<pre><span></span><span class="nx">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">intensity</span><span class="p">;</span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">column_offset</span><span class="p">;</span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">offset_increment</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">slider</span><span class="p">.</span><span class="nx">value</span><span class="p">()</span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">row_offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">pixel_index</span><span class="p">;</span>
-</pre></div>
-<p>The variables:</p>
-<ul class="org-ul">
-<li><code>intensity</code>: This will hold the RGB value(s) that we set the pixels to based on noise</li>
-<li><code>column_offset</code>: The y-input for the noise function</li>
-<li><code>offset_increment</code>: How much to increase the noise function inputs (the offsets) in the loops</li>
-<li><code>row_offset</code>: x-input for the noise function</li>
-<li><code>pixel_index</code>: Starting index in the <code>pixels</code> array for our pixel</li>
-</ul>
-<p>That last variable might take some explaining, so maybe here's a good spot to dump my understanding of how this works.</p>
-<div class="highlight">
-<pre><span></span><span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">loadPixels</span><span class="p">();</span>
-
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">y</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">height</span><span class="p">;</span><span class="w"> </span><span class="nx">y</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">column_offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">x</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">width</span><span class="p">;</span><span class="w"> </span><span class="nx">x</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nx">pixel_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">width</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">PIXEL_ARRAY</span><span class="p">.</span><span class="nx">CELLS_PER_PIXEL</span><span class="p">;</span>
-<span class="w">      </span><span class="nx">intensity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">noise</span><span class="p">(</span><span class="nx">column_offset</span><span class="p">,</span><span class="w"> </span><span class="nx">row_offset</span><span class="p">)</span>
-<span class="w">                   </span><span class="o">*</span><span class="w"> </span><span class="nx">PIXEL_ARRAY</span><span class="p">.</span><span class="nx">RGB_MAX</span><span class="p">);</span>
-<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">pixels</span><span class="p">[</span><span class="nx">pixel_index</span><span class="w"> </span><span class="o">+</span>
-<span class="w">                     </span><span class="nx">PIXEL_ARRAY</span><span class="p">.</span><span class="nx">RED</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">intensity</span><span class="p">;</span>
-<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">pixels</span><span class="p">[</span><span class="nx">pixel_index</span><span class="w"> </span><span class="o">+</span>
-<span class="w">                     </span><span class="nx">PIXEL_ARRAY</span><span class="p">.</span><span class="nx">GREEN</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">intensity</span><span class="p">;</span>
-<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">pixels</span><span class="p">[</span><span class="nx">pixel_index</span><span class="w"> </span><span class="o">+</span>
-<span class="w">                     </span><span class="nx">PIXEL_ARRAY</span><span class="p">.</span><span class="nx">BLUE</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">intensity</span><span class="p">;</span>
-<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">pixels</span><span class="p">[</span><span class="nx">pixel_index</span><span class="w"> </span><span class="o">+</span>
-<span class="w">                     </span><span class="nx">PIXEL_ARRAY</span><span class="p">.</span><span class="nx">ALPHA</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">PIXEL_ARRAY</span><span class="p">.</span><span class="nx">RGB_MAX</span><span class="p">;</span>
-<span class="w">      </span><span class="nx">column_offset</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">offset_increment</span><span class="p">;</span><span class="w">        </span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="c1">// end x for</span>
-<span class="w">    </span><span class="nx">row_offset</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">offset_increment</span><span class="p">;</span>
-<span class="w">  </span><span class="p">}</span><span class="c1">// end x for</span>
-<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">updatePixels</span><span class="p">();</span>
-<span class="p">}</span><span class="w"> </span><span class="c1">// end draw</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="outline-3" id="outline-container-orga672a68">
-<h3 id="orga672a68">The Sketch</h3>
-<div class="outline-text-3" id="text-orga672a68">
-<p><b>Note for later:</b> You have to either set the background or the set the alpha channel in the pixel array. Leaving both out won't show anything.</p>
-</div>
-<div class="outline-4" id="outline-container-org85f497c">
-<h4 id="org85f497c">The Closure Function</h4>
-<div class="outline-text-4" id="text-org85f497c">
-<div class="highlight">
-<pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">static_pixels</span><span class="p">(</span><span class="nx">p5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">HEIGHT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">400</span><span class="p">;</span>
-
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">plotter</span><span class="p">;</span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">slider</span><span class="p">;</span>
-</pre></div>
-<p>Once again, this is the sketch function that gets passed to a p5 constructor. I decided to create a class to handle the drawing of the visualization so the <code>plotter</code> variable is going to hold an instance of that. I'm also going to add a slider so that a user can change the amount the input to the noise changes, which is what the <code>silder</code> variable is for.</p>
-</div>
-</div>
-<div class="outline-4" id="outline-container-org689826d">
-<h4 id="org689826d">Set Up</h4>
-<div class="outline-text-4" id="text-org689826d">
-<div class="highlight">
-<pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">setup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</pre></div>
-<p>Just the basic p5 setup function.</p>
-</div>
-<ul class="org-ul">
-<li><a id="orgf354608"></a>You Are My Density<br>
-<div class="outline-text-5" id="text-orgf354608">
-<div class="highlight">
-<pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">pixelDensity</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
-</pre></div>
-<p>To draw the noise I'm going to set the values in the <code>pixels</code> array directly but that's actually not so straightforward as you might think. When we refer to a pixel, there's two things to consider - there's a <i>logical</i> pixel, which is what we referred to using the <code>set</code> function, and what most people probably think of when working with p5 - it's the (x, y) coordinate you've come to know and love, but that pixel doesn't necessarily map one-to-one with the physical pixels in a display. Because of this, the size of the <code>pixels</code> array and the number of cells within the array dedicated to each pixel depends on the display.</p>
-<p>The <a href="https://p5js.org/reference/#/p5/pixels">pixels</a> documentation shows the proper way to set all the physical pixels, which requires you to check the <a href="https://p5js.org/reference/#/p5/pixelDensity">pixelDensity</a> and then for each logical pixel you would loop over the sub-pixels that represent it… maybe some other time. For now, setting <code>pixelDensity(1)</code> will turn off matching the pixel density of the user's display and let us just worry about the one logical pixel. I don't know if that means it wont' take advantage of a higher density display or not, but p5 is about making it easier to code visualizations, not high performance (to me, anyway) - and as we'll see, the for-loops we're using are already slow enough, adding two more nested loops will just make things even slower.</p>
-</div>
-</li>
-<li><a id="orgd676731"></a>The Canvas<br>
-<div class="outline-text-5" id="text-orgd676731">
-<div class="highlight">
-<pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">createCanvas</span><span class="p">(</span>
-<span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">STATIC_NOISE_PIXELS_DIV</span><span class="p">).</span><span class="nx">offsetWidth</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">HEIGHT</span><span class="p">);</span>
-</pre></div>
-<p>This is the usual code I use, nothing fancy.</p>
-</div>
-</li>
-<li><a id="org27a7813"></a>The Slider<br>
-<div class="outline-text-5" id="text-org27a7813">
-<div class="highlight">
-<pre><span></span><span class="nx">slider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">p5</span><span class="p">.</span><span class="nx">createSlider</span><span class="p">(</span><span class="nx">SLIDER</span><span class="p">.</span><span class="nx">min</span><span class="p">,</span>
-<span class="w">                         </span><span class="nx">SLIDER</span><span class="p">.</span><span class="nx">max</span><span class="p">,</span>
-<span class="w">                         </span><span class="nx">SLIDER</span><span class="p">.</span><span class="nx">default_value</span><span class="p">,</span>
-<span class="w">                         </span><span class="nx">SLIDER</span><span class="p">.</span><span class="nx">step_size</span><span class="p">);</span>
-<span class="nx">slider</span><span class="p">.</span><span class="nx">style</span><span class="p">(</span><span class="s2">"width"</span><span class="p">,</span><span class="w"> </span><span class="s2">"500px"</span><span class="p">);</span>
-</pre></div>
-<p>This is also a pretty straight-forward slider (although I think that just dropping it in after the canvas like this isn't what you're supposed to do). The main difference is that I'm adding a callback:</p>
-<div class="highlight">
-<pre><span></span><span class="nx">slider</span><span class="p">.</span><span class="nx">input</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">p5</span><span class="p">.</span><span class="nx">redraw</span><span class="p">());</span>
-</pre></div>
-<p>This uses javascript's crazy <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function</a> syntax (not that I think the idea behind it is crazy, but the weird looking syntax and the fact that there's so many ways to declare functions seems to make the language too complicated for the little advantage you get with all the variations).</p>
-<p>Since this is a mostly static drawing I'm going to turn off re-drawing the canvas, but this callback tells p5 that if the user changes the slider's value then it should re-draw the canvas. p5 also has a similar function called <code>changed</code>, but that doesn't trigger the callback until you let go of the mouse button, while <code>input</code> lets you see the changes as you drag the slider.</p>
-<p><b>Note:</b> <a href="https://p5js.org/reference/#/p5/input">input</a> and <a href="https://p5js.org/reference/#/p5/changed">changed</a> don't show up under the <code>slider</code> documentation but rather under the <code>DOM</code> category of the documentation so I don't know how anyone is supposed to know that they exist without searching forum posts. This seems to suggest that there might be other features of the p5 language that exist but aren't well documented so it's just luck if you figure out that they are there…</p>
-</div>
-</li>
-<li><a id="org41fd953"></a>Text Setup<br>
-<div class="outline-text-5" id="text-org41fd953">
-<div class="highlight">
-<pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s2">"white"</span><span class="p">);</span>
-<span class="nx">p5</span><span class="p">.</span><span class="nx">stroke</span><span class="p">(</span><span class="s2">"white"</span><span class="p">);</span>
-<span class="nx">p5</span><span class="p">.</span><span class="nx">textAlign</span><span class="p">(</span><span class="nx">p5</span><span class="p">.</span><span class="nx">CENTER</span><span class="p">);</span>
-<span class="nx">p5</span><span class="p">.</span><span class="nx">textSize</span><span class="p">(</span><span class="mf">32</span><span class="p">);</span>
-<span class="nx">p5</span><span class="p">.</span><span class="nx">noStroke</span><span class="p">()</span>
-</pre></div>
-<p>This sets the values that I'll use to show what the current slider value is to the user. Since I'm setting the pixel array values directly and not calling any functions like <code>stroke</code> or <code>fill</code> to do the visualization, setting it here will stick for the life of the sketch.</p>
-</div>
-</li>
-<li><a id="org54103cc"></a>A Noise Plotter<br>
-<div class="outline-text-5" id="text-org54103cc">
-<div class="highlight">
-<pre><span></span><span class="nx">plotter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">NoisePlotter</span><span class="p">(</span><span class="nx">p5</span><span class="p">,</span><span class="w"> </span><span class="nx">slider</span><span class="p">);</span>
-</pre></div>
-<p>I thought that it was getting cluttered up enough that it would make sense to break the plotting of the noise into a class, since I findi it easier to work with an object-oriented approach.</p>
-</div>
-</li>
-<li><a id="orgf928535"></a>No Loop<br>
-<div class="outline-text-5" id="text-orgf928535">
-<div class="highlight">
-<pre><span></span><span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">noLoop</span><span class="p">();</span>
-<span class="p">}</span><span class="w"> </span><span class="c1">// end setup</span>
-</pre></div>
-<p>The last thing in the setup is turning off the re-drawing of the canvas. I'm still not clear on what the difference is between putting it here and in the <code>draw</code> function. It seems to work the same in both cases.</p>
-</div>
-</li>
-</ul>
-</div>
-<div class="outline-4" id="outline-container-org8bc7ceb">
-<h4 id="org8bc7ceb">Draw</h4>
-<div class="outline-text-4" id="text-org8bc7ceb">
-<p>Now, our draw function.</p>
-<div class="highlight">
-<pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">draw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">plotter</span><span class="p">.</span><span class="nx">draw</span><span class="p">();</span>
-<span class="w">  </span><span class="c1">// add a label to show the amount the noise changes</span>
-<span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="sb">`Noise Change: </span><span class="si">${</span><span class="nx">slider</span><span class="p">.</span><span class="nx">value</span><span class="p">().</span><span class="nx">toFixed</span><span class="p">(</span><span class="mf">3</span><span class="p">)</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
-<span class="w">          </span><span class="nx">p5</span><span class="p">.</span><span class="nx">width</span><span class="o">/</span><span class="mf">2</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="nx">p5</span><span class="p">.</span><span class="nx">height</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
-<span class="p">}</span><span class="w"> </span><span class="c1">// end draw</span>
-</pre></div>
-<p>Because I'm deferring most of the plotting to the <code>NoisePlotter</code> object it just calls its <code>draw</code> method and then sets the text to let the user know what the current slider setting is.</p>
-</div>
-</div>
-<div class="outline-4" id="outline-container-orgc1b7fb2">
-<h4 id="orgc1b7fb2">The P5 Instance</h4>
-<div class="outline-text-4" id="text-orgc1b7fb2">
-<div class="highlight">
-<pre><span></span><span class="ow">new</span><span class="w"> </span><span class="nx">p5</span><span class="p">(</span><span class="nx">static_pixels</span><span class="p">,</span><span class="w"> </span><span class="nx">STATIC_NOISE_PIXELS_DIV</span><span class="p">);</span>
-</pre></div>
-<p>And then we create the p5 object…</p>
-</div>
-</div>
-</div>
-<div class="outline-3" id="outline-container-org0274576">
-<h3 id="org0274576">The Output</h3>
-<div class="outline-text-3" id="text-org0274576">
-<p>
-<script src="posts/two-dimensional-noise/static-sketch-pixels.js"></script></p>
-<div class="p5js" id="static-2d-noise-graph-pixels"></div>
-</div>
-</div>
-</div>
-<div class="outline-2" id="outline-container-orgf78a654">
-<h2 id="orgf78a654">Moving Version</h2>
-<div class="outline-text-2" id="text-orgf78a654">
-<p>
-<script src="posts/two-dimensional-noise/moving-noise.js"></script>
-<script src="posts/two-dimensional-noise/moving-sketch-pixels.js"></script></p>
-<div class="p5js" id="moving-2d-noise-graph-pixels"></div>
-<p id="moving-slider"></p>
-</div>
-<div class="outline-3" id="outline-container-orgc88417a">
-<h3 id="orgc88417a">The Sketch</h3>
-<div class="outline-text-3" id="text-orgc88417a">
-<p><b>Note for later:</b> Setting the canvas too wide slows the frame rate down a lot (since the x for-loop uses the width) so I needed to both shrink the canvas and add an extra div (above) to stick the slider into - because it was only showing up under the canvas before because there wasn't enough room for it to slide up alongside it.</p>
-<p>Check the framerate in the browser's javascript console with</p>
-<div class="highlight">
-<pre><span></span><span class="nx">move_p5</span><span class="p">.</span><span class="nx">frameRate</span><span class="p">();</span>
-</pre></div>
-</div>
-</div>
-<div class="outline-3" id="outline-container-org91b90d6">
-<h3 id="org91b90d6">Moving Noise Plotter</h3>
-<div class="outline-text-3" id="text-org91b90d6">
-<div class="highlight">
-<pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">MovingNoise</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kr">constructor</span><span class="p">({</span><span class="nx">p5</span><span class="o">=</span><span class="kc">undefined</span><span class="p">,</span>
-<span class="w">               </span><span class="nx">slider</span><span class="o">=</span><span class="kc">undefined</span><span class="p">,</span>
-<span class="w">               </span><span class="nx">red</span><span class="o">=</span><span class="nx">PIXEL_ARRAY</span><span class="p">.</span><span class="nx">RGB_MAX</span><span class="p">,</span>
-<span class="w">               </span><span class="nx">green</span><span class="o">=</span><span class="nx">PIXEL_ARRAY</span><span class="p">.</span><span class="nx">RGB_MAX</span><span class="p">,</span>
-<span class="w">               </span><span class="nx">blue</span><span class="o">=</span><span class="w"> </span><span class="nx">PIXEL_ARRAY</span><span class="p">.</span><span class="nx">RGB_MAX</span><span class="p">,</span>
-<span class="w">               </span><span class="nx">y_start_offset</span><span class="o">=</span><span class="mf">1000</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{})</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">p5</span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">slider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">slider</span><span class="p">;</span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">red_fraction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">red</span><span class="o">/</span><span class="nx">PIXEL_ARRAY</span><span class="p">.</span><span class="nx">RGB_MAX</span><span class="p">;</span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">green_fraction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">green</span><span class="o">/</span><span class="nx">PIXEL_ARRAY</span><span class="p">.</span><span class="nx">RGB_MAX</span><span class="p">;</span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">blue_fraction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">blue</span><span class="o">/</span><span class="nx">PIXEL_ARRAY</span><span class="p">.</span><span class="nx">RGB_MAX</span><span class="p">;</span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">y_start_offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">y_start_offset</span><span class="p">;</span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">noise_start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
-<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="c1">// end constructur</span>
-
-<span class="w">  </span><span class="nx">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">offset_y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">noise_start</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">y_start_offset</span><span class="p">;</span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">offset_x</span><span class="p">;</span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">pixel_index</span><span class="p">;</span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">intensity</span><span class="p">;</span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">increment</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">slider</span><span class="p">.</span><span class="nx">value</span><span class="p">();</span>
-
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">loadPixels</span><span class="p">();</span><span class="w">    </span>
-
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">y</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">height</span><span class="p">;</span><span class="w"> </span><span class="nx">y</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nx">offset_x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">noise_start</span><span class="p">;</span>
-<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">x</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">width</span><span class="p">;</span><span class="w"> </span><span class="nx">x</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">pixel_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">width</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">PIXEL_ARRAY</span><span class="p">.</span><span class="nx">CELLS_PER_PIXEL</span><span class="p">;</span>
-<span class="w">        </span><span class="nx">intensity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">noise</span><span class="p">(</span><span class="nx">offset_x</span><span class="p">,</span><span class="w"> </span><span class="nx">offset_y</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">PIXEL_ARRAY</span><span class="p">.</span><span class="nx">RGB_MAX</span><span class="p">;</span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">pixels</span><span class="p">[</span><span class="nx">pixel_index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">PIXEL_ARRAY</span><span class="p">.</span><span class="nx">RED</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">intensity</span><span class="w"> </span><span class="o">*</span>
-<span class="w">                                                  </span><span class="k">this</span><span class="p">.</span><span class="nx">red_fraction</span><span class="p">);</span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">pixels</span><span class="p">[</span><span class="nx">pixel_index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">PIXEL_ARRAY</span><span class="p">.</span><span class="nx">GREEN</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">intensity</span><span class="w"> </span><span class="o">*</span>
-<span class="w">                                                    </span><span class="k">this</span><span class="p">.</span><span class="nx">green_fraction</span><span class="p">);</span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">pixels</span><span class="p">[</span><span class="nx">pixel_index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">PIXEL_ARRAY</span><span class="p">.</span><span class="nx">BLUE</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">intensity</span><span class="w"> </span><span class="o">*</span>
-<span class="w">                                                   </span><span class="k">this</span><span class="p">.</span><span class="nx">blue_fraction</span><span class="p">);</span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">pixels</span><span class="p">[</span><span class="nx">pixel_index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">PIXEL_ARRAY</span><span class="p">.</span><span class="nx">ALPHA</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">PIXEL_ARRAY</span><span class="p">.</span><span class="nx">RGB_MAX</span><span class="p">;</span>
-<span class="w">        </span><span class="nx">offset_x</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">increment</span><span class="p">;</span><span class="w">        </span>
-<span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="c1">// end x for</span>
-<span class="w">      </span><span class="nx">offset_y</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">increment</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span><span class="c1">// end x for</span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">updatePixels</span><span class="p">();</span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">noise_start</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">increment</span><span class="p">;</span>
-<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="c1">// end draw</span>
-<span class="p">}</span><span class="w"> </span><span class="c1">// end NoisePlotter</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="outline-2" id="outline-container-org1127f72">
-<h2 id="org1127f72">Sources</h2>
-<div class="outline-text-2" id="text-org1127f72">
-<ul class="org-ul">
-<li>Nature of Code [Internet]. [cited 2023 May 11]. Available from: <a href="https://nature-of-code-2nd-edition.netlify.app/">https://nature-of-code-2nd-edition.netlify.app/</a></li>
-<li>p5 reference | pixelDensity() [Internet]. [cited 2023 May 15]. Available from: <a href="https://p5js.org/reference/#/p5/pixelDensity">https://p5js.org/reference/#/p5/pixelDensity</a></li>
-<li>p5 reference | pixels [Internet]. [cited 2023 May 15]. Available from: <a href="https://p5js.org/reference/#/p5/pixels">https://p5js.org/reference/#/p5/pixels</a></li>
-<li>pixel | Etymology, origin and meaning of pixel by etymonline [Internet]. [cited 2023 May 16]. Available from: <a href="https://www.etymonline.com/word/pixel">https://www.etymonline.com/word/pixel</a></li>
-<li>Pixel density - Wikipedia [Internet]. [cited 2023 May 16]. Available from: <a href="https://en.wikipedia.org/w/index.php?title=Pixel_density&amp;useskin=vector">https://en.wikipedia.org/w/index.php?title=Pixel_density&amp;useskin=vector</a></li>
-<li>Uint8ClampedArray - JavaScript | MDN [Internet]. 2023 [cited 2023 May 16]. Available from: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray</a></li>
-<li>Frame rate - Firefox Developer Tools | MDN [Internet]. [cited 2023 May 19]. Available from: <a href="https://www.devdoc.net/web/developer.mozilla.org/en-US/docs/Tools/Performance/Frame_rate.html">https://www.devdoc.net/web/developer.mozilla.org/en-US/docs/Tools/Performance/Frame_rate.html</a></li>
-<li>When p5js slider value is released function? [Internet]. Processing Foundation. 2021 [cited 2023 May 21]. Available from: <a href="https://discourse.processing.org/t/when-p5js-slider-value-is-released-function/30581">https://discourse.processing.org/t/when-p5js-slider-value-is-released-function/30581</a></li>
-<li>p5 reference | input() [Internet]. [cited 2023 May 21]. Available from: <a href="https://p5js.org/reference/#/p5/input">https://p5js.org/reference/#/p5/input</a></li>
-<li>p5 reference | set() [Internet]. [cited 2023 May 22]. Available from: <a href="https://p5js.org/reference/#/p5/set">https://p5js.org/reference/#/p5/set</a></li>
-</ul>
 </div>
 </div>
 </div>

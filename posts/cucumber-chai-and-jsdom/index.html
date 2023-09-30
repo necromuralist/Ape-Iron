@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+<head>
+<meta charset="utf-8">
+<meta content="Using JSDOM with Cucumber and Chai" name="description">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Cucumber, Chai, and JSDOM | Ape Iron</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<meta content="#5670d4" name="theme-color">
+<meta content="Nikola (getnikola.com)" name="generator">
+<link href="../../rss.xml" hreflang="en" rel="alternate" title="RSS" type="application/rss+xml">
+<link href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html" rel="canonical"><!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><!-- favicons -->
+<link href="../../apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+<link href="../../favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="../../favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="../../site.webmanifest" rel="manifest">
+<meta content="The Cloistered Monkey" name="author">
+<link href="../generative-art-concentric-circles/index.html" rel="prev" title="Generative Art: Concentric Circles" type="text/html">
+<meta content="Ape Iron" property="og:site_name">
+<meta content="Cucumber, Chai, and JSDOM" property="og:title">
+<meta content="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html" property="og:url">
+<meta content="Using JSDOM with Cucumber and Chai" property="og:description">
+<meta content="article" property="og:type">
+<meta content="2023-09-27T14:30:40-07:00" property="article:published_time">
+<meta content="chai" property="article:tag">
+<meta content="cucumber" property="article:tag">
+<meta content="javascript" property="article:tag">
+<meta content="tdd" property="article:tag">
+<meta content="testing" property="article:tag">
+</head>
+<body>
+<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a> <!-- Menubar -->
+<nav class="navbar navbar-expand-md static-top mb-4 navbar-light bg-light">
+<div class="container"><!-- This keeps the margins nice -->
+ <a class="navbar-brand" href="../../"><span id="blog-title">Ape Iron</span></a> <button aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#bs-navbar" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="bs-navbar">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item"><a class="nav-link" href="../../archive.html">Archive</a></li>
+<li class="nav-item"><a class="nav-link" href="../../categories/">Tags</a></li>
+<li class="nav-item"><a class="nav-link" href="../../rss.xml">RSS feed</a></li>
+<li class="nav-item dropdown"><a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Monkey Pages</a>
+<div class="dropdown-menu"><a class="dropdown-item" href="https://necromuralist.github.io/">Cloistered Monkey</a> <a class="dropdown-item" href="https://necromuralist.github.io/Beach-Pig-Thigh/">Beach Pig Thigh & Rump</a> <a class="dropdown-item" href="https://necromuralist.github.io/Bowling-For-Data/">Bowling For Data</a> <a class="dropdown-item" href="https://necromuralist.github.io/Neurotic-Networking/">Neurotic Networking</a> <a class="dropdown-item" href="https://necromuralist.github.io/Visions-Voices-Data/">Visions, Voices, Data</a></div>
+</li>
+</ul>
+<!-- DuckDuckGo custom search -->
+<form action="https://duckduckgo.com/" class="navbar-form pull-left" id="search" method="get" name="search"><input name="sites" type="hidden" value="https://necromuralist.github.io/Ape-Iron/"><input name="k8" type="hidden" value="#444444"><input name="k9" type="hidden" value="#D51920"><input name="kt" type="hidden" value="h"><input class="span2" maxlength="255" name="q" placeholder="Search…" type="text"><input style="visibility: hidden;display:none" type="submit" value="DuckDuckGo Search"></form>
+<!-- End of custom search -->
+<ul class="navbar-nav navbar-right">
+<li class="nav-item"><a class="nav-link" href="index.org" id="sourcelink">Source</a></li>
+</ul>
+</div>
+<!-- /.navbar-collapse --></div>
+<!-- /.container --></nav>
+<!-- End of Menubar -->
+<div class="container" id="content" role="main">
+<div class="body-content"><!--Body content-->
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article">
+<header>
+<h1 class="p-name entry-title" itemprop="headline name"><a class="u-url" href="#">Cucumber, Chai, and JSDOM</a></h1>
+<div class="metadata">
+<p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">The Cloistered Monkey</span></p>
+<p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2023-09-27T14:30:40-07:00" itemprop="datePublished" title="2023-09-27 14:30">2023-09-27 14:30</time></a></p>
+<p class="sourceline"><a class="sourcelink" href="index.org">Source</a></p>
+</div>
+</header>
+<div class="e-content entry-content" itemprop="articleBody text">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="index.html#org29a7596">What Is This About?</a>
+<ul>
+<li><a href="index.html#orgff46dfa">The Earlier Problem</a></li>
+<li><a href="index.html#org0df4ecb">The Newer Problem</a></li>
+</ul>
+</li>
+<li><a href="index.html#org4cff5dd">The Feature File</a></li>
+<li><a href="index.html#orgb4b0847">The Software Under Test</a>
+<ul>
+<li><a href="index.html#org81d848d">The Class Declaration</a></li>
+<li><a href="index.html#org5ac0cee">The Get Element Method</a></li>
+</ul>
+</li>
+<li><a href="index.html#org7869262">The Step File</a>
+<ul>
+<li><a href="index.html#org87d692f">Setting Up</a></li>
+<li><a href="index.html#org1b85921">The Tests</a></li>
+</ul>
+</li>
+<li><a href="index.html#orgef0737e">What Have We Learned?</a></li>
+</ul>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org29a7596">
+<h2 id="org29a7596">What Is This About?</h2>
+<div class="outline-text-2" id="text-org29a7596"></div>
+<div class="outline-3" id="outline-container-orgff46dfa">
+<h3 id="orgff46dfa">The Earlier Problem</h3>
+<div class="outline-text-3" id="text-orgff46dfa">
+<p>In my code from another post I used <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById">document.getElementById</a> as a check to make sure that I was passing in a valid <code>div</code> ID to <code>p5.js</code> and I decided to add some testing to make sure my validator was working as I expected. The problem was that when you run tests in <code>node.js</code> the <code>document</code> object doesn't exist. One way to get around this might be to use <code>Selenium</code> or some other browser-tester but that seemed like overkill.</p>
+<p>My first idea was that I would just mock the <code>document</code> object using <a href="https://sinonjs.org/">sinon</a> since this is a fairly easy thing to do in python (maybe not mocking <code>document</code>, specifically, since that is a javascript thing, but mocking objects in a module is fairly easy) but I simply couldn't find anything that seemed to indicate that this was possible, only posts saying that <code>sinon</code> doesn't work that way.</p>
+<p>So then I stumbled upon <a href="https://github.com/jsdom/jsdom">jsdom</a>, which appeared to be what I wanted to mock the document. The problem was that it's more of a browser simulator not a means to replace objects so I still had to figure out a way to replace the <code>document</code> that my class was expecting with the <code>jsdom</code> document. In the other post where I first used <code>jsdom</code> I followed the pattern shown in <a href="https://github.com/danielcb29/cucumberjs-jsdom-example">this github repository</a> where you stick the <code>jsdom document</code> into the <code>global</code> variable which makes it appear to be a global variable just like it is when you run the code in a browser.</p>
+<div class="highlight">
+<pre><span></span><span class="nb">global</span><span class="p">.</span><span class="nb">document</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">dom</span><span class="p">.</span><span class="nb">window</span><span class="p">.</span><span class="nb">document</span><span class="p">;</span>
+</pre></div>
+<p>Where <code>dom</code> is an instance of <code>jsdom</code> setup with some HTML to use for the testing. Amazingly this did seem to work…</p>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org0df4ecb">
+<h3 id="org0df4ecb">The Newer Problem</h3>
+<div class="outline-text-3" id="text-org0df4ecb">
+<p>Then I got to this post where I wanted to document getting <code>jsdom</code> to work and, even though I was using a simpler version of the previous post, I found that the tests were failing mysteriously (pretty much everything with javascript is mysterious to me). With a lot of troubleshooting, I managed to find out that instead of using the <code>dom</code> I was creating here it was still using the same one from the other testing. Except sometimes it was using the <code>dom</code> I defined here and these tests passed but then the other tests failed. I guess <code>global</code> means global in the truer sense, not just for the scope of a single set of tests, and there's some kind of race going on between the different pieces of code that are trying to set and use this global <code>document</code>. Oy.</p>
+<p>So, then I went looking at the <code>jsdom</code> documentation (which is pretty much just a <i>readme</i> and all the "issues" people have posted), but there was one page on their wiki titled <a href="https://github.com/jsdom/jsdom/wiki/Don't-stuff-jsdom-globals-onto-the-Node-global">Don't Stuff jsdom Globals Onto the Node Global</a>, which, I guess, means that I shouldn't have done what I did and all those Stack Overflow answers say to do. The page scolding all us silly people for using <code>global</code> did have a few examples of how they thought you should do it instead, so then I tried their solution of adding the javascript for my class to the <code>jsdom</code> object instead of using it in the <code>cucumber.js</code> test code. That way my class would have access to the <code>document</code> in their global space.</p>
+<p>Easy-peasy. Well… this produced more mysterious failures except now it was in a different place. After running their examples in the Node REPL unsuccessfully I found <a href="https://github.com/jsdom/jsdom/issues/2475">this "issue"</a> where it's explained that they don't support the <code>&lt;script type="module"&gt;</code> parameter (so you can't use ES6 imports like I do). Okay, so then I dumped the class definition to a string and added it directly, but no matter what I couldn't get <code>jsdom</code> to interpret any class I put in, although functions did work, so I came to the conclusion that they don't support javascript classes either.</p>
+<p>I couldn't find anything specific about not supporting classes, but trying to search using terms like <code>class</code> and <code>document</code> brings up so much irrelevant stuff that it's maddening to even look for anything so there might have been some skimming fatigue that blinded me to any documents about it, if they existed.</p>
+<p>But then, while fiddling with the Node REPL I found that defining the <code>document</code> before instantiating my class made it work, so I thought, okay, why am I trying so hard to do all this patching when I can just create the <code>document</code> object in my tests and then create the object under test? Well, the answer to that is - "because it doesn't work". For some reason the <code>document</code> object existed before and after creating my test object but it was always undefined within the class method I was testing. Mysterious.</p>
+<p>In the end I ended up doing an ugly workaround which didn't really even require using <code>jsdom</code>, although I guess using it at least validates that I'm using the right method name… Anyway, here it is.</p>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org4cff5dd">
+<h2 id="org4cff5dd">The Feature File</h2>
+<div class="outline-text-2" id="text-org4cff5dd">
+<p>This is a <a href="https://github.com/cucumber/cucumber-js">Cucumber.js</a> test so I'll create a simple feature file for a class that retrieves a document element and test the case where the ID is correct and the one where it is incorrect.</p>
+<div class="highlight">
+<pre><span></span><span class="k">Feature:</span><span class="nf"> An Element Getter</span>
+
+<span class="k">Scenario:</span><span class="nf"> A Valid ID</span>
+
+<span class="k">Given </span><span class="nf">an ElementGetter with the correct ID</span>
+<span class="k">When </span><span class="nf">the element is retrieved</span>
+<span class="k">Then </span><span class="nf">it is the expected element.</span>
+
+<span class="k">Scenario:</span><span class="nf"> The wrong ID.</span>
+
+<span class="k">Given </span><span class="nf">an ElementGetter with the wrong ID</span>
+<span class="k">When </span><span class="nf">the element is retrieved using the wrong ID</span>
+<span class="k">Then </span><span class="nf">it throws an error.</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgb4b0847">
+<h2 id="orgb4b0847">The Software Under Test</h2>
+<div class="outline-text-2" id="text-orgb4b0847">
+<p>Now the implementation. This is kind of a useless class, but this was supposed to be about how to get <code>jsdom</code> working so I can test code expecting a <code>document</code>.</p>
+</div>
+<div class="outline-3" id="outline-container-org81d848d">
+<h3 id="org81d848d">The Class Declaration</h3>
+<div class="outline-text-3" id="text-org81d848d">
+<p>This is the class I'm going to test.</p>
+<p><img alt="nil" src="element-getter.png"></p>
+<div class="highlight">
+<pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">ElementGetter</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="err">#</span><span class="nx">element</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">element_id</span><span class="p">,</span><span class="w"> </span><span class="nb">document</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">element_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">element_id</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nb">document</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">;</span>
+<span class="w">  </span><span class="p">};</span>
+</pre></div>
+<p>The constructor shows the main change I made to get it working - instead of using a global <code>document</code> I added it as an argument. I went through all that rigamarole trying to avoid this since it seemed like I was changing code just to test it, but now that I think about it, it's what I'd've done in python anyway, since I kind of don't like these "magic" objects that show up without being created or imported like they do in javascript.</p>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org5ac0cee">
+<h3 id="org5ac0cee">The Get Element Method</h3>
+<div class="outline-text-3" id="text-org5ac0cee">
+<p>I made a getter for the retrieved element. It probably would have been easier in this case if I didn't store it, since I could test both when the ID is correct and when it isn't with the same object, just by changing the <code>this.element_id</code> value, but it's a pattern I often use and it gave me the chance to test out javascripts <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields">Private Class Fields</a> syntax. To be quite honest, I think using the pound sign (<code>#</code>) is kind of ugly - I prefer the underscore - but at least I know about it.</p>
+<p>The main value in using a getter here is that it can check that the element exists, since an invalid ID passed to <code>getElementById</code> will just return a <code>null</code> object rather thhan throw in error.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">get</span><span class="w"> </span><span class="nx">element</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="err">#</span><span class="nx">element</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="err">#</span><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">element_id</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="err">#</span><span class="nx">element</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">throw</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="sb">`Unable to pull the element with ID '</span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">element_id</span><span class="si">}</span><span class="sb">'`</span><span class="p">);</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="err">#</span><span class="nx">element</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org7869262">
+<h2 id="org7869262">The Step File</h2>
+<div class="outline-text-2" id="text-org7869262">
+<p>And now the test code.</p>
+</div>
+<div class="outline-3" id="outline-container-org87d692f">
+<h3 id="org87d692f">Setting Up</h3>
+<div class="outline-text-3" id="text-org87d692f"></div>
+<div class="outline-4" id="outline-container-org2b4df39">
+<h4 id="org2b4df39">Import the Test Libraries</h4>
+<div class="outline-text-4" id="text-org2b4df39">
+<div class="highlight">
+<pre><span></span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">expect</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"chai"</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Given</span><span class="p">,</span><span class="w"> </span><span class="nx">When</span><span class="p">,</span><span class="w"> </span><span class="nx">Then</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@cucumber/cucumber"</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">JSDOM</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"jsdom"</span><span class="p">;</span>
+</pre></div>
+<p>These are the libraries that I installed to support testing. Using <code>jsdom</code> instead of creating a mock was convenient, but I might have to watch what the overhead is if I make a lot of tests that use it.</p>
+</div>
+</div>
+<div class="outline-4" id="outline-container-orgb8af286">
+<h4 id="orgb8af286">Import the Software Under Test</h4>
+<div class="outline-text-4" id="text-orgb8af286">
+<p>Now I'll import the <code>ElementGetter</code> class that I defined above. It occurs to me that for a case like this where I don't actually use the code for anything other than testing I could have put it next to the tests, but I guess this is a better dress rehearsal for really using code in a post.</p>
+<p>Note the extra step up the path (<code>../</code>) because this time I followed the <code>cucumber</code> example and put the steps in a folder named <code>steps</code> instead of in a file named <code>steps.js</code>, which might make it easier to organize in the future if I have more to test, but makes relative paths that much more painful.</p>
+<div class="highlight">
+<pre><span></span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">ElementGetter</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"../../../../files/posts/cucumber-chai-and-jsdom/puller.js"</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-orgecf2581">
+<h4 id="orgecf2581">Setup JSDOM</h4>
+<div class="outline-text-4" id="text-orgecf2581">
+<p>Here's where I create the <code>jsdom</code> object with a <code>div</code> that the <code>ElementGetter</code> can get. I'm passing in the whole HTML string but in the documentation they sometimes just pass in the body.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">EXPECTED_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"expected-div"</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nb">window</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">JSDOM</span><span class="p">(</span><span class="sb">`&lt;html&gt;</span>
+<span class="sb">&lt;head&gt;&lt;/head&gt;</span>
+<span class="sb">&lt;body&gt;</span>
+
+<span class="sb">  &lt;div id='</span><span class="si">${</span><span class="nx">EXPECTED_ID</span><span class="si">}</span><span class="sb">'&gt;&lt;/div&gt;</span>
+
+<span class="sb">&lt;/body&gt;&lt;/html&gt;`</span><span class="p">)).</span><span class="nb">window</span><span class="p">;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nb">document</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nb">document</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org1b85921">
+<h3 id="org1b85921">The Tests</h3>
+<div class="outline-text-3" id="text-org1b85921"></div>
+<div class="outline-4" id="outline-container-orgb25d8a5">
+<h4 id="orgb25d8a5">The Right ID</h4>
+<div class="outline-text-4" id="text-orgb25d8a5">
+<p>This is the first scenario where I expect the <code>ElementGetter</code> to successfully find the element. There's not a lot to test here, other than it doesn't crash.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">Given</span><span class="p">(</span><span class="s2">"an ElementGetter with the correct ID"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">puller</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ElementGetter</span><span class="p">(</span><span class="nx">EXPECTED_ID</span><span class="p">,</span><span class="w"> </span><span class="nb">document</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="nx">When</span><span class="p">(</span><span class="s2">"the element is retrieved"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">actual_element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">puller</span><span class="p">.</span><span class="nx">element</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="nx">Then</span><span class="p">(</span><span class="s2">"it is the expected element."</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">expect</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">actual_element</span><span class="p">.</span><span class="nx">id</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="nx">EXPECTED_ID</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-org21101dd">
+<h4 id="org21101dd">The Wrong ID</h4>
+<div class="outline-text-4" id="text-org21101dd">
+<p>This is the more interesting case where we give the <code>ElementGetter</code> an ID that doesn't match any element in the page.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">Given</span><span class="p">(</span><span class="s2">"an ElementGetter with the wrong ID"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">puller</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ElementGetter</span><span class="p">(</span><span class="nx">EXPECTED_ID</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"abc"</span><span class="p">,</span><span class="w"> </span><span class="nb">document</span><span class="p">);</span>
+<span class="w">  </span><span class="p">});</span>
+</pre></div>
+<p>Since I made a getter to retrieve the element, you can't pass it directly to <code>chai</code> to test - trying to pass <code>this.puller.element</code> to chai will trigger the error before chai gets it - so instead I'm using something I learned working with pytest. I'm creating a function that will retrieve the element and then passing the function to <code>chai</code> to test that it raises an error.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">When</span><span class="p">(</span><span class="s2">"the element is retrieved using the wrong ID"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">bad_call</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(){</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">puller</span><span class="p">.</span><span class="nx">element</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="nx">Then</span><span class="p">(</span><span class="s2">"it throws an error."</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">expect</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">bad_call</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="k">throw</span><span class="p">(</span><span class="ne">Error</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgef0737e">
+<h2 id="orgef0737e">What Have We Learned?</h2>
+<div class="outline-text-2" id="text-orgef0737e">
+<p>I suppose the biggest lesson is that I shouldn't have tried so hard to fake the <code>document</code> object as a magic global object the way it normally is used and instead just gone for an explicit argument that gets passed to the class (or function) that needs it. I also learned that <code>jsdom</code> is interesting but behind the ECMA standard, as were some of the other libraries I ran into in trying to solve different parts of this problem, so I have to either decide to not use ECMA 6 or not rely so much on these other libraries that don't use the current standards.</p>
+</div>
+</div>
+</div>
+<aside class="postpromonav">
+<nav>
+<ul class="tags" itemprop="keywords">
+<li><a class="tag p-category" href="../../categories/chai/index.html" rel="tag">chai</a></li>
+<li><a class="tag p-category" href="../../categories/cucumber/index.html" rel="tag">cucumber</a></li>
+<li><a class="tag p-category" href="../../categories/javascript/index.html" rel="tag">javascript</a></li>
+<li><a class="tag p-category" href="../../categories/tdd/index.html" rel="tag">tdd</a></li>
+<li><a class="tag p-category" href="../../categories/testing/index.html" rel="tag">testing</a></li>
+</ul>
+<ul class="pager hidden-print">
+<li class="previous"><a href="../generative-art-concentric-circles/index.html" rel="prev" title="Generative Art: Concentric Circles">Previous post</a></li>
+</ul>
+</nav>
+</aside>
+</article>
+<!--End of body content-->
+<footer id="footer">Scribbles by <a href="mailto:cloisteredmonkey.jmark@slmail.me">The Cloistered Monkey</a> © 2023 - Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a>
+<div id="license" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Ape-Iron</span> is licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" rel="license noopener noreferrer" style="display:inline-block;" target="_blank">CC BY-SA 4.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></div>
+</footer>
+</div>
+<script src="../../assets/js/all-nocdn.js"></script>
+<script>
+
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+</script></div>
+</body>
+</html>

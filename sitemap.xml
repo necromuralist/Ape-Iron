@@ -15,11 +15,11 @@
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/2023/index.html</loc>
-  <lastmod>2023-09-11T23:12:00Z</lastmod>
+  <lastmod>2023-09-30T02:18:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/archive.html</loc>
-  <lastmod>2023-09-11T22:49:00Z</lastmod>
+  <lastmod>2023-09-29T22:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/bdd/index.html</loc>
@@ -27,11 +27,11 @@
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/bibliography/index.html</loc>
-  <lastmod>2023-09-11T22:49:00Z</lastmod>
+  <lastmod>2023-09-29T22:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/book/index.html</loc>
-  <lastmod>2023-09-11T22:49:00Z</lastmod>
+  <lastmod>2023-09-29T22:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/bookmark/index.html</loc>
@@ -39,7 +39,7 @@
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_abecedarium/index.html</loc>
-  <lastmod>2023-09-11T22:49:00Z</lastmod>
+  <lastmod>2023-09-29T22:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_bibliography/index.html</loc>
@@ -63,19 +63,11 @@
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_generative-art/index.html</loc>
-  <lastmod>2023-09-11T23:11:00Z</lastmod>
+  <lastmod>2023-09-29T22:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_noise/index.html</loc>
   <lastmod>2023-09-11T23:12:00Z</lastmod>
- </url>
- <url>
-  <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_p5/index.html</loc>
-  <lastmod>2023-09-11T22:57:00Z</lastmod>
- </url>
- <url>
-  <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_p5js/index.html</loc>
-  <lastmod>2023-09-11T22:57:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_scraping/index.html</loc>
@@ -86,12 +78,20 @@
   <lastmod>2023-09-11T22:49:00Z</lastmod>
  </url>
  <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_test-driven-development/index.html</loc>
+  <lastmod>2023-09-30T02:18:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/cat_testing/index.html</loc>
   <lastmod>2023-09-11T22:49:00Z</lastmod>
  </url>
  <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/chai/index.html</loc>
+  <lastmod>2023-09-30T02:18:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/citation/index.html</loc>
-  <lastmod>2023-09-11T22:49:00Z</lastmod>
+  <lastmod>2023-09-29T22:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/comics/index.html</loc>
@@ -99,7 +99,7 @@
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/cucumber/index.html</loc>
-  <lastmod>2023-09-03T19:35:00Z</lastmod>
+  <lastmod>2023-09-30T02:18:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/doggerel/index.html</loc>
@@ -111,7 +111,7 @@
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/generative-art/index.html</loc>
-  <lastmod>2023-09-11T23:11:00Z</lastmod>
+  <lastmod>2023-09-29T22:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/gouache/index.html</loc>
@@ -135,11 +135,11 @@
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/index.html</loc>
-  <lastmod>2023-09-11T23:11:00Z</lastmod>
+  <lastmod>2023-09-29T22:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/javascript/index.html</loc>
-  <lastmod>2023-09-03T19:35:00Z</lastmod>
+  <lastmod>2023-09-30T02:18:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/line-walk/index.html</loc>
@@ -166,12 +166,8 @@
   <lastmod>2023-09-11T23:12:00Z</lastmod>
  </url>
  <url>
-  <loc>https://necromuralist.github.io/Ape-Iron/categories/p5/index.html</loc>
-  <lastmod>2023-09-11T22:51:00Z</lastmod>
- </url>
- <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/p5js/index.html</loc>
-  <lastmod>2023-09-11T23:12:00Z</lastmod>
+  <lastmod>2023-09-29T22:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/perspective/index.html</loc>
@@ -202,8 +198,12 @@
   <lastmod>2023-09-11T22:49:00Z</lastmod>
  </url>
  <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/categories/tdd/index.html</loc>
+  <lastmod>2023-09-30T02:18:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/testing/index.html</loc>
-  <lastmod>2023-09-11T22:49:00Z</lastmod>
+  <lastmod>2023-09-30T02:18:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/categories/watercolor/index.html</loc>
@@ -219,11 +219,11 @@
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/index-2.html</loc>
-  <lastmod>2023-09-11T22:59:00Z</lastmod>
+  <lastmod>2023-09-29T22:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/index.html</loc>
-  <lastmod>2023-09-11T23:12:00Z</lastmod>
+  <lastmod>2023-09-30T02:18:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html</loc>
@@ -243,7 +243,7 @@
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/posts/bibliography-generative-art/index.html</loc>
-  <lastmod>2023-09-11T22:49:00Z</lastmod>
+  <lastmod>2023-09-29T22:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/posts/bibliography-the-nature-of-code/index.html</loc>
@@ -262,6 +262,10 @@
   <lastmod>2023-09-03T19:35:00Z</lastmod>
  </url>
  <url>
+  <loc>https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html</loc>
+  <lastmod>2023-09-30T02:18:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://necromuralist.github.io/Ape-Iron/posts/devil-leaves-horrible/index.html</loc>
   <lastmod>2023-09-11T22:49:00Z</lastmod>
  </url>
@@ -275,11 +279,11 @@
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/posts/generative-art-concentric-circles/index.html</loc>
-  <lastmod>2023-09-11T22:49:00Z</lastmod>
+  <lastmod>2023-09-29T22:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/posts/generative-art-spiral/index.html</loc>
-  <lastmod>2023-09-11T23:11:00Z</lastmod>
+  <lastmod>2023-09-29T22:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html</loc>
@@ -319,7 +323,7 @@
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html</loc>
-  <lastmod>2023-09-11T22:49:00Z</lastmod>
+  <lastmod>2023-09-29T22:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://necromuralist.github.io/Ape-Iron/posts/pulling-legendary-creatures-from-wikipedia/index.html</loc>
