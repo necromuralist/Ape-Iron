@@ -28,11 +28,7 @@
 <div id="circle-slider-0a168ba9"></div>
 #+end_export
 
-#+begin_src js :tangle ../files/posts/generative-art-spiral/slider.js :exports none
-<<slider-settings-class>>
 
-export { SliderSettings }
-#+end_src
 
 #+begin_src js :tangle ../files/posts/generative-art-spiral/spiral.js :exports none
 import { SliderSettings } from "./slider.js"
@@ -86,6 +82,58 @@ import { SliderSettings } from "./slider.js"
 } // spiral_sketch
 
 <<p5-instance>>
+#+end_src
+
+* The Slider Settings
+** Angle Slider
+
+The values used to create the angle-increment slider.
+
+#+begin_src js :noweb-ref angle-slider-values
+const ANGLE_SLIDER = {
+  min: 0,
+  max: 40,
+  default_value: 5,
+  step_size: 0,
+  label: "Angle Increment",
+  precision: 2,
+  slider_div: SPIRAL_ANGLE_SLIDER,
+  caption_div: SPIRAL_ANGLE_TEXT
+}
+#+end_src
+
+** Radius Slider
+
+The values used to create the radius increment slider.
+
+#+begin_src js :noweb-ref radius-slider-values
+const RADIUS_SLIDER = {
+  min: 0,
+  max: 20,
+  default_value: 1,
+  step_size: 0,
+  label: "Radius Increment",
+  precision: 2,
+  slider_div: SPIRAL_RADIUS_SLIDER,
+  caption_div: SPIRAL_RADIUS_TEXT
+}
+#+end_src
+
+** Circle Slider
+
+The values used to create the circle diameter slider.
+
+#+begin_src js :noweb-ref circle-slider-values
+const CIRCLE_SLIDER = {
+  min: 1,
+  max: 100,
+  default_value: 1,
+  step_size: 0,
+  label: "Point Diameter",
+  precision: 2,
+  slider_div: SPIRAL_CIRCLE_SLIDER,
+  caption_div: SPIRAL_CIRCLE_TEXT
+}
 #+end_src
 
 * The Div IDs
@@ -343,367 +391,6 @@ is_an_element_id(identifier, actual) {
     throw Error(`"${identifier}" isn't a valid ID - "${actual_id}"`);
   };
 }; // is_an_id
-#+end_src
-
-* The Sliders Settings
-
-#+begin_src gherkin :tangle ../tests/cucumber-tests/test-generative-art-spiral/features/slider_settings.feature :exports none
-Feature: Slider Settings
-
-# Min
-Scenario: The min isn't set.
-
-Given a Slider Settings
-When it has no min
-And check_rep is called later
-Then it should raise an exception.
-
-Scenario: The min isn't numeric.
-
-Given a Slider Settings
-When it has a non-numeric min
-And check_rep is called later
-Then it should raise an exception.
-
-Scenario: The min is valid
-Given a Slider Settings
-When it has a valid min
-And check_rep is called
-Then nothing should happen.
-
-# Max
-Scenario: The max isn't set.
-
-Given a Slider Settings
-When it has no max
-And check_rep is called later
-Then it should raise an exception.
-
-Scenario: The max isn't numeric.
-
-Given a Slider Settings
-When it has a non-numeric max
-And check_rep is called later
-Then it should raise an exception.
-
-Scenario: The max is valid.
-Given a Slider Settings
-When it has a valid max
-And check_rep is called
-Then nothing should happen.
-
-# Default Value
-Scenario: The default value isn't set.
-
-Given a Slider Settings
-When it has no default value
-And check_rep is called later
-Then it should raise an exception.
-
-Scenario: The default value isn't numeric.
-
-Given a Slider Settings
-When it has a non-numeric default value
-And check_rep is called later
-Then it should raise an exception.
-
-Scenario: The default value is valid.
-Given a Slider Settings
-When it has a valid default value
-And check_rep is called
-Then nothing should happen.
-
-# Step Size
-Scenario: The step size isn't set.
-
-Given a Slider Settings
-When it has no step size
-And check_rep is called later
-Then it should raise an exception.
-
-Scenario: The step size isn't numeric.
-
-Given a Slider Settings
-When it has a non-numeric step size
-And check_rep is called later
-Then it should raise an exception.
-
-Scenario: The step size is valid.
-Given a Slider Settings
-When it has a valid step size
-And check_rep is called
-Then nothing should happen.
-
-Scenario: The label isn't set.
-
-Given a Slider Settings
-When it has no label
-And check_rep is called later
-Then it should raise an exception.
-
-# Precision
-Scenario: The precision isn't set.
-
-Given a Slider Settings
-When it has no precision
-And check_rep is called later
-Then it should raise an exception.
-
-Scenario: The precision isn't an integer.
-
-Given a Slider Settings
-When it has a non-integer precision
-And check_rep is called later
-Then it should raise an exception.
-
-Scenario: The precision is valid.
-Given a Slider Settings
-When it has a valid precision
-And check_rep is called
-Then nothing should happen.
-
-# slider div
-
-Scenario: The slider div is invalid
-
-Given a Slider Settings
-When it has an invalid slider div
-And check_rep is called later
-Then it should raise an exception.
-
-# caption div
-
-Given a Slider Settings
-When it has an invalid caption div
-And check_rep is called later
-Then it should raise an exception.
-#+end_src
-
-#+begin_src js :tangle ../tests/cucumber-tests/test-generative-art-spiral/steps/slider_settings_steps.js :exports none
-import { JSDOM } from "jsdom";
-import { expect } from "chai";
-import { Given, When, Then } from "@cucumber/cucumber";
-import { fake, replace } from "sinon";
-import { SliderSettings } from "../../../../files/posts/generative-art-spiral/slider.js";
-import { Validator } from "../../../../files/posts/generative-art-spiral/validator.js";
-
-/* The fake document */
-const SLIDER_ID = "slider-div";
-const CAPTION_ID = "caption-div";
-const document = new JSDOM(`<html>
-<head></head>
-<body>
-<div id='${SLIDER_ID}'></div>
-<div id='${CAPTION_ID}'></div>
-</body></html>`).window.document;
-
-const VALIDATOR = new Validator(document);
-
-/** min **/
-/* not set */
-Given("a Slider Settings", function() {
-  this.settings = new SliderSettings(0, 5, 3, 1, "some label", 3,
-                                     "slider-div", "caption-div",
-                                     VALIDATOR, document);
-});
-
-When("it has no min", function() {
-  this.settings.min = null;
-});
-
-When("check_rep is called later", function() {
-
-});
-
-Then("it should raise an exception.", function() {
-  expect(this.settings.check_rep.bind(this.settings)).to.throw(Error);
-});
-
-/** non-numeric **/
-When("it has a non-numeric min", function() {
-  this.settings.min = "bob";
-});
-
-/** Valid **/
-When("it has a valid min", function() {
-});
-
-When("check_rep is called", function() {
-  this.settings.check_rep();
-});
-
-Then("nothing should happen.", function() {
-  
-});
-
-/** Max **/
-
-// no max
-When("it has no max", function() {
-  this.settings.max = null;
-});
-
-// The max isn't numeric.
-
-When("it has a non-numeric max", function() {
-  this.settings.max = "max";
-});
-
-// The max is valid.
-When("it has a valid max", function() {
-  this.settings.max = 20;
-});
-
-/** Default Value **/
-// Scenario: The default value isn't set.
-When("it has no default value", function() {
-  this.settings.default_value = undefined;
-});
-
-// Scenario: The default value isn't numeric.
-When("it has a non-numeric default value", function() {
-  this.settings.default_value = "Bub";
-});
-
-// The default value is valid.
-When("it has a valid default value", function() {
-  this.settings.default_value = 5;
-});
-
-/** Step Size **/
-// Scenario: The step size isn't set.
-When("it has no step size", function() {
-  this.settings.step_size = undefined;
-});
-
-// The step size is valid.
-When("it has a valid step size", function() {
-  this.settings.step_size = 0;
-});
-
-// Scenario: The step size isn't numeric.
-When("it has a non-numeric step size", function() {
-  this.settings.step_size = "Bub";
-});
-
-/** Label **/
-// Scenario: The label isn't set.
-When("it has no label", function() {
-  this.settings.label = undefined;
-});
-
-/** Precision **/
-// Scenario: The precision isn't set.
-When("it has no precision", function() {
-  this.settings.precision = undefined;
-});
-
-// Scenario: The precision isn't an integer.
-When("it has a non-integer precision", function() {
-  this.settings.precision = 5.5;
-});
-
-// Scenario: The precision is valid.
-When("it has a valid precision", function() {
-
-});
-
-// slider div
-// Scenario: The slider div is invalid
-When("it has an invalid slider div", function() {
-  this.settings.slider_div = "some id";
-});
-
-Then("the invalid id should raise an exception.", function() {
-  expect(this.settings.check_rep.bind(this.settings)).to.throw(Error);
-});
-
-// caption div
-// Scenario: The caption div is invalid
-When("it has an invalid caption div", function() {
-  this.settings.caption_div = "some id";
-});
-#+end_src
-** The Slider Settings
-#+begin_src js :noweb-ref slider-settings-class
-class SliderSettings {
-  constructor(min, max, default_value, step_size,
-              label, precision,
-              slider_div, caption_div,
-              validator, document) {
-    this.min = min;
-    this.max = max;
-    this.default_value = default_value;
-    this.step_size = step_size;
-    this.label = label;
-    this.precision = precision;
-    this.slider_div = slider_div;
-    this.caption_div = caption_div;
-    this.confirm = validator;
-    this.document = document;
-  }; // constructor
-
-  check_rep(){
-    this.confirm.is_a_number("min", this.min);
-    this.confirm.is_a_number("max", this.max);
-    this.confirm.is_a_number("default_value", this.default_value);
-    this.confirm.is_a_number("step_size", this.step_size);
-    this.confirm.is_set("label", this.label);
-    this.confirm.is_an_integer("precision", this.precision);
-    this.confirm.is_an_element_id("slider_div", this.slider_div);
-    this.confirm.is_an_element_id("caption_div", this.caption_div);
-  }; // check_rep
-}; // SliderSettings
-#+end_src
-** Angle Slider
-
-The values used to create the angle-increment slider.
-
-#+begin_src js :noweb-ref angle-slider-values
-const ANGLE_SLIDER = {
-  min: 0,
-  max: 40,
-  default_value: 5,
-  step_size: 0,
-  label: "Angle Increment",
-  precision: 2,
-  slider_div: SPIRAL_ANGLE_SLIDER,
-  caption_div: SPIRAL_ANGLE_TEXT
-}
-#+end_src
-
-** Radius Slider
-
-The values used to create the radius increment slider.
-
-#+begin_src js :noweb-ref radius-slider-values
-const RADIUS_SLIDER = {
-  min: 0,
-  max: 20,
-  default_value: 1,
-  step_size: 0,
-  label: "Radius Increment",
-  precision: 2,
-  slider_div: SPIRAL_RADIUS_SLIDER,
-  caption_div: SPIRAL_RADIUS_TEXT
-}
-#+end_src
-
-** Circle Slider
-
-The values used to create the circle diameter slider.
-
-#+begin_src js :noweb-ref circle-slider-values
-const CIRCLE_SLIDER = {
-  min: 1,
-  max: 100,
-  default_value: 1,
-  step_size: 0,
-  label: "Point Diameter",
-  precision: 2,
-  slider_div: SPIRAL_CIRCLE_SLIDER,
-  caption_div: SPIRAL_CIRCLE_TEXT
-}
 #+end_src
 
 * Slidini

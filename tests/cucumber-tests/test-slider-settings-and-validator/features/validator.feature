@@ -1,10 +1,9 @@
 Feature: Validator
 
-# is_a_number
 Scenario: The expected number is a number.
 
 Given a Validator
-When a number is checked
+When is_a_number is given a number
 Then nothing happens.
 
 Scenario: The expected number isn't a number.
@@ -13,41 +12,54 @@ Given a Validator
 When an expected number isn't actually a number
 Then it throws an Error.
 
-# is_set
+Scenario: The expected number wasn't assigned.
+
+Given a Validator
+When an expected number isn't assigned
+Then it throws an Error.
+
 Scenario: The variable has a value set.
 
 Given a Validator
-When a variable is checked
+When is_set is given a variable that's set
 Then nothing happens.
 
 Scenario: The variable is empty.
 
 Given a Validator
-When an empty variable is checked
+When is_set is given an empty variable
 Then it throws an Error.
 
-# is_integer
+Given a Validator
+When is_set is given an undefined variable
+Then it throws an Error.
+
 Scenario: The variable has an integer
 
 Given a Validator
-When a variable with an integer is checked
+When is_an_integer is given a variable with an integer
 Then nothing happens.
 
 Scenario: The variable doesn't have an integer
 
 Given a Validator
-When a variable has something other than an integer
+When is_an_integer is given a variable that has something other than an integer
 Then it throws an Error.
 
-# is_id
+Scenario: The integer variable wasn't set.
+
+Given a Validator
+When an expected integer wasn't set
+Then it throws an Error.
+
 Scenario: A valid ID is given.
 
 Given a Validator
-When a valid element ID is given
+When is_an_element_id is given a valid element ID
 Then nothing happens.
 
 Scenario: An invalid ID is given.
 
 Given a Validator
-When an invalid element ID is given
+When is_an_element is given an invalid element ID
 Then it throws an Error.

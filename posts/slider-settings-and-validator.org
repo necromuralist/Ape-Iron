@@ -1,0 +1,695 @@
+#+BEGIN_COMMENT
+.. title: Slider Settings and Validator
+.. slug: slider-settings-and-validator
+.. date: 2023-10-02 12:48:10 UTC-07:00
+.. tags: javascript, p5
+.. category: Javascript
+.. link: 
+.. description: A Slider Settings Class and Valdator
+.. type: text
+.. status: 
+.. updated: 
+
+#+END_COMMENT
+#+begin_src js :tangle ../javascript/slider.js :exports none
+<<slider-settings-class>>
+
+export { SliderSettings }
+#+end_src
+
+* The Validator
+
+#+begin_src plantuml :file ../files/posts/slider-settings-and-validator/validator.png :exports none
+!theme mars
+class Validator {
+Array emptiness
+Object document
+
+constructor(document)
+is_a_number(identifier, acutal)
+is_set(identifier, actual)
+is_an_integer(identifier, actual)
+is_an_element_id(identifier, actual_id)
+}
+
+Validator o- document
+#+end_src
+
+#+RESULTS:
+[[file:../files/posts/slider-settings-and-validator/validator.png]]
+
+[[img-url: validator.png][Validator UML]]
+
+#+begin_src gherkin :tangle ../tests/cucumber-tests/test-slider-settings-and-validator/features/validator.feature :exports none
+Feature: Validator
+
+<<is-a-number-scenarios>>
+
+<<is-set-scenarios>>
+
+<<is-integer-scenarios>>
+
+<<is-id-scenarios>>
+#+end_src
+
+#+begin_src js :tangle ../tests/cucumber-tests/test-slider-settings-and-validator/steps/validator_steps.js :exports none
+import { expect } from "chai";
+import { faker } from "@faker-js/faker";
+import { Given, When, Then } from "@cucumber/cucumber";
+import { JSDOM } from "jsdom";
+
+// Software Under Test
+
+import { Validator } from "../../../../javascript/validator.js"
+
+// a fake document
+const VALID_ID = "validator-id";
+
+const document = new JSDOM(`
+<html>
+<head></head>
+<body>
+ <div id=${VALID_ID}></div>
+</body>
+</html>
+`).window.document;
+
+
+Given("a Validator", function() {
+  this.validate = new Validator(document);
+});
+
+<<is-a-number-case-1>>
+
+<<is-a-number-case-2>>
+
+<<is-a-number-case-3>>
+
+<<is-set-case-1>>
+
+<<is-set-case-2>>
+
+<<is-set-case-3>>
+
+<<is-an-integer-case-1>>
+
+<<is-an-integer-case-2>>
+
+<<is-an-integer-case-3>>
+
+<<is-element-case-1>>
+
+<<is-element-case-2>>
+#+end_src
+
+#+begin_src js :tangle ../javascript/validator.js :exports none
+<<validator-declaration>>
+
+  <<validate-is-number>>
+
+  <<validate-is-set>>
+
+  <<validate-is-integer>>
+
+  <<validate-is-id>>
+
+  <<validate-throw-error>>
+ }; // Validator
+
+export { Validator }
+#+end_src
+
+The ~Validator~ class checks the type of a given value and throws an Error if it's not correct. It's meant to validate settings.
+
+** Class Declaration
+
+The constructor takes the ~document~ as an argument to make it testable and make explicit where it came from. The class also defines an array ~emptiness~ to hold the values that I'll consider an invalid number.
+
+#+begin_src js :noweb-ref validator-declaration
+class Validator {
+  emptiness = [null, undefined, NaN];
+
+  constructor(document) {
+    this.document = document;
+  }
+#+end_src
+
+** Is A Number
+
+Our first method checks that 
+*** The Scenarios
+
+#+begin_src gherkin :noweb-ref is-a-number-scenarios
+Scenario: The expected number is a number.
+
+Given a Validator
+When is_a_number is given a number
+Then nothing happens.
+
+Scenario: The expected number isn't a number.
+
+Given a Validator
+When an expected number isn't actually a number
+Then it throws an Error.
+
+Scenario: The expected number wasn't assigned.
+
+Given a Validator
+When an expected number isn't assigned
+Then it throws an Error.
+#+end_src
+
+*** The Steps
+**** Scenario: The expected number is a number.
+
+This is the case where we get what we wanted. I added a second check for ~0~ explicitly because I was originally using the [[https://developer.mozilla.org/en-US/docs/Glossary/Falsy][~falsy~]] check (~!(actual)~) but it turns out that 0 would be considered false in this case so I added an explicit check to make sure I wasn't disallowing 0.
+
+#+begin_src js :noweb-ref is-a-number-case-1
+When("is_a_number is given a number", function() {
+  this.validate.is_a_number("good-number", faker.number.float());
+  this.validate.is_a_number("good-number", 0);
+});
+
+Then("nothing happens.", function() {});
+#+end_src
+
+**** Scenario: The expected number isn't a number.
+
+I'm just checking for a string. I suppose there are other checks to be made, but since this is only to check my own code for mistakes, I don't suppose it really needs to be exhaustive.
+
+#+begin_src js :noweb-ref is-a-number-case-2
+When("an expected number isn't actually a number", function() {
+  this.bad_call = function() {
+      this.validate.is_a_number("bad-number", faker.lorem.word());
+  };
+});
+
+Then("it throws an Error.", function() {
+  expect(this.bad_call.bind(this)).to.throw(Error);
+});
+#+end_src
+
+**** Scenario: The expected number wasn't assigned.
+
+This isn't explicitly needed, I think, since it falls within "non-number" but I wrote the checks as I made the ~SliderSettings~ and sometimes I would get the parameters out of order (I wish javascript had named variables) so I added ~null~ checks for the arguments to make it more obvious.
+
+#+begin_src js :noweb-ref is-a-number-case-3
+When("an expected number isn't assigned", function() {
+  this.bad_call = function() {
+    this.validate.is_a_number("no-number", null);
+  };
+});
+
+// Then it throws an error
+#+end_src
+
+*** The Method
+
+And here's the implementation.
+
+#+begin_src js :noweb-ref validate-is-number
+is_a_number(identifier, actual) {
+  if ((!actual && actual !== 0) || isNaN(actual)) {
+    throw Error(`"${identifier}" must be a number not "${actual}"`);
+  };
+}; // is_a_number
+#+end_src
+
+** Is Set
+
+This is for the cases where I have no particular type in the mind but it does need to be set to something.
+
+*** The Scenarios
+#+begin_src gherkin :noweb-ref is-set-scenarios
+Scenario: The variable has a value set.
+
+Given a Validator
+When is_set is given a variable that's set
+Then nothing happens.
+
+Scenario: The variable is empty.
+
+Given a Validator
+When is_set is given an empty variable
+Then it throws an Error.
+
+Given a Validator
+When is_set is given an undefined variable
+Then it throws an Error.
+#+end_src
+
+*** The Steps
+
+**** Scenario: The variable has a value set.
+
+#+begin_src js :noweb-ref is-set-case-1
+When("is_set is given a variable that's set", function() {
+  const variable = faker.lorem.word();
+  this.validate.is_set("set-variable", variable);
+  this.validate.is_set("set-variable", 0);
+  this.validate.is_set("set-variable", false);
+});
+
+// Then nothing happens.
+#+end_src
+
+**** Scenario: The variable is empty.
+
+#+begin_src js :noweb-ref is-set-case-2
+When("is_set is given an empty variable", function() {
+  this.bad_call = function() {
+    this.validate.is_set(null);
+  };
+});
+
+// Then it throws an Error.
+#+end_src
+
+**** Scenario: The variable is undefined
+
+#+begin_src js :noweb-ref is-set-case-3
+When("is_set is given an undefined variable", function() {
+  this.bad_call = function() {
+    this.validate.is_set(undefined);
+  };
+});
+
+// Then it throws an Error.
+#+end_src
+
+*** The Method
+This checks whatever is in the ~emptiness~ array, which as of now has:
+
+- ~null~
+- ~undefined~
+- ~NaN~
+
+I'm not sure about that last one. I think I was trying to use all the ~falsy~ values that weren't likely to be actual values (like 0, ~false~).
+
+#+begin_src js :noweb-ref validate-is-set
+is_set(identifier, actual) {
+  if (this.emptiness.includes(actual)) {
+    throw Error(`"${identifier} must be set, not "${actual}"`)
+  };
+}; //is_set
+#+end_src
+
+** Is An Integer
+
+*** The Scenarios
+
+#+begin_src gherkin :noweb-ref is-integer-scenarios
+Scenario: The variable has an integer
+
+Given a Validator
+When is_an_integer is given a variable with an integer
+Then nothing happens.
+
+Scenario: The variable doesn't have an integer
+
+Given a Validator
+When is_an_integer is given a variable that has something other than an integer
+Then it throws an Error.
+
+Scenario: The integer variable wasn't set.
+
+Given a Validator
+When an expected integer wasn't set
+Then it throws an Error.
+#+end_src
+
+*** The Steps
+
+**** Scenario: The variable has an integer
+
+#+begin_src js :noweb-ref is-an-integer-case-1
+When("is_an_integer is given a variable with an integer", function() {
+  this.validate.is_an_integer("is-integer", faker.number.int());
+});
+// Then nothing happens
+#+end_src
+
+**** Scenario: The variable doesn't have an integer
+
+#+begin_src js :noweb-ref is-an-integer-case-2
+When("is_an_integer is given a variable that has something other than an integer", function() {
+  this.bad_call = function() {
+    this.validate.is_an_integer("not-integer", "5");
+  };
+});
+
+// Then it throws an Error.
+#+end_src
+
+**** Scenario: The integer variable wasn't set.
+
+#+begin_src js :noweb-ref is-an-integer-case-3
+When("an expected integer wasn't set", function() {
+  this.bad_call = function() {
+      this.validate.is_an_integer("no-integer", null);
+  };
+});
+
+// Then it throws an Error.
+#+end_src
+
+*** The Method
+
+This is, oddly, the only built-in that I could find that does checks.
+
+#+begin_src js :noweb-ref validate-is-integer
+is_an_integer(identifier, actual) {
+  if (!Number.isInteger(actual)) {
+    throw Error(`"${identifier}" must be an integer, not ${actual}`);
+  };
+}; // is_an_integer
+#+end_src
+
+** Is An Element's ID
+
+This is what really started it all. I had some mysterious errors {{% lancelot "drawing a spiral" %}}generative-art-spiral{{% /lancelot %}} which turned out to be because I had changed a div ID in the HTML but not in the javascript. So this checks to see if there really an element with the ID. It doesn't check if it's the *right* ID, but I don't know that there's a simple way to do that anyway.
+
+*** The Scenarios
+
+#+begin_src gherkin :noweb-ref is-id-scenarios
+Scenario: A valid ID is given.
+
+Given a Validator
+When is_an_element_id is given a valid element ID
+Then nothing happens.
+
+Scenario: An invalid ID is given.
+
+Given a Validator
+When is_an_element is given an invalid element ID
+Then it throws an Error.
+#+end_src
+
+*** The Steps
+
+**** Scenario: A valid ID is given.
+
+#+begin_src js :noweb-ref is-element-case-1
+When("is_an_element_id is given a valid element ID", function() {
+  this.validate.is_an_element_id("good-id", VALID_ID);
+});
+
+// Then nothing happens.
+#+end_src
+
+**** Scenario: An invalid ID is given.
+
+#+begin_src js :noweb-ref is-element-case-2
+When("is_an_element is given an invalid element ID", function() {
+  this.bad_call = function() {
+    this.validate.is_an_element_id("bad-id", VALID_ID + "invalid");
+  };
+});
+
+// Then it throws an Error.
+#+end_src
+
+*** The Method
+This relies on the built-in ~document.getElementById~ method. I don't know how much overhead it adds, but it's only meant to be called once to validate the settings so it shouldn't matter.
+
+#+begin_src js :noweb-ref validate-is-id
+is_an_element_id(identifier, actual) {
+  if (this.document.getElementById(actual) === null) {
+    throw Error(`"${identifier}" isn't a valid ID - "${actual_id}"`);
+  };
+}; // is_an_id
+#+end_src
+
+* The Sliders Settings
+
+#+begin_src plantuml :file ../files/posts/slider-settings-and-validator/slider_settings.png :exports none
+!theme mars
+class SliderSettings {
+Number min
+Number max
+Number default_value
+Number step_size
+String label
+Integer precision
+String slider_div
+String caption_div
+Validator validator
+Object document
+
+check_rep()
+}
+
+SliderSettings o- Validator
+SliderSettings o- document
+#+end_src
+
+#+RESULTS:
+[[file:../files/posts/slider-settings-and-validator/slider_settings.png]]
+
+[[img-url:slider_settings.png]]
+
+
+** The Scenario
+
+#+begin_src gherkin :tangle ../tests/cucumber-tests/test-slider-settings-and-validator/features/slider_settings.feature
+Feature: Slider Settings
+
+Scenario: check_rep is called.
+
+Given a Slider Settings
+When check_rep is called
+Then it checked the min
+And it checked the max
+And it checked the default_value
+And it checked the step_size
+And it checked the label
+And it checked the precision
+And it checked the slider_div
+And it checked the caption_div.
+#+end_src
+
+** The Steps
+
+#+begin_src js :tangle ../tests/cucumber-tests/test-slider-settings-and-validator/steps/slider_settings_steps.js
+import { expect } from "chai";
+import { faker } from "@faker-js/faker";
+import { Given, When, Then } from "@cucumber/cucumber";
+import { fake, replace } from "sinon";
+import { SliderSettings } from "../../../../javascript/slider.js";
+import { Validator } from "../../../../javascript/validator.js";
+
+const IS = {
+  NUMBER: { min: 0,
+            max: 1,
+            default_value : 2,
+            step_size: 3,               
+          },
+  SET: {
+    label: 0
+  },
+  INTEGER: {
+    precision: 0
+  },
+  ELEMENT: {
+    slider_div: 0,
+    caption_div: 1
+  }
+}
+
+const METHODS = ["is_a_number", "is_set", "is_an_integer", "is_an_element_id"];
+
+Given("a Slider Settings", function() {
+  this.document = fake();
+  this.validator = new Validator(this.document);
+
+  for (const method of METHODS) {
+    replace(this.validator, method,
+          fake.returns(null));    
+  }
+ 
+ 
+  this.min = faker.number.float();
+  this.max = faker.number.float();
+  this.default_value = faker.number.float();
+  this.step_size = faker.number.float();
+  this.label = faker.lorem.words();
+  this.precision = faker.number.int();
+  this.slider_div = faker.lorem.word();
+  this.caption_div = faker.lorem.word();  
+  
+  this.settings = new SliderSettings(this.min, this.max, this.default_value,
+                                     this.step_size,
+                                     this.label, this.precision,
+                                     this.slider_div, this.caption_div,
+                                     this.validator, this.document);
+});
+
+When("check_rep is called", function() {
+  this.settings.check_rep();
+});
+
+Then("it checked the min", function() {
+  expect(this.validator.is_a_number.getCall(IS.NUMBER.min).calledWith(
+    "min", this.min
+  )).to.be.true;
+  
+});
+
+Then("it checked the max", function() {
+  expect(this.validator.is_a_number.getCall(IS.NUMBER.max).calledWith(
+    "max", this.max
+  )).to.be.true;
+});
+
+Then("it checked the default_value", function() {
+  expect(this.validator.is_a_number.getCall(IS.NUMBER.default_value).calledWith(
+                                             "default_value", this.default_value
+                                           )).to.be.true;
+});
+
+Then("it checked the step_size", function() {
+  expect(this.validator.is_a_number.getCall(IS.NUMBER.step_size).calledWith(
+    "step_size", this.step_size
+  )).to.be.true;
+});
+
+Then("it checked the label", function() {
+  expect(this.validator.is_set.getCall(IS.SET.label).calledWith(
+    "label", this.label
+  )).to.be.true;
+});
+
+Then("it checked the precision", function() {
+  expect(this.validator.is_an_integer.getCall(IS.INTEGER.precision).calledWith(
+    "precision", this.precision
+  )).to.be.true;
+});
+
+Then("it checked the slider_div", function() {
+  expect(this.validator.is_an_element_id.getCall(IS.ELEMENT.slider_div).calledWith(
+    "slider_div", this.slider_div
+  )).to.be.true;
+});
+
+Then("it checked the caption_div.", function() {
+  expect(this.validator.is_an_element_id.getCall(IS.ELEMENT.caption_div).calledWith(
+    "caption_div", this.caption_div
+  )).to.be.true;
+});
+#+end_src
+
+** The Slider Settings
+
+#+RESULTS:
+[[img-url:slider_settings.png]]
+
+The ~SliderSettings~ holds the settings to build ~Slidini~, the Slider and Caption holder. It's really what you could do with an object (which is what it was) but I decided to add a validator to make sure that I was getting all the parameters right.
+
+#+begin_src js :noweb-ref slider-settings-class
+class SliderSettings {
+  constructor(min, max, default_value, step_size,
+              label, precision,
+              slider_div, caption_div,
+              validator, document) {
+    this.min = min;
+    this.max = max;
+    this.default_value = default_value;
+    this.step_size = step_size;
+    this.label = label;
+    this.precision = precision;
+    this.slider_div = slider_div;
+    this.caption_div = caption_div;
+    this.confirm = validator;
+    this.document = document;
+  }; // constructor
+
+  check_rep(){
+    this.confirm.is_a_number("min", this.min);
+    this.confirm.is_a_number("max", this.max);
+    this.confirm.is_a_number("default_value", this.default_value);
+    this.confirm.is_a_number("step_size", this.step_size);
+    this.confirm.is_set("label", this.label);
+    this.confirm.is_an_integer("precision", this.precision);
+    this.confirm.is_an_element_id("slider_div", this.slider_div);
+    this.confirm.is_an_element_id("caption_div", this.caption_div);
+  }; // check_rep
+}; // SliderSettings
+#+end_src
+
+* Slidini
+#+begin_src js :tangle ../javascript/slidini.js :exports none
+<<slidini>>
+
+  <<slidini-constructor>>
+
+  <<slidini-get-slider>>
+
+  <<slidini-get-caption>>
+
+  <<slidini-update-caption>>
+
+export { Slidini }
+#+end_src
+
+** The Class Declaration
+#+begin_src js :noweb-ref slidini
+class Slidini {
+  _slider = null;
+  _caption = null;
+#+end_src
+
+** The Constructor
+
+#+begin_src js :noweb-ref slidini-constructor
+constructor(settings, p5) {
+  this.settings = settings;
+  this.p5 = p5;
+} // constructor
+#+end_src
+
+** The Slider
+
+#+begin_src js :noweb-ref slidini-get-slider
+get slider() {
+  if (this._slider === null) {
+    // create the slider
+    this._slider = this.p5.createSlider(
+      this.settings.min,
+      this.settings.max,
+      this.settings.default_value,
+      this.settings.step_size,
+    );
+
+    // attach it to the div tag
+    this._slider.parent(this.settings.slider_div);
+
+    // set the callback to change label on update
+    this._slider.input(() => this.update_caption());
+
+    // add the label to the slider
+    this.update_caption();
+  }
+  return this._slider;
+}
+#+end_src
+
+** The Caption
+
+#+begin_src js :noweb-ref slidini-get-caption
+get caption() {
+  if (this._caption === null) {
+    this._caption = this.p5.select(this.settings.caption_div);
+  }
+  return this._caption;
+}
+#+end_src
+
+** The Caption Updater
+
+#+begin_src js :noweb-ref slidini-update-caption
+update_caption() {
+  this.caption.html(
+    `${this.settings.label}: ` +
+      `${this.slider.value().toFixed(this.settings.precision)}`);
+} // update_caption
+#+end_src
