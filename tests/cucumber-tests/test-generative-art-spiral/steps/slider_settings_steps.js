@@ -2,7 +2,8 @@ import { JSDOM } from "jsdom";
 import { expect } from "chai";
 import { Given, When, Then } from "@cucumber/cucumber";
 import { fake, replace } from "sinon";
-import { SliderSettings } from "../../../files/posts/generative-art-spiral/slider.js";
+import { SliderSettings } from "../../../../files/posts/generative-art-spiral/slider.js";
+import { Validator } from "../../../../files/posts/generative-art-spiral/validator.js";
 
 /* The fake document */
 const SLIDER_ID = "slider-div";
@@ -14,11 +15,14 @@ const document = new JSDOM(`<html>
 <div id='${CAPTION_ID}'></div>
 </body></html>`).window.document;
 
+const VALIDATOR = new Validator(document);
 
 /** min **/
 /* not set */
 Given("a Slider Settings", function() {
-  this.settings = new SliderSettings(0, 5, 3, 1, "some label", 3, "slider-div", "caption-div", document);
+  this.settings = new SliderSettings(0, 5, 3, 1, "some label", 3,
+                                     "slider-div", "caption-div",
+                                     VALIDATOR, document);
 });
 
 When("it has no min", function() {

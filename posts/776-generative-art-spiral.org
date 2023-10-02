@@ -28,7 +28,7 @@
 <div id="circle-slider-0a168ba9"></div>
 #+end_export
 
-#+begin_src js :tangle ../files/posts/generative-art-spiral/slider.js
+#+begin_src js :tangle ../files/posts/generative-art-spiral/slider.js :exports none
 <<slider-settings-class>>
 
 export { SliderSettings }
@@ -120,13 +120,517 @@ const SPIRAL_RADIUS_TEXT = "#radius-text-0a168ba9";
 const SPIRAL_CIRCLE_TEXT = "#circle-text-0a168ba9";
 #+end_src
 
+* The Validator
+
+#+begin_src plantuml :file ../files/posts/generative-art-spiral/validator.png :exports none
+!theme mars
+class Validator {
+constructor(document)
+is_a_number(identifier, acutal)
+is_set(identifier, actual)
+is_integer(identifier, actual)
+is_id(identifier, actual_id)
+}
+#+end_src
+
+#+RESULTS:
+[[file:../files/posts/generative-art-spiral/validator.png]]
+
+[[img-url: validator.png][Validator UML]]
+
+#+begin_src gherkin :tangle ../tests/cucumber-tests/test-generative-art-spiral/features/validator.feature :exports none
+Feature: Validator
+
+# is_a_number
+Scenario: The expected number is a number.
+
+Given a Validator
+When a number is checked
+Then nothing happens.
+
+Scenario: The expected number isn't a number.
+
+Given a Validator
+When an expected number isn't actually a number
+Then it throws an Error.
+
+# is_set
+Scenario: The variable has a value set.
+
+Given a Validator
+When a variable is checked
+Then nothing happens.
+
+Scenario: The variable is empty.
+
+Given a Validator
+When an empty variable is checked
+Then it throws an Error.
+
+# is_integer
+Scenario: The variable has an integer
+
+Given a Validator
+When a variable with an integer is checked
+Then nothing happens.
+
+Scenario: The variable doesn't have an integer
+
+Given a Validator
+When a variable has something other than an integer
+Then it throws an Error.
+
+# is_id
+Scenario: A valid ID is given.
+
+Given a Validator
+When a valid element ID is given
+Then nothing happens.
+
+Scenario: An invalid ID is given.
+
+Given a Validator
+When an invalid element ID is given
+Then it throws an Error.
+#+end_src
+
+#+begin_src js :tangle ../tests/cucumber-tests/test-generative-art-spiral/steps/validator_steps.js :exports none
+import { expect } from "chai";
+import { faker } from "@faker-js/faker";
+import { Given, When, Then } from "@cucumber/cucumber";
+import { JSDOM } from "jsdom";
+
+// Software Under Test
+
+import { Validator } from "../../../../files/posts/generative-art-spiral/validator.js"
+
+// a fake document
+const VALID_ID = "validator-id";
+
+const document = new JSDOM(`
+<html>
+<head></head>
+<body>
+ <div id=${VALID_ID}></div>
+</body>
+</html>
+`).window.document;
+
+
+Given("a Validator", function() {
+  this.validate = new Validator(document);
+});
+
+// Scenario: The expected number is a number.
+When("a number is checked", function() {
+  this.validate.is_a_number("good-number", faker.number.float());
+    this.validate.is_a_number("good-number", 0);
+});
+
+Then("nothing happens.", function() {
+  
+});
+
+// Scenario: The expected number isn't a number.
+When("an expected number isn't actually a number", function() {
+  this.bad_call = function() {
+      this.validate.is_a_number("bad-number", "ape");
+  };
+});
+
+Then("it throws an Error.", function() {
+  expect(this.bad_call.bind(this)).to.throw(Error);
+});
+
+//Scenario: The variable has a value set.
+When("a variable is checked", function() {
+  const variable = "ape";
+  this.validate.is_set("set-variable", variable);
+  this.validate.is_set("set-variable", 0);
+  this.validate.is_set("set-variable", false);
+});
+
+// Scenario: The variable is empty.
+When("an empty variable is checked", function() {
+  this.bad_call = function() {
+    this.validate.is_set(null);
+  };
+});
+
+// Scenario: Scenario: The variable has an integer
+When("a variable with an integer is checked", function() {
+  this.validate.is_an_integer("is-integer", faker.number.int());
+});
+
+// Scenario: The variable doesn't have an integer
+When("a variable has something other than an integer", function() {
+  this.bad_call = function() {
+    this.validate.is_an_integer("not-integen", "5");
+  };
+});
+
+// Scenario: A valid ID is given.
+When("a valid element ID is given", function() {
+  this.validate.is_an_element_id("good-id", VALID_ID);
+});
+
+// Scenario: An invalid ID is given.
+When("an invalid element ID is given", function() {
+  this.bad_call = function() {
+    this.validate.is_an_element_id("bad-id", VALID_ID + "invalid");
+  };
+});
+#+end_src
+
+#+begin_src js :tangle ../files/posts/generative-art-spiral/validator.js :exports none
+<<validator-declaration>>
+
+  <<validate-is-number>>
+
+  <<validate-is-set>>
+
+  <<validate-is-integer>>
+
+  <<validate-is-id>>
+ }; // Validator
+
+export { Validator }
+#+end_src
+** Class Declaration
+
+#+begin_src js :noweb-ref validator-declaration
+class Validator {
+  emptiness = [null, undefined, NaN];
+
+  constructor(document) {
+    this.document = document;
+  }
+#+end_src
+
+** Is A Number
+
+#+begin_src js :noweb-ref validate-is-number
+is_a_number(identifier, actual) {
+  if ((!actual && actual !== 0) || isNaN(actual)) {
+    throw Error(`"${identifier}" must be a number not "${actual}"`);
+  };
+}; // is_a_number
+#+end_src
+
+** Is An Integer
+
+#+begin_src js :noweb-ref validate-is-integer
+is_an_integer(identifier, actual) {
+  if (!Number.isInteger(actual)) {
+    throw Error(`"${identifier}" must be an integer, not ${actual}`);
+  };
+}; // is_an_integer
+#+end_src
+** Is Set
+
+#+begin_src js :noweb-ref validate-is-set
+is_set(identifier, actual) {
+  if (this.emptiness.includes(actual)) {
+    throw Error(`"${identifier} must be set, not "${actual}"`)
+  };
+}; //is_set
+#+end_src
+** Is An Element's ID
+
+#+begin_src js :noweb-ref validate-is-id
+is_an_element_id(identifier, actual) {
+  if (this.document.getElementById(actual) === null) {
+    throw Error(`"${identifier}" isn't a valid ID - "${actual_id}"`);
+  };
+}; // is_an_id
+#+end_src
+
 * The Sliders Settings
+
+#+begin_src gherkin :tangle ../tests/cucumber-tests/test-generative-art-spiral/features/slider_settings.feature :exports none
+Feature: Slider Settings
+
+# Min
+Scenario: The min isn't set.
+
+Given a Slider Settings
+When it has no min
+And check_rep is called later
+Then it should raise an exception.
+
+Scenario: The min isn't numeric.
+
+Given a Slider Settings
+When it has a non-numeric min
+And check_rep is called later
+Then it should raise an exception.
+
+Scenario: The min is valid
+Given a Slider Settings
+When it has a valid min
+And check_rep is called
+Then nothing should happen.
+
+# Max
+Scenario: The max isn't set.
+
+Given a Slider Settings
+When it has no max
+And check_rep is called later
+Then it should raise an exception.
+
+Scenario: The max isn't numeric.
+
+Given a Slider Settings
+When it has a non-numeric max
+And check_rep is called later
+Then it should raise an exception.
+
+Scenario: The max is valid.
+Given a Slider Settings
+When it has a valid max
+And check_rep is called
+Then nothing should happen.
+
+# Default Value
+Scenario: The default value isn't set.
+
+Given a Slider Settings
+When it has no default value
+And check_rep is called later
+Then it should raise an exception.
+
+Scenario: The default value isn't numeric.
+
+Given a Slider Settings
+When it has a non-numeric default value
+And check_rep is called later
+Then it should raise an exception.
+
+Scenario: The default value is valid.
+Given a Slider Settings
+When it has a valid default value
+And check_rep is called
+Then nothing should happen.
+
+# Step Size
+Scenario: The step size isn't set.
+
+Given a Slider Settings
+When it has no step size
+And check_rep is called later
+Then it should raise an exception.
+
+Scenario: The step size isn't numeric.
+
+Given a Slider Settings
+When it has a non-numeric step size
+And check_rep is called later
+Then it should raise an exception.
+
+Scenario: The step size is valid.
+Given a Slider Settings
+When it has a valid step size
+And check_rep is called
+Then nothing should happen.
+
+Scenario: The label isn't set.
+
+Given a Slider Settings
+When it has no label
+And check_rep is called later
+Then it should raise an exception.
+
+# Precision
+Scenario: The precision isn't set.
+
+Given a Slider Settings
+When it has no precision
+And check_rep is called later
+Then it should raise an exception.
+
+Scenario: The precision isn't an integer.
+
+Given a Slider Settings
+When it has a non-integer precision
+And check_rep is called later
+Then it should raise an exception.
+
+Scenario: The precision is valid.
+Given a Slider Settings
+When it has a valid precision
+And check_rep is called
+Then nothing should happen.
+
+# slider div
+
+Scenario: The slider div is invalid
+
+Given a Slider Settings
+When it has an invalid slider div
+And check_rep is called later
+Then it should raise an exception.
+
+# caption div
+
+Given a Slider Settings
+When it has an invalid caption div
+And check_rep is called later
+Then it should raise an exception.
+#+end_src
+
+#+begin_src js :tangle ../tests/cucumber-tests/test-generative-art-spiral/steps/slider_settings_steps.js :exports none
+import { JSDOM } from "jsdom";
+import { expect } from "chai";
+import { Given, When, Then } from "@cucumber/cucumber";
+import { fake, replace } from "sinon";
+import { SliderSettings } from "../../../../files/posts/generative-art-spiral/slider.js";
+import { Validator } from "../../../../files/posts/generative-art-spiral/validator.js";
+
+/* The fake document */
+const SLIDER_ID = "slider-div";
+const CAPTION_ID = "caption-div";
+const document = new JSDOM(`<html>
+<head></head>
+<body>
+<div id='${SLIDER_ID}'></div>
+<div id='${CAPTION_ID}'></div>
+</body></html>`).window.document;
+
+const VALIDATOR = new Validator(document);
+
+/** min **/
+/* not set */
+Given("a Slider Settings", function() {
+  this.settings = new SliderSettings(0, 5, 3, 1, "some label", 3,
+                                     "slider-div", "caption-div",
+                                     VALIDATOR, document);
+});
+
+When("it has no min", function() {
+  this.settings.min = null;
+});
+
+When("check_rep is called later", function() {
+
+});
+
+Then("it should raise an exception.", function() {
+  expect(this.settings.check_rep.bind(this.settings)).to.throw(Error);
+});
+
+/** non-numeric **/
+When("it has a non-numeric min", function() {
+  this.settings.min = "bob";
+});
+
+/** Valid **/
+When("it has a valid min", function() {
+});
+
+When("check_rep is called", function() {
+  this.settings.check_rep();
+});
+
+Then("nothing should happen.", function() {
+  
+});
+
+/** Max **/
+
+// no max
+When("it has no max", function() {
+  this.settings.max = null;
+});
+
+// The max isn't numeric.
+
+When("it has a non-numeric max", function() {
+  this.settings.max = "max";
+});
+
+// The max is valid.
+When("it has a valid max", function() {
+  this.settings.max = 20;
+});
+
+/** Default Value **/
+// Scenario: The default value isn't set.
+When("it has no default value", function() {
+  this.settings.default_value = undefined;
+});
+
+// Scenario: The default value isn't numeric.
+When("it has a non-numeric default value", function() {
+  this.settings.default_value = "Bub";
+});
+
+// The default value is valid.
+When("it has a valid default value", function() {
+  this.settings.default_value = 5;
+});
+
+/** Step Size **/
+// Scenario: The step size isn't set.
+When("it has no step size", function() {
+  this.settings.step_size = undefined;
+});
+
+// The step size is valid.
+When("it has a valid step size", function() {
+  this.settings.step_size = 0;
+});
+
+// Scenario: The step size isn't numeric.
+When("it has a non-numeric step size", function() {
+  this.settings.step_size = "Bub";
+});
+
+/** Label **/
+// Scenario: The label isn't set.
+When("it has no label", function() {
+  this.settings.label = undefined;
+});
+
+/** Precision **/
+// Scenario: The precision isn't set.
+When("it has no precision", function() {
+  this.settings.precision = undefined;
+});
+
+// Scenario: The precision isn't an integer.
+When("it has a non-integer precision", function() {
+  this.settings.precision = 5.5;
+});
+
+// Scenario: The precision is valid.
+When("it has a valid precision", function() {
+
+});
+
+// slider div
+// Scenario: The slider div is invalid
+When("it has an invalid slider div", function() {
+  this.settings.slider_div = "some id";
+});
+
+Then("the invalid id should raise an exception.", function() {
+  expect(this.settings.check_rep.bind(this.settings)).to.throw(Error);
+});
+
+// caption div
+// Scenario: The caption div is invalid
+When("it has an invalid caption div", function() {
+  this.settings.caption_div = "some id";
+});
+#+end_src
 ** The Slider Settings
 #+begin_src js :noweb-ref slider-settings-class
 class SliderSettings {
   constructor(min, max, default_value, step_size,
               label, precision,
-              slider_div, caption_div, document) {
+              slider_div, caption_div,
+              validator, document) {
     this.min = min;
     this.max = max;
     this.default_value = default_value;
@@ -135,42 +639,19 @@ class SliderSettings {
     this.precision = precision;
     this.slider_div = slider_div;
     this.caption_div = caption_div;
+    this.confirm = validator;
     this.document = document;
   }; // constructor
 
-  throw_non_number(identifier, actual) {
-    if ((!actual && actual !== 0) || isNaN(actual)) {
-      throw Error(`"${identifier}" must be a number not "${actual}"`);
-    };
-  }; // throw_non_number
-
-  throw_not_set(identifier, actual) {
-    if (!actual) {
-      throw Error(`"${identifier} must be set, not "${actual}"`)
-    };
-  } // throw_not_set
-
-  throw_not_integer(identifier, actual) {
-    if (!Number.isInteger(actual)) {
-      throw Error(`"${identifier}" must be an integer, not ${actual}`);
-    };
-  }; // throw_not_integer
-
-  throw_invalid_id(identifier, actual_id) {
-    if (this.document.getElementById(actual_id) === null) {
-      throw Error(`"${identifier}" isn't a valid ID - "${actual_id}"`);
-    };
-  }; // throw_invalid_id
-  
   check_rep(){
-    this.throw_non_number("min", this.min);
-    this.throw_non_number("max", this.max);
-    this.throw_non_number("default_value", this.default_value);
-    this.throw_non_number("step_size", this.step_size);
-    this.throw_not_set("label", this.label);
-    this.throw_not_integer("precision", this.precision);
-    this.throw_invalid_id("slider_div", this.slider_div);
-    this.throw_invalid_id("caption_div", this.caption_div);
+    this.confirm.is_a_number("min", this.min);
+    this.confirm.is_a_number("max", this.max);
+    this.confirm.is_a_number("default_value", this.default_value);
+    this.confirm.is_a_number("step_size", this.step_size);
+    this.confirm.is_set("label", this.label);
+    this.confirm.is_an_integer("precision", this.precision);
+    this.confirm.is_an_element_id("slider_div", this.slider_div);
+    this.confirm.is_an_element_id("caption_div", this.caption_div);
   }; // check_rep
 }; // SliderSettings
 #+end_src
