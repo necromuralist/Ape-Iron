@@ -8,7 +8,6 @@ import { JSDOM } from "jsdom";
 import { Validator } from "../../../../javascript/validator.js"
 
 // a fake document
-
 const VALID_ID = "validator-id";
 
 const document = new JSDOM(`
@@ -19,7 +18,6 @@ const document = new JSDOM(`
 </body>
 </html>
 `).window.document;
-
 
 Given("a Validator", function() {
   this.validate = new Validator(document);
@@ -90,19 +88,32 @@ When("is_set is given an undefined variable", function() {
 
 When("is_an_integer is given a variable with an integer", function() {
   this.validate.is_an_integer("is-integer", faker.number.int());
+  this.validate.is_an_integer("is-integer", 1.0);
 });
 
 // Then nothing happens
 
 // Given a Validator
 
-When("is_an_integer is given a variable that has something other than an integer", function() {
+When("is_an_integer is given a string", function() {
   this.bad_call = function() {
     this.validate.is_an_integer("not-integer", `${faker.number.int()}`);
   };
 });
 
 // Then it throws an Error.
+
+// Given a Validator
+
+When("is_an_integer is given a float", function() {
+  this.bad_call = function() {
+    this.validator.is_an_integer("float-not-integer", 5.5);
+  };
+});
+
+// Then it throws an Error.
+
+// Given a Validator
 
 When("an expected integer wasn't set", function() {
   this.bad_call = function() {
@@ -112,11 +123,15 @@ When("an expected integer wasn't set", function() {
 
 // Then it throws an Error.
 
+// Given a Validator
+
 When("is_an_element_id is given a valid element ID", function() {
   this.validate.is_an_element_id("good-id", VALID_ID);
 });
 
 // Then nothing happens.
+
+// Given a Validator
 
 When("is_an_element is given an invalid element ID", function() {
   this.bad_call = function() {

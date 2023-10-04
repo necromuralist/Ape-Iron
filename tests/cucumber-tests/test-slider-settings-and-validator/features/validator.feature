@@ -40,10 +40,16 @@ Given a Validator
 When is_an_integer is given a variable with an integer
 Then nothing happens.
 
-Scenario: The variable doesn't have an integer
+Scenario: The variable has a string
 
 Given a Validator
-When is_an_integer is given a variable that has something other than an integer
+When is_an_integer is given a string
+Then it throws an Error.
+
+Scenario: "is_an_integer" is given a float.
+
+Given a Validator
+When is_an_integer is given a float
 Then it throws an Error.
 
 Scenario: A valid ID is given.
