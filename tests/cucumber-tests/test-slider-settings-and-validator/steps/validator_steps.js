@@ -8,6 +8,7 @@ import { JSDOM } from "jsdom";
 import { Validator } from "../../../../javascript/validator.js"
 
 // a fake document
+
 const VALID_ID = "validator-id";
 
 const document = new JSDOM(`
@@ -23,6 +24,8 @@ const document = new JSDOM(`
 Given("a Validator", function() {
   this.validate = new Validator(document);
 });
+  
+// Given a Validator
 
 When("is_a_number is given a number", function() {
   this.validate.is_a_number("good-number", faker.number.float());
@@ -31,8 +34,10 @@ When("is_a_number is given a number", function() {
 
 Then("nothing happens.", function() {});
 
+// Given a Validator
+
 When("an expected number isn't actually a number", function() {
-  this.bad_call = function() {
+  this.bad_call = function() {    
       this.validate.is_a_number("bad-number", faker.lorem.word());
   };
 });
@@ -40,6 +45,8 @@ When("an expected number isn't actually a number", function() {
 Then("it throws an Error.", function() {
   expect(this.bad_call.bind(this)).to.throw(Error);
 });
+
+// Given a Validator
 
 When("an expected number isn't assigned", function() {
   this.bad_call = function() {
@@ -49,14 +56,17 @@ When("an expected number isn't assigned", function() {
 
 // Then it throws an error
 
+// Given a Validator
+
 When("is_set is given a variable that's set", function() {
-  const variable = faker.lorem.word();
-  this.validate.is_set("set-variable", variable);
+  this.validate.is_set("set-variable", faker.lorem.word());
   this.validate.is_set("set-variable", 0);
   this.validate.is_set("set-variable", false);
 });
 
 // Then nothing happens.
+
+// Given a Validator
 
 When("is_set is given an empty variable", function() {
   this.bad_call = function() {
@@ -66,6 +76,8 @@ When("is_set is given an empty variable", function() {
 
 // Then it throws an Error.
 
+// Given a Validator
+
 When("is_set is given an undefined variable", function() {
   this.bad_call = function() {
     this.validate.is_set(undefined);
@@ -74,14 +86,19 @@ When("is_set is given an undefined variable", function() {
 
 // Then it throws an Error.
 
+// Given a Validator
+
 When("is_an_integer is given a variable with an integer", function() {
   this.validate.is_an_integer("is-integer", faker.number.int());
 });
+
 // Then nothing happens
+
+// Given a Validator
 
 When("is_an_integer is given a variable that has something other than an integer", function() {
   this.bad_call = function() {
-    this.validate.is_an_integer("not-integer", "5");
+    this.validate.is_an_integer("not-integer", `${faker.number.int()}`);
   };
 });
 

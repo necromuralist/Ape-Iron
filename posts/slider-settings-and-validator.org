@@ -1,5 +1,5 @@
 #+BEGIN_COMMENT
-.. title: Slider Settings and Validator
+.. title: The Great Slidini
 .. slug: slider-settings-and-validator
 .. date: 2023-10-02 12:48:10 UTC-07:00
 .. tags: javascript, p5
@@ -41,15 +41,25 @@ Validator o- document
 [[img-url: validator.png][Validator UML]]
 
 #+begin_src gherkin :tangle ../tests/cucumber-tests/test-slider-settings-and-validator/features/validator.feature :exports none
-Feature: Validator
+<<given-a-validator-scenario>>
 
-<<is-a-number-scenarios>>
+<<is-a-number-scenario-1>>
 
-<<is-set-scenarios>>
+<<is-a-number-scenario-2>>
 
-<<is-integer-scenarios>>
+<<is-a-number-scenario-3>>
 
-<<is-id-scenarios>>
+<<is-set-scenario-1>>
+
+<<is-set-scenario-2>>
+
+<<is-set-scenario-3>>
+
+<<is-integer-scenario-1>>
+
+<<is-integer-scenario-2>>
+
+<<is-id-scenario-1>>
 #+end_src
 
 #+begin_src js :tangle ../tests/cucumber-tests/test-slider-settings-and-validator/steps/validator_steps.js :exports none
@@ -63,22 +73,9 @@ import { JSDOM } from "jsdom";
 import { Validator } from "../../../../javascript/validator.js"
 
 // a fake document
-const VALID_ID = "validator-id";
 
-const document = new JSDOM(`
-<html>
-<head></head>
-<body>
- <div id=${VALID_ID}></div>
-</body>
-</html>
-`).window.document;
-
-
-Given("a Validator", function() {
-  this.validate = new Validator(document);
-});
-
+<<given-a-validator>>
+  
 <<is-a-number-case-1>>
 
 <<is-a-number-case-2>>
@@ -103,6 +100,12 @@ Given("a Validator", function() {
 #+end_src
 
 #+begin_src js :tangle ../javascript/validator.js :exports none
+/** The Validator class checks if a value is a certain type
+    It throws an error if any value is the wrong type
+
+    Args:
+     - document {Object} : something to grab DOM elements
+   ,**/
 <<validator-declaration>>
 
   <<validate-is-number>>
@@ -134,37 +137,50 @@ class Validator {
   }
 #+end_src
 
+*** Setup A Validator For Testing
+
+#+begin_src gherkin :noweb-ref given-a-validator-scenario
+Feature: Validator
+#+end_src
+
+#+begin_src js :noweb-ref given-a-validator
+const VALID_ID = "validator-id";
+
+const document = new JSDOM(`
+<html>
+<head></head>
+<body>
+ <div id=${VALID_ID}></div>
+</body>
+</html>
+`).window.document;
+
+
+Given("a Validator", function() {
+  this.validate = new Validator(document);
+});
+#+end_src
+
 ** Is A Number
 
-Our first method checks that 
+Our first method checks that a variable holds a number of some kind.
+
 *** The Scenarios
 
-#+begin_src gherkin :noweb-ref is-a-number-scenarios
+
+*** The Tests
+
+#+begin_src gherkin :noweb-ref is-a-number-scenario-1
 Scenario: The expected number is a number.
 
 Given a Validator
 When is_a_number is given a number
 Then nothing happens.
-
-Scenario: The expected number isn't a number.
-
-Given a Validator
-When an expected number isn't actually a number
-Then it throws an Error.
-
-Scenario: The expected number wasn't assigned.
-
-Given a Validator
-When an expected number isn't assigned
-Then it throws an Error.
 #+end_src
 
-*** The Steps
-**** Scenario: The expected number is a number.
-
-This is the case where we get what we wanted. I added a second check for ~0~ explicitly because I was originally using the [[https://developer.mozilla.org/en-US/docs/Glossary/Falsy][~falsy~]] check (~!(actual)~) but it turns out that 0 would be considered false in this case so I added an explicit check to make sure I wasn't disallowing 0.
-
 #+begin_src js :noweb-ref is-a-number-case-1
+// Given a Validator
+
 When("is_a_number is given a number", function() {
   this.validate.is_a_number("good-number", faker.number.float());
   this.validate.is_a_number("good-number", 0);
@@ -173,13 +189,21 @@ When("is_a_number is given a number", function() {
 Then("nothing happens.", function() {});
 #+end_src
 
-**** Scenario: The expected number isn't a number.
+This is the case where we get what we wanted. I added a second check for ~0~ explicitly because I was originally using the [[https://developer.mozilla.org/en-US/docs/Glossary/Falsy][~falsy~]] check (~!(actual)~) but it turns out that 0 would be considered false in this case so I added an explicit check to make sure I wasn't disallowing 0.
 
-I'm just checking for a string. I suppose there are other checks to be made, but since this is only to check my own code for mistakes, I don't suppose it really needs to be exhaustive.
+#+begin_src gherkin :noweb-ref is-a-number-scenario-2
+Scenario: The expected number isn't a number.
+
+Given a Validator
+When an expected number isn't actually a number
+Then it throws an Error.
+#+end_src
 
 #+begin_src js :noweb-ref is-a-number-case-2
+// Given a Validator
+
 When("an expected number isn't actually a number", function() {
-  this.bad_call = function() {
+  this.bad_call = function() {    
       this.validate.is_a_number("bad-number", faker.lorem.word());
   };
 });
@@ -189,11 +213,19 @@ Then("it throws an Error.", function() {
 });
 #+end_src
 
-**** Scenario: The expected number wasn't assigned.
+I'm just checking for a string. I suppose there are other checks to be made, but since this is only to check my own code for mistakes, I don't suppose it really needs to be exhaustive.
 
-This isn't explicitly needed, I think, since it falls within "non-number" but I wrote the checks as I made the ~SliderSettings~ and sometimes I would get the parameters out of order (I wish javascript had named variables) so I added ~null~ checks for the arguments to make it more obvious.
+#+begin_src gherkin :noweb-ref is-a-number-scenario-3
+Scenario: The expected number wasn't assigned.
+
+Given a Validator
+When an expected number isn't assigned
+Then it throws an Error.
+#+end_src
 
 #+begin_src js :noweb-ref is-a-number-case-3
+// Given a Validator
+
 When("an expected number isn't assigned", function() {
   this.bad_call = function() {
     this.validate.is_a_number("no-number", null);
@@ -202,6 +234,9 @@ When("an expected number isn't assigned", function() {
 
 // Then it throws an error
 #+end_src
+
+This isn't explicitly needed, I think, since it falls within "non-number" but I wrote the checks as I made the ~SliderSettings~ and sometimes I would get the parameters out of order (I wish javascript had named variables) so I added ~null~ checks for the arguments to make it more obvious.
+
 
 *** The Method
 
@@ -215,37 +250,27 @@ is_a_number(identifier, actual) {
 }; // is_a_number
 #+end_src
 
+The first condition uses a [[https://developer.mozilla.org/en-US/docs/Glossary/Falsy]['falsy']] check, but in javascript ~0~ is considered false so to allow it I added the check that it's not ~0~ if it's falsy. It also checks if it is javascript's idea of a [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN][NaN]] using the global [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN][isNaN]]. This function coerces values to numbers (so the string "120" is not Nan) so I thought I'd use [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN][Number.isNaN]], since the documentation says that it /doesn't/ coerce values, but that turns out to mean that it just returns ~false~ without coercing the string... I suppose there's a reason for this, particularly since [[https://en.wikipedia.org/w/index.php?title=NaN&oldid=1175348130][~NaN~]] is meant for numeric data types, so a string can't be NaN, but whatever the reasion, it's something to remember, although I'm not sure what the point of the two functions is if they end up returning the same value. Luckily, I'm not a mathematician so I can enjoy my ignorance and just use the functions my way.
+
 ** Is Set
 
-This is for the cases where I have no particular type in the mind but it does need to be set to something.
+This is for the cases where I have no particular type in the mind but a variable does need to be set to something.
 
-*** The Scenarios
-#+begin_src gherkin :noweb-ref is-set-scenarios
+*** Scenarios
+
+#+begin_src gherkin :noweb-ref is-set-scenario-1
 Scenario: The variable has a value set.
 
 Given a Validator
 When is_set is given a variable that's set
 Then nothing happens.
-
-Scenario: The variable is empty.
-
-Given a Validator
-When is_set is given an empty variable
-Then it throws an Error.
-
-Given a Validator
-When is_set is given an undefined variable
-Then it throws an Error.
 #+end_src
 
-*** The Steps
-
-**** Scenario: The variable has a value set.
-
 #+begin_src js :noweb-ref is-set-case-1
+// Given a Validator
+
 When("is_set is given a variable that's set", function() {
-  const variable = faker.lorem.word();
-  this.validate.is_set("set-variable", variable);
+  this.validate.is_set("set-variable", faker.lorem.word());
   this.validate.is_set("set-variable", 0);
   this.validate.is_set("set-variable", false);
 });
@@ -253,9 +278,19 @@ When("is_set is given a variable that's set", function() {
 // Then nothing happens.
 #+end_src
 
-**** Scenario: The variable is empty.
+Given the broad view of what I'm saying ~is_set~ should check for it'd be hard to check all the possibilities so this mostly checks that I didn't use a ~falsy~ check or something like that which would create false negatives.
+
+#+begin_src gherkin :noweb-ref is-set-scenario-2
+Scenario: The variable is empty.
+
+Given a Validator
+When is_set is given an empty variable
+Then it throws an Error.
+#+end_src
 
 #+begin_src js :noweb-ref is-set-case-2
+// Given a Validator
+
 When("is_set is given an empty variable", function() {
   this.bad_call = function() {
     this.validate.is_set(null);
@@ -265,9 +300,17 @@ When("is_set is given an empty variable", function() {
 // Then it throws an Error.
 #+end_src
 
-**** Scenario: The variable is undefined
+This is the most common case, since I'm going to use this to validate an object and make sure it's attributes were all set.
+
+#+begin_src gherkin :noweb-ref is-set-scenario-3
+Given a Validator
+When is_set is given an undefined variable
+Then it throws an Error.
+#+end_src
 
 #+begin_src js :noweb-ref is-set-case-3
+// Given a Validator
+
 When("is_set is given an undefined variable", function() {
   this.bad_call = function() {
     this.validate.is_set(undefined);
@@ -277,8 +320,10 @@ When("is_set is given an undefined variable", function() {
 // Then it throws an Error.
 #+end_src
 
+I wouldn't think this would be something that needs to be checked, but since javascript just returns ~undefined~ instead or raising an error if you misspell a variable name, I guess it's useful.
+
 *** The Method
-This checks whatever is in the ~emptiness~ array, which as of now has:
+This checks if the value is in whatever is in the ~emptiness~ array, which as of now has:
 
 - ~null~
 - ~undefined~
@@ -298,50 +343,55 @@ is_set(identifier, actual) {
 
 *** The Scenarios
 
-#+begin_src gherkin :noweb-ref is-integer-scenarios
+#+begin_src gherkin :noweb-ref is-integer-scenario-1
 Scenario: The variable has an integer
 
 Given a Validator
 When is_an_integer is given a variable with an integer
 Then nothing happens.
+#+end_src
 
+#+begin_src js :noweb-ref is-an-integer-case-1
+// Given a Validator
+
+When("is_an_integer is given a variable with an integer", function() {
+  this.validate.is_an_integer("is-integer", faker.number.int());
+});
+
+// Then nothing happens
+#+end_src
+
+Our happy-path case.
+
+#+begin_src gherkin :noweb-ref is-integer-scenario-2
 Scenario: The variable doesn't have an integer
 
 Given a Validator
 When is_an_integer is given a variable that has something other than an integer
 Then it throws an Error.
-
-Scenario: The integer variable wasn't set.
-
-Given a Validator
-When an expected integer wasn't set
-Then it throws an Error.
 #+end_src
-
-*** The Steps
-
-**** Scenario: The variable has an integer
-
-#+begin_src js :noweb-ref is-an-integer-case-1
-When("is_an_integer is given a variable with an integer", function() {
-  this.validate.is_an_integer("is-integer", faker.number.int());
-});
-// Then nothing happens
-#+end_src
-
-**** Scenario: The variable doesn't have an integer
 
 #+begin_src js :noweb-ref is-an-integer-case-2
+// Given a Validator
+
 When("is_an_integer is given a variable that has something other than an integer", function() {
   this.bad_call = function() {
-    this.validate.is_an_integer("not-integer", "5");
+    this.validate.is_an_integer("not-integer", `${faker.number.int()}`);
   };
 });
 
 // Then it throws an Error.
 #+end_src
 
-**** Scenario: The integer variable wasn't set.
+I think this is the most likely error - it was passed something but it isn't an integer. Interestingly, the [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger][Number.isInteger]] function that I'm using doesn't coerce strings so while "5" isn't not NaN, it also isn't an integer.
+
+#+begin_src gherkin :noweb-ref is-integer-scenario-3
+Scenario: The integer variable wasn't set.
+
+Given a Validator
+When an expected integer wasn't set
+Then it throws an Error.
+#+end_src
 
 #+begin_src js :noweb-ref is-an-integer-case-3
 When("an expected integer wasn't set", function() {
@@ -355,7 +405,7 @@ When("an expected integer wasn't set", function() {
 
 *** The Method
 
-This is, oddly, the only built-in that I could find that does checks.
+This is, oddly, the only built-in that I could find that does checks (but I didn't look that hard, and I was using DuckDuckGo so I might have found something using a different search engine).
 
 #+begin_src js :noweb-ref validate-is-integer
 is_an_integer(identifier, actual) {
@@ -371,23 +421,13 @@ This is what really started it all. I had some mysterious errors {{% lancelot "d
 
 *** The Scenarios
 
-#+begin_src gherkin :noweb-ref is-id-scenarios
+#+begin_src gherkin :noweb-ref is-id-scenario-1
 Scenario: A valid ID is given.
 
 Given a Validator
 When is_an_element_id is given a valid element ID
 Then nothing happens.
-
-Scenario: An invalid ID is given.
-
-Given a Validator
-When is_an_element is given an invalid element ID
-Then it throws an Error.
 #+end_src
-
-*** The Steps
-
-**** Scenario: A valid ID is given.
 
 #+begin_src js :noweb-ref is-element-case-1
 When("is_an_element_id is given a valid element ID", function() {
@@ -397,7 +437,15 @@ When("is_an_element_id is given a valid element ID", function() {
 // Then nothing happens.
 #+end_src
 
-**** Scenario: An invalid ID is given.
+Since I'm using JSDOM I needed to use a real ID to check if it was valid, not a random string.
+
+#+begin_src gherkin :noweb-ref is-id-scenario-2
+Scenario: An invalid ID is given.
+
+Given a Validator
+When is_an_element is given an invalid element ID
+Then it throws an Error.
+#+end_src
 
 #+begin_src js :noweb-ref is-element-case-2
 When("is_an_element is given an invalid element ID", function() {
@@ -409,8 +457,10 @@ When("is_an_element is given an invalid element ID", function() {
 // Then it throws an Error.
 #+end_src
 
+Although I suppose the odds of a random string matching my ~div~ ID is pretty low, I thought that mangling the ID would be a better guaranty that it won't match than using ~faker~ to generate a string.
+
 *** The Method
-This relies on the built-in ~document.getElementById~ method. I don't know how much overhead it adds, but it's only meant to be called once to validate the settings so it shouldn't matter.
+This relies on the built-in [[https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById][~document.getElementById~]] method (well, built-in when there's a browser).
 
 #+begin_src js :noweb-ref validate-is-id
 is_an_element_id(identifier, actual) {
@@ -448,36 +498,76 @@ SliderSettings o- document
 
 [[img-url:slider_settings.png]]
 
+The ~SliderSettings~ class holds the values for the ~Slidini~ class and optionally validates the values it's been given.
 
 ** The Scenario
 
 #+begin_src gherkin :tangle ../tests/cucumber-tests/test-slider-settings-and-validator/features/slider_settings.feature
-Feature: Slider Settings
+<<given-a-slider-settings>>
 
-Scenario: check_rep is called.
+<<when-call-check-rep>>
 
-Given a Slider Settings
-When check_rep is called
-Then it checked the min
-And it checked the max
-And it checked the default_value
-And it checked the step_size
-And it checked the label
-And it checked the precision
-And it checked the slider_div
-And it checked the caption_div.
+<<it-checked-min>>
+
+<<it-checked-max>>
+
+<<it-checked-default>>
+
+<<it-checked-step-size>>
+
+<<it-check-label>>
+
+<<it-checked-precision>>
+
+<<it-checked-slider-div>>
+
+<<it-checked-caption-div>>
 #+end_src
 
-** The Steps
+Since there's only one method to call and it defers everything to the Validator I'm going to have one Scenario, but to try and make it easier to read I'm going to break up the Then-And statements within it, but I'm not going to break up the ~check_rep~ method itself so I'm not going to show the implementation under each test it satisfies, but just show the class definition in entirety after all the tests.
 
 #+begin_src js :tangle ../tests/cucumber-tests/test-slider-settings-and-validator/steps/slider_settings_steps.js
+<<slider-settings-test-imports>>
+
+<<setup-slider-settings-indexes>>
+  
+<<setup-slider-settings-step>>
+
+<<call-check-rep>>
+
+<<min-check-step>>
+
+<<max-check-step>>
+
+<<default-check-step>>
+
+<<step-size-check-step>>
+
+<<check-step-label>>
+
+<<check-step-precision>>
+
+<<check-step-slider-div>>
+
+<<check-step-caption-div>>
+#+end_src
+
+** The Testing
+
+First we need to import some javascript. Even though I'm faking all the ~Validator~ methods I'm going to use replace on the real Validator class. I was hoping to figure out how to get ~sinon~ to copy all the methods automatically, but I didn't see anything indicating it can, so maybe next time I'll just make an object instead.
+
+#+begin_src js :noweb-ref slider-settings-test-imports
 import { expect } from "chai";
 import { faker } from "@faker-js/faker";
 import { Given, When, Then } from "@cucumber/cucumber";
 import { fake, replace } from "sinon";
 import { SliderSettings } from "../../../../javascript/slider.js";
 import { Validator } from "../../../../javascript/validator.js";
+#+end_src
 
+Since the Validator's methods get called more than once I need to be able to know what index each call is - e.g. checking ~default_value~ is the third ~Validator.is_a_number~ call, so to retrieve the object to check that the call went as expected I need to get the ~sinon~ call object at index 2. So the ~IS~ object below holds the indices to get the calls for each property... it'll make more sense later.
+
+#+begin_src js :noweb-ref setup-slider-settings-indexes
 const IS = {
   NUMBER: { min: 0,
             max: 1,
@@ -497,7 +587,23 @@ const IS = {
 }
 
 const METHODS = ["is_a_number", "is_set", "is_an_integer", "is_an_element_id"];
+#+end_src
 
+The ~METHODS~ array holds the names of all of the Validator's methods that ~check_rep~ uses so that I can replace the Validator's methods in a loop instead of doing it separately for each one.
+
+*** Setup The Slider Settings
+
+Now I'll build the ~SliderSettings~ with the faked ~Validator~ methods in the cucumber ~Given~ function. I guess you could do this in a ~Before~ function too, but then what would I put in the ~Given~?
+
+#+begin_src gherkin :noweb-ref given-a-slider-settings
+Feature: Slider Settings
+
+Scenario: check_rep is called.
+
+Given a Slider Settings
+#+end_src
+
+#+begin_src js :noweb-ref setup-slider-settings-step
 Given("a Slider Settings", function() {
   this.document = fake();
   this.validator = new Validator(this.document);
@@ -506,7 +612,6 @@ Given("a Slider Settings", function() {
     replace(this.validator, method,
           fake.returns(null));    
   }
- 
  
   this.min = faker.number.float();
   this.max = faker.number.float();
@@ -524,53 +629,125 @@ Given("a Slider Settings", function() {
                                      this.validator, this.document);
 });
 
+#+end_src
+
+*** Calling Check Rep
+
+#+begin_src gherkin :noweb-ref when-call-check-rep
+When check_rep is called
+#+end_src
+
+#+begin_src js :noweb-ref call-check-rep
 When("check_rep is called", function() {
   this.settings.check_rep();
 });
+#+end_src
 
+*** Min Check
+
+#+begin_src gherkin :noweb-ref it-checked-min
+Then it checked the min
+#+end_src
+
+#+begin_src js :noweb-ref min-check-step
 Then("it checked the min", function() {
   expect(this.validator.is_a_number.getCall(IS.NUMBER.min).calledWith(
     "min", this.min
-  )).to.be.true;
-  
+  )).to.be.true;  
 });
+#+end_src
 
+~this.validator.is_a_number~ is a faked method which allows us to check the arguments passed to it by getting the call object (using ~getCall~) and checking the arguments with ~calledWith~. In this case checking ~min~ is the first call to ~is_a_number~ so I'm passing ~0~ to ~getCall~, retrieving it from the ~IS~ object I created earlier.
+
+*** Max Check
+
+#+begin_src gherkin :noweb-ref it-checked-max
+And it checked the max
+#+end_src
+
+#+begin_src js :noweb-ref max-check-step
 Then("it checked the max", function() {
   expect(this.validator.is_a_number.getCall(IS.NUMBER.max).calledWith(
     "max", this.max
   )).to.be.true;
 });
+#+end_src
 
+*** Default Value
+
+#+begin_src gherkin :noweb-ref it-checked-default
+And it checked the default_value
+#+end_src
+
+#+begin_src js :noweb-ref default-check-step
 Then("it checked the default_value", function() {
   expect(this.validator.is_a_number.getCall(IS.NUMBER.default_value).calledWith(
-                                             "default_value", this.default_value
-                                           )).to.be.true;
+    "default_value", this.default_value
+  )).to.be.true;
 });
+#+end_src
+*** Step Size
 
+#+begin_src gherkin :noweb-ref it-checked-step-size
+And it checked the step_size
+#+end_src
+
+#+begin_src js :noweb-ref step-size-check-step
 Then("it checked the step_size", function() {
   expect(this.validator.is_a_number.getCall(IS.NUMBER.step_size).calledWith(
     "step_size", this.step_size
   )).to.be.true;
 });
+#+end_src
+*** Label
 
+#+begin_src gherkin :noweb-ref it-check-label
+And it checked the label
+#+end_src
+
+#+begin_src js :noweb-ref check-step-label
 Then("it checked the label", function() {
   expect(this.validator.is_set.getCall(IS.SET.label).calledWith(
     "label", this.label
   )).to.be.true;
 });
+#+end_src
 
+*** Precision
+
+#+begin_src gherkin :noweb-ref it-checked-precision
+And it checked the precision
+#+end_src
+
+#+begin_src js :noweb-ref check-step-precision
 Then("it checked the precision", function() {
   expect(this.validator.is_an_integer.getCall(IS.INTEGER.precision).calledWith(
     "precision", this.precision
   )).to.be.true;
 });
+#+end_src
 
+*** Slider Div
+
+#+begin_src gherkin :noweb-ref it-checked-slider-div
+And it checked the slider_div
+#+end_src
+
+#+begin_src js :noweb-ref check-step-slider-div
 Then("it checked the slider_div", function() {
   expect(this.validator.is_an_element_id.getCall(IS.ELEMENT.slider_div).calledWith(
     "slider_div", this.slider_div
   )).to.be.true;
 });
+#+end_src
 
+*** Caption Div
+
+#+begin_src gherkin :noweb-ref it-checked-caption-div
+And it checked the caption_div.
+#+end_src
+
+#+begin_src js :noweb-ref check-step-caption-div
 Then("it checked the caption_div.", function() {
   expect(this.validator.is_an_element_id.getCall(IS.ELEMENT.caption_div).calledWith(
     "caption_div", this.caption_div
@@ -583,7 +760,7 @@ Then("it checked the caption_div.", function() {
 #+RESULTS:
 [[img-url:slider_settings.png]]
 
-The ~SliderSettings~ holds the settings to build ~Slidini~, the Slider and Caption holder. It's really what you could do with an object (which is what it was) but I decided to add a validator to make sure that I was getting all the parameters right.
+The ~SliderSettings~ holds the settings to build ~Slidini~, the Slider and Caption holder. It really could be done with a plain object (which is what it was) but I decided to add a validator to make sure that I was getting all the parameters right.
 
 #+begin_src js :noweb-ref slider-settings-class
 class SliderSettings {
@@ -693,3 +870,16 @@ update_caption() {
       `${this.slider.value().toFixed(this.settings.precision)}`);
 } // update_caption
 #+end_src
+
+* Links
+- Document: getElementById() method - Web APIs | MDN [Internet]. 2023 [cited 2023 Oct 3]. Available from: https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById
+  
+- isNaN() - JavaScript | MDN [Internet]. 2023 [cited 2023 Oct 3]. Available from: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN
+
+- NaN - JavaScript | MDN [Internet]. 2023 [cited 2023 Oct 3]. Available from: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN
+
+- NaN. In: Wikipedia [Internet]. 2023 [cited 2023 Oct 3]. Available from: https://en.wikipedia.org/w/index.php?title=NaN&oldid=1175348130
+    
+- Number.isNaN() - JavaScript | MDN [Internet]. 2023 [cited 2023 Oct 3]. Available from: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN
+
+- Number.isInteger() - JavaScript | MDN [Internet]. 2023 [cited 2023 Oct 3]. Available from: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger

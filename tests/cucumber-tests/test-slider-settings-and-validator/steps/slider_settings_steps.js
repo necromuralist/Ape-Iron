@@ -24,7 +24,7 @@ const IS = {
 }
 
 const METHODS = ["is_a_number", "is_set", "is_an_integer", "is_an_element_id"];
-
+  
 Given("a Slider Settings", function() {
   this.document = fake();
   this.validator = new Validator(this.document);
@@ -33,7 +33,6 @@ Given("a Slider Settings", function() {
     replace(this.validator, method,
           fake.returns(null));    
   }
- 
  
   this.min = faker.number.float();
   this.max = faker.number.float();
@@ -51,6 +50,7 @@ Given("a Slider Settings", function() {
                                      this.validator, this.document);
 });
 
+
 When("check_rep is called", function() {
   this.settings.check_rep();
 });
@@ -58,8 +58,7 @@ When("check_rep is called", function() {
 Then("it checked the min", function() {
   expect(this.validator.is_a_number.getCall(IS.NUMBER.min).calledWith(
     "min", this.min
-  )).to.be.true;
-  
+  )).to.be.true;  
 });
 
 Then("it checked the max", function() {
@@ -70,8 +69,8 @@ Then("it checked the max", function() {
 
 Then("it checked the default_value", function() {
   expect(this.validator.is_a_number.getCall(IS.NUMBER.default_value).calledWith(
-                                             "default_value", this.default_value
-                                           )).to.be.true;
+    "default_value", this.default_value
+  )).to.be.true;
 });
 
 Then("it checked the step_size", function() {

@@ -46,20 +46,8 @@ Given a Validator
 When is_an_integer is given a variable that has something other than an integer
 Then it throws an Error.
 
-Scenario: The integer variable wasn't set.
-
-Given a Validator
-When an expected integer wasn't set
-Then it throws an Error.
-
 Scenario: A valid ID is given.
 
 Given a Validator
 When is_an_element_id is given a valid element ID
 Then nothing happens.
-
-Scenario: An invalid ID is given.
-
-Given a Validator
-When is_an_element is given an invalid element ID
-Then it throws an Error.

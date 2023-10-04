@@ -1,3 +1,9 @@
+/** The Validator class checks if a value is a certain type
+    It throws an error if any value is the wrong type
+
+    Args:
+     - document {Object} : something to grab DOM elements
+   **/
 class Validator {
   emptiness = [null, undefined, NaN];
 
