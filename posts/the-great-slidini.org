@@ -1,0 +1,97 @@
+#+BEGIN_COMMENT
+.. title: The Great Slidini
+.. slug: the-great-slidini
+.. date: 2023-10-04 16:37:02 UTC-07:00
+.. tags: javascript, p5
+.. category: Javascript
+.. link: 
+.. description: A composer of slider and caption for posts.
+.. type: text
+.. status: 
+.. updated: 
+
+#+END_COMMENT
+#+OPTIONS: ^:{}
+#+TOC: headlines 2
+* Slidini
+#+begin_src js :tangle ../javascript/slidini.js :exports none
+<<slidini>>
+
+  <<slidini-constructor>>
+
+  <<slidini-get-slider>>
+
+  <<slidini-get-caption>>
+
+  <<slidini-update-caption>>
+
+export { Slidini }
+#+end_src
+
+** The Class Declaration
+#+begin_src js :noweb-ref slidini
+class Slidini {
+  _slider = null;
+  _caption = null;
+#+end_src
+
+** The Constructor
+
+#+begin_src js :noweb-ref slidini-constructor
+constructor(settings, p5) {
+  this.settings = settings;
+  this.p5 = p5;
+} // constructor
+#+end_src
+
+** The Slider
+
+#+begin_src js :noweb-ref slidini-get-slider
+get slider() {
+  if (this._slider === null) {
+    // create the slider
+    this._slider = this.p5.createSlider(
+      this.settings.min,
+      this.settings.max,
+      this.settings.default_value,
+      this.settings.step_size,
+    );
+
+    // attach it to the div tag
+    this._slider.parent(this.settings.slider_div);
+
+    // set the callback to change label on update
+    this._slider.input(() => this.update_caption());
+
+    // add the label to the slider
+    this.update_caption();
+  }
+  return this._slider;
+}
+#+end_src
+
+** The Caption
+
+#+begin_src js :noweb-ref slidini-get-caption
+get caption() {
+  if (this._caption === null) {
+    this._caption = this.p5.select(this.settings.caption_div);
+  }
+  return this._caption;
+}
+#+end_src
+
+** The Caption Updater
+
+#+begin_src js :noweb-ref slidini-update-caption
+update_caption() {
+  this.caption.html(
+    `${this.settings.label}: ` +
+      `${this.slider.value().toFixed(this.settings.precision)}`);
+} // update_caption
+#+end_src
+
+* Links
+** Related Posts
+
+ - {{% doc %}}slider-settings-and-validator{{% /doc %}}
