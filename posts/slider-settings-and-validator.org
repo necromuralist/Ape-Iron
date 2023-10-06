@@ -1,5 +1,5 @@
 #+BEGIN_COMMENT
-.. title: Slider Settings
+.. title: Slider and Caption Settings
 .. slug: slider-settings-and-validator
 .. date: 2023-10-02 12:48:10 UTC-07:00
 .. tags: javascript, p5
@@ -17,7 +17,10 @@
 #+begin_src js :tangle ../javascript/slider.js :exports none
 <<slider-settings-class>>
 
-export { SliderSettings }
+
+<<caption-settings-class>>
+
+export { SliderSettings, CaptionSettings }
 #+end_src
 
 * The Sliders Settings
@@ -29,10 +32,7 @@ Number min
 Number max
 Number default_value
 Number step_size
-String label
-Integer precision
 String slider_div
-String caption_div
 Validator validator
 
 check_rep()
@@ -63,13 +63,7 @@ The ~SliderSettings~ class holds the values for the {{% lancelot "Slidini" %}}th
 
 <<it-checked-step-size>>
 
-<<it-check-label>>
-
-<<it-checked-precision>>
-
 <<it-checked-slider-div>>
-
-<<it-checked-caption-div>>
 #+end_src
 
 Since there's only one method to call and it defers everything to the {{% lancelot "Validator" %}}a-validator-for-slidersettings{{% /lancelot %}} I'm going to have one Scenario to test, but to try and make it easier to read I'm going to break up the Then-And statements within it, but I'm not going to break up the ~check_rep~ method itself so I'm not going to show the implementation under each test it satisfies, but just show the class definition in entirety after all the tests.
@@ -128,17 +122,10 @@ const IS = {
             default_value : 2,
             step_size: 3,               
           },
-  SET: {
-    label: 0
-  },
-  INTEGER: {
-    precision: 0
-  },
   ELEMENT: {
     slider_div: 0,
-    caption_div: 1
   }
-}
+};
 
 const METHODS = ["is_a_number", "is_set", "is_an_integer", "is_an_element_id"];
 #+end_src
@@ -180,10 +167,7 @@ this.min = faker.number.float();
 this.max = faker.number.float();
 this.default_value = faker.number.float();
 this.step_size = faker.number.float();
-this.label = faker.lorem.words();
-this.precision = faker.number.int();
 this.slider_div = faker.lorem.word();
-this.caption_div = faker.lorem.word();  
 #+end_src
 
 Finally, I can create the ~SliderSettings~ to test.
@@ -193,10 +177,7 @@ this.settings = new SliderSettings(this.min,
                                    this.max,
                                    this.default_value,
                                    this.step_size,
-                                   this.label,
-                                   this.precision,
                                    this.slider_div,
-                                   this.caption_div,
                                    this.validator);
 });
 #+end_src
@@ -282,34 +263,6 @@ Then("it checked the step_size", function() {
   )).to.be.true;
 });
 #+end_src
-*** Label
-
-#+begin_src gherkin :noweb-ref it-check-label
-And it checked the label
-#+end_src
-
-#+begin_src js :noweb-ref check-step-label
-Then("it checked the label", function() {
-  expect(this.validator.is_set.getCall(IS.SET.label).calledWith(
-    "label", this.label
-  )).to.be.true;
-});
-#+end_src
-
-*** Precision
-
-#+begin_src gherkin :noweb-ref it-checked-precision
-And it checked the precision
-#+end_src
-
-#+begin_src js :noweb-ref check-step-precision
-Then("it checked the precision", function() {
-  expect(this.validator.is_an_integer.getCall(IS.INTEGER.precision).calledWith(
-    "precision", this.precision
-  )).to.be.true;
-});
-#+end_src
-
 *** Slider Div
 
 #+begin_src gherkin :noweb-ref it-checked-slider-div
@@ -320,20 +273,6 @@ And it checked the slider_div
 Then("it checked the slider_div", function() {
   expect(this.validator.is_an_element_id.getCall(IS.ELEMENT.slider_div).calledWith(
     "slider_div", this.slider_div
-  )).to.be.true;
-});
-#+end_src
-
-*** Caption Div
-
-#+begin_src gherkin :noweb-ref it-checked-caption-div
-And it checked the caption_div.
-#+end_src
-
-#+begin_src js :noweb-ref check-step-caption-div
-Then("it checked the caption_div.", function() {
-  expect(this.validator.is_an_element_id.getCall(IS.ELEMENT.caption_div).calledWith(
-    "caption_div", this.caption_div
   )).to.be.true;
 });
 #+end_src
@@ -349,19 +288,14 @@ The ~SliderSettings~ holds the settings to build {{% lancelot "Slidini" %}}the-g
 #+begin_src js :noweb-ref slider-settings-class
 class SliderSettings {
   constructor(min, max, default_value, step_size,
-              label, precision,
-              slider_div, caption_div,
-              validator, document) {
+              slider_div,
+              validator) {
     this.min = min;
     this.max = max;
     this.default_value = default_value;
     this.step_size = step_size;
-    this.label = label;
-    this.precision = precision;
     this.slider_div = slider_div;
-    this.caption_div = caption_div;
     this.confirm = validator;
-    this.document = document;
   }; // constructor
 
   check_rep(){
@@ -369,15 +303,214 @@ class SliderSettings {
     this.confirm.is_a_number("max", this.max);
     this.confirm.is_a_number("default_value", this.default_value);
     this.confirm.is_a_number("step_size", this.step_size);
-    this.confirm.is_set("label", this.label);
-    this.confirm.is_an_integer("precision", this.precision);
     this.confirm.is_an_element_id("slider_div", this.slider_div);
-    this.confirm.is_an_element_id("caption_div", this.caption_div);
   }; // check_rep
 }; // SliderSettings
 #+end_src
 
+* The Caption Settings
 
+#+begin_src plantuml :file ../files/posts/slider-settings-and-validator/caption_settings.png :exports none
+!theme mars
+class CaptionSettings {
+
+String label
+Integer precision
+String caption_div
+Validator validator
+
+check_rep()
+} 
+#+end_src
+
+** The Scenario
+
+#+begin_src gherkin :tangle ../tests/cucumber-tests/test-slider-settings-and-validator/features/caption_settings.feature :exports none
+<<given-a-caption-settings>>
+
+<<caption-check-rep>>
+
+<<caption-check-label>>
+
+<<caption-check-precision>>
+
+<<caption-check-div-id>>
+#+end_src
+
+#+begin_src gherkin :tangle ../tests/cucumber-tests/test-slider-settings-and-validator/steps/caption_settings.js :exports none
+<<caption-settings-test-imports>>
+
+<<caption-settings-indexes>>
+
+<<caption-settings-given>>
+
+  <<caption-settings-arguments>>
+
+  <<caption-settings-setup-validator>>
+
+  <<caption-settings-create>>
+});
+
+<<caption-settings-check-properties>>
+
+<<caption-settings-expected-properties>>
+
+<<caption-settings-call-check-rep>>
+
+<<caption-settings-check-label>>
+
+<<caption-settings-check-precision>>
+
+<<caption-settings-check-div-id>>
+#+end_src
+** The Testing
+
+#+begin_src js :noweb-ref caption-settings-test-imports
+import { expect } from "chai";
+import { faker } from "@faker-js/faker";
+import { Given, When, Then } from "@cucumber/cucumber";
+import { fake, replace } from "sinon";
+
+import { CaptionSettings } from "../../../../javascript/slider.js";
+import { Validator } from "../../../../javascript/validator.js";
+#+end_src
+
+
+#+begin_src js :noweb-ref caption-settings-indexes
+const CAPTION_IS = {
+  SET: {
+    label: 0
+  },
+  INTEGER: {
+    precision: 0
+  },
+  ELEMENT: {
+    caption_div: 0
+  }
+};
+
+const METHODS = ["is_a_number", "is_set", "is_an_integer", "is_an_element_id"];
+#+end_src
+
+#+begin_src gherkin :noweb-ref given-a-caption-settings
+Feature: Settings for a caption/label.
+
+Scenario: The CaptionSettings is built.
+Given a CaptionSettings
+When the properties are checked
+Then they are the expected properties.
+#+end_src
+
+#+begin_src js :noweb-ref caption-settings-given
+Given("a CaptionSettings", function() {
+#+end_src
+
+#+begin_src js :noweb-ref caption-settings-arguments
+this.label = faker.lorem.words();
+this.precision = faker.number.int();
+this.caption_div = faker.lorem.word();
+#+end_src
+
+#+begin_src js :noweb-ref caption-settings-setup-validator
+this.validator = new Validator({});
+
+for (const method of METHODS) {
+    replace(this.validator, method,
+          fake.returns(null));    
+}
+#+end_src
+
+#+begin_src js :noweb-ref caption-settings-create
+this.caption_settings = new CaptionSettings(this.label,
+                                            this.precision,
+                                            this.caption_div,
+                                            this.validator);
+#+end_src
+
+#+begin_src js :noweb-ref caption-settings-check-properties
+When("the properties are checked", function() {
+  this.actual_label = this.caption_settings.label;
+  this.actual_precision = this.caption_settings.precision;
+  this.actual_caption_div = this.caption_settings.caption_div;
+});
+#+end_src
+
+#+begin_src js :noweb-ref caption-settings-expected-properties
+Then("they are the expected properties.", function() {
+  expect(this.actual_label).to.equal(this.label);
+  expect(this.actual_precision).to.equal(this.precision);
+  expect(this.actual_caption_div).to.equal(this.caption_div);
+});
+#+end_src
+
+#+begin_src gherkin :noweb-ref caption-check-rep
+Scenario: check_rep is called.
+
+Given a CaptionSettings
+When CaptionSettings.check_rep is called
+#+end_src
+
+#+begin_src js :noweb-ref caption-settings-call-check-rep
+When("CaptionSettings.check_rep is called", function() {
+  this.caption_settings.check_rep();
+});
+
+#+end_src
+
+#+begin_src gherkin :noweb-ref caption-check-label
+Then it checks the label
+#+end_src
+
+#+begin_src js :noweb-ref caption-settings-check-label
+Then("it checks the label", function() {
+  expect(this.validator.is_set.getCall(CAPTION_IS.SET.label).calledWith(
+    "label", this.label
+  )).to.be.true;  
+});
+#+end_src
+
+#+begin_src gherkin :noweb-ref caption-check-precision
+And it checks the precision
+#+end_src
+
+#+begin_src js :noweb-ref caption-settings-check-precision
+Then("it checks the precision", function() {
+  expect(this.validator.is_an_integer.getCall(CAPTION_IS.INTEGER.precision).calledWith(
+    "precision", this.precision
+  )).to.be.true;  
+});
+#+end_src
+
+#+begin_src gherkin :noweb-ref caption-check-div-id
+And it checks the caption div ID.
+#+end_src
+
+#+begin_src js :noweb-ref caption-settings-check-div-id
+Then("it checks the caption div ID.", function() {
+  expect(this.validator.is_an_element_id.getCall(
+    CAPTION_IS.ELEMENT.caption_div).calledWith(
+      "caption_div", this.caption_div
+    )).to.be.true;  
+});
+#+end_src
+** The CaptionSettings Implementation
+
+#+begin_src js :noweb-ref caption-settings-class
+class CaptionSettings {
+  constructor(label, precision, caption_div, validator) {
+    this.label = label;
+    this.precision = precision;
+    this.caption_div = caption_div;
+    this.validator = validator;
+  };
+
+  check_rep() {
+    this.validator.is_set("label", this.label);
+    this.validator.is_an_integer("precision", this.precision);
+    this.validator.is_an_element_id("caption_div", this.caption_div);
+ };
+}; // CaptionSettings
+#+end_src
 * Links
 ** Related Post
  - {{% doc %}}a-validator-for-slidersettings{{% /doc %}}

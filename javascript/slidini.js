@@ -1,3 +1,10 @@
+/**The Slidini builds and bundles a slider and its label (caption)
+
+   Args:
+
+   - (SliderSettings) settings: object with settings for the slider and caption
+   - (P5) p5: an instance of the p5 object
+**/
 class Slidini {
   _slider = null;
   _caption = null;

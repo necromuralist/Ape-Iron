@@ -13,8 +13,23 @@
 #+END_COMMENT
 #+OPTIONS: ^:{}
 #+TOC: headlines 2
-* Slidini
+
+#+begin_src gherkin :tangle ../tests/cucumber-tests/test-the-great-slidini/features/slidini.feature :exports none
+<<slidini-feature>>
+
+#+end_src
+
+#+begin_src js :tangle ../tests/cucumber-tests/test-the-great-slidini/steps/slidini_steps.js :exports none
+#+end_src
+
 #+begin_src js :tangle ../javascript/slidini.js :exports none
+/**The Slidini builds and bundles a slider and its label (caption)
+
+   Args:
+
+   - (SliderSettings) settings: object with settings for the slider and caption
+   - (P5) p5: an instance of the p5 object
+,**/
 <<slidini>>
 
   <<slidini-constructor>>
@@ -27,8 +42,28 @@
 
 export { Slidini }
 #+end_src
+* Slidini
+
+#+begin_src plantuml :file ../files/posts/the-great-slidini/slidini.png :exports none
+!theme mars
+class Slidini {
+
+SliderSettings settings
+P5 p5
+
+<<get>> slider
+<<get>> caption
+
+update_caption()
+}
+#+end_src
+
+[[img-url:slidini.png]]
 
 ** The Class Declaration
+
+The Slidini class is going to create two
+
 #+begin_src js :noweb-ref slidini
 class Slidini {
   _slider = null;
@@ -36,6 +71,11 @@ class Slidini {
 #+end_src
 
 ** The Constructor
+#+begin_src gherkin :noweb-ref slidini-feature
+Feature: A Class to hold a slider and its caption.
+
+Scenario: The Slidini Class uis built.
+#+end_src
 
 #+begin_src js :noweb-ref slidini-constructor
 constructor(settings, p5) {
