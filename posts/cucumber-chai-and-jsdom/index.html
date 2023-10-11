@@ -41,7 +41,7 @@
 <li class="nav-item"><a class="nav-link" href="../../categories/">Tags</a></li>
 <li class="nav-item"><a class="nav-link" href="../../rss.xml">RSS feed</a></li>
 <li class="nav-item dropdown"><a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Monkey Pages</a>
-<div class="dropdown-menu"><a class="dropdown-item" href="https://necromuralist.github.io/">Cloistered Monkey</a> <a class="dropdown-item" href="https://necromuralist.github.io/Beach-Pig-Thigh/">Beach Pig Thigh & Rump</a> <a class="dropdown-item" href="https://necromuralist.github.io/Bowling-For-Data/">Bowling For Data</a> <a class="dropdown-item" href="https://necromuralist.github.io/Neurotic-Networking/">Neurotic Networking</a> <a class="dropdown-item" href="https://necromuralist.github.io/Visions-Voices-Data/">Visions, Voices, Data</a></div>
+<div class="dropdown-menu"><a class="dropdown-item" href="https://necromuralist.github.io/">Cloistered Monkey</a> <a class="dropdown-item" href="https://necromuralist.github.io/Beach-Pig-Thigh/">Beach Pig Rump & Thigh</a> <a class="dropdown-item" href="https://necromuralist.github.io/Bowling-For-Data/">Bowling For Data</a> <a class="dropdown-item" href="https://necromuralist.github.io/Terribilis-Ludum/">Terribilis Ludum</a> <a class="dropdown-item" href="https://necromuralist.github.io/Neurotic-Networking/">Neurotic Networking</a> <a class="dropdown-item" href="https://necromuralist.github.io/Visions-Voices-Data/">Visions, Voices, Data</a></div>
 </li>
 </ul>
 <!-- DuckDuckGo custom search -->
@@ -70,35 +70,35 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="index.html#org29a7596">What Is This About?</a>
+<li><a href="index.html#org1ef3537">What Is This About?</a>
 <ul>
-<li><a href="index.html#orgff46dfa">The Earlier Problem</a></li>
-<li><a href="index.html#org0df4ecb">The Newer Problem</a></li>
+<li><a href="index.html#org3a262b0">The Earlier Problem</a></li>
+<li><a href="index.html#orgeb68bf3">The Newer Problem</a></li>
 </ul>
 </li>
-<li><a href="index.html#org4cff5dd">The Feature File</a></li>
-<li><a href="index.html#orgb4b0847">The Software Under Test</a>
+<li><a href="index.html#org991eeb7">The Feature File</a></li>
+<li><a href="index.html#org2433717">The Software Under Test</a>
 <ul>
-<li><a href="index.html#org81d848d">The Class Declaration</a></li>
-<li><a href="index.html#org5ac0cee">The Get Element Method</a></li>
+<li><a href="index.html#orgfde99b7">The Class Declaration</a></li>
+<li><a href="index.html#org8c45a15">The Get Element Method</a></li>
 </ul>
 </li>
-<li><a href="index.html#org7869262">The Step File</a>
+<li><a href="index.html#org101bc77">The Step File</a>
 <ul>
-<li><a href="index.html#org87d692f">Setting Up</a></li>
-<li><a href="index.html#org1b85921">The Tests</a></li>
+<li><a href="index.html#orgf862875">Setting Up</a></li>
+<li><a href="index.html#org8a6ef9f">The Tests</a></li>
 </ul>
 </li>
-<li><a href="index.html#orgef0737e">What Have We Learned?</a></li>
+<li><a href="index.html#orga8ff085">What Have We Learned?</a></li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org29a7596">
-<h2 id="org29a7596">What Is This About?</h2>
-<div class="outline-text-2" id="text-org29a7596"></div>
-<div class="outline-3" id="outline-container-orgff46dfa">
-<h3 id="orgff46dfa">The Earlier Problem</h3>
-<div class="outline-text-3" id="text-orgff46dfa">
+<div class="outline-2" id="outline-container-org1ef3537">
+<h2 id="org1ef3537">What Is This About?</h2>
+<div class="outline-text-2" id="text-org1ef3537"></div>
+<div class="outline-3" id="outline-container-org3a262b0">
+<h3 id="org3a262b0">The Earlier Problem</h3>
+<div class="outline-text-3" id="text-org3a262b0">
 <p>In my code from another post I used <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById">document.getElementById</a> as a check to make sure that I was passing in a valid <code>div</code> ID to <code>p5.js</code> and I decided to add some testing to make sure my validator was working as I expected. The problem was that when you run tests in <code>node.js</code> the <code>document</code> object doesn't exist. One way to get around this might be to use <code>Selenium</code> or some other browser-tester but that seemed like overkill.</p>
 <p>My first idea was that I would just mock the <code>document</code> object using <a href="https://sinonjs.org/">sinon</a> since this is a fairly easy thing to do in python (maybe not mocking <code>document</code>, specifically, since that is a javascript thing, but mocking objects in a module is fairly easy) but I simply couldn't find anything that seemed to indicate that this was possible, only posts saying that <code>sinon</code> doesn't work that way.</p>
 <p>So then I stumbled upon <a href="https://github.com/jsdom/jsdom">jsdom</a>, which appeared to be what I wanted to mock the document. The problem was that it's more of a browser simulator not a means to replace objects so I still had to figure out a way to replace the <code>document</code> that my class was expecting with the <code>jsdom</code> document. In the other post where I first used <code>jsdom</code> I followed the pattern shown in <a href="https://github.com/danielcb29/cucumberjs-jsdom-example">this github repository</a> where you stick the <code>jsdom document</code> into the <code>global</code> variable which makes it appear to be a global variable just like it is when you run the code in a browser.</p>
@@ -108,9 +108,9 @@
 <p>Where <code>dom</code> is an instance of <code>jsdom</code> setup with some HTML to use for the testing. Amazingly this did seem to work…</p>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org0df4ecb">
-<h3 id="org0df4ecb">The Newer Problem</h3>
-<div class="outline-text-3" id="text-org0df4ecb">
+<div class="outline-3" id="outline-container-orgeb68bf3">
+<h3 id="orgeb68bf3">The Newer Problem</h3>
+<div class="outline-text-3" id="text-orgeb68bf3">
 <p>Then I got to this post where I wanted to document getting <code>jsdom</code> to work and, even though I was using a simpler version of the previous post, I found that the tests were failing mysteriously (pretty much everything with javascript is mysterious to me). With a lot of troubleshooting, I managed to find out that instead of using the <code>dom</code> I was creating here it was still using the same one from the other testing. Except sometimes it was using the <code>dom</code> I defined here and these tests passed but then the other tests failed. I guess <code>global</code> means global in the truer sense, not just for the scope of a single set of tests, and there's some kind of race going on between the different pieces of code that are trying to set and use this global <code>document</code>. Oy.</p>
 <p>So, then I went looking at the <code>jsdom</code> documentation (which is pretty much just a <i>readme</i> and all the "issues" people have posted), but there was one page on their wiki titled <a href="https://github.com/jsdom/jsdom/wiki/Don't-stuff-jsdom-globals-onto-the-Node-global">Don't Stuff jsdom Globals Onto the Node Global</a>, which, I guess, means that I shouldn't have done what I did and all those Stack Overflow answers say to do. The page scolding all us silly people for using <code>global</code> did have a few examples of how they thought you should do it instead, so then I tried their solution of adding the javascript for my class to the <code>jsdom</code> object instead of using it in the <code>cucumber.js</code> test code. That way my class would have access to the <code>document</code> in their global space.</p>
 <p>Easy-peasy. Well… this produced more mysterious failures except now it was in a different place. After running their examples in the Node REPL unsuccessfully I found <a href="https://github.com/jsdom/jsdom/issues/2475">this "issue"</a> where it's explained that they don't support the <code>&lt;script type="module"&gt;</code> parameter (so you can't use ES6 imports like I do). Okay, so then I dumped the class definition to a string and added it directly, but no matter what I couldn't get <code>jsdom</code> to interpret any class I put in, although functions did work, so I came to the conclusion that they don't support javascript classes either.</p>
@@ -120,9 +120,9 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org4cff5dd">
-<h2 id="org4cff5dd">The Feature File</h2>
-<div class="outline-text-2" id="text-org4cff5dd">
+<div class="outline-2" id="outline-container-org991eeb7">
+<h2 id="org991eeb7">The Feature File</h2>
+<div class="outline-text-2" id="text-org991eeb7">
 <p>This is a <a href="https://github.com/cucumber/cucumber-js">Cucumber.js</a> test so I'll create a simple feature file for a class that retrieves a document element and test the case where the ID is correct and the one where it is incorrect.</p>
 <div class="highlight">
 <pre><span></span><span class="k">Feature:</span><span class="nf"> An Element Getter</span>
@@ -141,14 +141,14 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgb4b0847">
-<h2 id="orgb4b0847">The Software Under Test</h2>
-<div class="outline-text-2" id="text-orgb4b0847">
+<div class="outline-2" id="outline-container-org2433717">
+<h2 id="org2433717">The Software Under Test</h2>
+<div class="outline-text-2" id="text-org2433717">
 <p>Now the implementation. This is kind of a useless class, but this was supposed to be about how to get <code>jsdom</code> working so I can test code expecting a <code>document</code>.</p>
 </div>
-<div class="outline-3" id="outline-container-org81d848d">
-<h3 id="org81d848d">The Class Declaration</h3>
-<div class="outline-text-3" id="text-org81d848d">
+<div class="outline-3" id="outline-container-orgfde99b7">
+<h3 id="orgfde99b7">The Class Declaration</h3>
+<div class="outline-text-3" id="text-orgfde99b7">
 <p>This is the class I'm going to test.</p>
 <p><img alt="nil" src="element-getter.png"></p>
 <div class="highlight">
@@ -163,9 +163,9 @@
 <p>The constructor shows the main change I made to get it working - instead of using a global <code>document</code> I added it as an argument. I went through all that rigamarole trying to avoid this since it seemed like I was changing code just to test it, but now that I think about it, it's what I'd've done in python anyway, since I kind of don't like these "magic" objects that show up without being created or imported like they do in javascript.</p>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org5ac0cee">
-<h3 id="org5ac0cee">The Get Element Method</h3>
-<div class="outline-text-3" id="text-org5ac0cee">
+<div class="outline-3" id="outline-container-org8c45a15">
+<h3 id="org8c45a15">The Get Element Method</h3>
+<div class="outline-text-3" id="text-org8c45a15">
 <p>I made a getter for the retrieved element. It probably would have been easier in this case if I didn't store it, since I could test both when the ID is correct and when it isn't with the same object, just by changing the <code>this.element_id</code> value, but it's a pattern I often use and it gave me the chance to test out javascripts <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields">Private Class Fields</a> syntax. To be quite honest, I think using the pound sign (<code>#</code>) is kind of ugly - I prefer the underscore - but at least I know about it.</p>
 <p>The main value in using a getter here is that it can check that the element exists, since an invalid ID passed to <code>getElementById</code> will just return a <code>null</code> object rather thhan throw in error.</p>
 <div class="highlight">
@@ -182,17 +182,17 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org7869262">
-<h2 id="org7869262">The Step File</h2>
-<div class="outline-text-2" id="text-org7869262">
+<div class="outline-2" id="outline-container-org101bc77">
+<h2 id="org101bc77">The Step File</h2>
+<div class="outline-text-2" id="text-org101bc77">
 <p>And now the test code.</p>
 </div>
-<div class="outline-3" id="outline-container-org87d692f">
-<h3 id="org87d692f">Setting Up</h3>
-<div class="outline-text-3" id="text-org87d692f"></div>
-<div class="outline-4" id="outline-container-org2b4df39">
-<h4 id="org2b4df39">Import the Test Libraries</h4>
-<div class="outline-text-4" id="text-org2b4df39">
+<div class="outline-3" id="outline-container-orgf862875">
+<h3 id="orgf862875">Setting Up</h3>
+<div class="outline-text-3" id="text-orgf862875"></div>
+<div class="outline-4" id="outline-container-orgb03c0cb">
+<h4 id="orgb03c0cb">Import the Test Libraries</h4>
+<div class="outline-text-4" id="text-orgb03c0cb">
 <div class="highlight">
 <pre><span></span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">expect</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"chai"</span><span class="p">;</span>
 <span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Given</span><span class="p">,</span><span class="w"> </span><span class="nx">When</span><span class="p">,</span><span class="w"> </span><span class="nx">Then</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@cucumber/cucumber"</span><span class="p">;</span>
@@ -201,9 +201,9 @@
 <p>These are the libraries that I installed to support testing. Using <code>jsdom</code> instead of creating a mock was convenient, but I might have to watch what the overhead is if I make a lot of tests that use it.</p>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgb8af286">
-<h4 id="orgb8af286">Import the Software Under Test</h4>
-<div class="outline-text-4" id="text-orgb8af286">
+<div class="outline-4" id="outline-container-orgfc59c70">
+<h4 id="orgfc59c70">Import the Software Under Test</h4>
+<div class="outline-text-4" id="text-orgfc59c70">
 <p>Now I'll import the <code>ElementGetter</code> class that I defined above. It occurs to me that for a case like this where I don't actually use the code for anything other than testing I could have put it next to the tests, but I guess this is a better dress rehearsal for really using code in a post.</p>
 <p>Note the extra step up the path (<code>../</code>) because this time I followed the <code>cucumber</code> example and put the steps in a folder named <code>steps</code> instead of in a file named <code>steps.js</code>, which might make it easier to organize in the future if I have more to test, but makes relative paths that much more painful.</p>
 <div class="highlight">
@@ -211,9 +211,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgecf2581">
-<h4 id="orgecf2581">Setup JSDOM</h4>
-<div class="outline-text-4" id="text-orgecf2581">
+<div class="outline-4" id="outline-container-org5842d6f">
+<h4 id="org5842d6f">Setup JSDOM</h4>
+<div class="outline-text-4" id="text-org5842d6f">
 <p>Here's where I create the <code>jsdom</code> object with a <code>div</code> that the <code>ElementGetter</code> can get. I'm passing in the whole HTML string but in the documentation they sometimes just pass in the body.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">EXPECTED_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"expected-div"</span><span class="p">;</span>
@@ -230,12 +230,12 @@
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org1b85921">
-<h3 id="org1b85921">The Tests</h3>
-<div class="outline-text-3" id="text-org1b85921"></div>
-<div class="outline-4" id="outline-container-orgb25d8a5">
-<h4 id="orgb25d8a5">The Right ID</h4>
-<div class="outline-text-4" id="text-orgb25d8a5">
+<div class="outline-3" id="outline-container-org8a6ef9f">
+<h3 id="org8a6ef9f">The Tests</h3>
+<div class="outline-text-3" id="text-org8a6ef9f"></div>
+<div class="outline-4" id="outline-container-org6413cf2">
+<h4 id="org6413cf2">The Right ID</h4>
+<div class="outline-text-4" id="text-org6413cf2">
 <p>This is the first scenario where I expect the <code>ElementGetter</code> to successfully find the element. There's not a lot to test here, other than it doesn't crash.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">Given</span><span class="p">(</span><span class="s2">"an ElementGetter with the correct ID"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -254,9 +254,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org21101dd">
-<h4 id="org21101dd">The Wrong ID</h4>
-<div class="outline-text-4" id="text-org21101dd">
+<div class="outline-4" id="outline-container-org47042d7">
+<h4 id="org47042d7">The Wrong ID</h4>
+<div class="outline-text-4" id="text-org47042d7">
 <p>This is the more interesting case where we give the <code>ElementGetter</code> an ID that doesn't match any element in the page.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">Given</span><span class="p">(</span><span class="s2">"an ElementGetter with the wrong ID"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -280,9 +280,9 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgef0737e">
-<h2 id="orgef0737e">What Have We Learned?</h2>
-<div class="outline-text-2" id="text-orgef0737e">
+<div class="outline-2" id="outline-container-orga8ff085">
+<h2 id="orga8ff085">What Have We Learned?</h2>
+<div class="outline-text-2" id="text-orga8ff085">
 <p>I suppose the biggest lesson is that I shouldn't have tried so hard to fake the <code>document</code> object as a magic global object the way it normally is used and instead just gone for an explicit argument that gets passed to the class (or function) that needs it. I also learned that <code>jsdom</code> is interesting but behind the ECMA standard, as were some of the other libraries I ran into in trying to solve different parts of this problem, so I have to either decide to not use ECMA 6 or not rely so much on these other libraries that don't use the current standards.</p>
 </div>
 </div>
