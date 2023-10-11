@@ -323,7 +323,7 @@ check_rep()
 } 
 #+end_src
 
-** The Scenario
+The Caption Settings are pretty much just like the Slider Settings except that they are meant for the label that lets the user know what the current slider's value is. I used to have everything in the [[*The Sliders Settings][SliderSettings]] but it wasn't obvious what belonged to which so I broke them apart.
 
 #+begin_src gherkin :tangle ../tests/cucumber-tests/test-slider-settings-and-validator/features/caption_settings.feature :exports none
 <<given-a-caption-settings>>
@@ -365,6 +365,9 @@ check_rep()
 #+end_src
 ** The Testing
 
+This is pretty much exactly the same as the testing for the ~SliderSettings~ so I won't have a whole lot to add to it.
+
+*** Imports
 #+begin_src js :noweb-ref caption-settings-test-imports
 import { expect } from "chai";
 import { faker } from "@faker-js/faker";
@@ -375,6 +378,7 @@ import { CaptionSettings } from "../../../../javascript/slider.js";
 import { Validator } from "../../../../javascript/validator.js";
 #+end_src
 
+*** Call Object Indices
 
 #+begin_src js :noweb-ref caption-settings-indexes
 const CAPTION_IS = {
@@ -392,6 +396,8 @@ const CAPTION_IS = {
 const METHODS = ["is_a_number", "is_set", "is_an_integer", "is_an_element_id"];
 #+end_src
 
+*** The Feature
+
 #+begin_src gherkin :noweb-ref given-a-caption-settings
 Feature: Settings for a caption/label.
 
@@ -401,15 +407,21 @@ When the properties are checked
 Then they are the expected properties.
 #+end_src
 
+*** Setting up the Caption Settings in "Given"
+
 #+begin_src js :noweb-ref caption-settings-given
 Given("a CaptionSettings", function() {
 #+end_src
+
+These are the three properties that the {{% lancelot "Slidini class" %}}the-great-slidini{{% /lancelot %}} is going to need to set up the label.
 
 #+begin_src js :noweb-ref caption-settings-arguments
 this.label = faker.lorem.words();
 this.precision = faker.number.int();
 this.caption_div = faker.lorem.word();
 #+end_src
+
+Once again I'm replacing the {{% lancelot "Validator" %}}a-validator-for-slidersettings{{% /lancelot %}} methods so I can check the calls and as a side-effect the document won't get used so I don't need ~JSDOM~.
 
 #+begin_src js :noweb-ref caption-settings-setup-validator
 this.validator = new Validator({});
@@ -420,12 +432,16 @@ for (const method of METHODS) {
 }
 #+end_src
 
+And finally I'll build our software to test.
+
 #+begin_src js :noweb-ref caption-settings-create
 this.caption_settings = new CaptionSettings(this.label,
                                             this.precision,
                                             this.caption_div,
                                             this.validator);
 #+end_src
+
+Putting the values to check into variables seems like an unnecessary step, since you could test and retrieve the properties at the same time, but I like the use of ~When~ and it makes the lines in the ~Then~ block a little shorter.
 
 #+begin_src js :noweb-ref caption-settings-check-properties
 When("the properties are checked", function() {
@@ -443,6 +459,8 @@ Then("they are the expected properties.", function() {
 });
 #+end_src
 
+*** Check Rep
+
 #+begin_src gherkin :noweb-ref caption-check-rep
 Scenario: check_rep is called.
 
@@ -450,12 +468,18 @@ Given a CaptionSettings
 When CaptionSettings.check_rep is called
 #+end_src
 
+Oddly, when I just said "When check_rep is called" instead of "When CaptionSettings.check_rep is called" cucumber ended up using the function I made for the ~SliderSettings~ tests that had the same ~When~ string. For some reason it lets them pollute each other's tests, even though they have separate feature and step files. I suppose this could make it easier to re-use test-functions, but it makes it kind of dangerous since you have to make sure that everything has a unique title.
+
+Or maybe there's something I'm missing...
+
 #+begin_src js :noweb-ref caption-settings-call-check-rep
 When("CaptionSettings.check_rep is called", function() {
   this.caption_settings.check_rep();
 });
 
 #+end_src
+
+*** Did It Validate the Label?
 
 #+begin_src gherkin :noweb-ref caption-check-label
 Then it checks the label
@@ -469,6 +493,8 @@ Then("it checks the label", function() {
 });
 #+end_src
 
+*** Did It Validate the Precision?
+
 #+begin_src gherkin :noweb-ref caption-check-precision
 And it checks the precision
 #+end_src
@@ -481,6 +507,7 @@ Then("it checks the precision", function() {
 });
 #+end_src
 
+*** Did It Validate the Div ID?
 #+begin_src gherkin :noweb-ref caption-check-div-id
 And it checks the caption div ID.
 #+end_src
@@ -494,6 +521,8 @@ Then("it checks the caption div ID.", function() {
 });
 #+end_src
 ** The CaptionSettings Implementation
+
+So here's where I implemennt the class. The /label/ property is a string that gets inserted into the string that's displayed on the Label element. Maybe I should have called it something else... The /precision/ property is used to decide how many decimal places to show in the Label, and the /caption_div/ is the ID of the element where I'm going to stick the Label.
 
 #+begin_src js :noweb-ref caption-settings-class
 class CaptionSettings {
