@@ -14,20 +14,191 @@
 #+OPTIONS: ^:{}
 #+TOC: headlines 2
 
+#+begin_comment
+The Feature file.
+#+end_comment
+
 #+begin_src gherkin :tangle ../tests/cucumber-tests/test-the-great-slidini/features/slidini.feature :exports none
 <<slidini-feature>>
 
+Scenario: The Slidini is built
+Given a Slidini
+When the settings and p5 are checked
+Then they are the expected slider and caption settings and p5 instance
+
+Scenario: The caption is gotten
+Given a Slidini
+When the caption is gotten
+Then the caption is the expected one
+
+Scenario: The update_caption method is called
+Given a Slidini
+When the update_caption method is called
+Then the caption got the expected arguments
+
+Scenario: The slider is gotten
+Given a Slidini
+When the slider is gotten
+Then the expected calls were made to create the slider
 #+end_src
 
+#+begin_comment
+The test steps.
+#+end_comment
+
 #+begin_src js :tangle ../tests/cucumber-tests/test-the-great-slidini/steps/slidini_steps.js :exports none
+<<test-imports>>
+
+<<slidini-built-scenario>>
+
+<<get-caption-scenario>>
+
+<<update-caption-scenario>>
+
+<<get-slider-scenario>>
 #+end_src
+
+#+begin_src js :noweb-ref test-imports :exports none
+import { expect } from "chai";
+import { fake } from "sinon";
+import { Given, When, Then } from "@cucumber/cucumber";
+
+/** Software under test **/
+import { Slidini } from "../../../../javascript/slidini.js";
+#+end_src
+
+#+begin_src js :noweb-ref slidini-built-scenario :exports none
+/** Scenario: The Slidini is built **/
+Given("a Slidini", function() {
+  this.p5 = fake();
+  
+  this.settings = {min: 5,
+                   max: 20,
+                   default_value: 333,
+                   step_size: 96,
+                   caption_div: "doobedoobedo",
+                   label: "mabel",
+                   precision: 55};
+
+  this.slider_settings = {
+    min: this.settings.min,
+    max: this.settings.max,
+    default_value: this.settings.default_value,
+    step_size: this.settings.step_size,
+    slider_div: this.settings.slider_div,
+  };
+
+  this.caption_settings = {
+    label: this.settings.label,
+    precision: this.settings.precision,
+    caption_div: this.settings.caption_div
+  };
+    
+      
+  this.slidini = new Slidini(this.slider_settings,
+                             this.caption_settings,
+                             this.p5);
+});
+
+When("the settings and p5 are checked", function() {
+  this.actual_slider_settings = this.slidini.slider_settings;
+  this.actual_p5 = this.slidini.p5;
+});
+
+Then("they are the expected slider and caption settings and p5 instance", function() {
+  expect(this.actual_slider_settings).to.equal(this.slider_settings);
+  expect(this.actual_p5).to.equal(this.p5);
+});
+#+end_src
+
+
+#+begin_src js :noweb-ref  get-caption-scenario :exports none
+/** Scenario: The caption is gotten **/
+
+/* Given a Slidini */
+
+When("the caption is gotten", function() {
+  this.caption = fake();
+  this.p5.select = fake.returns(this.caption);
+  this.actual_caption = this.slidini.caption;
+});
+
+Then("the caption is the expected one", function() {
+  expect(this.p5.select.calledWith(this.settings.caption_div)).to.be.true;
+  expect(this.actual_caption).to.equal(this.caption);
+});
+#+end_src
+
+#+begin_src js :noweb-ref update-caption-scenario :exports none
+When("the update_caption method is called", function() {
+  this.caption = fake()
+  this.caption.html = fake();
+  this.slidini._caption = this.caption;
+
+  this.slider = fake();
+  this.slider_value = 84;
+  this.toFixed = fake.returns(this.slider_value);
+  this.fixer = { toFixed: this.toFixed };
+  
+  
+  this.slider.value = fake.returns(this.fixer);
+  this.slidini._slider = this.slider;
+  this.caption_string = `${this.settings.label}: ${this.slider_value}`
+
+  this.slidini.update_caption();
+});
+
+Then("the caption got the expected arguments", function(){
+  expect(this.caption.html.calledWith(this.caption_string)).to.be.true;
+  expect(this.slider.value.called).to.be.true;
+  expect(this.toFixed.calledWith(this.settings.precision));
+});
+#+end_src
+
+#+begin_src js :noweb-ref get-slider-scenario :exports none
+/** Scenario: The slider is gotten **/
+
+//Given a Slidini
+
+When("the slider is gotten", function() {
+  this.update_caption = fake();
+  this.slidini.update_caption  = this.update_caption;
+ 
+  this.slider = fake();
+  this.slider.parent = fake();
+  this.slider.input = fake();
+
+  this.p5.createSlider = fake.returns(this.slider);
+
+  
+  this.actual_slider = this.slidini.slider;
+});
+
+Then("the expected calls were made to create the slider", function() {
+  expect(this.p5.createSlider.calledWith(
+    this.settings.min,
+    this.settings.max,
+    this.settings.default_value,
+    this.settings.step_size)).to.be.true;
+
+  expect(this.slider.parent.calledWith(this.settings.slider_div)).to.be.true;
+  expect(this.slider.input.called).to.be.true;
+  expect(this.update_caption.called).to.be.true;
+  expect(this.actual_slider).to.equal(this.slider);
+});
+#+end_src
+
+#+begin_comment
+**The Slidini Class**
+#+end_comment
 
 #+begin_src js :tangle ../javascript/slidini.js :exports none
 /**The Slidini builds and bundles a slider and its label (caption)
 
    Args:
 
-   - (SliderSettings) settings: object with settings for the slider and caption
+   - (SliderSettings) settings: object with settings for the slider
+   - (CaptionSettings): object with settings for the caption
    - (P5) p5: an instance of the p5 object
 ,**/
 <<slidini>>
@@ -39,6 +210,8 @@
   <<slidini-get-caption>>
 
   <<slidini-update-caption>>
+
+} // end Slidini
 
 export { Slidini }
 #+end_src
@@ -62,7 +235,7 @@ update_caption()
 
 ** The Class Declaration
 
-The Slidini class is going to create two
+The Slidini class is going to create two HTML elements - a Slider and a label (what I call a caption) for the slider.
 
 #+begin_src js :noweb-ref slidini
 class Slidini {
@@ -72,33 +245,36 @@ class Slidini {
 
 ** The Constructor
 #+begin_src gherkin :noweb-ref slidini-feature
-Feature: A Class to hold a slider and its caption.
-
-Scenario: The Slidini Class uis built.
+Feature: A Slidini class to hold a slider and its caption.
 #+end_src
 
 #+begin_src js :noweb-ref slidini-constructor
-constructor(settings, p5) {
-  this.settings = settings;
+constructor(slider_settings, caption_settings, p5) {
+  this.slider_settings = slider_settings;
+  this.caption_settings = caption_settings;
   this.p5 = p5;
 } // constructor
 #+end_src
 
+The ~slider_settings~ and ~caption_settings~ should be instances of the ~SliderSettings~ and ~CaptionSettings~ classes (see the {{% doc %}}slider-settings-and-validator{{% /doc %}} post) and the ~p5~ object should be a p5.js instance.
+
 ** The Slider
+
+This creates the slider and the caption. I decided to muddy them together like this in order to create the callback to update the caption whenever the slider is updated, and to add the initial caption once the slider is created.
 
 #+begin_src js :noweb-ref slidini-get-slider
 get slider() {
   if (this._slider === null) {
     // create the slider
     this._slider = this.p5.createSlider(
-      this.settings.min,
-      this.settings.max,
-      this.settings.default_value,
-      this.settings.step_size,
+      this.slider_settings.min,
+      this.slider_settings.max,
+      this.slider_settings.default_value,
+      this.slider_settings.step_size,
     );
 
     // attach it to the div tag
-    this._slider.parent(this.settings.slider_div);
+    this._slider.parent(this.slider_settings.slider_div);
 
     // set the callback to change label on update
     this._slider.input(() => this.update_caption());
@@ -112,10 +288,14 @@ get slider() {
 
 ** The Caption
 
+
+This is the caption for the slider. It expects there to be a ~div~ that it can stick the caption into.
+
 #+begin_src js :noweb-ref slidini-get-caption
 get caption() {
   if (this._caption === null) {
-    this._caption = this.p5.select(this.settings.caption_div);
+    this._caption = this.p5.select(
+      this.caption_settings.caption_div);
   }
   return this._caption;
 }
@@ -123,15 +303,16 @@ get caption() {
 
 ** The Caption Updater
 
+This sets the caption to the current value of the slider. It's used both to initialize the caption and as a callback to update the caption whenever the slider's value changes.
+
 #+begin_src js :noweb-ref slidini-update-caption
 update_caption() {
   this.caption.html(
-    `${this.settings.label}: ` +
-      `${this.slider.value().toFixed(this.settings.precision)}`);
+    `${this.caption_settings.label}: ` +
+      `${this.slider.value().toFixed(this.caption_settings.precision)}`);
 } // update_caption
 #+end_src
 
-* Links
-** Related Posts
+* Related Posts
 
  - {{% doc %}}slider-settings-and-validator{{% /doc %}}

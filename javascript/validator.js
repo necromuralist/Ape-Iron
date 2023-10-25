@@ -19,7 +19,7 @@ class Validator {
 
   is_set(identifier, actual) {
     if (this.emptiness.includes(actual)) {
-      throw Error(`"${identifier} must be set, not "${actual}"`)
+      throw Error(`"${identifier} must be set, not "${actual}"`);
     };
   }; //is_set
 
@@ -31,7 +31,7 @@ class Validator {
 
   is_an_element_id(identifier, actual) {
     if (this.document.getElementById(actual) === null) {
-      throw Error(`"${identifier}" isn't a valid ID - "${actual_id}"`);
+      throw Error(`"${identifier}" isn't a valid ID - "${actual}"`);
     };
   }; // is_an_id
 

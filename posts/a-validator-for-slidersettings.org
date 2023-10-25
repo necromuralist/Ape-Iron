@@ -347,7 +347,7 @@ I'm not sure about that last one. I think I was trying to use all the ~falsy~ va
 #+begin_src js :noweb-ref validate-is-set
 is_set(identifier, actual) {
   if (this.emptiness.includes(actual)) {
-    throw Error(`"${identifier} must be set, not "${actual}"`)
+    throw Error(`"${identifier} must be set, not "${actual}"`);
   };
 }; //is_set
 #+end_src
@@ -507,7 +507,7 @@ This relies on the built-in [[https://developer.mozilla.org/en-US/docs/Web/API/D
 #+begin_src js :noweb-ref validate-is-id
 is_an_element_id(identifier, actual) {
   if (this.document.getElementById(actual) === null) {
-    throw Error(`"${identifier}" isn't a valid ID - "${actual_id}"`);
+    throw Error(`"${identifier}" isn't a valid ID - "${actual}"`);
   };
 }; // is_an_id
 #+end_src
