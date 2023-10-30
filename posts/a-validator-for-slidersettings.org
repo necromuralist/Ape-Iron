@@ -174,9 +174,11 @@ class Validator {
 
 These blocks are the pattern That I'm going to follow for most of the rest of the code:
 
+#+begin_notecard
   1. Feature file fragment.
   2. Test implementation to match the feature file.
   3. Code implementation that's being tested.
+#+end_notecard
      
 ** Is A Number
 
@@ -202,7 +204,11 @@ When("is_a_number is given a number", function() {
 Then("nothing happens.", function() {});
 #+end_src
 
-This is the case where we get what we wanted. I added a second check for ~0~ explicitly because I was originally using the [[https://developer.mozilla.org/en-US/docs/Glossary/Falsy][~falsy~]] check (~!(actual)~) but it turns out that 0 would be considered false if you do that so I added an explicit check to make sure I wasn't disallowing 0.
+This is the case where we get what we wanted.
+
+#+begin_notecard
+**Note:** I added a second check for ~0~ because I was originally using the [[https://developer.mozilla.org/en-US/docs/Glossary/Falsy][~falsy~]] check (~!(actual)~) but it turns out that 0 would be considered false if you do that so I added an explicit check to make sure I wasn't disallowing 0.
+#+end_notecard
 
 #+begin_src gherkin :noweb-ref is-a-number-scenario-2
 Scenario: The expected number isn't a number.
