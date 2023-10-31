@@ -5,7 +5,7 @@ import { JSDOM } from "jsdom";
 
 // Software Under Test
 
-import { Validator } from "../../../../javascript/validator.js"
+import { Validator } from "../../../../files/javascript/validator.js"
 
 // a fake document
 const VALID_ID = "validator-id";

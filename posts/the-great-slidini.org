@@ -64,7 +64,7 @@ import { fake } from "sinon";
 import { Given, When, Then } from "@cucumber/cucumber";
 
 /** Software under test **/
-import { Slidini } from "../../../../javascript/slidini.js";
+import { Slidini } from "../../../../files/javascript/slidini.js";
 #+end_src
 
 #+begin_src js :noweb-ref slidini-built-scenario :exports none
@@ -192,7 +192,7 @@ Then("the expected calls were made to create the slider", function() {
 **The Slidini Class**
 #+end_comment
 
-#+begin_src js :tangle ../javascript/slidini.js :exports none
+#+begin_src js :tangle ../files/javascript/slidini.js :exports none
 /**The Slidini builds and bundles a slider and its label (caption)
 
    Args:

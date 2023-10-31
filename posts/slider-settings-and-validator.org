@@ -14,7 +14,7 @@
 #+OPTIONS: ^:{}
 #+TOC: headlines 2
 
-#+begin_src js :tangle ../javascript/slider.js :exports none
+#+begin_src js :tangle ../files/javascript/slider.js :exports none
 <<slider-settings-class>>
 
 
@@ -109,8 +109,8 @@ import { expect } from "chai";
 import { faker } from "@faker-js/faker";
 import { Given, When, Then } from "@cucumber/cucumber";
 import { fake, replace } from "sinon";
-import { SliderSettings } from "../../../../javascript/slider.js";
-import { Validator } from "../../../../javascript/validator.js";
+import { SliderSettings } from "../../../../files/javascript/slider.js";
+import { Validator } from "../../../../files/javascript/validator.js";
 #+end_src
 
 Since the Validator's methods get called more than once I need to be able to know what (zero-based) index each call is - e.g. checking ~default_value~ is the third ~Validator.is_a_number~ call that the ~SliderSettings~ makes, so to retrieve the object to check that the call went as expected I need to get the ~sinon~ call object at index 2. I'm making the ~IS~ object below to hold the indices to get the calls for each property... it'll make more sense later.
@@ -374,8 +374,8 @@ import { faker } from "@faker-js/faker";
 import { Given, When, Then } from "@cucumber/cucumber";
 import { fake, replace } from "sinon";
 
-import { CaptionSettings } from "../../../../javascript/slider.js";
-import { Validator } from "../../../../javascript/validator.js";
+import { CaptionSettings } from "../../../../files/javascript/slider.js";
+import { Validator } from "../../../../files/javascript/validator.js";
 #+end_src
 
 *** Call Object Indices

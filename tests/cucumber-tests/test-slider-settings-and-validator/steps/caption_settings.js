@@ -3,8 +3,8 @@ import { faker } from "@faker-js/faker";
 import { Given, When, Then } from "@cucumber/cucumber";
 import { fake, replace } from "sinon";
 
-import { CaptionSettings } from "../../../../javascript/slider.js";
-import { Validator } from "../../../../javascript/validator.js";
+import { CaptionSettings } from "../../../../files/javascript/slider.js";
+import { Validator } from "../../../../files/javascript/validator.js";
 
 const CAPTION_IS = {
   SET: {

@@ -69,7 +69,7 @@ import { JSDOM } from "jsdom";
 
 // Software Under Test
 
-import { Validator } from "../../../../javascript/validator.js"
+import { Validator } from "../../../../files/javascript/validator.js"
 
 // a fake document
 <<validator-jsdom-setup>>
@@ -101,7 +101,7 @@ import { Validator } from "../../../../javascript/validator.js"
 <<is-element-case-2>>
 #+end_src
 
-#+begin_src js :tangle ../javascript/validator.js :exports none
+#+begin_src js :tangle ../files/javascript/validator.js :exports none
 /** The Validator class checks if a value is a certain type
     It throws an error if any value is the wrong type
 

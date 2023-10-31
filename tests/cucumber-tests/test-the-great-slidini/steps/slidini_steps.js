@@ -3,7 +3,7 @@ import { fake } from "sinon";
 import { Given, When, Then } from "@cucumber/cucumber";
 
 /** Software under test **/
-import { Slidini } from "../../../../javascript/slidini.js";
+import { Slidini } from "../../../../files/javascript/slidini.js";
 
 /** Scenario: The Slidini is built **/
 Given("a Slidini", function() {

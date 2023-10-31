@@ -31,7 +31,9 @@
 
 
 #+begin_src js :tangle ../files/posts/generative-art-spiral/spiral.js :exports none
-import { SliderSettings } from "./slider.js"
+import { CaptionSettings, SliderSettings } from "../../javascript/slider.js";
+import { Slidini } from "../../javascript/slidini.js";
+import { Validator } from "../../javascript/validator.js";
 
 <<spiral-divs>>
 
@@ -40,6 +42,8 @@ import { SliderSettings } from "./slider.js"
 <<slider-divs>>
 
 <<text-divs>>
+
+<<the-validator>>
   
 <<angle-slider-values>>
 
@@ -57,16 +61,6 @@ import { SliderSettings } from "./slider.js"
 
 } // spiralizer
 
-<<slidini>>
-
-  <<slidini-constructor>>
-
-  <<slidini-get-slider>>
-
-  <<slidini-get-caption>>
-
-  <<slidini-update-caption>>
-} // slidini
 
 <<spiral-sketch>>
 
@@ -82,58 +76,6 @@ import { SliderSettings } from "./slider.js"
 } // spiral_sketch
 
 <<p5-instance>>
-#+end_src
-
-* The Slider Settings
-** Angle Slider
-
-The values used to create the angle-increment slider.
-
-#+begin_src js :noweb-ref angle-slider-values
-const ANGLE_SLIDER = {
-  min: 0,
-  max: 40,
-  default_value: 5,
-  step_size: 0,
-  label: "Angle Increment",
-  precision: 2,
-  slider_div: SPIRAL_ANGLE_SLIDER,
-  caption_div: SPIRAL_ANGLE_TEXT
-}
-#+end_src
-
-** Radius Slider
-
-The values used to create the radius increment slider.
-
-#+begin_src js :noweb-ref radius-slider-values
-const RADIUS_SLIDER = {
-  min: 0,
-  max: 20,
-  default_value: 1,
-  step_size: 0,
-  label: "Radius Increment",
-  precision: 2,
-  slider_div: SPIRAL_RADIUS_SLIDER,
-  caption_div: SPIRAL_RADIUS_TEXT
-}
-#+end_src
-
-** Circle Slider
-
-The values used to create the circle diameter slider.
-
-#+begin_src js :noweb-ref circle-slider-values
-const CIRCLE_SLIDER = {
-  min: 1,
-  max: 100,
-  default_value: 1,
-  step_size: 0,
-  label: "Point Diameter",
-  precision: 2,
-  slider_div: SPIRAL_CIRCLE_SLIDER,
-  caption_div: SPIRAL_CIRCLE_TEXT
-}
 #+end_src
 
 * The Div IDs
@@ -166,6 +108,90 @@ I also created some ~div~ tags that I'll put some text into to show the current 
 const SPIRAL_ANGLE_TEXT = "#angle-text-0a168ba9";
 const SPIRAL_RADIUS_TEXT = "#radius-text-0a168ba9";
 const SPIRAL_CIRCLE_TEXT = "#circle-text-0a168ba9";
+#+end_src
+
+* The Slider Settings
+** The Validator
+
+This is used by the settings classes to try and see if I'm passing in valid arguments.
+
+#+begin_src js :noweb-ref the-validator
+const VALIDATOR = new Validator(document);
+#+end_src
+
+** Angle Slider
+
+The values used to create the angle-increment slider.
+
+#+begin_src js :noweb-ref angle-slider-values
+const ANGLE_SLIDER = new SliderSettings(
+  0,
+  40,
+  5,
+  0,
+  SPIRAL_ANGLE_SLIDER,
+  VALIDATOR
+);
+  
+const ANGLE_CAPTION = new CaptionSettings(
+  "Angle Increment",
+  2,
+  SPIRAL_ANGLE_TEXT,
+  VALIDATOR
+);
+
+ANGLE_SLIDER.check_rep();
+ANGLE_CAPTION.check_rep();
+#+end_src
+
+** Radius Slider
+
+The values used to create the radius increment slider.
+
+#+begin_src js :noweb-ref radius-slider-values
+const RADIUS_SLIDER = new SliderSettings(
+  0,
+  20,
+  1,
+  0,
+  SPIRAL_RADIUS_SLIDER,
+  VALIDATOR
+);
+
+const RADIUS_CAPTION = new CaptionSettings(
+  "Radius Increment",
+  2,
+  SPIRAL_RADIUS_TEXT,
+  VALIDATOR
+);
+
+RADIUS_SLIDER.check_rep();
+RADIUS_CAPTION.check_rep();
+#+end_src
+
+** Circle Slider
+
+The values used to create the circle diameter slider.
+
+#+begin_src js :noweb-ref circle-slider-values
+const CIRCLE_SLIDER = new SliderSettings(
+  1,
+  100,
+  1,
+  0,
+  SPIRAL_CIRCLE_SLIDER,
+  VALIDATOR
+);
+
+const CIRCLE_CAPTION = new CaptionSettings(
+  "Point Diameter",
+  2,
+  SPIRAL_CIRCLE_TEXT,
+  VALIDATOR
+);
+
+CIRCLE_SLIDER.check_rep();
+CIRCLE_CAPTION.check_rep();
 #+end_src
 
 * The Spiralizer
@@ -235,6 +261,7 @@ reset() {
   this.angle = 0;
 } // end reset
 #+end_src
+
 * The Spiral Sketch
 
 This is going to be the sketch that we pass to [[*The P5 Instance][the P5 constructor]] to create the animation.
@@ -266,9 +293,9 @@ p5.setup = function(){
 
 *** Create The Sliders
 #+begin_src js :noweb-ref spiral-sketch-setup-sliders
-angle_slider = new Slidini(ANGLE_SLIDER, p5);  
-radius_slider = new Slidini(RADIUS_SLIDER, p5);
-circle_slider = new Slidini(CIRCLE_SLIDER, p5);
+angle_slider = new Slidini(ANGLE_SLIDER, ANGLE_CAPTION, p5);  
+radius_slider = new Slidini(RADIUS_SLIDER, RADIUS_CAPTION, p5);
+circle_slider = new Slidini(CIRCLE_SLIDER, CIRCLE_CAPTION, p5);
 #+end_src
 
 *** Create the Spiralizer and End the Setup
