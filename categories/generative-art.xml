@@ -5,24 +5,24 @@
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"&gt;&lt;/a&gt;&lt;/p&gt; 
-</copyright><lastBuildDate>Wed, 11 Oct 2023 20:19:12 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Generative Art: Concentric Circles</title><link>https://necromuralist.github.io/Ape-Iron/posts/generative-art-concentric-circles/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;p&gt;
+</copyright><lastBuildDate>Wed, 01 Nov 2023 02:26:21 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Generative Art: Concentric Circles</title><link>https://necromuralist.github.io/Ape-Iron/posts/generative-art-concentric-circles/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;p&gt;
 &lt;script src="https://necromuralist.github.io/Ape-Iron/posts/generative-art-concentric-circles/concentric-circles.js"&gt;&lt;/script&gt;
 
 &lt;/p&gt;&lt;div class="p5js" id="03d2e681-concentric-circles"&gt;&lt;/div&gt;
 
 
-&lt;div id="outline-container-org9c877ef" class="outline-2"&gt;
-&lt;h2 id="org9c877ef"&gt;Introduction&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org9c877ef"&gt;
+&lt;div id="outline-container-org8da44bb" class="outline-2"&gt;
+&lt;h2 id="org8da44bb"&gt;Introduction&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org8da44bb"&gt;
 &lt;p&gt;
 This is a sketch that extends the &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html"&gt;Generative Art Circles&lt;/a&gt; post (slightly) to make concentric circles. I was going to make a spiral but realized after I wrote out the code that I had actually made concentric circles - so it's sort of a half-step from the circle to the spiral.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org03cd7fa" class="outline-2"&gt;
-&lt;h2 id="org03cd7fa"&gt;The Class&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org03cd7fa"&gt;
+&lt;div id="outline-container-orgeb1f05a" class="outline-2"&gt;
+&lt;h2 id="orgeb1f05a"&gt;The Class&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgeb1f05a"&gt;
 &lt;p&gt;
 The &lt;code&gt;ConcentricCircles&lt;/code&gt; class keeps track of the parameters for the circles and draws them. Here I'm declaring the class and some fields to store the parameters.
 &lt;/p&gt;
@@ -56,9 +56,9 @@ The constructor takes the &lt;code&gt;p5.js&lt;/code&gt; object and the coordina
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgf209634" class="outline-3"&gt;
-&lt;h3 id="orgf209634"&gt;The Step&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgf209634"&gt;
+&lt;div id="outline-container-orged45dbe" class="outline-3"&gt;
+&lt;h3 id="orged45dbe"&gt;The Step&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orged45dbe"&gt;
 &lt;p&gt;
 The &lt;code&gt;step&lt;/code&gt; is the amount the radius increases between each circle. I put it in a getter so that it can check if the circles are at the limits of the expected maximum (or minimum) size and thus should change direction (shrink instead of grow or vice-versa).
 &lt;/p&gt;
@@ -73,9 +73,9 @@ The &lt;code&gt;step&lt;/code&gt; is the amount the radius increases between eac
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org97434b5" class="outline-3"&gt;
-&lt;h3 id="org97434b5"&gt;The Draw&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org97434b5"&gt;
+&lt;div id="outline-container-org3c8421a" class="outline-3"&gt;
+&lt;h3 id="org3c8421a"&gt;The Draw&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org3c8421a"&gt;
 &lt;p&gt;
 The &lt;code&gt;draw&lt;/code&gt; method is what the sketch function calls to tell the &lt;code&gt;ConcentricCircles&lt;/code&gt; to draw a circle. This is similar to the sketch that drew a single circle except that the radius gets incremented at after the circle is drawn.
 &lt;/p&gt;
@@ -97,17 +97,17 @@ The &lt;code&gt;draw&lt;/code&gt; method is what the sketch function calls to te
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org5772706" class="outline-2"&gt;
-&lt;h2 id="org5772706"&gt;The Sketch Function&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org5772706"&gt;
+&lt;div id="outline-container-org306b60c" class="outline-2"&gt;
+&lt;h2 id="org306b60c"&gt;The Sketch Function&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org306b60c"&gt;
 &lt;p&gt;
 This is the function that gets passed to &lt;code&gt;p5&lt;/code&gt; to execute the &lt;code&gt;setup&lt;/code&gt; and &lt;code&gt;draw&lt;/code&gt; methods.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orge84fcb0" class="outline-3"&gt;
-&lt;h3 id="orge84fcb0"&gt;Concentric Circles&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orge84fcb0"&gt;
+&lt;div id="outline-container-org89d8721" class="outline-3"&gt;
+&lt;h3 id="org89d8721"&gt;Concentric Circles&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org89d8721"&gt;
 &lt;p&gt;
 After declaring the function and some constants for the canvas, it creates an instance of the &lt;code&gt;ConcentricCircles&lt;/code&gt; class.
 &lt;/p&gt;
@@ -123,9 +123,9 @@ After declaring the function and some constants for the canvas, it creates an in
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orga5dce1a" class="outline-3"&gt;
-&lt;h3 id="orga5dce1a"&gt;Set Up&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orga5dce1a"&gt;
+&lt;div id="outline-container-org7f8ae46" class="outline-3"&gt;
+&lt;h3 id="org7f8ae46"&gt;Set Up&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org7f8ae46"&gt;
 &lt;p&gt;
 The &lt;code&gt;setup&lt;/code&gt; method doesn't do anything fancy, although I did have to set the &lt;code&gt;frameRate&lt;/code&gt; to a slower speed otherwise I couldn't see the circles being animated.
 &lt;/p&gt;
@@ -141,9 +141,9 @@ The &lt;code&gt;setup&lt;/code&gt; method doesn't do anything fancy, although I 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org3e59974" class="outline-3"&gt;
-&lt;h3 id="org3e59974"&gt;Draw&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org3e59974"&gt;
+&lt;div id="outline-container-org3a1f9fe" class="outline-3"&gt;
+&lt;h3 id="org3a1f9fe"&gt;Draw&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org3a1f9fe"&gt;
 &lt;p&gt;
 The &lt;code&gt;draw&lt;/code&gt; method defers to the &lt;code&gt;ConcentricCircles.draw&lt;/code&gt; method to do the actual drawing of the circles, but I added a light white overlay so that the circles fade out and you can see the animation.
 &lt;/p&gt;
@@ -156,9 +156,9 @@ The &lt;code&gt;draw&lt;/code&gt; method defers to the &lt;code&gt;ConcentricCir
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org11ce38c" class="outline-3"&gt;
-&lt;h3 id="org11ce38c"&gt;Passing The Sketch to p5.js&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org11ce38c"&gt;
+&lt;div id="outline-container-orgccbec78" class="outline-3"&gt;
+&lt;h3 id="orgccbec78"&gt;Passing The Sketch to p5.js&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgccbec78"&gt;
 &lt;p&gt;
 That's pretty much it for the sketch, the last thing to do is just pass the &lt;code&gt;concentric_circles&lt;/code&gt; function to &lt;code&gt;p5&lt;/code&gt; along with the &lt;code&gt;id&lt;/code&gt; for the &lt;code&gt;div&lt;/code&gt; where the sketch should go (which I defined but don't show in the post).
 &lt;/p&gt;
@@ -169,29 +169,441 @@ That's pretty much it for the sketch, the last thing to do is just pass the &lt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org6a3a093" class="outline-2"&gt;
-&lt;h2 id="org6a3a093"&gt;The End&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org6a3a093"&gt;
+&lt;div id="outline-container-org2386897" class="outline-2"&gt;
+&lt;h2 id="org2386897"&gt;The End&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org2386897"&gt;
 &lt;p&gt;
 And that's it for drawing concentric circles, now on to spirals.
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><category>generative art</category><category>p5.js</category><guid>https://necromuralist.github.io/Ape-Iron/posts/generative-art-concentric-circles/index.html</guid><pubDate>Mon, 28 Aug 2023 22:19:49 GMT</pubDate></item><item><title>Generative Art</title><link>https://necromuralist.github.io/Ape-Iron/posts/bibliography-generative-art/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="outline-container-orgb8d79bc" class="outline-2"&gt;
-&lt;h2 id="orgb8d79bc"&gt;The Book&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgb8d79bc"&gt;
+&lt;/div&gt;</description><category>generative art</category><category>p5.js</category><guid>https://necromuralist.github.io/Ape-Iron/posts/generative-art-concentric-circles/index.html</guid><pubDate>Mon, 28 Aug 2023 22:19:49 GMT</pubDate></item><item><title>Generative Art: Spiral</title><link>https://necromuralist.github.io/Ape-Iron/posts/generative-art-spiral/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;div id="text-table-of-contents" role="doc-toc"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-spiral/index.html#org8d97e23"&gt;The Div IDs&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-spiral/index.html#org4b78d2b"&gt;The Sketch Div&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-spiral/index.html#org4b23f60"&gt;The Slider Divs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-spiral/index.html#org318ba1d"&gt;Text Divs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-spiral/index.html#org306a8e0"&gt;The Slider Settings&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-spiral/index.html#org805584a"&gt;The Validator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-spiral/index.html#orgbdfdef0"&gt;Angle Slider&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-spiral/index.html#org9eb09da"&gt;Radius Slider&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-spiral/index.html#org6500997"&gt;Circle Slider&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-spiral/index.html#org111e6a8"&gt;The Spiralizer&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-spiral/index.html#org6db76f8"&gt;Class Declaration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-spiral/index.html#org38695ff"&gt;The Constructor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-spiral/index.html#org0b05e5b"&gt;The Draw Method&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-spiral/index.html#org4632e0c"&gt;Reset&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-spiral/index.html#org2883ef7"&gt;The Spiral Sketch&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-spiral/index.html#orga5bc6d0"&gt;Function Declaration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-spiral/index.html#org4c04367"&gt;Setup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-spiral/index.html#org8c2147f"&gt;Draw&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-spiral/index.html#org00bcad3"&gt;Double-Clicked&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-spiral/index.html#orgb2e5b8d"&gt;The P5 Instance&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-spiral/index.html#orgec08eed"&gt;References&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+&lt;script type="module" src="https://necromuralist.github.io/Ape-Iron/posts/generative-art-spiral/spiral.js"&gt;&lt;/script&gt;
+
+&lt;/p&gt;&lt;div class="p5js" id="spiral-0a168ba9"&gt;&lt;/div&gt;
+
+
+
+&lt;div id="angle-text-0a168ba9"&gt;&lt;/div&gt;
+&lt;div id="angle-slider-0a168ba9"&gt;&lt;/div&gt;
+
+&lt;div id="radius-text-0a168ba9"&gt;&lt;/div&gt;
+&lt;div id="radius-slider-0a168ba9"&gt;&lt;/div&gt;
+
+&lt;div id="circle-text-0a168ba9"&gt;&lt;/div&gt;
+&lt;div id="circle-slider-0a168ba9"&gt;&lt;/div&gt;
+
+
+
+&lt;div id="outline-container-org8d97e23" class="outline-2"&gt;
+&lt;h2 id="org8d97e23"&gt;The Div IDs&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org8d97e23"&gt;
+&lt;p&gt;
+To specify where the parts of the sketch go I added some &lt;code&gt;div&lt;/code&gt; tags to the HTML so I'm going to create some javascript constants with the div IDs to make it easier to keep track of them.
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org4b78d2b" class="outline-3"&gt;
+&lt;h3 id="org4b78d2b"&gt;The Sketch Div&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org4b78d2b"&gt;
+&lt;p&gt;
+This is the ID for the &lt;code&gt;div&lt;/code&gt; where the main sketch will go, it gets passed to the p5 constructor, along with the sketch definition, to create the &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-spiral/index.html#orgb2e5b8d"&gt;the P5 instance&lt;/a&gt;.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;SPIRAL_DIV&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"spiral-0a168ba9"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org4b23f60" class="outline-3"&gt;
+&lt;h3 id="org4b23f60"&gt;The Slider Divs&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org4b23f60"&gt;
+&lt;p&gt;
+I'm going to add some sliders to make it easier to adjust some of the parameters and see how that affects the sketch. These are the IDs of the &lt;code&gt;div&lt;/code&gt; tags where I'm going to put the sliders to change some of the sketch values. The angle and radius sliders will set how much the angle and radius will change as the circle is drawn. If, for example, the angle slider is set to 5, then every point that's added will be rotated five degrees from the previous point, and if the radius is set to 5, then the radius will grow by 5 every time a point is added.
+&lt;/p&gt;
+
+&lt;p&gt;
+The circle slider is a little different in that it sets the diameter for the circles that I'm drawing to create the spiral, so it's just an aesthetic setting.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;SPIRAL_ANGLE_SLIDER&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"angle-slider-0a168ba9"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;SPIRAL_RADIUS_SLIDER&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"radius-slider-0a168ba9"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;SPIRAL_CIRCLE_SLIDER&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"circle-slider-0a168ba9"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org318ba1d" class="outline-3"&gt;
+&lt;h3 id="org318ba1d"&gt;Text Divs&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org318ba1d"&gt;
+&lt;p&gt;
+I also created some &lt;code&gt;div&lt;/code&gt; tags that I'll put some text into to show the current value of each of the sliders.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;SPIRAL_ANGLE_TEXT&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"angle-text-0a168ba9"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;SPIRAL_RADIUS_TEXT&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"radius-text-0a168ba9"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;SPIRAL_CIRCLE_TEXT&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"circle-text-0a168ba9"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org306a8e0" class="outline-2"&gt;
+&lt;h2 id="org306a8e0"&gt;The Slider Settings&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org306a8e0"&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-org805584a" class="outline-3"&gt;
+&lt;h3 id="org805584a"&gt;The Validator&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org805584a"&gt;
+&lt;p&gt;
+This is used by the settings classes to try and see if I'm passing in valid arguments.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;VALIDATOR&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;Validator&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgbdfdef0" class="outline-3"&gt;
+&lt;h3 id="orgbdfdef0"&gt;Angle Slider&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgbdfdef0"&gt;
+&lt;p&gt;
+The values used to create the angle-increment slider.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;ANGLE_SLIDER&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;SliderSettings&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="mf"&gt;40&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="mf"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;SPIRAL_ANGLE_SLIDER&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;VALIDATOR&lt;/span&gt;
+&lt;span class="p"&gt;);&lt;/span&gt;
+
+&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;ANGLE_CAPTION&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;CaptionSettings&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="s2"&gt;"Angle Increment"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;SPIRAL_ANGLE_TEXT&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;VALIDATOR&lt;/span&gt;
+&lt;span class="p"&gt;);&lt;/span&gt;
+
+&lt;span class="nx"&gt;ANGLE_SLIDER&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;check_rep&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="nx"&gt;ANGLE_CAPTION&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;check_rep&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org9eb09da" class="outline-3"&gt;
+&lt;h3 id="org9eb09da"&gt;Radius Slider&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org9eb09da"&gt;
+&lt;p&gt;
+The values used to create the radius increment slider.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;RADIUS_SLIDER&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;SliderSettings&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="mf"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;SPIRAL_RADIUS_SLIDER&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;VALIDATOR&lt;/span&gt;
+&lt;span class="p"&gt;);&lt;/span&gt;
+
+&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;RADIUS_CAPTION&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;CaptionSettings&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="s2"&gt;"Radius Increment"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;SPIRAL_RADIUS_TEXT&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;VALIDATOR&lt;/span&gt;
+&lt;span class="p"&gt;);&lt;/span&gt;
+
+&lt;span class="nx"&gt;RADIUS_SLIDER&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;check_rep&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="nx"&gt;RADIUS_CAPTION&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;check_rep&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org6500997" class="outline-3"&gt;
+&lt;h3 id="org6500997"&gt;Circle Slider&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org6500997"&gt;
+&lt;p&gt;
+The values used to create the circle diameter slider.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;CIRCLE_SLIDER&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;SliderSettings&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="mf"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;SPIRAL_CIRCLE_SLIDER&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;VALIDATOR&lt;/span&gt;
+&lt;span class="p"&gt;);&lt;/span&gt;
+
+&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;CIRCLE_CAPTION&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;CaptionSettings&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="s2"&gt;"Point Diameter"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;SPIRAL_CIRCLE_TEXT&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;VALIDATOR&lt;/span&gt;
+&lt;span class="p"&gt;);&lt;/span&gt;
+
+&lt;span class="nx"&gt;CIRCLE_SLIDER&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;check_rep&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="nx"&gt;CIRCLE_CAPTION&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;check_rep&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org111e6a8" class="outline-2"&gt;
+&lt;h2 id="org111e6a8"&gt;The Spiralizer&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org111e6a8"&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-org6db76f8" class="outline-3"&gt;
+&lt;h3 id="org6db76f8"&gt;Class Declaration&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org6db76f8"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;class&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;Spiralizer&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="c1"&gt;// geometry&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;degrees_in_a_circle&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;360&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;to_radians&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;Math&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;PI&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;degrees_in_a_circle&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="c1"&gt;// the starting values for the circles&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;radius&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;angle&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="c1"&gt;// the center of our sketch (and the circles)&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;center_x&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;center_y&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org38695ff" class="outline-3"&gt;
+&lt;h3 id="org38695ff"&gt;The Constructor&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org38695ff"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kr"&gt;constructor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;center_x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;center_y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;maximum_radius&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;	    &lt;/span&gt;&lt;span class="nx"&gt;angle_slider&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;radius_slider&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;circle_slider&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;center_x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;center_x&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;center_y&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;center_y&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;maximum_radius&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;maximum_radius&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="c1"&gt;// the amount to move the points on the circle as they're drawn&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;angle_increment&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;angle_slider&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;radius_increment&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;radius_slider&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="c1"&gt;// the size of the circle to draw  the circles&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;point_diameter&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;circle_slider&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// constructor&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org0b05e5b" class="outline-3"&gt;
+&lt;h3 id="org0b05e5b"&gt;The Draw Method&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org0b05e5b"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;draw&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;radians&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;y&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;radians&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;angle&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;to_radians&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;center_x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;radius&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;Math&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;cos&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;radians&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;y&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;center_y&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;radius&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;Math&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;radians&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;circle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;point_diameter&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;value&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;
+
+
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;radius&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;radius_increment&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;value&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;angle&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;angle_increment&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;value&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;radius&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;maximum_radius&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;radius&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;radius_increment&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;value&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// end draw&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org4632e0c" class="outline-3"&gt;
+&lt;h3 id="org4632e0c"&gt;Reset&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org4632e0c"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;reset&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;radius&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;radius_increment&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;value&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;angle&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// end reset&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org2883ef7" class="outline-2"&gt;
+&lt;h2 id="org2883ef7"&gt;The Spiral Sketch&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org2883ef7"&gt;
+&lt;p&gt;
+This is going to be the sketch that we pass to &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-spiral/index.html#orgb2e5b8d"&gt;the P5 constructor&lt;/a&gt; to create the animation.
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orga5bc6d0" class="outline-3"&gt;
+&lt;h3 id="orga5bc6d0"&gt;Function Declaration&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orga5bc6d0"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;spiral_sketch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="c1"&gt;// the size of the canvas and the color of the circles&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;WIDTH&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;500&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;HEIGHT&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;WIDTH&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;POINT_COLOR&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"RoyalBlue"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;spiralizer&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;angle_slider&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;radius_slider&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;circle_slider&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org4c04367" class="outline-3"&gt;
+&lt;h3 id="org4c04367"&gt;Setup&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org4c04367"&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-org8c80621" class="outline-4"&gt;
+&lt;h4 id="org8c80621"&gt;Setup The Canvas and Drawing Settings&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org8c80621"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;setup&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(){&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;createCanvas&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;WIDTH&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;HEIGHT&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;background&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"white"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;stroke&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;POINT_COLOR&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;fill&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;POINT_COLOR&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org02adf36" class="outline-4"&gt;
+&lt;h4 id="org02adf36"&gt;Create The Sliders&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org02adf36"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;angle_slider&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;Slidini&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;ANGLE_SLIDER&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;ANGLE_CAPTION&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;
+&lt;span class="nx"&gt;radius_slider&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;Slidini&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;RADIUS_SLIDER&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;RADIUS_CAPTION&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="nx"&gt;circle_slider&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;Slidini&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;CIRCLE_SLIDER&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;CIRCLE_CAPTION&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgdee6794" class="outline-4"&gt;
+&lt;h4 id="orgdee6794"&gt;Create the Spiralizer and End the Setup&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgdee6794"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;spiralizer&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;Spiralizer&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;WIDTH&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;HEIGHT&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;WIDTH&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;			    &lt;/span&gt;&lt;span class="nx"&gt;angle_slider&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;slider&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;			    &lt;/span&gt;&lt;span class="nx"&gt;radius_slider&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;slider&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;			    &lt;/span&gt;&lt;span class="nx"&gt;circle_slider&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;slider&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// end setup&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org8c2147f" class="outline-3"&gt;
+&lt;h3 id="org8c2147f"&gt;Draw&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org8c2147f"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;draw&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;spiralizer&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;draw&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;background&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;255&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;5&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="c1"&gt;// end draw&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org00bcad3" class="outline-3"&gt;
+&lt;h3 id="org00bcad3"&gt;Double-Clicked&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org00bcad3"&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;doubleClicked&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;spiralizer&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;reset&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;background&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"white"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// end doubleClicked&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgb2e5b8d" class="outline-3"&gt;
+&lt;h3 id="orgb2e5b8d"&gt;The P5 Instance&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgb2e5b8d"&gt;
+&lt;p&gt;
+To create the animation I'll create a p5 object by passing in &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-spiral/index.html#org2883ef7"&gt;the function from the previous section&lt;/a&gt; and &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-spiral/index.html#org4b78d2b"&gt;the div ID&lt;/a&gt; to identify where in the page the sketch should go.
+&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ow"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;spiral_sketch&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;SPIRAL_DIV&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-orgec08eed" class="outline-2"&gt;
+&lt;h2 id="orgec08eed"&gt;References&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgec08eed"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bibliography-generative-art/index.html"&gt;Generative Art&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;id - HTML: HyperText Markup Language | MDN [Internet]. 2023 [cited 2023 Sep 14]. Available from: &lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id"&gt;https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;p5.js reference | createSlider() [Internet]. [cited 2023 Apr 25]. Available from: &lt;a href="https://p5js.org/reference/#/p5/createSlider"&gt;https://p5js.org/reference/#/p5/createSlider&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;p5.js reference | p5.Element [Internet]. [cited 2023 Sep 14]. Available from: &lt;a href="https://p5js.org/reference/#/p5.Element"&gt;https://p5js.org/reference/#/p5.Element&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;p5.js reference | html() [Internet]. [cited 2023 Sep 14]. Available from: &lt;a href="https://p5js.org/reference/#/p5.Element/html"&gt;https://p5js.org/reference/#/p5.Element/html&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;p5.js reference | parent() [Internet]. [cited 2023 Sep 14]. Available from: &lt;a href="https://p5js.org/reference/#/p5.Element/parent"&gt;https://p5js.org/reference/#/p5.Element/parent&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;p5.js reference | select() [Internet]. [cited 2023 Sep 14]. Available from: &lt;a href="https://p5js.org/reference/#/p5/select"&gt;https://p5js.org/reference/#/p5/select&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><category>generative art</category><category>p5.js</category><guid>https://necromuralist.github.io/Ape-Iron/posts/generative-art-spiral/index.html</guid><pubDate>Sat, 17 Jun 2023 23:38:42 GMT</pubDate></item><item><title>Generative Art</title><link>https://necromuralist.github.io/Ape-Iron/posts/bibliography-generative-art/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="outline-container-orgf5d85ab" class="outline-2"&gt;
+&lt;h2 id="orgf5d85ab"&gt;The Book&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgf5d85ab"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;Pearson M. Generative art: a practical guide using processing. Shelter Island, NY : London: Manning ; Pearson Education [distributor]; 2011. 197 pages&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgffcd1ce" class="outline-2"&gt;
-&lt;h2 id="orgffcd1ce"&gt;The Author's Site(s)&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgffcd1ce"&gt;
+&lt;div id="outline-container-org5a69aed" class="outline-2"&gt;
+&lt;h2 id="org5a69aed"&gt;The Author's Site(s)&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org5a69aed"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgcac3b07" class="outline-3"&gt;
-&lt;h3 id="orgcac3b07"&gt;Zen Bullets (probably)&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgcac3b07"&gt;
+&lt;div id="outline-container-org136d4d8" class="outline-3"&gt;
+&lt;h3 id="org136d4d8"&gt;Zen Bullets (probably)&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org136d4d8"&gt;
 &lt;p&gt;
 The Zen Bullets site doesn't have the author's name listed on it (that I could see) but there's references to this being his pen-name (e.g. on &lt;a href="https://leanpub.com/u/zenbullets"&gt;leanpub&lt;/a&gt;) and the works look about right.
 &lt;/p&gt;
@@ -209,9 +621,9 @@ The Zen Bullets site uses a very small font and you can't scroll the menu on the
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgdadcde3" class="outline-3"&gt;
-&lt;h3 id="orgdadcde3"&gt;Abandoned Art (Possibly Truly Abandoned)&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgdadcde3"&gt;
+&lt;div id="outline-container-org2001937" class="outline-3"&gt;
+&lt;h3 id="org2001937"&gt;Abandoned Art (Possibly Truly Abandoned)&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org2001937"&gt;
 &lt;p&gt;
 &lt;b&gt;Warning:&lt;/b&gt; uBlock Origin blocks this site because the web-host it uses is listed as untrustworthy, so I haven't actually seen the page, but it's listed in the book and the book's &lt;a href="https://www.manning.com/books/generative-art"&gt;product page&lt;/a&gt;  so I'm including it mostly to remind myself not to go there, even though they tell you to (the errata page does have a a note saying the site's license is expired, but they didn't fix the main page).
 &lt;/p&gt;
@@ -224,9 +636,9 @@ The Zen Bullets site uses a very small font and you can't scroll the menu on the
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orge378489" class="outline-2"&gt;
-&lt;h2 id="orge378489"&gt;Other Artist's Mentioned In the Book&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orge378489"&gt;
+&lt;div id="outline-container-org0e5b1f5" class="outline-2"&gt;
+&lt;h2 id="org0e5b1f5"&gt;Other Artist's Mentioned In the Book&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org0e5b1f5"&gt;
 &lt;p&gt;
 These are ones that I could find dedicated sites for. The earliest pioneers (other than Manfred Mohr and Paul Brown) don't seem to have websites with their work.
 &lt;/p&gt;
@@ -246,7 +658,7 @@ These are ones that I could find dedicated sites for. The earliest pioneers (oth
 &lt;li&gt;&lt;a href="https://winterbloed.be/"&gt;Frederik Vanhoutte&lt;/a&gt;: I didn't see his name on the site (&lt;i&gt;winterbloed.be&lt;/i&gt;) but &lt;i&gt;Winterbloed&lt;/i&gt; appears to be his pen-name. (http only)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><category>book</category><category>citation</category><category>generative art</category><guid>https://necromuralist.github.io/Ape-Iron/posts/bibliography-generative-art/index.html</guid><pubDate>Sun, 04 Jun 2023 19:58:39 GMT</pubDate></item><item><title>Generative Art Circles</title><link>https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
+&lt;/div&gt;</description><category>bibliography</category><category>book</category><category>generative art</category><guid>https://necromuralist.github.io/Ape-Iron/posts/bibliography-generative-art/index.html</guid><pubDate>Sun, 04 Jun 2023 19:58:39 GMT</pubDate></item><item><title>Generative Art Circles</title><link>https://necromuralist.github.io/Ape-Iron/posts/generative-art-circles/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;

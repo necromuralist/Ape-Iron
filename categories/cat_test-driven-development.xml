@@ -5,43 +5,43 @@
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"&gt;&lt;/a&gt;&lt;/p&gt; 
-</copyright><lastBuildDate>Wed, 11 Oct 2023 20:19:13 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Cucumber, Chai, and JSDOM</title><link>https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
+</copyright><lastBuildDate>Mon, 30 Oct 2023 23:10:49 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Cucumber, Chai, and JSDOM</title><link>https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#org1ef3537"&gt;What Is This About?&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#org86ae27d"&gt;What Is This About?&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#org3a262b0"&gt;The Earlier Problem&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#orgeb68bf3"&gt;The Newer Problem&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#orgfd10dbb"&gt;The Earlier Problem&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#org4a47aee"&gt;The Newer Problem&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#org991eeb7"&gt;The Feature File&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#org2433717"&gt;The Software Under Test&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#orgeeef2b4"&gt;The Feature File&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#org750fc1f"&gt;The Software Under Test&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#orgfde99b7"&gt;The Class Declaration&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#org8c45a15"&gt;The Get Element Method&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#orgf78be0c"&gt;The Class Declaration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#org255d8e7"&gt;The Get Element Method&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#org101bc77"&gt;The Step File&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#org310fb79"&gt;The Step File&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#orgf862875"&gt;Setting Up&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#org8a6ef9f"&gt;The Tests&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#org367b195"&gt;Setting Up&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#orgbb3f1d5"&gt;The Tests&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#orga8ff085"&gt;What Have We Learned?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#org7832c8c"&gt;What Have We Learned?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org1ef3537" class="outline-2"&gt;
-&lt;h2 id="org1ef3537"&gt;What Is This About?&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org1ef3537"&gt;
+&lt;div id="outline-container-org86ae27d" class="outline-2"&gt;
+&lt;h2 id="org86ae27d"&gt;What Is This About?&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org86ae27d"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org3a262b0" class="outline-3"&gt;
-&lt;h3 id="org3a262b0"&gt;The Earlier Problem&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org3a262b0"&gt;
+&lt;div id="outline-container-orgfd10dbb" class="outline-3"&gt;
+&lt;h3 id="orgfd10dbb"&gt;The Earlier Problem&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgfd10dbb"&gt;
 &lt;p&gt;
-In my code from another post I used &lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById"&gt;document.getElementById&lt;/a&gt; as a check to make sure that I was passing in a valid &lt;code&gt;div&lt;/code&gt; ID to &lt;code&gt;p5.js&lt;/code&gt; and I decided to add some testing to make sure my validator was working as I expected. The problem was that when you run tests in &lt;code&gt;node.js&lt;/code&gt; the &lt;code&gt;document&lt;/code&gt; object doesn't exist. One way to get around this might be to use &lt;code&gt;Selenium&lt;/code&gt; or some other browser-tester but that seemed like overkill.
+In my code from &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-spiral/index.html"&gt;my spiral post&lt;/a&gt; I used &lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById"&gt;document.getElementById&lt;/a&gt; as a check to make sure that I was passing in a valid &lt;code&gt;div&lt;/code&gt; ID to &lt;code&gt;p5.js&lt;/code&gt; and I decided to add some testing to make sure my validator was working as I expected. The problem was that when you run tests in &lt;code&gt;node.js&lt;/code&gt; the &lt;code&gt;document&lt;/code&gt; object doesn't exist. One way to get around this might be to use &lt;code&gt;Selenium&lt;/code&gt; or some other browser-tester but that seemed like overkill.
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -61,9 +61,9 @@ Where &lt;code&gt;dom&lt;/code&gt; is an instance of &lt;code&gt;jsdom&lt;/code&
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgeb68bf3" class="outline-3"&gt;
-&lt;h3 id="orgeb68bf3"&gt;The Newer Problem&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgeb68bf3"&gt;
+&lt;div id="outline-container-org4a47aee" class="outline-3"&gt;
+&lt;h3 id="org4a47aee"&gt;The Newer Problem&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org4a47aee"&gt;
 &lt;p&gt;
 Then I got to this post where I wanted to document getting &lt;code&gt;jsdom&lt;/code&gt; to work and, even though I was using a simpler version of the previous post, I found that the tests were failing mysteriously (pretty much everything with javascript is mysterious to me). With a lot of troubleshooting, I managed to find out that instead of using the &lt;code&gt;dom&lt;/code&gt; I was creating here it was still using the same one from the other testing. Except sometimes it was using the &lt;code&gt;dom&lt;/code&gt; I defined here and these tests passed but then the other tests failed. I guess &lt;code&gt;global&lt;/code&gt; means global in the truer sense, not just for the scope of a single set of tests, and there's some kind of race going on between the different pieces of code that are trying to set and use this global &lt;code&gt;document&lt;/code&gt;. Oy.
 &lt;/p&gt;
@@ -91,10 +91,9 @@ In the end I ended up doing an ugly workaround which didn't really even require 
 &lt;/div&gt;
 &lt;/div&gt;
 
-
-&lt;div id="outline-container-org991eeb7" class="outline-2"&gt;
-&lt;h2 id="org991eeb7"&gt;The Feature File&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org991eeb7"&gt;
+&lt;div id="outline-container-orgeeef2b4" class="outline-2"&gt;
+&lt;h2 id="orgeeef2b4"&gt;The Feature File&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgeeef2b4"&gt;
 &lt;p&gt;
 This is a &lt;a href="https://github.com/cucumber/cucumber-js"&gt;Cucumber.js&lt;/a&gt; test so I'll create a simple feature file for a class that retrieves a document element and test the case where the ID is correct and the one where it is incorrect.
 &lt;/p&gt;
@@ -116,17 +115,17 @@ This is a &lt;a href="https://github.com/cucumber/cucumber-js"&gt;Cucumber.js&lt
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org2433717" class="outline-2"&gt;
-&lt;h2 id="org2433717"&gt;The Software Under Test&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org2433717"&gt;
+&lt;div id="outline-container-org750fc1f" class="outline-2"&gt;
+&lt;h2 id="org750fc1f"&gt;The Software Under Test&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org750fc1f"&gt;
 &lt;p&gt;
 Now the implementation. This is kind of a useless class, but this was supposed to be about how to get &lt;code&gt;jsdom&lt;/code&gt; working so I can test code expecting a &lt;code&gt;document&lt;/code&gt;.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgfde99b7" class="outline-3"&gt;
-&lt;h3 id="orgfde99b7"&gt;The Class Declaration&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgfde99b7"&gt;
+&lt;div id="outline-container-orgf78be0c" class="outline-3"&gt;
+&lt;h3 id="orgf78be0c"&gt;The Class Declaration&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgf78be0c"&gt;
 &lt;p&gt;
 This is the class I'm going to test.
 &lt;/p&gt;
@@ -150,11 +149,11 @@ The constructor shows the main change I made to get it working - instead of usin
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org8c45a15" class="outline-3"&gt;
-&lt;h3 id="org8c45a15"&gt;The Get Element Method&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org8c45a15"&gt;
+&lt;div id="outline-container-org255d8e7" class="outline-3"&gt;
+&lt;h3 id="org255d8e7"&gt;The Get Element Method&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org255d8e7"&gt;
 &lt;p&gt;
-I made a getter for the retrieved element. It probably would have been easier in this case if I didn't store it, since I could test both when the ID is correct and when it isn't with the same object, just by changing the &lt;code&gt;this.element_id&lt;/code&gt; value, but it's a pattern I often use and it gave me the chance to test out javascripts &lt;a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields"&gt;Private Class Fields&lt;/a&gt; syntax. To be quite honest, I think using the pound sign (&lt;code&gt;#&lt;/code&gt;) is kind of ugly - I prefer the underscore - but at least I know about it.
+I made a getter for the retrieved element. It probably would have been easier in this case if I didn't store it, since I could test both when the ID is correct and when it isn't with the same object, just by changing the &lt;code&gt;this.element_id&lt;/code&gt; value, but it's a pattern I often use and it gave me the chance to test out javascript's &lt;a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields"&gt;Private Class Fields&lt;/a&gt; syntax. To be quite honest, I think using the pound sign (&lt;code&gt;#&lt;/code&gt;) is kind of ugly - I prefer the underscore, and &lt;a href="https://pygments.org/"&gt;Pygments&lt;/a&gt; draws red boxes around the &lt;code&gt;#&lt;/code&gt;- but at least I know about it. 
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -175,21 +174,21 @@ The main value in using a getter here is that it can check that the element exis
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org101bc77" class="outline-2"&gt;
-&lt;h2 id="org101bc77"&gt;The Step File&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org101bc77"&gt;
+&lt;div id="outline-container-org310fb79" class="outline-2"&gt;
+&lt;h2 id="org310fb79"&gt;The Step File&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org310fb79"&gt;
 &lt;p&gt;
 And now the test code.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgf862875" class="outline-3"&gt;
-&lt;h3 id="orgf862875"&gt;Setting Up&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgf862875"&gt;
+&lt;div id="outline-container-org367b195" class="outline-3"&gt;
+&lt;h3 id="org367b195"&gt;Setting Up&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org367b195"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgb03c0cb" class="outline-4"&gt;
-&lt;h4 id="orgb03c0cb"&gt;Import the Test Libraries&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgb03c0cb"&gt;
+&lt;div id="outline-container-orgeb18d0c" class="outline-4"&gt;
+&lt;h4 id="orgeb18d0c"&gt;Import the Test Libraries&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgeb18d0c"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;expect&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"chai"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="k"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;Given&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;When&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;Then&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"@cucumber/cucumber"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="k"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;JSDOM&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"jsdom"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -201,9 +200,9 @@ These are the libraries that I installed to support testing. Using &lt;code&gt;j
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgfc59c70" class="outline-4"&gt;
-&lt;h4 id="orgfc59c70"&gt;Import the Software Under Test&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgfc59c70"&gt;
+&lt;div id="outline-container-org4e23189" class="outline-4"&gt;
+&lt;h4 id="org4e23189"&gt;Import the Software Under Test&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org4e23189"&gt;
 &lt;p&gt;
 Now I'll import the &lt;code&gt;ElementGetter&lt;/code&gt; class that I defined above. It occurs to me that for a case like this where I don't actually use the code for anything other than testing I could have put it next to the tests, but I guess this is a better dress rehearsal for really using code in a post.
 &lt;/p&gt;
@@ -217,35 +216,33 @@ Note the extra step up the path (&lt;code&gt;../&lt;/code&gt;) because this time
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org5842d6f" class="outline-4"&gt;
-&lt;h4 id="org5842d6f"&gt;Setup JSDOM&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org5842d6f"&gt;
+&lt;div id="outline-container-org3422585" class="outline-4"&gt;
+&lt;h4 id="org3422585"&gt;Setup JSDOM&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org3422585"&gt;
 &lt;p&gt;
 Here's where I create the &lt;code&gt;jsdom&lt;/code&gt; object with a &lt;code&gt;div&lt;/code&gt; that the &lt;code&gt;ElementGetter&lt;/code&gt; can get. I'm passing in the whole HTML string but in the documentation they sometimes just pass in the body.
 &lt;/p&gt;
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;EXPECTED_ID&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"expected-div"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ow"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;JSDOM&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sb"&gt;`&amp;lt;html&amp;gt;&lt;/span&gt;
+&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ow"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;JSDOM&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sb"&gt;`&amp;lt;html&amp;gt;&lt;/span&gt;
 &lt;span class="sb"&gt;&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
 &lt;span class="sb"&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
 
 &lt;span class="sb"&gt;  &amp;lt;div id='&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;EXPECTED_ID&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="sb"&gt;'&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
 
-&lt;span class="sb"&gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;`&lt;/span&gt;&lt;span class="p"&gt;)).&lt;/span&gt;&lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-
-&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="sb"&gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;`&lt;/span&gt;&lt;span class="p"&gt;)).&lt;/span&gt;&lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org8a6ef9f" class="outline-3"&gt;
-&lt;h3 id="org8a6ef9f"&gt;The Tests&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org8a6ef9f"&gt;
+&lt;div id="outline-container-orgbb3f1d5" class="outline-3"&gt;
+&lt;h3 id="orgbb3f1d5"&gt;The Tests&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgbb3f1d5"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org6413cf2" class="outline-4"&gt;
-&lt;h4 id="org6413cf2"&gt;The Right ID&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org6413cf2"&gt;
+&lt;div id="outline-container-orgbbab3e2" class="outline-4"&gt;
+&lt;h4 id="orgbbab3e2"&gt;The Right ID&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgbbab3e2"&gt;
 &lt;p&gt;
 This is the first scenario where I expect the &lt;code&gt;ElementGetter&lt;/code&gt; to successfully find the element. There's not a lot to test here, other than it doesn't crash.
 &lt;/p&gt;
@@ -267,9 +264,9 @@ This is the first scenario where I expect the &lt;code&gt;ElementGetter&lt;/code
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org47042d7" class="outline-4"&gt;
-&lt;h4 id="org47042d7"&gt;The Wrong ID&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org47042d7"&gt;
+&lt;div id="outline-container-orgb5230aa" class="outline-4"&gt;
+&lt;h4 id="orgb5230aa"&gt;The Wrong ID&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgb5230aa"&gt;
 &lt;p&gt;
 This is the more interesting case where we give the &lt;code&gt;ElementGetter&lt;/code&gt; an ID that doesn't match any element in the page.
 &lt;/p&gt;
@@ -299,11 +296,11 @@ Since I made a getter to retrieve the element, you can't pass it directly to &lt
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orga8ff085" class="outline-2"&gt;
-&lt;h2 id="orga8ff085"&gt;What Have We Learned?&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orga8ff085"&gt;
+&lt;div id="outline-container-org7832c8c" class="outline-2"&gt;
+&lt;h2 id="org7832c8c"&gt;What Have We Learned?&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org7832c8c"&gt;
 &lt;p&gt;
-I suppose the biggest lesson is that I shouldn't have tried so hard to fake the &lt;code&gt;document&lt;/code&gt; object as a magic global object the way it normally is used and instead just gone for an explicit argument that gets passed to the class (or function) that needs it. I also learned that &lt;code&gt;jsdom&lt;/code&gt; is interesting but behind the ECMA standard, as were some of the other libraries I ran into in trying to solve different parts of this problem, so I have to either decide to not use ECMA 6 or not rely so much on these other libraries that don't use the current standards.
+I suppose the biggest lesson is that I shouldn't have tried so hard to fake the &lt;code&gt;document&lt;/code&gt; object as a magic global object the way it normally is used and instead just gone for an explicit argument that gets passed to the class (or function) that needs it (which sort of follows the &lt;a href="https://en.wikipedia.org/wiki/Dependency_injection?useskin=vector"&gt;Dependency Injection Pattern&lt;/a&gt;). I also learned that &lt;code&gt;jsdom&lt;/code&gt; is interesting but behind the ECMA standard, as were some of the other libraries I ran into in trying to solve different parts of this problem, so I have to either decide to not use ECMA 6 or not rely so much on these other libraries that don't use the current standards.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description><category>chai</category><category>cucumber</category><category>javascript</category><category>tdd</category><category>testing</category><guid>https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html</guid><pubDate>Wed, 27 Sep 2023 21:30:40 GMT</pubDate></item></channel></rss>

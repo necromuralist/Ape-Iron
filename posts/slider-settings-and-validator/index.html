@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+<head>
+<meta charset="utf-8">
+<meta content="A Slider Settings Class and Valdator" name="description">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Slider and Caption Settings | Ape Iron</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<meta content="#5670d4" name="theme-color">
+<meta content="Nikola (getnikola.com)" name="generator">
+<link href="../../rss.xml" hreflang="en" rel="alternate" title="RSS" type="application/rss+xml">
+<link href="https://necromuralist.github.io/Ape-Iron/posts/slider-settings-and-validator/index.html" rel="canonical"><!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><!-- favicons -->
+<link href="../../apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+<link href="../../favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="../../favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="../../site.webmanifest" rel="manifest">
+<meta content="The Cloistered Monkey" name="author">
+<link href="../cucumber-chai-and-jsdom/index.html" rel="prev" title="Cucumber, Chai, and JSDOM" type="text/html">
+<link href="../figure-drawing-sites/index.html" rel="next" title="Figure Drawing Sites" type="text/html">
+<meta content="Ape Iron" property="og:site_name">
+<meta content="Slider and Caption Settings" property="og:title">
+<meta content="https://necromuralist.github.io/Ape-Iron/posts/slider-settings-and-validator/index.html" property="og:url">
+<meta content="A Slider Settings Class and Valdator" property="og:description">
+<meta content="article" property="og:type">
+<meta content="2023-10-02T12:48:10-07:00" property="article:published_time">
+<meta content="javascript" property="article:tag">
+<meta content="p5" property="article:tag">
+</head>
+<body>
+<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a> <!-- Menubar -->
+<nav class="navbar navbar-expand-md static-top mb-4 navbar-light bg-light">
+<div class="container"><!-- This keeps the margins nice -->
+ <a class="navbar-brand" href="../../"><span id="blog-title">Ape Iron</span></a> <button aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#bs-navbar" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="bs-navbar">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item"><a class="nav-link" href="../../archive.html">Archive</a></li>
+<li class="nav-item"><a class="nav-link" href="../../categories/">Tags</a></li>
+<li class="nav-item"><a class="nav-link" href="../../rss.xml">RSS feed</a></li>
+<li class="nav-item dropdown"><a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Monkey Pages</a>
+<div class="dropdown-menu"><a class="dropdown-item" href="https://necromuralist.github.io/">Cloistered Monkey</a> <a class="dropdown-item" href="https://necromuralist.github.io/Beach-Pig-Thigh/">Beach Pig Rump & Thigh</a> <a class="dropdown-item" href="https://necromuralist.github.io/Bowling-For-Data/">Bowling For Data</a> <a class="dropdown-item" href="https://necromuralist.github.io/Terribilis-Ludum/">Terribilis Ludum</a> <a class="dropdown-item" href="https://necromuralist.github.io/Neurotic-Networking/">Neurotic Networking</a> <a class="dropdown-item" href="https://necromuralist.github.io/Visions-Voices-Data/">Visions, Voices, Data</a></div>
+</li>
+</ul>
+<!-- DuckDuckGo custom search -->
+<form action="https://duckduckgo.com/" class="navbar-form pull-left" id="search" method="get" name="search"><input name="sites" type="hidden" value="https://necromuralist.github.io/Ape-Iron/"><input name="k8" type="hidden" value="#444444"><input name="k9" type="hidden" value="#D51920"><input name="kt" type="hidden" value="h"><input class="span2" maxlength="255" name="q" placeholder="Search…" type="text"><input style="visibility: hidden;display:none" type="submit" value="DuckDuckGo Search"></form>
+<!-- End of custom search -->
+<ul class="navbar-nav navbar-right">
+<li class="nav-item"><a class="nav-link" href="index.org" id="sourcelink">Source</a></li>
+</ul>
+</div>
+<!-- /.navbar-collapse --></div>
+<!-- /.container --></nav>
+<!-- End of Menubar -->
+<div class="container" id="content" role="main">
+<div class="body-content"><!--Body content-->
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article">
+<header>
+<h1 class="p-name entry-title" itemprop="headline name"><a class="u-url" href="#">Slider and Caption Settings</a></h1>
+<div class="metadata">
+<p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">The Cloistered Monkey</span></p>
+<p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2023-10-02T12:48:10-07:00" itemprop="datePublished" title="2023-10-02 12:48">2023-10-02 12:48</time></a></p>
+<p class="sourceline"><a class="sourcelink" href="index.org">Source</a></p>
+</div>
+</header>
+<div class="e-content entry-content" itemprop="articleBody text">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="index.html#org7f6f85b">The Sliders Settings</a>
+<ul>
+<li><a href="index.html#org2a36929">The Scenario</a></li>
+<li><a href="index.html#org77c3909">The Testing</a></li>
+<li><a href="index.html#orgcf41b1a">The Slider Settings Implementation</a></li>
+</ul>
+</li>
+<li><a href="index.html#org88393ab">The Caption Settings</a>
+<ul>
+<li><a href="index.html#orgb7393e3">The Testing</a></li>
+<li><a href="index.html#org3505ec1">The CaptionSettings Implementation</a></li>
+</ul>
+</li>
+<li><a href="index.html#org8644787">Links</a>
+<ul>
+<li><a href="index.html#org413f5d1">Related Post</a></li>
+<li><a href="index.html#org44e44ef">References</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org7f6f85b">
+<h2 id="org7f6f85b">The Sliders Settings</h2>
+<div class="outline-text-2" id="text-org7f6f85b">
+<p><img alt="nil" src="slider_settings.png"></p>
+<p>The <code>SliderSettings</code> class holds the values for the <a href="../the-great-slidini/index.html">Slidini</a> class and optionally validates the values it's been given.</p>
+</div>
+<div class="outline-3" id="outline-container-org2a36929">
+<h3 id="org2a36929">The Scenario</h3>
+<div class="outline-text-3" id="text-org2a36929">
+<p>Since there's only one method to call and it defers everything to the <a href="../a-validator-for-slidersettings/index.html">Validator</a> I'm going to have one Scenario to test, but to try and make it easier to read I'm going to break up the Then-And statements within it, but I'm not going to break up the <code>check_rep</code> method itself so I'm not going to show the implementation under each test it satisfies, but just show the class definition in entirety after all the tests.</p>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org77c3909">
+<h3 id="org77c3909">The Testing</h3>
+<div class="outline-text-3" id="text-org77c3909">
+<p>First we need to import some javascript. Even though I'm faking all the methods I'm going to use on the <code>Validator</code> class I used the real definition because I was hoping to figure out how to get <code>sinon</code> to copy all the methods automatically, but I didn't see anything indicating it can, so maybe next time I'll just make a fake object instead.</p>
+<div class="highlight">
+<pre><span></span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">expect</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"chai"</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">faker</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@faker-js/faker"</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Given</span><span class="p">,</span><span class="w"> </span><span class="nx">When</span><span class="p">,</span><span class="w"> </span><span class="nx">Then</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@cucumber/cucumber"</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">fake</span><span class="p">,</span><span class="w"> </span><span class="nx">replace</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"sinon"</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">SliderSettings</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"../../../../files/javascript/slider.js"</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Validator</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"../../../../files/javascript/validator.js"</span><span class="p">;</span>
+</pre></div>
+<p>Since the Validator's methods get called more than once I need to be able to know what (zero-based) index each call is - e.g. checking <code>default_value</code> is the third <code>Validator.is_a_number</code> call that the <code>SliderSettings</code> makes, so to retrieve the object to check that the call went as expected I need to get the <code>sinon</code> call object at index 2. I'm making the <code>IS</code> object below to hold the indices to get the calls for each property… it'll make more sense later.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">IS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">NUMBER</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">min</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">default_value</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">step_size</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w">               </span>
+<span class="w">          </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">ELEMENT</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">slider_div</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">METHODS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"is_a_number"</span><span class="p">,</span><span class="w"> </span><span class="s2">"is_set"</span><span class="p">,</span><span class="w"> </span><span class="s2">"is_an_integer"</span><span class="p">,</span><span class="w"> </span><span class="s2">"is_an_element_id"</span><span class="p">];</span>
+</pre></div>
+<p>The <code>METHODS</code> array holds the names of all of the Validator's methods that <code>check_rep</code> uses so that I can replace the Validator's methods in a loop instead of doing it separately for each one.</p>
+</div>
+<div class="outline-4" id="outline-container-orgd979d55">
+<h4 id="orgd979d55">Setup The Slider Settings</h4>
+<div class="outline-text-4" id="text-orgd979d55">
+<p>Now I'll build the <code>SliderSettings</code> with the faked <code>Validator</code> methods in the cucumber <code>Given</code> function.</p>
+<div class="highlight">
+<pre><span></span><span class="k">Feature:</span><span class="nf"> Slider Settings</span>
+
+<span class="k">Scenario:</span><span class="nf"> check_rep is called.</span>
+
+<span class="k">Given </span><span class="nf">a Slider Settings</span>
+</pre></div>
+<p>Since all the methods are going to be faked, I don't need a mock <code>document</code> the way I did for the <code>Validator</code> tests.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">Given</span><span class="p">(</span><span class="s2">"a Slider Settings"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">validator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Validator</span><span class="p">({});</span>
+</pre></div>
+<p>Now that I have a <code>Validator</code> instance, I can replace all the methods to test with <code>fakes</code>.</p>
+<div class="highlight">
+<pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">const</span><span class="w"> </span><span class="nx">method</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">METHODS</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">replace</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">validator</span><span class="p">,</span><span class="w"> </span><span class="nx">method</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">fake</span><span class="p">.</span><span class="nx">returns</span><span class="p">(</span><span class="kc">null</span><span class="p">));</span><span class="w">    </span>
+<span class="p">}</span>
+</pre></div>
+<p>Next, I'll fake the arguments passed to the <code>SliderSettings</code> object and store them in the <code>World</code> <code>this</code> so that I can check that they were passed to the validator as expected in the tests.</p>
+<div class="highlight">
+<pre><span></span><span class="k">this</span><span class="p">.</span><span class="nx">min</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">faker</span><span class="p">.</span><span class="nx">number</span><span class="p">.</span><span class="kr">float</span><span class="p">();</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">faker</span><span class="p">.</span><span class="nx">number</span><span class="p">.</span><span class="kr">float</span><span class="p">();</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">default_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">faker</span><span class="p">.</span><span class="nx">number</span><span class="p">.</span><span class="kr">float</span><span class="p">();</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">step_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">faker</span><span class="p">.</span><span class="nx">number</span><span class="p">.</span><span class="kr">float</span><span class="p">();</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">slider_div</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">faker</span><span class="p">.</span><span class="nx">lorem</span><span class="p">.</span><span class="nx">word</span><span class="p">();</span>
+</pre></div>
+<p>Finally, I can create the <code>SliderSettings</code> to test.</p>
+<div class="highlight">
+<pre><span></span><span class="k">this</span><span class="p">.</span><span class="nx">settings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">SliderSettings</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">min</span><span class="p">,</span>
+<span class="w">                                   </span><span class="k">this</span><span class="p">.</span><span class="nx">max</span><span class="p">,</span>
+<span class="w">                                   </span><span class="k">this</span><span class="p">.</span><span class="nx">default_value</span><span class="p">,</span>
+<span class="w">                                   </span><span class="k">this</span><span class="p">.</span><span class="nx">step_size</span><span class="p">,</span>
+<span class="w">                                   </span><span class="k">this</span><span class="p">.</span><span class="nx">slider_div</span><span class="p">,</span>
+<span class="w">                                   </span><span class="k">this</span><span class="p">.</span><span class="nx">validator</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-orgbe25281">
+<h4 id="orgbe25281">Calling Check Rep</h4>
+<div class="outline-text-4" id="text-orgbe25281">
+<p>This is the only call to <code>SliderSettings</code> I make.</p>
+<div class="highlight">
+<pre><span></span><span class="k">When </span><span class="nf">check_rep is called</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="nx">When</span><span class="p">(</span><span class="s2">"check_rep is called"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">settings</span><span class="p">.</span><span class="nx">check_rep</span><span class="p">();</span>
+<span class="p">});</span>
+</pre></div>
+<p>Now the rest of the tests check all the calls to the <code>Validator</code> that the <code>check_rep</code> method made.</p>
+</div>
+</div>
+<div class="outline-4" id="outline-container-orgd3f52e1">
+<h4 id="orgd3f52e1">Min Check</h4>
+<div class="outline-text-4" id="text-orgd3f52e1">
+<p>The first property that <code>check_rep</code> validates is the <code>min</code>.</p>
+<div class="highlight">
+<pre><span></span><span class="k">Then </span><span class="nf">it checked the min</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="c1">// Given a Slider Settings</span>
+<span class="c1">// When check_rep is called</span>
+
+<span class="nx">Then</span><span class="p">(</span><span class="s2">"it checked the min"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">expect</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">validator</span><span class="p">.</span><span class="nx">is_a_number</span><span class="p">.</span><span class="nx">getCall</span><span class="p">(</span><span class="nx">IS</span><span class="p">.</span><span class="nx">NUMBER</span><span class="p">.</span><span class="nx">min</span><span class="p">).</span><span class="nx">calledWith</span><span class="p">(</span>
+<span class="w">    </span><span class="s2">"min"</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">min</span>
+<span class="w">  </span><span class="p">)).</span><span class="nx">to</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="kc">true</span><span class="p">;</span><span class="w">  </span>
+<span class="p">});</span>
+</pre></div>
+<p><code>this.validator.is_a_number</code> is a faked method which allows us to check the arguments passed to it by getting the call object using <code>getCall</code> and checking the arguments with <code>calledWith</code>. In this case checking <code>min</code> is the first call to <code>is_a_number</code> so I'm passing <code>0</code> to <code>getCall</code>, retrieving it from the <code>IS</code> object I created earlier (using <code>IS.NUMBER.min</code>).</p>
+<p>I'm not crazy about the need to pass in strings, but since they always match the variable name I guess it's easy enough to see any typos.</p>
+<p>The rest of the checks are pretty much the same thing but with different variables so I'll stop the commentary for a while.</p>
+</div>
+</div>
+<div class="outline-4" id="outline-container-orgfe329b8">
+<h4 id="orgfe329b8">Max Check</h4>
+<div class="outline-text-4" id="text-orgfe329b8">
+<div class="highlight">
+<pre><span></span><span class="k">And </span><span class="nf">it checked the max</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="nx">Then</span><span class="p">(</span><span class="s2">"it checked the max"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">expect</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">validator</span><span class="p">.</span><span class="nx">is_a_number</span><span class="p">.</span><span class="nx">getCall</span><span class="p">(</span><span class="nx">IS</span><span class="p">.</span><span class="nx">NUMBER</span><span class="p">.</span><span class="nx">max</span><span class="p">).</span><span class="nx">calledWith</span><span class="p">(</span>
+<span class="w">    </span><span class="s2">"max"</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">max</span>
+<span class="w">  </span><span class="p">)).</span><span class="nx">to</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="kc">true</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-orgc39a38a">
+<h4 id="orgc39a38a">Default Value</h4>
+<div class="outline-text-4" id="text-orgc39a38a">
+<div class="highlight">
+<pre><span></span><span class="k">And </span><span class="nf">it checked the default_value</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="nx">Then</span><span class="p">(</span><span class="s2">"it checked the default_value"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">expect</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">validator</span><span class="p">.</span><span class="nx">is_a_number</span><span class="p">.</span><span class="nx">getCall</span><span class="p">(</span><span class="nx">IS</span><span class="p">.</span><span class="nx">NUMBER</span><span class="p">.</span><span class="nx">default_value</span><span class="p">).</span><span class="nx">calledWith</span><span class="p">(</span>
+<span class="w">    </span><span class="s2">"default_value"</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">default_value</span>
+<span class="w">  </span><span class="p">)).</span><span class="nx">to</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="kc">true</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-orgca8a0fe">
+<h4 id="orgca8a0fe">Step Size</h4>
+<div class="outline-text-4" id="text-orgca8a0fe">
+<div class="highlight">
+<pre><span></span><span class="k">And </span><span class="nf">it checked the step_size</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="nx">Then</span><span class="p">(</span><span class="s2">"it checked the step_size"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">expect</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">validator</span><span class="p">.</span><span class="nx">is_a_number</span><span class="p">.</span><span class="nx">getCall</span><span class="p">(</span><span class="nx">IS</span><span class="p">.</span><span class="nx">NUMBER</span><span class="p">.</span><span class="nx">step_size</span><span class="p">).</span><span class="nx">calledWith</span><span class="p">(</span>
+<span class="w">    </span><span class="s2">"step_size"</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">step_size</span>
+<span class="w">  </span><span class="p">)).</span><span class="nx">to</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="kc">true</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-org34685c8">
+<h4 id="org34685c8">Slider Div</h4>
+<div class="outline-text-4" id="text-org34685c8">
+<div class="highlight">
+<pre><span></span><span class="k">And </span><span class="nf">it checked the slider_div</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="nx">Then</span><span class="p">(</span><span class="s2">"it checked the slider_div"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">expect</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">validator</span><span class="p">.</span><span class="nx">is_an_element_id</span><span class="p">.</span><span class="nx">getCall</span><span class="p">(</span><span class="nx">IS</span><span class="p">.</span><span class="nx">ELEMENT</span><span class="p">.</span><span class="nx">slider_div</span><span class="p">).</span><span class="nx">calledWith</span><span class="p">(</span>
+<span class="w">    </span><span class="s2">"slider_div"</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">slider_div</span>
+<span class="w">  </span><span class="p">)).</span><span class="nx">to</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="kc">true</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orgcf41b1a">
+<h3 id="orgcf41b1a">The Slider Settings Implementation</h3>
+<div class="outline-text-3" id="text-orgcf41b1a">
+<p>Now that we have the tests, I'll implement the slider settings.</p>
+<p><img alt="nil" src="slider_settings.png"></p>
+<p>The <code>SliderSettings</code> holds the settings to build <a href="../the-great-slidini/index.html">Slidini</a>, the Slider and Caption holder. It really could be done with a plain object (which is what it was) but I decided to add a validator to make sure that I was getting all the parameters right.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">SliderSettings</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">min</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="p">,</span><span class="w"> </span><span class="nx">default_value</span><span class="p">,</span><span class="w"> </span><span class="nx">step_size</span><span class="p">,</span>
+<span class="w">              </span><span class="nx">slider_div</span><span class="p">,</span>
+<span class="w">              </span><span class="nx">validator</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">min</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">min</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">max</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">default_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">default_value</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">step_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">step_size</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">slider_div</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">slider_div</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">confirm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">validator</span><span class="p">;</span>
+<span class="w">  </span><span class="p">};</span><span class="w"> </span><span class="c1">// constructor</span>
+
+<span class="w">  </span><span class="nx">check_rep</span><span class="p">(){</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">confirm</span><span class="p">.</span><span class="nx">is_a_number</span><span class="p">(</span><span class="s2">"min"</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">min</span><span class="p">);</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">confirm</span><span class="p">.</span><span class="nx">is_a_number</span><span class="p">(</span><span class="s2">"max"</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">max</span><span class="p">);</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">confirm</span><span class="p">.</span><span class="nx">is_a_number</span><span class="p">(</span><span class="s2">"default_value"</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">default_value</span><span class="p">);</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">confirm</span><span class="p">.</span><span class="nx">is_a_number</span><span class="p">(</span><span class="s2">"step_size"</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">step_size</span><span class="p">);</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">confirm</span><span class="p">.</span><span class="nx">is_an_element_id</span><span class="p">(</span><span class="s2">"slider_div"</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">slider_div</span><span class="p">);</span>
+<span class="w">  </span><span class="p">};</span><span class="w"> </span><span class="c1">// check_rep</span>
+<span class="p">};</span><span class="w"> </span><span class="c1">// SliderSettings</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org88393ab">
+<h2 id="org88393ab">The Caption Settings</h2>
+<div class="outline-text-2" id="text-org88393ab">
+<p>The Caption Settings are pretty much just like the Slider Settings except that they are meant for the label that lets the user know what the current slider's value is. I used to have everything in the <a href="index.html#org7f6f85b">SliderSettings</a> but it wasn't obvious what belonged to which so I broke them apart.</p>
+</div>
+<div class="outline-3" id="outline-container-orgb7393e3">
+<h3 id="orgb7393e3">The Testing</h3>
+<div class="outline-text-3" id="text-orgb7393e3">
+<p>This is pretty much exactly the same as the testing for the <code>SliderSettings</code> so I won't have a whole lot to add to it.</p>
+</div>
+<div class="outline-4" id="outline-container-org9f99cf1">
+<h4 id="org9f99cf1">Imports</h4>
+<div class="outline-text-4" id="text-org9f99cf1">
+<div class="highlight">
+<pre><span></span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">expect</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"chai"</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">faker</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@faker-js/faker"</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Given</span><span class="p">,</span><span class="w"> </span><span class="nx">When</span><span class="p">,</span><span class="w"> </span><span class="nx">Then</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@cucumber/cucumber"</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">fake</span><span class="p">,</span><span class="w"> </span><span class="nx">replace</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"sinon"</span><span class="p">;</span>
+
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">CaptionSettings</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"../../../../files/javascript/slider.js"</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Validator</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"../../../../files/javascript/validator.js"</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-org84d73dc">
+<h4 id="org84d73dc">Call Object Indices</h4>
+<div class="outline-text-4" id="text-org84d73dc">
+<div class="highlight">
+<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">CAPTION_IS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">SET</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">INTEGER</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">precision</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">ELEMENT</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">caption_div</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">METHODS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"is_a_number"</span><span class="p">,</span><span class="w"> </span><span class="s2">"is_set"</span><span class="p">,</span><span class="w"> </span><span class="s2">"is_an_integer"</span><span class="p">,</span><span class="w"> </span><span class="s2">"is_an_element_id"</span><span class="p">];</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-org11a4086">
+<h4 id="org11a4086">The Feature</h4>
+<div class="outline-text-4" id="text-org11a4086">
+<div class="highlight">
+<pre><span></span><span class="k">Feature:</span><span class="nf"> Settings for a caption/label.</span>
+
+<span class="k">Scenario:</span><span class="nf"> The CaptionSettings is built.</span>
+<span class="k">Given </span><span class="nf">a CaptionSettings</span>
+<span class="k">When </span><span class="nf">the properties are checked</span>
+<span class="k">Then </span><span class="nf">they are the expected properties.</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-orgf7261b3">
+<h4 id="orgf7261b3">Setting up the Caption Settings in "Given"</h4>
+<div class="outline-text-4" id="text-orgf7261b3">
+<div class="highlight">
+<pre><span></span><span class="nx">Given</span><span class="p">(</span><span class="s2">"a CaptionSettings"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</pre></div>
+<p>These are the three properties that the <a href="../the-great-slidini/index.html">Slidini class</a> is going to need to set up the label.</p>
+<div class="highlight">
+<pre><span></span><span class="k">this</span><span class="p">.</span><span class="nx">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">faker</span><span class="p">.</span><span class="nx">lorem</span><span class="p">.</span><span class="nx">words</span><span class="p">();</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">precision</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">faker</span><span class="p">.</span><span class="nx">number</span><span class="p">.</span><span class="kr">int</span><span class="p">();</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">caption_div</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">faker</span><span class="p">.</span><span class="nx">lorem</span><span class="p">.</span><span class="nx">word</span><span class="p">();</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">div_id_selector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"#"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">caption_div</span><span class="p">;</span>
+</pre></div>
+<p>Once again I'm replacing the <a href="../a-validator-for-slidersettings/index.html">Validator</a> methods so I can check the calls and as a side-effect the document won't get used so I don't need <code>JSDOM</code>.</p>
+<div class="highlight">
+<pre><span></span><span class="k">this</span><span class="p">.</span><span class="nx">validator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Validator</span><span class="p">({});</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">const</span><span class="w"> </span><span class="nx">method</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">METHODS</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">replace</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">validator</span><span class="p">,</span><span class="w"> </span><span class="nx">method</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">fake</span><span class="p">.</span><span class="nx">returns</span><span class="p">(</span><span class="kc">null</span><span class="p">));</span><span class="w">    </span>
+<span class="p">}</span>
+</pre></div>
+<p>And finally I'll build our software to test.</p>
+<div class="highlight">
+<pre><span></span><span class="k">this</span><span class="p">.</span><span class="nx">caption_settings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">CaptionSettings</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">label</span><span class="p">,</span>
+<span class="w">                                            </span><span class="k">this</span><span class="p">.</span><span class="nx">precision</span><span class="p">,</span>
+<span class="w">                                            </span><span class="k">this</span><span class="p">.</span><span class="nx">caption_div</span><span class="p">,</span>
+<span class="w">                                            </span><span class="k">this</span><span class="p">.</span><span class="nx">validator</span><span class="p">);</span>
+</pre></div>
+<p>Putting the values to check into variables seems like an unnecessary step, since you could test and retrieve the properties at the same time, but I like the use of <code>When</code> and it makes the lines in the <code>Then</code> block a little shorter.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">When</span><span class="p">(</span><span class="s2">"the properties are checked"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">actual_label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">caption_settings</span><span class="p">.</span><span class="nx">label</span><span class="p">;</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">actual_precision</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">caption_settings</span><span class="p">.</span><span class="nx">precision</span><span class="p">;</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">actual_caption_div</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">caption_settings</span><span class="p">.</span><span class="nx">caption_div</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="nx">Then</span><span class="p">(</span><span class="s2">"they are the expected properties."</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">expect</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">actual_label</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">label</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">expect</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">actual_precision</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">precision</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">expect</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">actual_caption_div</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">caption_div</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-org151e9a0">
+<h4 id="org151e9a0">Check Rep</h4>
+<div class="outline-text-4" id="text-org151e9a0">
+<div class="highlight">
+<pre><span></span><span class="k">Scenario:</span><span class="nf"> check_rep is called.</span>
+
+<span class="k">Given </span><span class="nf">a CaptionSettings</span>
+<span class="k">When </span><span class="nf">CaptionSettings.check_rep is called</span>
+</pre></div>
+<p>Oddly, when I just said "When check_rep is called" instead of "When CaptionSettings.check_rep is called" cucumber ended up using the function I made for the <code>SliderSettings</code> tests that had the same <code>When</code> string. For some reason it lets them pollute each other's tests, even though they have separate feature and step files. I suppose this could make it easier to re-use test-functions, but it makes it kind of dangerous since you have to make sure that everything has a unique title.</p>
+<p>Or maybe there's something I'm missing…</p>
+<div class="highlight">
+<pre><span></span><span class="nx">When</span><span class="p">(</span><span class="s2">"CaptionSettings.check_rep is called"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">caption_settings</span><span class="p">.</span><span class="nx">check_rep</span><span class="p">();</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-orged70e5c">
+<h4 id="orged70e5c">Did It Validate the Label?</h4>
+<div class="outline-text-4" id="text-orged70e5c">
+<div class="highlight">
+<pre><span></span><span class="k">Then </span><span class="nf">it checks the label</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="nx">Then</span><span class="p">(</span><span class="s2">"it checks the label"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">expect</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">validator</span><span class="p">.</span><span class="nx">is_set</span><span class="p">.</span><span class="nx">getCall</span><span class="p">(</span><span class="nx">CAPTION_IS</span><span class="p">.</span><span class="nx">SET</span><span class="p">.</span><span class="nx">label</span><span class="p">).</span><span class="nx">calledWith</span><span class="p">(</span>
+<span class="w">    </span><span class="s2">"label"</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">label</span>
+<span class="w">  </span><span class="p">)).</span><span class="nx">to</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="kc">true</span><span class="p">;</span><span class="w">  </span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-org171d191">
+<h4 id="org171d191">Did It Validate the Precision?</h4>
+<div class="outline-text-4" id="text-org171d191">
+<div class="highlight">
+<pre><span></span><span class="k">And </span><span class="nf">it checks the precision</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="nx">Then</span><span class="p">(</span><span class="s2">"it checks the precision"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">expect</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">validator</span><span class="p">.</span><span class="nx">is_an_integer</span><span class="p">.</span><span class="nx">getCall</span><span class="p">(</span><span class="nx">CAPTION_IS</span><span class="p">.</span><span class="nx">INTEGER</span><span class="p">.</span><span class="nx">precision</span><span class="p">).</span><span class="nx">calledWith</span><span class="p">(</span>
+<span class="w">    </span><span class="s2">"precision"</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">precision</span>
+<span class="w">  </span><span class="p">)).</span><span class="nx">to</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="kc">true</span><span class="p">;</span><span class="w">  </span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-org870db93">
+<h4 id="org870db93">Did It Validate the Div ID?</h4>
+<div class="outline-text-4" id="text-org870db93">
+<div class="highlight">
+<pre><span></span><span class="k">And </span><span class="nf">it checks the caption div ID.</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="nx">Then</span><span class="p">(</span><span class="s2">"it checks the caption div ID."</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">expect</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">validator</span><span class="p">.</span><span class="nx">is_an_element_id</span><span class="p">.</span><span class="nx">getCall</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">CAPTION_IS</span><span class="p">.</span><span class="nx">ELEMENT</span><span class="p">.</span><span class="nx">caption_div</span><span class="p">).</span><span class="nx">calledWith</span><span class="p">(</span>
+<span class="w">      </span><span class="s2">"caption_div"</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">caption_div</span>
+<span class="w">    </span><span class="p">)).</span><span class="nx">to</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="kc">true</span><span class="p">;</span><span class="w">  </span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-org36211a0">
+<h4 id="org36211a0">Does it add a pound sign to the DIV ID?</h4>
+<div class="outline-text-4" id="text-org36211a0">
+<p>The <code>p5.select</code> method uses CSS selectors so it needs you to put a <code>#</code> sign in front of the DIV ID to tell it that it's an ID.</p>
+<div class="highlight">
+<pre><span></span><span class="k">Scenario:</span><span class="nf"> The caption DIV selector is set up</span>
+
+<span class="k">Given </span><span class="nf">a CaptionSettings</span>
+<span class="k">When </span><span class="nf">the caption DIV ID selector is retrieved</span>
+<span class="k">Then </span><span class="nf">the caption DIV selector has the pound sign.</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="nx">When</span><span class="p">(</span><span class="s2">"the caption DIV ID selector is retrieved"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">actual_div_id_selector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">caption_settings</span><span class="p">.</span><span class="nx">div_selector</span><span class="p">;</span>
+<span class="p">});</span>
+
+<span class="nx">Then</span><span class="p">(</span><span class="s2">"the caption DIV selector has the pound sign."</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">expect</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">actual_div_id_selector</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">div_id_selector</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org3505ec1">
+<h3 id="org3505ec1">The CaptionSettings Implementation</h3>
+<div class="outline-text-3" id="text-org3505ec1">
+<p>So here's where I implemennt the class. The <i>label</i> property is a string that gets inserted into the string that's displayed on the Label element. Maybe I should have called it something else… The <i>precision</i> property is used to decide how many decimal places to show in the Label, and the <i>caption_div</i> is the ID of the element where I'm going to stick the Label.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">CaptionSettings</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">_div_selector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">label</span><span class="p">,</span><span class="w"> </span><span class="nx">precision</span><span class="p">,</span><span class="w"> </span><span class="nx">caption_div</span><span class="p">,</span><span class="w"> </span><span class="nx">validator</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">label</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">precision</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">precision</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">caption_div</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">caption_div</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">validator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">validator</span><span class="p">;</span>
+<span class="w">  </span><span class="p">};</span>
+
+<span class="w">  </span><span class="nx">get</span><span class="w"> </span><span class="nx">div_selector</span><span class="p">(){</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">_div_selector</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">_div_selector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"#"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">caption_div</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">_div_selector</span><span class="p">;</span>
+<span class="w">  </span><span class="p">};</span>
+
+<span class="w">  </span><span class="nx">check_rep</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">validator</span><span class="p">.</span><span class="nx">is_set</span><span class="p">(</span><span class="s2">"label"</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">label</span><span class="p">);</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">validator</span><span class="p">.</span><span class="nx">is_an_integer</span><span class="p">(</span><span class="s2">"precision"</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">precision</span><span class="p">);</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">validator</span><span class="p">.</span><span class="nx">is_an_element_id</span><span class="p">(</span><span class="s2">"caption_div"</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">caption_div</span><span class="p">);</span>
+<span class="w"> </span><span class="p">};</span>
+<span class="p">};</span><span class="w"> </span><span class="c1">// CaptionSettings</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org8644787">
+<h2 id="org8644787">Links</h2>
+<div class="outline-text-2" id="text-org8644787"></div>
+<div class="outline-3" id="outline-container-org413f5d1">
+<h3 id="org413f5d1">Related Post</h3>
+<div class="outline-text-3" id="text-org413f5d1">
+<ul class="org-ul">
+<li><a href="../a-validator-for-slidersettings/index.html">A Validator for SliderSettings</a></li>
+<li><a href="../the-great-slidini/index.html">The Great Slidini</a></li>
+</ul>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org44e44ef">
+<h3 id="org44e44ef">References</h3>
+<div class="outline-text-3" id="text-org44e44ef">
+<ul class="org-ul">
+<li>id - HTML: HyperText Markup Language | MDN [Internet]. 2023 [cited 2023 Sep 14]. Available from: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id">https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<aside class="postpromonav">
+<nav>
+<ul class="tags" itemprop="keywords">
+<li><a class="tag p-category" href="../../categories/javascript/index.html" rel="tag">javascript</a></li>
+<li><a class="tag p-category" href="../../categories/p5/index.html" rel="tag">p5</a></li>
+</ul>
+<ul class="pager hidden-print">
+<li class="previous"><a href="../cucumber-chai-and-jsdom/index.html" rel="prev" title="Cucumber, Chai, and JSDOM">Previous post</a></li>
+<li class="next"><a href="../figure-drawing-sites/index.html" rel="next" title="Figure Drawing Sites">Next post</a></li>
+</ul>
+</nav>
+</aside>
+</article>
+<!--End of body content-->
+<footer id="footer">Scribbles by <a href="mailto:cloisteredmonkey.jmark@slmail.me">The Cloistered Monkey</a> © 2023 - Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a>
+<div id="license" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Ape-Iron</span> is licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" rel="license noopener noreferrer" style="display:inline-block;" target="_blank">CC BY-SA 4.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></div>
+</footer>
+</div>
+<script src="../../assets/js/all-nocdn.js"></script>
+<script>
+
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+</script></div>
+</body>
+</html>

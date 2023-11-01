@@ -1,0 +1,536 @@
+#+BEGIN_COMMENT
+.. title: A Validator for SliderSettings
+.. slug: a-validator-for-slidersettings
+.. date: 2023-10-04 16:38:40 UTC-07:00
+.. tags: javascript, p5
+.. category: Javascript
+.. link: 
+.. description: A Validator for SliderSettings properties.
+.. type: text
+.. status: 
+.. updated: 
+
+#+END_COMMENT
+#+OPTIONS: ^:{}
+#+TOC: headlines 2
+
+* The Validator
+
+#+begin_src plantuml :file ../files/posts/a-validator-for-slidersettings/validator.png :exports none
+!theme mars
+class Validator {
+Array emptiness
+Object document
+
+constructor(document)
+is_a_number(identifier, acutal)
+is_set(identifier, actual)
+is_an_integer(identifier, actual)
+is_an_element_id(identifier, actual_id)
+}
+
+Validator o- document
+#+end_src
+
+#+RESULTS:
+[[file:../files/posts/a-validator-for-slidersettings/validator.png]]
+
+[[img-url: validator.png][Validator UML]]
+
+#+begin_src gherkin :tangle ../tests/cucumber-tests/test-a-validator-for-slidersettings/features/validator.feature :exports none
+<<given-a-validator-scenario>>
+
+<<is-a-number-scenario-1>>
+
+<<is-a-number-scenario-2>>
+
+<<is-a-number-scenario-3>>
+
+<<is-set-scenario-1>>
+
+<<is-set-scenario-2>>
+
+<<is-set-scenario-3>>
+
+<<is-integer-scenario-1>>
+
+<<is-integer-scenario-2>>
+
+<<is-integer-scenario-2a>>
+
+<<is-id-scenario-1>>
+#+end_src
+
+#+begin_src js :tangle ../tests/cucumber-tests/test-a-validator-for-slidersettings/steps/validator_steps.js :exports none
+import { expect } from "chai";
+import { faker } from "@faker-js/faker";
+import { Given, When, Then } from "@cucumber/cucumber";
+import { JSDOM } from "jsdom";
+
+// Software Under Test
+
+import { Validator } from "../../../../files/javascript/validator.js"
+
+// a fake document
+<<validator-jsdom-setup>>
+
+<<given-a-validator>>
+  
+<<is-a-number-case-1>>
+
+<<is-a-number-case-2>>
+
+<<is-a-number-case-3>>
+
+<<is-set-case-1>>
+
+<<is-set-case-2>>
+
+<<is-set-case-3>>
+
+<<is-an-integer-case-1>>
+
+<<is-an-integer-case-2>>
+
+<<is-an-integer-case-2a>>
+
+<<is-an-integer-case-3>>
+
+<<is-element-case-1>>
+
+<<is-element-case-2>>
+#+end_src
+
+#+begin_src js :tangle ../files/javascript/validator.js :exports none
+/** The Validator class checks if a value is a certain type
+    It throws an error if any value is the wrong type
+
+    Args:
+     - document {Object} : something to grab DOM elements
+   ,**/
+<<validator-declaration>>
+
+  <<validate-is-number>>
+
+  <<validate-is-set>>
+
+  <<validate-is-integer>>
+
+  <<validate-is-id>>
+
+  <<validate-throw-error>>
+ }; // Validator
+
+export { Validator }
+#+end_src
+
+The ~Validator~ class checks the type of a given value and throws an Error if it's not correct. It's meant to validate settings, in particular the {{% lancelot "SliderSettings" %}}slider-settings-and-validator{{% /lancelot %}}.
+
+** Class Declaration
+
+The constructor takes the ~document~ as an argument to make it testable and also to make explicit where it came from. The class also defines an array ~emptiness~ to hold the values that I'll use to check if a variable was set.
+
+*** Setup JSDOM For Testing
+
+This is the document that I'm passing to the ~Validator~ for testing.
+
+#+begin_src js :noweb-ref validator-jsdom-setup
+const VALID_ID = "validator-id";
+
+const document = new JSDOM(`
+<html>
+<head></head>
+<body>
+ <div id=${VALID_ID}></div>
+</body>
+</html>
+`).window.document;
+#+end_src
+
+*** Test And Implement The Validator Class
+
+#+begin_src gherkin :noweb-ref given-a-validator-scenario
+Feature: Validator
+#+end_src
+
+I don't have a "Given" statement in this part of the post even though I'm implementing the ~Given~ javascript here because each of the Scenarios after this re-use the same ~Given~ but I thought it made sense to go here since it sort of tests the existence of the ~Validator~.
+
+#+begin_src js :noweb-ref given-a-validator
+Given("a Validator", function() {
+  this.validate = new Validator(document);
+});
+#+end_src
+
+And here's the class definition that the ~Given~ is using.
+
+#+begin_src js :noweb-ref validator-declaration
+class Validator {
+  emptiness = [null, undefined, NaN];
+
+  constructor(document) {
+    this.document = document;
+  }
+#+end_src
+
+These blocks are the pattern That I'm going to follow for most of the rest of the code:
+
+#+begin_notecard
+  1. Feature file fragment.
+  2. Test implementation to match the feature file.
+  3. Code implementation that's being tested.
+#+end_notecard
+     
+** Is A Number
+
+Our first method checks that a variable holds a number of some kind.
+
+*** The Scenarios
+#+begin_src gherkin :noweb-ref is-a-number-scenario-1
+Scenario: The expected number is a number.
+
+Given a Validator
+When is_a_number is given a number
+Then nothing happens.
+#+end_src
+
+#+begin_src js :noweb-ref is-a-number-case-1
+// Given a Validator
+
+When("is_a_number is given a number", function() {
+  this.validate.is_a_number("good-number", faker.number.float());
+  this.validate.is_a_number("good-number", 0);
+});
+
+Then("nothing happens.", function() {});
+#+end_src
+
+This is the case where we get what we wanted.
+
+#+begin_notecard
+**Note:** I added a second check for ~0~ because I was originally using the [[https://developer.mozilla.org/en-US/docs/Glossary/Falsy][~falsy~]] check (~!(actual)~) but it turns out that 0 would be considered false if you do that so I added an explicit check to make sure I wasn't disallowing 0.
+#+end_notecard
+
+#+begin_src gherkin :noweb-ref is-a-number-scenario-2
+Scenario: The expected number isn't a number.
+
+Given a Validator
+When an expected number isn't actually a number
+Then it throws an Error.
+#+end_src
+
+#+begin_src js :noweb-ref is-a-number-case-2
+// Given a Validator
+
+When("an expected number isn't actually a number", function() {
+  this.bad_call = function() {    
+      this.validate.is_a_number("bad-number", faker.lorem.word());
+  };
+});
+
+Then("it throws an Error.", function() {
+  expect(this.bad_call.bind(this)).to.throw(Error);
+});
+#+end_src
+
+I'm just checking for a string. I suppose there are other checks to be made, but since the ~Validator~ is only intended to validate my own code for mistakes, I don't suppose it really needs to be exhaustive.
+
+#+begin_src gherkin :noweb-ref is-a-number-scenario-3
+Scenario: The expected number wasn't assigned.
+
+Given a Validator
+When an expected number isn't assigned
+Then it throws an Error.
+#+end_src
+
+#+begin_src js :noweb-ref is-a-number-case-3
+// Given a Validator
+
+When("an expected number isn't assigned", function() {
+  this.bad_call = function() {
+    this.validate.is_a_number("no-number", null);
+  };
+});
+
+// Then it throws an error
+#+end_src
+
+This isn't explicitly needed, I think, since it falls within "non-number" but I wrote the tests as I made the ~SliderSettings~ and sometimes I would get the parameters out of order (I wish javascript had named variables) so I added ~null~ checks for the arguments to make it more obvious.
+
+
+*** The Method
+
+And here's the implementation.
+
+#+begin_src js :noweb-ref validate-is-number
+is_a_number(identifier, actual) {
+  if ((!actual && actual !== 0) || isNaN(actual)) {
+    throw Error(`"${identifier}" must be a number not "${actual}"`);
+  };
+}; // is_a_number
+#+end_src
+
+The first condition checks that the number isn't [[https://developer.mozilla.org/en-US/docs/Glossary/Falsy]['falsy']], but in javascript ~0~ is considered falsy so to allow zeros I added the check that it's not ~0~ if it's falsy. The conditional also checks if it is javascript's idea of a [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN][NaN]] using the global [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN][isNaN]]. This function coerces values to numbers (e.g. the string "120" is not Nan) so I originally used [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN][Number.isNaN]], since the documentation says that it /doesn't/ coerce values, but that turns out to mean that it just returns ~false~ without coercing the string... I suppose there's a reason for this, particularly since [[https://en.wikipedia.org/w/index.php?title=NaN&oldid=1175348130][~NaN~]] is meant for numeric data types, so a string is "not a number" but it can't be /NaN/, but whatever the reasion, it's something to remember, although it seems odd that, in being more strict, ~Number.isNaN~ ends up returning the same value as the global version.
+
+** Is Set
+
+This is for the cases where I have no particular type in the mind but a variable does need to be set to something.
+
+*** Scenarios
+
+#+begin_src gherkin :noweb-ref is-set-scenario-1
+Scenario: The variable has a value set.
+
+Given a Validator
+When is_set is given a variable that's set
+Then nothing happens.
+#+end_src
+
+#+begin_src js :noweb-ref is-set-case-1
+// Given a Validator
+
+When("is_set is given a variable that's set", function() {
+  this.validate.is_set("set-variable", faker.lorem.word());
+  this.validate.is_set("set-variable", 0);
+  this.validate.is_set("set-variable", false);
+});
+
+// Then nothing happens.
+#+end_src
+
+Given the broad view of what I'm saying ~is_set~ should check for it'd be hard to check all the possibilities so this mostly checks that I didn't use a ~falsy~ check or something like that which would create false negatives.
+
+#+begin_src gherkin :noweb-ref is-set-scenario-2
+Scenario: The variable is empty.
+
+Given a Validator
+When is_set is given an empty variable
+Then it throws an Error.
+#+end_src
+
+#+begin_src js :noweb-ref is-set-case-2
+// Given a Validator
+
+When("is_set is given an empty variable", function() {
+  this.bad_call = function() {
+    this.validate.is_set(null);
+  };
+});
+
+// Then it throws an Error.
+#+end_src
+
+Checking for ~null~ should be the most common case, since I'm going to use this to validate an object and make sure it's attributes were all set.
+
+#+begin_src gherkin :noweb-ref is-set-scenario-3
+Given a Validator
+When is_set is given an undefined variable
+Then it throws an Error.
+#+end_src
+
+#+begin_src js :noweb-ref is-set-case-3
+// Given a Validator
+
+When("is_set is given an undefined variable", function() {
+  this.bad_call = function() {
+    this.validate.is_set(undefined);
+  };
+});
+
+// Then it throws an Error.
+#+end_src
+
+I wouldn't think this would be something that needs to be checked, but since javascript just returns ~undefined~ instead or raising an error if you misspell a variable name, I guess it's useful.
+
+*** The Method
+This checks if the value is in whatever is in the ~emptiness~ array, which as of now has:
+
+- ~null~
+- ~undefined~
+- ~NaN~
+
+I'm not sure about that last one. I think I was trying to use all the ~falsy~ values that weren't likely to be actual values (like 0, ~false~), but now you can't use infinity either. Not that I can think of a case that I would, but maybe that'll have to be taken out later.
+
+#+begin_src js :noweb-ref validate-is-set
+is_set(identifier, actual) {
+  if (this.emptiness.includes(actual)) {
+    throw Error(`"${identifier} must be set, not "${actual}"`);
+  };
+}; //is_set
+#+end_src
+
+** Is An Integer
+
+*** The Scenarios
+
+#+begin_src gherkin :noweb-ref is-integer-scenario-1
+Scenario: The variable has an integer
+
+Given a Validator
+When is_an_integer is given a variable with an integer
+Then nothing happens.
+#+end_src
+
+#+begin_src js :noweb-ref is-an-integer-case-1
+// Given a Validator
+
+When("is_an_integer is given a variable with an integer", function() {
+  this.validate.is_an_integer("is-integer", faker.number.int());
+  this.validate.is_an_integer("is-integer", 1.0);
+});
+
+// Then nothing happens
+#+end_src
+
+Our happy-path case. The second check in the ~When~ is there to make it clearer that even though ~1.0~ smells like a float, ~Number.isInteger~ treats it like an integer.
+
+#+begin_src gherkin :noweb-ref is-integer-scenario-2
+Scenario: The variable has a string
+
+Given a Validator
+When is_an_integer is given a string
+Then it throws an Error.
+#+end_src
+
+#+begin_src js :noweb-ref is-an-integer-case-2
+// Given a Validator
+
+When("is_an_integer is given a string", function() {
+  this.bad_call = function() {
+    this.validate.is_an_integer("not-integer", `${faker.number.int()}`);
+  };
+});
+
+// Then it throws an Error.
+#+end_src
+
+I think this is the most likely error - it was passed a string. Interestingly, like the ~Number.isNaN~ function, the [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger][Number.isInteger]] function that I'm using also doesn't coerce strings so while "5" isn't not NaN, it also isn't an integer.
+
+#+begin_src gherkin :noweb-ref is-integer-scenario-2a
+Scenario: "is_an_integer" is given a float.
+
+Given a Validator
+When is_an_integer is given a float
+Then it throws an Error.
+#+end_src
+
+#+begin_src js :noweb-ref is-an-integer-case-2a
+// Given a Validator
+
+When("is_an_integer is given a float", function() {
+  this.bad_call = function() {
+    this.validator.is_an_integer("float-not-integer", 5.5);
+  };
+});
+
+// Then it throws an Error.
+#+end_src
+
+Since I showed above that /5.0/ is considered an integer I felt obliged to make sure that other floats aren't considered integers.
+
+#+begin_src gherkin :noweb-ref is-integer-scenario-3
+Scenario: The integer variable wasn't set.
+
+Given a Validator
+When an expected integer wasn't set
+Then it throws an Error.
+#+end_src
+
+#+begin_src js :noweb-ref is-an-integer-case-3
+// Given a Validator
+
+When("an expected integer wasn't set", function() {
+  this.bad_call = function() {
+      this.validate.is_an_integer("no-integer", null);
+  };
+});
+
+// Then it throws an Error.
+#+end_src
+
+*** The Method
+
+This is, oddly, the only built-in that I could find that does type checks (but I didn't look that hard, and I was using DuckDuckGo so I might have found something using a different search engine).
+
+#+begin_src js :noweb-ref validate-is-integer
+is_an_integer(identifier, actual) {
+  if (!Number.isInteger(actual)) {
+    throw Error(`"${identifier}" must be an integer, not ${actual}`);
+  };
+}; // is_an_integer
+#+end_src
+
+** Is An Element's ID
+
+This is what really started it all. I had some mysterious errors {{% lancelot "drawing a spiral" %}}generative-art-spiral{{% /lancelot %}} which turned out to be because I had changed a div ID in the HTML but not in the javascript. So this checks to see if there really an element with the ID. It doesn't check if it's the *right* ID, but I don't know that there's a simple way to do that anyway.
+
+*** The Scenarios
+
+#+begin_src gherkin :noweb-ref is-id-scenario-1
+Scenario: A valid ID is given.
+
+Given a Validator
+When is_an_element_id is given a valid element ID
+Then nothing happens.
+#+end_src
+
+#+begin_src js :noweb-ref is-element-case-1
+// Given a Validator
+
+When("is_an_element_id is given a valid element ID", function() {
+  this.validate.is_an_element_id("good-id", VALID_ID);
+});
+
+// Then nothing happens.
+#+end_src
+
+Since I'm using JSDOM I needed to use a real ID to check if it was valid, not a random string.
+
+#+begin_src gherkin :noweb-ref is-id-scenario-2
+Scenario: An invalid ID is given.
+
+Given a Validator
+When is_an_element is given an invalid element ID
+Then it throws an Error.
+#+end_src
+
+#+begin_src js :noweb-ref is-element-case-2
+// Given a Validator
+
+When("is_an_element is given an invalid element ID", function() {
+  this.bad_call = function() {
+    this.validate.is_an_element_id("bad-id", VALID_ID + "invalid");
+  };
+});
+
+// Then it throws an Error.
+#+end_src
+
+Although I suppose the odds of a random string matching my ~div~ ID is pretty low, I thought that mangling the ID would be a better guaranty that it won't match than using ~faker~ to generate a string.
+
+*** The Method
+This relies on the built-in [[https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById][~document.getElementById~]] method (well, built-in when there's a browser).
+
+#+begin_src js :noweb-ref validate-is-id
+is_an_element_id(identifier, actual) {
+  if (this.document.getElementById(actual) === null) {
+    throw Error(`"${identifier}" isn't a valid ID - "${actual}"`);
+  };
+}; // is_an_id
+#+end_src
+* Links
+** Related Posts
+
+- {{% lancelot %}}slider-settings-and-validator{{% /lancelot %}}
+  
+** Javascript
+- Document: getElementById() method - Web APIs | MDN [Internet]. 2023 [cited 2023 Oct 3]. Available from: https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById
+  
+- isNaN() - JavaScript | MDN [Internet]. 2023 [cited 2023 Oct 3]. Available from: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN
+
+- NaN - JavaScript | MDN [Internet]. 2023 [cited 2023 Oct 3]. Available from: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN
+
+- NaN. In: Wikipedia [Internet]. 2023 [cited 2023 Oct 3]. Available from: https://en.wikipedia.org/w/index.php?title=NaN&oldid=1175348130
+    
+- Number.isNaN() - JavaScript | MDN [Internet]. 2023 [cited 2023 Oct 3]. Available from: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN
+
+- Number.isInteger() - JavaScript | MDN [Internet]. 2023 [cited 2023 Oct 3]. Available from: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger

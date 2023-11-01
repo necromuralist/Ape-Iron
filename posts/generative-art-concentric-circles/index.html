@@ -17,7 +17,7 @@
 <link href="../../favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
 <link href="../../site.webmanifest" rel="manifest">
 <meta content="The Cloistered Monkey" name="author">
-<link href="../generative-art-spiral/index.html" rel="prev" title="Generative Art Spiral" type="text/html">
+<link href="../generative-art-spiral/index.html" rel="prev" title="Generative Art: Spiral" type="text/html">
 <link href="../cucumber-chai-and-jsdom/index.html" rel="next" title="Cucumber, Chai, and JSDOM" type="text/html">
 <meta content="Ape Iron" property="og:site_name">
 <meta content="Generative Art: Concentric Circles" property="og:title">
@@ -68,15 +68,15 @@
 <p>
 <script src="concentric-circles.js"></script></p>
 <div class="p5js" id="03d2e681-concentric-circles"></div>
-<div class="outline-2" id="outline-container-org9c877ef">
-<h2 id="org9c877ef">Introduction</h2>
-<div class="outline-text-2" id="text-org9c877ef">
+<div class="outline-2" id="outline-container-org8da44bb">
+<h2 id="org8da44bb">Introduction</h2>
+<div class="outline-text-2" id="text-org8da44bb">
 <p>This is a sketch that extends the <a href="../generative-art-circles/index.html">Generative Art Circles</a> post (slightly) to make concentric circles. I was going to make a spiral but realized after I wrote out the code that I had actually made concentric circles - so it's sort of a half-step from the circle to the spiral.</p>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org03cd7fa">
-<h2 id="org03cd7fa">The Class</h2>
-<div class="outline-text-2" id="text-org03cd7fa">
+<div class="outline-2" id="outline-container-orgeb1f05a">
+<h2 id="orgeb1f05a">The Class</h2>
+<div class="outline-text-2" id="text-orgeb1f05a">
 <p>The <code>ConcentricCircles</code> class keeps track of the parameters for the circles and draws them. Here I'm declaring the class and some fields to store the parameters.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">ConcentricCircles</span><span class="w"> </span><span class="p">{</span>
@@ -104,9 +104,9 @@
 </pre></div>
 <p>The constructor takes the <code>p5.js</code> object and the coordinates for the center of the circles (<code>center_x</code> and <code>center_y</code>) as well as the <code>maximum_radius</code> - the value at which the circles have hit their limit and should turn around. This is presumably half the width of the canvas, but since the <code>ConcentricCircles</code> class isn't creating the canvas I thought it should be the code that creates the sketch that decides what the limit is.</p>
 </div>
-<div class="outline-3" id="outline-container-orgf209634">
-<h3 id="orgf209634">The Step</h3>
-<div class="outline-text-3" id="text-orgf209634">
+<div class="outline-3" id="outline-container-orged45dbe">
+<h3 id="orged45dbe">The Step</h3>
+<div class="outline-text-3" id="text-orged45dbe">
 <p>The <code>step</code> is the amount the radius increases between each circle. I put it in a getter so that it can check if the circles are at the limits of the expected maximum (or minimum) size and thus should change direction (shrink instead of grow or vice-versa).</p>
 <div class="highlight">
 <pre><span></span><span class="nx">get</span><span class="w"> </span><span class="nx">step</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -118,9 +118,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org97434b5">
-<h3 id="org97434b5">The Draw</h3>
-<div class="outline-text-3" id="text-org97434b5">
+<div class="outline-3" id="outline-container-org3c8421a">
+<h3 id="org3c8421a">The Draw</h3>
+<div class="outline-text-3" id="text-org3c8421a">
 <p>The <code>draw</code> method is what the sketch function calls to tell the <code>ConcentricCircles</code> to draw a circle. This is similar to the sketch that drew a single circle except that the radius gets incremented at after the circle is drawn.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -139,14 +139,14 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org5772706">
-<h2 id="org5772706">The Sketch Function</h2>
-<div class="outline-text-2" id="text-org5772706">
+<div class="outline-2" id="outline-container-org306b60c">
+<h2 id="org306b60c">The Sketch Function</h2>
+<div class="outline-text-2" id="text-org306b60c">
 <p>This is the function that gets passed to <code>p5</code> to execute the <code>setup</code> and <code>draw</code> methods.</p>
 </div>
-<div class="outline-3" id="outline-container-orge84fcb0">
-<h3 id="orge84fcb0">Concentric Circles</h3>
-<div class="outline-text-3" id="text-orge84fcb0">
+<div class="outline-3" id="outline-container-org89d8721">
+<h3 id="org89d8721">Concentric Circles</h3>
+<div class="outline-text-3" id="text-org89d8721">
 <p>After declaring the function and some constants for the canvas, it creates an instance of the <code>ConcentricCircles</code> class.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">concentric_circles</span><span class="p">(</span><span class="nx">p5</span><span class="p">){</span>
@@ -159,9 +159,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orga5dce1a">
-<h3 id="orga5dce1a">Set Up</h3>
-<div class="outline-text-3" id="text-orga5dce1a">
+<div class="outline-3" id="outline-container-org7f8ae46">
+<h3 id="org7f8ae46">Set Up</h3>
+<div class="outline-text-3" id="text-org7f8ae46">
 <p>The <code>setup</code> method doesn't do anything fancy, although I did have to set the <code>frameRate</code> to a slower speed otherwise I couldn't see the circles being animated.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">setup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(){</span>
@@ -174,9 +174,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org3e59974">
-<h3 id="org3e59974">Draw</h3>
-<div class="outline-text-3" id="text-org3e59974">
+<div class="outline-3" id="outline-container-org3a1f9fe">
+<h3 id="org3a1f9fe">Draw</h3>
+<div class="outline-text-3" id="text-org3a1f9fe">
 <p>The <code>draw</code> method defers to the <code>ConcentricCircles.draw</code> method to do the actual drawing of the circles, but I added a light white overlay so that the circles fade out and you can see the animation.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">draw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -186,9 +186,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org11ce38c">
-<h3 id="org11ce38c">Passing The Sketch to p5.js</h3>
-<div class="outline-text-3" id="text-org11ce38c">
+<div class="outline-3" id="outline-container-orgccbec78">
+<h3 id="orgccbec78">Passing The Sketch to p5.js</h3>
+<div class="outline-text-3" id="text-orgccbec78">
 <p>That's pretty much it for the sketch, the last thing to do is just pass the <code>concentric_circles</code> function to <code>p5</code> along with the <code>id</code> for the <code>div</code> where the sketch should go (which I defined but don't show in the post).</p>
 <div class="highlight">
 <pre><span></span><span class="ow">new</span><span class="w"> </span><span class="nx">p5</span><span class="p">(</span><span class="nx">concentric_circles</span><span class="p">,</span><span class="w"> </span><span class="nx">CONCENTRIC_CIRCLES_DIV</span><span class="p">);</span>
@@ -196,9 +196,9 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org6a3a093">
-<h2 id="org6a3a093">The End</h2>
-<div class="outline-text-2" id="text-org6a3a093">
+<div class="outline-2" id="outline-container-org2386897">
+<h2 id="org2386897">The End</h2>
+<div class="outline-text-2" id="text-org2386897">
 <p>And that's it for drawing concentric circles, now on to spirals.</p>
 </div>
 </div>
@@ -210,7 +210,7 @@
 <li><a class="tag p-category" href="../../categories/p5js/index.html" rel="tag">p5.js</a></li>
 </ul>
 <ul class="pager hidden-print">
-<li class="previous"><a href="../generative-art-spiral/index.html" rel="prev" title="Generative Art Spiral">Previous post</a></li>
+<li class="previous"><a href="../generative-art-spiral/index.html" rel="prev" title="Generative Art: Spiral">Previous post</a></li>
 <li class="next"><a href="../cucumber-chai-and-jsdom/index.html" rel="next" title="Cucumber, Chai, and JSDOM">Next post</a></li>
 </ul>
 </nav>

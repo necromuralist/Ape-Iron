@@ -1,4 +1,6 @@
-import { SliderSettings } from "./slider.js"
+import { CaptionSettings, SliderSettings } from "../../javascript/slider.js";
+import { Slidini } from "../../javascript/slidini.js";
+import { Validator } from "../../javascript/validator.js";
 
 
 
@@ -8,42 +10,68 @@ const SPIRAL_ANGLE_SLIDER = "angle-slider-0a168ba9";
 const SPIRAL_RADIUS_SLIDER = "radius-slider-0a168ba9";
 const SPIRAL_CIRCLE_SLIDER = "circle-slider-0a168ba9";
 
-const SPIRAL_ANGLE_TEXT = "#angle-text-0a168ba9";
-const SPIRAL_RADIUS_TEXT = "#radius-text-0a168ba9";
-const SPIRAL_CIRCLE_TEXT = "#circle-text-0a168ba9";
+const SPIRAL_ANGLE_TEXT = "angle-text-0a168ba9";
+const SPIRAL_RADIUS_TEXT = "radius-text-0a168ba9";
+const SPIRAL_CIRCLE_TEXT = "circle-text-0a168ba9";
+
+const VALIDATOR = new Validator(document);
   
-const ANGLE_SLIDER = {
-  min: 0,
-  max: 40,
-  default_value: 5,
-  step_size: 0,
-  label: "Angle Increment",
-  precision: 2,
-  slider_div: SPIRAL_ANGLE_SLIDER,
-  caption_div: SPIRAL_ANGLE_TEXT
-}
+const ANGLE_SLIDER = new SliderSettings(
+  0,
+  40,
+  5,
+  0,
+  SPIRAL_ANGLE_SLIDER,
+  VALIDATOR
+);
+  
+const ANGLE_CAPTION = new CaptionSettings(
+  "Angle Increment",
+  2,
+  SPIRAL_ANGLE_TEXT,
+  VALIDATOR
+);
 
-const RADIUS_SLIDER = {
-  min: 0,
-  max: 20,
-  default_value: 1,
-  step_size: 0,
-  label: "Radius Increment",
-  precision: 2,
-  slider_div: SPIRAL_RADIUS_SLIDER,
-  caption_div: SPIRAL_RADIUS_TEXT
-}
+ANGLE_SLIDER.check_rep();
+ANGLE_CAPTION.check_rep();
 
-const CIRCLE_SLIDER = {
-  min: 1,
-  max: 100,
-  default_value: 1,
-  step_size: 0,
-  label: "Point Diameter",
-  precision: 2,
-  slider_div: SPIRAL_CIRCLE_SLIDER,
-  caption_div: SPIRAL_CIRCLE_TEXT
-}
+const RADIUS_SLIDER = new SliderSettings(
+  0,
+  20,
+  1,
+  0,
+  SPIRAL_RADIUS_SLIDER,
+  VALIDATOR
+);
+
+const RADIUS_CAPTION = new CaptionSettings(
+  "Radius Increment",
+  2,
+  SPIRAL_RADIUS_TEXT,
+  VALIDATOR
+);
+
+RADIUS_SLIDER.check_rep();
+RADIUS_CAPTION.check_rep();
+
+const CIRCLE_SLIDER = new SliderSettings(
+  1,
+  100,
+  1,
+  0,
+  SPIRAL_CIRCLE_SLIDER,
+  VALIDATOR
+);
+
+const CIRCLE_CAPTION = new CaptionSettings(
+  "Point Diameter",
+  2,
+  SPIRAL_CIRCLE_TEXT,
+  VALIDATOR
+);
+
+CIRCLE_SLIDER.check_rep();
+CIRCLE_CAPTION.check_rep();
 
 class Spiralizer {
   // geometry
@@ -97,50 +125,6 @@ class Spiralizer {
 
 } // spiralizer
 
-class Slidini {
-  _slider = null;
-  _caption = null;
-
-  constructor(settings, p5) {
-    this.settings = settings;
-    this.p5 = p5;
-  } // constructor
-
-  get slider() {
-    if (this._slider === null) {
-      // create the slider
-      this._slider = this.p5.createSlider(
-        this.settings.min,
-        this.settings.max,
-        this.settings.default_value,
-        this.settings.step_size,
-      );
-  
-      // attach it to the div tag
-      this._slider.parent(this.settings.slider_div);
-  
-      // set the callback to change label on update
-      this._slider.input(() => this.update_caption());
-  
-      // add the label to the slider
-      this.update_caption();
-    }
-    return this._slider;
-  }
-
-  get caption() {
-    if (this._caption === null) {
-      this._caption = this.p5.select(this.settings.caption_div);
-    }
-    return this._caption;
-  }
-
-  update_caption() {
-    this.caption.html(
-      `${this.settings.label}: ` +
-        `${this.slider.value().toFixed(this.settings.precision)}`);
-  } // update_caption
-} // slidini
 
 function spiral_sketch(p5) {
   // the size of the canvas and the color of the circles
@@ -159,9 +143,9 @@ function spiral_sketch(p5) {
     p5.stroke(POINT_COLOR);
     p5.fill(POINT_COLOR);
 
-  angle_slider = new Slidini(ANGLE_SLIDER, p5);  
-  radius_slider = new Slidini(RADIUS_SLIDER, p5);
-  circle_slider = new Slidini(CIRCLE_SLIDER, p5);
+  angle_slider = new Slidini(ANGLE_SLIDER, ANGLE_CAPTION, p5);  
+  radius_slider = new Slidini(RADIUS_SLIDER, RADIUS_CAPTION, p5);
+  circle_slider = new Slidini(CIRCLE_SLIDER, CIRCLE_CAPTION, p5);
 
   spiralizer = new Spiralizer(p5, WIDTH/2, HEIGHT/2, WIDTH/2,
                               angle_slider.slider,

@@ -1,16 +1,349 @@
 #+BEGIN_COMMENT
-.. title: Generative Art Spiral
+.. title: Generative Art: Spiral
 .. slug: generative-art-spiral
 .. date: 2023-06-17 16:38:42 UTC-07:00
-.. tags: 
-.. category: 
+.. tags: p5.js,generative art
+.. category: Generative Art
 .. link: 
-.. description: 
+.. description: Drawing a spiral with p5.js.
 .. type: text
 .. status: 
 .. updated: 
-
+.. template: p5.tmpl
 #+END_COMMENT
+#+OPTIONS: ^:{}
+#+TOC: headlines 2
+
+{{% p5module source="spiral.js" divid="spiral-0a168ba9" %}}
 
 
-Write your post here.
+#+begin_export html
+<div id="angle-text-0a168ba9"></div>
+<div id="angle-slider-0a168ba9"></div>
+
+<div id="radius-text-0a168ba9"></div>
+<div id="radius-slider-0a168ba9"></div>
+
+<div id="circle-text-0a168ba9"></div>
+<div id="circle-slider-0a168ba9"></div>
+#+end_export
+
+
+
+#+begin_src js :tangle ../files/posts/generative-art-spiral/spiral.js :exports none
+import { CaptionSettings, SliderSettings } from "../../javascript/slider.js";
+import { Slidini } from "../../javascript/slidini.js";
+import { Validator } from "../../javascript/validator.js";
+
+<<spiral-divs>>
+
+<<sketch-div>>
+
+<<slider-divs>>
+
+<<text-divs>>
+
+<<the-validator>>
+  
+<<angle-slider-values>>
+
+<<radius-slider-values>>
+
+<<circle-slider-values>>
+
+<<the-spiralizer>>
+
+  <<spiralizer-constructor>>
+
+  <<spiralizer-draw>>
+
+  <<spiralizer-reset>>
+
+} // spiralizer
+
+
+<<spiral-sketch>>
+
+  <<spiral-sketch-setup>>
+
+  <<spiral-sketch-setup-sliders>>
+
+  <<spiral-sketch-setup-spiralizer>>
+
+  <<spiral-sketch-draw>>
+
+  <<spiral-sketch-double-clicked>>
+} // spiral_sketch
+
+<<p5-instance>>
+#+end_src
+
+* The Div IDs
+To specify where the parts of the sketch go I added some ~div~ tags to the HTML so I'm going to create some javascript constants with the div IDs to make it easier to keep track of them.
+
+** The Sketch Div
+
+This is the ID for the ~div~ where the main sketch will go, it gets passed to the p5 constructor, along with the sketch definition, to create the [[*The P5 Instance][the P5 instance]].
+
+#+begin_src js :noweb-ref sketch-div
+const SPIRAL_DIV = "spiral-0a168ba9";
+#+end_src
+
+** The Slider Divs
+I'm going to add some sliders to make it easier to adjust some of the parameters and see how that affects the sketch. These are the IDs of the ~div~ tags where I'm going to put the sliders to change some of the sketch values. The angle and radius sliders will set how much the angle and radius will change as the circle is drawn. If, for example, the angle slider is set to 5, then every point that's added will be rotated five degrees from the previous point, and if the radius is set to 5, then the radius will grow by 5 every time a point is added.
+
+The circle slider is a little different in that it sets the diameter for the circles that I'm drawing to create the spiral, so it's just an aesthetic setting.
+
+#+begin_src js :noweb-ref slider-divs
+const SPIRAL_ANGLE_SLIDER = "angle-slider-0a168ba9";
+const SPIRAL_RADIUS_SLIDER = "radius-slider-0a168ba9";
+const SPIRAL_CIRCLE_SLIDER = "circle-slider-0a168ba9";
+#+end_src
+
+** Text Divs
+
+I also created some ~div~ tags that I'll put some text into to show the current value of each of the sliders.
+
+#+begin_src js :noweb-ref text-divs
+const SPIRAL_ANGLE_TEXT = "angle-text-0a168ba9";
+const SPIRAL_RADIUS_TEXT = "radius-text-0a168ba9";
+const SPIRAL_CIRCLE_TEXT = "circle-text-0a168ba9";
+#+end_src
+
+* The Slider Settings
+** The Validator
+
+This is used by the settings classes to try and see if I'm passing in valid arguments.
+
+#+begin_src js :noweb-ref the-validator
+const VALIDATOR = new Validator(document);
+#+end_src
+
+** Angle Slider
+
+The values used to create the angle-increment slider.
+
+#+begin_src js :noweb-ref angle-slider-values
+const ANGLE_SLIDER = new SliderSettings(
+  0,
+  40,
+  5,
+  0,
+  SPIRAL_ANGLE_SLIDER,
+  VALIDATOR
+);
+  
+const ANGLE_CAPTION = new CaptionSettings(
+  "Angle Increment",
+  2,
+  SPIRAL_ANGLE_TEXT,
+  VALIDATOR
+);
+
+ANGLE_SLIDER.check_rep();
+ANGLE_CAPTION.check_rep();
+#+end_src
+
+** Radius Slider
+
+The values used to create the radius increment slider.
+
+#+begin_src js :noweb-ref radius-slider-values
+const RADIUS_SLIDER = new SliderSettings(
+  0,
+  20,
+  1,
+  0,
+  SPIRAL_RADIUS_SLIDER,
+  VALIDATOR
+);
+
+const RADIUS_CAPTION = new CaptionSettings(
+  "Radius Increment",
+  2,
+  SPIRAL_RADIUS_TEXT,
+  VALIDATOR
+);
+
+RADIUS_SLIDER.check_rep();
+RADIUS_CAPTION.check_rep();
+#+end_src
+
+** Circle Slider
+
+The values used to create the circle diameter slider.
+
+#+begin_src js :noweb-ref circle-slider-values
+const CIRCLE_SLIDER = new SliderSettings(
+  1,
+  100,
+  1,
+  0,
+  SPIRAL_CIRCLE_SLIDER,
+  VALIDATOR
+);
+
+const CIRCLE_CAPTION = new CaptionSettings(
+  "Point Diameter",
+  2,
+  SPIRAL_CIRCLE_TEXT,
+  VALIDATOR
+);
+
+CIRCLE_SLIDER.check_rep();
+CIRCLE_CAPTION.check_rep();
+#+end_src
+
+* The Spiralizer
+
+** Class Declaration
+
+#+begin_src js :noweb-ref the-spiralizer
+class Spiralizer {
+  // geometry
+  degrees_in_a_circle = 360;
+  to_radians = (2 * Math.PI)/ this.degrees_in_a_circle;
+
+  // the starting values for the circles
+  radius = 1;
+  angle = 0;
+
+  // the center of our sketch (and the circles)
+  center_x;
+  center_y;
+#+end_src
+
+** The Constructor
+
+#+begin_src js :noweb-ref spiralizer-constructor
+constructor(p5, center_x, center_y, maximum_radius,
+            angle_slider, radius_slider, circle_slider){
+  this.p5 = p5;
+  this.center_x = center_x;
+  this.center_y = center_y;
+  this.maximum_radius = maximum_radius;
+
+  // the amount to move the points on the circle as they're drawn
+  this.angle_increment = angle_slider;
+  this.radius_increment = radius_slider;
+
+  // the size of the circle to draw  the circles
+  this.point_diameter = circle_slider;
+} // constructor
+#+end_src
+
+** The Draw Method
+
+#+begin_src js :noweb-ref spiralizer-draw
+draw() {
+  let radians, x, y;
+  
+  radians = this.angle * this.to_radians;
+  x = this.center_x + this.radius * Math.cos(radians);
+  y = this.center_y + this.radius * Math.sin(radians);
+  this.p5.circle(x, y, this.point_diameter.value());
+
+
+  this.radius += this.radius_increment.value();
+  this.angle += this.angle_increment.value();
+
+  if (this.radius >= this.maximum_radius) {
+    this.radius = this.radius_increment.value();
+  }
+} // end draw
+#+end_src
+
+** Reset
+
+#+begin_src js :noweb-ref spiralizer-reset
+reset() {
+  this.radius = this.radius_increment.value();
+  this.angle = 0;
+} // end reset
+#+end_src
+
+* The Spiral Sketch
+
+This is going to be the sketch that we pass to [[*The P5 Instance][the P5 constructor]] to create the animation.
+
+** Function Declaration
+
+#+begin_src js :noweb-ref spiral-sketch
+function spiral_sketch(p5) {
+  // the size of the canvas and the color of the circles
+  const WIDTH = 500;
+  const HEIGHT = WIDTH;
+  const POINT_COLOR = "RoyalBlue";
+  
+  let spiralizer;
+  let angle_slider;
+  let radius_slider;
+  let circle_slider;
+#+end_src
+
+** Setup
+*** Setup The Canvas and Drawing Settings
+#+begin_src js :noweb-ref spiral-sketch-setup
+p5.setup = function(){
+  p5.createCanvas(WIDTH, HEIGHT);
+  p5.background("white");
+  p5.stroke(POINT_COLOR);
+  p5.fill(POINT_COLOR);
+#+end_src
+
+*** Create The Sliders
+#+begin_src js :noweb-ref spiral-sketch-setup-sliders
+angle_slider = new Slidini(ANGLE_SLIDER, ANGLE_CAPTION, p5);  
+radius_slider = new Slidini(RADIUS_SLIDER, RADIUS_CAPTION, p5);
+circle_slider = new Slidini(CIRCLE_SLIDER, CIRCLE_CAPTION, p5);
+#+end_src
+
+*** Create the Spiralizer and End the Setup
+#+begin_src js :noweb-ref spiral-sketch-setup-spiralizer
+spiralizer = new Spiralizer(p5, WIDTH/2, HEIGHT/2, WIDTH/2,
+                            angle_slider.slider,
+                            radius_slider.slider,
+                            circle_slider.slider);
+
+} // end setup
+#+end_src
+
+** Draw
+
+#+begin_src js :noweb-ref spiral-sketch-draw
+p5.draw = function() {
+  spiralizer.draw();
+  p5.background(255, 5);
+}// end draw
+#+end_src
+
+** Double-Clicked
+
+#+begin_src js :noweb-ref spiral-sketch-double-clicked
+p5.doubleClicked = function() {
+  spiralizer.reset();
+  p5.background("white");
+} // end doubleClicked
+#+end_src
+
+** The P5 Instance
+
+To create the animation I'll create a p5 object by passing in [[*The Spiral Sketch][the function from the previous section]] and [[*The Sketch Div][the div ID]] to identify where in the page the sketch should go.
+#+begin_src js :noweb-ref p5-instance
+new p5(spiral_sketch, SPIRAL_DIV);
+#+end_src
+* References
+
+- {{% doc %}}bibliography-generative-art{{% /doc %}}
+
+- id - HTML: HyperText Markup Language | MDN [Internet]. 2023 [cited 2023 Sep 14]. Available from: https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id
+
+- p5.js reference | createSlider() [Internet]. [cited 2023 Apr 25]. Available from: https://p5js.org/reference/#/p5/createSlider
+
+- p5.js reference | p5.Element [Internet]. [cited 2023 Sep 14]. Available from: https://p5js.org/reference/#/p5.Element
+
+- p5.js reference | html() [Internet]. [cited 2023 Sep 14]. Available from: https://p5js.org/reference/#/p5.Element/html
+
+- p5.js reference | parent() [Internet]. [cited 2023 Sep 14]. Available from: https://p5js.org/reference/#/p5.Element/parent
+
+- p5.js reference | select() [Internet]. [cited 2023 Sep 14]. Available from: https://p5js.org/reference/#/p5/select

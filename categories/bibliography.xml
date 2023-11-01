@@ -5,7 +5,7 @@
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"&gt;&lt;/a&gt;&lt;/p&gt; 
-</copyright><lastBuildDate>Wed, 11 Oct 2023 20:19:13 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>The Nature of Code</title><link>https://necromuralist.github.io/Ape-Iron/posts/bibliography-the-nature-of-code/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
+</copyright><lastBuildDate>Mon, 30 Oct 2023 23:10:50 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>The Nature of Code</title><link>https://necromuralist.github.io/Ape-Iron/posts/bibliography-the-nature-of-code/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
@@ -41,7 +41,77 @@ Daniel Shiffman also has a website called &lt;a href="https://thecodingtrain.com
 &lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><category>bibliography</category><category>book</category><category>p5.js</category><guid>https://necromuralist.github.io/Ape-Iron/posts/bibliography-the-nature-of-code/index.html</guid><pubDate>Tue, 06 Jun 2023 20:55:23 GMT</pubDate></item><item><title>Making Comics</title><link>https://necromuralist.github.io/Ape-Iron/posts/making-comics/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="outline-container-org39bc604" class="outline-2"&gt;
+&lt;/div&gt;</description><category>bibliography</category><category>book</category><category>p5.js</category><guid>https://necromuralist.github.io/Ape-Iron/posts/bibliography-the-nature-of-code/index.html</guid><pubDate>Tue, 06 Jun 2023 20:55:23 GMT</pubDate></item><item><title>Generative Art</title><link>https://necromuralist.github.io/Ape-Iron/posts/bibliography-generative-art/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="outline-container-orgf5d85ab" class="outline-2"&gt;
+&lt;h2 id="orgf5d85ab"&gt;The Book&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgf5d85ab"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Pearson M. Generative art: a practical guide using processing. Shelter Island, NY : London: Manning ; Pearson Education [distributor]; 2011. 197 pages&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org5a69aed" class="outline-2"&gt;
+&lt;h2 id="org5a69aed"&gt;The Author's Site(s)&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org5a69aed"&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-org136d4d8" class="outline-3"&gt;
+&lt;h3 id="org136d4d8"&gt;Zen Bullets (probably)&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org136d4d8"&gt;
+&lt;p&gt;
+The Zen Bullets site doesn't have the author's name listed on it (that I could see) but there's references to this being his pen-name (e.g. on &lt;a href="https://leanpub.com/u/zenbullets"&gt;leanpub&lt;/a&gt;) and the works look about right.
+&lt;/p&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;a href="http://zenbullets.com/"&gt;http://zenbullets.com/&lt;/a&gt; : This appears to be the author's main site&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://zenbullets.com/abandonedart/"&gt;http://zenbullets.com/abandonedart/&lt;/a&gt; : This is a sub-section of the site that appears to match what's in the book (images only).&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/calculata/AbandonedArt"&gt;https://github.com/calculata/AbandonedArt&lt;/a&gt;: This is a github page with the processing sketches that the &lt;a href="https://manning-content.s3.amazonaws.com/download/7/0151371-391d-43c6-b978-3b5ae90c7a73/Pearson_Errata.html"&gt;book's errata page&lt;/a&gt; links to.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;
+The Zen Bullets site uses a very small font and you can't scroll the menu on the left if you increase the font size and it pushes the text off the pgae so you it's pretty hard to read the navigational text beyond the top items in the menu, but all the links appear to be to interesting stuff so it's worth it to just click on the links even if you can't read them.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org2001937" class="outline-3"&gt;
+&lt;h3 id="org2001937"&gt;Abandoned Art (Possibly Truly Abandoned)&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org2001937"&gt;
+&lt;p&gt;
+&lt;b&gt;Warning:&lt;/b&gt; uBlock Origin blocks this site because the web-host it uses is listed as untrustworthy, so I haven't actually seen the page, but it's listed in the book and the book's &lt;a href="https://www.manning.com/books/generative-art"&gt;product page&lt;/a&gt;  so I'm including it mostly to remind myself not to go there, even though they tell you to (the errata page does have a a note saying the site's license is expired, but they didn't fix the main page).
+&lt;/p&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;abandonedart.org&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.scam-detector.com/validator/iyfbodn-com-review/"&gt;https://www.scam-detector.com/validator/iyfbodn-com-review/&lt;/a&gt; : Describes the reason why the web-host is considered untrustworthy.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org0e5b1f5" class="outline-2"&gt;
+&lt;h2 id="org0e5b1f5"&gt;Other Artist's Mentioned In the Book&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org0e5b1f5"&gt;
+&lt;p&gt;
+These are ones that I could find dedicated sites for. The earliest pioneers (other than Manfred Mohr and Paul Brown) don't seem to have websites with their work.
+&lt;/p&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;a href="https://www.syedrezaali.com/"&gt;Reza Ali&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.paul-brown.com/"&gt;Paul Brown&lt;/a&gt;: The site looks like it was built in the 1990's so I found it too painful to look through, but there's a lot there.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://sub.blue/"&gt;Tom Beddard&lt;/a&gt;: His site, Sub.Blue (http only).&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://roberthodgin.com/"&gt;Robert Hodgin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.aaronkoblin.com/"&gt;Aaron Koblin&lt;/a&gt;: The link is to his web-site (&lt;a href="https://en.wikipedia.org/wiki/Aaron_Koblin?useskin=vector"&gt;wikipedia page&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.emohr.com/"&gt;Manfred Mohr&lt;/a&gt;: His site has works going back to the 1960's (switched to computers in 1969). Many have descriptions of what the algorithm does.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://reas.com/"&gt;Casey Reas&lt;/a&gt;: One of the creators of Processing.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.saint-clair.net/"&gt;Jerome Saint-Clair&lt;/a&gt;: The newest work on the site is from 2012 so he's either inactive or this is an old site.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.infinite.center/"&gt;Jared Tarbell&lt;/a&gt;: His site "Infinite Center" (latest post January 8, 2020). Is this &lt;a href="http://www.complexification.net/programmer.html"&gt;one of the founders of etsy&lt;/a&gt;?. Also &lt;a href="http://www.complexification.net/gallery/"&gt;complexification.net&lt;/a&gt; (2012, no https). The sketchs on the old site are java applets so you have to open the applet (which won't run) then copy the source and run it as java.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/blprnt"&gt;Jer Thorp&lt;/a&gt;: The link is to his github repositories, I couldn't find a web-page for him. There's a &lt;a href="https://www.reddit.com/domain/blog.blprnt.com/"&gt;reddit page&lt;/a&gt; for his blog, but the blog is gone and the reddit threads are old.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://mariuswatz.com/"&gt;Marius Waltz&lt;/a&gt; : The site only has some work representing what he does, doing an image search with his name and the title of a piece (e.g. Grid Distortion) will pull up more variations.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://winterbloed.be/"&gt;Frederik Vanhoutte&lt;/a&gt;: I didn't see his name on the site (&lt;i&gt;winterbloed.be&lt;/i&gt;) but &lt;i&gt;Winterbloed&lt;/i&gt; appears to be his pen-name. (http only)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><category>bibliography</category><category>book</category><category>generative art</category><guid>https://necromuralist.github.io/Ape-Iron/posts/bibliography-generative-art/index.html</guid><pubDate>Sun, 04 Jun 2023 19:58:39 GMT</pubDate></item><item><title>Making Comics</title><link>https://necromuralist.github.io/Ape-Iron/posts/making-comics/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="outline-container-org39bc604" class="outline-2"&gt;
 &lt;h2 id="org39bc604"&gt;Biblography&lt;/h2&gt;
 &lt;div class="outline-text-2" id="text-org39bc604"&gt;
 &lt;ul class="org-ul"&gt;

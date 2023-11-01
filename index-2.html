@@ -12,7 +12,7 @@
 <meta content="Nikola (getnikola.com)" name="generator">
 <link href="rss.xml" hreflang="en" rel="alternate" title="RSS" type="application/rss+xml">
 <link href="https://necromuralist.github.io/Ape-Iron/index-2.html" rel="canonical">
-<link href="index.html" rel="prev" type="text/html">
+<link href="index-3.html" rel="prev" type="text/html">
 <link href="index-1.html" rel="next" type="text/html"><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><!-- favicons -->
 <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
 <link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
@@ -48,6 +48,627 @@
 <div class="container" id="content" role="main">
 <div class="body-content"><!--Body content-->
 <div class="postindex">
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article">
+<header>
+<h1 class="p-name entry-title"><a class="u-url" href="posts/pulling-images-for-the-abecedarium/index.html">Pulling Images For the Abecedarium</a></h1>
+<div class="metadata">
+<p class="byline author vcard"><span class="byline-name fn" itemprop="author">The Cloistered Monkey</span></p>
+<p class="dateline"><a href="posts/pulling-images-for-the-abecedarium/index.html" rel="bookmark"><time class="published dt-published" datetime="2023-05-25T15:20:54-07:00" itemprop="datePublished" title="2023-05-25 15:20">2023-05-25 15:20</time></a></p>
+</div>
+</header>
+<div class="p-summary entry-summary">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="posts/pulling-images-for-the-abecedarium/index.html#org0adec68">Imports and Setup</a>
+<ul>
+<li><a href="posts/pulling-images-for-the-abecedarium/index.html#orgc1b4b00">Imports</a></li>
+<li><a href="posts/pulling-images-for-the-abecedarium/index.html#org57e8fb6">Set Up</a></li>
+</ul>
+</li>
+<li><a href="posts/pulling-images-for-the-abecedarium/index.html#org89f62e8">Ape</a>
+<ul>
+<li><a href="posts/pulling-images-for-the-abecedarium/index.html#orgcb7f52b">A First (Failed Attempt)</a></li>
+<li><a href="posts/pulling-images-for-the-abecedarium/index.html#org7150b87">Once Again With icrawler</a></li>
+</ul>
+</li>
+<li><a href="posts/pulling-images-for-the-abecedarium/index.html#org4e3eea0">Bison</a></li>
+<li><a href="posts/pulling-images-for-the-abecedarium/index.html#orge4fe6fe">Chimpanzee</a></li>
+<li><a href="posts/pulling-images-for-the-abecedarium/index.html#org500b309">Cow</a></li>
+<li><a href="posts/pulling-images-for-the-abecedarium/index.html#org1470f36">Dragon</a></li>
+<li><a href="posts/pulling-images-for-the-abecedarium/index.html#org65af92c">Elephant</a></li>
+<li><a href="posts/pulling-images-for-the-abecedarium/index.html#org01a0760">Frog</a></li>
+<li><a href="posts/pulling-images-for-the-abecedarium/index.html#orgfb0e799">Goat (Horned)</a></li>
+<li><a href="posts/pulling-images-for-the-abecedarium/index.html#org1144fc6">Hippo</a></li>
+<li><a href="posts/pulling-images-for-the-abecedarium/index.html#org4e5d809">Iguana</a></li>
+<li><a href="posts/pulling-images-for-the-abecedarium/index.html#org440eebb">Jackrabbit</a></li>
+<li><a href="posts/pulling-images-for-the-abecedarium/index.html#org1d31262">Krampus</a></li>
+<li><a href="posts/pulling-images-for-the-abecedarium/index.html#org4bafba7">Lobster</a></li>
+<li><a href="posts/pulling-images-for-the-abecedarium/index.html#orgd6c1466">Minotaur</a></li>
+<li><a href="posts/pulling-images-for-the-abecedarium/index.html#orgd328527">Namahage</a></li>
+<li><a href="posts/pulling-images-for-the-abecedarium/index.html#orga24802d">Octopus</a></li>
+<li><a href="posts/pulling-images-for-the-abecedarium/index.html#orgb6d6ff8">Pig</a></li>
+<li><a href="posts/pulling-images-for-the-abecedarium/index.html#org6f70664">Quetzacoatl</a></li>
+<li><a href="posts/pulling-images-for-the-abecedarium/index.html#org7648670">Rhinoceros</a></li>
+<li><a href="posts/pulling-images-for-the-abecedarium/index.html#orgff52f08">Samurai</a></li>
+<li><a href="posts/pulling-images-for-the-abecedarium/index.html#orgf4c7b8e">Tortoise</a></li>
+<li><a href="posts/pulling-images-for-the-abecedarium/index.html#orgf9f31e2">Unicorn (horse)</a></li>
+<li><a href="posts/pulling-images-for-the-abecedarium/index.html#orgfd2ae75">Vampire Fish</a></li>
+<li><a href="posts/pulling-images-for-the-abecedarium/index.html#orgd791026">Wasp</a></li>
+<li><a href="posts/pulling-images-for-the-abecedarium/index.html#org0f8d36a">Chicken (Rooster)</a></li>
+<li><a href="posts/pulling-images-for-the-abecedarium/index.html#org5e1209d">Yak</a></li>
+<li><a href="posts/pulling-images-for-the-abecedarium/index.html#org56bac3e">Zebu</a></li>
+</ul>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org0adec68">
+<h2 id="org0adec68">Imports and Setup</h2>
+<div class="outline-text-2" id="text-org0adec68"></div>
+<div class="outline-3" id="outline-container-orgc1b4b00">
+<h3 id="orgc1b4b00">Imports</h3>
+<div class="outline-text-3" id="text-orgc1b4b00">
+<div class="highlight">
+<pre><span></span><span class="c1"># python</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># pypi</span>
+<span class="kn">from</span> <span class="nn">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span>
+<span class="kn">from</span> <span class="nn">google_images_download.google_images_download</span> <span class="kn">import</span> <span class="n">googleimagesdownload</span> <span class="k">as</span> <span class="n">GoogleImages</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org57e8fb6">
+<h3 id="org57e8fb6">Set Up</h3>
+<div class="outline-text-3" id="text-org57e8fb6">
+<div class="highlight">
+<pre><span></span><span class="n">ENV_PATH</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">"~/projects/ape-iron/.env"</span><span class="p">)</span><span class="o">.</span><span class="n">expanduser</span><span class="p">()</span>
+<span class="k">assert</span> <span class="n">ENV_PATH</span><span class="o">.</span><span class="n">is_file</span><span class="p">()</span>
+
+<span class="n">load_dotenv</span><span class="p">(</span><span class="n">ENV_PATH</span><span class="p">,</span> <span class="n">override</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">OUTPUT</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"ABECEDARIUM"</span><span class="p">])</span><span class="o">.</span><span class="n">expanduser</span><span class="p">()</span>
+<span class="n">google_images</span> <span class="o">=</span> <span class="n">GoogleImages</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org89f62e8">
+<h2 id="org89f62e8">Ape</h2>
+<div class="outline-text-2" id="text-org89f62e8"></div>
+<div class="outline-3" id="outline-container-orgcb7f52b">
+<h3 id="orgcb7f52b">A First (Failed Attempt)</h3>
+<div class="outline-text-3" id="text-orgcb7f52b">
+<div class="highlight">
+<pre><span></span><span class="n">APE_PATH</span> <span class="o">=</span> <span class="n">OUTPUT</span><span class="o">/</span><span class="s2">"Ape/"</span>
+<span class="n">keywords</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+    <span class="n">keywords</span><span class="o">=</span><span class="s2">"gorilla"</span><span class="p">,</span>
+    <span class="n">limit</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">"photo"</span><span class="p">,</span>
+    <span class="n">output_directory</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">APE_PATH</span><span class="p">),</span>
+    <span class="n">chromedriver</span><span class="o">=</span><span class="s2">"/usr/bin/chromedriver"</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="n">paths</span> <span class="o">=</span> <span class="n">google_images</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">keywords</span><span class="p">)</span>
+</pre></div>
+<pre class="example">
+
+Item no.: 1 --&gt; Item name = pig
+Evaluating...
+Starting Download...
+
+
+Unfortunately all 20 could not be downloaded because some images were not downloadable. 0 is all we got for this search filter!
+
+Errors: 0
+
+</pre>
+<p>Oops. It looks like the <a href="https://github.com/hardikvasa/google-images-download">google-images-download</a> project has been abandoned and no longer works. There are multiple bug reports for it. One mentions <a href="https://github.com/Joeclinton1/google-images-download">a fork</a> that looks like it has more activity, but <a href="https://github.com/hardikvasa/google-images-download/issues/376">this bug report</a> mentions another project called <a href="https://github.com/hellock/icrawler">icrawler</a>which seems like a more general web-crawler that also says it has a google images downloader so maybe I'll try that instead.</p>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org7150b87">
+<h3 id="org7150b87">Once Again With icrawler</h3>
+<div class="outline-text-3" id="text-org7150b87">
+<div class="highlight">
+<pre><span></span><span class="kn">from</span> <span class="nn">icrawler.builtin</span> <span class="kn">import</span> <span class="n">GoogleImageCrawler</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="n">storage</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">root_dir</span><span class="o">=</span><span class="n">APE_PATH</span><span class="p">)</span>
+<span class="n">crawler</span> <span class="o">=</span> <span class="n">GoogleImageCrawler</span><span class="p">(</span><span class="n">storage</span><span class="o">=</span><span class="n">storage</span><span class="p">)</span>
+</pre></div>
+<p>Besides the keyword (keywords?) you can pass some other arguments. One notable option is a `filters` dictionary that helps specify the type of image.</p>
+<table border="2" cellpadding="6" cellspacing="0" frame="hsides" id="org574f4a0" rules="groups">
+<colgroup>
+<col class="org-left">
+<col class="org-left"></colgroup>
+<thead>
+<tr>
+<th class="org-left" scope="col">Key</th>
+<th class="org-left" scope="col">Options</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">type</td>
+<td class="org-left">“photo”, “face”, “clipart”, “linedrawing”, “animated”</td>
+</tr>
+<tr>
+<td class="org-left">color</td>
+<td class="org-left">“color”, “blackandwhite”, “transparent”, “red”, “orange”, “yellow”, “green”</td>
+</tr>
+<tr>
+<td class="org-left">&nbsp;</td>
+<td class="org-left">“teal”, “blue”, “purple”, “pink”, “white”, “gray”, “black”, “brown”</td>
+</tr>
+<tr>
+<td class="org-left">size</td>
+<td class="org-left">“large”, “medium”, “icon”</td>
+</tr>
+<tr>
+<td class="org-left">&nbsp;</td>
+<td class="org-left">larger than a given size (e.g. “&gt;640x480”)</td>
+</tr>
+<tr>
+<td class="org-left">&nbsp;</td>
+<td class="org-left">exactly is a given size (“=1024x768”)</td>
+</tr>
+<tr>
+<td class="org-left">license</td>
+<td class="org-left">“noncommercial”(labeled for noncommercial reuse)</td>
+</tr>
+<tr>
+<td class="org-left">&nbsp;</td>
+<td class="org-left">“commercial”(labeled for reuse)</td>
+</tr>
+<tr>
+<td class="org-left">&nbsp;</td>
+<td class="org-left">“noncommercial,modify”(labeled for noncommercial reuse with modification)</td>
+</tr>
+<tr>
+<td class="org-left">&nbsp;</td>
+<td class="org-left">“commercial,modify”(labeled for reuse with modification)</td>
+</tr>
+<tr>
+<td class="org-left">date</td>
+<td class="org-left">“pastday”, “pastweek”</td>
+</tr>
+<tr>
+<td class="org-left">&nbsp;</td>
+<td class="org-left">tuple of dates, e.g. ((2016, 1, 1), (2017, 1, 1)) or ((2016, 1, 1), None)</td>
+</tr>
+</tbody>
+</table>
+<p>The <a href="https://icrawler.readthedocs.io/en/latest/builtin.html#search-engine-crawlers">icrawler documentation</a> suggests using the date-ranges to get past the 1,000 (or however many) image limit.</p>
+<p>The arguments to the `crawl` method are:</p>
+<table border="2" cellpadding="6" cellspacing="0" frame="hsides" id="org0653c4d" rules="groups">
+<colgroup>
+<col class="org-left">
+<col class="org-left">
+<col class="org-left"></colgroup>
+<thead>
+<tr>
+<th class="org-left" scope="col">Argument</th>
+<th class="org-left" scope="col">Default</th>
+<th class="org-left" scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">keyword</td>
+<td class="org-left">&nbsp;</td>
+<td class="org-left">The search term for the images</td>
+</tr>
+<tr>
+<td class="org-left">filters</td>
+<td class="org-left">None</td>
+<td class="org-left">A dictionary of image filter options (see above)</td>
+</tr>
+<tr>
+<td class="org-left">offset</td>
+<td class="org-left">0</td>
+<td class="org-left">Where to start in the search (e.g. skip first 10)</td>
+</tr>
+<tr>
+<td class="org-left">max_num</td>
+<td class="org-left">1000</td>
+<td class="org-left">Maximum number of images to pull (the service will set some limit, usually 1,000)</td>
+</tr>
+<tr>
+<td class="org-left">min_size</td>
+<td class="org-left">None</td>
+<td class="org-left">Minimum pixel size as a tuple <code>(x-pixels, y-pixels)</code></td>
+</tr>
+<tr>
+<td class="org-left">max_size</td>
+<td class="org-left">None</td>
+<td class="org-left">Maximum image size as a tuple <code>(x-pixels, y-pixels)</code></td>
+</tr>
+<tr>
+<td class="org-left">language</td>
+<td class="org-left">None</td>
+<td class="org-left">If you're not using English, I assume</td>
+</tr>
+<tr>
+<td class="org-left">file_idx_offset</td>
+<td class="org-left">0</td>
+<td class="org-left">icrawler names the downloaded files as numbers, this will be the next number to use</td>
+</tr>
+</tbody>
+</table>
+<p>The <a href="https://github.com/hellock/icrawler/blob/master/icrawler/builtin/google.py">code</a> says that you can't set <code>max_num</code> to anything greater than 1,000. I think the <code>offset</code> is the amount to skip within that 1,000. Maybe. The icrawler ignores the names of the files given in the URLs and names them with numbers (e.g. <code>000001.jpg</code>). If you make another crawl and don't want to clobber an earlier set of files you probably need to change the <code>file_idx_offset</code> (I think. I haven't tried it yet).</p>
+<p>Let's see what happens if we pull <i>gorilla</i> photos.</p>
+<div class="highlight">
+<pre><span></span><span class="n">crawler</span><span class="o">.</span><span class="n">crawl</span><span class="p">(</span><span class="n">keyword</span><span class="o">=</span><span class="s2">"gorilla"</span><span class="p">,</span>
+              <span class="n">filters</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+                  <span class="nb">type</span><span class="o">=</span><span class="s2">"photo"</span>
+              <span class="p">))</span>
+</pre></div>
+<pre class="example" id="orgc5c16df">
+2023-05-29 16:20:21,749 - INFO - icrawler.crawler - start crawling...
+2023-05-29 16:20:21,752 - INFO - icrawler.crawler - starting 1 feeder threads...
+2023-05-29 16:20:21,756 - INFO - icrawler.crawler - starting 1 parser threads...
+2023-05-29 16:20:21,759 - INFO - icrawler.crawler - starting 1 downloader threads...
+2023-05-29 16:20:22,776 - INFO - parser - parsing result page https://www.google.com/search?q=gorilla&amp;ijn=0&amp;start=0&amp;tbs=itp%3Aphoto&amp;tbm=isch
+2023-05-29 16:20:23,223 - ERROR - downloader - Response status code 404, file https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Gorille_des_plaines_de_l%27ouest_%C3%A0_l%27Espace_Zoologique.jpg
+2023-05-29 16:20:23,871 - INFO - downloader - image #1  https://files.worldwildlife.org/wwfcmsprod/images/Mountain_Gorilla_Silverback_WW22557/story_full_width/36fcoamev0_Mountain_Gorilla_Silverback_WW22557.jpg
+2023-05-29 16:20:24,774 - INFO - downloader - image #2  https://i.natgeofe.com/n/2d706180-e778-4110-9c15-1a7435b72114/mountain-gorillas-rwanda-02_3x4.jpg
+2023-05-29 16:20:25,115 - INFO - downloader - image #3  https://www.nczoo.org/sites/default/files/2020-05/Gorilla-5.jpg
+2023-05-29 16:20:25,465 - INFO - downloader - image #4  https://cdn.britannica.com/79/20279-050-ECDF21A7/mountain-gorilla-Virunga-National-Park-Democratic-Republic.jpg
+2023-05-29 16:20:25,651 - ERROR - downloader - Response status code 401, file https://optimise2.assets-servd.host/maniacal-finch/production/animals/WL_Gorilla.jpg
+2023-05-29 16:20:25,859 - INFO - downloader - image #5  https://media.npr.org/assets/img/2021/10/08/ap21280523738198-1--cc4c958352f2bd1a4a45c203f1f7807fc0193457-s1100-c50.jpg
+2023-05-29 16:20:26,463 - INFO - downloader - image #6  https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2022-01/220125-atlanta-zoo-ozzie-male-gorilla-obit-ac-849p-0cdfbe.jpg
+2023-05-29 16:20:26,510 - INFO - downloader - image #7  https://files.worldwildlife.org/wwfcmsprod/images/HERO_Mountain_Gorilla_Silverback_WW22557/hero_small/17l7fosr27_Mountain_Gorilla_Silverback_WW22557.jpg
+2023-05-29 16:20:27,116 - INFO - downloader - image #8  https://images.immediate.co.uk/production/volatile/sites/23/2014/07/GettyImages-157862378-7432ede.jpg
+2023-05-29 16:20:27,314 - INFO - downloader - image #9  https://t4.ftcdn.net/jpg/05/65/55/03/360_F_565550348_QbLFP5eFniY4cGy230zuhGcz0pcG56YC.jpg
+2023-05-29 16:20:30,876 - INFO - downloader - image #10 https://www.wwf.org.uk/sites/default/files/styles/hero_m/public/2019-08/mountain_gorilla_Rwanda.jpg
+2023-05-29 16:20:31,178 - INFO - downloader - image #11 https://detroitzoo.org/wp-content/uploads/2015/08/Gorilla-Pende.jpg
+2023-05-29 16:20:31,792 - INFO - downloader - image #12 https://cbsaustin.com/resources/media/eab965d5-d9d1-4739-90ad-7b029219bd7c-large16x9_ScreenShot20230407at12.47.20PM.png
+2023-05-29 16:20:32,583 - INFO - downloader - image #13 https://newschannel20.com/resources/media/eab965d5-d9d1-4739-90ad-7b029219bd7c-large3x4_ScreenShot20230407at12.47.20PM.png
+2023-05-29 16:20:33,167 - ERROR - downloader - Response status code 400, file https://th-thumbnailer.cdn-si-edu.com/J_03GIL6RkkkoUYxjX1bZ2uhArg\u003d/1072x720/filters:no_upscale()/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/45/e8/45e81e74-8044-4a89-a679-6d0eaa70d6fc/caters_gorilla_punch_03.jpg
+2023-05-29 16:20:33,883 - INFO - downloader - image #14 https://upload.wikimedia.org/wikipedia/commons/5/50/Male_gorilla_in_SF_zoo.jpg
+2023-05-29 16:20:34,899 - INFO - downloader - image #15 https://i.natgeofe.com/n/e180e488-e4e1-472d-9d4f-b2138978903c/01-gorilla-stare_4x3.jpg
+2023-05-29 16:20:35,491 - INFO - downloader - image #16 https://cdn.britannica.com/79/126579-050-17FD9CF2/lowland-gorilla.jpg
+2023-05-29 16:20:36,169 - INFO - downloader - image #17 https://foxchattanooga.com/resources/media/44a66631-49af-4355-ad52-845f43e9411d-pittsburghzoobabygorilla2.png
+2023-05-29 16:20:36,550 - INFO - downloader - image #18 https://gorillafund.org/wp-content/uploads/2022/09/Ubwitange.jpg
+2023-05-29 16:20:36,964 - INFO - downloader - image #19 https://www.rainforest-alliance.org/wp-content/uploads/2021/06/baby-mountain-gorilla-1.jpg
+2023-05-29 16:20:40,643 - INFO - downloader - image #20 https://ichef.bbci.co.uk/news/976/cpsprodpb/2533/production/_119132590_2.60637068.jpg
+2023-05-29 16:20:40,986 - INFO - downloader - image #21 https://images.theconversation.com/files/246210/original/file-20181119-76137-1c4570v.jpg
+2023-05-29 16:20:41,194 - INFO - downloader - image #22 https://m.media-amazon.com/images/I/81uzcxVyiaL._AC_UF894,1000_QL80_.jpg
+2023-05-29 16:20:41,621 - INFO - downloader - image #23 https://zooatlanta.org/wp-content/uploads/gorilla_baby2023_230425_shalia_baby_ZA_2T0A6711.jpg
+2023-05-29 16:20:41,878 - ERROR - downloader - Response status code 403, file https://gray-whsv-prod.cdn.arcpublishing.com/resizer/5SrqNB2HFQ5OH7-D5Da0plW2zH4\u003d/1200x675/smart/filters:quality(85)/cloudfront-us-east-1.images.arcpublishing.com/gray/TB36MKZ2ENACBLSWNP6INGD3HA.jpg
+2023-05-29 16:20:42,635 - INFO - downloader - image #24 https://ichef.bbci.co.uk/news/976/cpsprodpb/C173/production/_119132594_2.60637064.jpg
+2023-05-29 16:20:43,442 - INFO - downloader - image #25 https://www.cmzoo.org/wp-content/uploads/Roxy-1024x680.jpg
+2023-05-29 16:20:43,747 - INFO - downloader - image #26 https://media.npr.org/assets/img/2022/01/26/western-lowland-gorilla-ozzie_zoo-atlanta-1b335bebb3e98145cd3216e20b668c617b370a58.jpg
+2023-05-29 16:20:44,376 - INFO - downloader - image #27 https://www.columbuszoo.org/sites/default/files/styles/square_large/public/assets/animals/Gorilla%20%28Ktembe%29%2009956%20-%20Grahm%20S.%20Jones%2C%20Columbus%20Zoo%20and%20Aquarium.jpg
+2023-05-29 16:20:47,970 - ERROR - downloader - Response status code 500, file https://npr.brightspotcdn.com/dims4/default/4ef2621/2147483647/strip/true/crop/1995x1047+0+117/resize/1200x630!/quality/90/?url\u003dhttp%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F5e%2F11%2Fe4ca0a63450c8922417ecba1048e%2F20230308-pz2-8574-cpaulselvaggio-web.jpg
+2023-05-29 16:20:48,432 - INFO - downloader - image #28 https://i.natgeofe.com/n/8fa82b8d-0110-48d4-9e01-2926d359c784/mountain-gorillas-rwanda-05_square.jpg
+2023-05-29 16:20:48,823 - INFO - downloader - image #29 https://assets3.thrillist.com/v1/image/2782161/1020x765/scale;webp\u003dauto;jpeg_quality\u003d60.jpg
+2023-05-29 16:20:49,148 - INFO - downloader - image #30 https://www.awf.org/sites/default/files/Website_SpeciesPage_MountainGorilla01_Hero.jpg
+2023-05-29 16:20:49,639 - INFO - downloader - image #31 https://www.jsonline.com/gcdn/presto/2022/07/28/PMJS/9508fe0d-e41f-4c90-922a-f738e6254964-GorillaStare2_4k.jpg
+2023-05-29 16:20:50,000 - ERROR - downloader - Response status code 403, file https://www.bostonglobe.com/resizer/UdvN4BJ3rNxChcQaeBBvfctPC6k\u003d/arc-anglerfish-arc2-prod-bostonglobe/public/XLLV4FEUWWSBUJGFQCPXXOEOSY.jpg
+2023-05-29 16:20:50,418 - INFO - downloader - image #32 https://louisvillezoo.org/wp-content/uploads/2019/06/Kindi.jpg
+2023-05-29 16:20:50,991 - INFO - downloader - image #33 https://sdzsafaripark.org/sites/default/files/styles/hero_with_nav_gradient/public/hero/hero-gorilla.jpg
+2023-05-29 16:20:51,377 - INFO - downloader - image #34 https://media.11alive.com/assets/WXIA/images/dba319a2-1f5b-475c-abc2-2070f5695624/dba319a2-1f5b-475c-abc2-2070f5695624_1920x1080.jpg
+2023-05-29 16:20:51,790 - INFO - downloader - image #35 https://cbsaustin.com/resources/media/8c872d35-142a-497b-8e40-c7318cf731ce-medium16x9_ScreenShot20230407at1.29.59PM.png
+2023-05-29 16:20:54,454 - INFO - downloader - image #36 https://1.bp.blogspot.com/-BSQMRiOCqII/YElP3Sr0qUI/AAAAAAAATEo/E2SvBKQFnmEIjywIvw7oZQ4g5jgLChvkwCLcBGAsYHQ/s2048/Zuna%2B4x6%2Bhigh%2Bres.jpg
+2023-05-29 16:20:54,771 - INFO - downloader - image #37 https://d21yqjvcoayho7.cloudfront.net/wp-content/uploads/2022/08/31/Mashika1.jpg
+2023-05-29 16:20:55,344 - INFO - downloader - image #38 https://media.cnn.com/api/v1/images/stellar/prod/190422153943-gorillas-selfie-virunga-national-park.jpg
+2023-05-29 16:20:55,950 - INFO - downloader - image #39 https://whc.vetmed.ucdavis.edu/sites/g/files/dgvnsk5261/files/styles/sf_landscape_16x9/public/images/article/1-infant%20mtn%20gorilla-Katwe%20Group-OCT%2019%20Bwindi-copyright%20Gorilla%20Doctors-compressed.jpg
+2023-05-29 16:20:56,185 - INFO - downloader - image #40 https://media.npr.org/assets/img/2018/01/11/pasikanpr-188adc923bb86ae3a69237493c0aa76f70e75a4a-s1100-c50.jpg
+2023-05-29 16:20:56,665 - INFO - downloader - image #41 https://images.newscientist.com/wp-content/uploads/2016/07/13163431/lead_whittier20150521001-5.jpg
+2023-05-29 16:20:57,702 - INFO - downloader - image #42 https://good-nature-blog-uploads.s3.amazonaws.com/uploads/2018/01/silverback-gorilla-africa-Benjamin_Thomas.jpg
+2023-05-29 16:20:58,455 - INFO - downloader - image #43 https://comozooconservatory.org/wp-content/uploads/2023/04/Gorilla-credit-Steve-Solmonson.jpg
+2023-05-29 16:20:59,291 - INFO - downloader - image #44 https://nationalzoo.si.edu/sites/default/files/styles/768_scale/public/newsroom/20230527-valschultz-012-gorilla-infant.jpg
+2023-05-29 16:20:59,632 - ERROR - downloader - Response status code 400, file https://cdn.theatlantic.com/thumbor/zN3P8Eg5R2KCRWXgbG3B9VUqxB0\u003d/243x0:3243x2250/1200x900/media/img/mt/2016/11/RTR3NO4M/original.jpg
+2023-05-29 16:20:59,940 - INFO - downloader - image #45 https://gorillafund.org/wp-content/uploads/2022/05/Silverback-gorilla-Mafunzo-1024x768.jpg
+2023-05-29 16:21:00,189 - ERROR - downloader - Response status code 400, file https://people.com/thmb/zJuWJJxNflt35JwcK9ifuDmcHV4\u003d/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(749x0:751x2)/prince-charles-baby-mountain-gorilla-ubwuzuzanye-090222-231cd500ae6a48aab86d28b031c64d1a.jpg
+2023-05-29 16:21:00,523 - ERROR - downloader - Response status code 500, file https://ca-times.brightspotcdn.com/dims4/default/dd8d9f5/2147483647/strip/true/crop/5500x2888+0+518/resize/1200x630!/quality/80/?url\u003dhttps%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2Fb9%2Fc874005242be8d9bab87c9b81f4a%2Fla-zoo-gorilla-94162.jpg
+2023-05-29 16:21:00,884 - ERROR - downloader - Response status code 500, file https://ewscripps.brightspotcdn.com/dims4/default/4fe6984/2147483647/strip/true/crop/1230x646+0+84/resize/1200x630!/quality/90/?url\u003dhttp%3A%2F%2Fewscripps-brightspot.s3.amazonaws.com%2Fe2%2F03%2F781609d74315a69123afb278c6b4%2Fscreen-shot-2022-10-10-at-2.08.29%20PM.png
+2023-05-29 16:21:01,469 - INFO - downloader - image #46 https://cloudfront-us-east-1.images.arcpublishing.com/advancelocal/ELEEDHM3YVEYZGD5KZNQZS2ZSY.jpg
+2023-05-29 16:21:01,892 - INFO - downloader - image #47 https://www.first5la.org/wp-content/uploads/2020/08/baby-gorilla-tuena-3950983001_534.jpg
+2023-05-29 16:21:05,250 - INFO - downloader - image #48 https://images.csmonitor.com/csm/2013/03/gorilla.jpg
+2023-05-29 16:21:06,130 - INFO - downloader - image #49 https://cdn.hswstatic.com/gif/gorillas.jpg
+2023-05-29 16:21:06,905 - INFO - downloader - image #50 https://files.worldwildlife.org/wwfcmsprod/images/mountain_gorilla_tom_deuitch/story_full_width/3tsywpr4hc___Tom_Deuitch.jpg
+2023-05-29 16:21:07,576 - INFO - downloader - image #51 https://www.northeastohioparent.com/wp-content/uploads/2022/10/Kayembe-on-Freddy.jpg
+2023-05-29 16:21:08,096 - INFO - downloader - image #52 https://media.apenheul.nl/aphl-cache/0/a/a/9/f/5/0aa9f5cdc1936be4e7937b33e6d625c2b46d4eff.jpg
+2023-05-29 16:21:08,182 - ERROR - downloader - Response status code 400, file https://people.com/thmb/9KajO2h4En_kPrf_ZstX4qa0tyQ\u003d/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(688x459:690x461)/kiki-the-gorilla-2000-d0450f98d6894f47892c9e8e088aec61.jpg
+2023-05-29 16:21:08,512 - INFO - downloader - image #53 https://9b16f79ca967fd0708d1-2713572fef44aa49ec323e813b06d2d9.ssl.cf2.rackcdn.com/1140x_a10-7_cTC/pittsburgh-zoo-gorilla-1681372480.jpg
+2023-05-29 16:21:09,233 - INFO - downloader - image #54 https://cdnph.upi.com/ph/st/th/7381444250950/2015/upi/e113f94e3f13ce7e262fd708f10b66e8/v1.5/8-things-you-didnt-know-about-baby-gorillas.jpg
+2023-05-29 16:21:09,824 - INFO - downloader - image #55 https://assets-fortworthbusiness-com.s3-accelerate.amazonaws.com/2022/11/baby-gorillajpg-2-scaled.jpg
+2023-05-29 16:21:10,084 - ERROR - downloader - Response status code 500, file https://npr.brightspotcdn.com/dims4/default/efcc501/2147483647/strip/true/crop/1200x739+0+124/resize/880x542!/quality/90/?url\u003dhttp%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Flegacy%2Fsites%2Fkera%2Ffiles%2F201807%2Fbaby.jpg
+2023-05-29 16:21:11,683 - INFO - downloader - image #56 https://images.thdstatic.com/productImages/31840f43-31cb-42c1-94d2-104e9c4ac138/svn/design-toscano-garden-statues-ne110088-44_600.jpg
+2023-05-29 16:21:12,344 - INFO - downloader - image #57 https://d.newsweek.com/en/full/2012821/mambie-gorilla.jpg
+2023-05-29 16:21:12,793 - INFO - downloader - image #58 https://npr.brightspotcdn.com/legacy/sites/wjct/files/201902/gandai_by_lynde_nunn__1_.jpg
+2023-05-29 16:21:14,785 - INFO - downloader - image #59 https://cloudfront-us-east-1.images.arcpublishing.com/bostonglobe/GZCMY47RIA323XUKPTLSPEPAPY.jpg
+2023-05-29 16:21:15,175 - INFO - downloader - image #60 https://cbsaustin.com/resources/media/d86faa81-97a5-4cb5-9dbf-6c50944fdf15-medium16x9_ScreenShot20230407at1.58.11PM.png
+2023-05-29 16:21:20,475 - ERROR - downloader - Exception caught when downloading file https://dl0.creation.com/articles/p150/c15079/Gorilla.jpg, error: HTTPSConnectionPool(host='dl0.creation.com', port=443): Read timed out. (read timeout=5), remaining retry times: 2
+2023-05-29 16:21:20,660 - INFO - downloader - image #61 https://dl0.creation.com/articles/p150/c15079/Gorilla.jpg
+2023-05-29 16:21:21,628 - INFO - downloader - image #62 https://i0.wp.com/sitn.hms.harvard.edu/wp-content/uploads/2021/04/Picture1.jpg
+2023-05-29 16:21:22,070 - INFO - parser - parsing result page https://www.google.com/search?q=gorilla&amp;ijn=1&amp;start=100&amp;tbs=itp%3Aphoto&amp;tbm=isch
+2023-05-29 16:21:22,321 - INFO - downloader - image #63 https://www.pbs.org/wnet/nature/files/2021/07/amy-reed-XB5E4D-Ipco-unsplash-scaled-e1627330380270.jpg
+2023-05-29 16:21:22,687 - INFO - downloader - image #64 https://images.theconversation.com/files/267521/original/file-20190404-131437-psnnwu.jpg
+2023-05-29 16:21:22,841 - INFO - parser - parsing result page https://www.google.com/search?q=gorilla&amp;ijn=2&amp;start=200&amp;tbs=itp%3Aphoto&amp;tbm=isch
+2023-05-29 16:21:23,133 - INFO - downloader - image #65 https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8yNjM3OTM0Ny9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTY5MjY4ODUxMH0.-R0AvhdriipRZSfYTpfq-CFuNPsCRhl6gd0Z9VNrA88/img.jpg
+2023-05-29 16:21:23,522 - INFO - parser - parsing result page https://www.google.com/search?q=gorilla&amp;ijn=3&amp;start=300&amp;tbs=itp%3Aphoto&amp;tbm=isch
+2023-05-29 16:21:23,593 - INFO - feeder - thread feeder-001 exit
+2023-05-29 16:21:23,930 - INFO - downloader - image #66 https://i0.wp.com/eastafricanjunglesafaris.com/wp-content/uploads/2019/08/Header-1.jpg
+2023-05-29 16:21:24,222 - INFO - parser - parsing result page https://www.google.com/search?q=gorilla&amp;ijn=4&amp;start=400&amp;tbs=itp%3Aphoto&amp;tbm=isch
+2023-05-29 16:21:24,998 - INFO - parser - parsing result page https://www.google.com/search?q=gorilla&amp;ijn=5&amp;start=500&amp;tbs=itp%3Aphoto&amp;tbm=isch
+2023-05-29 16:21:25,822 - INFO - parser - parsing result page https://www.google.com/search?q=gorilla&amp;ijn=6&amp;start=600&amp;tbs=itp%3Aphoto&amp;tbm=isch
+2023-05-29 16:21:26,593 - INFO - parser - parsing result page https://www.google.com/search?q=gorilla&amp;ijn=7&amp;start=700&amp;tbs=itp%3Aphoto&amp;tbm=isch
+2023-05-29 16:21:27,387 - INFO - parser - parsing result page https://www.google.com/search?q=gorilla&amp;ijn=8&amp;start=800&amp;tbs=itp%3Aphoto&amp;tbm=isch
+2023-05-29 16:21:28,307 - INFO - parser - parsing result page https://www.google.com/search?q=gorilla&amp;ijn=9&amp;start=900&amp;tbs=itp%3Aphoto&amp;tbm=isch
+2023-05-29 16:21:28,932 - INFO - downloader - downloader-001 is waiting for new download tasks
+2023-05-29 16:21:30,411 - INFO - parser - no more page urls for thread parser-001 to parse
+2023-05-29 16:21:30,412 - INFO - parser - thread parser-001 exit
+2023-05-29 16:21:33,934 - INFO - downloader - no more download task for thread downloader-001
+2023-05-29 16:21:33,935 - INFO - downloader - thread downloader-001 exit
+2023-05-29 16:21:34,776 - INFO - icrawler.crawler - Crawling task done!
+</pre>
+<div class="highlight">
+<pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Downloaded: </span><span class="si">{</span><span class="nb">sum</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">APE_PATH</span><span class="o">.</span><span class="n">iterdir</span><span class="p">())</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+<pre class="example">
+Downloaded: 66
+</pre>
+<p>So, even though the default maximum number of images is 1,000, it actually only pulled down 66. There are some error codes in the logger's output, but that seems like a big discrepancy. Oh, well, okay for a first try.</p>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org4e3eea0">
+<h2 id="org4e3eea0">Bison</h2>
+<div class="outline-text-2" id="text-org4e3eea0">
+<p>Looking at the output of the Ape crawl, it looks like it only used one thread per object (i.e. one <code>feeder</code>, one <code>parser</code>, and one <code>downloader</code>. Maybe I'll try and push that up and see what happens.</p>
+<div class="highlight">
+<pre><span></span><span class="n">BISON_PATH</span> <span class="o">=</span> <span class="n">OUTPUT</span><span class="o">/</span><span class="s2">"Bison"</span>
+<span class="n">storage</span><span class="p">[</span><span class="s2">"root_dir"</span><span class="p">]</span> <span class="o">=</span> <span class="n">BISON_PATH</span>
+
+<span class="n">crawler</span> <span class="o">=</span> <span class="n">GoogleImageCrawler</span><span class="p">(</span><span class="n">storage</span><span class="o">=</span><span class="n">storage</span><span class="p">,</span>
+                             <span class="n">feeder_threads</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                             <span class="n">parser_threads</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                             <span class="n">downloader_threads</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="n">filters</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s2">"photo"</span><span class="p">)</span>
+
+<span class="n">crawler</span><span class="o">.</span><span class="n">crawl</span><span class="p">(</span><span class="n">keyword</span><span class="o">=</span><span class="s2">"bison"</span><span class="p">,</span>
+              <span class="n">filters</span><span class="o">=</span><span class="n">filters</span><span class="p">,</span>
+              <span class="p">)</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Downloaded: </span><span class="si">{</span><span class="nb">sum</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">BISON_PATH</span><span class="o">.</span><span class="n">iterdir</span><span class="p">())</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+<pre class="example">
+Downloaded: 97
+</pre>
+<p>I ran this twice. The first time I got 70 files, then for this run I disconnected the VPN, which seemed to increase the file count a little, but not a lot.</p>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orge4fe6fe">
+<h2 id="orge4fe6fe">Chimpanzee</h2>
+<div class="outline-text-2" id="text-orge4fe6fe">
+<div class="highlight">
+<pre><span></span><span class="n">get_images</span><span class="p">(</span><span class="s2">"chimpanzee"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org500b309">
+<h2 id="org500b309">Cow</h2>
+<div class="outline-text-2" id="text-org500b309">
+<div class="highlight">
+<pre><span></span><span class="k">def</span> <span class="nf">get_images</span><span class="p">(</span><span class="n">keyword</span><span class="p">):</span>
+    <span class="n">PATH</span> <span class="o">=</span> <span class="n">OUTPUT</span><span class="o">/</span><span class="n">keyword</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
+    <span class="n">crawler</span> <span class="o">=</span> <span class="n">GoogleImageCrawler</span><span class="p">(</span><span class="n">storage</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">root_dir</span><span class="o">=</span><span class="n">PATH</span><span class="p">))</span>
+    <span class="n">crawler</span><span class="o">.</span><span class="n">crawl</span><span class="p">(</span><span class="n">keyword</span><span class="o">=</span><span class="n">keyword</span><span class="p">,</span>
+                  <span class="n">filters</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s2">"photo"</span><span class="p">))</span>
+    <span class="k">return</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="n">get_images</span><span class="p">(</span><span class="s2">"cow"</span><span class="p">)</span>
+</pre></div>
+<p>Despite putting <code>type=photo</code> in there, the cow output had some drawings in the images, I guess it isn't perfect.</p>
+<div class="highlight">
+<pre><span></span><span class="n">get_images</span><span class="p">(</span><span class="s2">"cow horned"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org1470f36">
+<h2 id="org1470f36">Dragon</h2>
+<div class="outline-text-2" id="text-org1470f36">
+<div class="highlight">
+<pre><span></span><span class="n">get_images</span><span class="p">(</span><span class="s2">"dragon temple statue"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org65af92c">
+<h2 id="org65af92c">Elephant</h2>
+<div class="outline-text-2" id="text-org65af92c">
+<div class="highlight">
+<pre><span></span><span class="n">get_images</span><span class="p">(</span><span class="s2">"elephant"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org01a0760">
+<h2 id="org01a0760">Frog</h2>
+<div class="outline-text-2" id="text-org01a0760">
+<div class="highlight">
+<pre><span></span><span class="n">get_images</span><span class="p">(</span><span class="s2">"frog"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgfb0e799">
+<h2 id="orgfb0e799">Goat (Horned)</h2>
+<div class="outline-text-2" id="text-orgfb0e799">
+<div class="highlight">
+<pre><span></span><span class="n">get_images</span><span class="p">(</span><span class="s2">"goat horned"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org1144fc6">
+<h2 id="org1144fc6">Hippo</h2>
+<div class="outline-text-2" id="text-org1144fc6">
+<div class="highlight">
+<pre><span></span><span class="n">get_images</span><span class="p">(</span><span class="s2">"hippopotamus"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org4e5d809">
+<h2 id="org4e5d809">Iguana</h2>
+<div class="outline-text-2" id="text-org4e5d809">
+<div class="highlight">
+<pre><span></span><span class="n">get_images</span><span class="p">(</span><span class="s2">"iguana"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org440eebb">
+<h2 id="org440eebb">Jackrabbit</h2>
+<div class="outline-text-2" id="text-org440eebb">
+<div class="highlight">
+<pre><span></span><span class="n">get_images</span><span class="p">(</span><span class="s2">"jackrabbit"</span><span class="p">)</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="n">get_images</span><span class="p">(</span><span class="s2">"antelope american"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org1d31262">
+<h2 id="org1d31262">Krampus</h2>
+<div class="outline-text-2" id="text-org1d31262">
+<div class="highlight">
+<pre><span></span><span class="n">get_images</span><span class="p">(</span><span class="s2">"krampus mask"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org4bafba7">
+<h2 id="org4bafba7">Lobster</h2>
+<div class="outline-text-2" id="text-org4bafba7">
+<div class="highlight">
+<pre><span></span><span class="n">get_images</span><span class="p">(</span><span class="s2">"lobster animal"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgd6c1466">
+<h2 id="orgd6c1466">Minotaur</h2>
+<div class="outline-text-2" id="text-orgd6c1466">
+<div class="highlight">
+<pre><span></span><span class="n">get_images</span><span class="p">(</span><span class="s2">"minotaur statue"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgd328527">
+<h2 id="orgd328527">Namahage</h2>
+<div class="outline-text-2" id="text-orgd328527">
+<div class="highlight">
+<pre><span></span><span class="n">get_images</span><span class="p">(</span><span class="s2">"namahage costume"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orga24802d">
+<h2 id="orga24802d">Octopus</h2>
+<div class="outline-text-2" id="text-orga24802d">
+<div class="highlight">
+<pre><span></span><span class="n">get_images</span><span class="p">(</span><span class="s2">"octopus ocean"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgb6d6ff8">
+<h2 id="orgb6d6ff8">Pig</h2>
+<div class="outline-text-2" id="text-orgb6d6ff8">
+<div class="highlight">
+<pre><span></span><span class="n">get_images</span><span class="p">(</span><span class="s2">"pig european adult"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org6f70664">
+<h2 id="org6f70664">Quetzacoatl</h2>
+<div class="outline-text-2" id="text-org6f70664">
+<div class="highlight">
+<pre><span></span><span class="n">get_images</span><span class="p">(</span><span class="s2">"quetzalcoatl statue"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org7648670">
+<h2 id="org7648670">Rhinoceros</h2>
+<div class="outline-text-2" id="text-org7648670">
+<div class="highlight">
+<pre><span></span><span class="n">get_images</span><span class="p">(</span><span class="s2">"rhinoceros"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgff52f08">
+<h2 id="orgff52f08">Samurai</h2>
+<div class="outline-text-2" id="text-orgff52f08">
+<div class="highlight">
+<pre><span></span><span class="n">get_images</span><span class="p">(</span><span class="s2">"samurai armor"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgf4c7b8e">
+<h2 id="orgf4c7b8e">Tortoise</h2>
+<div class="outline-text-2" id="text-orgf4c7b8e">
+<div class="highlight">
+<pre><span></span><span class="n">get_images</span><span class="p">(</span><span class="s2">"tortoise"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgf9f31e2">
+<h2 id="orgf9f31e2">Unicorn (horse)</h2>
+<div class="outline-text-2" id="text-orgf9f31e2">
+<div class="highlight">
+<pre><span></span><span class="n">get_images</span><span class="p">(</span><span class="s2">"horse"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgfd2ae75">
+<h2 id="orgfd2ae75">Vampire Fish</h2>
+<div class="outline-text-2" id="text-orgfd2ae75">
+<div class="highlight">
+<pre><span></span><span class="n">get_images</span><span class="p">(</span><span class="s2">"vamprie fish -lamprey"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgd791026">
+<h2 id="orgd791026">Wasp</h2>
+<div class="outline-text-2" id="text-orgd791026">
+<div class="highlight">
+<pre><span></span><span class="n">get_images</span><span class="p">(</span><span class="s2">"wasp"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org0f8d36a">
+<h2 id="org0f8d36a">Chicken (Rooster)</h2>
+<div class="outline-text-2" id="text-org0f8d36a">
+<div class="highlight">
+<pre><span></span><span class="n">get_images</span><span class="p">(</span><span class="s2">"rooster"</span><span class="p">)</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="n">get_images</span><span class="p">(</span><span class="s2">"x-ray specs"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org5e1209d">
+<h2 id="org5e1209d">Yak</h2>
+<div class="outline-text-2" id="text-org5e1209d">
+<div class="highlight">
+<pre><span></span><span class="n">get_images</span><span class="p">(</span><span class="s2">"yak"</span><span class="p">)</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="n">get_images</span><span class="p">(</span><span class="s2">"uncle sam hat"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org56bac3e">
+<h2 id="org56bac3e">Zebu</h2>
+<div class="outline-text-2" id="text-org56bac3e">
+<div class="highlight">
+<pre><span></span><span class="n">get_images</span><span class="p">(</span><span class="s2">"zebu"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</article>
 <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article">
 <header>
 <h1 class="p-name entry-title"><a class="u-url" href="posts/two-dimensional-noise/index.html">Two-Dimensional Noise</a></h1>
@@ -1302,7 +1923,7 @@
 </article>
 </div>
 <ul class="pager postindexpager clearfix">
-<li class="previous"><a href="index.html" rel="prev">Newer posts</a></li>
+<li class="previous"><a href="index-3.html" rel="prev">Newer posts</a></li>
 <li class="next"><a href="index-1.html" rel="next">Older posts</a></li>
 </ul>
 <script crossorigin="anonymous" integrity="sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>

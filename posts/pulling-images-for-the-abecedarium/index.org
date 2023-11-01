@@ -3,7 +3,7 @@
 .. slug: pulling-images-for-the-abecedarium
 .. date: 2023-05-25 15:20:54 UTC-07:00
 .. tags: 
-.. category: abecedarium
+.. category: Abecedarium
 .. link: 
 .. description: Pulling duckduckgo images for the abecedarium.
 .. type: text

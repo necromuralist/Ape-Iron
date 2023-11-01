@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+<head>
+<meta charset="utf-8">
+<meta content="A Validator for SliderSettings properties." name="description">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>A Validator for SliderSettings | Ape Iron</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<meta content="#5670d4" name="theme-color">
+<meta content="Nikola (getnikola.com)" name="generator">
+<link href="../../rss.xml" hreflang="en" rel="alternate" title="RSS" type="application/rss+xml">
+<link href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html" rel="canonical"><!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><!-- favicons -->
+<link href="../../apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+<link href="../../favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="../../favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="../../site.webmanifest" rel="manifest">
+<meta content="The Cloistered Monkey" name="author">
+<link href="../the-great-slidini/index.html" rel="prev" title="The Great Slidini" type="text/html">
+<meta content="Ape Iron" property="og:site_name">
+<meta content="A Validator for SliderSettings" property="og:title">
+<meta content="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html" property="og:url">
+<meta content="A Validator for SliderSettings properties." property="og:description">
+<meta content="article" property="og:type">
+<meta content="2023-10-04T16:38:40-07:00" property="article:published_time">
+<meta content="javascript" property="article:tag">
+<meta content="p5" property="article:tag">
+</head>
+<body>
+<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a> <!-- Menubar -->
+<nav class="navbar navbar-expand-md static-top mb-4 navbar-light bg-light">
+<div class="container"><!-- This keeps the margins nice -->
+ <a class="navbar-brand" href="../../"><span id="blog-title">Ape Iron</span></a> <button aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#bs-navbar" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="bs-navbar">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item"><a class="nav-link" href="../../archive.html">Archive</a></li>
+<li class="nav-item"><a class="nav-link" href="../../categories/">Tags</a></li>
+<li class="nav-item"><a class="nav-link" href="../../rss.xml">RSS feed</a></li>
+<li class="nav-item dropdown"><a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Monkey Pages</a>
+<div class="dropdown-menu"><a class="dropdown-item" href="https://necromuralist.github.io/">Cloistered Monkey</a> <a class="dropdown-item" href="https://necromuralist.github.io/Beach-Pig-Thigh/">Beach Pig Rump & Thigh</a> <a class="dropdown-item" href="https://necromuralist.github.io/Bowling-For-Data/">Bowling For Data</a> <a class="dropdown-item" href="https://necromuralist.github.io/Terribilis-Ludum/">Terribilis Ludum</a> <a class="dropdown-item" href="https://necromuralist.github.io/Neurotic-Networking/">Neurotic Networking</a> <a class="dropdown-item" href="https://necromuralist.github.io/Visions-Voices-Data/">Visions, Voices, Data</a></div>
+</li>
+</ul>
+<!-- DuckDuckGo custom search -->
+<form action="https://duckduckgo.com/" class="navbar-form pull-left" id="search" method="get" name="search"><input name="sites" type="hidden" value="https://necromuralist.github.io/Ape-Iron/"><input name="k8" type="hidden" value="#444444"><input name="k9" type="hidden" value="#D51920"><input name="kt" type="hidden" value="h"><input class="span2" maxlength="255" name="q" placeholder="Search…" type="text"><input style="visibility: hidden;display:none" type="submit" value="DuckDuckGo Search"></form>
+<!-- End of custom search -->
+<ul class="navbar-nav navbar-right">
+<li class="nav-item"><a class="nav-link" href="index.org" id="sourcelink">Source</a></li>
+</ul>
+</div>
+<!-- /.navbar-collapse --></div>
+<!-- /.container --></nav>
+<!-- End of Menubar -->
+<div class="container" id="content" role="main">
+<div class="body-content"><!--Body content-->
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article">
+<header>
+<h1 class="p-name entry-title" itemprop="headline name"><a class="u-url" href="#">A Validator for SliderSettings</a></h1>
+<div class="metadata">
+<p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">The Cloistered Monkey</span></p>
+<p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2023-10-04T16:38:40-07:00" itemprop="datePublished" title="2023-10-04 16:38">2023-10-04 16:38</time></a></p>
+<p class="sourceline"><a class="sourcelink" href="index.org">Source</a></p>
+</div>
+</header>
+<div class="e-content entry-content" itemprop="articleBody text">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="index.html#orgc8ac2a9">The Validator</a>
+<ul>
+<li><a href="index.html#org4eb0ca4">Class Declaration</a></li>
+<li><a href="index.html#org0bfc615">Is A Number</a></li>
+<li><a href="index.html#org8be7dd0">Is Set</a></li>
+<li><a href="index.html#org94d836f">Is An Integer</a></li>
+<li><a href="index.html#org1dc5d96">Is An Element's ID</a></li>
+</ul>
+</li>
+<li><a href="index.html#org0639f22">Links</a>
+<ul>
+<li><a href="index.html#org9e91b91">Related Posts</a></li>
+<li><a href="index.html#org337dd35">Javascript</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgc8ac2a9">
+<h2 id="orgc8ac2a9">The Validator</h2>
+<div class="outline-text-2" id="text-orgc8ac2a9">
+<p><img alt="Validator UML" src="validator.png"></p>
+<p>The <code>Validator</code> class checks the type of a given value and throws an Error if it's not correct. It's meant to validate settings, in particular the <a href="../slider-settings-and-validator/index.html">SliderSettings</a>.</p>
+</div>
+<div class="outline-3" id="outline-container-org4eb0ca4">
+<h3 id="org4eb0ca4">Class Declaration</h3>
+<div class="outline-text-3" id="text-org4eb0ca4">
+<p>The constructor takes the <code>document</code> as an argument to make it testable and also to make explicit where it came from. The class also defines an array <code>emptiness</code> to hold the values that I'll use to check if a variable was set.</p>
+</div>
+<div class="outline-4" id="outline-container-org8e1852f">
+<h4 id="org8e1852f">Setup JSDOM For Testing</h4>
+<div class="outline-text-4" id="text-org8e1852f">
+<p>This is the document that I'm passing to the <code>Validator</code> for testing.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">VALID_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"validator-id"</span><span class="p">;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nb">document</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">JSDOM</span><span class="p">(</span><span class="sb">`</span>
+<span class="sb">&lt;html&gt;</span>
+<span class="sb">&lt;head&gt;&lt;/head&gt;</span>
+<span class="sb">&lt;body&gt;</span>
+<span class="sb"> &lt;div id=</span><span class="si">${</span><span class="nx">VALID_ID</span><span class="si">}</span><span class="sb">&gt;&lt;/div&gt;</span>
+<span class="sb">&lt;/body&gt;</span>
+<span class="sb">&lt;/html&gt;</span>
+<span class="sb">`</span><span class="p">).</span><span class="nb">window</span><span class="p">.</span><span class="nb">document</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-orgba8ce5d">
+<h4 id="orgba8ce5d">Test And Implement The Validator Class</h4>
+<div class="outline-text-4" id="text-orgba8ce5d">
+<div class="highlight">
+<pre><span></span><span class="k">Feature:</span><span class="nf"> Validator</span>
+</pre></div>
+<p>I don't have a "Given" statement in this part of the post even though I'm implementing the <code>Given</code> javascript here because each of the Scenarios after this re-use the same <code>Given</code> but I thought it made sense to go here since it sort of tests the existence of the <code>Validator</code>.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">Given</span><span class="p">(</span><span class="s2">"a Validator"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">validate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Validator</span><span class="p">(</span><span class="nb">document</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+<p>And here's the class definition that the <code>Given</code> is using.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">Validator</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">emptiness</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="kc">undefined</span><span class="p">,</span><span class="w"> </span><span class="kc">NaN</span><span class="p">];</span>
+
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nb">document</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nb">document</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+</pre></div>
+<p>These blocks are the pattern That I'm going to follow for most of the rest of the code:</p>
+<div class="notecard" id="orgae901fc">
+<ol class="org-ol">
+<li>Feature file fragment.</li>
+<li>Test implementation to match the feature file.</li>
+<li>Code implementation that's being tested.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org0bfc615">
+<h3 id="org0bfc615">Is A Number</h3>
+<div class="outline-text-3" id="text-org0bfc615">
+<p>Our first method checks that a variable holds a number of some kind.</p>
+</div>
+<div class="outline-4" id="outline-container-orgbee91b0">
+<h4 id="orgbee91b0">The Scenarios</h4>
+<div class="outline-text-4" id="text-orgbee91b0">
+<div class="highlight">
+<pre><span></span><span class="k">Scenario:</span><span class="nf"> The expected number is a number.</span>
+
+<span class="k">Given </span><span class="nf">a Validator</span>
+<span class="k">When </span><span class="nf">is_a_number is given a number</span>
+<span class="k">Then </span><span class="nf">nothing happens.</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="c1">// Given a Validator</span>
+
+<span class="nx">When</span><span class="p">(</span><span class="s2">"is_a_number is given a number"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">validate</span><span class="p">.</span><span class="nx">is_a_number</span><span class="p">(</span><span class="s2">"good-number"</span><span class="p">,</span><span class="w"> </span><span class="nx">faker</span><span class="p">.</span><span class="nx">number</span><span class="p">.</span><span class="kr">float</span><span class="p">());</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">validate</span><span class="p">.</span><span class="nx">is_a_number</span><span class="p">(</span><span class="s2">"good-number"</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">Then</span><span class="p">(</span><span class="s2">"nothing happens."</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{});</span>
+</pre></div>
+<p>This is the case where we get what we wanted.</p>
+<div class="notecard" id="org43a0160">
+<p><b>Note:</b> I added a second check for <code>0</code> because I was originally using the <a href="https://developer.mozilla.org/en-US/docs/Glossary/Falsy"><code>falsy</code></a> check (<code>!(actual)</code>) but it turns out that 0 would be considered false if you do that so I added an explicit check to make sure I wasn't disallowing 0.</p>
+</div>
+<div class="highlight">
+<pre><span></span><span class="k">Scenario:</span><span class="nf"> The expected number isn't a number.</span>
+
+<span class="k">Given </span><span class="nf">a Validator</span>
+<span class="k">When </span><span class="nf">an expected number isn't actually a number</span>
+<span class="k">Then </span><span class="nf">it throws an Error.</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="c1">// Given a Validator</span>
+
+<span class="nx">When</span><span class="p">(</span><span class="s2">"an expected number isn't actually a number"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">bad_call</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">    </span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">validate</span><span class="p">.</span><span class="nx">is_a_number</span><span class="p">(</span><span class="s2">"bad-number"</span><span class="p">,</span><span class="w"> </span><span class="nx">faker</span><span class="p">.</span><span class="nx">lorem</span><span class="p">.</span><span class="nx">word</span><span class="p">());</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="p">});</span>
+
+<span class="nx">Then</span><span class="p">(</span><span class="s2">"it throws an Error."</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">expect</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">bad_call</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)).</span><span class="nx">to</span><span class="p">.</span><span class="k">throw</span><span class="p">(</span><span class="ne">Error</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+<p>I'm just checking for a string. I suppose there are other checks to be made, but since the <code>Validator</code> is only intended to validate my own code for mistakes, I don't suppose it really needs to be exhaustive.</p>
+<div class="highlight">
+<pre><span></span><span class="k">Scenario:</span><span class="nf"> The expected number wasn't assigned.</span>
+
+<span class="k">Given </span><span class="nf">a Validator</span>
+<span class="k">When </span><span class="nf">an expected number isn't assigned</span>
+<span class="k">Then </span><span class="nf">it throws an Error.</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="c1">// Given a Validator</span>
+
+<span class="nx">When</span><span class="p">(</span><span class="s2">"an expected number isn't assigned"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">bad_call</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">validate</span><span class="p">.</span><span class="nx">is_a_number</span><span class="p">(</span><span class="s2">"no-number"</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">);</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="p">});</span>
+
+<span class="c1">// Then it throws an error</span>
+</pre></div>
+<p>This isn't explicitly needed, I think, since it falls within "non-number" but I wrote the tests as I made the <code>SliderSettings</code> and sometimes I would get the parameters out of order (I wish javascript had named variables) so I added <code>null</code> checks for the arguments to make it more obvious.</p>
+</div>
+</div>
+<div class="outline-4" id="outline-container-org2b2e571">
+<h4 id="org2b2e571">The Method</h4>
+<div class="outline-text-4" id="text-org2b2e571">
+<p>And here's the implementation.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">is_a_number</span><span class="p">(</span><span class="nx">identifier</span><span class="p">,</span><span class="w"> </span><span class="nx">actual</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="o">!</span><span class="nx">actual</span><span class="w"> </span><span class="o">&amp;&</span><span class="w"> </span><span class="nx">actual</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">actual</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="sb">`"</span><span class="si">${</span><span class="nx">identifier</span><span class="si">}</span><span class="sb">" must be a number not "</span><span class="si">${</span><span class="nx">actual</span><span class="si">}</span><span class="sb">"`</span><span class="p">);</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="p">};</span><span class="w"> </span><span class="c1">// is_a_number</span>
+</pre></div>
+<p>The first condition checks that the number isn't <a href="https://developer.mozilla.org/en-US/docs/Glossary/Falsy">'falsy'</a>, but in javascript <code>0</code> is considered falsy so to allow zeros I added the check that it's not <code>0</code> if it's falsy. The conditional also checks if it is javascript's idea of a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN">NaN</a> using the global <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN">isNaN</a>. This function coerces values to numbers (e.g. the string "120" is not Nan) so I originally used <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN">Number.isNaN</a>, since the documentation says that it <i>doesn't</i> coerce values, but that turns out to mean that it just returns <code>false</code> without coercing the string… I suppose there's a reason for this, particularly since <a href="https://en.wikipedia.org/w/index.php?title=NaN&amp;oldid=1175348130"><code>NaN</code></a> is meant for numeric data types, so a string is "not a number" but it can't be <i>NaN</i>, but whatever the reasion, it's something to remember, although it seems odd that, in being more strict, <code>Number.isNaN</code> ends up returning the same value as the global version.</p>
+</div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org8be7dd0">
+<h3 id="org8be7dd0">Is Set</h3>
+<div class="outline-text-3" id="text-org8be7dd0">
+<p>This is for the cases where I have no particular type in the mind but a variable does need to be set to something.</p>
+</div>
+<div class="outline-4" id="outline-container-org7553193">
+<h4 id="org7553193">Scenarios</h4>
+<div class="outline-text-4" id="text-org7553193">
+<div class="highlight">
+<pre><span></span><span class="k">Scenario:</span><span class="nf"> The variable has a value set.</span>
+
+<span class="k">Given </span><span class="nf">a Validator</span>
+<span class="k">When </span><span class="nf">is_set is given a variable that's set</span>
+<span class="k">Then </span><span class="nf">nothing happens.</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="c1">// Given a Validator</span>
+
+<span class="nx">When</span><span class="p">(</span><span class="s2">"is_set is given a variable that's set"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">validate</span><span class="p">.</span><span class="nx">is_set</span><span class="p">(</span><span class="s2">"set-variable"</span><span class="p">,</span><span class="w"> </span><span class="nx">faker</span><span class="p">.</span><span class="nx">lorem</span><span class="p">.</span><span class="nx">word</span><span class="p">());</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">validate</span><span class="p">.</span><span class="nx">is_set</span><span class="p">(</span><span class="s2">"set-variable"</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">validate</span><span class="p">.</span><span class="nx">is_set</span><span class="p">(</span><span class="s2">"set-variable"</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">// Then nothing happens.</span>
+</pre></div>
+<p>Given the broad view of what I'm saying <code>is_set</code> should check for it'd be hard to check all the possibilities so this mostly checks that I didn't use a <code>falsy</code> check or something like that which would create false negatives.</p>
+<div class="highlight">
+<pre><span></span><span class="k">Scenario:</span><span class="nf"> The variable is empty.</span>
+
+<span class="k">Given </span><span class="nf">a Validator</span>
+<span class="k">When </span><span class="nf">is_set is given an empty variable</span>
+<span class="k">Then </span><span class="nf">it throws an Error.</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="c1">// Given a Validator</span>
+
+<span class="nx">When</span><span class="p">(</span><span class="s2">"is_set is given an empty variable"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">bad_call</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">validate</span><span class="p">.</span><span class="nx">is_set</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="p">});</span>
+
+<span class="c1">// Then it throws an Error.</span>
+</pre></div>
+<p>Checking for <code>null</code> should be the most common case, since I'm going to use this to validate an object and make sure it's attributes were all set.</p>
+<div class="highlight">
+<pre><span></span><span class="k">Given </span><span class="nf">a Validator</span>
+<span class="k">When </span><span class="nf">is_set is given an undefined variable</span>
+<span class="k">Then </span><span class="nf">it throws an Error.</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="c1">// Given a Validator</span>
+
+<span class="nx">When</span><span class="p">(</span><span class="s2">"is_set is given an undefined variable"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">bad_call</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">validate</span><span class="p">.</span><span class="nx">is_set</span><span class="p">(</span><span class="kc">undefined</span><span class="p">);</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="p">});</span>
+
+<span class="c1">// Then it throws an Error.</span>
+</pre></div>
+<p>I wouldn't think this would be something that needs to be checked, but since javascript just returns <code>undefined</code> instead or raising an error if you misspell a variable name, I guess it's useful.</p>
+</div>
+</div>
+<div class="outline-4" id="outline-container-org15b2278">
+<h4 id="org15b2278">The Method</h4>
+<div class="outline-text-4" id="text-org15b2278">
+<p>This checks if the value is in whatever is in the <code>emptiness</code> array, which as of now has:</p>
+<ul class="org-ul">
+<li><code>null</code></li>
+<li><code>undefined</code></li>
+<li><code>NaN</code></li>
+</ul>
+<p>I'm not sure about that last one. I think I was trying to use all the <code>falsy</code> values that weren't likely to be actual values (like 0, <code>false</code>), but now you can't use infinity either. Not that I can think of a case that I would, but maybe that'll have to be taken out later.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">is_set</span><span class="p">(</span><span class="nx">identifier</span><span class="p">,</span><span class="w"> </span><span class="nx">actual</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">emptiness</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">actual</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="sb">`"</span><span class="si">${</span><span class="nx">identifier</span><span class="si">}</span><span class="sb"> must be set, not "</span><span class="si">${</span><span class="nx">actual</span><span class="si">}</span><span class="sb">"`</span><span class="p">);</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="p">};</span><span class="w"> </span><span class="c1">//is_set</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org94d836f">
+<h3 id="org94d836f">Is An Integer</h3>
+<div class="outline-text-3" id="text-org94d836f"></div>
+<div class="outline-4" id="outline-container-org20b3eea">
+<h4 id="org20b3eea">The Scenarios</h4>
+<div class="outline-text-4" id="text-org20b3eea">
+<div class="highlight">
+<pre><span></span><span class="k">Scenario:</span><span class="nf"> The variable has an integer</span>
+
+<span class="k">Given </span><span class="nf">a Validator</span>
+<span class="k">When </span><span class="nf">is_an_integer is given a variable with an integer</span>
+<span class="k">Then </span><span class="nf">nothing happens.</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="c1">// Given a Validator</span>
+
+<span class="nx">When</span><span class="p">(</span><span class="s2">"is_an_integer is given a variable with an integer"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">validate</span><span class="p">.</span><span class="nx">is_an_integer</span><span class="p">(</span><span class="s2">"is-integer"</span><span class="p">,</span><span class="w"> </span><span class="nx">faker</span><span class="p">.</span><span class="nx">number</span><span class="p">.</span><span class="kr">int</span><span class="p">());</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">validate</span><span class="p">.</span><span class="nx">is_an_integer</span><span class="p">(</span><span class="s2">"is-integer"</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">// Then nothing happens</span>
+</pre></div>
+<p>Our happy-path case. The second check in the <code>When</code> is there to make it clearer that even though <code>1.0</code> smells like a float, <code>Number.isInteger</code> treats it like an integer.</p>
+<div class="highlight">
+<pre><span></span><span class="k">Scenario:</span><span class="nf"> The variable has a string</span>
+
+<span class="k">Given </span><span class="nf">a Validator</span>
+<span class="k">When </span><span class="nf">is_an_integer is given a string</span>
+<span class="k">Then </span><span class="nf">it throws an Error.</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="c1">// Given a Validator</span>
+
+<span class="nx">When</span><span class="p">(</span><span class="s2">"is_an_integer is given a string"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">bad_call</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">validate</span><span class="p">.</span><span class="nx">is_an_integer</span><span class="p">(</span><span class="s2">"not-integer"</span><span class="p">,</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">faker</span><span class="p">.</span><span class="nx">number</span><span class="p">.</span><span class="kr">int</span><span class="p">()</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="p">});</span>
+
+<span class="c1">// Then it throws an Error.</span>
+</pre></div>
+<p>I think this is the most likely error - it was passed a string. Interestingly, like the <code>Number.isNaN</code> function, the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger">Number.isInteger</a> function that I'm using also doesn't coerce strings so while "5" isn't not NaN, it also isn't an integer.</p>
+<div class="highlight">
+<pre><span></span><span class="k">Scenario:</span><span class="nf"> "is_an_integer" is given a float.</span>
+
+<span class="k">Given </span><span class="nf">a Validator</span>
+<span class="k">When </span><span class="nf">is_an_integer is given a float</span>
+<span class="k">Then </span><span class="nf">it throws an Error.</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="c1">// Given a Validator</span>
+
+<span class="nx">When</span><span class="p">(</span><span class="s2">"is_an_integer is given a float"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">bad_call</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">validator</span><span class="p">.</span><span class="nx">is_an_integer</span><span class="p">(</span><span class="s2">"float-not-integer"</span><span class="p">,</span><span class="w"> </span><span class="mf">5.5</span><span class="p">);</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="p">});</span>
+
+<span class="c1">// Then it throws an Error.</span>
+</pre></div>
+<p>Since I showed above that <i>5.0</i> is considered an integer I felt obliged to make sure that other floats aren't considered integers.</p>
+<div class="highlight">
+<pre><span></span><span class="k">Scenario:</span><span class="nf"> The integer variable wasn't set.</span>
+
+<span class="k">Given </span><span class="nf">a Validator</span>
+<span class="k">When </span><span class="nf">an expected integer wasn't set</span>
+<span class="k">Then </span><span class="nf">it throws an Error.</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="c1">// Given a Validator</span>
+
+<span class="nx">When</span><span class="p">(</span><span class="s2">"an expected integer wasn't set"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">bad_call</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">validate</span><span class="p">.</span><span class="nx">is_an_integer</span><span class="p">(</span><span class="s2">"no-integer"</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">);</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="p">});</span>
+
+<span class="c1">// Then it throws an Error.</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-org33f7b2b">
+<h4 id="org33f7b2b">The Method</h4>
+<div class="outline-text-4" id="text-org33f7b2b">
+<p>This is, oddly, the only built-in that I could find that does type checks (but I didn't look that hard, and I was using DuckDuckGo so I might have found something using a different search engine).</p>
+<div class="highlight">
+<pre><span></span><span class="nx">is_an_integer</span><span class="p">(</span><span class="nx">identifier</span><span class="p">,</span><span class="w"> </span><span class="nx">actual</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nb">Number</span><span class="p">.</span><span class="nx">isInteger</span><span class="p">(</span><span class="nx">actual</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="sb">`"</span><span class="si">${</span><span class="nx">identifier</span><span class="si">}</span><span class="sb">" must be an integer, not </span><span class="si">${</span><span class="nx">actual</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="p">};</span><span class="w"> </span><span class="c1">// is_an_integer</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org1dc5d96">
+<h3 id="org1dc5d96">Is An Element's ID</h3>
+<div class="outline-text-3" id="text-org1dc5d96">
+<p>This is what really started it all. I had some mysterious errors <a href="../generative-art-spiral/index.html">drawing a spiral</a> which turned out to be because I had changed a div ID in the HTML but not in the javascript. So this checks to see if there really an element with the ID. It doesn't check if it's the <b>right</b> ID, but I don't know that there's a simple way to do that anyway.</p>
+</div>
+<div class="outline-4" id="outline-container-org40b88a8">
+<h4 id="org40b88a8">The Scenarios</h4>
+<div class="outline-text-4" id="text-org40b88a8">
+<div class="highlight">
+<pre><span></span><span class="k">Scenario:</span><span class="nf"> A valid ID is given.</span>
+
+<span class="k">Given </span><span class="nf">a Validator</span>
+<span class="k">When </span><span class="nf">is_an_element_id is given a valid element ID</span>
+<span class="k">Then </span><span class="nf">nothing happens.</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="c1">// Given a Validator</span>
+
+<span class="nx">When</span><span class="p">(</span><span class="s2">"is_an_element_id is given a valid element ID"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">validate</span><span class="p">.</span><span class="nx">is_an_element_id</span><span class="p">(</span><span class="s2">"good-id"</span><span class="p">,</span><span class="w"> </span><span class="nx">VALID_ID</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">// Then nothing happens.</span>
+</pre></div>
+<p>Since I'm using JSDOM I needed to use a real ID to check if it was valid, not a random string.</p>
+<div class="highlight">
+<pre><span></span><span class="k">Scenario:</span><span class="nf"> An invalid ID is given.</span>
+
+<span class="k">Given </span><span class="nf">a Validator</span>
+<span class="k">When </span><span class="nf">is_an_element is given an invalid element ID</span>
+<span class="k">Then </span><span class="nf">it throws an Error.</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="c1">// Given a Validator</span>
+
+<span class="nx">When</span><span class="p">(</span><span class="s2">"is_an_element is given an invalid element ID"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">bad_call</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">validate</span><span class="p">.</span><span class="nx">is_an_element_id</span><span class="p">(</span><span class="s2">"bad-id"</span><span class="p">,</span><span class="w"> </span><span class="nx">VALID_ID</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"invalid"</span><span class="p">);</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="p">});</span>
+
+<span class="c1">// Then it throws an Error.</span>
+</pre></div>
+<p>Although I suppose the odds of a random string matching my <code>div</code> ID is pretty low, I thought that mangling the ID would be a better guaranty that it won't match than using <code>faker</code> to generate a string.</p>
+</div>
+</div>
+<div class="outline-4" id="outline-container-org540f713">
+<h4 id="org540f713">The Method</h4>
+<div class="outline-text-4" id="text-org540f713">
+<p>This relies on the built-in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById"><code>document.getElementById</code></a> method (well, built-in when there's a browser).</p>
+<div class="highlight">
+<pre><span></span><span class="nx">is_an_element_id</span><span class="p">(</span><span class="nx">identifier</span><span class="p">,</span><span class="w"> </span><span class="nx">actual</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">actual</span><span class="p">)</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="sb">`"</span><span class="si">${</span><span class="nx">identifier</span><span class="si">}</span><span class="sb">" isn't a valid ID - "</span><span class="si">${</span><span class="nx">actual</span><span class="si">}</span><span class="sb">"`</span><span class="p">);</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="p">};</span><span class="w"> </span><span class="c1">// is_an_id</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org0639f22">
+<h2 id="org0639f22">Links</h2>
+<div class="outline-text-2" id="text-org0639f22"></div>
+<div class="outline-3" id="outline-container-org9e91b91">
+<h3 id="org9e91b91">Related Posts</h3>
+<div class="outline-text-3" id="text-org9e91b91">
+<ul class="org-ul">
+<li><a href="../slider-settings-and-validator/index.html">Slider and Caption Settings</a></li>
+</ul>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org337dd35">
+<h3 id="org337dd35">Javascript</h3>
+<div class="outline-text-3" id="text-org337dd35">
+<ul class="org-ul">
+<li>Document: getElementById() method - Web APIs | MDN [Internet]. 2023 [cited 2023 Oct 3]. Available from: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById">https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById</a></li>
+<li>isNaN() - JavaScript | MDN [Internet]. 2023 [cited 2023 Oct 3]. Available from: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN</a></li>
+<li>NaN - JavaScript | MDN [Internet]. 2023 [cited 2023 Oct 3]. Available from: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN</a></li>
+<li>NaN. In: Wikipedia [Internet]. 2023 [cited 2023 Oct 3]. Available from: <a href="https://en.wikipedia.org/w/index.php?title=NaN&amp;oldid=1175348130">https://en.wikipedia.org/w/index.php?title=NaN&amp;oldid=1175348130</a></li>
+<li>Number.isNaN() - JavaScript | MDN [Internet]. 2023 [cited 2023 Oct 3]. Available from: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN</a></li>
+<li>Number.isInteger() - JavaScript | MDN [Internet]. 2023 [cited 2023 Oct 3]. Available from: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<aside class="postpromonav">
+<nav>
+<ul class="tags" itemprop="keywords">
+<li><a class="tag p-category" href="../../categories/javascript/index.html" rel="tag">javascript</a></li>
+<li><a class="tag p-category" href="../../categories/p5/index.html" rel="tag">p5</a></li>
+</ul>
+<ul class="pager hidden-print">
+<li class="previous"><a href="../the-great-slidini/index.html" rel="prev" title="The Great Slidini">Previous post</a></li>
+</ul>
+</nav>
+</aside>
+</article>
+<!--End of body content-->
+<footer id="footer">Scribbles by <a href="mailto:cloisteredmonkey.jmark@slmail.me">The Cloistered Monkey</a> © 2023 - Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a>
+<div id="license" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Ape-Iron</span> is licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" rel="license noopener noreferrer" style="display:inline-block;" target="_blank">CC BY-SA 4.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></div>
+</footer>
+</div>
+<script src="../../assets/js/all-nocdn.js"></script>
+<script>
+
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+</script></div>
+</body>
+</html>
