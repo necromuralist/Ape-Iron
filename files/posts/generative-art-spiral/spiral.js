@@ -10,9 +10,9 @@ const SPIRAL_ANGLE_SLIDER = "angle-slider-0a168ba9";
 const SPIRAL_RADIUS_SLIDER = "radius-slider-0a168ba9";
 const SPIRAL_CIRCLE_SLIDER = "circle-slider-0a168ba9";
 
-const SPIRAL_ANGLE_TEXT = "#angle-text-0a168ba9";
-const SPIRAL_RADIUS_TEXT = "#radius-text-0a168ba9";
-const SPIRAL_CIRCLE_TEXT = "#circle-text-0a168ba9";
+const SPIRAL_ANGLE_TEXT = "angle-text-0a168ba9";
+const SPIRAL_RADIUS_TEXT = "radius-text-0a168ba9";
+const SPIRAL_CIRCLE_TEXT = "circle-text-0a168ba9";
 
 const VALIDATOR = new Validator(document);
   

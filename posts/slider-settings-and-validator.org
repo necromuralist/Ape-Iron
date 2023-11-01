@@ -335,6 +335,8 @@ The Caption Settings are pretty much just like the Slider Settings except that t
 <<caption-check-precision>>
 
 <<caption-check-div-id>>
+
+<<caption-get-div-id>>
 #+end_src
 
 #+begin_src gherkin :tangle ../tests/cucumber-tests/test-slider-settings-and-validator/steps/caption_settings.js :exports none
@@ -362,6 +364,8 @@ The Caption Settings are pretty much just like the Slider Settings except that t
 <<caption-settings-check-precision>>
 
 <<caption-settings-check-div-id>>
+
+<<caption-settings-check-div-id-selector>>
 #+end_src
 ** The Testing
 
@@ -419,6 +423,7 @@ These are the three properties that the {{% lancelot "Slidini class" %}}the-grea
 this.label = faker.lorem.words();
 this.precision = faker.number.int();
 this.caption_div = faker.lorem.word();
+this.div_id_selector = "#" + this.caption_div;
 #+end_src
 
 Once again I'm replacing the {{% lancelot "Validator" %}}a-validator-for-slidersettings{{% /lancelot %}} methods so I can check the calls and as a side-effect the document won't get used so I don't need ~JSDOM~.
@@ -520,17 +525,48 @@ Then("it checks the caption div ID.", function() {
     )).to.be.true;  
 });
 #+end_src
+*** Does it add a pound sign to the DIV ID?
+
+The ~p5.select~ method uses CSS selectors so it needs you to put a ~#~ sign in front of the DIV ID to tell it that it's an ID.
+
+#+begin_src gherkin :noweb-ref caption-get-div-id
+Scenario: The caption DIV selector is set up
+
+Given a CaptionSettings
+When the caption DIV ID selector is retrieved
+Then the caption DIV selector has the pound sign.
+#+end_src
+
+#+begin_src js :noweb-ref caption-settings-check-div-id-selector
+When("the caption DIV ID selector is retrieved", function() {
+  this.actual_div_id_selector = this.caption_settings.div_selector;
+});
+
+Then("the caption DIV selector has the pound sign.", function() {
+  expect(this.actual_div_id_selector).to.equal(this.div_id_selector);
+});
+#+end_src
+
 ** The CaptionSettings Implementation
 
 So here's where I implemennt the class. The /label/ property is a string that gets inserted into the string that's displayed on the Label element. Maybe I should have called it something else... The /precision/ property is used to decide how many decimal places to show in the Label, and the /caption_div/ is the ID of the element where I'm going to stick the Label.
 
 #+begin_src js :noweb-ref caption-settings-class
 class CaptionSettings {
+  _div_selector = null;
+  
   constructor(label, precision, caption_div, validator) {
     this.label = label;
     this.precision = precision;
     this.caption_div = caption_div;
     this.validator = validator;
+  };
+
+  get div_selector(){
+    if (this._div_selector === null) {
+      this._div_selector = "#" + this.caption_div;
+    }
+    return this._div_selector;
   };
 
   check_rep() {
@@ -544,4 +580,8 @@ class CaptionSettings {
 ** Related Post
  - {{% doc %}}a-validator-for-slidersettings{{% /doc %}}
  - {{% doc %}}the-great-slidini{{% /doc %}}
+
+
+** References
+- id - HTML: HyperText Markup Language | MDN [Internet]. 2023 [cited 2023 Sep 14]. Available from: https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id
 

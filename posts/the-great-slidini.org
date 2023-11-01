@@ -124,7 +124,7 @@ When("the caption is gotten", function() {
 });
 
 Then("the caption is the expected one", function() {
-  expect(this.p5.select.calledWith(this.settings.caption_div)).to.be.true;
+  expect(this.p5.select.calledWith(this.settings.div_selector)).to.be.true;
   expect(this.actual_caption).to.equal(this.caption);
 });
 #+end_src
@@ -288,14 +288,13 @@ get slider() {
 
 ** The Caption
 
-
 This is the caption for the slider. It expects there to be a ~div~ that it can stick the caption into.
 
 #+begin_src js :noweb-ref slidini-get-caption
 get caption() {
   if (this._caption === null) {
     this._caption = this.p5.select(
-      this.caption_settings.caption_div);
+      this.caption_settings.div_selector);
   }
   return this._caption;
 }
@@ -313,6 +312,18 @@ update_caption() {
 } // update_caption
 #+end_src
 
-* Related Posts
+* Links
+** Related Posts
 
  - {{% doc %}}slider-settings-and-validator{{% /doc %}}
+
+** Reference
+- p5.js reference | createSlider() [Internet]. [cited 2023 Apr 25]. Available from: https://p5js.org/reference/#/p5/createSlider
+
+- p5.js reference | p5.Element [Internet]. [cited 2023 Sep 14]. Available from: https://p5js.org/reference/#/p5.Element
+
+- p5.js reference | html() [Internet]. [cited 2023 Sep 14]. Available from: https://p5js.org/reference/#/p5.Element/html
+
+- p5.js reference | parent() [Internet]. [cited 2023 Sep 14]. Available from: https://p5js.org/reference/#/p5.Element/parent
+
+- p5.js reference | select() [Internet]. [cited 2023 Sep 14]. Available from: https://p5js.org/reference/#/p5/select

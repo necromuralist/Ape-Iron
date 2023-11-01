@@ -21,11 +21,20 @@ class SliderSettings {
 
 
 class CaptionSettings {
+  _div_selector = null;
+  
   constructor(label, precision, caption_div, validator) {
     this.label = label;
     this.precision = precision;
     this.caption_div = caption_div;
     this.validator = validator;
+  };
+
+  get div_selector(){
+    if (this._div_selector === null) {
+      this._div_selector = "#" + this.caption_div;
+    }
+    return this._div_selector;
   };
 
   check_rep() {

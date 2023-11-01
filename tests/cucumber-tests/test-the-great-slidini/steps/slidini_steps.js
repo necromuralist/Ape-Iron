@@ -58,7 +58,7 @@ When("the caption is gotten", function() {
 });
 
 Then("the caption is the expected one", function() {
-  expect(this.p5.select.calledWith(this.settings.caption_div)).to.be.true;
+  expect(this.p5.select.calledWith(this.settings.div_selector)).to.be.true;
   expect(this.actual_caption).to.equal(this.caption);
 });
 

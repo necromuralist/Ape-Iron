@@ -41,7 +41,7 @@ class Slidini {
   get caption() {
     if (this._caption === null) {
       this._caption = this.p5.select(
-        this.caption_settings.caption_div);
+        this.caption_settings.div_selector);
     }
     return this._caption;
   }

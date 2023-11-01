@@ -25,6 +25,7 @@ Given("a CaptionSettings", function() {
   this.label = faker.lorem.words();
   this.precision = faker.number.int();
   this.caption_div = faker.lorem.word();
+  this.div_id_selector = "#" + this.caption_div;
 
   this.validator = new Validator({});
   
@@ -73,4 +74,12 @@ Then("it checks the caption div ID.", function() {
     CAPTION_IS.ELEMENT.caption_div).calledWith(
       "caption_div", this.caption_div
     )).to.be.true;  
+});
+
+When("the caption DIV ID selector is retrieved", function() {
+  this.actual_div_id_selector = this.caption_settings.div_selector;
+});
+
+Then("the caption DIV selector has the pound sign.", function() {
+  expect(this.actual_div_id_selector).to.equal(this.div_id_selector);
 });

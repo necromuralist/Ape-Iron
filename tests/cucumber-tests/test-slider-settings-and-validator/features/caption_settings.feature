@@ -15,3 +15,9 @@ Then it checks the label
 And it checks the precision
 
 And it checks the caption div ID.
+
+Scenario: The caption DIV selector is set up
+
+Given a CaptionSettings
+When the caption DIV ID selector is retrieved
+Then the caption DIV selector has the pound sign.
