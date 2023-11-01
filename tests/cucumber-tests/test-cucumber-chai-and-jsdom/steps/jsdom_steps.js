@@ -6,15 +6,13 @@ import { ElementGetter } from "../../../../files/posts/cucumber-chai-and-jsdom/p
 
 
 const EXPECTED_ID = "expected-div";
-const window = (new JSDOM(`<html>
+const document = (new JSDOM(`<html>
 <head></head>
 <body>
 
   <div id='${EXPECTED_ID}'></div>
 
-</body></html>`)).window;
-
-const document = window.document;
+</body></html>`)).window.document;
 
   
 /* the valid getter */

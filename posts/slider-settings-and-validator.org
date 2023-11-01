@@ -1,0 +1,587 @@
+#+BEGIN_COMMENT
+.. title: Slider and Caption Settings
+.. slug: slider-settings-and-validator
+.. date: 2023-10-02 12:48:10 UTC-07:00
+.. tags: javascript, p5
+.. category: Javascript
+.. link: 
+.. description: A Slider Settings Class and Valdator
+.. type: text
+.. status: 
+.. updated: 
+
+#+END_COMMENT
+#+OPTIONS: ^:{}
+#+TOC: headlines 2
+
+#+begin_src js :tangle ../files/javascript/slider.js :exports none
+<<slider-settings-class>>
+
+
+<<caption-settings-class>>
+
+export { SliderSettings, CaptionSettings }
+#+end_src
+
+* The Sliders Settings
+
+#+begin_src plantuml :file ../files/posts/slider-settings-and-validator/slider_settings.png :exports none
+!theme mars
+class SliderSettings {
+Number min
+Number max
+Number default_value
+Number step_size
+String slider_div
+Validator validator
+
+check_rep()
+}
+
+SliderSettings o- Validator
+#+end_src
+
+#+RESULTS:
+[[file:../files/posts/slider-settings-and-validator/slider_settings.png]]
+
+[[img-url:slider_settings.png]]
+
+The ~SliderSettings~ class holds the values for the {{% lancelot "Slidini" %}}the-great-slidini{{% /lancelot %}} class and optionally validates the values it's been given.
+
+** The Scenario
+
+#+begin_src gherkin :tangle ../tests/cucumber-tests/test-slider-settings-and-validator/features/slider_settings.feature :exports none
+<<given-a-slider-settings>>
+
+<<when-call-check-rep>>
+
+<<it-checked-min>>
+
+<<it-checked-max>>
+
+<<it-checked-default>>
+
+<<it-checked-step-size>>
+
+<<it-checked-slider-div>>
+#+end_src
+
+Since there's only one method to call and it defers everything to the {{% lancelot "Validator" %}}a-validator-for-slidersettings{{% /lancelot %}} I'm going to have one Scenario to test, but to try and make it easier to read I'm going to break up the Then-And statements within it, but I'm not going to break up the ~check_rep~ method itself so I'm not going to show the implementation under each test it satisfies, but just show the class definition in entirety after all the tests.
+
+#+begin_src gherkin :tangle ../tests/cucumber-tests/test-slider-settings-and-validator/steps/slider_settings_steps.js :exports none
+<<slider-settings-test-imports>>
+
+<<setup-slider-settings-indexes>>
+  
+<<setup-slider-settings-step>>
+
+  <<setup-slider-settings-methods>>
+
+  <<setup-slider-settings-arguments>>
+
+  <<setup-slider-settings-object>>
+
+<<call-check-rep>>
+
+<<min-check-step>>
+
+<<max-check-step>>
+
+<<default-check-step>>
+
+<<step-size-check-step>>
+
+<<check-step-label>>
+
+<<check-step-precision>>
+
+<<check-step-slider-div>>
+
+<<check-step-caption-div>>
+#+end_src
+
+** The Testing
+
+First we need to import some javascript. Even though I'm faking all the methods I'm going to use on the ~Validator~ class I used the real definition because  I was hoping to figure out how to get ~sinon~ to copy all the methods automatically, but I didn't see anything indicating it can, so maybe next time I'll just make a fake object instead.
+
+#+begin_src js :noweb-ref slider-settings-test-imports
+import { expect } from "chai";
+import { faker } from "@faker-js/faker";
+import { Given, When, Then } from "@cucumber/cucumber";
+import { fake, replace } from "sinon";
+import { SliderSettings } from "../../../../files/javascript/slider.js";
+import { Validator } from "../../../../files/javascript/validator.js";
+#+end_src
+
+Since the Validator's methods get called more than once I need to be able to know what (zero-based) index each call is - e.g. checking ~default_value~ is the third ~Validator.is_a_number~ call that the ~SliderSettings~ makes, so to retrieve the object to check that the call went as expected I need to get the ~sinon~ call object at index 2. I'm making the ~IS~ object below to hold the indices to get the calls for each property... it'll make more sense later.
+
+#+begin_src js :noweb-ref setup-slider-settings-indexes
+const IS = {
+  NUMBER: { min: 0,
+            max: 1,
+            default_value : 2,
+            step_size: 3,               
+          },
+  ELEMENT: {
+    slider_div: 0,
+  }
+};
+
+const METHODS = ["is_a_number", "is_set", "is_an_integer", "is_an_element_id"];
+#+end_src
+
+The ~METHODS~ array holds the names of all of the Validator's methods that ~check_rep~ uses so that I can replace the Validator's methods in a loop instead of doing it separately for each one.
+
+*** Setup The Slider Settings
+
+Now I'll build the ~SliderSettings~ with the faked ~Validator~ methods in the cucumber ~Given~ function. 
+
+#+begin_src gherkin :noweb-ref given-a-slider-settings
+Feature: Slider Settings
+
+Scenario: check_rep is called.
+
+Given a Slider Settings
+#+end_src
+
+Since all the methods are going to be faked, I don't need a mock ~document~ the way I did for the ~Validator~ tests.
+
+#+begin_src js :noweb-ref setup-slider-settings-step
+Given("a Slider Settings", function() {
+  this.validator = new Validator({});
+#+end_src
+
+Now that I have a ~Validator~ instance, I can replace all the methods to test with ~fakes~.
+
+#+begin_src js :noweb-ref setup-slider-settings-methods
+for (const method of METHODS) {
+    replace(this.validator, method,
+          fake.returns(null));    
+}
+#+end_src
+
+Next, I'll fake the arguments passed to the ~SliderSettings~ object and store them in the ~World~ ~this~ so that I can check that they were passed to the validator as expected in the tests.
+
+#+begin_src js :noweb-ref setup-slider-settings-arguments
+this.min = faker.number.float();
+this.max = faker.number.float();
+this.default_value = faker.number.float();
+this.step_size = faker.number.float();
+this.slider_div = faker.lorem.word();
+#+end_src
+
+Finally, I can create the ~SliderSettings~ to test.
+
+#+begin_src js :noweb-ref setup-slider-settings-object
+this.settings = new SliderSettings(this.min,
+                                   this.max,
+                                   this.default_value,
+                                   this.step_size,
+                                   this.slider_div,
+                                   this.validator);
+});
+#+end_src
+
+*** Calling Check Rep
+
+This is the only call to ~SliderSettings~ I make.
+
+#+begin_src gherkin :noweb-ref when-call-check-rep
+When check_rep is called
+#+end_src
+
+#+begin_src js :noweb-ref call-check-rep
+When("check_rep is called", function() {
+  this.settings.check_rep();
+});
+#+end_src
+
+Now the rest of the tests check all the calls to the ~Validator~ that the ~check_rep~ method made.
+
+*** Min Check
+
+The first property that ~check_rep~ validates is the ~min~.
+
+#+begin_src gherkin :noweb-ref it-checked-min
+Then it checked the min
+#+end_src
+
+#+begin_src js :noweb-ref min-check-step
+// Given a Slider Settings
+// When check_rep is called
+
+Then("it checked the min", function() {
+  expect(this.validator.is_a_number.getCall(IS.NUMBER.min).calledWith(
+    "min", this.min
+  )).to.be.true;  
+});
+#+end_src
+
+~this.validator.is_a_number~ is a faked method which allows us to check the arguments passed to it by getting the call object using ~getCall~ and checking the arguments with ~calledWith~. In this case checking ~min~ is the first call to ~is_a_number~ so I'm passing ~0~ to ~getCall~, retrieving it from the ~IS~ object I created earlier (using ~IS.NUMBER.min~).
+
+I'm not crazy about the need to pass in strings, but since they always match the variable name I guess it's easy enough to see any typos.
+
+The rest of the checks are pretty much the same thing but with different variables so I'll stop the commentary for a while.
+
+*** Max Check
+
+#+begin_src gherkin :noweb-ref it-checked-max
+And it checked the max
+#+end_src
+
+#+begin_src js :noweb-ref max-check-step
+Then("it checked the max", function() {
+  expect(this.validator.is_a_number.getCall(IS.NUMBER.max).calledWith(
+    "max", this.max
+  )).to.be.true;
+});
+#+end_src
+
+*** Default Value
+
+#+begin_src gherkin :noweb-ref it-checked-default
+And it checked the default_value
+#+end_src
+
+#+begin_src js :noweb-ref default-check-step
+Then("it checked the default_value", function() {
+  expect(this.validator.is_a_number.getCall(IS.NUMBER.default_value).calledWith(
+    "default_value", this.default_value
+  )).to.be.true;
+});
+#+end_src
+*** Step Size
+
+#+begin_src gherkin :noweb-ref it-checked-step-size
+And it checked the step_size
+#+end_src
+
+#+begin_src js :noweb-ref step-size-check-step
+Then("it checked the step_size", function() {
+  expect(this.validator.is_a_number.getCall(IS.NUMBER.step_size).calledWith(
+    "step_size", this.step_size
+  )).to.be.true;
+});
+#+end_src
+*** Slider Div
+
+#+begin_src gherkin :noweb-ref it-checked-slider-div
+And it checked the slider_div
+#+end_src
+
+#+begin_src js :noweb-ref check-step-slider-div
+Then("it checked the slider_div", function() {
+  expect(this.validator.is_an_element_id.getCall(IS.ELEMENT.slider_div).calledWith(
+    "slider_div", this.slider_div
+  )).to.be.true;
+});
+#+end_src
+
+** The Slider Settings Implementation
+
+Now that we have the tests, I'll implement the slider settings.
+
+[[img-url:slider_settings.png]]
+
+The ~SliderSettings~ holds the settings to build {{% lancelot "Slidini" %}}the-great-slidini{{% /lancelot %}}, the Slider and Caption holder. It really could be done with a plain object (which is what it was) but I decided to add a validator to make sure that I was getting all the parameters right.
+
+#+begin_src js :noweb-ref slider-settings-class
+class SliderSettings {
+  constructor(min, max, default_value, step_size,
+              slider_div,
+              validator) {
+    this.min = min;
+    this.max = max;
+    this.default_value = default_value;
+    this.step_size = step_size;
+    this.slider_div = slider_div;
+    this.confirm = validator;
+  }; // constructor
+
+  check_rep(){
+    this.confirm.is_a_number("min", this.min);
+    this.confirm.is_a_number("max", this.max);
+    this.confirm.is_a_number("default_value", this.default_value);
+    this.confirm.is_a_number("step_size", this.step_size);
+    this.confirm.is_an_element_id("slider_div", this.slider_div);
+  }; // check_rep
+}; // SliderSettings
+#+end_src
+
+* The Caption Settings
+
+#+begin_src plantuml :file ../files/posts/slider-settings-and-validator/caption_settings.png :exports none
+!theme mars
+class CaptionSettings {
+
+String label
+Integer precision
+String caption_div
+Validator validator
+
+check_rep()
+} 
+#+end_src
+
+The Caption Settings are pretty much just like the Slider Settings except that they are meant for the label that lets the user know what the current slider's value is. I used to have everything in the [[*The Sliders Settings][SliderSettings]] but it wasn't obvious what belonged to which so I broke them apart.
+
+#+begin_src gherkin :tangle ../tests/cucumber-tests/test-slider-settings-and-validator/features/caption_settings.feature :exports none
+<<given-a-caption-settings>>
+
+<<caption-check-rep>>
+
+<<caption-check-label>>
+
+<<caption-check-precision>>
+
+<<caption-check-div-id>>
+
+<<caption-get-div-id>>
+#+end_src
+
+#+begin_src gherkin :tangle ../tests/cucumber-tests/test-slider-settings-and-validator/steps/caption_settings.js :exports none
+<<caption-settings-test-imports>>
+
+<<caption-settings-indexes>>
+
+<<caption-settings-given>>
+
+  <<caption-settings-arguments>>
+
+  <<caption-settings-setup-validator>>
+
+  <<caption-settings-create>>
+});
+
+<<caption-settings-check-properties>>
+
+<<caption-settings-expected-properties>>
+
+<<caption-settings-call-check-rep>>
+
+<<caption-settings-check-label>>
+
+<<caption-settings-check-precision>>
+
+<<caption-settings-check-div-id>>
+
+<<caption-settings-check-div-id-selector>>
+#+end_src
+** The Testing
+
+This is pretty much exactly the same as the testing for the ~SliderSettings~ so I won't have a whole lot to add to it.
+
+*** Imports
+#+begin_src js :noweb-ref caption-settings-test-imports
+import { expect } from "chai";
+import { faker } from "@faker-js/faker";
+import { Given, When, Then } from "@cucumber/cucumber";
+import { fake, replace } from "sinon";
+
+import { CaptionSettings } from "../../../../files/javascript/slider.js";
+import { Validator } from "../../../../files/javascript/validator.js";
+#+end_src
+
+*** Call Object Indices
+
+#+begin_src js :noweb-ref caption-settings-indexes
+const CAPTION_IS = {
+  SET: {
+    label: 0
+  },
+  INTEGER: {
+    precision: 0
+  },
+  ELEMENT: {
+    caption_div: 0
+  }
+};
+
+const METHODS = ["is_a_number", "is_set", "is_an_integer", "is_an_element_id"];
+#+end_src
+
+*** The Feature
+
+#+begin_src gherkin :noweb-ref given-a-caption-settings
+Feature: Settings for a caption/label.
+
+Scenario: The CaptionSettings is built.
+Given a CaptionSettings
+When the properties are checked
+Then they are the expected properties.
+#+end_src
+
+*** Setting up the Caption Settings in "Given"
+
+#+begin_src js :noweb-ref caption-settings-given
+Given("a CaptionSettings", function() {
+#+end_src
+
+These are the three properties that the {{% lancelot "Slidini class" %}}the-great-slidini{{% /lancelot %}} is going to need to set up the label.
+
+#+begin_src js :noweb-ref caption-settings-arguments
+this.label = faker.lorem.words();
+this.precision = faker.number.int();
+this.caption_div = faker.lorem.word();
+this.div_id_selector = "#" + this.caption_div;
+#+end_src
+
+Once again I'm replacing the {{% lancelot "Validator" %}}a-validator-for-slidersettings{{% /lancelot %}} methods so I can check the calls and as a side-effect the document won't get used so I don't need ~JSDOM~.
+
+#+begin_src js :noweb-ref caption-settings-setup-validator
+this.validator = new Validator({});
+
+for (const method of METHODS) {
+    replace(this.validator, method,
+          fake.returns(null));    
+}
+#+end_src
+
+And finally I'll build our software to test.
+
+#+begin_src js :noweb-ref caption-settings-create
+this.caption_settings = new CaptionSettings(this.label,
+                                            this.precision,
+                                            this.caption_div,
+                                            this.validator);
+#+end_src
+
+Putting the values to check into variables seems like an unnecessary step, since you could test and retrieve the properties at the same time, but I like the use of ~When~ and it makes the lines in the ~Then~ block a little shorter.
+
+#+begin_src js :noweb-ref caption-settings-check-properties
+When("the properties are checked", function() {
+  this.actual_label = this.caption_settings.label;
+  this.actual_precision = this.caption_settings.precision;
+  this.actual_caption_div = this.caption_settings.caption_div;
+});
+#+end_src
+
+#+begin_src js :noweb-ref caption-settings-expected-properties
+Then("they are the expected properties.", function() {
+  expect(this.actual_label).to.equal(this.label);
+  expect(this.actual_precision).to.equal(this.precision);
+  expect(this.actual_caption_div).to.equal(this.caption_div);
+});
+#+end_src
+
+*** Check Rep
+
+#+begin_src gherkin :noweb-ref caption-check-rep
+Scenario: check_rep is called.
+
+Given a CaptionSettings
+When CaptionSettings.check_rep is called
+#+end_src
+
+Oddly, when I just said "When check_rep is called" instead of "When CaptionSettings.check_rep is called" cucumber ended up using the function I made for the ~SliderSettings~ tests that had the same ~When~ string. For some reason it lets them pollute each other's tests, even though they have separate feature and step files. I suppose this could make it easier to re-use test-functions, but it makes it kind of dangerous since you have to make sure that everything has a unique title.
+
+Or maybe there's something I'm missing...
+
+#+begin_src js :noweb-ref caption-settings-call-check-rep
+When("CaptionSettings.check_rep is called", function() {
+  this.caption_settings.check_rep();
+});
+
+#+end_src
+
+*** Did It Validate the Label?
+
+#+begin_src gherkin :noweb-ref caption-check-label
+Then it checks the label
+#+end_src
+
+#+begin_src js :noweb-ref caption-settings-check-label
+Then("it checks the label", function() {
+  expect(this.validator.is_set.getCall(CAPTION_IS.SET.label).calledWith(
+    "label", this.label
+  )).to.be.true;  
+});
+#+end_src
+
+*** Did It Validate the Precision?
+
+#+begin_src gherkin :noweb-ref caption-check-precision
+And it checks the precision
+#+end_src
+
+#+begin_src js :noweb-ref caption-settings-check-precision
+Then("it checks the precision", function() {
+  expect(this.validator.is_an_integer.getCall(CAPTION_IS.INTEGER.precision).calledWith(
+    "precision", this.precision
+  )).to.be.true;  
+});
+#+end_src
+
+*** Did It Validate the Div ID?
+#+begin_src gherkin :noweb-ref caption-check-div-id
+And it checks the caption div ID.
+#+end_src
+
+#+begin_src js :noweb-ref caption-settings-check-div-id
+Then("it checks the caption div ID.", function() {
+  expect(this.validator.is_an_element_id.getCall(
+    CAPTION_IS.ELEMENT.caption_div).calledWith(
+      "caption_div", this.caption_div
+    )).to.be.true;  
+});
+#+end_src
+*** Does it add a pound sign to the DIV ID?
+
+The ~p5.select~ method uses CSS selectors so it needs you to put a ~#~ sign in front of the DIV ID to tell it that it's an ID.
+
+#+begin_src gherkin :noweb-ref caption-get-div-id
+Scenario: The caption DIV selector is set up
+
+Given a CaptionSettings
+When the caption DIV ID selector is retrieved
+Then the caption DIV selector has the pound sign.
+#+end_src
+
+#+begin_src js :noweb-ref caption-settings-check-div-id-selector
+When("the caption DIV ID selector is retrieved", function() {
+  this.actual_div_id_selector = this.caption_settings.div_selector;
+});
+
+Then("the caption DIV selector has the pound sign.", function() {
+  expect(this.actual_div_id_selector).to.equal(this.div_id_selector);
+});
+#+end_src
+
+** The CaptionSettings Implementation
+
+So here's where I implemennt the class. The /label/ property is a string that gets inserted into the string that's displayed on the Label element. Maybe I should have called it something else... The /precision/ property is used to decide how many decimal places to show in the Label, and the /caption_div/ is the ID of the element where I'm going to stick the Label.
+
+#+begin_src js :noweb-ref caption-settings-class
+class CaptionSettings {
+  _div_selector = null;
+  
+  constructor(label, precision, caption_div, validator) {
+    this.label = label;
+    this.precision = precision;
+    this.caption_div = caption_div;
+    this.validator = validator;
+  };
+
+  get div_selector(){
+    if (this._div_selector === null) {
+      this._div_selector = "#" + this.caption_div;
+    }
+    return this._div_selector;
+  };
+
+  check_rep() {
+    this.validator.is_set("label", this.label);
+    this.validator.is_an_integer("precision", this.precision);
+    this.validator.is_an_element_id("caption_div", this.caption_div);
+ };
+}; // CaptionSettings
+#+end_src
+* Links
+** Related Post
+ - {{% doc %}}a-validator-for-slidersettings{{% /doc %}}
+ - {{% doc %}}the-great-slidini{{% /doc %}}
+
+
+** References
+- id - HTML: HyperText Markup Language | MDN [Internet]. 2023 [cited 2023 Sep 14]. Available from: https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id
+

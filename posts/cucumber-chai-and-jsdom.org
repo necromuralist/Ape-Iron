@@ -18,7 +18,7 @@
 
 ** The Earlier Problem
 
-In my code from another post I used [[https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById][document.getElementById]] as a check to make sure that I was passing in a valid ~div~ ID to ~p5.js~ and I decided to add some testing to make sure my validator was working as I expected. The problem was that when you run tests in ~node.js~ the ~document~ object doesn't exist. One way to get around this might be to use ~Selenium~ or some other browser-tester but that seemed like overkill.
+In my code from {{% lancelot "my spiral post" %}}generative-art-spiral{{% /lancelot %}} I used [[https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById][document.getElementById]] as a check to make sure that I was passing in a valid ~div~ ID to ~p5.js~ and I decided to add some testing to make sure my validator was working as I expected. The problem was that when you run tests in ~node.js~ the ~document~ object doesn't exist. One way to get around this might be to use ~Selenium~ or some other browser-tester but that seemed like overkill.
 
 My first idea was that I would just mock the ~document~ object using [[https://sinonjs.org/][sinon]] since this is a fairly easy thing to do in python (maybe not mocking ~document~, specifically, since that is a javascript thing, but mocking objects in a module is fairly easy) but I simply couldn't find anything that seemed to indicate that this was possible, only posts saying that ~sinon~ doesn't work that way.
 
@@ -43,7 +43,6 @@ I couldn't find anything specific about not supporting classes, but trying to se
 But then, while fiddling with the Node REPL I found that defining the ~document~ before instantiating my class made it work, so I thought, okay, why am I trying so hard to do all this patching when I can just create the ~document~ object in my tests and then create the object under test? Well, the answer to that is - "because it doesn't work". For some reason the ~document~ object existed before and after creating my test object but it was always undefined within the class method I was testing. Mysterious.
 
 In the end I ended up doing an ugly workaround which didn't really even require using ~jsdom~, although I guess using it at least validates that I'm using the right method name... Anyway, here it is.
-
 
 * The Feature File
 
@@ -113,7 +112,7 @@ The constructor shows the main change I made to get it working - instead of usin
 
 ** The Get Element Method
 
-I made a getter for the retrieved element. It probably would have been easier in this case if I didn't store it, since I could test both when the ID is correct and when it isn't with the same object, just by changing the ~this.element_id~ value, but it's a pattern I often use and it gave me the chance to test out javascripts [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields][Private Class Fields]] syntax. To be quite honest, I think using the pound sign (~#~) is kind of ugly - I prefer the underscore - but at least I know about it.
+I made a getter for the retrieved element. It probably would have been easier in this case if I didn't store it, since I could test both when the ID is correct and when it isn't with the same object, just by changing the ~this.element_id~ value, but it's a pattern I often use and it gave me the chance to test out javascript's [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields][Private Class Fields]] syntax. To be quite honest, I think using the pound sign (~#~) is kind of ugly - I prefer the underscore, and [[https://pygments.org/][Pygments]] draws red boxes around the ~#~- but at least I know about it. 
 
 The main value in using a getter here is that it can check that the element exists, since an invalid ID passed to ~getElementById~ will just return a ~null~ object rather thhan throw in error.
 
@@ -188,15 +187,13 @@ Here's where I create the ~jsdom~ object with a ~div~ that the ~ElementGetter~ c
 
 #+begin_src js :noweb-ref jsdom-setup
 const EXPECTED_ID = "expected-div";
-const window = (new JSDOM(`<html>
+const document = (new JSDOM(`<html>
 <head></head>
 <body>
 
   <div id='${EXPECTED_ID}'></div>
 
-</body></html>`)).window;
-
-const document = window.document;
+</body></html>`)).window.document;
 #+end_src
 
 ** The Tests
@@ -250,4 +247,4 @@ Then("it throws an error.", function() {
 
 * What Have We Learned?
 
-I suppose the biggest lesson is that I shouldn't have tried so hard to fake the ~document~ object as a magic global object the way it normally is used and instead just gone for an explicit argument that gets passed to the class (or function) that needs it. I also learned that ~jsdom~ is interesting but behind the ECMA standard, as were some of the other libraries I ran into in trying to solve different parts of this problem, so I have to either decide to not use ECMA 6 or not rely so much on these other libraries that don't use the current standards.
+I suppose the biggest lesson is that I shouldn't have tried so hard to fake the ~document~ object as a magic global object the way it normally is used and instead just gone for an explicit argument that gets passed to the class (or function) that needs it (which sort of follows the [[https://en.wikipedia.org/wiki/Dependency_injection?useskin=vector][Dependency Injection Pattern]]). I also learned that ~jsdom~ is interesting but behind the ECMA standard, as were some of the other libraries I ran into in trying to solve different parts of this problem, so I have to either decide to not use ECMA 6 or not rely so much on these other libraries that don't use the current standards.

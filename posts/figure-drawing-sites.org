@@ -1,0 +1,25 @@
+#+BEGIN_COMMENT
+.. title: Figure Drawing Sites
+.. slug: figure-drawing-sites
+.. date: 2023-10-03 13:59:38 UTC-07:00
+.. tags: sites,figure drawing
+.. category: Figure Drawing
+.. link: 
+.. description: Links to figure drawing sites.
+.. type: text
+.. status: 
+.. updated: 
+
+#+END_COMMENT
+
+* Figure Reference
+- [[https://www.posemaniacs.com/][Pose Maniacs]]
+- [[https://line-of-action.com/][Line of Action]]
+- [[http://reference.sketchdaily.net/en][Sketch Daily]] - no secure site, but there's a beta version that is
+- [[https://quickposes.com/en][Quick Poses]] - Oriented to Gesture Drawing (thus "Quick" Poses)
+- [[https://www.characterdesigns.com/characterdesignscom][CharacterDesigns.com]]
+- [[https://www.adorkastock.com/sketch/][AdorkaStock]]
+
+* How To Draw
+
+- [[https://www.youtube.com/playlist?list=PLtG4P3lq8RHFBeVaruf2JjyQmZJH4__Zv][Anatomy of the Human Body]] - Proko's playlist on YouTube
