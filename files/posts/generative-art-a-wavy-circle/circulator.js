@@ -1,57 +1,5 @@
-#+BEGIN_COMMENT
-.. title: Generative Art: A Wavy Circle
-.. slug: generative-art-a-wavy-circle
-.. date: 2023-11-03 14:14:32 UTC-07:00
-.. tags: p5.js,generative art
-.. category: Generative Art
-.. link: 
-.. description: Drawing a noisy circle.
-.. type: text
-.. status: 
-.. updated: 
-.. template: p5.tmpl
-#+END_COMMENT
-#+TOC: headlines 2
-
-* A Circulator
-
-{{% p5div  source="circulator.js" divid="circulator-50136a19" %}}
-
-#+begin_src plantuml :file ../files/posts/generative-art-a-wavy-circle/circulator.png :exports none
-
-!theme mars
-
-class Circulator {
-  angle_increment: Integer
-  center_x: Integer
-  center_y: Integer
-  radius: Integer
-  p5: P5 object
-
-  <<get>> to_radians: Float
-  <<get>> theta: Float
-  <<get>> theta_opposite: Float
-  <<get>> x_start: Float
-  <<get>> y_start: Float
-  <<get>> x_end: Float
-  <<get>> y_end: Float
-
-  constructor(angle_increment, center_x, center_y, radius, p5)
-  draw()
-}
-#+end_src
-
-#+begin_src js :tangle ../files/posts/generative-art-a-wavy-circle/circulator.js :exports none
 const CIRCULATOR_DIV = "circulator-50136a19";
 
-<<the-circulator>>
-
-<<some-circulator-constants>>
-  
-<<the-circulator-sketch>>
-#+end_src
-
-#+begin_src js :noweb-ref the-circulator
 class Circulator {
   _to_radians;
   
@@ -100,18 +48,14 @@ class Circulator {
     this.angle += this.angle_increment;
   }; // draw
 }; // Circulator
-#+end_src
 
-#+begin_src js :noweb-ref some-circulator-constants
 const WIDTH = 500;
 const HEIGHT = WIDTH;
 const POINT_COLOR = "RoyalBlue";
 const CENTER_X = WIDTH/2;
 const CENTER_Y = HEIGHT/2;
 const RADIUS = WIDTH/2;
-#+end_src
-
-#+begin_src js :noweb-ref the-circulator-sketch
+  
 function circulator_sketch(p5) {
   let circulator;
 
@@ -129,4 +73,3 @@ function circulator_sketch(p5) {
 }// circulator_sketch
 
 new p5(circulator_sketch, CIRCULATOR_DIV);
-#+end_src
