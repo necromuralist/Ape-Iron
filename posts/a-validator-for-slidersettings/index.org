@@ -172,7 +172,7 @@ class Validator {
   }
 #+end_src
 
-These blocks are the pattern That I'm going to follow for most of the rest of the code:
+These blocks are the pattern that I'm going to follow for most of the rest of the code:
 
 #+begin_notecard
   1. Feature file fragment.

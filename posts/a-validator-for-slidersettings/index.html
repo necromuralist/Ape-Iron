@@ -18,6 +18,7 @@
 <link href="../../site.webmanifest" rel="manifest">
 <meta content="The Cloistered Monkey" name="author">
 <link href="../the-great-slidini/index.html" rel="prev" title="The Great Slidini" type="text/html">
+<link href="../generative-art-a-wavy-circle/index.html" rel="next" title="Generative Art: A Wavy Circle" type="text/html">
 <meta content="Ape Iron" property="og:site_name">
 <meta content="A Validator for SliderSettings" property="og:title">
 <meta content="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html" property="og:url">
@@ -67,38 +68,38 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="index.html#orgc8ac2a9">The Validator</a>
+<li><a href="index.html#orgbe88229">The Validator</a>
 <ul>
-<li><a href="index.html#org4eb0ca4">Class Declaration</a></li>
-<li><a href="index.html#org0bfc615">Is A Number</a></li>
-<li><a href="index.html#org8be7dd0">Is Set</a></li>
-<li><a href="index.html#org94d836f">Is An Integer</a></li>
-<li><a href="index.html#org1dc5d96">Is An Element's ID</a></li>
+<li><a href="index.html#org30dc8cc">Class Declaration</a></li>
+<li><a href="index.html#org7921131">Is A Number</a></li>
+<li><a href="index.html#org05565b6">Is Set</a></li>
+<li><a href="index.html#org6e03353">Is An Integer</a></li>
+<li><a href="index.html#orga0a5bbb">Is An Element's ID</a></li>
 </ul>
 </li>
-<li><a href="index.html#org0639f22">Links</a>
+<li><a href="index.html#orgc25e22b">Links</a>
 <ul>
-<li><a href="index.html#org9e91b91">Related Posts</a></li>
-<li><a href="index.html#org337dd35">Javascript</a></li>
+<li><a href="index.html#orgc20e07e">Related Posts</a></li>
+<li><a href="index.html#org74505c0">Javascript</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgc8ac2a9">
-<h2 id="orgc8ac2a9">The Validator</h2>
-<div class="outline-text-2" id="text-orgc8ac2a9">
+<div class="outline-2" id="outline-container-orgbe88229">
+<h2 id="orgbe88229">The Validator</h2>
+<div class="outline-text-2" id="text-orgbe88229">
 <p><img alt="Validator UML" src="validator.png"></p>
 <p>The <code>Validator</code> class checks the type of a given value and throws an Error if it's not correct. It's meant to validate settings, in particular the <a href="../slider-settings-and-validator/index.html">SliderSettings</a>.</p>
 </div>
-<div class="outline-3" id="outline-container-org4eb0ca4">
-<h3 id="org4eb0ca4">Class Declaration</h3>
-<div class="outline-text-3" id="text-org4eb0ca4">
+<div class="outline-3" id="outline-container-org30dc8cc">
+<h3 id="org30dc8cc">Class Declaration</h3>
+<div class="outline-text-3" id="text-org30dc8cc">
 <p>The constructor takes the <code>document</code> as an argument to make it testable and also to make explicit where it came from. The class also defines an array <code>emptiness</code> to hold the values that I'll use to check if a variable was set.</p>
 </div>
-<div class="outline-4" id="outline-container-org8e1852f">
-<h4 id="org8e1852f">Setup JSDOM For Testing</h4>
-<div class="outline-text-4" id="text-org8e1852f">
+<div class="outline-4" id="outline-container-org1765f20">
+<h4 id="org1765f20">Setup JSDOM For Testing</h4>
+<div class="outline-text-4" id="text-org1765f20">
 <p>This is the document that I'm passing to the <code>Validator</code> for testing.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">VALID_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"validator-id"</span><span class="p">;</span>
@@ -114,9 +115,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgba8ce5d">
-<h4 id="orgba8ce5d">Test And Implement The Validator Class</h4>
-<div class="outline-text-4" id="text-orgba8ce5d">
+<div class="outline-4" id="outline-container-org8544a53">
+<h4 id="org8544a53">Test And Implement The Validator Class</h4>
+<div class="outline-text-4" id="text-org8544a53">
 <div class="highlight">
 <pre><span></span><span class="k">Feature:</span><span class="nf"> Validator</span>
 </pre></div>
@@ -135,8 +136,8 @@
 <span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nb">document</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">;</span>
 <span class="w">  </span><span class="p">}</span>
 </pre></div>
-<p>These blocks are the pattern That I'm going to follow for most of the rest of the code:</p>
-<div class="notecard" id="orgae901fc">
+<p>These blocks are the pattern that I'm going to follow for most of the rest of the code:</p>
+<div class="notecard" id="org482d223">
 <ol class="org-ol">
 <li>Feature file fragment.</li>
 <li>Test implementation to match the feature file.</li>
@@ -146,14 +147,14 @@
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org0bfc615">
-<h3 id="org0bfc615">Is A Number</h3>
-<div class="outline-text-3" id="text-org0bfc615">
+<div class="outline-3" id="outline-container-org7921131">
+<h3 id="org7921131">Is A Number</h3>
+<div class="outline-text-3" id="text-org7921131">
 <p>Our first method checks that a variable holds a number of some kind.</p>
 </div>
-<div class="outline-4" id="outline-container-orgbee91b0">
-<h4 id="orgbee91b0">The Scenarios</h4>
-<div class="outline-text-4" id="text-orgbee91b0">
+<div class="outline-4" id="outline-container-org589ebf3">
+<h4 id="org589ebf3">The Scenarios</h4>
+<div class="outline-text-4" id="text-org589ebf3">
 <div class="highlight">
 <pre><span></span><span class="k">Scenario:</span><span class="nf"> The expected number is a number.</span>
 
@@ -172,7 +173,7 @@
 <span class="nx">Then</span><span class="p">(</span><span class="s2">"nothing happens."</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{});</span>
 </pre></div>
 <p>This is the case where we get what we wanted.</p>
-<div class="notecard" id="org43a0160">
+<div class="notecard" id="orgbed2259">
 <p><b>Note:</b> I added a second check for <code>0</code> because I was originally using the <a href="https://developer.mozilla.org/en-US/docs/Glossary/Falsy"><code>falsy</code></a> check (<code>!(actual)</code>) but it turns out that 0 would be considered false if you do that so I added an explicit check to make sure I wasn't disallowing 0.</p>
 </div>
 <div class="highlight">
@@ -217,9 +218,9 @@
 <p>This isn't explicitly needed, I think, since it falls within "non-number" but I wrote the tests as I made the <code>SliderSettings</code> and sometimes I would get the parameters out of order (I wish javascript had named variables) so I added <code>null</code> checks for the arguments to make it more obvious.</p>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org2b2e571">
-<h4 id="org2b2e571">The Method</h4>
-<div class="outline-text-4" id="text-org2b2e571">
+<div class="outline-4" id="outline-container-org4536eda">
+<h4 id="org4536eda">The Method</h4>
+<div class="outline-text-4" id="text-org4536eda">
 <p>And here's the implementation.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">is_a_number</span><span class="p">(</span><span class="nx">identifier</span><span class="p">,</span><span class="w"> </span><span class="nx">actual</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -232,14 +233,14 @@
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org8be7dd0">
-<h3 id="org8be7dd0">Is Set</h3>
-<div class="outline-text-3" id="text-org8be7dd0">
+<div class="outline-3" id="outline-container-org05565b6">
+<h3 id="org05565b6">Is Set</h3>
+<div class="outline-text-3" id="text-org05565b6">
 <p>This is for the cases where I have no particular type in the mind but a variable does need to be set to something.</p>
 </div>
-<div class="outline-4" id="outline-container-org7553193">
-<h4 id="org7553193">Scenarios</h4>
-<div class="outline-text-4" id="text-org7553193">
+<div class="outline-4" id="outline-container-org51ce7a4">
+<h4 id="org51ce7a4">Scenarios</h4>
+<div class="outline-text-4" id="text-org51ce7a4">
 <div class="highlight">
 <pre><span></span><span class="k">Scenario:</span><span class="nf"> The variable has a value set.</span>
 
@@ -297,9 +298,9 @@
 <p>I wouldn't think this would be something that needs to be checked, but since javascript just returns <code>undefined</code> instead or raising an error if you misspell a variable name, I guess it's useful.</p>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org15b2278">
-<h4 id="org15b2278">The Method</h4>
-<div class="outline-text-4" id="text-org15b2278">
+<div class="outline-4" id="outline-container-org2ff787d">
+<h4 id="org2ff787d">The Method</h4>
+<div class="outline-text-4" id="text-org2ff787d">
 <p>This checks if the value is in whatever is in the <code>emptiness</code> array, which as of now has:</p>
 <ul class="org-ul">
 <li><code>null</code></li>
@@ -317,12 +318,12 @@
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org94d836f">
-<h3 id="org94d836f">Is An Integer</h3>
-<div class="outline-text-3" id="text-org94d836f"></div>
-<div class="outline-4" id="outline-container-org20b3eea">
-<h4 id="org20b3eea">The Scenarios</h4>
-<div class="outline-text-4" id="text-org20b3eea">
+<div class="outline-3" id="outline-container-org6e03353">
+<h3 id="org6e03353">Is An Integer</h3>
+<div class="outline-text-3" id="text-org6e03353"></div>
+<div class="outline-4" id="outline-container-org40ca033">
+<h4 id="org40ca033">The Scenarios</h4>
+<div class="outline-text-4" id="text-org40ca033">
 <div class="highlight">
 <pre><span></span><span class="k">Scenario:</span><span class="nf"> The variable has an integer</span>
 
@@ -399,9 +400,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org33f7b2b">
-<h4 id="org33f7b2b">The Method</h4>
-<div class="outline-text-4" id="text-org33f7b2b">
+<div class="outline-4" id="outline-container-orgfdcc70d">
+<h4 id="orgfdcc70d">The Method</h4>
+<div class="outline-text-4" id="text-orgfdcc70d">
 <p>This is, oddly, the only built-in that I could find that does type checks (but I didn't look that hard, and I was using DuckDuckGo so I might have found something using a different search engine).</p>
 <div class="highlight">
 <pre><span></span><span class="nx">is_an_integer</span><span class="p">(</span><span class="nx">identifier</span><span class="p">,</span><span class="w"> </span><span class="nx">actual</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -413,14 +414,14 @@
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org1dc5d96">
-<h3 id="org1dc5d96">Is An Element's ID</h3>
-<div class="outline-text-3" id="text-org1dc5d96">
+<div class="outline-3" id="outline-container-orga0a5bbb">
+<h3 id="orga0a5bbb">Is An Element's ID</h3>
+<div class="outline-text-3" id="text-orga0a5bbb">
 <p>This is what really started it all. I had some mysterious errors <a href="../generative-art-spiral/index.html">drawing a spiral</a> which turned out to be because I had changed a div ID in the HTML but not in the javascript. So this checks to see if there really an element with the ID. It doesn't check if it's the <b>right</b> ID, but I don't know that there's a simple way to do that anyway.</p>
 </div>
-<div class="outline-4" id="outline-container-org40b88a8">
-<h4 id="org40b88a8">The Scenarios</h4>
-<div class="outline-text-4" id="text-org40b88a8">
+<div class="outline-4" id="outline-container-orgd078a9a">
+<h4 id="orgd078a9a">The Scenarios</h4>
+<div class="outline-text-4" id="text-orgd078a9a">
 <div class="highlight">
 <pre><span></span><span class="k">Scenario:</span><span class="nf"> A valid ID is given.</span>
 
@@ -459,9 +460,9 @@
 <p>Although I suppose the odds of a random string matching my <code>div</code> ID is pretty low, I thought that mangling the ID would be a better guaranty that it won't match than using <code>faker</code> to generate a string.</p>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org540f713">
-<h4 id="org540f713">The Method</h4>
-<div class="outline-text-4" id="text-org540f713">
+<div class="outline-4" id="outline-container-orga21a349">
+<h4 id="orga21a349">The Method</h4>
+<div class="outline-text-4" id="text-orga21a349">
 <p>This relies on the built-in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById"><code>document.getElementById</code></a> method (well, built-in when there's a browser).</p>
 <div class="highlight">
 <pre><span></span><span class="nx">is_an_element_id</span><span class="p">(</span><span class="nx">identifier</span><span class="p">,</span><span class="w"> </span><span class="nx">actual</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -474,20 +475,20 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org0639f22">
-<h2 id="org0639f22">Links</h2>
-<div class="outline-text-2" id="text-org0639f22"></div>
-<div class="outline-3" id="outline-container-org9e91b91">
-<h3 id="org9e91b91">Related Posts</h3>
-<div class="outline-text-3" id="text-org9e91b91">
+<div class="outline-2" id="outline-container-orgc25e22b">
+<h2 id="orgc25e22b">Links</h2>
+<div class="outline-text-2" id="text-orgc25e22b"></div>
+<div class="outline-3" id="outline-container-orgc20e07e">
+<h3 id="orgc20e07e">Related Posts</h3>
+<div class="outline-text-3" id="text-orgc20e07e">
 <ul class="org-ul">
 <li><a href="../slider-settings-and-validator/index.html">Slider and Caption Settings</a></li>
 </ul>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org337dd35">
-<h3 id="org337dd35">Javascript</h3>
-<div class="outline-text-3" id="text-org337dd35">
+<div class="outline-3" id="outline-container-org74505c0">
+<h3 id="org74505c0">Javascript</h3>
+<div class="outline-text-3" id="text-org74505c0">
 <ul class="org-ul">
 <li>Document: getElementById() method - Web APIs | MDN [Internet]. 2023 [cited 2023 Oct 3]. Available from: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById">https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById</a></li>
 <li>isNaN() - JavaScript | MDN [Internet]. 2023 [cited 2023 Oct 3]. Available from: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN</a></li>
@@ -508,6 +509,7 @@
 </ul>
 <ul class="pager hidden-print">
 <li class="previous"><a href="../the-great-slidini/index.html" rel="prev" title="The Great Slidini">Previous post</a></li>
+<li class="next"><a href="../generative-art-a-wavy-circle/index.html" rel="next" title="Generative Art: A Wavy Circle">Next post</a></li>
 </ul>
 </nav>
 </aside>

@@ -5,32 +5,32 @@
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"&gt;&lt;/a&gt;&lt;/p&gt; 
-</copyright><lastBuildDate>Wed, 01 Nov 2023 02:31:58 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>A Validator for SliderSettings</title><link>https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
+</copyright><lastBuildDate>Fri, 17 Nov 2023 00:04:42 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>A Validator for SliderSettings</title><link>https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#orgc8ac2a9"&gt;The Validator&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#orgbe88229"&gt;The Validator&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#org4eb0ca4"&gt;Class Declaration&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#org0bfc615"&gt;Is A Number&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#org8be7dd0"&gt;Is Set&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#org94d836f"&gt;Is An Integer&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#org1dc5d96"&gt;Is An Element's ID&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#org30dc8cc"&gt;Class Declaration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#org7921131"&gt;Is A Number&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#org05565b6"&gt;Is Set&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#org6e03353"&gt;Is An Integer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#orga0a5bbb"&gt;Is An Element's ID&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#org0639f22"&gt;Links&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#orgc25e22b"&gt;Links&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#org9e91b91"&gt;Related Posts&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#org337dd35"&gt;Javascript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#orgc20e07e"&gt;Related Posts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#org74505c0"&gt;Javascript&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgc8ac2a9" class="outline-2"&gt;
-&lt;h2 id="orgc8ac2a9"&gt;The Validator&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgc8ac2a9"&gt;
+&lt;div id="outline-container-orgbe88229" class="outline-2"&gt;
+&lt;h2 id="orgbe88229"&gt;The Validator&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgbe88229"&gt;
 &lt;p&gt;
 &lt;img src="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/validator.png" alt="Validator UML"&gt;
 &lt;/p&gt;
@@ -40,17 +40,17 @@ The &lt;code&gt;Validator&lt;/code&gt; class checks the type of a given value an
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org4eb0ca4" class="outline-3"&gt;
-&lt;h3 id="org4eb0ca4"&gt;Class Declaration&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org4eb0ca4"&gt;
+&lt;div id="outline-container-org30dc8cc" class="outline-3"&gt;
+&lt;h3 id="org30dc8cc"&gt;Class Declaration&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org30dc8cc"&gt;
 &lt;p&gt;
 The constructor takes the &lt;code&gt;document&lt;/code&gt; as an argument to make it testable and also to make explicit where it came from. The class also defines an array &lt;code&gt;emptiness&lt;/code&gt; to hold the values that I'll use to check if a variable was set.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org8e1852f" class="outline-4"&gt;
-&lt;h4 id="org8e1852f"&gt;Setup JSDOM For Testing&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org8e1852f"&gt;
+&lt;div id="outline-container-org1765f20" class="outline-4"&gt;
+&lt;h4 id="org1765f20"&gt;Setup JSDOM For Testing&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org1765f20"&gt;
 &lt;p&gt;
 This is the document that I'm passing to the &lt;code&gt;Validator&lt;/code&gt; for testing.
 &lt;/p&gt;
@@ -69,9 +69,9 @@ This is the document that I'm passing to the &lt;code&gt;Validator&lt;/code&gt; 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgba8ce5d" class="outline-4"&gt;
-&lt;h4 id="orgba8ce5d"&gt;Test And Implement The Validator Class&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgba8ce5d"&gt;
+&lt;div id="outline-container-org8544a53" class="outline-4"&gt;
+&lt;h4 id="org8544a53"&gt;Test And Implement The Validator Class&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org8544a53"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;Feature:&lt;/span&gt;&lt;span class="nf"&gt; Validator&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -97,10 +97,10 @@ And here's the class definition that the &lt;code&gt;Given&lt;/code&gt; is using
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;
-These blocks are the pattern That I'm going to follow for most of the rest of the code:
+These blocks are the pattern that I'm going to follow for most of the rest of the code:
 &lt;/p&gt;
 
-&lt;div class="notecard" id="orgae901fc"&gt;
+&lt;div class="notecard" id="org482d223"&gt;
 &lt;ol class="org-ol"&gt;
 &lt;li&gt;Feature file fragment.&lt;/li&gt;
 &lt;li&gt;Test implementation to match the feature file.&lt;/li&gt;
@@ -112,17 +112,17 @@ These blocks are the pattern That I'm going to follow for most of the rest of th
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org0bfc615" class="outline-3"&gt;
-&lt;h3 id="org0bfc615"&gt;Is A Number&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org0bfc615"&gt;
+&lt;div id="outline-container-org7921131" class="outline-3"&gt;
+&lt;h3 id="org7921131"&gt;Is A Number&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org7921131"&gt;
 &lt;p&gt;
 Our first method checks that a variable holds a number of some kind.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgbee91b0" class="outline-4"&gt;
-&lt;h4 id="orgbee91b0"&gt;The Scenarios&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgbee91b0"&gt;
+&lt;div id="outline-container-org589ebf3" class="outline-4"&gt;
+&lt;h4 id="org589ebf3"&gt;The Scenarios&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org589ebf3"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;Scenario:&lt;/span&gt;&lt;span class="nf"&gt; The expected number is a number.&lt;/span&gt;
 
 &lt;span class="k"&gt;Given &lt;/span&gt;&lt;span class="nf"&gt;a Validator&lt;/span&gt;
@@ -144,7 +144,7 @@ Our first method checks that a variable holds a number of some kind.
 This is the case where we get what we wanted.
 &lt;/p&gt;
 
-&lt;div class="notecard" id="org43a0160"&gt;
+&lt;div class="notecard" id="orgbed2259"&gt;
 &lt;p&gt;
 &lt;b&gt;&lt;b&gt;Note:&lt;/b&gt;&lt;/b&gt; I added a second check for &lt;code&gt;0&lt;/code&gt; because I was originally using the &lt;a href="https://developer.mozilla.org/en-US/docs/Glossary/Falsy"&gt;&lt;code&gt;falsy&lt;/code&gt;&lt;/a&gt; check (&lt;code&gt;!(actual)&lt;/code&gt;) but it turns out that 0 would be considered false if you do that so I added an explicit check to make sure I wasn't disallowing 0.
 &lt;/p&gt;
@@ -200,9 +200,9 @@ This isn't explicitly needed, I think, since it falls within "non-number" but I 
 &lt;/div&gt;
 
 
-&lt;div id="outline-container-org2b2e571" class="outline-4"&gt;
-&lt;h4 id="org2b2e571"&gt;The Method&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org2b2e571"&gt;
+&lt;div id="outline-container-org4536eda" class="outline-4"&gt;
+&lt;h4 id="org4536eda"&gt;The Method&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org4536eda"&gt;
 &lt;p&gt;
 And here's the implementation.
 &lt;/p&gt;
@@ -221,17 +221,17 @@ The first condition checks that the number isn't &lt;a href="https://developer.m
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org8be7dd0" class="outline-3"&gt;
-&lt;h3 id="org8be7dd0"&gt;Is Set&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org8be7dd0"&gt;
+&lt;div id="outline-container-org05565b6" class="outline-3"&gt;
+&lt;h3 id="org05565b6"&gt;Is Set&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org05565b6"&gt;
 &lt;p&gt;
 This is for the cases where I have no particular type in the mind but a variable does need to be set to something.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org7553193" class="outline-4"&gt;
-&lt;h4 id="org7553193"&gt;Scenarios&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org7553193"&gt;
+&lt;div id="outline-container-org51ce7a4" class="outline-4"&gt;
+&lt;h4 id="org51ce7a4"&gt;Scenarios&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org51ce7a4"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;Scenario:&lt;/span&gt;&lt;span class="nf"&gt; The variable has a value set.&lt;/span&gt;
 
 &lt;span class="k"&gt;Given &lt;/span&gt;&lt;span class="nf"&gt;a Validator&lt;/span&gt;
@@ -298,9 +298,9 @@ I wouldn't think this would be something that needs to be checked, but since jav
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org15b2278" class="outline-4"&gt;
-&lt;h4 id="org15b2278"&gt;The Method&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org15b2278"&gt;
+&lt;div id="outline-container-org2ff787d" class="outline-4"&gt;
+&lt;h4 id="org2ff787d"&gt;The Method&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org2ff787d"&gt;
 &lt;p&gt;
 This checks if the value is in whatever is in the &lt;code&gt;emptiness&lt;/code&gt; array, which as of now has:
 &lt;/p&gt;
@@ -325,13 +325,13 @@ I'm not sure about that last one. I think I was trying to use all the &lt;code&g
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org94d836f" class="outline-3"&gt;
-&lt;h3 id="org94d836f"&gt;Is An Integer&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org94d836f"&gt;
+&lt;div id="outline-container-org6e03353" class="outline-3"&gt;
+&lt;h3 id="org6e03353"&gt;Is An Integer&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org6e03353"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org20b3eea" class="outline-4"&gt;
-&lt;h4 id="org20b3eea"&gt;The Scenarios&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org20b3eea"&gt;
+&lt;div id="outline-container-org40ca033" class="outline-4"&gt;
+&lt;h4 id="org40ca033"&gt;The Scenarios&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org40ca033"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;Scenario:&lt;/span&gt;&lt;span class="nf"&gt; The variable has an integer&lt;/span&gt;
 
 &lt;span class="k"&gt;Given &lt;/span&gt;&lt;span class="nf"&gt;a Validator&lt;/span&gt;
@@ -417,9 +417,9 @@ Since I showed above that &lt;i&gt;5.0&lt;/i&gt; is considered an integer I felt
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org33f7b2b" class="outline-4"&gt;
-&lt;h4 id="org33f7b2b"&gt;The Method&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org33f7b2b"&gt;
+&lt;div id="outline-container-orgfdcc70d" class="outline-4"&gt;
+&lt;h4 id="orgfdcc70d"&gt;The Method&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgfdcc70d"&gt;
 &lt;p&gt;
 This is, oddly, the only built-in that I could find that does type checks (but I didn't look that hard, and I was using DuckDuckGo so I might have found something using a different search engine).
 &lt;/p&gt;
@@ -434,17 +434,17 @@ This is, oddly, the only built-in that I could find that does type checks (but I
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org1dc5d96" class="outline-3"&gt;
-&lt;h3 id="org1dc5d96"&gt;Is An Element's ID&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org1dc5d96"&gt;
+&lt;div id="outline-container-orga0a5bbb" class="outline-3"&gt;
+&lt;h3 id="orga0a5bbb"&gt;Is An Element's ID&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orga0a5bbb"&gt;
 &lt;p&gt;
 This is what really started it all. I had some mysterious errors &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-spiral/index.html"&gt;drawing a spiral&lt;/a&gt; which turned out to be because I had changed a div ID in the HTML but not in the javascript. So this checks to see if there really an element with the ID. It doesn't check if it's the &lt;b&gt;right&lt;/b&gt; ID, but I don't know that there's a simple way to do that anyway.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org40b88a8" class="outline-4"&gt;
-&lt;h4 id="org40b88a8"&gt;The Scenarios&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org40b88a8"&gt;
+&lt;div id="outline-container-orgd078a9a" class="outline-4"&gt;
+&lt;h4 id="orgd078a9a"&gt;The Scenarios&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgd078a9a"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;Scenario:&lt;/span&gt;&lt;span class="nf"&gt; A valid ID is given.&lt;/span&gt;
 
 &lt;span class="k"&gt;Given &lt;/span&gt;&lt;span class="nf"&gt;a Validator&lt;/span&gt;
@@ -489,9 +489,9 @@ Although I suppose the odds of a random string matching my &lt;code&gt;div&lt;/c
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org540f713" class="outline-4"&gt;
-&lt;h4 id="org540f713"&gt;The Method&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org540f713"&gt;
+&lt;div id="outline-container-orga21a349" class="outline-4"&gt;
+&lt;h4 id="orga21a349"&gt;The Method&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orga21a349"&gt;
 &lt;p&gt;
 This relies on the built-in &lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById"&gt;&lt;code&gt;document.getElementById&lt;/code&gt;&lt;/a&gt; method (well, built-in when there's a browser).
 &lt;/p&gt;
@@ -506,22 +506,22 @@ This relies on the built-in &lt;a href="https://developer.mozilla.org/en-US/docs
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org0639f22" class="outline-2"&gt;
-&lt;h2 id="org0639f22"&gt;Links&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org0639f22"&gt;
+&lt;div id="outline-container-orgc25e22b" class="outline-2"&gt;
+&lt;h2 id="orgc25e22b"&gt;Links&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgc25e22b"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org9e91b91" class="outline-3"&gt;
-&lt;h3 id="org9e91b91"&gt;Related Posts&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org9e91b91"&gt;
+&lt;div id="outline-container-orgc20e07e" class="outline-3"&gt;
+&lt;h3 id="orgc20e07e"&gt;Related Posts&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgc20e07e"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/slider-settings-and-validator/index.html"&gt;Slider and Caption Settings&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org337dd35" class="outline-3"&gt;
-&lt;h3 id="org337dd35"&gt;Javascript&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org337dd35"&gt;
+&lt;div id="outline-container-org74505c0" class="outline-3"&gt;
+&lt;h3 id="org74505c0"&gt;Javascript&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org74505c0"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;Document: getElementById() method - Web APIs | MDN [Internet]. 2023 [cited 2023 Oct 3]. Available from: &lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById"&gt;https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById&lt;/a&gt;&lt;/li&gt;
 

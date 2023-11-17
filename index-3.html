@@ -19,6 +19,7 @@
 <link href="favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
 <link href="site.webmanifest" rel="manifest">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
 </head>
 <body>
 <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a> <!-- Menubar -->
@@ -45,6 +46,751 @@
 <div class="container" id="content" role="main">
 <div class="body-content"><!--Body content-->
 <div class="postindex">
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article">
+<header>
+<h1 class="p-name entry-title"><a class="u-url" href="posts/bdd-testing-p5/index.html">Testing P5 with Mocha and Chai</a></h1>
+<div class="metadata">
+<p class="byline author vcard"><span class="byline-name fn" itemprop="author">The Cloistered Monkey</span></p>
+<p class="dateline"><a href="posts/bdd-testing-p5/index.html" rel="bookmark"><time class="published dt-published" datetime="2023-06-09T14:03:10-07:00" itemprop="datePublished" title="2023-06-09 14:03">2023-06-09 14:03</time></a></p>
+</div>
+</header>
+<div class="p-summary entry-summary">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="posts/bdd-testing-p5/index.html#org9f23ceb">What This Is</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#org1d7af88">Setting Up the Tests</a>
+<ul>
+<li><a href="posts/bdd-testing-p5/index.html#orgb76eb53">Running the Tests</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#orgfe4c71e">Writing the Test File</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#org0528559">Import Chai and Sinon</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#org54e3431">Import the Color Increaser Class</a></li>
+</ul>
+</li>
+<li><a href="posts/bdd-testing-p5/index.html#orgba04fd1">The Whole Code Module</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#org75fc0b3">Channel Constants</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#org620ff89">Testing and Implementing the Color Increaser</a>
+<ul>
+<li><a href="posts/bdd-testing-p5/index.html#orgf9c18b6">Mock Color</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#org480b7c1">Setting Up the Tests</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#orgd208906">Does the ColorIncreaser Exist?</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#org62890ee">The ColorIncreaser Class</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#orge61d849">Does it take an increment amount?</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#orgd8645e6">Does it take a color?</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#org6ff82ca">The Increaser</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#orge60dd64">Does it wrap red back to 255 when it hits 256?</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#org66bbace">Does Green Wrap Too?</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#org8c7603b">Does Blue Wrap Too?</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#orgec0168d">The Next Method</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#orga4ade0e">Does next return the color?</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#orgac1c90c">Export the Color Increaser</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#orgb6ca543">Running The tests</a></li>
+</ul>
+</li>
+<li><a href="posts/bdd-testing-p5/index.html#org31bd88c">The Sketch</a>
+<ul>
+<li><a href="posts/bdd-testing-p5/index.html#org675ec96">The Sketch Function</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#org49bce0f">The <code>setup</code> Function</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#orgd6314ac">The <code>draw</code> Function</a></li>
+</ul>
+</li>
+<li><a href="posts/bdd-testing-p5/index.html#orgfd685f1">The End</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#org3d8b7f5">Sources</a></li>
+</ul>
+</div>
+</div>
+<p>
+<script src="posts/bdd-testing-p5/color-increaser.js"></script>
+<script src="posts/bdd-testing-p5/sketch.js"></script></p>
+<div class="p5js" id="6a5fb18a-bdd-sketch"></div>
+<div class="outline-2" id="outline-container-org9f23ceb">
+<h2 id="org9f23ceb">What This Is</h2>
+<div class="outline-text-2" id="text-org9f23ceb">
+<p>This is a walk-through of the <a href="https://p5js.org/learn/tdd.html">test-driven development example</a> on the <a href="https://p5js.org/">p5js site</a>. The color changing square above is created by exhaustively stepping through the RGB values for a p5 <a href="https://p5js.org/reference/#/p5.Color">color</a>. The site documentation doesn't seem to tell you the name of the color array attribute so you can access it, instead it tells you to use setter methods, but the tutorial indicates that the array is stored as an attribute of the color object named <code>levels</code> so we'll be working with that to change the colors.</p>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org1d7af88">
+<h2 id="org1d7af88">Setting Up the Tests</h2>
+<div class="outline-text-2" id="text-org1d7af88"></div>
+<div class="outline-3" id="outline-container-orgb76eb53">
+<h3 id="orgb76eb53">Running the Tests</h3>
+<div class="outline-text-3" id="text-orgb76eb53">
+<p>To run the tests I'll use three things:</p>
+<ul class="org-ul">
+<li><a href="https://mochajs.org/">mocha</a>: the framework to define the tests</li>
+<li><a href="https://nodemon.io/">nodemon</a>: a program that watches our code and re-runs mocha if something changes</li>
+<li><a href="https://docs.npmjs.com/">npm</a>: the node-package-manager which will run nodemon to run mocha</li>
+</ul>
+<p><code>npm</code> comes with and works with <a href="https://nodejs.dev/en/">node</a> so I guess we really need four things.</p>
+<p>To run the tests I created a <code>package.json</code> file which points to the folder with the test code in it (or any folder next to the <code>package.json</code> file whose name starts with <code>test</code>).</p>
+<div class="highlight">
+<pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="s2">"scripts"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">"test"</span><span class="o">:</span><span class="w"> </span><span class="s2">"nodemon --watch . --exec 'mocha ./test* || true'"</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<p>Weirdly, the mocha <a href="https://mochajs.org/#getting-started">Getting Started</a> documentation has an example <code>package.json</code> snippet to run <code>mocha</code> which doesn't put curly braces outside of the "scripts" attribute, but this will cause <code>npm</code> to throw an error saying that it isn't valid JSON. Maybe they figure you'd just know it. Or maybe they expect that you'd install <code>mocha</code> locally so there'd be an existing <code>package.json</code> that you just have to edit. Anyway, to run the tests I go into the folder above the test-folder and run <code>npm</code> like this:</p>
+<div class="highlight">
+<pre><span></span>npm <span class="k">test</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orgfe4c71e">
+<h3 id="orgfe4c71e">Writing the Test File</h3>
+<div class="outline-text-3" id="text-orgfe4c71e"></div>
+<div class="outline-4" id="outline-container-orgbd06e5f">
+<h4 id="orgbd06e5f">Put It In Strict Mode</h4>
+<div class="outline-text-4" id="text-orgbd06e5f">
+<p>Javascript can be pretty lenient about letting what might be considered mistakes pass through without raising an error. I'll put the test-code into <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">Strict Mode</a>, making our mistakes more evident, hopefully, by putting this line at the top of the <code>test.js</code> file:</p>
+<div class="highlight">
+<pre><span></span><span class="s2">"use strict"</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org0528559">
+<h3 id="org0528559">Import Chai and Sinon</h3>
+<div class="outline-text-3" id="text-org0528559">
+<p>I'm going to use the <a href="https://en.wikipedia.org/wiki/Behavior-driven_development?useskin=vector">Behavior-Driven Development</a> (BDD) version of <a href="https://www.chaijs.com/api/bdd/">Chai</a> to make our assertions about what we expect the code to be doing.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">expect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">"chai"</span><span class="p">).</span><span class="nx">expect</span><span class="p">;</span>
+</pre></div>
+<p>I'm also going to stub some methods using <a href="https://sinonjs.org/">sinon</a>.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">sinon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">"sinon"</span><span class="p">);</span>
+</pre></div>
+<p><b>Note:</b> I originally had the <code>ColorIncreaser</code> class that I'm going to test in the same file as the sketch which caused an error because the sketch refers to a <code>p5</code> object that gets pulled in from a CDN by an HTML tag. I later decided to move it into its own file so there's no longer a need to mock <code>p5</code>, but if you ever need to do it you can add this line before importing anything from the sketch file:</p>
+<div class="highlight">
+<pre><span></span><span class="nb">global</span><span class="p">.</span><span class="nx">p5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">sinon</span><span class="p">.</span><span class="nx">stub</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org54e3431">
+<h3 id="org54e3431">Import the Color Increaser Class</h3>
+<div class="outline-text-3" id="text-org54e3431">
+<p>We're going to create a <code>ColorIncreaser</code> class which we need to import into the test code. Our import is going to look a little funky, though, because the sketch is in a folder created for this post.</p>
+<ul class="org-ul">
+<li><code>files/posts/bdd-testing-p5/</code></li>
+</ul>
+<p>But the test-code is in a different folder.</p>
+<ul class="org-ul">
+<li><code>tests/mocha-tests/test-bdd-testing-p5/</code></li>
+</ul>
+<p>This folder sits next to the <code>files</code> folder. So our test code has to go up two levels and then back down into the <code>files</code> to get the sketch code.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">ColorIncreaser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">'../../../files/posts/bdd-testing-p5/color-increaser'</span><span class="p">);</span>
+</pre></div>
+<p>Note that the path is relative to where the javascript file with the tests is, not where I'm running <code>mocha</code>. Also, although it looks like a file reference, the file is called <code>color-increaser.js</code>, but we're treating it as a module so we don't put the file extension on it.</p>
+<p>Also, in order to be able to import the class we need to set it as exportable in the file where the class is defined - but I'll show that after the class is defined.</p>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgba04fd1">
+<h2 id="orgba04fd1">The Whole Code Module</h2>
+<div class="outline-text-2" id="text-orgba04fd1">
+<p>Since this is about coding test-driven I'm going to show the tests and then the implementation that gets written to pass the test. This makes it kind of disorienting to read so I thought I'd show the entire <code>color-increaser.js</code> file that's being created here exactly as it ends up once it's all done.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">CHANNELS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">RED</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">GREEN</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">BLUE</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">ALPHA</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">MAXIMUM</span><span class="o">:</span><span class="w"> </span><span class="mf">255</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">MINIMUM</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span>
+<span class="p">};</span>
+
+<span class="kd">class</span><span class="w"> </span><span class="nx">ColorIncreaser</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">color_increment</span><span class="p">,</span><span class="w"> </span><span class="nx">color</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">color_increment</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">color_increment</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">color</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span><span class="c1">// end constructor</span>
+
+<span class="w">  </span><span class="nx">increase</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">RED</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">color_increment</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">RED</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">MAXIMUM</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">RED</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">MINIMUM</span><span class="p">;</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">GREEN</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">color_increment</span><span class="p">;</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">GREEN</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">MAXIMUM</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">GREEN</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">MINIMUM</span><span class="p">;</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">BLUE</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">color_increment</span><span class="p">;</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">BLUE</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">MAXIMUM</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">BLUE</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">MINIMUM</span><span class="p">;</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="c1">// end increase</span>
+
+<span class="w">  </span><span class="nx">next</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">increase</span><span class="p">();</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">;</span>
+<span class="w">  </span><span class="p">};</span><span class="w">  </span><span class="c1">//end next</span>
+<span class="p">};</span><span class="w"> </span><span class="c1">// end ColorIncreaser</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">module</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s2">"undefined"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ColorIncreaser</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org75fc0b3">
+<h2 id="org75fc0b3">Channel Constants</h2>
+<div class="outline-text-2" id="text-org75fc0b3">
+<p>I have a tendency to flip values around (sometimes it seems like blue should come before green, for example) so I like to create objects to hold values that get used repeatedly. This at the top of the same module as the Color Increaser class.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">CHANNELS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">RED</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">GREEN</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">BLUE</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">ALPHA</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">MAXIMUM</span><span class="o">:</span><span class="w"> </span><span class="mf">255</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">MINIMUM</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org620ff89">
+<h2 id="org620ff89">Testing and Implementing the Color Increaser</h2>
+<div class="outline-text-2" id="text-org620ff89">
+<p>Now we'll write the tests and implement the <code>ColorIncreaser</code> class along with it.</p>
+</div>
+<div class="outline-3" id="outline-container-orgf9c18b6">
+<h3 id="orgf9c18b6">Mock Color</h3>
+<div class="outline-text-3" id="text-orgf9c18b6">
+<p>We don't want to use any p5 objects in the testing so we'll make a fake <a href="https://p5js.org/reference/#/p5/color">color</a> object, implementing its undocumented (as far as I can tell) <code>levels</code> attribute as an <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">MockColor</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">red</span><span class="p">,</span><span class="w"> </span><span class="nx">green</span><span class="p">,</span><span class="w"> </span><span class="nx">blue</span><span class="p">,</span><span class="w"> </span><span class="nx">alpha</span><span class="p">){</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="nx">red</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">green</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">blue</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">alpha</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="c1">// end constructor</span>
+<span class="w"> </span><span class="p">}</span><span class="c1">// end mock_color</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org480b7c1">
+<h3 id="org480b7c1">Setting Up the Tests</h3>
+<div class="outline-text-3" id="text-org480b7c1">
+<p><code>mocha</code>'s <code>describe</code> function acts like a header around our tests. Within it I'm setting some constants and also defining a <code>beforeEach</code> function which will create a new <code>ColorIncreaser</code> object before running each test so it won't have any changes we make in the other tests spilling over. Although I could import the <code>CHANNELS</code> object with the constants I thought it'd be a better check to create a new set to double-check what's going on in the code being tested.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">describe</span><span class="p">(</span><span class="s1">'Given the ColorIncreaser class definition'</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">RGB_MIN</span><span class="p">,</span><span class="w"> </span><span class="nx">RGB_MAX</span><span class="w"> </span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">255</span><span class="p">];</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">RED</span><span class="p">,</span><span class="w"> </span><span class="nx">GREEN</span><span class="p">,</span><span class="w"> </span><span class="nx">BLUE</span><span class="p">,</span><span class="w"> </span><span class="nx">ALPHA</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">];</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">CHANNELS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="nx">RED</span><span class="p">,</span><span class="w"> </span><span class="nx">GREEN</span><span class="p">,</span><span class="w"> </span><span class="nx">BLUE</span><span class="p">,</span><span class="w"> </span><span class="nx">ALPHA</span><span class="p">];</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">COLOR_INCREMENT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">color_increaser</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">color_mock</span><span class="p">;</span>
+
+<span class="w">  </span><span class="nx">beforeEach</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">color_mock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">MockColor</span><span class="p">(</span><span class="nx">RGB_MIN</span><span class="p">,</span><span class="w"> </span><span class="nx">RGB_MIN</span><span class="p">,</span>
+<span class="w">                               </span><span class="nx">RGB_MIN</span><span class="p">,</span><span class="w"> </span><span class="nx">RGB_MAX</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">color_increaser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ColorIncreaser</span><span class="p">(</span><span class="nx">COLOR_INCREMENT</span><span class="p">,</span>
+<span class="w">                                         </span><span class="nx">color_mock</span><span class="p">);</span>
+<span class="w">  </span><span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orgd208906">
+<h3 id="orgd208906">Does the ColorIncreaser Exist?</h3>
+<div class="outline-text-3" id="text-orgd208906">
+<p>Our first test makes sure that we were able to create the <code>ColorIncreaser</code> object. This is actually a little bit of a fake because the <code>beforeEach</code> will fail if we can't create the object and it won't actually reach this test. I suppose you could still break it by making a function named <code>ColorIncreaser</code> instead of a class so this acts as an extra check.</p>
+<p>First we make a section header to make it a little clearer (it doesn't actually affect the tests, just the output after the test is run).</p>
+<div class="highlight">
+<pre><span></span><span class="nx">describe</span><span class="p">(</span><span class="s2">"When the ColorIncreaser is constructed"</span><span class="p">,</span>
+<span class="w">          </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</pre></div>
+<p>And then the actual test to see if the constructor created an object.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">it</span><span class="w"> </span><span class="p">(</span><span class="s2">"Then it should be an object"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">done</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">expect</span><span class="p">(</span><span class="nx">color_increaser</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="nx">a</span><span class="p">(</span><span class="s1">'object'</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">done</span><span class="p">();</span>
+<span class="p">});</span>
+</pre></div>
+<p>Mocha will <a href="https://mochajs.org/#asynchronous-code">run the tests asynchronously</a> (parallel and out of order) so we need to accept the <code>done</code> function and then call it when the test is finished so mocha knows that the test is done.</p>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org62890ee">
+<h3 id="org62890ee">The ColorIncreaser Class</h3>
+<div class="outline-text-3" id="text-org62890ee">
+<p>Now that we have the test I'll define the class and its constructor. It's a pretty basic class, here's a class diagram of its attributes.</p>
+<p><img alt="Color Increaser class diagram" src="posts/bdd-testing-p5/color-increaser.webp"></p>
+<p>And here's the class and constructor definition.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">ColorIncreaser</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">color_increment</span><span class="p">,</span><span class="w"> </span><span class="nx">color</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">color_increment</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">color_increment</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">color</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span><span class="c1">// end constructor</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orge61d849">
+<h3 id="orge61d849">Does it take an increment amount?</h3>
+<div class="outline-text-3" id="text-orge61d849">
+<p>This is just a sanity check to make sure that the constructor actually saved the increment amount we passed in.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">it</span><span class="p">(</span><span class="s2">"And it should set the color_increment"</span><span class="p">,</span>
+<span class="w">   </span><span class="kd">function</span><span class="p">(</span><span class="nx">done</span><span class="p">){</span>
+<span class="w">     </span><span class="nx">expect</span><span class="p">(</span><span class="nx">color_increaser</span><span class="p">.</span><span class="nx">color_increment</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="nx">COLOR_INCREMENT</span><span class="p">);</span>
+<span class="w">     </span><span class="nx">done</span><span class="p">();</span>
+<span class="w">   </span><span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orgd8645e6">
+<h3 id="orgd8645e6">Does it take a color?</h3>
+<div class="outline-text-3" id="text-orgd8645e6">
+<p>This is another check to make sure the constructor saved the color object that got passed in. I couldn't find a same-object checker in <code>chai</code> but the <code>eql</code> is described as a check that the objects are "deeply-equal" which I assume is the same thing.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">it</span><span class="p">(</span><span class="s2">"And set the color attribute"</span><span class="p">,</span>
+<span class="w">  </span><span class="kd">function</span><span class="p">(</span><span class="nx">done</span><span class="p">){</span>
+<span class="w">    </span><span class="nx">expect</span><span class="p">(</span><span class="nx">color_increaser</span><span class="p">.</span><span class="nx">color</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="nx">eql</span><span class="p">(</span><span class="nx">color_mock</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">done</span><span class="p">();</span>
+<span class="w">  </span><span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org6ff82ca">
+<h3 id="org6ff82ca">The Increaser</h3>
+<div class="outline-text-3" id="text-org6ff82ca">
+<p>We're going to implement a method for the <code>ColorIncreaser</code> that will increment the color-array so let's check that it works. It sort of treats the three color channels (Red, Green, and Blue… we'll pretend Alpha doesn't exist) like a three-digit number using base 255 instead of 10 and with the digits being BGR. So we start with all three channels at 0, then we increment red from 0 to 255 and when it hits 256 we set it back to 0 and set green to 1, then we repeat this over and over until green goes up to 256 at which point we reset both red and green to 0 and set blue to 1 and so on.</p>
+<p>I'll add a <code>describe</code> section to the tests to make it clearer where testing this method starts.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">describe</span><span class="p">(</span><span class="s2">"And when the increase() method is called"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</pre></div>
+</div>
+<div class="outline-4" id="outline-container-org291bfed">
+<h4 id="org291bfed">Does the red channel increase?</h4>
+<div class="outline-text-4" id="text-org291bfed">
+<p>Until it increments the red channel past 255 the other channels don't change so we'll first test that only the red channel changes up until that point.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">it</span><span class="w"> </span><span class="p">(</span><span class="s2">"Then it should increment red up until 255"</span><span class="p">,</span>
+<span class="w">    </span><span class="kd">function</span><span class="p">(</span><span class="nx">done</span><span class="p">){</span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">count</span><span class="o">=</span><span class="nx">RGB_MIN</span><span class="p">;</span><span class="w"> </span><span class="nx">count</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">RGB_MAX</span><span class="p">;</span><span class="w"> </span><span class="nx">count</span><span class="w"> </span><span class="o">+=</span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">color_increaser</span><span class="p">.</span><span class="nx">increase</span><span class="p">();</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="kd">let</span><span class="w"> </span><span class="nx">expected</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="nx">RGB_MAX</span><span class="p">,</span><span class="w"> </span><span class="nx">RGB_MIN</span><span class="p">,</span><span class="w"> </span><span class="nx">RGB_MIN</span><span class="p">,</span><span class="w"> </span><span class="nx">RGB_MAX</span><span class="p">]</span>
+
+<span class="w">      </span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">channel</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span>
+<span class="w">        </span><span class="nx">color_increaser</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="nx">channel</span><span class="p">]).</span><span class="nx">to</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="nx">expected</span><span class="p">[</span><span class="nx">index</span><span class="p">]));</span>
+
+<span class="w">      </span><span class="nx">done</span><span class="p">();</span>
+<span class="w">    </span><span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-org772e97a">
+<h4 id="org772e97a">The Color-Increaser Method</h4>
+<div class="outline-text-4" id="text-org772e97a">
+<p>So now I'll add the <code>increase</code> method to the <code>ColorIncreaser</code> class which adds the <code>color_increment</code> to the red-channel when it's called.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">increase</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">RED</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">color_increment</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orge60dd64">
+<h3 id="orge60dd64">Does it wrap red back to 255 when it hits 256?</h3>
+<div class="outline-text-3" id="text-orge60dd64">
+<p>The channels can only go up to 255 so once we hit 256:</p>
+<ul class="org-ul">
+<li>red wraps back to 0</li>
+<li>green increments one</li>
+</ul>
+<p>The tutorial uses for-loops to actually step through and increment the color until it passes the limit but I'll cheat and just set the red-channel to the limit and then increment it.</p>
+<p>These are our expected values before and after the call to <code>increase</code>.</p>
+<table border="2" cellpadding="6" cellspacing="0" frame="hsides" rules="groups">
+<colgroup>
+<col class="org-left">
+<col class="org-right">
+<col class="org-right"></colgroup>
+<thead>
+<tr>
+<th class="org-left" scope="col">Channel</th>
+<th class="org-right" scope="col">Before Increase</th>
+<th class="org-right" scope="col">After Increase</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Red</td>
+<td class="org-right">255</td>
+<td class="org-right">0</td>
+</tr>
+<tr>
+<td class="org-left">Green</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+</tr>
+<tr>
+<td class="org-left">Blue</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+</tr>
+<tr>
+<td class="org-left">Alpha</td>
+<td class="org-right">255</td>
+<td class="org-right">255</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight">
+<pre><span></span><span class="nx">it</span><span class="w"> </span><span class="p">(</span><span class="s2">"But red should wrap-around to 0 when it hits 256 and increment green"</span><span class="p">,</span>
+<span class="w">    </span><span class="kd">function</span><span class="p">(</span><span class="nx">done</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">color_increaser</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="nx">RED</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">RGB_MAX</span><span class="p">;</span>
+<span class="w">      </span><span class="nx">color_increaser</span><span class="p">.</span><span class="nx">increase</span><span class="p">();</span>
+<span class="w">      </span><span class="kd">let</span><span class="w"> </span><span class="nx">expected</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="nx">RGB_MIN</span><span class="p">,</span><span class="w"> </span><span class="nx">COLOR_INCREMENT</span><span class="p">,</span>
+<span class="w">                      </span><span class="nx">RGB_MIN</span><span class="p">,</span><span class="w"> </span><span class="nx">RGB_MAX</span><span class="p">];</span>
+<span class="w">      </span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">channel</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span>
+<span class="w">        </span><span class="nx">color_increaser</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="nx">channel</span><span class="p">]).</span><span class="nx">to</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="nx">expected</span><span class="p">[</span><span class="nx">index</span><span class="p">]));</span>
+<span class="w">      </span><span class="nx">done</span><span class="p">();</span>
+<span class="w">    </span><span class="p">});</span>
+</pre></div>
+</div>
+<div class="outline-4" id="outline-container-orgf7713cd">
+<h4 id="orgf7713cd">The Wrap-Red Conditional</h4>
+<div class="outline-text-4" id="text-orgf7713cd">
+<p>Within the <code>increase</code> method we add this little chunk after incrementing the red channel.</p>
+<div class="highlight">
+<pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">RED</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">MAXIMUM</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">RED</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">MINIMUM</span><span class="p">;</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">GREEN</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">color_increment</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org66bbace">
+<h3 id="org66bbace">Does Green Wrap Too?</h3>
+<div class="outline-text-3" id="text-org66bbace">
+<p>As with red, the green channel can only go up to 255 so once we increase green to 256:</p>
+<ul class="org-ul">
+<li>wrap green back to 0</li>
+<li>increment blue</li>
+</ul>
+<p>Also, since we only increment green if red hits 256 it wraps back to 0 too. Once again, I'm forgoing looping and incrementing and instead just setting the red and green channels to their limits and then calling <code>increase</code>.</p>
+<p>These are our expected values before and after the call to <code>increase</code>.</p>
+<table border="2" cellpadding="6" cellspacing="0" frame="hsides" rules="groups">
+<colgroup>
+<col class="org-left">
+<col class="org-right">
+<col class="org-right"></colgroup>
+<thead>
+<tr>
+<th class="org-left" scope="col">Channel</th>
+<th class="org-right" scope="col">Before Increase</th>
+<th class="org-right" scope="col">After Increase</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Red</td>
+<td class="org-right">255</td>
+<td class="org-right">0</td>
+</tr>
+<tr>
+<td class="org-left">Green</td>
+<td class="org-right">255</td>
+<td class="org-right">0</td>
+</tr>
+<tr>
+<td class="org-left">Blue</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+</tr>
+<tr>
+<td class="org-left">Alpha</td>
+<td class="org-right">255</td>
+<td class="org-right">255</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight">
+<pre><span></span><span class="nx">it</span><span class="p">(</span><span class="s2">"And it should wrap-around green and increase blue if green exceeds 255"</span><span class="p">,</span>
+<span class="w">   </span><span class="kd">function</span><span class="p">(</span><span class="nx">done</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="nx">color_increaser</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="nx">RED</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">RGB_MAX</span><span class="p">;</span>
+<span class="w">     </span><span class="nx">color_increaser</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="nx">GREEN</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">RGB_MAX</span><span class="p">;</span>
+
+<span class="w">     </span><span class="nx">color_increaser</span><span class="p">.</span><span class="nx">increase</span><span class="p">();</span>
+
+<span class="w">     </span><span class="kd">let</span><span class="w"> </span><span class="nx">expected</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="nx">RGB_MIN</span><span class="p">,</span><span class="w"> </span><span class="nx">RGB_MIN</span><span class="p">,</span>
+<span class="w">                     </span><span class="nx">COLOR_INCREMENT</span><span class="p">,</span><span class="w"> </span><span class="nx">RGB_MAX</span><span class="p">];</span>
+
+<span class="w">      </span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">channel</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span>
+<span class="w">        </span><span class="nx">color_increaser</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="nx">channel</span><span class="p">]).</span><span class="nx">to</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span>
+<span class="w">          </span><span class="nx">expected</span><span class="p">[</span><span class="nx">index</span><span class="p">]));</span>
+<span class="w">    </span><span class="nx">done</span><span class="p">();</span>
+<span class="w">   </span><span class="p">});</span>
+</pre></div>
+</div>
+<div class="outline-4" id="outline-container-org2357b5f">
+<h4 id="org2357b5f">The Wrap-Green Conditional</h4>
+<div class="outline-text-4" id="text-org2357b5f">
+<p>Now within the <code>increase</code> method we add this little chunk after incrementing the red channel to check the green channel.</p>
+<div class="highlight">
+<pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">GREEN</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">MAXIMUM</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">GREEN</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">MINIMUM</span><span class="p">;</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">BLUE</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">color_increment</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org8c7603b">
+<h3 id="org8c7603b">Does Blue Wrap Too?</h3>
+<div class="outline-text-3" id="text-org8c7603b">
+<p>As with red and green, the blue channel can only go up to 255 so once we increase blue to 256:</p>
+<ul class="org-ul">
+<li>wrap all three channels back to 0</li>
+</ul>
+<p>These are our expected values before and after the call to <code>increase</code>.</p>
+<table border="2" cellpadding="6" cellspacing="0" frame="hsides" rules="groups">
+<colgroup>
+<col class="org-left">
+<col class="org-right">
+<col class="org-right"></colgroup>
+<thead>
+<tr>
+<th class="org-left" scope="col">Channel</th>
+<th class="org-right" scope="col">Before Increase</th>
+<th class="org-right" scope="col">After Increase</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Red</td>
+<td class="org-right">255</td>
+<td class="org-right">0</td>
+</tr>
+<tr>
+<td class="org-left">Green</td>
+<td class="org-right">255</td>
+<td class="org-right">0</td>
+</tr>
+<tr>
+<td class="org-left">Blue</td>
+<td class="org-right">255</td>
+<td class="org-right">0</td>
+</tr>
+<tr>
+<td class="org-left">Alpha</td>
+<td class="org-right">255</td>
+<td class="org-right">255</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight">
+<pre><span></span><span class="nx">it</span><span class="p">(</span><span class="s2">"And it should wrap-around all colors when blue exceeds 255"</span><span class="p">,</span>
+<span class="w">   </span><span class="kd">function</span><span class="p">(</span><span class="nx">done</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span>
+<span class="w">       </span><span class="nx">channel</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">color_increaser</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="nx">channel</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">RGB_MAX</span><span class="p">);</span>
+
+<span class="w">     </span><span class="nx">color_increaser</span><span class="p">.</span><span class="nx">increase</span><span class="p">();</span>
+
+<span class="w">     </span><span class="kd">let</span><span class="w"> </span><span class="nx">expected</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="nx">RGB_MIN</span><span class="p">,</span><span class="w"> </span><span class="nx">RGB_MIN</span><span class="p">,</span><span class="w"> </span><span class="nx">RGB_MIN</span><span class="p">,</span>
+<span class="w">                     </span><span class="nx">RGB_MAX</span><span class="p">];</span>
+
+<span class="w">      </span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">channel</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span>
+<span class="w">        </span><span class="nx">color_increaser</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="nx">channel</span><span class="p">]).</span><span class="nx">to</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span>
+<span class="w">          </span><span class="nx">expected</span><span class="p">[</span><span class="nx">index</span><span class="p">]));</span>
+
+<span class="w">    </span><span class="nx">done</span><span class="p">();</span>
+<span class="w">   </span><span class="p">});</span>
+</pre></div>
+</div>
+<div class="outline-4" id="outline-container-org58b2468">
+<h4 id="org58b2468">The Wrap-Blue Conditional</h4>
+<div class="outline-text-4" id="text-org58b2468">
+<p>I originally just used a modulus to keep blue within range, but since we're allowing the user to change the increment this might not always go back to zero so here's the conditional that resets the blue channel if it exceeds the limit.</p>
+<div class="highlight">
+<pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">BLUE</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">MAXIMUM</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">BLUE</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">MINIMUM</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+<p>And there we have our exhaustive channel incrementer.</p>
+</div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orgec0168d">
+<h3 id="orgec0168d">The Next Method</h3>
+<div class="outline-text-3" id="text-orgec0168d">
+<p>I'm going to implement a <code>next</code> method to simplify things a little. It'll call increase and the return the color object. Just because.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">describe</span><span class="p">(</span><span class="s2">"And when the next() method is called"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</pre></div>
+</div>
+<div class="outline-4" id="outline-container-org2be9f8f">
+<h4 id="org2be9f8f">Does the next method increase the color?</h4>
+<div class="outline-text-4" id="text-org2be9f8f">
+<p>To check that next calls the <code>increase</code> method I'll monkey-patch it with a <a href="https://sinonjs.org/releases/latest/spies/">sinon spy</a> and check that when we call <code>next</code> the <code>increase</code> spy gets called.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">it</span><span class="p">(</span><span class="s2">"Then it should increase the color"</span><span class="p">,</span>
+<span class="w">  </span><span class="kd">function</span><span class="p">(</span><span class="nx">done</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">spy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">sinon</span><span class="p">.</span><span class="nx">spy</span><span class="p">(</span><span class="nx">color_increaser</span><span class="p">,</span><span class="w"> </span><span class="s2">"increase"</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">color_increaser</span><span class="p">.</span><span class="nx">next</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">expect</span><span class="p">(</span><span class="nx">spy</span><span class="p">.</span><span class="nx">calledOnce</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="kc">true</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">spy</span><span class="p">.</span><span class="nx">restore</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">done</span><span class="p">();</span>
+<span class="w">  </span><span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-org78a1a04">
+<h4 id="org78a1a04">The Next Method</h4>
+<div class="outline-text-4" id="text-org78a1a04">
+<p>Now I'll implement the <code>next</code> method and have it call the <code>increase</code> method.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">next</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">increase</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orga4ade0e">
+<h3 id="orga4ade0e">Does next return the color?</h3>
+<div class="outline-text-3" id="text-orga4ade0e">
+<p>Instead of requiring the user to make two calls I'll have the next method return the color object directly.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">it</span><span class="w"> </span><span class="p">(</span><span class="s2">"And return the color"</span><span class="p">,</span>
+<span class="w">    </span><span class="kd">function</span><span class="p">(</span><span class="nx">done</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">let</span><span class="w"> </span><span class="nx">actual</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">color_increaser</span><span class="p">.</span><span class="nx">next</span><span class="p">();</span>
+<span class="w">      </span><span class="nx">expect</span><span class="p">(</span><span class="nx">color_increaser</span><span class="p">.</span><span class="nx">color</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="nx">eql</span><span class="p">(</span><span class="nx">actual</span><span class="p">);</span>
+<span class="w">      </span><span class="nx">done</span><span class="p">();</span>
+<span class="w">    </span><span class="p">});</span>
+</pre></div>
+</div>
+<div class="outline-4" id="outline-container-orge0ff2d3">
+<h4 id="orge0ff2d3">Return the color</h4>
+<div class="outline-text-4" id="text-orge0ff2d3">
+<p>Now in our <code>ColorIncreaser.next</code> method we return the color.</p>
+<div class="highlight">
+<pre><span></span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orgac1c90c">
+<h3 id="orgac1c90c">Export the Color Increaser</h3>
+<div class="outline-text-3" id="text-orgac1c90c">
+<p>The implementation so far is good enough to get the code working within the p5 sketch, which would normally be the ultimate goal. But in order for the test code to be able to import the <code>ColorIncreaser</code> (using the <code>require</code> function) we need to add a line in the file with the <code>ColorIncreaser</code> definition to export it.</p>
+<p>The code given in the tutorial just has the export line, but this will raise an error outside of node.js - so it works for testing but causes a <code>ReferenceError</code> in the browser (when using a python-based server anyway) so to prevent that from happening I added a check that will do the export only if the <code>module</code> is defined, which is an indication that this is being used in node (or I messed up and defined it somewhere else).</p>
+<div class="highlight">
+<pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">module</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s2">"undefined"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ColorIncreaser</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orgb6ca543">
+<h3 id="orgb6ca543">Running The tests</h3>
+<div class="outline-text-3" id="text-orgb6ca543">
+<p>Now, let's see what it looks like when we run the tests.</p>
+<div class="highlight">
+<pre><span></span>mocha ../tests/test*
+</pre></div>
+<pre class="example" id="org5199600">
+
+
+Given the ColorIncreaser class definition
+  When the ColorIncreaser is constructed
+    ✔ Then it should be an object
+    ✔ And it should set the color_increment
+    ✔ And set the color attribute
+  And when the increase() method is called
+    ✔ Then it should increment red up until 255
+    ✔ But red should wrap-around to 0 when it hits 256 and increment green
+    ✔ And it should wrap-around green and increase blue if green exceeds 255
+    ✔ And it should wrap-around all colors when blue exceeds 255
+  And when the next() method is called
+    ✔ Then it should increase the color
+    ✔ And return the color
+
+
+9 passing (11ms)
+
+</pre>
+<p>The output in the terminal has some color added to the text so it looks prettier, but otherwise that's the output of running our tests.</p>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org31bd88c">
+<h2 id="org31bd88c">The Sketch</h2>
+<div class="outline-text-2" id="text-org31bd88c">
+<p>Now that we have the <code>ColorIncreaser</code> we can add it to a sketch to change the colors of the square that we're drawing.</p>
+</div>
+<div class="outline-3" id="outline-container-org675ec96">
+<h3 id="org675ec96">The Sketch Function</h3>
+<div class="outline-text-3" id="text-org675ec96">
+<p>As I noted before, I'm using the instance-mode syntax for the sketch so this is the function that holds the <code>setup</code> and <code>draw</code> functions.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">flashing_square</span><span class="p">(</span><span class="nx">p5js</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">SIZE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">500</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">color_increaser</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org49bce0f">
+<h3 id="org49bce0f">The <code>setup</code> Function</h3>
+<div class="outline-text-3" id="text-org49bce0f">
+<p>The setup creates the canvas and color increaser instance.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">p5js</span><span class="p">.</span><span class="nx">setup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">p5js</span><span class="p">.</span><span class="nx">createCanvas</span><span class="p">(</span><span class="nx">SIZE</span><span class="p">,</span><span class="w"> </span><span class="nx">SIZE</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">color_increaser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ColorIncreaser</span><span class="p">(</span>
+<span class="w">    </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">p5js</span><span class="p">.</span><span class="nx">color</span><span class="p">(</span>
+<span class="w">      </span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">MINIMUM</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">MINIMUM</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">MINIMUM</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">MAXIMUM</span><span class="p">));</span>
+<span class="w">  </span><span class="nx">p5js</span><span class="p">.</span><span class="nx">background</span><span class="p">(</span><span class="nx">color_increaser</span><span class="p">.</span><span class="nx">color</span><span class="p">);</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orgd6314ac">
+<h3 id="orgd6314ac">The <code>draw</code> Function</h3>
+<div class="outline-text-3" id="text-orgd6314ac">
+<p>The draw sets the background color and increases its value once per frame.</p>
+<div class="highlight">
+<pre><span></span><span class="nx">p5js</span><span class="p">.</span><span class="nx">draw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">p5js</span><span class="p">.</span><span class="nx">background</span><span class="p">(</span><span class="nx">color_increaser</span><span class="p">.</span><span class="nx">next</span><span class="p">());</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgfd685f1">
+<h2 id="orgfd685f1">The End</h2>
+<div class="outline-text-2" id="text-orgfd685f1">
+<p>So, there you go. The sketch wasn't so exciting, but the main value in going through the exercise, I think, was being able to get the javascript testing infrastructure working and getting back into using chai and sinon and the crazy world of module imports in javascript.</p>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org3d8b7f5">
+<h2 id="org3d8b7f5">Sources</h2>
+<div class="outline-text-2" id="text-org3d8b7f5">
+<ul class="org-ul">
+<li>Behavior-driven development. In: Wikipedia [Internet]. 2023 [cited 2023 Jun 9]. Available from: <a href="https://en.wikipedia.org/w/index.php?title=Behavior-driven_development&amp;oldid=1158619924">https://en.wikipedia.org/w/index.php?title=Behavior-driven_development&amp;oldid=1158619924</a></li>
+<li>Expect / Should - Chai [Internet]. [cited 2023 Jun 9]. Available from: <a href="https://www.chaijs.com/api/bdd/">https://www.chaijs.com/api/bdd/</a></li>
+<li>nodemon [Internet]. [cited 2023 Jun 9]. Available from: <a href="https://nodemon.io/">https://nodemon.io/</a></li>
+<li>Sinon.JS - Standalone test fakes, spies, stubs and mocks for JavaScript. Works with any unit testing framework. [Internet]. [cited 2023 Jun 9]. Available from: <a href="https://sinonjs.org/">https://sinonjs.org/</a></li>
+<li>Unit Testing and Test Driven Development | p5.js [Internet]. [cited 2023 Jun 8]. Available from: <a href="https://p5js.org/learn/tdd.html">https://p5js.org/learn/tdd.html</a></li>
+</ul>
+</div>
+</div>
+</div>
+</article>
 <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article">
 <header>
 <h1 class="p-name entry-title"><a class="u-url" href="posts/bibliography-the-nature-of-code/index.html">The Nature of Code</a></h1>
