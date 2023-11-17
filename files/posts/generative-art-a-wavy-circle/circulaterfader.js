@@ -1,20 +1,23 @@
-const CIRCULATER_FADER_DIV = "circulater-fader-42232bf1";
+const HSL_FADER_DIV = "hsl-fader-42232bf1";
 
-class CirculaterFader {
+class HSLFader {
   _increment = 1;
   _stroke_color;
+  _next_color
   
-  constructor(circulator, p5,  stroke_color) {
+  constructor(circulator, p5,  hue=225, saturation=72.7, lightness=56.9) {
     this.circulator = circulator;
     this.p5 = p5;
-    this._stroke_color = stroke_color;
+    this.hue = hue;
+    this.saturation = saturation;
+    this.lightness = lightness;
   }; // constructor
 
   get increment() {
-    let blue = this.p5.blue(this._stroke_color);
-    if (blue >= 255) {
+    let lightness = this.p5.lightness(this.stroke_color);
+    if (lightness >= 100) {
       this._increment = -1;
-    } else if (blue <= 0) {
+    } else if (lightness <= 50) {
       this._increment = 1;
     }; // if-else-if
 
@@ -23,25 +26,30 @@ class CirculaterFader {
 
   get stroke_color() {
     if (!this._stroke_color) {
-      this._stroke_color = this.p5.color(65, 105, 225);
-    } else {
-      this._stroke_color.setBlue(
-        (this.p5.blue(this._stroke_color) + this.increment));
-      this._stroke_color.setRed(
-        (this.p5.red(this._stroke_color) + this.increment));
-      this._stroke_color.setGreen(
-        (this.p5.green(this._stroke_color) + this.increment));
-    }; // if-else
+      this.p5.colorMode(this.p5.HSL);
+      this._stroke_color = this.p5.color(this.hue,
+                                         this.saturation,
+                                         this.lightness);
+    }; // if
     return this._stroke_color;
   }; // stroke_color
 
+  get next_color() {
+    this._stroke_color = this.p5.color(
+      this.hue, this.saturation,
+      this.p5.lightness(this.stroke_color) + this.increment
+    )
+
+    return this.stroke_color;
+  }; // next-color
+
   draw() {
-    this.p5.stroke(this.stroke_color);
+    this.p5.stroke(this.next_color);
     this.circulator.draw();
   }; // draw
 }; // CirculaterFader
 
-function circulater_fader_sketch(p5) {
+function hsl_fader_sketch(p5) {
   const WIDTH = 500;
   const HEIGHT = WIDTH;
   const POINT_COLOR = "RoyalBlue";
@@ -52,20 +60,20 @@ function circulater_fader_sketch(p5) {
   let fader;
 
   p5.setup = function() {
-    let color = p5.color(POINT_COLOR);
     p5.createCanvas(WIDTH, HEIGHT);
     p5.background("white");
-    p5.stroke(color);
-    p5.fill(color);
+    p5.stroke(POINT_COLOR);
+    p5.fill(POINT_COLOR);
+    
     const circulator = new Circulator(1, CENTER_X, CENTER_Y, RADIUS, p5);
-   
-    fader = new CirculaterFader(circulator, p5, color);
+  
+    fader = new HSLFader(circulator, p5);
   }; // setup
 
   p5.draw = function() {
     fader.draw();
   }; // draw
 
-}; // circulater-fader-sketch
+}; // hsl-fader-sketch
 
-new p5(circulater_fader_sketch, CIRCULATER_FADER_DIV);
+new p5(hsl_fader_sketch, HSL_FADER_DIV);
