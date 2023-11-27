@@ -11,7 +11,45 @@
 .. updated: 
 .. template: p5.tmpl
 #+END_COMMENT
+#+OPTIONS: ^:{}
 #+TOC: headlines 2
+
+#+begin_src js :tangle ../files/posts/generative-art-a-wavy-circle/circulator.js :exports none
+const CIRCULATOR_DIV = "circulator-50136a19";
+
+<<constant-radius>>
+
+<<the-circulator>>
+
+<<some-circulator-constants>>
+  
+<<the-circulator-sketch>>
+#+end_src
+
+* A Constant Radius
+
+#+begin_src plantuml :file ../files/posts/generative-art-a-wavy-circle/constant_radius.png :exports none
+!theme mars
+
+class ConstantRadius {
+  length: Integer
+
+  constructor(length);
+}
+#+end_src
+
+#+RESULTS:
+[[file:../files/posts/generative-art-a-wavy-circle/constant_radius.png]]
+
+[[img-url:constant_radius.png]]
+
+#+begin_src js :noweb-ref constant-radius
+class ConstantRadius {
+  constructor(length) {
+    this.length = length;
+  }; // constructor
+}; // Constant Radius
+#+end_src
 
 * A Circulator
 
@@ -24,7 +62,7 @@ class Circulator {
   angle_increment: Integer
   center_x: Integer
   center_y: Integer
-  radius: Integer
+  radius: Radius
   p5: P5 object
 
   <<get>> to_radians: Float
@@ -41,19 +79,8 @@ class Circulator {
 #+end_src
 
 #+RESULTS:
-[[file:../files/posts/generative-art-a-wavy-circle/circulator.png]]
-
 [[img-url: circulator.png]]
 
-#+begin_src js :tangle ../files/posts/generative-art-a-wavy-circle/circulator.js :exports none
-const CIRCULATOR_DIV = "circulator-50136a19";
-
-<<the-circulator>>
-
-<<some-circulator-constants>>
-  
-<<the-circulator-sketch>>
-#+end_src
 
 #+begin_src js :noweb-ref the-circulator
 class Circulator {
@@ -84,19 +111,19 @@ class Circulator {
   }; // theta-opposite
 
   get x_start() {
-    return this.center_x + this.radius * Math.cos(this.theta);
+    return this.center_x + this.radius.length * Math.cos(this.theta);
   }; // x-start
 
   get y_start() {
-    return this.center_y + this.radius * Math.sin(this.theta);
+    return this.center_y + this.radius.length * Math.sin(this.theta);
   }; // y-start
 
   get x_end() {
-    return this.center_x + this.radius * Math.cos(this.theta_opposite);
+    return this.center_x + this.radius.length * Math.cos(this.theta_opposite);
   }; // x-end
 
   get y_end() {
-    return this.center_y + this.radius * Math.sin(this.theta_opposite);
+    return this.center_y + this.radius.length * Math.sin(this.theta_opposite);
   }; // y-end
 
   draw() {
@@ -124,7 +151,8 @@ function circulator_sketch(p5) {
     p5.background("white");
     p5.stroke(POINT_COLOR);
     p5.fill(POINT_COLOR);
-    circulator = new Circulator(1, CENTER_X, CENTER_Y, RADIUS, p5);
+    const radius = new ConstantRadius(RADIUS);
+    circulator = new Circulator(1, CENTER_X, CENTER_Y, radius, p5);
   }; // setup
   
   p5.draw = function() {
@@ -238,8 +266,9 @@ function hsl_fader_sketch(p5) {
     p5.background("white");
     p5.stroke(POINT_COLOR);
     p5.fill(POINT_COLOR);
-    
-    const circulator = new Circulator(1, CENTER_X, CENTER_Y, RADIUS, p5);
+
+    const radius = new ConstantRadius(RADIUS);
+    const circulator = new Circulator(1, CENTER_X, CENTER_Y, radius, p5);
   
     fader = new HSLFader(circulator, p5);
   }; // setup
@@ -251,4 +280,90 @@ function hsl_fader_sketch(p5) {
 }; // hsl-fader-sketch
 
 new p5(hsl_fader_sketch, HSL_FADER_DIV);
+#+end_src
+
+* A Noisy Radius
+
+{{% p5div  source="noisy_radius.js" divid="noisy-fader-20091e70" %}}
+
+#+begin_src plantuml :file ../files/posts/generative-art-a-wavy-circle/noisy_radius.png :exports none
+!theme mars
+
+class NoiseRadius {
+  length: Float
+  noise_step: Float
+
+  <<get>> noise_coordinate : Float
+  <<get>> length : Float
+
+  constructor(length);
+}
+#+end_src
+
+#+RESULTS:
+[[file:../files/posts/generative-art-a-wavy-circle/noisy_radius.png]]
+
+[[img-url:noisy_radius.png]]
+
+#+begin_src js :tangle ../files/posts/generative-art-a-wavy-circle/noisy_radius.js :exports none
+const NOISY_FADER_DIV = "noisy-fader-20091e70";
+
+<<noisy-radius>>
+
+<<noisy-radius-sketch>>
+#+end_src
+
+#+begin_src js :noweb-ref noisy-radius
+class NoisyRadius {
+  _noise_coordinate = 0;
+
+  constructor(scale, p5, noise_step=0.005) {
+    this.scale = scale;
+    this.noise_step = noise_step;
+    this.p5 = p5;
+  }; // constructor
+
+  get noise_coordinate() {
+    this._noise_coordinate += this.noise_step;
+    return this._noise_coordinate;
+  }; // noise_coordinate
+
+  get length() {
+    this._length = (this.p5.noise(this.noise_coordinate)
+                    ,* this.scale) + 1;
+    return this._length;
+  }; // length
+}; // NoisyRadius
+#+end_src
+
+#+begin_src js :noweb-ref noisy-radius-sketch
+function noisy_fader_sketch(p5) {
+  const WIDTH = 500;
+  const HEIGHT = WIDTH;
+  const POINT_COLOR = "RoyalBlue";
+  const CENTER_X = WIDTH/2;
+  const CENTER_Y = HEIGHT/2;
+  const RADIUS = WIDTH/2;
+
+  let fader;
+
+  p5.setup = function() {
+    p5.createCanvas(WIDTH, HEIGHT);
+    p5.background("white");
+    p5.stroke(POINT_COLOR);
+    p5.fill(POINT_COLOR);
+
+    const radius = new NoisyRadius(RADIUS, p5);
+    const circulator = new Circulator(1, CENTER_X, CENTER_Y, radius, p5);
+  
+    fader = new HSLFader(circulator, p5);
+  }; // setup
+
+  p5.draw = function() {
+    fader.draw();
+  }; // draw
+  
+}; // noisy-fader-sketch
+
+new p5(noisy_fader_sketch, NOISY_FADER_DIV);
 #+end_src

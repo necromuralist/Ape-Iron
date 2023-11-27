@@ -1,5 +1,11 @@
 const CIRCULATOR_DIV = "circulator-50136a19";
 
+class ConstantRadius {
+  constructor(length) {
+    this.length = length;
+  }; // constructor
+}; // Constant Radius
+
 class Circulator {
   _to_radians;
   
@@ -28,19 +34,19 @@ class Circulator {
   }; // theta-opposite
 
   get x_start() {
-    return this.center_x + this.radius * Math.cos(this.theta);
+    return this.center_x + this.radius.length * Math.cos(this.theta);
   }; // x-start
 
   get y_start() {
-    return this.center_y + this.radius * Math.sin(this.theta);
+    return this.center_y + this.radius.length * Math.sin(this.theta);
   }; // y-start
 
   get x_end() {
-    return this.center_x + this.radius * Math.cos(this.theta_opposite);
+    return this.center_x + this.radius.length * Math.cos(this.theta_opposite);
   }; // x-end
 
   get y_end() {
-    return this.center_y + this.radius * Math.sin(this.theta_opposite);
+    return this.center_y + this.radius.length * Math.sin(this.theta_opposite);
   }; // y-end
 
   draw() {
@@ -64,7 +70,8 @@ function circulator_sketch(p5) {
     p5.background("white");
     p5.stroke(POINT_COLOR);
     p5.fill(POINT_COLOR);
-    circulator = new Circulator(1, CENTER_X, CENTER_Y, RADIUS, p5);
+    const radius = new ConstantRadius(RADIUS);
+    circulator = new Circulator(1, CENTER_X, CENTER_Y, radius, p5);
   }; // setup
   
   p5.draw = function() {
