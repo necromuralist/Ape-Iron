@@ -61,18 +61,32 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="posts/generative-art-a-wavy-circle/index.html#org9d339a3">A Circulator</a></li>
-<li><a href="posts/generative-art-a-wavy-circle/index.html#orgd01cfce">A Fading Circulator</a></li>
+<li><a href="posts/generative-art-a-wavy-circle/index.html#org9e5e464">A Constant Radius</a></li>
+<li><a href="posts/generative-art-a-wavy-circle/index.html#org928c77b">A Circulator</a></li>
+<li><a href="posts/generative-art-a-wavy-circle/index.html#org3c33f58">A Fading Circulator</a></li>
+<li><a href="posts/generative-art-a-wavy-circle/index.html#orgc7deefa">A Noisy Radius</a></li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org9d339a3">
-<h2 id="org9d339a3">A Circulator</h2>
-<div class="outline-text-2" id="text-org9d339a3">
+<div class="outline-2" id="outline-container-org9e5e464">
+<h2 id="org9e5e464">A Constant Radius</h2>
+<div class="outline-text-2" id="text-org9e5e464">
+<p><img alt="nil" src="posts/generative-art-a-wavy-circle/constant_radius.png"></p>
+<div class="highlight">
+<pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">ConstantRadius</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">length</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">length</span><span class="p">;</span>
+<span class="w">  </span><span class="p">};</span><span class="w"> </span><span class="c1">// constructor</span>
+<span class="p">};</span><span class="w"> </span><span class="c1">// Constant Radius</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org928c77b">
+<h2 id="org928c77b">A Circulator</h2>
+<div class="outline-text-2" id="text-org928c77b">
 <p>
 <script src="posts/generative-art-a-wavy-circle/circulator.js"></script></p>
 <div class="p5js" id="circulator-50136a19"></div>
-<p><img alt="nil" src="posts/generative-art-a-wavy-circle/circulator.png"></p>
 <div class="highlight">
 <pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">Circulator</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="nx">_to_radians</span><span class="p">;</span>
@@ -102,19 +116,19 @@
 <span class="w">  </span><span class="p">};</span><span class="w"> </span><span class="c1">// theta-opposite</span>
 
 <span class="w">  </span><span class="nx">get</span><span class="w"> </span><span class="nx">x_start</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">center_x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">radius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">cos</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">theta</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">center_x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">radius</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">cos</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">theta</span><span class="p">);</span>
 <span class="w">  </span><span class="p">};</span><span class="w"> </span><span class="c1">// x-start</span>
 
 <span class="w">  </span><span class="nx">get</span><span class="w"> </span><span class="nx">y_start</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">center_y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">radius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">theta</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">center_y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">radius</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">theta</span><span class="p">);</span>
 <span class="w">  </span><span class="p">};</span><span class="w"> </span><span class="c1">// y-start</span>
 
 <span class="w">  </span><span class="nx">get</span><span class="w"> </span><span class="nx">x_end</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">center_x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">radius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">cos</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">theta_opposite</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">center_x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">radius</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">cos</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">theta_opposite</span><span class="p">);</span>
 <span class="w">  </span><span class="p">};</span><span class="w"> </span><span class="c1">// x-end</span>
 
 <span class="w">  </span><span class="nx">get</span><span class="w"> </span><span class="nx">y_end</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">center_y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">radius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">theta_opposite</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">center_y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">radius</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">theta_opposite</span><span class="p">);</span>
 <span class="w">  </span><span class="p">};</span><span class="w"> </span><span class="c1">// y-end</span>
 
 <span class="w">  </span><span class="nx">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -140,7 +154,8 @@
 <span class="w">    </span><span class="nx">p5</span><span class="p">.</span><span class="nx">background</span><span class="p">(</span><span class="s2">"white"</span><span class="p">);</span>
 <span class="w">    </span><span class="nx">p5</span><span class="p">.</span><span class="nx">stroke</span><span class="p">(</span><span class="nx">POINT_COLOR</span><span class="p">);</span>
 <span class="w">    </span><span class="nx">p5</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="nx">POINT_COLOR</span><span class="p">);</span>
-<span class="w">    </span><span class="nx">circulator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Circulator</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">CENTER_X</span><span class="p">,</span><span class="w"> </span><span class="nx">CENTER_Y</span><span class="p">,</span><span class="w"> </span><span class="nx">RADIUS</span><span class="p">,</span><span class="w"> </span><span class="nx">p5</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ConstantRadius</span><span class="p">(</span><span class="nx">RADIUS</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">circulator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Circulator</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">CENTER_X</span><span class="p">,</span><span class="w"> </span><span class="nx">CENTER_Y</span><span class="p">,</span><span class="w"> </span><span class="nx">radius</span><span class="p">,</span><span class="w"> </span><span class="nx">p5</span><span class="p">);</span>
 <span class="w">  </span><span class="p">};</span><span class="w"> </span><span class="c1">// setup</span>
 
 <span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">draw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -152,9 +167,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgd01cfce">
-<h2 id="orgd01cfce">A Fading Circulator</h2>
-<div class="outline-text-2" id="text-orgd01cfce">
+<div class="outline-2" id="outline-container-org3c33f58">
+<h2 id="org3c33f58">A Fading Circulator</h2>
+<div class="outline-text-2" id="text-org3c33f58">
 <p>
 <script src="posts/generative-art-a-wavy-circle/circulaterfader.js"></script></p>
 <div class="p5js" id="hsl-fader-42232bf1"></div>
@@ -226,7 +241,8 @@
 <span class="w">    </span><span class="nx">p5</span><span class="p">.</span><span class="nx">stroke</span><span class="p">(</span><span class="nx">POINT_COLOR</span><span class="p">);</span>
 <span class="w">    </span><span class="nx">p5</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="nx">POINT_COLOR</span><span class="p">);</span>
 
-<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">circulator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Circulator</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">CENTER_X</span><span class="p">,</span><span class="w"> </span><span class="nx">CENTER_Y</span><span class="p">,</span><span class="w"> </span><span class="nx">RADIUS</span><span class="p">,</span><span class="w"> </span><span class="nx">p5</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ConstantRadius</span><span class="p">(</span><span class="nx">RADIUS</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">circulator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Circulator</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">CENTER_X</span><span class="p">,</span><span class="w"> </span><span class="nx">CENTER_Y</span><span class="p">,</span><span class="w"> </span><span class="nx">radius</span><span class="p">,</span><span class="w"> </span><span class="nx">p5</span><span class="p">);</span>
 
 <span class="w">    </span><span class="nx">fader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">HSLFader</span><span class="p">(</span><span class="nx">circulator</span><span class="p">,</span><span class="w"> </span><span class="nx">p5</span><span class="p">);</span>
 <span class="w">  </span><span class="p">};</span><span class="w"> </span><span class="c1">// setup</span>
@@ -238,6 +254,68 @@
 <span class="p">};</span><span class="w"> </span><span class="c1">// hsl-fader-sketch</span>
 
 <span class="ow">new</span><span class="w"> </span><span class="nx">p5</span><span class="p">(</span><span class="nx">hsl_fader_sketch</span><span class="p">,</span><span class="w"> </span><span class="nx">HSL_FADER_DIV</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgc7deefa">
+<h2 id="orgc7deefa">A Noisy Radius</h2>
+<div class="outline-text-2" id="text-orgc7deefa">
+<p>
+<script src="posts/generative-art-a-wavy-circle/noisy_radius.js"></script></p>
+<div class="p5js" id="noisy-fader-20091e70"></div>
+<p><img alt="nil" src="posts/generative-art-a-wavy-circle/noisy_radius.png"></p>
+<div class="highlight">
+<pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">NoisyRadius</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">_noise_coordinate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">scale</span><span class="p">,</span><span class="w"> </span><span class="nx">p5</span><span class="p">,</span><span class="w"> </span><span class="nx">noise_step</span><span class="o">=</span><span class="mf">0.005</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">scale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">scale</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">noise_step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">noise_step</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">p5</span><span class="p">;</span>
+<span class="w">  </span><span class="p">};</span><span class="w"> </span><span class="c1">// constructor</span>
+
+<span class="w">  </span><span class="nx">get</span><span class="w"> </span><span class="nx">noise_coordinate</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">_noise_coordinate</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">noise_step</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">_noise_coordinate</span><span class="p">;</span>
+<span class="w">  </span><span class="p">};</span><span class="w"> </span><span class="c1">// noise_coordinate</span>
+
+<span class="w">  </span><span class="nx">get</span><span class="w"> </span><span class="nx">length</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">_length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">noise</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">noise_coordinate</span><span class="p">)</span>
+<span class="w">                    </span><span class="o">*</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">scale</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">_length</span><span class="p">;</span>
+<span class="w">  </span><span class="p">};</span><span class="w"> </span><span class="c1">// length</span>
+<span class="p">};</span><span class="w"> </span><span class="c1">// NoisyRadius</span>
+</pre></div>
+<div class="highlight">
+<pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">noisy_fader_sketch</span><span class="p">(</span><span class="nx">p5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">WIDTH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">500</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">HEIGHT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">WIDTH</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">POINT_COLOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"RoyalBlue"</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">CENTER_X</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">WIDTH</span><span class="o">/</span><span class="mf">2</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">CENTER_Y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">HEIGHT</span><span class="o">/</span><span class="mf">2</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">RADIUS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">WIDTH</span><span class="o">/</span><span class="mf">2</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">fader</span><span class="p">;</span>
+
+<span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">setup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">p5</span><span class="p">.</span><span class="nx">createCanvas</span><span class="p">(</span><span class="nx">WIDTH</span><span class="p">,</span><span class="w"> </span><span class="nx">HEIGHT</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">p5</span><span class="p">.</span><span class="nx">background</span><span class="p">(</span><span class="s2">"white"</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">p5</span><span class="p">.</span><span class="nx">stroke</span><span class="p">(</span><span class="nx">POINT_COLOR</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">p5</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="nx">POINT_COLOR</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">NoisyRadius</span><span class="p">(</span><span class="nx">RADIUS</span><span class="p">,</span><span class="w"> </span><span class="nx">p5</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">circulator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Circulator</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">CENTER_X</span><span class="p">,</span><span class="w"> </span><span class="nx">CENTER_Y</span><span class="p">,</span><span class="w"> </span><span class="nx">radius</span><span class="p">,</span><span class="w"> </span><span class="nx">p5</span><span class="p">);</span>
+
+<span class="w">    </span><span class="nx">fader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">HSLFader</span><span class="p">(</span><span class="nx">circulator</span><span class="p">,</span><span class="w"> </span><span class="nx">p5</span><span class="p">);</span>
+<span class="w">  </span><span class="p">};</span><span class="w"> </span><span class="c1">// setup</span>
+
+<span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">draw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">fader</span><span class="p">.</span><span class="nx">draw</span><span class="p">();</span>
+<span class="w">  </span><span class="p">};</span><span class="w"> </span><span class="c1">// draw</span>
+
+<span class="p">};</span><span class="w"> </span><span class="c1">// noisy-fader-sketch</span>
+
+<span class="ow">new</span><span class="w"> </span><span class="nx">p5</span><span class="p">(</span><span class="nx">noisy_fader_sketch</span><span class="p">,</span><span class="w"> </span><span class="nx">NOISY_FADER_DIV</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -2457,7 +2535,7 @@ package.json
 <li class="next"><a href="index-3.html" rel="next">Older posts</a></li>
 </ul>
 <!--End of body content-->
-<footer id="footer">Scribbles by <a href="mailto:cloisteredmonkey.jmark@slmail.me">The Cloistered Monkey</a> © 2023 - Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a>
+<footer id="footer">Scribbles by <a href="mailto:cloisteredmonkey.jmark@slmail.me">The Cloistered Monkey</a> - 2023 - Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a>
 <div id="license" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Ape-Iron</span> is licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" rel="license noopener noreferrer" style="display:inline-block;" target="_blank">CC BY-SA 4.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></div>
 </footer>
 </div>

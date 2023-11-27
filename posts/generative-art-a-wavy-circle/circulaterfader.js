@@ -64,8 +64,9 @@ function hsl_fader_sketch(p5) {
     p5.background("white");
     p5.stroke(POINT_COLOR);
     p5.fill(POINT_COLOR);
-    
-    const circulator = new Circulator(1, CENTER_X, CENTER_Y, RADIUS, p5);
+
+    const radius = new ConstantRadius(RADIUS);
+    const circulator = new Circulator(1, CENTER_X, CENTER_Y, radius, p5);
   
     fader = new HSLFader(circulator, p5);
   }; // setup
