@@ -1,0 +1,19 @@
+#+BEGIN_COMMENT
+.. title: Inking Sites
+.. slug: inking-sites
+.. date: 2024-01-09 15:38:00 UTC-08:00
+.. tags: sites,inking
+.. category: Inking
+.. link: 
+.. description: A collection of links to sites about inking.
+.. type: text
+.. status: 
+.. updated: 
+
+#+END_COMMENT
+#+OPTIONS: ^:{}
+#+TOC: headlines 2
+
+* Pen and Ink Advice
+
+ - [[https://longstrideillustration.com/][Longstride Illustration]]: Lots of information about inking (found when searching for Master Studies)

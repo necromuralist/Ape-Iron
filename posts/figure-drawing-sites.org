@@ -11,6 +11,8 @@
 .. updated: 
 
 #+END_COMMENT
+#+OPTIONS: ^:{}
+#+TOC: headlines 2
 
 * Figure Reference
 - [[https://www.posemaniacs.com/][Pose Maniacs]]
