@@ -176,16 +176,15 @@ img {
  .container {
     max-width: 1224px;
 }
-
- /* P5.js */
+ 
  /* the canvas with the sketch (p5.js sets this class) */
  .p5Canvas {
      display: block;
      margin-left: auto;
      margin-right: auto;
  }
-
-/* from https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/ */
+ /* from https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/ */
+ 
 blockquote {
   background: #f9f9f9;
   border-left: 10px solid #ccc;
@@ -243,7 +242,7 @@ footer {
     text-align: center;
 }
 
-/* for the image attribution */
+/* for the imaga attribution */
 
 .attribution {
     text-align: center;
