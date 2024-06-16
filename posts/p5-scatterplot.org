@@ -1,0 +1,64 @@
+#+BEGIN_COMMENT
+.. title: P5 Scatterplot
+.. slug: p5-scatterplot
+.. date: 2024-06-15 18:28:35 UTC-07:00
+.. tags: p5.js,data-visualization
+.. category: P5js
+.. link: 
+.. description : Using p5.js to plot some data.
+.. type: text
+.. status: 
+.. updated: 
+#+END_COMMENT
+#+OPTIONS: ^:{}
+#+TOC: headlines 2
+#+PROPERTY: header-args :session ~/.local/share/jupyter/runtime/kernel-b56b2f1c-5786-45ef-87ef-ab89241068c1-ssh.json
+
+#+BEGIN_SRC python :results none :exports none
+%load_ext autoreload
+%autoreload 2
+#+END_SRC
+
+The "rando-5000.csv" is a subset of citi-bike data used to illustrate [[https://github.com/CenterForSpatialResearch/dataviz_tutorials/blob/master/04_WorkingWithData_p5js.md][WorkingWithData_p5.js]].
+
+* Rando 5000
+
+This file comes from the "Center For Spatial Research's" tutorial on github. The file contains data about trips taken using Citi Bikes in New York City in October 2017. For the tutorial they took a random sample of the trips from October 10, 2017 where a year of birth was given for the rider.
+
+** The Columns
+
+ - First Column (No header): looks like an index
+ - =tripduration=
+ - =starttime=
+ - =stoptime=
+ - =start station id=
+ - =start station name=
+ - =start station latitude=
+ - =start station longitude=
+ - =end station id=
+ - =end station name=
+ - =end station latitude=
+ - =end station longitude=
+ - =bikeid=
+ - =usertype=
+ - =birth year=
+ - =gender=
+
+** User Type
+
+| Value      | Meaning                    |
+|------------+----------------------------|
+| Customer   | 24-hour pass or 3-day pass |
+| Subscriber | Annual Member              |
+
+** Gender
+
+| Value | Meaning |
+|-------+---------|
+|     0 | Unknown |
+|     1 | Male    |
+|     2 | Female  |
+
+* Links
+ - [[https://github.com/CenterForSpatialResearch/dataviz_tutorials/blob/master/04_WorkingWithData_p5js.md][Working With Data]]: The markdown file on GitHub where I found the link to this data.
+ - [[https://citibikenyc.com/system-data][Citi Bike Trip Histories]]: This is the page for the Citi Bike data, although note that the datasets here are old while this page is for their current data (so the column names might not match)
