@@ -2,7 +2,7 @@
 .. title: P5.js Hello
 .. slug: p5js-hello
 .. date: 2024-07-13 20:31:47 UTC-07:00
-.. tags: javascript, p5.js
+.. tags: javascript,p5.js,notetofutureself
 .. category: P5js
 .. link: 
 .. description: 
@@ -16,7 +16,25 @@
 
 {{% p5div  source="hello.js" divid="hello-08b095a8" %}}
 
-* The Tangle
+* What Is This?
+
+This is a template-like post to remind me how to make p5.js posts. In short you need to:
+
+- Make an HTML ~div~ tag to put the p5.js tag in (I use a nikola shortcode I made to do it).
+
+- Make a sketch that defines the necessary ~p5.js~ methods (mostly ~setup~ and ~draw~)
+
+- Create a P5 object, passing in the sketch and the div ID to the constructor.
+
+* The Setup
+
+The next two sections in this post won't normally be visible in other posts, they're idiosyncratic to the fact that I'm using nikola and a noweb-like style with org-mode.
+
+** The Tangle
+
+Since the intent is to define the javascript in the org-mode posts and then export it I'll typically create a ~tangle~ code block. The header has the path relative to the org-mode file that makes up this post. This file is in a sub-folder (~posts/~) so the path has to go up one directory first then back down into the ~files/posts/~ folder and then into another sub-folder whose name matches the slug for this post (~p5js-hello~). The folder named after the slug doesn't exist by default and won't be created by emacs (it will just fail with a message in the emacs mini-buffer when you export the file) so you need to create it before doing the export.
+
+The tangle is made up of references to blocks that I'll be defining in later sections, refering to them using their name (e.g. ~<<hello-div>>~ in this tangle will match an org-mode block named ~hello-div~ in the next section of this post).
 
 #+begin_src org
 ,#+begin_src js :tangle ../files/posts/p5js-hello/hello.js :exports none
@@ -40,19 +58,47 @@
 <<p5-instance>>
 #+end_src
 
-* The DIV Shortcode
+** The DIV Shortcode
+
+In order to specify where in this post the ~p5.js~ sketch will be rendered I need to create an HTML ~div~ tag which points to the javascript file I created in the tangle section above (in this case the file is ~hello.js~ ). We also want to give the ~div~ an ID that we define so that we can tell ~p5.js~ to use it for the sketch (in this case it will be ~"hello-08b095a8"~).
 
 #+begin_src python
 {{% p5div  source="hello.js" divid="hello-08b095a8" %}}
 #+end_src
 
-* The Div
+#+begin_notecard
+The ~hello.js~ file will sit next to the HTML file for this post once we export it so you only want the file name, not the path to the folder it sits in. I'm mentioning it here because I sometimes get mixed up as to which files need a path from this post (like the tangle), which files need paths from the top of the repository (most non-org commands), and which just need the file-name.
+#+end_notecard
+
+When ~nikola~ builds the site it will convert that shortcode to a div that looks something like:
+
+#+begin_src html
+<div source="hello.js" id="hello-08b095a8">
+#+end_src
+
+* The Javascript
+
+The remaining sections define the javascript that get's exported into the tangle file that I defined in the first section of this post.
+
+** The Div ID
+
+Since we need to pass the ID given to the ~div~ tag in the previous section I'll store it in a variable for later.
 
 #+begin_src js :noweb-ref hello-div
 const HELLO_DIV = "hello-08b095a8";
 #+end_src
 
-* The Hello Class
+As noted above, the tangle refers to the javascript blocks I'm defining in the rest of the documents by name. The header where I stick the name doesn't get exported so just for this block I'll show what it looks like with the org-mode header and the javascript.
+
+#+begin_src org
+,#+begin_src js :noweb-ref hello-div
+,const HELLO_DIV = "hello-08b095a8";
+,#+end_src
+#+end_src
+
+Here the ~:noweb-ref hello-div~ tells org-mode to stick the javascript into the tangle block above where the ~<<hello-div>>~ placeholder text is.
+
+** The Hello Class
 
 #+begin_src js :noweb-ref hello-class
 class Hello {
@@ -77,7 +123,7 @@ class Hello {
 }; // Hello
 #+end_src
 
-* Hello Sketch
+** Hello Sketch
 
 #+begin_src js :noweb-ref hello-sketch
 function hello_sketch(p5){
@@ -104,7 +150,7 @@ function hello_sketch(p5){
 }; // hello_sketch
 #+end_src
 
-* P5 Object
+** P5 Object
 
 #+begin_src js :noweb-ref p5-instance
 new p5(hello_sketch, HELLO_DIV);
