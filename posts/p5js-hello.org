@@ -92,7 +92,7 @@ As noted above, the tangle refers to the javascript blocks I'm defining in the r
 
 #+begin_src org
 ,#+begin_src js :noweb-ref hello-div
-,const HELLO_DIV = "hello-08b095a8";
+const HELLO_DIV = "hello-08b095a8";
 ,#+end_src
 #+end_src
 
