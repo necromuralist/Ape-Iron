@@ -18,23 +18,31 @@
 
 * What Is This?
 
-This is a template-like post to remind me how to make p5.js posts. In short you need to:
+This is a post to remind me how to make p5.js posts. It's idiosyncratic to the way I work and is meant to help me get restarted if I stop using p5.js for a little while. The short version:
 
 - Make an HTML ~div~ tag to put the p5.js tag in (I use a nikola shortcode I made to do it).
 
-- Make a sketch that defines the necessary ~p5.js~ methods (mostly ~setup~ and ~draw~)
+- Make a sketch that defines the necessary ~p5.js~ methods (mostly ~setup~ and ~draw~).
 
 - Create a P5 object, passing in the sketch and the div ID to the constructor.
 
 * The Setup
 
-The next two sections in this post won't normally be visible in other posts, they're idiosyncratic to the fact that I'm using nikola and a noweb-like style with org-mode.
+The next three sections in this post won't normally be visible in other posts, they're specific to my use of nikola and a noweb-like style with org-mode.
 
-** The Tangle
+** <<meta-header>> The Meta-Header
 
-Since the intent is to define the javascript in the org-mode posts and then export it I'll typically create a ~tangle~ code block. The header has the path relative to the org-mode file that makes up this post. This file is in a sub-folder (~posts/~) so the path has to go up one directory first then back down into the ~files/posts/~ folder and then into another sub-folder whose name matches the slug for this post (~p5js-hello~). The folder named after the slug doesn't exist by default and won't be created by emacs (it will just fail with a message in the emacs mini-buffer when you export the file) so you need to create it before doing the export.
+To get ~p5.js~ into this post I'm using a template I made and telling nikola to use it in the meta-data block at the beginning of the file for this post.
 
-The tangle is made up of references to blocks that I'll be defining in later sections, refering to them using their name (e.g. ~<<hello-div>>~ in this tangle will match an org-mode block named ~hello-div~ in the next section of this post).
+#+begin_src org
+.. template: p5.tmpl
+#+end_src
+
+** <<the-tangle>> The Tangle
+
+Since the intent is to define the javascript in the org-mode blocks and then export it I'll typically create a ~tangle~ code block to control the export. The org-mode header uses a path relative to the org-mode file that makes up this post. This file is in a sub-folder (~posts/~) so the path has to go up one directory first then back down into the ~files/posts/~ folder and then into another sub-folder whose name matches the slug for this post (~p5js-hello~). The folder named after the slug doesn't exist by default and won't be created by emacs (it will just fail with a message in the emacs mini-buffer when you export the file) so you need to create it before doing the export.
+
+The tangle is made up of references to blocks that I'll be defining in later sections, refering to them using their name. For example, ~<<hello-div>>~ in this tangle will match an org-mode block named ~hello-div~ defined in a later section of this post.
 
 #+begin_src org
 ,#+begin_src js :tangle ../files/posts/p5js-hello/hello.js :exports none
@@ -58,37 +66,50 @@ The tangle is made up of references to blocks that I'll be defining in later sec
 <<p5-instance>>
 #+end_src
 
-** The DIV Shortcode
+** <<the-div-shortcode>> The DIV Shortcode
 
-In order to specify where in this post the ~p5.js~ sketch will be rendered I need to create an HTML ~div~ tag which points to the javascript file I created in the tangle section above (in this case the file is ~hello.js~ ). We also want to give the ~div~ an ID that we define so that we can tell ~p5.js~ to use it for the sketch (in this case it will be ~"hello-08b095a8"~).
+
+In order to specify where in this post the ~p5.js~ sketch will be rendered I need to create an HTML ~source~ tag which points to the javascript file I created in the tangle section above (in this case the file is ~hello.js~ ). We also want to create a ~div~ tag with an ID that we define so that we can tell ~p5.js~ to use it for the sketch (in this case it will be ~"hello-08b095a8"~).
+
+This is the jinja-based shortcode I use to put those two tags into the post.
 
 #+begin_src python
 {{% p5div  source="hello.js" divid="hello-08b095a8" %}}
 #+end_src
 
 #+begin_notecard
-The ~hello.js~ file will sit next to the HTML file for this post once we export it so you only want the file name, not the path to the folder it sits in. I'm mentioning it here because I sometimes get mixed up as to which files need a path from this post (like the tangle), which files need paths from the top of the repository (most non-org commands), and which just need the file-name.
+The ~hello.js~ file will sit next to the HTML file for this post once we export it so you only want the file name, not the path to the folder it sits in. I'm mentioning it here because I sometimes get mixed up between the three cases I've run into for files:
+
+ - files that need a path from this post (like the tangle)
+ - files that need paths from the top of the repository (ones using commands run outside of org-mode)
+ - files that just need the file-name.
 #+end_notecard
 
-When ~nikola~ builds the site it will convert that shortcode to a div that looks something like:
+When ~nikola~ builds the site it will convert that shortcode to a couple of tags that look something like:
 
 #+begin_src html
-<div source="hello.js" id="hello-08b095a8">
+<script source="hello.js">
+  
+<div class="p5js" id="hello-08b095a8"></div>
 #+end_src
+
+#+begin_notecard
+Since the only thing that's specific to p5 in the shortcode I'm using is the setting of the class I'm thinking of getting rid of it and making a more generic shortcode.
+#+end_notecard
 
 * The Javascript
 
 The remaining sections define the javascript that get's exported into the tangle file that I defined in the first section of this post.
 
-** The Div ID
+** <<div-id-constant>> The Div ID
 
-Since we need to pass the ID given to the ~div~ tag in the previous section I'll store it in a variable for later.
+Since we need to pass the ID given to the ~div~ tag in the previous section to P5 I'll store it in a variable for later.
 
 #+begin_src js :noweb-ref hello-div
 const HELLO_DIV = "hello-08b095a8";
 #+end_src
 
-As noted above, the tangle refers to the javascript blocks I'm defining in the rest of the documents by name. The header where I stick the name doesn't get exported so just for this block I'll show what it looks like with the org-mode header and the javascript.
+As noted above, the tangle refers to the javascript blocks I'm defining in the rest of the document by name. The header where I stick the name doesn't get exported so just for this block I'll show what it looks like with the org-mode header along with the javascript in the block.
 
 #+begin_src org
 ,#+begin_src js :noweb-ref hello-div
@@ -98,7 +119,9 @@ const HELLO_DIV = "hello-08b095a8";
 
 Here the ~:noweb-ref hello-div~ tells org-mode to stick the javascript into the tangle block above where the ~<<hello-div>>~ placeholder text is.
 
-** The Hello Class
+** <<the-hello-class>> The Hello Class
+
+Here's a toy class that keeps the parameters for the circle and which draws the circle when its ~draw~ method is called.
 
 #+begin_src js :noweb-ref hello-class
 class Hello {
@@ -123,7 +146,9 @@ class Hello {
 }; // Hello
 #+end_src
 
-** Hello Sketch
+** <<hello-sketch>> Hello Sketch
+
+Here's the sketch that gets passed to the P5 constructor.
 
 #+begin_src js :noweb-ref hello-sketch
 function hello_sketch(p5){
@@ -150,8 +175,23 @@ function hello_sketch(p5){
 }; // hello_sketch
 #+end_src
 
-** P5 Object
+** <<new-p5-object>> P5 Object
+
+Finally, I'll instantiate a ~p5~ object, giving it the sketch and ~div~ ID to have ~p5.js~ render the code I defined.
 
 #+begin_src js :noweb-ref p5-instance
 new p5(hello_sketch, HELLO_DIV);
 #+end_src
+
+* The End
+
+And that's it for the basic post. The parts once again:
+
+- use the p5 nikola template [[meta-header][in the meta-header]]
+- [[the-tangle][tangle]] the javascript to a file in ~files/posts/<slug>~
+- setup the ~script~ and ~div~ tags to include the sketch (using [[the-div-shortcode][the p5div shortcode]])
+- write [[hello-sketch][the sketch]] to pass to p5 (using the same [[div-id-constant][DIV ID]] and, in this case, [[the-hello-class][the Hello class]])
+- create a [[new-p5-object][p5 object]] using the sketch and ~div~ ID
+* Links
+
+- [[https://orgmode.org/manual/Noweb-Reference-Syntax.html][Org-Mode noweb reference]]
