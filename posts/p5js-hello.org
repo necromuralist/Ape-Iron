@@ -18,9 +18,12 @@
 
 * What Is This?
 
-This is a post to remind me how to make p5.js posts. It's idiosyncratic to the way I work and is meant to help me get restarted if I stop using p5.js for a little while. The short version:
+This is a post to remind me how to make p5.js posts. It's based on my somewhat idiosyncratic way of working and is meant to help me get restarted if I stop using p5.js for a little while. The short version:
 
-- Make an HTML ~div~ tag to put the p5.js tag in (I use a nikola shortcode I made to do it).
+
+- Include the ~p5.js~ javascript library.
+  
+- Make an HTML ~div~ tag to locate the p5.js sketch in the post.
 
 - Make a sketch that defines the necessary ~p5.js~ methods (mostly ~setup~ and ~draw~).
 
@@ -28,14 +31,20 @@ This is a post to remind me how to make p5.js posts. It's idiosyncratic to the w
 
 * The Setup
 
-The next three sections in this post won't normally be visible in other posts, they're specific to my use of nikola and a noweb-like style with org-mode.
+The next three sections in this post won't normally be visible in other posts, they're specific to my use of nikola and a noweb-like style with org-mode and will be in the source but won't be in the exported HTML.
 
 ** <<meta-header>> The Meta-Header
 
-To get ~p5.js~ into this post I'm using a template I made and telling nikola to use it in the meta-data block at the beginning of the file for this post.
+To get ~p5.js~ into this post I'm telling nikola to use a template I made in the meta-data block at the beginning of the file for this post.
 
 #+begin_src org
 .. template: p5.tmpl
+#+end_src
+
+The ~p5.tmpl~ template adds an HTML tag to include the p5 javascript code in the HEAD section of the HTML document.
+
+#+begin_src html
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
 #+end_src
 
 ** <<the-tangle>> The Tangle
