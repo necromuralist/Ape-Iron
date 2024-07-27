@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron (Posts about p5)</title><link>https://necromuralist.github.io/Ape-Iron/</link><description></description><atom:link href="https://necromuralist.github.io/Ape-Iron/categories/p5.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;The Cloistered Monkey&lt;/a&gt; 
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron (Posts about p5)</title><link>https://necromuralist.github.io/Ape-Iron/</link><description></description><atom:link href="https://necromuralist.github.io/Ape-Iron/categories/p5.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;The Cloistered Monkey&lt;/a&gt; 
 &lt;div id="license" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"&gt;&lt;span property="dct:title"&gt;Ape-Iron&lt;/span&gt; is licensed under
 &lt;a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY-SA 4.0
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"&gt;&lt;/a&gt;&lt;/p&gt; 
-</copyright><lastBuildDate>Fri, 17 Nov 2023 00:04:42 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>A Validator for SliderSettings</title><link>https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
+</copyright><lastBuildDate>Tue, 25 Jun 2024 03:43:09 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>A Validator for SliderSettings</title><link>https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#orgbe88229"&gt;The Validator&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#orgeb59ee4"&gt;The Validator&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#org30dc8cc"&gt;Class Declaration&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#org7921131"&gt;Is A Number&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#org05565b6"&gt;Is Set&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#org6e03353"&gt;Is An Integer&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#orga0a5bbb"&gt;Is An Element's ID&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#org3dbdbe2"&gt;Class Declaration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#org1a681b9"&gt;Is A Number&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#orga3f39cf"&gt;Is Set&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#org6d3f31e"&gt;Is An Integer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#org150e14e"&gt;Is An Element's ID&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#orgc25e22b"&gt;Links&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#org23107c0"&gt;Links&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#orgc20e07e"&gt;Related Posts&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#org74505c0"&gt;Javascript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#orgba2aec2"&gt;Related Posts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html#org8926600"&gt;Javascript&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgbe88229" class="outline-2"&gt;
-&lt;h2 id="orgbe88229"&gt;The Validator&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgbe88229"&gt;
+&lt;div id="outline-container-orgeb59ee4" class="outline-2"&gt;
+&lt;h2 id="orgeb59ee4"&gt;The Validator&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgeb59ee4"&gt;
 &lt;p&gt;
 &lt;img src="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/validator.png" alt="Validator UML"&gt;
 &lt;/p&gt;
@@ -40,17 +40,17 @@ The &lt;code&gt;Validator&lt;/code&gt; class checks the type of a given value an
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org30dc8cc" class="outline-3"&gt;
-&lt;h3 id="org30dc8cc"&gt;Class Declaration&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org30dc8cc"&gt;
+&lt;div id="outline-container-org3dbdbe2" class="outline-3"&gt;
+&lt;h3 id="org3dbdbe2"&gt;Class Declaration&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org3dbdbe2"&gt;
 &lt;p&gt;
 The constructor takes the &lt;code&gt;document&lt;/code&gt; as an argument to make it testable and also to make explicit where it came from. The class also defines an array &lt;code&gt;emptiness&lt;/code&gt; to hold the values that I'll use to check if a variable was set.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org1765f20" class="outline-4"&gt;
-&lt;h4 id="org1765f20"&gt;Setup JSDOM For Testing&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org1765f20"&gt;
+&lt;div id="outline-container-orgdfe1324" class="outline-4"&gt;
+&lt;h4 id="orgdfe1324"&gt;Setup JSDOM For Testing&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgdfe1324"&gt;
 &lt;p&gt;
 This is the document that I'm passing to the &lt;code&gt;Validator&lt;/code&gt; for testing.
 &lt;/p&gt;
@@ -69,9 +69,9 @@ This is the document that I'm passing to the &lt;code&gt;Validator&lt;/code&gt; 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org8544a53" class="outline-4"&gt;
-&lt;h4 id="org8544a53"&gt;Test And Implement The Validator Class&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org8544a53"&gt;
+&lt;div id="outline-container-org6e70ea2" class="outline-4"&gt;
+&lt;h4 id="org6e70ea2"&gt;Test And Implement The Validator Class&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org6e70ea2"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;Feature:&lt;/span&gt;&lt;span class="nf"&gt; Validator&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -100,7 +100,7 @@ And here's the class definition that the &lt;code&gt;Given&lt;/code&gt; is using
 These blocks are the pattern that I'm going to follow for most of the rest of the code:
 &lt;/p&gt;
 
-&lt;div class="notecard" id="org482d223"&gt;
+&lt;div class="notecard" id="orga46f708"&gt;
 &lt;ol class="org-ol"&gt;
 &lt;li&gt;Feature file fragment.&lt;/li&gt;
 &lt;li&gt;Test implementation to match the feature file.&lt;/li&gt;
@@ -112,17 +112,17 @@ These blocks are the pattern that I'm going to follow for most of the rest of th
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org7921131" class="outline-3"&gt;
-&lt;h3 id="org7921131"&gt;Is A Number&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org7921131"&gt;
+&lt;div id="outline-container-org1a681b9" class="outline-3"&gt;
+&lt;h3 id="org1a681b9"&gt;Is A Number&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org1a681b9"&gt;
 &lt;p&gt;
 Our first method checks that a variable holds a number of some kind.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org589ebf3" class="outline-4"&gt;
-&lt;h4 id="org589ebf3"&gt;The Scenarios&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org589ebf3"&gt;
+&lt;div id="outline-container-org696becc" class="outline-4"&gt;
+&lt;h4 id="org696becc"&gt;The Scenarios&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org696becc"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;Scenario:&lt;/span&gt;&lt;span class="nf"&gt; The expected number is a number.&lt;/span&gt;
 
 &lt;span class="k"&gt;Given &lt;/span&gt;&lt;span class="nf"&gt;a Validator&lt;/span&gt;
@@ -144,7 +144,7 @@ Our first method checks that a variable holds a number of some kind.
 This is the case where we get what we wanted.
 &lt;/p&gt;
 
-&lt;div class="notecard" id="orgbed2259"&gt;
+&lt;div class="notecard" id="org1300c85"&gt;
 &lt;p&gt;
 &lt;b&gt;&lt;b&gt;Note:&lt;/b&gt;&lt;/b&gt; I added a second check for &lt;code&gt;0&lt;/code&gt; because I was originally using the &lt;a href="https://developer.mozilla.org/en-US/docs/Glossary/Falsy"&gt;&lt;code&gt;falsy&lt;/code&gt;&lt;/a&gt; check (&lt;code&gt;!(actual)&lt;/code&gt;) but it turns out that 0 would be considered false if you do that so I added an explicit check to make sure I wasn't disallowing 0.
 &lt;/p&gt;
@@ -200,9 +200,9 @@ This isn't explicitly needed, I think, since it falls within "non-number" but I 
 &lt;/div&gt;
 
 
-&lt;div id="outline-container-org4536eda" class="outline-4"&gt;
-&lt;h4 id="org4536eda"&gt;The Method&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org4536eda"&gt;
+&lt;div id="outline-container-orgf5cb473" class="outline-4"&gt;
+&lt;h4 id="orgf5cb473"&gt;The Method&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgf5cb473"&gt;
 &lt;p&gt;
 And here's the implementation.
 &lt;/p&gt;
@@ -221,17 +221,17 @@ The first condition checks that the number isn't &lt;a href="https://developer.m
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org05565b6" class="outline-3"&gt;
-&lt;h3 id="org05565b6"&gt;Is Set&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org05565b6"&gt;
+&lt;div id="outline-container-orga3f39cf" class="outline-3"&gt;
+&lt;h3 id="orga3f39cf"&gt;Is Set&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orga3f39cf"&gt;
 &lt;p&gt;
 This is for the cases where I have no particular type in the mind but a variable does need to be set to something.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org51ce7a4" class="outline-4"&gt;
-&lt;h4 id="org51ce7a4"&gt;Scenarios&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org51ce7a4"&gt;
+&lt;div id="outline-container-orgc83b4fa" class="outline-4"&gt;
+&lt;h4 id="orgc83b4fa"&gt;Scenarios&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgc83b4fa"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;Scenario:&lt;/span&gt;&lt;span class="nf"&gt; The variable has a value set.&lt;/span&gt;
 
 &lt;span class="k"&gt;Given &lt;/span&gt;&lt;span class="nf"&gt;a Validator&lt;/span&gt;
@@ -298,9 +298,9 @@ I wouldn't think this would be something that needs to be checked, but since jav
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org2ff787d" class="outline-4"&gt;
-&lt;h4 id="org2ff787d"&gt;The Method&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org2ff787d"&gt;
+&lt;div id="outline-container-org935660b" class="outline-4"&gt;
+&lt;h4 id="org935660b"&gt;The Method&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org935660b"&gt;
 &lt;p&gt;
 This checks if the value is in whatever is in the &lt;code&gt;emptiness&lt;/code&gt; array, which as of now has:
 &lt;/p&gt;
@@ -325,13 +325,13 @@ I'm not sure about that last one. I think I was trying to use all the &lt;code&g
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org6e03353" class="outline-3"&gt;
-&lt;h3 id="org6e03353"&gt;Is An Integer&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org6e03353"&gt;
+&lt;div id="outline-container-org6d3f31e" class="outline-3"&gt;
+&lt;h3 id="org6d3f31e"&gt;Is An Integer&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org6d3f31e"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org40ca033" class="outline-4"&gt;
-&lt;h4 id="org40ca033"&gt;The Scenarios&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org40ca033"&gt;
+&lt;div id="outline-container-orgc2b173a" class="outline-4"&gt;
+&lt;h4 id="orgc2b173a"&gt;The Scenarios&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgc2b173a"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;Scenario:&lt;/span&gt;&lt;span class="nf"&gt; The variable has an integer&lt;/span&gt;
 
 &lt;span class="k"&gt;Given &lt;/span&gt;&lt;span class="nf"&gt;a Validator&lt;/span&gt;
@@ -417,9 +417,9 @@ Since I showed above that &lt;i&gt;5.0&lt;/i&gt; is considered an integer I felt
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgfdcc70d" class="outline-4"&gt;
-&lt;h4 id="orgfdcc70d"&gt;The Method&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgfdcc70d"&gt;
+&lt;div id="outline-container-org7f441a1" class="outline-4"&gt;
+&lt;h4 id="org7f441a1"&gt;The Method&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org7f441a1"&gt;
 &lt;p&gt;
 This is, oddly, the only built-in that I could find that does type checks (but I didn't look that hard, and I was using DuckDuckGo so I might have found something using a different search engine).
 &lt;/p&gt;
@@ -434,17 +434,17 @@ This is, oddly, the only built-in that I could find that does type checks (but I
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orga0a5bbb" class="outline-3"&gt;
-&lt;h3 id="orga0a5bbb"&gt;Is An Element's ID&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orga0a5bbb"&gt;
+&lt;div id="outline-container-org150e14e" class="outline-3"&gt;
+&lt;h3 id="org150e14e"&gt;Is An Element's ID&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org150e14e"&gt;
 &lt;p&gt;
 This is what really started it all. I had some mysterious errors &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-spiral/index.html"&gt;drawing a spiral&lt;/a&gt; which turned out to be because I had changed a div ID in the HTML but not in the javascript. So this checks to see if there really an element with the ID. It doesn't check if it's the &lt;b&gt;right&lt;/b&gt; ID, but I don't know that there's a simple way to do that anyway.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgd078a9a" class="outline-4"&gt;
-&lt;h4 id="orgd078a9a"&gt;The Scenarios&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgd078a9a"&gt;
+&lt;div id="outline-container-orgac14362" class="outline-4"&gt;
+&lt;h4 id="orgac14362"&gt;The Scenarios&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgac14362"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;Scenario:&lt;/span&gt;&lt;span class="nf"&gt; A valid ID is given.&lt;/span&gt;
 
 &lt;span class="k"&gt;Given &lt;/span&gt;&lt;span class="nf"&gt;a Validator&lt;/span&gt;
@@ -489,9 +489,9 @@ Although I suppose the odds of a random string matching my &lt;code&gt;div&lt;/c
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orga21a349" class="outline-4"&gt;
-&lt;h4 id="orga21a349"&gt;The Method&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orga21a349"&gt;
+&lt;div id="outline-container-org6d00e1f" class="outline-4"&gt;
+&lt;h4 id="org6d00e1f"&gt;The Method&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org6d00e1f"&gt;
 &lt;p&gt;
 This relies on the built-in &lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById"&gt;&lt;code&gt;document.getElementById&lt;/code&gt;&lt;/a&gt; method (well, built-in when there's a browser).
 &lt;/p&gt;
@@ -506,22 +506,22 @@ This relies on the built-in &lt;a href="https://developer.mozilla.org/en-US/docs
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgc25e22b" class="outline-2"&gt;
-&lt;h2 id="orgc25e22b"&gt;Links&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgc25e22b"&gt;
+&lt;div id="outline-container-org23107c0" class="outline-2"&gt;
+&lt;h2 id="org23107c0"&gt;Links&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org23107c0"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgc20e07e" class="outline-3"&gt;
-&lt;h3 id="orgc20e07e"&gt;Related Posts&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgc20e07e"&gt;
+&lt;div id="outline-container-orgba2aec2" class="outline-3"&gt;
+&lt;h3 id="orgba2aec2"&gt;Related Posts&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgba2aec2"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/slider-settings-and-validator/index.html"&gt;Slider and Caption Settings&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org74505c0" class="outline-3"&gt;
-&lt;h3 id="org74505c0"&gt;Javascript&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org74505c0"&gt;
+&lt;div id="outline-container-org8926600" class="outline-3"&gt;
+&lt;h3 id="org8926600"&gt;Javascript&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org8926600"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;Document: getElementById() method - Web APIs | MDN [Internet]. 2023 [cited 2023 Oct 3]. Available from: &lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById"&gt;https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById&lt;/a&gt;&lt;/li&gt;
 
@@ -541,36 +541,36 @@ This relies on the built-in &lt;a href="https://developer.mozilla.org/en-US/docs
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/the-great-slidini/index.html#orga4095ab"&gt;Slidini&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/the-great-slidini/index.html#org6475c4e"&gt;Slidini&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/the-great-slidini/index.html#orge4cb44d"&gt;The Class Declaration&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/the-great-slidini/index.html#org5efd92c"&gt;The Constructor&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/the-great-slidini/index.html#orgdd9e543"&gt;The Slider&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/the-great-slidini/index.html#orge1bf3ef"&gt;The Caption&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/the-great-slidini/index.html#org9977861"&gt;The Caption Updater&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/the-great-slidini/index.html#orge5b8194"&gt;The Class Declaration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/the-great-slidini/index.html#org7023448"&gt;The Constructor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/the-great-slidini/index.html#orgbcd7bc8"&gt;The Slider&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/the-great-slidini/index.html#orgf4826aa"&gt;The Caption&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/the-great-slidini/index.html#org9e7386f"&gt;The Caption Updater&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/the-great-slidini/index.html#org92c370d"&gt;Links&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/the-great-slidini/index.html#org223b5b6"&gt;Links&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/the-great-slidini/index.html#org485ef77"&gt;Related Posts&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/the-great-slidini/index.html#org0c793ce"&gt;Reference&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/the-great-slidini/index.html#org9f2bd4f"&gt;Related Posts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/the-great-slidini/index.html#orgc3f5815"&gt;Reference&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orga4095ab" class="outline-2"&gt;
-&lt;h2 id="orga4095ab"&gt;Slidini&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orga4095ab"&gt;
+&lt;div id="outline-container-org6475c4e" class="outline-2"&gt;
+&lt;h2 id="org6475c4e"&gt;Slidini&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org6475c4e"&gt;
 &lt;p&gt;
 &lt;img src="https://necromuralist.github.io/Ape-Iron/posts/the-great-slidini/slidini.png" alt="nil"&gt;
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orge4cb44d" class="outline-3"&gt;
-&lt;h3 id="orge4cb44d"&gt;The Class Declaration&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orge4cb44d"&gt;
+&lt;div id="outline-container-orge5b8194" class="outline-3"&gt;
+&lt;h3 id="orge5b8194"&gt;The Class Declaration&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orge5b8194"&gt;
 &lt;p&gt;
 The Slidini class is going to create two HTML elements - a Slider and a label (what I call a caption) for the slider.
 &lt;/p&gt;
@@ -582,9 +582,9 @@ The Slidini class is going to create two HTML elements - a Slider and a label (w
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org5efd92c" class="outline-3"&gt;
-&lt;h3 id="org5efd92c"&gt;The Constructor&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org5efd92c"&gt;
+&lt;div id="outline-container-org7023448" class="outline-3"&gt;
+&lt;h3 id="org7023448"&gt;The Constructor&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org7023448"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;Feature:&lt;/span&gt;&lt;span class="nf"&gt; A Slidini class to hold a slider and its caption.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -601,9 +601,9 @@ The &lt;code&gt;slider_settings&lt;/code&gt; and &lt;code&gt;caption_settings&lt
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgdd9e543" class="outline-3"&gt;
-&lt;h3 id="orgdd9e543"&gt;The Slider&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgdd9e543"&gt;
+&lt;div id="outline-container-orgbcd7bc8" class="outline-3"&gt;
+&lt;h3 id="orgbcd7bc8"&gt;The Slider&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgbcd7bc8"&gt;
 &lt;p&gt;
 This creates the slider and the caption. I decided to muddy them together like this in order to create the callback to update the caption whenever the slider is updated, and to add the initial caption once the slider is created.
 &lt;/p&gt;
@@ -633,9 +633,9 @@ This creates the slider and the caption. I decided to muddy them together like t
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orge1bf3ef" class="outline-3"&gt;
-&lt;h3 id="orge1bf3ef"&gt;The Caption&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orge1bf3ef"&gt;
+&lt;div id="outline-container-orgf4826aa" class="outline-3"&gt;
+&lt;h3 id="orgf4826aa"&gt;The Caption&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgf4826aa"&gt;
 &lt;p&gt;
 This is the caption for the slider. It expects there to be a &lt;code&gt;div&lt;/code&gt; that it can stick the caption into.
 &lt;/p&gt;
@@ -651,9 +651,9 @@ This is the caption for the slider. It expects there to be a &lt;code&gt;div&lt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org9977861" class="outline-3"&gt;
-&lt;h3 id="org9977861"&gt;The Caption Updater&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org9977861"&gt;
+&lt;div id="outline-container-org9e7386f" class="outline-3"&gt;
+&lt;h3 id="org9e7386f"&gt;The Caption Updater&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org9e7386f"&gt;
 &lt;p&gt;
 This sets the caption to the current value of the slider. It's used both to initialize the caption and as a callback to update the caption whenever the slider's value changes.
 &lt;/p&gt;
@@ -668,22 +668,22 @@ This sets the caption to the current value of the slider. It's used both to init
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org92c370d" class="outline-2"&gt;
-&lt;h2 id="org92c370d"&gt;Links&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org92c370d"&gt;
+&lt;div id="outline-container-org223b5b6" class="outline-2"&gt;
+&lt;h2 id="org223b5b6"&gt;Links&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org223b5b6"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org485ef77" class="outline-3"&gt;
-&lt;h3 id="org485ef77"&gt;Related Posts&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org485ef77"&gt;
+&lt;div id="outline-container-org9f2bd4f" class="outline-3"&gt;
+&lt;h3 id="org9f2bd4f"&gt;Related Posts&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org9f2bd4f"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/slider-settings-and-validator/index.html"&gt;Slider and Caption Settings&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org0c793ce" class="outline-3"&gt;
-&lt;h3 id="org0c793ce"&gt;Reference&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org0c793ce"&gt;
+&lt;div id="outline-container-orgc3f5815" class="outline-3"&gt;
+&lt;h3 id="orgc3f5815"&gt;Reference&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgc3f5815"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;p5.js reference | createSlider() [Internet]. [cited 2023 Apr 25]. Available from: &lt;a href="https://p5js.org/reference/#/p5/createSlider"&gt;https://p5js.org/reference/#/p5/createSlider&lt;/a&gt;&lt;/li&gt;
 
@@ -701,32 +701,32 @@ This sets the caption to the current value of the slider. It's used both to init
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/slider-settings-and-validator/index.html#org7f6f85b"&gt;The Sliders Settings&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/slider-settings-and-validator/index.html#org9ce05c6"&gt;The Sliders Settings&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/slider-settings-and-validator/index.html#org2a36929"&gt;The Scenario&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/slider-settings-and-validator/index.html#org77c3909"&gt;The Testing&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/slider-settings-and-validator/index.html#orgcf41b1a"&gt;The Slider Settings Implementation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/slider-settings-and-validator/index.html#org2c73fb2"&gt;The Scenario&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/slider-settings-and-validator/index.html#orgbf32fd4"&gt;The Testing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/slider-settings-and-validator/index.html#org4d9493b"&gt;The Slider Settings Implementation&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/slider-settings-and-validator/index.html#org88393ab"&gt;The Caption Settings&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/slider-settings-and-validator/index.html#orgfcdf7ce"&gt;The Caption Settings&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/slider-settings-and-validator/index.html#orgb7393e3"&gt;The Testing&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/slider-settings-and-validator/index.html#org3505ec1"&gt;The CaptionSettings Implementation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/slider-settings-and-validator/index.html#org31230a8"&gt;The Testing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/slider-settings-and-validator/index.html#org207e402"&gt;The CaptionSettings Implementation&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/slider-settings-and-validator/index.html#org8644787"&gt;Links&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/slider-settings-and-validator/index.html#orga4ea78b"&gt;Links&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/slider-settings-and-validator/index.html#org413f5d1"&gt;Related Post&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/slider-settings-and-validator/index.html#org44e44ef"&gt;References&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/slider-settings-and-validator/index.html#org41b7f1c"&gt;Related Post&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/slider-settings-and-validator/index.html#org10ec27a"&gt;References&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org7f6f85b" class="outline-2"&gt;
-&lt;h2 id="org7f6f85b"&gt;The Sliders Settings&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org7f6f85b"&gt;
+&lt;div id="outline-container-org9ce05c6" class="outline-2"&gt;
+&lt;h2 id="org9ce05c6"&gt;The Sliders Settings&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org9ce05c6"&gt;
 &lt;p&gt;
 &lt;img src="https://necromuralist.github.io/Ape-Iron/posts/slider-settings-and-validator/slider_settings.png" alt="nil"&gt;
 &lt;/p&gt;
@@ -736,18 +736,18 @@ The &lt;code&gt;SliderSettings&lt;/code&gt; class holds the values for the &lt;a
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org2a36929" class="outline-3"&gt;
-&lt;h3 id="org2a36929"&gt;The Scenario&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org2a36929"&gt;
+&lt;div id="outline-container-org2c73fb2" class="outline-3"&gt;
+&lt;h3 id="org2c73fb2"&gt;The Scenario&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org2c73fb2"&gt;
 &lt;p&gt;
 Since there's only one method to call and it defers everything to the &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html"&gt;Validator&lt;/a&gt; I'm going to have one Scenario to test, but to try and make it easier to read I'm going to break up the Then-And statements within it, but I'm not going to break up the &lt;code&gt;check_rep&lt;/code&gt; method itself so I'm not going to show the implementation under each test it satisfies, but just show the class definition in entirety after all the tests.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org77c3909" class="outline-3"&gt;
-&lt;h3 id="org77c3909"&gt;The Testing&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org77c3909"&gt;
+&lt;div id="outline-container-orgbf32fd4" class="outline-3"&gt;
+&lt;h3 id="orgbf32fd4"&gt;The Testing&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgbf32fd4"&gt;
 &lt;p&gt;
 First we need to import some javascript. Even though I'm faking all the methods I'm going to use on the &lt;code&gt;Validator&lt;/code&gt; class I used the real definition because  I was hoping to figure out how to get &lt;code&gt;sinon&lt;/code&gt; to copy all the methods automatically, but I didn't see anything indicating it can, so maybe next time I'll just make a fake object instead.
 &lt;/p&gt;
@@ -766,10 +766,10 @@ Since the Validator's methods get called more than once I need to be able to kno
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;IS&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;NUMBER&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;min&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;	    &lt;/span&gt;&lt;span class="nx"&gt;max&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;	    &lt;/span&gt;&lt;span class="nx"&gt;default_value&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;	    &lt;/span&gt;&lt;span class="nx"&gt;step_size&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;               &lt;/span&gt;
-&lt;span class="w"&gt;	  &lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+&lt;span class="w"&gt;            &lt;/span&gt;&lt;span class="nx"&gt;max&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;            &lt;/span&gt;&lt;span class="nx"&gt;default_value&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;            &lt;/span&gt;&lt;span class="nx"&gt;step_size&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;               &lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;ELEMENT&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;slider_div&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
@@ -783,9 +783,9 @@ The &lt;code&gt;METHODS&lt;/code&gt; array holds the names of all of the Validat
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgd979d55" class="outline-4"&gt;
-&lt;h4 id="orgd979d55"&gt;Setup The Slider Settings&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgd979d55"&gt;
+&lt;div id="outline-container-org264405f" class="outline-4"&gt;
+&lt;h4 id="org264405f"&gt;Setup The Slider Settings&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org264405f"&gt;
 &lt;p&gt;
 Now I'll build the &lt;code&gt;SliderSettings&lt;/code&gt; with the faked &lt;code&gt;Validator&lt;/code&gt; methods in the cucumber &lt;code&gt;Given&lt;/code&gt; function. 
 &lt;/p&gt;
@@ -811,7 +811,7 @@ Now that I have a &lt;code&gt;Validator&lt;/code&gt; instance, I can replace all
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;method&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;METHODS&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;validator&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;method&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;	  &lt;/span&gt;&lt;span class="nx"&gt;fake&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;returns&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="nx"&gt;fake&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;returns&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -831,19 +831,19 @@ Finally, I can create the &lt;code&gt;SliderSettings&lt;/code&gt; to test.
 &lt;/p&gt;
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;settings&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;SliderSettings&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;min&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;				   &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;max&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;				   &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;default_value&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;				   &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;step_size&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;				   &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;slider_div&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;				   &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;validator&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;                                   &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;max&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;                                   &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;default_value&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;                                   &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;step_size&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;                                   &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;slider_div&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;                                   &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;validator&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="p"&gt;});&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgbe25281" class="outline-4"&gt;
-&lt;h4 id="orgbe25281"&gt;Calling Check Rep&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgbe25281"&gt;
+&lt;div id="outline-container-orgcb58841" class="outline-4"&gt;
+&lt;h4 id="orgcb58841"&gt;Calling Check Rep&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgcb58841"&gt;
 &lt;p&gt;
 This is the only call to &lt;code&gt;SliderSettings&lt;/code&gt; I make.
 &lt;/p&gt;
@@ -862,9 +862,9 @@ Now the rest of the tests check all the calls to the &lt;code&gt;Validator&lt;/c
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgd3f52e1" class="outline-4"&gt;
-&lt;h4 id="orgd3f52e1"&gt;Min Check&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgd3f52e1"&gt;
+&lt;div id="outline-container-org2b87a5e" class="outline-4"&gt;
+&lt;h4 id="org2b87a5e"&gt;Min Check&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org2b87a5e"&gt;
 &lt;p&gt;
 The first property that &lt;code&gt;check_rep&lt;/code&gt; validates is the &lt;code&gt;min&lt;/code&gt;.
 &lt;/p&gt;
@@ -896,9 +896,9 @@ The rest of the checks are pretty much the same thing but with different variabl
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgfe329b8" class="outline-4"&gt;
-&lt;h4 id="orgfe329b8"&gt;Max Check&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgfe329b8"&gt;
+&lt;div id="outline-container-orgd51ceaf" class="outline-4"&gt;
+&lt;h4 id="orgd51ceaf"&gt;Max Check&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgd51ceaf"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;And &lt;/span&gt;&lt;span class="nf"&gt;it checked the max&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -911,9 +911,9 @@ The rest of the checks are pretty much the same thing but with different variabl
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgc39a38a" class="outline-4"&gt;
-&lt;h4 id="orgc39a38a"&gt;Default Value&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgc39a38a"&gt;
+&lt;div id="outline-container-org4f1d842" class="outline-4"&gt;
+&lt;h4 id="org4f1d842"&gt;Default Value&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org4f1d842"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;And &lt;/span&gt;&lt;span class="nf"&gt;it checked the default_value&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -925,9 +925,9 @@ The rest of the checks are pretty much the same thing but with different variabl
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgca8a0fe" class="outline-4"&gt;
-&lt;h4 id="orgca8a0fe"&gt;Step Size&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgca8a0fe"&gt;
+&lt;div id="outline-container-orgef663a5" class="outline-4"&gt;
+&lt;h4 id="orgef663a5"&gt;Step Size&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgef663a5"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;And &lt;/span&gt;&lt;span class="nf"&gt;it checked the step_size&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -939,9 +939,9 @@ The rest of the checks are pretty much the same thing but with different variabl
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org34685c8" class="outline-4"&gt;
-&lt;h4 id="org34685c8"&gt;Slider Div&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org34685c8"&gt;
+&lt;div id="outline-container-org9c05e05" class="outline-4"&gt;
+&lt;h4 id="org9c05e05"&gt;Slider Div&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org9c05e05"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;And &lt;/span&gt;&lt;span class="nf"&gt;it checked the slider_div&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -955,9 +955,9 @@ The rest of the checks are pretty much the same thing but with different variabl
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgcf41b1a" class="outline-3"&gt;
-&lt;h3 id="orgcf41b1a"&gt;The Slider Settings Implementation&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgcf41b1a"&gt;
+&lt;div id="outline-container-org4d9493b" class="outline-3"&gt;
+&lt;h3 id="org4d9493b"&gt;The Slider Settings Implementation&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org4d9493b"&gt;
 &lt;p&gt;
 Now that we have the tests, I'll implement the slider settings.
 &lt;/p&gt;
@@ -972,8 +972,8 @@ The &lt;code&gt;SliderSettings&lt;/code&gt; holds the settings to build &lt;a hr
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;class&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;SliderSettings&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="kr"&gt;constructor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;min&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;max&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;default_value&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;step_size&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;	      &lt;/span&gt;&lt;span class="nx"&gt;slider_div&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;	      &lt;/span&gt;&lt;span class="nx"&gt;validator&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;              &lt;/span&gt;&lt;span class="nx"&gt;slider_div&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;              &lt;/span&gt;&lt;span class="nx"&gt;validator&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;min&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;min&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;max&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;max&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;default_value&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;default_value&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -995,25 +995,25 @@ The &lt;code&gt;SliderSettings&lt;/code&gt; holds the settings to build &lt;a hr
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org88393ab" class="outline-2"&gt;
-&lt;h2 id="org88393ab"&gt;The Caption Settings&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org88393ab"&gt;
+&lt;div id="outline-container-orgfcdf7ce" class="outline-2"&gt;
+&lt;h2 id="orgfcdf7ce"&gt;The Caption Settings&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgfcdf7ce"&gt;
 &lt;p&gt;
-The Caption Settings are pretty much just like the Slider Settings except that they are meant for the label that lets the user know what the current slider's value is. I used to have everything in the &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/slider-settings-and-validator/index.html#org7f6f85b"&gt;SliderSettings&lt;/a&gt; but it wasn't obvious what belonged to which so I broke them apart.
+The Caption Settings are pretty much just like the Slider Settings except that they are meant for the label that lets the user know what the current slider's value is. I used to have everything in the &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/slider-settings-and-validator/index.html#org9ce05c6"&gt;SliderSettings&lt;/a&gt; but it wasn't obvious what belonged to which so I broke them apart.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgb7393e3" class="outline-3"&gt;
-&lt;h3 id="orgb7393e3"&gt;The Testing&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgb7393e3"&gt;
+&lt;div id="outline-container-org31230a8" class="outline-3"&gt;
+&lt;h3 id="org31230a8"&gt;The Testing&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org31230a8"&gt;
 &lt;p&gt;
 This is pretty much exactly the same as the testing for the &lt;code&gt;SliderSettings&lt;/code&gt; so I won't have a whole lot to add to it.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org9f99cf1" class="outline-4"&gt;
-&lt;h4 id="org9f99cf1"&gt;Imports&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org9f99cf1"&gt;
+&lt;div id="outline-container-org6c03ed2" class="outline-4"&gt;
+&lt;h4 id="org6c03ed2"&gt;Imports&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org6c03ed2"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;expect&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"chai"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="k"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;faker&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"@faker-js/faker"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="k"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;Given&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;When&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;Then&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"@cucumber/cucumber"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -1025,9 +1025,9 @@ This is pretty much exactly the same as the testing for the &lt;code&gt;SliderSe
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org84d73dc" class="outline-4"&gt;
-&lt;h4 id="org84d73dc"&gt;Call Object Indices&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org84d73dc"&gt;
+&lt;div id="outline-container-org225c4bf" class="outline-4"&gt;
+&lt;h4 id="org225c4bf"&gt;Call Object Indices&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org225c4bf"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;CAPTION_IS&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;SET&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;label&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;0&lt;/span&gt;
@@ -1045,9 +1045,9 @@ This is pretty much exactly the same as the testing for the &lt;code&gt;SliderSe
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org11a4086" class="outline-4"&gt;
-&lt;h4 id="org11a4086"&gt;The Feature&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org11a4086"&gt;
+&lt;div id="outline-container-orgd2d060f" class="outline-4"&gt;
+&lt;h4 id="orgd2d060f"&gt;The Feature&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgd2d060f"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;Feature:&lt;/span&gt;&lt;span class="nf"&gt; Settings for a caption/label.&lt;/span&gt;
 
 &lt;span class="k"&gt;Scenario:&lt;/span&gt;&lt;span class="nf"&gt; The CaptionSettings is built.&lt;/span&gt;
@@ -1058,9 +1058,9 @@ This is pretty much exactly the same as the testing for the &lt;code&gt;SliderSe
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgf7261b3" class="outline-4"&gt;
-&lt;h4 id="orgf7261b3"&gt;Setting up the Caption Settings in "Given"&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgf7261b3"&gt;
+&lt;div id="outline-container-org9dbb604" class="outline-4"&gt;
+&lt;h4 id="org9dbb604"&gt;Setting up the Caption Settings in "Given"&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org9dbb604"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;Given&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"a CaptionSettings"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -1082,7 +1082,7 @@ Once again I'm replacing the &lt;a href="https://necromuralist.github.io/Ape-Iro
 
 &lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;method&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;METHODS&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;validator&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;method&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;	  &lt;/span&gt;&lt;span class="nx"&gt;fake&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;returns&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="nx"&gt;fake&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;returns&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -1091,9 +1091,9 @@ And finally I'll build our software to test.
 &lt;/p&gt;
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;caption_settings&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;CaptionSettings&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;label&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;					    &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;precision&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;					    &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;caption_div&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;					    &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;validator&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;                                            &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;precision&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;                                            &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;caption_div&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;                                            &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;validator&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;
@@ -1116,9 +1116,9 @@ Putting the values to check into variables seems like an unnecessary step, since
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org151e9a0" class="outline-4"&gt;
-&lt;h4 id="org151e9a0"&gt;Check Rep&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org151e9a0"&gt;
+&lt;div id="outline-container-org0d5beb5" class="outline-4"&gt;
+&lt;h4 id="org0d5beb5"&gt;Check Rep&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org0d5beb5"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;Scenario:&lt;/span&gt;&lt;span class="nf"&gt; check_rep is called.&lt;/span&gt;
 
 &lt;span class="k"&gt;Given &lt;/span&gt;&lt;span class="nf"&gt;a CaptionSettings&lt;/span&gt;
@@ -1140,9 +1140,9 @@ Or maybe there's something I'm missing…
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orged70e5c" class="outline-4"&gt;
-&lt;h4 id="orged70e5c"&gt;Did It Validate the Label?&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orged70e5c"&gt;
+&lt;div id="outline-container-org8502722" class="outline-4"&gt;
+&lt;h4 id="org8502722"&gt;Did It Validate the Label?&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org8502722"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;Then &lt;/span&gt;&lt;span class="nf"&gt;it checks the label&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -1155,9 +1155,9 @@ Or maybe there's something I'm missing…
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org171d191" class="outline-4"&gt;
-&lt;h4 id="org171d191"&gt;Did It Validate the Precision?&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org171d191"&gt;
+&lt;div id="outline-container-orga17b727" class="outline-4"&gt;
+&lt;h4 id="orga17b727"&gt;Did It Validate the Precision?&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orga17b727"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;And &lt;/span&gt;&lt;span class="nf"&gt;it checks the precision&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -1170,9 +1170,9 @@ Or maybe there's something I'm missing…
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org870db93" class="outline-4"&gt;
-&lt;h4 id="org870db93"&gt;Did It Validate the Div ID?&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org870db93"&gt;
+&lt;div id="outline-container-org13b7b28" class="outline-4"&gt;
+&lt;h4 id="org13b7b28"&gt;Did It Validate the Div ID?&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org13b7b28"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;And &lt;/span&gt;&lt;span class="nf"&gt;it checks the caption div ID.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -1185,9 +1185,9 @@ Or maybe there's something I'm missing…
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org36211a0" class="outline-4"&gt;
-&lt;h4 id="org36211a0"&gt;Does it add a pound sign to the DIV ID?&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org36211a0"&gt;
+&lt;div id="outline-container-org51751c6" class="outline-4"&gt;
+&lt;h4 id="org51751c6"&gt;Does it add a pound sign to the DIV ID?&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org51751c6"&gt;
 &lt;p&gt;
 The &lt;code&gt;p5.select&lt;/code&gt; method uses CSS selectors so it needs you to put a &lt;code&gt;#&lt;/code&gt; sign in front of the DIV ID to tell it that it's an ID.
 &lt;/p&gt;
@@ -1211,9 +1211,9 @@ The &lt;code&gt;p5.select&lt;/code&gt; method uses CSS selectors so it needs you
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org3505ec1" class="outline-3"&gt;
-&lt;h3 id="org3505ec1"&gt;The CaptionSettings Implementation&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org3505ec1"&gt;
+&lt;div id="outline-container-org207e402" class="outline-3"&gt;
+&lt;h3 id="org207e402"&gt;The CaptionSettings Implementation&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org207e402"&gt;
 &lt;p&gt;
 So here's where I implemennt the class. The &lt;i&gt;label&lt;/i&gt; property is a string that gets inserted into the string that's displayed on the Label element. Maybe I should have called it something else… The &lt;i&gt;precision&lt;/i&gt; property is used to decide how many decimal places to show in the Label, and the &lt;i&gt;caption_div&lt;/i&gt; is the ID of the element where I'm going to stick the Label.
 &lt;/p&gt;
@@ -1245,13 +1245,13 @@ So here's where I implemennt the class. The &lt;i&gt;label&lt;/i&gt; property is
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org8644787" class="outline-2"&gt;
-&lt;h2 id="org8644787"&gt;Links&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org8644787"&gt;
+&lt;div id="outline-container-orga4ea78b" class="outline-2"&gt;
+&lt;h2 id="orga4ea78b"&gt;Links&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orga4ea78b"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org413f5d1" class="outline-3"&gt;
-&lt;h3 id="org413f5d1"&gt;Related Post&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org413f5d1"&gt;
+&lt;div id="outline-container-org41b7f1c" class="outline-3"&gt;
+&lt;h3 id="org41b7f1c"&gt;Related Post&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org41b7f1c"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-validator-for-slidersettings/index.html"&gt;A Validator for SliderSettings&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/the-great-slidini/index.html"&gt;The Great Slidini&lt;/a&gt;&lt;/li&gt;
@@ -1260,9 +1260,9 @@ So here's where I implemennt the class. The &lt;i&gt;label&lt;/i&gt; property is
 &lt;/div&gt;
 
 
-&lt;div id="outline-container-org44e44ef" class="outline-3"&gt;
-&lt;h3 id="org44e44ef"&gt;References&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org44e44ef"&gt;
+&lt;div id="outline-container-org10ec27a" class="outline-3"&gt;
+&lt;h3 id="org10ec27a"&gt;References&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org10ec27a"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;id - HTML: HyperText Markup Language | MDN [Internet]. 2023 [cited 2023 Sep 14]. Available from: &lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id"&gt;https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;

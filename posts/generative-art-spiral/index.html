@@ -27,7 +27,7 @@
 <meta content="2023-06-17T16:38:42-07:00" property="article:published_time">
 <meta content="generative art" property="article:tag">
 <meta content="p5.js" property="article:tag">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+<script crossorigin="anonymous" integrity="sha512-d6sc8kbZEtA2LwB9m/ck0FhvyUwVfdmvTeyJRprmj7Wg9wRFtHDIpr6qk4g/y3Ix3O9I6KHIv6SGu9f7RaP1Gw==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
 </head>
 <body>
 <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a> <!-- Menubar -->
@@ -69,39 +69,39 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="index.html#org8d97e23">The Div IDs</a>
+<li><a href="index.html#org724b3f6">The Div IDs</a>
 <ul>
-<li><a href="index.html#org4b78d2b">The Sketch Div</a></li>
-<li><a href="index.html#org4b23f60">The Slider Divs</a></li>
-<li><a href="index.html#org318ba1d">Text Divs</a></li>
+<li><a href="index.html#org925a9dd">The Sketch Div</a></li>
+<li><a href="index.html#org834fc92">The Slider Divs</a></li>
+<li><a href="index.html#orgd4875d0">Text Divs</a></li>
 </ul>
 </li>
-<li><a href="index.html#org306a8e0">The Slider Settings</a>
+<li><a href="index.html#orgc0d3c67">The Slider Settings</a>
 <ul>
-<li><a href="index.html#org805584a">The Validator</a></li>
-<li><a href="index.html#orgbdfdef0">Angle Slider</a></li>
-<li><a href="index.html#org9eb09da">Radius Slider</a></li>
-<li><a href="index.html#org6500997">Circle Slider</a></li>
+<li><a href="index.html#org6ac7eb3">The Validator</a></li>
+<li><a href="index.html#org6bbaa3c">Angle Slider</a></li>
+<li><a href="index.html#org568b7bd">Radius Slider</a></li>
+<li><a href="index.html#org00aecf9">Circle Slider</a></li>
 </ul>
 </li>
-<li><a href="index.html#org111e6a8">The Spiralizer</a>
+<li><a href="index.html#org1b32172">The Spiralizer</a>
 <ul>
-<li><a href="index.html#org6db76f8">Class Declaration</a></li>
-<li><a href="index.html#org38695ff">The Constructor</a></li>
-<li><a href="index.html#org0b05e5b">The Draw Method</a></li>
-<li><a href="index.html#org4632e0c">Reset</a></li>
+<li><a href="index.html#org394cb32">Class Declaration</a></li>
+<li><a href="index.html#org4038061">The Constructor</a></li>
+<li><a href="index.html#orgef8ebbf">The Draw Method</a></li>
+<li><a href="index.html#org585a43f">Reset</a></li>
 </ul>
 </li>
-<li><a href="index.html#org2883ef7">The Spiral Sketch</a>
+<li><a href="index.html#org7c54a79">The Spiral Sketch</a>
 <ul>
-<li><a href="index.html#orga5bc6d0">Function Declaration</a></li>
-<li><a href="index.html#org4c04367">Setup</a></li>
-<li><a href="index.html#org8c2147f">Draw</a></li>
-<li><a href="index.html#org00bcad3">Double-Clicked</a></li>
-<li><a href="index.html#orgb2e5b8d">The P5 Instance</a></li>
+<li><a href="index.html#org3080b8c">Function Declaration</a></li>
+<li><a href="index.html#org6838cb4">Setup</a></li>
+<li><a href="index.html#org3395e9f">Draw</a></li>
+<li><a href="index.html#org03e476e">Double-Clicked</a></li>
+<li><a href="index.html#org2763fa9">The P5 Instance</a></li>
 </ul>
 </li>
-<li><a href="index.html#orgec08eed">References</a></li>
+<li><a href="index.html#org717bd76">References</a></li>
 </ul>
 </div>
 </div>
@@ -114,23 +114,23 @@
 <div id="radius-slider-0a168ba9"></div>
 <div id="circle-text-0a168ba9"></div>
 <div id="circle-slider-0a168ba9"></div>
-<div class="outline-2" id="outline-container-org8d97e23">
-<h2 id="org8d97e23">The Div IDs</h2>
-<div class="outline-text-2" id="text-org8d97e23">
+<div class="outline-2" id="outline-container-org724b3f6">
+<h2 id="org724b3f6">The Div IDs</h2>
+<div class="outline-text-2" id="text-org724b3f6">
 <p>To specify where the parts of the sketch go I added some <code>div</code> tags to the HTML so I'm going to create some javascript constants with the div IDs to make it easier to keep track of them.</p>
 </div>
-<div class="outline-3" id="outline-container-org4b78d2b">
-<h3 id="org4b78d2b">The Sketch Div</h3>
-<div class="outline-text-3" id="text-org4b78d2b">
-<p>This is the ID for the <code>div</code> where the main sketch will go, it gets passed to the p5 constructor, along with the sketch definition, to create the <a href="index.html#orgb2e5b8d">the P5 instance</a>.</p>
+<div class="outline-3" id="outline-container-org925a9dd">
+<h3 id="org925a9dd">The Sketch Div</h3>
+<div class="outline-text-3" id="text-org925a9dd">
+<p>This is the ID for the <code>div</code> where the main sketch will go, it gets passed to the p5 constructor, along with the sketch definition, to create the <a href="index.html#org2763fa9">the P5 instance</a>.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">SPIRAL_DIV</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"spiral-0a168ba9"</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org4b23f60">
-<h3 id="org4b23f60">The Slider Divs</h3>
-<div class="outline-text-3" id="text-org4b23f60">
+<div class="outline-3" id="outline-container-org834fc92">
+<h3 id="org834fc92">The Slider Divs</h3>
+<div class="outline-text-3" id="text-org834fc92">
 <p>I'm going to add some sliders to make it easier to adjust some of the parameters and see how that affects the sketch. These are the IDs of the <code>div</code> tags where I'm going to put the sliders to change some of the sketch values. The angle and radius sliders will set how much the angle and radius will change as the circle is drawn. If, for example, the angle slider is set to 5, then every point that's added will be rotated five degrees from the previous point, and if the radius is set to 5, then the radius will grow by 5 every time a point is added.</p>
 <p>The circle slider is a little different in that it sets the diameter for the circles that I'm drawing to create the spiral, so it's just an aesthetic setting.</p>
 <div class="highlight">
@@ -140,9 +140,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org318ba1d">
-<h3 id="org318ba1d">Text Divs</h3>
-<div class="outline-text-3" id="text-org318ba1d">
+<div class="outline-3" id="outline-container-orgd4875d0">
+<h3 id="orgd4875d0">Text Divs</h3>
+<div class="outline-text-3" id="text-orgd4875d0">
 <p>I also created some <code>div</code> tags that I'll put some text into to show the current value of each of the sliders.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">SPIRAL_ANGLE_TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"angle-text-0a168ba9"</span><span class="p">;</span>
@@ -152,21 +152,21 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org306a8e0">
-<h2 id="org306a8e0">The Slider Settings</h2>
-<div class="outline-text-2" id="text-org306a8e0"></div>
-<div class="outline-3" id="outline-container-org805584a">
-<h3 id="org805584a">The Validator</h3>
-<div class="outline-text-3" id="text-org805584a">
+<div class="outline-2" id="outline-container-orgc0d3c67">
+<h2 id="orgc0d3c67">The Slider Settings</h2>
+<div class="outline-text-2" id="text-orgc0d3c67"></div>
+<div class="outline-3" id="outline-container-org6ac7eb3">
+<h3 id="org6ac7eb3">The Validator</h3>
+<div class="outline-text-3" id="text-org6ac7eb3">
 <p>This is used by the settings classes to try and see if I'm passing in valid arguments.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">VALIDATOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Validator</span><span class="p">(</span><span class="nb">document</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgbdfdef0">
-<h3 id="orgbdfdef0">Angle Slider</h3>
-<div class="outline-text-3" id="text-orgbdfdef0">
+<div class="outline-3" id="outline-container-org6bbaa3c">
+<h3 id="org6bbaa3c">Angle Slider</h3>
+<div class="outline-text-3" id="text-org6bbaa3c">
 <p>The values used to create the angle-increment slider.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">ANGLE_SLIDER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">SliderSettings</span><span class="p">(</span>
@@ -190,9 +190,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org9eb09da">
-<h3 id="org9eb09da">Radius Slider</h3>
-<div class="outline-text-3" id="text-org9eb09da">
+<div class="outline-3" id="outline-container-org568b7bd">
+<h3 id="org568b7bd">Radius Slider</h3>
+<div class="outline-text-3" id="text-org568b7bd">
 <p>The values used to create the radius increment slider.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">RADIUS_SLIDER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">SliderSettings</span><span class="p">(</span>
@@ -216,9 +216,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org6500997">
-<h3 id="org6500997">Circle Slider</h3>
-<div class="outline-text-3" id="text-org6500997">
+<div class="outline-3" id="outline-container-org00aecf9">
+<h3 id="org00aecf9">Circle Slider</h3>
+<div class="outline-text-3" id="text-org00aecf9">
 <p>The values used to create the circle diameter slider.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">CIRCLE_SLIDER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">SliderSettings</span><span class="p">(</span>
@@ -243,12 +243,12 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org111e6a8">
-<h2 id="org111e6a8">The Spiralizer</h2>
-<div class="outline-text-2" id="text-org111e6a8"></div>
-<div class="outline-3" id="outline-container-org6db76f8">
-<h3 id="org6db76f8">Class Declaration</h3>
-<div class="outline-text-3" id="text-org6db76f8">
+<div class="outline-2" id="outline-container-org1b32172">
+<h2 id="org1b32172">The Spiralizer</h2>
+<div class="outline-text-2" id="text-org1b32172"></div>
+<div class="outline-3" id="outline-container-org394cb32">
+<h3 id="org394cb32">Class Declaration</h3>
+<div class="outline-text-3" id="text-org394cb32">
 <div class="highlight">
 <pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">Spiralizer</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="c1">// geometry</span>
@@ -265,9 +265,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org38695ff">
-<h3 id="org38695ff">The Constructor</h3>
-<div class="outline-text-3" id="text-org38695ff">
+<div class="outline-3" id="outline-container-org4038061">
+<h3 id="org4038061">The Constructor</h3>
+<div class="outline-text-3" id="text-org4038061">
 <div class="highlight">
 <pre><span></span><span class="kr">constructor</span><span class="p">(</span><span class="nx">p5</span><span class="p">,</span><span class="w"> </span><span class="nx">center_x</span><span class="p">,</span><span class="w"> </span><span class="nx">center_y</span><span class="p">,</span><span class="w"> </span><span class="nx">maximum_radius</span><span class="p">,</span>
 <span class="w">            </span><span class="nx">angle_slider</span><span class="p">,</span><span class="w"> </span><span class="nx">radius_slider</span><span class="p">,</span><span class="w"> </span><span class="nx">circle_slider</span><span class="p">){</span>
@@ -286,9 +286,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org0b05e5b">
-<h3 id="org0b05e5b">The Draw Method</h3>
-<div class="outline-text-3" id="text-org0b05e5b">
+<div class="outline-3" id="outline-container-orgef8ebbf">
+<h3 id="orgef8ebbf">The Draw Method</h3>
+<div class="outline-text-3" id="text-orgef8ebbf">
 <div class="highlight">
 <pre><span></span><span class="nx">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">radians</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="p">;</span>
@@ -309,9 +309,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org4632e0c">
-<h3 id="org4632e0c">Reset</h3>
-<div class="outline-text-3" id="text-org4632e0c">
+<div class="outline-3" id="outline-container-org585a43f">
+<h3 id="org585a43f">Reset</h3>
+<div class="outline-text-3" id="text-org585a43f">
 <div class="highlight">
 <pre><span></span><span class="nx">reset</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">radius_increment</span><span class="p">.</span><span class="nx">value</span><span class="p">();</span>
@@ -321,14 +321,14 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org2883ef7">
-<h2 id="org2883ef7">The Spiral Sketch</h2>
-<div class="outline-text-2" id="text-org2883ef7">
-<p>This is going to be the sketch that we pass to <a href="index.html#orgb2e5b8d">the P5 constructor</a> to create the animation.</p>
+<div class="outline-2" id="outline-container-org7c54a79">
+<h2 id="org7c54a79">The Spiral Sketch</h2>
+<div class="outline-text-2" id="text-org7c54a79">
+<p>This is going to be the sketch that we pass to <a href="index.html#org2763fa9">the P5 constructor</a> to create the animation.</p>
 </div>
-<div class="outline-3" id="outline-container-orga5bc6d0">
-<h3 id="orga5bc6d0">Function Declaration</h3>
-<div class="outline-text-3" id="text-orga5bc6d0">
+<div class="outline-3" id="outline-container-org3080b8c">
+<h3 id="org3080b8c">Function Declaration</h3>
+<div class="outline-text-3" id="text-org3080b8c">
 <div class="highlight">
 <pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">spiral_sketch</span><span class="p">(</span><span class="nx">p5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="c1">// the size of the canvas and the color of the circles</span>
@@ -343,12 +343,12 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org4c04367">
-<h3 id="org4c04367">Setup</h3>
-<div class="outline-text-3" id="text-org4c04367"></div>
-<div class="outline-4" id="outline-container-org8c80621">
-<h4 id="org8c80621">Setup The Canvas and Drawing Settings</h4>
-<div class="outline-text-4" id="text-org8c80621">
+<div class="outline-3" id="outline-container-org6838cb4">
+<h3 id="org6838cb4">Setup</h3>
+<div class="outline-text-3" id="text-org6838cb4"></div>
+<div class="outline-4" id="outline-container-orgf264388">
+<h4 id="orgf264388">Setup The Canvas and Drawing Settings</h4>
+<div class="outline-text-4" id="text-orgf264388">
 <div class="highlight">
 <pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">setup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(){</span>
 <span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">createCanvas</span><span class="p">(</span><span class="nx">WIDTH</span><span class="p">,</span><span class="w"> </span><span class="nx">HEIGHT</span><span class="p">);</span>
@@ -358,9 +358,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org02adf36">
-<h4 id="org02adf36">Create The Sliders</h4>
-<div class="outline-text-4" id="text-org02adf36">
+<div class="outline-4" id="outline-container-org15a4749">
+<h4 id="org15a4749">Create The Sliders</h4>
+<div class="outline-text-4" id="text-org15a4749">
 <div class="highlight">
 <pre><span></span><span class="nx">angle_slider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Slidini</span><span class="p">(</span><span class="nx">ANGLE_SLIDER</span><span class="p">,</span><span class="w"> </span><span class="nx">ANGLE_CAPTION</span><span class="p">,</span><span class="w"> </span><span class="nx">p5</span><span class="p">);</span><span class="w">  </span>
 <span class="nx">radius_slider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Slidini</span><span class="p">(</span><span class="nx">RADIUS_SLIDER</span><span class="p">,</span><span class="w"> </span><span class="nx">RADIUS_CAPTION</span><span class="p">,</span><span class="w"> </span><span class="nx">p5</span><span class="p">);</span>
@@ -368,9 +368,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgdee6794">
-<h4 id="orgdee6794">Create the Spiralizer and End the Setup</h4>
-<div class="outline-text-4" id="text-orgdee6794">
+<div class="outline-4" id="outline-container-org6f1bcf4">
+<h4 id="org6f1bcf4">Create the Spiralizer and End the Setup</h4>
+<div class="outline-text-4" id="text-org6f1bcf4">
 <div class="highlight">
 <pre><span></span><span class="nx">spiralizer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Spiralizer</span><span class="p">(</span><span class="nx">p5</span><span class="p">,</span><span class="w"> </span><span class="nx">WIDTH</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">HEIGHT</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">WIDTH</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span>
 <span class="w">                            </span><span class="nx">angle_slider</span><span class="p">.</span><span class="nx">slider</span><span class="p">,</span>
@@ -382,9 +382,9 @@
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org8c2147f">
-<h3 id="org8c2147f">Draw</h3>
-<div class="outline-text-3" id="text-org8c2147f">
+<div class="outline-3" id="outline-container-org3395e9f">
+<h3 id="org3395e9f">Draw</h3>
+<div class="outline-text-3" id="text-org3395e9f">
 <div class="highlight">
 <pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">draw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="nx">spiralizer</span><span class="p">.</span><span class="nx">draw</span><span class="p">();</span>
@@ -393,9 +393,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org00bcad3">
-<h3 id="org00bcad3">Double-Clicked</h3>
-<div class="outline-text-3" id="text-org00bcad3">
+<div class="outline-3" id="outline-container-org03e476e">
+<h3 id="org03e476e">Double-Clicked</h3>
+<div class="outline-text-3" id="text-org03e476e">
 <div class="highlight">
 <pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">doubleClicked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="nx">spiralizer</span><span class="p">.</span><span class="nx">reset</span><span class="p">();</span>
@@ -404,19 +404,19 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgb2e5b8d">
-<h3 id="orgb2e5b8d">The P5 Instance</h3>
-<div class="outline-text-3" id="text-orgb2e5b8d">
-<p>To create the animation I'll create a p5 object by passing in <a href="index.html#org2883ef7">the function from the previous section</a> and <a href="index.html#org4b78d2b">the div ID</a> to identify where in the page the sketch should go.</p>
+<div class="outline-3" id="outline-container-org2763fa9">
+<h3 id="org2763fa9">The P5 Instance</h3>
+<div class="outline-text-3" id="text-org2763fa9">
+<p>To create the animation I'll create a p5 object by passing in <a href="index.html#org7c54a79">the function from the previous section</a> and <a href="index.html#org925a9dd">the div ID</a> to identify where in the page the sketch should go.</p>
 <div class="highlight">
 <pre><span></span><span class="ow">new</span><span class="w"> </span><span class="nx">p5</span><span class="p">(</span><span class="nx">spiral_sketch</span><span class="p">,</span><span class="w"> </span><span class="nx">SPIRAL_DIV</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgec08eed">
-<h2 id="orgec08eed">References</h2>
-<div class="outline-text-2" id="text-orgec08eed">
+<div class="outline-2" id="outline-container-org717bd76">
+<h2 id="org717bd76">References</h2>
+<div class="outline-text-2" id="text-org717bd76">
 <ul class="org-ul">
 <li><a href="../bibliography-generative-art/index.html">Generative Art</a></li>
 <li>id - HTML: HyperText Markup Language | MDN [Internet]. 2023 [cited 2023 Sep 14]. Available from: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id">https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id</a></li>

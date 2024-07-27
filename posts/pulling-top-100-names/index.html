@@ -70,31 +70,31 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="index.html#org5334da0">Beginning</a>
+<li><a href="index.html#orgd5d0aaf">Beginning</a>
 <ul>
-<li><a href="index.html#org33a5687">Set Up</a></li>
+<li><a href="index.html#org191a8e2">Set Up</a></li>
 </ul>
 </li>
-<li><a href="index.html#orgb378d49">Middle</a>
+<li><a href="index.html#orgb2eb10f">Middle</a>
 <ul>
-<li><a href="index.html#orgbc9b2b6">Pulling the Table</a></li>
-<li><a href="index.html#org2022cde">Cleaning Up the Table</a></li>
-<li><a href="index.html#orgc15d8ab">Some Plotting</a></li>
+<li><a href="index.html#org2936e82">Pulling the Table</a></li>
+<li><a href="index.html#orgd8e85ac">Cleaning Up the Table</a></li>
+<li><a href="index.html#org09f5be6">Some Plotting</a></li>
 </ul>
 </li>
-<li><a href="index.html#org433c8d7">End</a></li>
+<li><a href="index.html#org9bbdd40">End</a></li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org5334da0">
-<h2 id="org5334da0">Beginning</h2>
-<div class="outline-text-2" id="text-org5334da0"></div>
-<div class="outline-3" id="outline-container-org33a5687">
-<h3 id="org33a5687">Set Up</h3>
-<div class="outline-text-3" id="text-org33a5687"></div>
-<div class="outline-4" id="outline-container-org7a5b0ad">
-<h4 id="org7a5b0ad">Imports</h4>
-<div class="outline-text-4" id="text-org7a5b0ad">
+<div class="outline-2" id="outline-container-orgd5d0aaf">
+<h2 id="orgd5d0aaf">Beginning</h2>
+<div class="outline-text-2" id="text-orgd5d0aaf"></div>
+<div class="outline-3" id="outline-container-org191a8e2">
+<h3 id="org191a8e2">Set Up</h3>
+<div class="outline-text-3" id="text-org191a8e2"></div>
+<div class="outline-4" id="outline-container-orgfb3a742">
+<h4 id="orgfb3a742">Imports</h4>
+<div class="outline-text-4" id="text-orgfb3a742">
 <div class="highlight">
 <pre><span></span><span class="c1"># python</span>
 <span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
@@ -108,9 +108,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgc0a78b0">
-<h4 id="orgc0a78b0">Plotting</h4>
-<div class="outline-text-4" id="text-orgc0a78b0">
+<div class="outline-4" id="outline-container-org5d75f1d">
+<h4 id="org5d75f1d">Plotting</h4>
+<div class="outline-text-4" id="text-org5d75f1d">
 <div class="highlight">
 <pre><span></span><span class="n">SLUG</span> <span class="o">=</span> <span class="s2">"pulling-top-100-names"</span>
 <span class="n">Embed</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">EmbedHoloviews</span><span class="p">,</span> <span class="n">folder_path</span><span class="o">=</span><span class="sa">f</span><span class="s2">"files/posts/</span><span class="si">{</span><span class="n">SLUG</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
@@ -119,15 +119,15 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgb378d49">
-<h2 id="orgb378d49">Middle</h2>
-<div class="outline-text-2" id="text-orgb378d49"></div>
-<div class="outline-3" id="outline-container-orgbc9b2b6">
-<h3 id="orgbc9b2b6">Pulling the Table</h3>
-<div class="outline-text-3" id="text-orgbc9b2b6"></div>
-<div class="outline-4" id="outline-container-org05e9948">
-<h4 id="org05e9948">Trying a Naive Request</h4>
-<div class="outline-text-4" id="text-org05e9948">
+<div class="outline-2" id="outline-container-orgb2eb10f">
+<h2 id="orgb2eb10f">Middle</h2>
+<div class="outline-text-2" id="text-orgb2eb10f"></div>
+<div class="outline-3" id="outline-container-org2936e82">
+<h3 id="org2936e82">Pulling the Table</h3>
+<div class="outline-text-3" id="text-org2936e82"></div>
+<div class="outline-4" id="outline-container-org7a341d5">
+<h4 id="org7a341d5">Trying a Naive Request</h4>
+<div class="outline-text-4" id="text-org7a341d5">
 <div class="highlight">
 <pre><span></span><span class="n">URL</span> <span class="o">=</span> <span class="s2">"https://www.ssa.gov/OACT/babynames/decades/century.html"</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span>
@@ -153,9 +153,9 @@
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org2022cde">
-<h3 id="org2022cde">Cleaning Up the Table</h3>
-<div class="outline-text-3" id="text-org2022cde">
+<div class="outline-3" id="outline-container-orgd8e85ac">
+<h3 id="orgd8e85ac">Cleaning Up the Table</h3>
+<div class="outline-text-3" id="text-orgd8e85ac">
 <div class="highlight">
 <pre><span></span><span class="n">males</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">table</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]]</span>
 <span class="n">females</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">table</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">3</span><span class="p">:]]</span>
@@ -166,9 +166,9 @@
     Name   Number
 0  James  4764644
 </pre></div>
-<div class="outline-4" id="outline-container-org6af0206">
-<h4 id="org6af0206">The Last Row</h4>
-<div class="outline-text-4" id="text-org6af0206">
+<div class="outline-4" id="outline-container-org18a0e48">
+<h4 id="org18a0e48">The Last Row</h4>
+<div class="outline-text-4" id="text-org18a0e48">
 <div class="highlight">
 <pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">males</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
@@ -221,9 +221,9 @@ Source: 100% sample based on Social Security card application data as of of Marc
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgc15d8ab">
-<h3 id="orgc15d8ab">Some Plotting</h3>
-<div class="outline-text-3" id="text-orgc15d8ab">
+<div class="outline-3" id="outline-container-org09f5be6">
+<h3 id="org09f5be6">Some Plotting</h3>
+<div class="outline-text-3" id="text-org09f5be6">
 <p>Before we can plot them we have to change the <code>count</code> column to be (you guessed it) a number since that last row with the source information prevents pandas' ability to convert the column itself.</p>
 <div class="highlight">
 <pre><span></span><span class="n">names</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s2">"count"</span><span class="p">]</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="s2">"count"</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
@@ -248,9 +248,9 @@ Source: 100% sample based on Social Security card application data as of of Marc
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org433c8d7">
-<h2 id="org433c8d7">End</h2>
-<div class="outline-text-2" id="text-org433c8d7">
+<div class="outline-2" id="outline-container-org9bbdd40">
+<h2 id="org9bbdd40">End</h2>
+<div class="outline-text-2" id="text-org9bbdd40">
 <p>Time to save the table.</p>
 <div class="highlight">
 <pre><span></span><span class="n">names</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">"apeiron/top_100_ssa_names.csv"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>

@@ -1,62 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron (Posts about Abecedarium)</title><link>https://necromuralist.github.io/Ape-Iron/</link><description></description><atom:link href="https://necromuralist.github.io/Ape-Iron/categories/cat_abecedarium.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;The Cloistered Monkey&lt;/a&gt; 
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron (Posts about Abecedarium)</title><link>https://necromuralist.github.io/Ape-Iron/</link><description></description><atom:link href="https://necromuralist.github.io/Ape-Iron/categories/cat_abecedarium.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;The Cloistered Monkey&lt;/a&gt; 
 &lt;div id="license" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"&gt;&lt;span property="dct:title"&gt;Ape-Iron&lt;/span&gt; is licensed under
 &lt;a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY-SA 4.0
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"&gt;&lt;/a&gt;&lt;/p&gt; 
-</copyright><lastBuildDate>Mon, 30 Oct 2023 23:10:50 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Pulling Images For the Abecedarium</title><link>https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
+</copyright><lastBuildDate>Tue, 25 Jun 2024 03:43:08 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Pulling Images For the Abecedarium</title><link>https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org0adec68"&gt;Imports and Setup&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org907856e"&gt;Imports and Setup&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#orgc1b4b00"&gt;Imports&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org57e8fb6"&gt;Set Up&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org568ae30"&gt;Imports&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org51888be"&gt;Set Up&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org89f62e8"&gt;Ape&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org351a3f2"&gt;Ape&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#orgcb7f52b"&gt;A First (Failed Attempt)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org7150b87"&gt;Once Again With icrawler&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org64a2df7"&gt;A First (Failed Attempt)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org4df8840"&gt;Once Again With icrawler&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org4e3eea0"&gt;Bison&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#orge4fe6fe"&gt;Chimpanzee&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org500b309"&gt;Cow&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org1470f36"&gt;Dragon&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org65af92c"&gt;Elephant&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org01a0760"&gt;Frog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#orgfb0e799"&gt;Goat (Horned)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org1144fc6"&gt;Hippo&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org4e5d809"&gt;Iguana&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org440eebb"&gt;Jackrabbit&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org1d31262"&gt;Krampus&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org4bafba7"&gt;Lobster&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#orgd6c1466"&gt;Minotaur&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#orgd328527"&gt;Namahage&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#orga24802d"&gt;Octopus&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#orgb6d6ff8"&gt;Pig&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org6f70664"&gt;Quetzacoatl&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org7648670"&gt;Rhinoceros&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#orgff52f08"&gt;Samurai&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#orgf4c7b8e"&gt;Tortoise&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#orgf9f31e2"&gt;Unicorn (horse)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#orgfd2ae75"&gt;Vampire Fish&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#orgd791026"&gt;Wasp&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org0f8d36a"&gt;Chicken (Rooster)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org5e1209d"&gt;Yak&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org56bac3e"&gt;Zebu&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org86b0c08"&gt;Bison&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org8715184"&gt;Chimpanzee&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org4115510"&gt;Cow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#orgd136e00"&gt;Dragon&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org105e71a"&gt;Elephant&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org0d86445"&gt;Frog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org064f9d3"&gt;Goat (Horned)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org67e901b"&gt;Hippo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org3e05da7"&gt;Iguana&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#orged73092"&gt;Jackrabbit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org2dfba02"&gt;Krampus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org602e1dc"&gt;Lobster&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org228311c"&gt;Minotaur&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org0fba22a"&gt;Namahage&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#orgdb7a1aa"&gt;Octopus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#orgae6e632"&gt;Pig&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org1122c14"&gt;Quetzacoatl&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#orga3fe002"&gt;Rhinoceros&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org9299041"&gt;Samurai&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org35f44e1"&gt;Tortoise&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#orgf52a6c9"&gt;Unicorn (horse)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org83af720"&gt;Vampire Fish&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org6f7e0ac"&gt;Wasp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org3a74a10"&gt;Chicken (Rooster)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org398d570"&gt;Yak&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/pulling-images-for-the-abecedarium/index.html#org55a3c72"&gt;Zebu&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org0adec68" class="outline-2"&gt;
-&lt;h2 id="org0adec68"&gt;Imports and Setup&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org0adec68"&gt;
+&lt;div id="outline-container-org907856e" class="outline-2"&gt;
+&lt;h2 id="org907856e"&gt;Imports and Setup&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org907856e"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgc1b4b00" class="outline-3"&gt;
-&lt;h3 id="orgc1b4b00"&gt;Imports&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgc1b4b00"&gt;
+&lt;div id="outline-container-org568ae30" class="outline-3"&gt;
+&lt;h3 id="org568ae30"&gt;Imports&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org568ae30"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# python&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pathlib&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Path&lt;/span&gt;
 
@@ -70,9 +70,9 @@
 &lt;/div&gt;
 
 
-&lt;div id="outline-container-org57e8fb6" class="outline-3"&gt;
-&lt;h3 id="org57e8fb6"&gt;Set Up&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org57e8fb6"&gt;
+&lt;div id="outline-container-org51888be" class="outline-3"&gt;
+&lt;h3 id="org51888be"&gt;Set Up&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org51888be"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;ENV_PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Path&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"~/projects/ape-iron/.env"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;expanduser&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="n"&gt;ENV_PATH&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;is_file&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 
@@ -85,13 +85,13 @@
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org89f62e8" class="outline-2"&gt;
-&lt;h2 id="org89f62e8"&gt;Ape&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org89f62e8"&gt;
+&lt;div id="outline-container-org351a3f2" class="outline-2"&gt;
+&lt;h2 id="org351a3f2"&gt;Ape&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org351a3f2"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgcb7f52b" class="outline-3"&gt;
-&lt;h3 id="orgcb7f52b"&gt;A First (Failed Attempt)&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgcb7f52b"&gt;
+&lt;div id="outline-container-org64a2df7" class="outline-3"&gt;
+&lt;h3 id="org64a2df7"&gt;A First (Failed Attempt)&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org64a2df7"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;APE_PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;OUTPUT&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="s2"&gt;"Ape/"&lt;/span&gt;
 &lt;span class="n"&gt;keywords&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="n"&gt;keywords&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"gorilla"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -125,9 +125,9 @@ Oops. It looks like the &lt;a href="https://github.com/hardikvasa/google-images-
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org7150b87" class="outline-3"&gt;
-&lt;h3 id="org7150b87"&gt;Once Again With icrawler&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org7150b87"&gt;
+&lt;div id="outline-container-org4df8840" class="outline-3"&gt;
+&lt;h3 id="org4df8840"&gt;Once Again With icrawler&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org4df8840"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;icrawler.builtin&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;GoogleImageCrawler&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -140,7 +140,7 @@ Oops. It looks like the &lt;a href="https://github.com/hardikvasa/google-images-
 Besides the keyword (keywords?) you can pass some other arguments. One notable option is a `filters` dictionary that helps specify the type of image.
 &lt;/p&gt;
 
-&lt;table id="org574f4a0" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides"&gt;
+&lt;table id="org939164c" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides"&gt;
 
 
 &lt;colgroup&gt;
@@ -225,7 +225,7 @@ The &lt;a href="https://icrawler.readthedocs.io/en/latest/builtin.html#search-en
 The arguments to the `crawl` method are:
 &lt;/p&gt;
 
-&lt;table id="org0653c4d" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides"&gt;
+&lt;table id="org6ad91fe" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides"&gt;
 
 
 &lt;colgroup&gt;
@@ -302,12 +302,12 @@ Let's see what happens if we pull &lt;i&gt;gorilla&lt;/i&gt; photos.
 &lt;/p&gt;
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;crawler&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;crawl&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;keyword&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"gorilla"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-	      &lt;span class="n"&gt;filters&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-		  &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"photo"&lt;/span&gt;
-	      &lt;span class="p"&gt;))&lt;/span&gt;
+              &lt;span class="n"&gt;filters&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+                  &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"photo"&lt;/span&gt;
+              &lt;span class="p"&gt;))&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;pre class="example" id="orgc5c16df"&gt;
+&lt;pre class="example" id="org340e831"&gt;
 2023-05-29 16:20:21,749 - INFO - icrawler.crawler - start crawling...
 2023-05-29 16:20:21,752 - INFO - icrawler.crawler - starting 1 feeder threads...
 2023-05-29 16:20:21,756 - INFO - icrawler.crawler - starting 1 parser threads...
@@ -425,9 +425,9 @@ So, even though the default maximum number of images is 1,000, it actually only 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org4e3eea0" class="outline-2"&gt;
-&lt;h2 id="org4e3eea0"&gt;Bison&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org4e3eea0"&gt;
+&lt;div id="outline-container-org86b0c08" class="outline-2"&gt;
+&lt;h2 id="org86b0c08"&gt;Bison&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org86b0c08"&gt;
 &lt;p&gt;
 Looking at the output of the Ape crawl, it looks like it only used one thread per object (i.e. one &lt;code&gt;feeder&lt;/code&gt;, one &lt;code&gt;parser&lt;/code&gt;, and one &lt;code&gt;downloader&lt;/code&gt;. Maybe I'll try and push that up and see what happens.
 &lt;/p&gt;
@@ -436,15 +436,15 @@ Looking at the output of the Ape crawl, it looks like it only used one thread pe
 &lt;span class="n"&gt;storage&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"root_dir"&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;BISON_PATH&lt;/span&gt;
 
 &lt;span class="n"&gt;crawler&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;GoogleImageCrawler&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;storage&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;storage&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-			     &lt;span class="n"&gt;feeder_threads&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-			     &lt;span class="n"&gt;parser_threads&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-			     &lt;span class="n"&gt;downloader_threads&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                             &lt;span class="n"&gt;feeder_threads&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                             &lt;span class="n"&gt;parser_threads&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                             &lt;span class="n"&gt;downloader_threads&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 &lt;span class="n"&gt;filters&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"photo"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 &lt;span class="n"&gt;crawler&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;crawl&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;keyword&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"bison"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-	      &lt;span class="n"&gt;filters&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;filters&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-	      &lt;span class="p"&gt;)&lt;/span&gt;
+              &lt;span class="n"&gt;filters&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;filters&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+              &lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;"Downloaded: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="nb"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;BISON_PATH&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;iterdir&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -461,22 +461,22 @@ I ran this twice. The first time I got 70 files, then for this run I disconnecte
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orge4fe6fe" class="outline-2"&gt;
-&lt;h2 id="orge4fe6fe"&gt;Chimpanzee&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orge4fe6fe"&gt;
+&lt;div id="outline-container-org8715184" class="outline-2"&gt;
+&lt;h2 id="org8715184"&gt;Chimpanzee&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org8715184"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;get_images&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"chimpanzee"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org500b309" class="outline-2"&gt;
-&lt;h2 id="org500b309"&gt;Cow&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org500b309"&gt;
+&lt;div id="outline-container-org4115510" class="outline-2"&gt;
+&lt;h2 id="org4115510"&gt;Cow&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org4115510"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;get_images&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;keyword&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="n"&gt;PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;OUTPUT&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;keyword&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;capitalize&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
     &lt;span class="n"&gt;crawler&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;GoogleImageCrawler&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;storage&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;root_dir&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;PATH&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
     &lt;span class="n"&gt;crawler&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;crawl&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;keyword&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;keyword&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-		  &lt;span class="n"&gt;filters&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"photo"&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+                  &lt;span class="n"&gt;filters&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"photo"&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
     &lt;span class="k"&gt;return&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -492,57 +492,57 @@ Despite putting &lt;code&gt;type=photo&lt;/code&gt; in there, the cow output had
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org1470f36" class="outline-2"&gt;
-&lt;h2 id="org1470f36"&gt;Dragon&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org1470f36"&gt;
+&lt;div id="outline-container-orgd136e00" class="outline-2"&gt;
+&lt;h2 id="orgd136e00"&gt;Dragon&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgd136e00"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;get_images&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"dragon temple statue"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org65af92c" class="outline-2"&gt;
-&lt;h2 id="org65af92c"&gt;Elephant&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org65af92c"&gt;
+&lt;div id="outline-container-org105e71a" class="outline-2"&gt;
+&lt;h2 id="org105e71a"&gt;Elephant&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org105e71a"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;get_images&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"elephant"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org01a0760" class="outline-2"&gt;
-&lt;h2 id="org01a0760"&gt;Frog&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org01a0760"&gt;
+&lt;div id="outline-container-org0d86445" class="outline-2"&gt;
+&lt;h2 id="org0d86445"&gt;Frog&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org0d86445"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;get_images&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"frog"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgfb0e799" class="outline-2"&gt;
-&lt;h2 id="orgfb0e799"&gt;Goat (Horned)&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgfb0e799"&gt;
+&lt;div id="outline-container-org064f9d3" class="outline-2"&gt;
+&lt;h2 id="org064f9d3"&gt;Goat (Horned)&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org064f9d3"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;get_images&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"goat horned"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org1144fc6" class="outline-2"&gt;
-&lt;h2 id="org1144fc6"&gt;Hippo&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org1144fc6"&gt;
+&lt;div id="outline-container-org67e901b" class="outline-2"&gt;
+&lt;h2 id="org67e901b"&gt;Hippo&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org67e901b"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;get_images&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"hippopotamus"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org4e5d809" class="outline-2"&gt;
-&lt;h2 id="org4e5d809"&gt;Iguana&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org4e5d809"&gt;
+&lt;div id="outline-container-org3e05da7" class="outline-2"&gt;
+&lt;h2 id="org3e05da7"&gt;Iguana&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org3e05da7"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;get_images&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"iguana"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org440eebb" class="outline-2"&gt;
-&lt;h2 id="org440eebb"&gt;Jackrabbit&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org440eebb"&gt;
+&lt;div id="outline-container-orged73092" class="outline-2"&gt;
+&lt;h2 id="orged73092"&gt;Jackrabbit&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orged73092"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;get_images&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"jackrabbit"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -552,113 +552,113 @@ Despite putting &lt;code&gt;type=photo&lt;/code&gt; in there, the cow output had
 &lt;/div&gt;
 
 
-&lt;div id="outline-container-org1d31262" class="outline-2"&gt;
-&lt;h2 id="org1d31262"&gt;Krampus&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org1d31262"&gt;
+&lt;div id="outline-container-org2dfba02" class="outline-2"&gt;
+&lt;h2 id="org2dfba02"&gt;Krampus&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org2dfba02"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;get_images&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"krampus mask"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org4bafba7" class="outline-2"&gt;
-&lt;h2 id="org4bafba7"&gt;Lobster&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org4bafba7"&gt;
+&lt;div id="outline-container-org602e1dc" class="outline-2"&gt;
+&lt;h2 id="org602e1dc"&gt;Lobster&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org602e1dc"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;get_images&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"lobster animal"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgd6c1466" class="outline-2"&gt;
-&lt;h2 id="orgd6c1466"&gt;Minotaur&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgd6c1466"&gt;
+&lt;div id="outline-container-org228311c" class="outline-2"&gt;
+&lt;h2 id="org228311c"&gt;Minotaur&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org228311c"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;get_images&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"minotaur statue"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgd328527" class="outline-2"&gt;
-&lt;h2 id="orgd328527"&gt;Namahage&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgd328527"&gt;
+&lt;div id="outline-container-org0fba22a" class="outline-2"&gt;
+&lt;h2 id="org0fba22a"&gt;Namahage&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org0fba22a"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;get_images&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"namahage costume"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orga24802d" class="outline-2"&gt;
-&lt;h2 id="orga24802d"&gt;Octopus&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orga24802d"&gt;
+&lt;div id="outline-container-orgdb7a1aa" class="outline-2"&gt;
+&lt;h2 id="orgdb7a1aa"&gt;Octopus&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgdb7a1aa"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;get_images&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"octopus ocean"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgb6d6ff8" class="outline-2"&gt;
-&lt;h2 id="orgb6d6ff8"&gt;Pig&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgb6d6ff8"&gt;
+&lt;div id="outline-container-orgae6e632" class="outline-2"&gt;
+&lt;h2 id="orgae6e632"&gt;Pig&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgae6e632"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;get_images&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"pig european adult"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org6f70664" class="outline-2"&gt;
-&lt;h2 id="org6f70664"&gt;Quetzacoatl&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org6f70664"&gt;
+&lt;div id="outline-container-org1122c14" class="outline-2"&gt;
+&lt;h2 id="org1122c14"&gt;Quetzacoatl&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org1122c14"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;get_images&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"quetzalcoatl statue"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org7648670" class="outline-2"&gt;
-&lt;h2 id="org7648670"&gt;Rhinoceros&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org7648670"&gt;
+&lt;div id="outline-container-orga3fe002" class="outline-2"&gt;
+&lt;h2 id="orga3fe002"&gt;Rhinoceros&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orga3fe002"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;get_images&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"rhinoceros"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgff52f08" class="outline-2"&gt;
-&lt;h2 id="orgff52f08"&gt;Samurai&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgff52f08"&gt;
+&lt;div id="outline-container-org9299041" class="outline-2"&gt;
+&lt;h2 id="org9299041"&gt;Samurai&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org9299041"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;get_images&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"samurai armor"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgf4c7b8e" class="outline-2"&gt;
-&lt;h2 id="orgf4c7b8e"&gt;Tortoise&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgf4c7b8e"&gt;
+&lt;div id="outline-container-org35f44e1" class="outline-2"&gt;
+&lt;h2 id="org35f44e1"&gt;Tortoise&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org35f44e1"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;get_images&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"tortoise"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgf9f31e2" class="outline-2"&gt;
-&lt;h2 id="orgf9f31e2"&gt;Unicorn (horse)&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgf9f31e2"&gt;
+&lt;div id="outline-container-orgf52a6c9" class="outline-2"&gt;
+&lt;h2 id="orgf52a6c9"&gt;Unicorn (horse)&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgf52a6c9"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;get_images&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"horse"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgfd2ae75" class="outline-2"&gt;
-&lt;h2 id="orgfd2ae75"&gt;Vampire Fish&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgfd2ae75"&gt;
+&lt;div id="outline-container-org83af720" class="outline-2"&gt;
+&lt;h2 id="org83af720"&gt;Vampire Fish&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org83af720"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;get_images&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"vamprie fish -lamprey"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgd791026" class="outline-2"&gt;
-&lt;h2 id="orgd791026"&gt;Wasp&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgd791026"&gt;
+&lt;div id="outline-container-org6f7e0ac" class="outline-2"&gt;
+&lt;h2 id="org6f7e0ac"&gt;Wasp&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org6f7e0ac"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;get_images&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"wasp"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org0f8d36a" class="outline-2"&gt;
-&lt;h2 id="org0f8d36a"&gt;Chicken (Rooster)&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org0f8d36a"&gt;
+&lt;div id="outline-container-org3a74a10" class="outline-2"&gt;
+&lt;h2 id="org3a74a10"&gt;Chicken (Rooster)&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org3a74a10"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;get_images&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"rooster"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -666,9 +666,9 @@ Despite putting &lt;code&gt;type=photo&lt;/code&gt; in there, the cow output had
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org5e1209d" class="outline-2"&gt;
-&lt;h2 id="org5e1209d"&gt;Yak&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org5e1209d"&gt;
+&lt;div id="outline-container-org398d570" class="outline-2"&gt;
+&lt;h2 id="org398d570"&gt;Yak&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org398d570"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;get_images&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"yak"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -676,9 +676,9 @@ Despite putting &lt;code&gt;type=photo&lt;/code&gt; in there, the cow output had
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org56bac3e" class="outline-2"&gt;
-&lt;h2 id="org56bac3e"&gt;Zebu&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org56bac3e"&gt;
+&lt;div id="outline-container-org55a3c72" class="outline-2"&gt;
+&lt;h2 id="org55a3c72"&gt;Zebu&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org55a3c72"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;get_images&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"zebu"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;

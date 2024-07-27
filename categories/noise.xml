@@ -1,61 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron (Posts about noise)</title><link>https://necromuralist.github.io/Ape-Iron/</link><description></description><atom:link href="https://necromuralist.github.io/Ape-Iron/categories/noise.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;The Cloistered Monkey&lt;/a&gt; 
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron (Posts about noise)</title><link>https://necromuralist.github.io/Ape-Iron/</link><description></description><atom:link href="https://necromuralist.github.io/Ape-Iron/categories/noise.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;The Cloistered Monkey&lt;/a&gt; 
 &lt;div id="license" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"&gt;&lt;span property="dct:title"&gt;Ape-Iron&lt;/span&gt; is licensed under
 &lt;a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY-SA 4.0
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"&gt;&lt;/a&gt;&lt;/p&gt; 
-</copyright><lastBuildDate>Mon, 11 Sep 2023 23:12:48 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Two-Dimensional Noise</title><link>https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
+</copyright><lastBuildDate>Tue, 25 Jun 2024 03:43:09 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Two-Dimensional Noise</title><link>https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/index.html#org972c57a"&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/index.html#org1c186d0"&gt;Static Version (Using Set)&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/index.html#org5c1c023"&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/index.html#org81f027c"&gt;Static Version (Using Set)&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/index.html#org7e120f7"&gt;The Closure Function&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/index.html#orgb7ff164"&gt;Set Up&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/index.html#org10dc9c1"&gt;Draw&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/index.html#org0f4d36a"&gt;The Closure Function&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/index.html#org5fdd484"&gt;Set Up&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/index.html#orgdc3041b"&gt;Draw&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/index.html#org9773ccf"&gt;Static Version Setting Pixels&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/index.html#org86de09e"&gt;Static Version Setting Pixels&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/index.html#orge0d2336"&gt;Some Constants&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/index.html#org1f8266a"&gt;Noise Plotter&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/index.html#orga672a68"&gt;The Sketch&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/index.html#org0274576"&gt;The Output&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/index.html#orgfedab54"&gt;Some Constants&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/index.html#org73e9492"&gt;Noise Plotter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/index.html#org5c643bc"&gt;The Sketch&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/index.html#org56e17e7"&gt;The Output&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/index.html#orgf78a654"&gt;Moving Version&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/index.html#org29555ce"&gt;Moving Version&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/index.html#orgc88417a"&gt;The Sketch&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/index.html#org91b90d6"&gt;Moving Noise Plotter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/index.html#org647c4c4"&gt;The Sketch&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/index.html#org9163f41"&gt;Moving Noise Plotter&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/index.html#org1127f72"&gt;Sources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/index.html#orgf325064"&gt;Sources&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org972c57a" class="outline-2"&gt;
-&lt;h2 id="org972c57a"&gt;Introduction&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org972c57a"&gt;
+&lt;div id="outline-container-org5c1c023" class="outline-2"&gt;
+&lt;h2 id="org5c1c023"&gt;Introduction&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org5c1c023"&gt;
 &lt;p&gt;
 This is yet another copy and redo of a sketch from &lt;a href="https://nature-of-code-2nd-edition.netlify.app/"&gt;the Nature of Code&lt;/a&gt;. This time it's an extension of a prior post on &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html"&gt;making a one-dimensional noise graph&lt;/a&gt;.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org1c186d0" class="outline-2"&gt;
-&lt;h2 id="org1c186d0"&gt;Static Version (Using Set)&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org1c186d0"&gt;
+&lt;div id="outline-container-org81f027c" class="outline-2"&gt;
+&lt;h2 id="org81f027c"&gt;Static Version (Using Set)&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org81f027c"&gt;
 &lt;p&gt;
-This first sketch is a static two-dimensional visualization of the p5 &lt;code&gt;noise&lt;/code&gt;  function, with the pixels of the canvas set to a level of gray (from black to white) based on the noise. I'll be doing the sketch again using a different method but this first one uses the (ambiguously named) &lt;a href="https://p5js.org/reference/#/p5/set"&gt;set&lt;/a&gt; function that lets you set the grayscale or RGB-Alpha value for a single &lt;a href="https://en.wikipedia.org/wiki/Pixel?useskin=vector#Logical_pixel"&gt;logical pixel&lt;/a&gt; (because different displays have different pixel-densities, there might be more "physical" pixels dedicated to each logical one, giving you better resolution). The &lt;code&gt;set&lt;/code&gt; function is the simplest way to set a pixel, but, as noted in the p5 documentation, it adds overhead so there's another recommended way to do it if you need it to go faster (which is what the next section - &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/index.html#org9773ccf"&gt;Static Version Setting Pixels&lt;/a&gt; - is about). For static images (as this is) it's fast enough, though.
+This first sketch is a static two-dimensional visualization of the p5 &lt;code&gt;noise&lt;/code&gt;  function, with the pixels of the canvas set to a level of gray (from black to white) based on the noise. I'll be doing the sketch again using a different method but this first one uses the (ambiguously named) &lt;a href="https://p5js.org/reference/#/p5/set"&gt;set&lt;/a&gt; function that lets you set the grayscale or RGB-Alpha value for a single &lt;a href="https://en.wikipedia.org/wiki/Pixel?useskin=vector#Logical_pixel"&gt;logical pixel&lt;/a&gt; (because different displays have different pixel-densities, there might be more "physical" pixels dedicated to each logical one, giving you better resolution). The &lt;code&gt;set&lt;/code&gt; function is the simplest way to set a pixel, but, as noted in the p5 documentation, it adds overhead so there's another recommended way to do it if you need it to go faster (which is what the next section - &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/index.html#org86de09e"&gt;Static Version Setting Pixels&lt;/a&gt; - is about). For static images (as this is) it's fast enough, though.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org7e120f7" class="outline-3"&gt;
-&lt;h3 id="org7e120f7"&gt;The Closure Function&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org7e120f7"&gt;
+&lt;div id="outline-container-org0f4d36a" class="outline-3"&gt;
+&lt;h3 id="org0f4d36a"&gt;The Closure Function&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org0f4d36a"&gt;
 &lt;p&gt;
 This is the basic function that we pass to the &lt;code&gt;p5&lt;/code&gt; constructor to create our sketch.
 &lt;/p&gt;
@@ -71,9 +71,9 @@ We're only going to set the grayscale channel which has a maximum value of 255, 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgb7ff164" class="outline-3"&gt;
-&lt;h3 id="orgb7ff164"&gt;Set Up&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgb7ff164"&gt;
+&lt;div id="outline-container-org5fdd484" class="outline-3"&gt;
+&lt;h3 id="org5fdd484"&gt;Set Up&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org5fdd484"&gt;
 &lt;p&gt;
 First I'll define the p5 &lt;code&gt;setup&lt;/code&gt; function. All it does is create the canvas that's the width of the div container. I'm using a variable &lt;code&gt;STATIC_NOISE_GRAPH_DIV&lt;/code&gt; that I didn't show, but it just has the HTML div ID that will hold the sketch.
 &lt;/p&gt;
@@ -87,9 +87,9 @@ First I'll define the p5 &lt;code&gt;setup&lt;/code&gt; function. All it does is
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org10dc9c1" class="outline-3"&gt;
-&lt;h3 id="org10dc9c1"&gt;Draw&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org10dc9c1"&gt;
+&lt;div id="outline-container-orgdc3041b" class="outline-3"&gt;
+&lt;h3 id="orgdc3041b"&gt;Draw&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgdc3041b"&gt;
 &lt;p&gt;
 The p5 &lt;code&gt;draw&lt;/code&gt; function is where we do all the work of drawing the plot so I'll break it up a little bit to explain more of what's here.
 &lt;/p&gt;
@@ -109,9 +109,9 @@ I'm also creating a variable, &lt;code&gt;intensity&lt;/code&gt; to hold the RGB
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org4b6aef2" class="outline-4"&gt;
-&lt;h4 id="org4b6aef2"&gt;Load Pixels&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org4b6aef2"&gt;
+&lt;div id="outline-container-orge496623" class="outline-4"&gt;
+&lt;h4 id="orge496623"&gt;Load Pixels&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orge496623"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;loadPixels&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -121,9 +121,9 @@ Behind the scenes the &lt;code&gt;set&lt;/code&gt; function is actually manipula
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org2dc0bd5" class="outline-4"&gt;
-&lt;h4 id="org2dc0bd5"&gt;The For-Loops&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org2dc0bd5"&gt;
+&lt;div id="outline-container-org4b37169" class="outline-4"&gt;
+&lt;h4 id="org4b37169"&gt;The For-Loops&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org4b37169"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;column&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;column&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;width&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;column&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;row_offset&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;0.0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
@@ -136,9 +136,9 @@ Since we're setting each of the pixels in the canvas I'll use two for-loops, tra
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orge0c5326" class="outline-4"&gt;
-&lt;h4 id="orge0c5326"&gt;Set the Intensity&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orge0c5326"&gt;
+&lt;div id="outline-container-org147df47" class="outline-4"&gt;
+&lt;h4 id="org147df47"&gt;Set the Intensity&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org147df47"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;intensity&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;noise&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;column_offset&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;row_offset&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;MAXIMUM_INTENSITY&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;column&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;row&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;intensity&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -149,9 +149,9 @@ The &lt;code&gt;intensity&lt;/code&gt; for each pixel is the noise at the offset
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org94abb15" class="outline-4"&gt;
-&lt;h4 id="org94abb15"&gt;End the For-Loops&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org94abb15"&gt;
+&lt;div id="outline-container-org6ffabc2" class="outline-4"&gt;
+&lt;h4 id="org6ffabc2"&gt;End the For-Loops&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org6ffabc2"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;row_offset&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;NOISE_OFFSET_INCREMENT&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;//end row-for&lt;/span&gt;
 
@@ -165,9 +165,9 @@ At the end of each of the for-loops we add an offset value to change the input t
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgdddf208" class="outline-4"&gt;
-&lt;h4 id="orgdddf208"&gt;Update the Pixels and Stop the Loop&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgdddf208"&gt;
+&lt;div id="outline-container-org9092598" class="outline-4"&gt;
+&lt;h4 id="org9092598"&gt;Update the Pixels and Stop the Loop&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org9092598"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;updatePixels&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;noLoop&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// end draw&lt;/span&gt;
@@ -198,9 +198,9 @@ And there you go. Now onto a version that sets the pixel array directly without 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org9773ccf" class="outline-2"&gt;
-&lt;h2 id="org9773ccf"&gt;Static Version Setting Pixels&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org9773ccf"&gt;
+&lt;div id="outline-container-org86de09e" class="outline-2"&gt;
+&lt;h2 id="org86de09e"&gt;Static Version Setting Pixels&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org86de09e"&gt;
 &lt;p&gt;
 &lt;script src="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/pixel-constants.js"&gt;&lt;/script&gt;
 &lt;script src="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/noise-plotter.js"&gt;&lt;/script&gt;
@@ -211,9 +211,9 @@ This will essentially be the same sketch except instead of using the &lt;code&gt
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orge0d2336" class="outline-3"&gt;
-&lt;h3 id="orge0d2336"&gt;Some Constants&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orge0d2336"&gt;
+&lt;div id="outline-container-orgfedab54" class="outline-3"&gt;
+&lt;h3 id="orgfedab54"&gt;Some Constants&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgfedab54"&gt;
 &lt;p&gt;
 I'm not as familiar with javascript as I am with python so I was littering constant values all over the place trying to figure where the best place to put them would be. I finally decided to create these two objects to hold some constants that I'll use when updating the pixels array and when setting the slider up.
 &lt;/p&gt;
@@ -246,17 +246,17 @@ These are the same values I used in the previous noise-sketches. A &lt;code&gt;s
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org1f8266a" class="outline-3"&gt;
-&lt;h3 id="org1f8266a"&gt;Noise Plotter&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org1f8266a"&gt;
+&lt;div id="outline-container-org73e9492" class="outline-3"&gt;
+&lt;h3 id="org73e9492"&gt;Noise Plotter&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org73e9492"&gt;
 &lt;p&gt;
 The Noise Plotter class is going to draw the two-dimensional noise-visualization using the current slider value as the step-size to change the noise input.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org38b322b" class="outline-4"&gt;
-&lt;h4 id="org38b322b"&gt;The Noise Plotter Class&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org38b322b"&gt;
+&lt;div id="outline-container-org0c7a314" class="outline-4"&gt;
+&lt;h4 id="org0c7a314"&gt;The Noise Plotter Class&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org0c7a314"&gt;
 &lt;p&gt;
 So, let's get started with the class definition.
 &lt;/p&gt;
@@ -276,9 +276,9 @@ There's nothing really being done in the constructor except storing the p5 and s
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org9d34695" class="outline-4"&gt;
-&lt;h4 id="org9d34695"&gt;The Draw Method&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org9d34695"&gt;
+&lt;div id="outline-container-orge94ab59" class="outline-4"&gt;
+&lt;h4 id="orge94ab59"&gt;The Draw Method&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orge94ab59"&gt;
 &lt;p&gt;
 This is the workhorse that does all the plotting.
 &lt;/p&gt;
@@ -314,15 +314,15 @@ That last variable might take some explaining, so maybe here's a good spot to du
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;width&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nx"&gt;pixel_index&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;y&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;width&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;CELLS_PER_PIXEL&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nx"&gt;intensity&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;noise&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;column_offset&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;row_offset&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="w"&gt;		   &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;RGB_MAX&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;                   &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;RGB_MAX&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;pixels&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;pixel_index&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;
-&lt;span class="w"&gt;		     &lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;RED&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;intensity&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;                     &lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;RED&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;intensity&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;pixels&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;pixel_index&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;
-&lt;span class="w"&gt;		     &lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;GREEN&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;intensity&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;                     &lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;GREEN&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;intensity&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;pixels&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;pixel_index&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;
-&lt;span class="w"&gt;		     &lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;BLUE&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;intensity&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;                     &lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;BLUE&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;intensity&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;pixels&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;pixel_index&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;
-&lt;span class="w"&gt;		     &lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;ALPHA&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;RGB_MAX&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;                     &lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;ALPHA&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;RGB_MAX&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nx"&gt;column_offset&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;offset_increment&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// end x for&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;row_offset&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;offset_increment&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -333,18 +333,18 @@ That last variable might take some explaining, so maybe here's a good spot to du
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orga672a68" class="outline-3"&gt;
-&lt;h3 id="orga672a68"&gt;The Sketch&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orga672a68"&gt;
+&lt;div id="outline-container-org5c643bc" class="outline-3"&gt;
+&lt;h3 id="org5c643bc"&gt;The Sketch&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org5c643bc"&gt;
 &lt;p&gt;
 &lt;b&gt;Note for later:&lt;/b&gt; You have to either set the background or the set the alpha channel in the pixel array. Leaving both out won't show anything.
 &lt;/p&gt;
 &lt;/div&gt;
 
 
-&lt;div id="outline-container-org85f497c" class="outline-4"&gt;
-&lt;h4 id="org85f497c"&gt;The Closure Function&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org85f497c"&gt;
+&lt;div id="outline-container-orge32881e" class="outline-4"&gt;
+&lt;h4 id="orge32881e"&gt;The Closure Function&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orge32881e"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;static_pixels&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;HEIGHT&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;400&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
@@ -358,9 +358,9 @@ Once again, this is the sketch function that gets passed to a p5 constructor. I 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org689826d" class="outline-4"&gt;
-&lt;h4 id="org689826d"&gt;Set Up&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org689826d"&gt;
+&lt;div id="outline-container-org78478f3" class="outline-4"&gt;
+&lt;h4 id="org78478f3"&gt;Set Up&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org78478f3"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;setup&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -370,8 +370,8 @@ Just the basic p5 setup function.
 &lt;/div&gt;
 
 &lt;ul class="org-ul"&gt;
-&lt;li&gt;&lt;a id="orgf354608"&gt;&lt;/a&gt;You Are My Density&lt;br&gt;
-&lt;div class="outline-text-5" id="text-orgf354608"&gt;
+&lt;li&gt;&lt;a id="org42ff1de"&gt;&lt;/a&gt;You Are My Density&lt;br&gt;
+&lt;div class="outline-text-5" id="text-org42ff1de"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;pixelDensity&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -385,8 +385,8 @@ The &lt;a href="https://p5js.org/reference/#/p5/pixels"&gt;pixels&lt;/a&gt; docu
 &lt;/div&gt;
 &lt;/li&gt;
 
-&lt;li&gt;&lt;a id="orgd676731"&gt;&lt;/a&gt;The Canvas&lt;br&gt;
-&lt;div class="outline-text-5" id="text-orgd676731"&gt;
+&lt;li&gt;&lt;a id="orgaff97da"&gt;&lt;/a&gt;The Canvas&lt;br&gt;
+&lt;div class="outline-text-5" id="text-orgaff97da"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;createCanvas&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getElementById&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;STATIC_NOISE_PIXELS_DIV&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;offsetWidth&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;HEIGHT&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
@@ -398,12 +398,12 @@ This is the usual code I use, nothing fancy.
 &lt;/div&gt;
 &lt;/li&gt;
 
-&lt;li&gt;&lt;a id="org27a7813"&gt;&lt;/a&gt;The Slider&lt;br&gt;
-&lt;div class="outline-text-5" id="text-org27a7813"&gt;
+&lt;li&gt;&lt;a id="orge370a28"&gt;&lt;/a&gt;The Slider&lt;br&gt;
+&lt;div class="outline-text-5" id="text-orge370a28"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;slider&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;createSlider&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;SLIDER&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;min&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;			 &lt;/span&gt;&lt;span class="nx"&gt;SLIDER&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;max&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;			 &lt;/span&gt;&lt;span class="nx"&gt;SLIDER&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;default_value&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;			 &lt;/span&gt;&lt;span class="nx"&gt;SLIDER&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;step_size&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;                         &lt;/span&gt;&lt;span class="nx"&gt;SLIDER&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;max&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;                         &lt;/span&gt;&lt;span class="nx"&gt;SLIDER&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;default_value&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;                         &lt;/span&gt;&lt;span class="nx"&gt;SLIDER&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;step_size&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="nx"&gt;slider&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;style&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"width"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"500px"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -428,8 +428,8 @@ Since this is a mostly static drawing I'm going to turn off re-drawing the canva
 &lt;/div&gt;
 &lt;/li&gt;
 
-&lt;li&gt;&lt;a id="org41fd953"&gt;&lt;/a&gt;Text Setup&lt;br&gt;
-&lt;div class="outline-text-5" id="text-org41fd953"&gt;
+&lt;li&gt;&lt;a id="orgf027195"&gt;&lt;/a&gt;Text Setup&lt;br&gt;
+&lt;div class="outline-text-5" id="text-orgf027195"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;fill&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"white"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;stroke&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"white"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;textAlign&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;CENTER&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
@@ -443,8 +443,8 @@ This sets the values that I'll use to show what the current slider value is to t
 &lt;/div&gt;
 &lt;/li&gt;
 
-&lt;li&gt;&lt;a id="org54103cc"&gt;&lt;/a&gt;A Noise Plotter&lt;br&gt;
-&lt;div class="outline-text-5" id="text-org54103cc"&gt;
+&lt;li&gt;&lt;a id="org07a5f7a"&gt;&lt;/a&gt;A Noise Plotter&lt;br&gt;
+&lt;div class="outline-text-5" id="text-org07a5f7a"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;plotter&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;NoisePlotter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;slider&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -454,8 +454,8 @@ I thought that it was getting cluttered up enough that it would make sense to br
 &lt;/div&gt;
 &lt;/li&gt;
 
-&lt;li&gt;&lt;a id="orgf928535"&gt;&lt;/a&gt;No Loop&lt;br&gt;
-&lt;div class="outline-text-5" id="text-orgf928535"&gt;
+&lt;li&gt;&lt;a id="org82e04a9"&gt;&lt;/a&gt;No Loop&lt;br&gt;
+&lt;div class="outline-text-5" id="text-org82e04a9"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;noLoop&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// end setup&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -468,9 +468,9 @@ The last thing in the setup is turning off the re-drawing of the canvas. I'm sti
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org8bc7ceb" class="outline-4"&gt;
-&lt;h4 id="org8bc7ceb"&gt;Draw&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org8bc7ceb"&gt;
+&lt;div id="outline-container-org8a6e88d" class="outline-4"&gt;
+&lt;h4 id="org8a6e88d"&gt;Draw&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org8a6e88d"&gt;
 &lt;p&gt;
 Now, our draw function.
 &lt;/p&gt;
@@ -479,7 +479,7 @@ Now, our draw function.
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;plotter&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;draw&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="c1"&gt;// add a label to show the amount the noise changes&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;text&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sb"&gt;`Noise Change: &lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;slider&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;value&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="nx"&gt;toFixed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;	  &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;width&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;height&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;width&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;height&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// end draw&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -489,9 +489,9 @@ Because I'm deferring most of the plotting to the &lt;code&gt;NoisePlotter&lt;/c
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgc1b7fb2" class="outline-4"&gt;
-&lt;h4 id="orgc1b7fb2"&gt;The P5 Instance&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgc1b7fb2"&gt;
+&lt;div id="outline-container-org3264abe" class="outline-4"&gt;
+&lt;h4 id="org3264abe"&gt;The P5 Instance&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org3264abe"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ow"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;static_pixels&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;STATIC_NOISE_PIXELS_DIV&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -502,9 +502,9 @@ And then we create the p5 object…
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org0274576" class="outline-3"&gt;
-&lt;h3 id="org0274576"&gt;The Output&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org0274576"&gt;
+&lt;div id="outline-container-org56e17e7" class="outline-3"&gt;
+&lt;h3 id="org56e17e7"&gt;The Output&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org56e17e7"&gt;
 &lt;p&gt;
 &lt;script src="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/static-sketch-pixels.js"&gt;&lt;/script&gt;
 
@@ -514,9 +514,9 @@ And then we create the p5 object…
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgf78a654" class="outline-2"&gt;
-&lt;h2 id="orgf78a654"&gt;Moving Version&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgf78a654"&gt;
+&lt;div id="outline-container-org29555ce" class="outline-2"&gt;
+&lt;h2 id="org29555ce"&gt;Moving Version&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org29555ce"&gt;
 &lt;p&gt;
 &lt;script src="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/moving-noise.js"&gt;&lt;/script&gt;
 &lt;script src="https://necromuralist.github.io/Ape-Iron/posts/two-dimensional-noise/moving-sketch-pixels.js"&gt;&lt;/script&gt;
@@ -527,9 +527,9 @@ And then we create the p5 object…
 &lt;p id="moving-slider"&gt;&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgc88417a" class="outline-3"&gt;
-&lt;h3 id="orgc88417a"&gt;The Sketch&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgc88417a"&gt;
+&lt;div id="outline-container-org647c4c4" class="outline-3"&gt;
+&lt;h3 id="org647c4c4"&gt;The Sketch&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org647c4c4"&gt;
 &lt;p&gt;
 &lt;b&gt;&lt;b&gt;Note for later:&lt;/b&gt;&lt;/b&gt; Setting the canvas too wide slows the frame rate down a lot (since the x for-loop uses the width) so I needed to both shrink the canvas and add an extra div (above) to stick the slider into - because it was only showing up under the canvas before because there wasn't enough room for it to slide up alongside it.
 &lt;/p&gt;
@@ -543,16 +543,16 @@ Check the framerate in the browser's javascript console with
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org91b90d6" class="outline-3"&gt;
-&lt;h3 id="org91b90d6"&gt;Moving Noise Plotter&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org91b90d6"&gt;
+&lt;div id="outline-container-org9163f41" class="outline-3"&gt;
+&lt;h3 id="org9163f41"&gt;Moving Noise Plotter&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org9163f41"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;class&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;MovingNoise&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="kr"&gt;constructor&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;undefined&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;	       &lt;/span&gt;&lt;span class="nx"&gt;slider&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;undefined&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;	       &lt;/span&gt;&lt;span class="nx"&gt;red&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;RGB_MAX&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;	       &lt;/span&gt;&lt;span class="nx"&gt;green&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;RGB_MAX&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;	       &lt;/span&gt;&lt;span class="nx"&gt;blue&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;RGB_MAX&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;	       &lt;/span&gt;&lt;span class="nx"&gt;y_start_offset&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;1000&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{})&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;               &lt;/span&gt;&lt;span class="nx"&gt;slider&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;undefined&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;               &lt;/span&gt;&lt;span class="nx"&gt;red&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;RGB_MAX&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;               &lt;/span&gt;&lt;span class="nx"&gt;green&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;RGB_MAX&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;               &lt;/span&gt;&lt;span class="nx"&gt;blue&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;RGB_MAX&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;               &lt;/span&gt;&lt;span class="nx"&gt;y_start_offset&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;1000&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{})&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;slider&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;slider&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;red_fraction&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;red&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;RGB_MAX&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -574,16 +574,16 @@ Check the framerate in the browser's javascript console with
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;y&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;y&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;height&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;y&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nx"&gt;offset_x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;noise_start&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;width&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-&lt;span class="w"&gt;	&lt;/span&gt;&lt;span class="nx"&gt;pixel_index&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;y&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;width&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;CELLS_PER_PIXEL&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="w"&gt;	&lt;/span&gt;&lt;span class="nx"&gt;intensity&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;noise&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;offset_x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;offset_y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;RGB_MAX&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="w"&gt;	&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;pixels&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;pixel_index&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;RED&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;intensity&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;
-&lt;span class="w"&gt;						  &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;red_fraction&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="w"&gt;	&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;pixels&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;pixel_index&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;GREEN&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;intensity&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;
-&lt;span class="w"&gt;						    &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;green_fraction&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="w"&gt;	&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;pixels&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;pixel_index&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;BLUE&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;intensity&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;
-&lt;span class="w"&gt;						   &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;blue_fraction&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="w"&gt;	&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;pixels&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;pixel_index&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;ALPHA&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;RGB_MAX&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="w"&gt;	&lt;/span&gt;&lt;span class="nx"&gt;offset_x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;increment&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nx"&gt;pixel_index&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;y&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;width&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;CELLS_PER_PIXEL&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nx"&gt;intensity&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;noise&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;offset_x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;offset_y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;RGB_MAX&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;pixels&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;pixel_index&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;RED&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;intensity&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;
+&lt;span class="w"&gt;                                                  &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;red_fraction&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;pixels&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;pixel_index&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;GREEN&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;intensity&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;
+&lt;span class="w"&gt;                                                    &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;green_fraction&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;pixels&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;pixel_index&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;BLUE&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;intensity&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;
+&lt;span class="w"&gt;                                                   &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;blue_fraction&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;pixels&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;pixel_index&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;ALPHA&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;PIXEL_ARRAY&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;RGB_MAX&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nx"&gt;offset_x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;increment&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;
 &lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// end x for&lt;/span&gt;
 &lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nx"&gt;offset_y&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;increment&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="c1"&gt;// end x for&lt;/span&gt;
@@ -596,9 +596,9 @@ Check the framerate in the browser's javascript console with
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org1127f72" class="outline-2"&gt;
-&lt;h2 id="org1127f72"&gt;Sources&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org1127f72"&gt;
+&lt;div id="outline-container-orgf325064" class="outline-2"&gt;
+&lt;h2 id="orgf325064"&gt;Sources&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgf325064"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;Nature of Code [Internet]. [cited 2023 May 11]. Available from: &lt;a href="https://nature-of-code-2nd-edition.netlify.app/"&gt;https://nature-of-code-2nd-edition.netlify.app/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;p5 reference | pixelDensity() [Internet]. [cited 2023 May 15]. Available from: &lt;a href="https://p5js.org/reference/#/p5/pixelDensity"&gt;https://p5js.org/reference/#/p5/pixelDensity&lt;/a&gt;&lt;/li&gt;
@@ -616,21 +616,21 @@ Check the framerate in the browser's javascript console with
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#orgdce4fef"&gt;The Noise Walker&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#org03d5ebb"&gt;The Noise Walker&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#org7d5d774"&gt;Noise Value Offset&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#org6569333"&gt;Walk&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#org22aa43f"&gt;Show Yourself&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#org8e8b72d"&gt;Noise Value Offset&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#org8740cbe"&gt;Walk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#org91b3614"&gt;Show Yourself&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#org5753eb4"&gt;The Sketch&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#org77ddeba"&gt;The Sketch&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#org2042bfa"&gt;Set Up&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#org3b2affa"&gt;Draw&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#org80d9671"&gt;Set Up&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#org72e80ae"&gt;Draw&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#org933f76b"&gt;The End&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#org9cab5fc"&gt;Sources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#org1f2c428"&gt;The End&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-noisy-walker/index.html#org0e511f3"&gt;Sources&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -650,9 +650,9 @@ Check the framerate in the browser's javascript console with
 This is a follow-up to the &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/a-random-walker/index.html"&gt;Random Walker&lt;/a&gt; post. In that previous post I made a walker that moved randomly in any (2D) direction. In this post I'll make a walker that moves according to values given by the p5 &lt;a href="https://p5js.org/reference/#/p5/noise"&gt;noise&lt;/a&gt; function. This is a pretty straight repeat of what's in the &lt;a href="https://nature-of-code-2nd-edition.netlify.app/introduction/"&gt;introduction to the Nature of Code&lt;/a&gt;.
 &lt;/p&gt;
 
-&lt;div id="outline-container-orgdce4fef" class="outline-2"&gt;
-&lt;h2 id="orgdce4fef"&gt;The Noise Walker&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgdce4fef"&gt;
+&lt;div id="outline-container-org03d5ebb" class="outline-2"&gt;
+&lt;h2 id="org03d5ebb"&gt;The Noise Walker&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org03d5ebb"&gt;
 &lt;p&gt;
 The NoiseWalker keeps track of its position on the canvas as well as moving itself and plotting a circle in its current location. Its constructor starts it at the center of the canvas and creates a noise-offset vector to hold the inputs to the noise function. The noise-offset vector is initially given random x and y values so they aren't the same - since &lt;code&gt;noise&lt;/code&gt; is a function if we passed in the same value to it for both x and y they would both get the same value out of it and we'd end up with a diagonal line instead of something that looks random-ish the way that we want.
 &lt;/p&gt;
@@ -672,11 +672,11 @@ The first call to the &lt;code&gt;walk&lt;/code&gt; method will clobber the init
 &lt;span class="cm"&gt;   * @param: stroke_color - color for the circle's line&lt;/span&gt;
 &lt;span class="cm"&gt;   */&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="kr"&gt;constructor&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;	       &lt;/span&gt;&lt;span class="nx"&gt;slider&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;	       &lt;/span&gt;&lt;span class="nx"&gt;stroke_weight&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;	       &lt;/span&gt;&lt;span class="nx"&gt;diameter&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;24&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;	       &lt;/span&gt;&lt;span class="nx"&gt;fill_color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"cornflowerblue"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;	       &lt;/span&gt;&lt;span class="nx"&gt;stroke_color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"black"&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{})&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;               &lt;/span&gt;&lt;span class="nx"&gt;slider&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;               &lt;/span&gt;&lt;span class="nx"&gt;stroke_weight&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;               &lt;/span&gt;&lt;span class="nx"&gt;diameter&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;24&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;               &lt;/span&gt;&lt;span class="nx"&gt;fill_color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"cornflowerblue"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;               &lt;/span&gt;&lt;span class="nx"&gt;stroke_color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"black"&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{})&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;noise_upper_bound&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mf"&gt;5&lt;/span&gt;
 
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -688,14 +688,14 @@ The first call to the &lt;code&gt;walk&lt;/code&gt; method will clobber the init
 
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;position&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;createVector&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;width&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;height&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;noise_offset&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;createVector&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;random&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;noise_upper_bound&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-&lt;span class="w"&gt;					&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;random&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;noise_upper_bound&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+&lt;span class="w"&gt;                                        &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;random&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;noise_upper_bound&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// end constructor&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org7d5d774" class="outline-3"&gt;
-&lt;h3 id="org7d5d774"&gt;Noise Value Offset&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org7d5d774"&gt;
+&lt;div id="outline-container-org8e8b72d" class="outline-3"&gt;
+&lt;h3 id="org8e8b72d"&gt;Noise Value Offset&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org8e8b72d"&gt;
 &lt;p&gt;
 This property will return the current value of the slider. It's maybe overkill, but I'm trying to re-learn javascript along with p5 and follow along with &lt;i&gt;The Nature of Code&lt;/i&gt; so I need things to be extra-obvious, sometimes.
 &lt;/p&gt;
@@ -710,9 +710,9 @@ This property will return the current value of the slider. It's maybe overkill, 
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org6569333" class="outline-3"&gt;
-&lt;h3 id="org6569333"&gt;Walk&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org6569333"&gt;
+&lt;div id="outline-container-org8740cbe" class="outline-3"&gt;
+&lt;h3 id="org8740cbe"&gt;Walk&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org8740cbe"&gt;
 &lt;p&gt;
 The &lt;code&gt;walk&lt;/code&gt; method moves the walker by adding some noise to its position. The &lt;code&gt;noise&lt;/code&gt; function outputs a value from 0 to 1 so I'll use it as a scale factor for the width and height of the canvas to get the new location of the walker. Note that we're not using the prior position of the walker when calculating the new one, just the noise.
 &lt;/p&gt;
@@ -722,14 +722,14 @@ The &lt;code&gt;walk&lt;/code&gt; method moves the walker by adding some noise t
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;position&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;noise&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;noise_offset&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;width&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;position&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;y&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;noise&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;noise_offset&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;height&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;noise_offset&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;noise_offset_change&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;			&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;noise_offset_change&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;                        &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;noise_offset_change&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// end walk&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org22aa43f" class="outline-3"&gt;
-&lt;h3 id="org22aa43f"&gt;Show Yourself&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org22aa43f"&gt;
+&lt;div id="outline-container-org91b3614" class="outline-3"&gt;
+&lt;h3 id="org91b3614"&gt;Show Yourself&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org91b3614"&gt;
 &lt;p&gt;
 The Noise Walker's &lt;code&gt;show_yourself&lt;/code&gt; method draws a circle wherever the walker happens to be at the moment. Nothing fancy.
 &lt;/p&gt;
@@ -744,9 +744,9 @@ The Noise Walker's &lt;code&gt;show_yourself&lt;/code&gt; method draws a circle 
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org5753eb4" class="outline-2"&gt;
-&lt;h2 id="org5753eb4"&gt;The Sketch&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org5753eb4"&gt;
+&lt;div id="outline-container-org77ddeba" class="outline-2"&gt;
+&lt;h2 id="org77ddeba"&gt;The Sketch&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org77ddeba"&gt;
 &lt;p&gt;
 I'll put the sketch in a function named "noise_walk".
 &lt;/p&gt;
@@ -763,9 +763,9 @@ I'll put the sketch in a function named "noise_walk".
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org2042bfa" class="outline-3"&gt;
-&lt;h3 id="org2042bfa"&gt;Set Up&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org2042bfa"&gt;
+&lt;div id="outline-container-org80d9671" class="outline-3"&gt;
+&lt;h3 id="org80d9671"&gt;Set Up&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org80d9671"&gt;
 &lt;p&gt;
 The &lt;code&gt;setup&lt;/code&gt; method will create the canvas, a slider which the user can use to change the size of the steps the walker takes along the noise offset, and the walker itself. The canvas and slider are placed based on the order in which you create them. In this case I wanted the slider underneath the canvas so I had to define it after the canvas (but before the walker since I pass it to the walker).
 &lt;/p&gt;
@@ -781,17 +781,17 @@ The &lt;code&gt;setup&lt;/code&gt; method will create the canvas, a slider which
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;slider&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;style&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"width"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;SLIDER_WIDTH&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="sb"&gt;px`&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;walker&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;NoiseWalker&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;			    &lt;/span&gt;&lt;span class="nx"&gt;slider&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;slider&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;			    &lt;/span&gt;&lt;span class="nx"&gt;fill_color&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="nx"&gt;MEDIUM_TEAL_BLUE&lt;/span&gt;&lt;span class="p"&gt;});&lt;/span&gt;
+&lt;span class="w"&gt;                            &lt;/span&gt;&lt;span class="nx"&gt;slider&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;slider&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;                            &lt;/span&gt;&lt;span class="nx"&gt;fill_color&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="nx"&gt;MEDIUM_TEAL_BLUE&lt;/span&gt;&lt;span class="p"&gt;});&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;background&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"white"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// end setup&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org3b2affa" class="outline-3"&gt;
-&lt;h3 id="org3b2affa"&gt;Draw&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org3b2affa"&gt;
+&lt;div id="outline-container-org72e80ae" class="outline-3"&gt;
+&lt;h3 id="org72e80ae"&gt;Draw&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org72e80ae"&gt;
 &lt;p&gt;
 The draw function moves and shows the walker.
 &lt;/p&gt;
@@ -808,24 +808,24 @@ The draw function moves and shows the walker.
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;rect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;width&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;height&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;35&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;250&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;30&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;fill&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;MEDIUM_TEAL_BLUE_OPAQUE&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;text&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sb"&gt;`Noise Change: &lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;slider&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;value&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="nx"&gt;toFixed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;	    &lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;width&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;height&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;            &lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;width&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;height&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// end draw&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org933f76b" class="outline-2"&gt;
-&lt;h2 id="org933f76b"&gt;The End&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org933f76b"&gt;
+&lt;div id="outline-container-org1f2c428" class="outline-2"&gt;
+&lt;h2 id="org1f2c428"&gt;The End&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org1f2c428"&gt;
 &lt;p&gt;
 And there's the code for the sketch at the top of the page.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org9cab5fc" class="outline-2"&gt;
-&lt;h2 id="org9cab5fc"&gt;Sources&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org9cab5fc"&gt;
+&lt;div id="outline-container-org0e511f3" class="outline-2"&gt;
+&lt;h2 id="org0e511f3"&gt;Sources&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org0e511f3"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;Nature of Code [Internet]. [cited 2023 May 11]. Available from: &lt;a href="https://nature-of-code-2nd-edition.netlify.app/"&gt;https://nature-of-code-2nd-edition.netlify.app/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;p5 reference | noise() [Internet]. [cited 2023 Apr 25]. Available from: &lt;a href="https://p5js.org/reference/#/p5/noise"&gt;https://p5js.org/reference/#/p5/noise&lt;/a&gt;&lt;/li&gt;
@@ -835,39 +835,39 @@ And there's the code for the sketch at the top of the page.
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org7e3a212"&gt;What Is This About?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org2cca447"&gt;Setup The Sketch&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org9f4b096"&gt;What Is This About?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgd72f070"&gt;Setup The Sketch&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgdd87f1e"&gt;Name The Parent DIV&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org60b4e2a"&gt;The Instance Container Function&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org296cc45"&gt;Name The Parent DIV&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org492ecd7"&gt;The Instance Container Function&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgc8f1fef"&gt;Constants and Variables&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgbc063ff"&gt;Constants and Variables&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgdc7d60c"&gt;The Noise Space&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org2ec2e06"&gt;The Slider&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgfe3c685"&gt;Colors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org9610f9b"&gt;The Noise Space&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgc368a8c"&gt;The Slider&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org64dfbea"&gt;Colors&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org3464342"&gt;Setup&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org4d10a59"&gt;Setup&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org6bd202c"&gt;Canvas and Line&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org24ab2bd"&gt;Slider&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org6b04f65"&gt;Canvas and Line&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgb13e288"&gt;Slider&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org60e845b"&gt;Draw&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org820d7a0"&gt;Draw&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgd992ce5"&gt;The Draw Function&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org97f6dc7"&gt;Setup The Next Frame&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org65a168d"&gt;Plot Next Frame&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orga011fd3"&gt;Move the Noise Input&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org160808f"&gt;Slider Label&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgd4bba6f"&gt;Once Again But As a Picture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgd56158c"&gt;The Draw Function&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org88b41e1"&gt;Setup The Next Frame&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org6ed13ec"&gt;Plot Next Frame&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orge813121"&gt;Move the Noise Input&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org7fc5d75"&gt;Slider Label&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org71c4a4f"&gt;Once Again But As a Picture&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgee64346"&gt;Make The Sketch Object&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org50166ff"&gt;And That's It, Then&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orge9ba3cd"&gt;Sources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org2a5c643"&gt;Make The Sketch Object&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org8ddf4a6"&gt;And That's It, Then&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgeeb8068"&gt;Sources&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -880,9 +880,9 @@ And there's the code for the sketch at the top of the page.
 The slider controls how big a step the graph takes along the &lt;code&gt;noise&lt;/code&gt; space with each move to the right along the x-axis (moving the slider to the right makes the steps bigger so the line looks noisier). 
 &lt;/p&gt;
 
-&lt;div id="outline-container-org7e3a212" class="outline-2"&gt;
-&lt;h2 id="org7e3a212"&gt;What Is This About?&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org7e3a212"&gt;
+&lt;div id="outline-container-org9f4b096" class="outline-2"&gt;
+&lt;h2 id="org9f4b096"&gt;What Is This About?&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org9f4b096"&gt;
 &lt;p&gt;
 The plot is a visualization of the p5.js &lt;a href="https://p5js.org/reference/#/p5/noise"&gt;noise&lt;/a&gt; function. I got the idea for it from &lt;a href="https://thecodingtrain.com/tracks/the-nature-of-code-2/noc/perlin/graphing-1d-perlin-noise"&gt;the Coding Train&lt;/a&gt; but the author of that site explains it by talking about it in a video so I thought I'd re-do it so I can understand what the code is doing a little better. The &lt;a href="https://p5js.org/reference/#/p5/noise"&gt;p5 documentation&lt;/a&gt; and the &lt;b&gt;Coding Train&lt;/b&gt; both describe the &lt;code&gt;noise&lt;/code&gt; function as producing &lt;a href="https://en.wikipedia.org/w/index.php?title=Perlin_noise&amp;amp;oldid=1148235423"&gt;Perlin noise&lt;/a&gt;, and Dan Shiffman (the &lt;b&gt;Coding Train&lt;/b&gt; author) even goes on to point out that it's the original version of perlin noise from 1983 and in a later video he shows how to implement &lt;a href="https://en.wikipedia.org/w/index.php?title=Simplex_noise&amp;amp;oldid=1103667712"&gt;Simplex Noise&lt;/a&gt;, an improved version created by Ken Perlin, the author of the original Perlin Noise. On the github site for Processing, however, there are two issues that claim that processing's &lt;code&gt;noise&lt;/code&gt; isn't really &lt;i&gt;perlin&lt;/i&gt; noise but rather a form of &lt;a href="https://en.wikipedia.org/w/index.php?title=Value_noise&amp;amp;oldid=1024311499"&gt;Value Noise&lt;/a&gt;. 
 &lt;/p&gt;
@@ -893,16 +893,16 @@ I don't know enough to know what's right, so I'll just call it noise or p5's noi
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org2cca447" class="outline-2"&gt;
-&lt;h2 id="org2cca447"&gt;Setup The Sketch&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org2cca447"&gt;
+&lt;div id="outline-container-orgd72f070" class="outline-2"&gt;
+&lt;h2 id="orgd72f070"&gt;Setup The Sketch&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgd72f070"&gt;
 &lt;p&gt;
 Now on to the code. This first section isn't really about plotting the graph but rather about setting up the P5 sketch in the HTML.
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgdd87f1e" class="outline-3"&gt;
-&lt;h3 id="orgdd87f1e"&gt;Name The Parent DIV&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgdd87f1e"&gt;
+&lt;div id="outline-container-org296cc45" class="outline-3"&gt;
+&lt;h3 id="org296cc45"&gt;Name The Parent DIV&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org296cc45"&gt;
 &lt;p&gt;
 We're making a &lt;code&gt;div&lt;/code&gt; to stick the sketch into the page so here's the ID we'll use for that &lt;code&gt;div&lt;/code&gt; so the code can refer to it.
 &lt;/p&gt;
@@ -911,9 +911,9 @@ We're making a &lt;code&gt;div&lt;/code&gt; to stick the sketch into the page so
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org60b4e2a" class="outline-3"&gt;
-&lt;h3 id="org60b4e2a"&gt;The Instance Container Function&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org60b4e2a"&gt;
+&lt;div id="outline-container-org492ecd7" class="outline-3"&gt;
+&lt;h3 id="org492ecd7"&gt;The Instance Container Function&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org492ecd7"&gt;
 &lt;p&gt;
 To keep all the variables for the sketch contained in its scope we're going to use a function (&lt;code&gt;noise_graph&lt;/code&gt;) to act as a closure.
 &lt;/p&gt;
@@ -923,17 +923,17 @@ To keep all the variables for the sketch contained in its scope we're going to u
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgc8f1fef" class="outline-2"&gt;
-&lt;h2 id="orgc8f1fef"&gt;Constants and Variables&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgc8f1fef"&gt;
+&lt;div id="outline-container-orgbc063ff" class="outline-2"&gt;
+&lt;h2 id="orgbc063ff"&gt;Constants and Variables&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgbc063ff"&gt;
 &lt;p&gt;
 Now we're into the p5 sketch code (contained within &lt;code&gt;noise_graph&lt;/code&gt;). Before defining the &lt;code&gt;setup&lt;/code&gt; and &lt;code&gt;draw&lt;/code&gt; methods let's define some variables that we can use within them.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgdc7d60c" class="outline-3"&gt;
-&lt;h3 id="orgdc7d60c"&gt;The Noise Space&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgdc7d60c"&gt;
+&lt;div id="outline-container-org9610f9b" class="outline-3"&gt;
+&lt;h3 id="org9610f9b"&gt;The Noise Space&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org9610f9b"&gt;
 &lt;p&gt;
 The inputs to the &lt;code&gt;noise&lt;/code&gt; function are what we'll call the &lt;code&gt;X_NOISE_COORDINATE&lt;/code&gt; (or variations on that name, anyway). Every time the canvas gets re-drawn we'll re-draw the graph by putting in a sequence of x-values starting at &lt;code&gt;STARTING_X_NOISE_COORDINATE&lt;/code&gt; and incrementing it by &lt;code&gt;X_NOISE_COORDINATE_STEP_SIZE&lt;/code&gt; as we move along the x-axis of the canvas.
 &lt;/p&gt;
@@ -951,9 +951,9 @@ The &lt;code&gt;X_NOISE_COORDINATE_STEP_SIZE&lt;/code&gt; is sort of a re-mappin
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org2ec2e06" class="outline-3"&gt;
-&lt;h3 id="org2ec2e06"&gt;The Slider&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org2ec2e06"&gt;
+&lt;div id="outline-container-orgc368a8c" class="outline-3"&gt;
+&lt;h3 id="orgc368a8c"&gt;The Slider&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgc368a8c"&gt;
 &lt;p&gt;
 These are some variables so we can add a slider to allow the user to change the step-size to increment the noise input. The slider step size of 0 means that there will be a continuous change in the value as the slider is moved, as opposed to giving it discrete values to jump to.
 &lt;/p&gt;
@@ -968,9 +968,9 @@ These are some variables so we can add a slider to allow the user to change the 
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgfe3c685" class="outline-3"&gt;
-&lt;h3 id="orgfe3c685"&gt;Colors&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgfe3c685"&gt;
+&lt;div id="outline-container-org64dfbea" class="outline-3"&gt;
+&lt;h3 id="org64dfbea"&gt;Colors&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org64dfbea"&gt;
 &lt;p&gt;
 These are the color settings for the plot.
 &lt;/p&gt;
@@ -984,9 +984,9 @@ These are the color settings for the plot.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org3464342" class="outline-2"&gt;
-&lt;h2 id="org3464342"&gt;Setup&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org3464342"&gt;
+&lt;div id="outline-container-org4d10a59" class="outline-2"&gt;
+&lt;h2 id="org4d10a59"&gt;Setup&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org4d10a59"&gt;
 &lt;p&gt;
 Now we'll monkey-patch the &lt;code&gt;setup&lt;/code&gt; function that gets called once at the start of the animation.
 &lt;/p&gt;
@@ -994,9 +994,9 @@ Now we'll monkey-patch the &lt;code&gt;setup&lt;/code&gt; function that gets cal
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;setup&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org6bd202c" class="outline-3"&gt;
-&lt;h3 id="org6bd202c"&gt;Canvas and Line&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org6bd202c"&gt;
+&lt;div id="outline-container-org6b04f65" class="outline-3"&gt;
+&lt;h3 id="org6b04f65"&gt;Canvas and Line&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org6b04f65"&gt;
 &lt;p&gt;
 The only possibly not-so-obvious thing here should be the &lt;code&gt;document.getElementById(NOISE_GRAPH_DIV).offsetWidth&lt;/code&gt; argument to the &lt;code&gt;createCanvas&lt;/code&gt; method which grabs the width of the container in which the plot is being put (not the width of the entire window).
 &lt;/p&gt;
@@ -1008,9 +1008,9 @@ The only possibly not-so-obvious thing here should be the &lt;code&gt;document.g
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org24ab2bd" class="outline-3"&gt;
-&lt;h3 id="org24ab2bd"&gt;Slider&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org24ab2bd"&gt;
+&lt;div id="outline-container-orgb13e288" class="outline-3"&gt;
+&lt;h3 id="orgb13e288"&gt;Slider&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgb13e288"&gt;
 &lt;p&gt;
 Now we'll create the slider to let the user play with the step-size for the noise input.
 &lt;/p&gt;
@@ -1025,16 +1025,16 @@ Now we'll create the slider to let the user play with the step-size for the nois
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org60e845b" class="outline-2"&gt;
-&lt;h2 id="org60e845b"&gt;Draw&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org60e845b"&gt;
+&lt;div id="outline-container-org820d7a0" class="outline-2"&gt;
+&lt;h2 id="org820d7a0"&gt;Draw&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org820d7a0"&gt;
 &lt;p&gt;
 Here's where we define the &lt;code&gt;draw&lt;/code&gt; function that gets called repeatedly to animate our sketch.
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgd992ce5" class="outline-3"&gt;
-&lt;h3 id="orgd992ce5"&gt;The Draw Function&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgd992ce5"&gt;
+&lt;div id="outline-container-orgd56158c" class="outline-3"&gt;
+&lt;h3 id="orgd56158c"&gt;The Draw Function&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgd56158c"&gt;
 &lt;p&gt;
 Monkey patch the &lt;code&gt;draw&lt;/code&gt; method on the &lt;code&gt;p5&lt;/code&gt; object.
 &lt;/p&gt;
@@ -1043,9 +1043,9 @@ Monkey patch the &lt;code&gt;draw&lt;/code&gt; method on the &lt;code&gt;p5&lt;/
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org97f6dc7" class="outline-3"&gt;
-&lt;h3 id="org97f6dc7"&gt;Setup The Next Frame&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org97f6dc7"&gt;
+&lt;div id="outline-container-org88b41e1" class="outline-3"&gt;
+&lt;h3 id="org88b41e1"&gt;Setup The Next Frame&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org88b41e1"&gt;
 &lt;p&gt;
 We'll paint the canvas with a semi-opaque white on every refresh so that you can sort of see how the graph changes with each loop. We also create some variables:
 &lt;/p&gt;
@@ -1063,9 +1063,9 @@ We'll paint the canvas with a semi-opaque white on every refresh so that you can
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org65a168d" class="outline-3"&gt;
-&lt;h3 id="org65a168d"&gt;Plot Next Frame&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org65a168d"&gt;
+&lt;div id="outline-container-org6ed13ec" class="outline-3"&gt;
+&lt;h3 id="org6ed13ec"&gt;Plot Next Frame&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org6ed13ec"&gt;
 &lt;p&gt;
 Here's where we plot the graph. We're going to draw the graph using connected line segments so before the loop starts we'll tell p5 to start the shape.
 &lt;/p&gt;
@@ -1102,9 +1102,9 @@ That's the end of the for-loop. Now, outside of the loop we call &lt;code&gt;end
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orga011fd3" class="outline-3"&gt;
-&lt;h3 id="orga011fd3"&gt;Move the Noise Input&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orga011fd3"&gt;
+&lt;div id="outline-container-orge813121" class="outline-3"&gt;
+&lt;h3 id="orge813121"&gt;Move the Noise Input&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orge813121"&gt;
 &lt;p&gt;
 Now we'll move the input for the noise function at the start of the graph a little. If we didn't the input to the noise function as we went through the loop would always be the same so our plot would just draw the same thing over and over again (well, if we move the slider to change the &lt;code&gt;noise_step_size&lt;/code&gt; it wouldn't be exactly the same, but the starting point would always be the same).
 &lt;/p&gt;
@@ -1117,9 +1117,9 @@ I'm not showing the closing braces (&lt;code&gt;}&lt;/code&gt;) to end the funct
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org160808f" class="outline-3"&gt;
-&lt;h3 id="org160808f"&gt;Slider Label&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org160808f"&gt;
+&lt;div id="outline-container-org7fc5d75" class="outline-3"&gt;
+&lt;h3 id="org7fc5d75"&gt;Slider Label&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org7fc5d75"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;textSize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;32&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;textAlign&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;CENTER&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;fill&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"white"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
@@ -1127,13 +1127,13 @@ I'm not showing the closing braces (&lt;code&gt;}&lt;/code&gt;) to end the funct
 &lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;rect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;width&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;height&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;35&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;250&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;30&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;fill&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"black"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;text&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sb"&gt;`Noise Change: &lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;slider&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;value&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="nx"&gt;toFixed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;	    &lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;width&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;height&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;            &lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;width&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;height&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgd4bba6f" class="outline-3"&gt;
-&lt;h3 id="orgd4bba6f"&gt;Once Again But As a Picture&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgd4bba6f"&gt;
+&lt;div id="outline-container-org71c4a4f" class="outline-3"&gt;
+&lt;h3 id="org71c4a4f"&gt;Once Again But As a Picture&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org71c4a4f"&gt;
 &lt;p&gt;
 &lt;img src="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/noise-for-loop-1250.webp" alt="for-loop-diagram"&gt;
 &lt;/p&gt;
@@ -1141,9 +1141,9 @@ I'm not showing the closing braces (&lt;code&gt;}&lt;/code&gt;) to end the funct
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgee64346" class="outline-2"&gt;
-&lt;h2 id="orgee64346"&gt;Make The Sketch Object&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgee64346"&gt;
+&lt;div id="outline-container-org2a5c643" class="outline-2"&gt;
+&lt;h2 id="org2a5c643"&gt;Make The Sketch Object&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org2a5c643"&gt;
 &lt;p&gt;
 Next we pass our sketch definition to &lt;code&gt;p5&lt;/code&gt; to build it and attach it to our HTML div.
 &lt;/p&gt;
@@ -1151,17 +1151,17 @@ Next we pass our sketch definition to &lt;code&gt;p5&lt;/code&gt; to build it an
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org50166ff" class="outline-2"&gt;
-&lt;h2 id="org50166ff"&gt;And That's It, Then&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org50166ff"&gt;
+&lt;div id="outline-container-org8ddf4a6" class="outline-2"&gt;
+&lt;h2 id="org8ddf4a6"&gt;And That's It, Then&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org8ddf4a6"&gt;
 &lt;p&gt;
 At this point we should have a graph that helps to visualize how the &lt;code&gt;noise&lt;/code&gt; function changes over one-dimension. Noise to the aside, it's also a useful template for plotting any kind of graph, you'd just have to change the setting of the &lt;code&gt;y&lt;/code&gt; value to whatever other function you want to visualize.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orge9ba3cd" class="outline-2"&gt;
-&lt;h2 id="orge9ba3cd"&gt;Sources&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orge9ba3cd"&gt;
+&lt;div id="outline-container-orgeeb8068" class="outline-2"&gt;
+&lt;h2 id="orgeeb8068"&gt;Sources&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgeeb8068"&gt;
 &lt;p&gt;
 P5 Reference:
 &lt;/p&gt;

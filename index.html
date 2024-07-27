@@ -17,10 +17,10 @@
 <link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
 <link href="favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
 <link href="site.webmanifest" rel="manifest">
-<link href="posts/inking-sites/index.html" rel="prefetch" type="text/html">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+<link href="posts/p5js-hello/index.html" rel="prefetch" type="text/html">
+<script crossorigin="anonymous" integrity="sha512-d6sc8kbZEtA2LwB9m/ck0FhvyUwVfdmvTeyJRprmj7Wg9wRFtHDIpr6qk4g/y3Ix3O9I6KHIv6SGu9f7RaP1Gw==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+<script crossorigin="anonymous" integrity="sha512-d6sc8kbZEtA2LwB9m/ck0FhvyUwVfdmvTeyJRprmj7Wg9wRFtHDIpr6qk4g/y3Ix3O9I6KHIv6SGu9f7RaP1Gw==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+<script crossorigin="anonymous" integrity="sha512-d6sc8kbZEtA2LwB9m/ck0FhvyUwVfdmvTeyJRprmj7Wg9wRFtHDIpr6qk4g/y3Ix3O9I6KHIv6SGu9f7RaP1Gw==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
 </head>
 <body>
 <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a> <!-- Menubar -->
@@ -49,6 +49,232 @@
 <div class="postindex">
 <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article">
 <header>
+<h1 class="p-name entry-title"><a class="u-url" href="posts/p5js-hello/index.html">P5.js Hello</a></h1>
+<div class="metadata">
+<p class="byline author vcard"><span class="byline-name fn" itemprop="author">The Cloistered Monkey</span></p>
+<p class="dateline"><a href="posts/p5js-hello/index.html" rel="bookmark"><time class="published dt-published" datetime="2024-07-13T20:31:47-07:00" itemprop="datePublished" title="2024-07-13 20:31">2024-07-13 20:31</time></a></p>
+</div>
+</header>
+<div class="p-summary entry-summary">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="posts/p5js-hello/index.html#org5d649ae">What Is This?</a></li>
+<li><a href="posts/p5js-hello/index.html#org27799fa">The Setup</a>
+<ul>
+<li><a href="posts/p5js-hello/index.html#org23e02c0">The Meta-Header</a></li>
+<li><a href="posts/p5js-hello/index.html#org23cbfd8">The Tangle</a></li>
+<li><a href="posts/p5js-hello/index.html#orgd396242">The DIV Shortcode</a></li>
+</ul>
+</li>
+<li><a href="posts/p5js-hello/index.html#org322fa46">The JavaScript</a>
+<ul>
+<li><a href="posts/p5js-hello/index.html#orgc5978dd">The Div ID</a></li>
+<li><a href="posts/p5js-hello/index.html#orgc31bf0f">The Hello Class</a></li>
+<li><a href="posts/p5js-hello/index.html#org32af78c">Hello Sketch</a></li>
+<li><a href="posts/p5js-hello/index.html#orgd01fb7f">P5 Object</a></li>
+</ul>
+</li>
+<li><a href="posts/p5js-hello/index.html#org4426755">The End</a></li>
+<li><a href="posts/p5js-hello/index.html#org2d1084b">Links</a></li>
+</ul>
+</div>
+</div>
+<p><a id="org1eafb5e"></a></p>
+<p>
+<script src="posts/p5js-hello/hello.js"></script></p>
+<div class="p5js" id="hello-08b095a8"></div>
+<div class="outline-2" id="outline-container-org5d649ae">
+<h2 id="org5d649ae">What Is This?</h2>
+<div class="outline-text-2" id="text-org5d649ae">
+<p>This is a post to remind me how to make p5.js posts. It's based on my somewhat idiosyncratic way of working (using Emacs' <a href="https://orgmode.org/">org-mode</a> for the text-markup and <a href="https://getnikola.com/">nikola</a> to render it as HTML) and is meant to help me get restarted if I stop using p5.js for a little while and need to remember how to do it. The short version:</p>
+<ul class="org-ul">
+<li><a href="posts/p5js-hello/index.html#org98a4e3c">Include the <code>p5.js</code> JavaScript library</a> in the post.</li>
+<li><a href="posts/p5js-hello/index.html#orgf14b83e">Make a "tangle"</a> to export the JavaScript file.</li>
+<li><a href="posts/p5js-hello/index.html#org0989f70">Make an HTML <code>div</code> tag</a> to locate the p5.js sketch in the post.</li>
+<li><a href="posts/p5js-hello/index.html#org5c8e198">Make a sketch</a> that defines the necessary <code>p5.js</code> methods (mostly <code>setup</code> and <code>draw</code>).</li>
+<li><a href="posts/p5js-hello/index.html#orgcc41acb">Create a P5 object</a>, passing in the sketch and the div ID to the constructor.</li>
+</ul>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org27799fa">
+<h2 id="org27799fa">The Setup</h2>
+<div class="outline-text-2" id="text-org27799fa">
+<p>The next three sections in this post won't normally be visible in other posts, they're specific to my use of nikola and a noweb-like style with org-mode and will be in the source but won't be in the exported HTML.</p>
+</div>
+<div class="outline-3" id="outline-container-org23e02c0">
+<h3 id="org23e02c0"><a id="org98a4e3c"></a> The Meta-Header</h3>
+<div class="outline-text-3" id="text-org23e02c0">
+<p>To get <code>p5.js</code> into this post I'm telling nikola to use a template I made in the meta-data block at the beginning of the file for this post.</p>
+<div class="highlight">
+<pre><span></span>.. template: p5.tmpl
+</pre></div>
+<p>The <code>p5.tmpl</code> template adds an HTML tag to include the p5 JavaScript code in the HEAD section of the HTML document.</p>
+<div class="highlight">
+<pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org23cbfd8">
+<h3 id="org23cbfd8"><a id="orgf14b83e"></a> The Tangle</h3>
+<div class="outline-text-3" id="text-org23cbfd8">
+<p>Since the intent is to define the JavaScript in the org-mode blocks and then export it I'll typically create a <code>tangle</code> code block to control the export. The org-mode header uses a path relative to the org-mode file that makes up this post. This file is in a sub-folder (<code>posts/</code>) so the path has to go up one directory first then back down into the <code>files/posts/</code> folder and then into another sub-folder whose name matches the slug for this post (<code>p5js-hello</code>). The folder named after the slug doesn't exist by default and won't be created by Emacs (it will just fail with a message in the Emacs mini-buffer when you export the file) so you need to create it before doing the export.</p>
+<p>The tangle is made up of references to blocks that I'll be defining in later sections, referring to them using their name. For example, <code>&lt;&lt;hello-div&gt;&gt;</code> in this tangle will match an org-mode block named <code>hello-div</code> defined in a later section of this post.</p>
+<div class="highlight">
+<pre><span></span>#+begin_src js :tangle ../files/posts/p5js-hello/hello.js :exports none
+&lt;&lt;hello-div&gt;&gt;
+
+&lt;&lt;hello-class&gt;&gt;
+
+&lt;&lt;hello-sketch&gt;&gt;
+
+&lt;&lt;p5-instance&gt;&gt;
+#+end_src
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orgd396242">
+<h3 id="orgd396242"><a id="org0989f70"></a> The DIV Shortcode</h3>
+<div class="outline-text-3" id="text-orgd396242">
+<p>In order to specify where in this post the <code>p5.js</code> sketch will be rendered I need to create an HTML <code>source</code> tag which points to the JavaScript file I created in the tangle section above (in this case the file is <code>hello.js</code> ). I also want to create a <code>div</code> tag with an ID that I define so that I can tell <code>p5.js</code> to use it as the location for the sketch (in this case the ID will be <code>"hello-08b095a8"</code>).</p>
+<p>This is the jinja-based shortcode I use to put those two tags into the post.</p>
+<div class="highlight">
+<pre><span></span><span class="p">{{</span><span class="o">%</span> <span class="n">p5div</span>  <span class="n">source</span><span class="o">=</span><span class="s2">"hello.js"</span> <span class="n">divid</span><span class="o">=</span><span class="s2">"hello-08b095a8"</span> <span class="o">%</span><span class="p">}}</span>
+</pre></div>
+<div class="notecard" id="org054e63f">
+<p>The <code>hello.js</code> file will sit next to the HTML file for this post once we export it so you only want the file name, not the path to the folder it sits in. I'm mentioning it here because I sometimes get mixed up between the three cases I've run into for files:</p>
+<ul class="org-ul">
+<li>files that need a path from this post (like the tangle)</li>
+<li>files that need paths from the top of the repository (usually created using commands run outside of org-mode)</li>
+<li>files that just need the file-name</li>
+</ul>
+</div>
+<p>When <code>nikola</code> builds the site it will convert that shortcode to a couple of tags that look something like:</p>
+<div class="highlight">
+<pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">source</span><span class="o">=</span><span class="s">"hello.js"</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"p5js"</span> <span class="na">id</span><span class="o">=</span><span class="s">"hello-08b095a8"</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+<p>In the future I'll probably get rid of or change this shortcode, since the only thing it does that's specific to p5 is set the <code>class</code> attribute, but, for now, this is how it's getting done.</p>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org322fa46">
+<h2 id="org322fa46">The JavaScript</h2>
+<div class="outline-text-2" id="text-org322fa46">
+<p>The remaining sections define the JavaScript that gets exported into the tangle file that I defined in the first section of this post.</p>
+</div>
+<div class="outline-3" id="outline-container-orgc5978dd">
+<h3 id="orgc5978dd"><a id="orgcd910cd"></a> The Div ID</h3>
+<div class="outline-text-3" id="text-orgc5978dd">
+<p>Since I need to pass the ID given to the <code>div</code> tag in the previous section to P5 I'll store it in a variable for later.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">HELLO_DIV</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"hello-08b095a8"</span><span class="p">;</span>
+</pre></div>
+<p>As noted <a href="posts/p5js-hello/index.html#orgf14b83e">above</a>, the <i>tangle</i> refers to the JavaScript blocks I'm defining in the rest of the document by name (which I give to them in the block-headers using <code>:noweb-ref</code>). The header where I stick the name doesn't get exported into the HTML document so just for this block I'll show what it looks like with the org-mode header along with the JavaScript that goes into the block.</p>
+<div class="highlight">
+<pre><span></span>#+begin_src js :noweb-ref hello-div
+const HELLO_DIV = "hello-08b095a8";
+#+end_src
+</pre></div>
+<p>Here the <code>:noweb-ref hello-div</code> tells org-mode to stick the JavaScript into the tangle block above where the <code>&lt;&lt;hello-div&gt;&gt;</code> placeholder text is.</p>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orgc31bf0f">
+<h3 id="orgc31bf0f"><a id="org5e487dc"></a> The Hello Class</h3>
+<div class="outline-text-3" id="text-orgc31bf0f">
+<p>Here's a toy class that keeps the parameters for the circle and which draws the circle when its <code>draw</code> method is called.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">Hello</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">p5</span><span class="p">,</span><span class="w"> </span><span class="nx">width</span><span class="p">,</span><span class="w"> </span><span class="nx">height</span><span class="p">,</span><span class="w"> </span><span class="nx">diameter</span><span class="p">,</span><span class="w"> </span><span class="nx">step</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">p5</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">step</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">width</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">height</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">height</span><span class="o">/</span><span class="mf">2</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">diameter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">diameter</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">diameter</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="w">  </span><span class="p">};</span><span class="w"> </span><span class="c1">//constructor</span>
+
+<span class="w">  </span><span class="nx">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">circle</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">diameter</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">x</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">diameter</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">x</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">width</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">diameter</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">step</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">};</span><span class="w"> </span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">step</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">width</span><span class="p">;</span>
+<span class="w">  </span><span class="p">};</span><span class="w"> </span><span class="c1">// draw</span>
+<span class="p">};</span><span class="w"> </span><span class="c1">// Hello</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org32af78c">
+<h3 id="org32af78c"><a id="org5c8e198"></a> Hello Sketch</h3>
+<div class="outline-text-3" id="text-org32af78c">
+<p>Here's the sketch that gets passed to the P5 constructor.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">hello_sketch</span><span class="p">(</span><span class="nx">p5</span><span class="p">){</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">WIDTH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">800</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">HEIGHT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">WIDTH</span><span class="o">/</span><span class="mf">4</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">BACKGROUND</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">255</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">ALPHA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">50</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">POINT_COLOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"RoyalBlue"</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">HELLO</span><span class="p">;</span>
+
+<span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">setup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">p5</span><span class="p">.</span><span class="nx">createCanvas</span><span class="p">(</span><span class="nx">WIDTH</span><span class="p">,</span><span class="w"> </span><span class="nx">HEIGHT</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">p5</span><span class="p">.</span><span class="nx">background</span><span class="p">(</span><span class="nx">BACKGROUND</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">p5</span><span class="p">.</span><span class="nx">stroke</span><span class="p">(</span><span class="nx">POINT_COLOR</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">p5</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="nx">BACKGROUND</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">HELLO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Hello</span><span class="p">(</span><span class="nx">p5</span><span class="p">,</span><span class="w"> </span><span class="nx">WIDTH</span><span class="p">,</span><span class="w"> </span><span class="nx">HEIGHT</span><span class="p">,</span><span class="w"> </span><span class="mf">50</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span>
+<span class="w">  </span><span class="p">};</span><span class="w"> </span><span class="c1">// setup</span>
+
+<span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">draw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">p5</span><span class="p">.</span><span class="nx">background</span><span class="p">(</span><span class="nx">BACKGROUND</span><span class="p">,</span><span class="w"> </span><span class="nx">ALPHA</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">HELLO</span><span class="p">.</span><span class="nx">draw</span><span class="p">();</span>
+<span class="w">  </span><span class="p">};</span><span class="w"> </span><span class="c1">//draw</span>
+<span class="p">};</span><span class="w"> </span><span class="c1">// hello_sketch</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orgd01fb7f">
+<h3 id="orgd01fb7f"><a id="orgcc41acb"></a> P5 Object</h3>
+<div class="outline-text-3" id="text-orgd01fb7f">
+<p>Finally, I'll create a <code>p5</code> object, giving it the sketch and <code>div</code> ID so <code>p5.js</code> will render the code.</p>
+<div class="highlight">
+<pre><span></span><span class="ow">new</span><span class="w"> </span><span class="nx">p5</span><span class="p">(</span><span class="nx">hello_sketch</span><span class="p">,</span><span class="w"> </span><span class="nx">HELLO_DIV</span><span class="p">);</span>
+</pre></div>
+<p>If we <a href="posts/p5js-hello/index.html#org1eafb5e">go back to the top</a> we should see the sketch running (a circle moving back and forth) .</p>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org4426755">
+<h2 id="org4426755">The End</h2>
+<div class="outline-text-2" id="text-org4426755">
+<p>And that's it for the basic post. The parts once again:</p>
+<ul class="org-ul">
+<li>Use the p5 nikola template <a href="posts/p5js-hello/index.html#org98a4e3c">in the nikola-header</a>.</li>
+<li><a href="posts/p5js-hello/index.html#orgf14b83e">Tangle</a> the JavaScript to a file in <code>../files/posts/&lt;slug&gt;</code>.</li>
+<li>Setup the <code>script</code> and <code>div</code> tags to include the sketch in the exported HTML (using <a href="posts/p5js-hello/index.html#org0989f70">the p5div shortcode</a>).</li>
+<li>Write <a href="posts/p5js-hello/index.html#org5c8e198">the sketch</a> to pass to p5.</li>
+<li>Create a <a href="posts/p5js-hello/index.html#orgcc41acb">p5 object</a> using the sketch and <code>div</code> ID.</li>
+</ul>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org2d1084b">
+<h2 id="org2d1084b">Links</h2>
+<div class="outline-text-2" id="text-org2d1084b">
+<ul class="org-ul">
+<li><a href="https://orgmode.org/manual/Noweb-Reference-Syntax.html">Org-Mode noweb reference</a></li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article">
+<header>
 <h1 class="p-name entry-title"><a class="u-url" href="posts/inking-sites/index.html">Inking Sites</a></h1>
 <div class="metadata">
 <p class="byline author vcard"><span class="byline-name fn" itemprop="author">The Cloistered Monkey</span></p>
@@ -60,13 +286,13 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="posts/inking-sites/index.html#orga4916a8">Pen and Ink Advice</a></li>
+<li><a href="posts/inking-sites/index.html#org400cbab">Pen and Ink Advice</a></li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orga4916a8">
-<h2 id="orga4916a8">Pen and Ink Advice</h2>
-<div class="outline-text-2" id="text-orga4916a8">
+<div class="outline-2" id="outline-container-org400cbab">
+<h2 id="org400cbab">Pen and Ink Advice</h2>
+<div class="outline-text-2" id="text-org400cbab">
 <ul class="org-ul">
 <li><a href="https://longstrideillustration.com/">Longstride Illustration</a>: Lots of information about inking (found when searching for Master Studies)</li>
 </ul>
@@ -96,9 +322,9 @@
 <li><a href="https://randomartidea.com/">Random Art Idea</a></li>
 <li><a href="https://artstylegenerator.com/">Art Style Generator</a></li>
 </ul>
-<div class="outline-2" id="outline-container-org5bce1a5">
-<h2 id="org5bce1a5">Link Sources</h2>
-<div class="outline-text-2" id="text-org5bce1a5">
+<div class="outline-2" id="outline-container-orge4771b4">
+<h2 id="orge4771b4">Link Sources</h2>
+<div class="outline-text-2" id="text-orge4771b4">
 <ul class="org-ul">
 <li><a href="https://www.skillshare.com/en/blog/unblock-your-creativity-with-these-art-idea-generators/">Skillshare</a>: Unblock Your Creativity With These Art Idea Generators</li>
 </ul>
@@ -119,16 +345,16 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="posts/generative-art-a-wavy-circle/index.html#org9e5e464">A Constant Radius</a></li>
-<li><a href="posts/generative-art-a-wavy-circle/index.html#org928c77b">A Circulator</a></li>
-<li><a href="posts/generative-art-a-wavy-circle/index.html#org3c33f58">A Fading Circulator</a></li>
-<li><a href="posts/generative-art-a-wavy-circle/index.html#orgc7deefa">A Noisy Radius</a></li>
+<li><a href="posts/generative-art-a-wavy-circle/index.html#org9d5c7eb">A Constant Radius</a></li>
+<li><a href="posts/generative-art-a-wavy-circle/index.html#org82ad0ab">A Circulator</a></li>
+<li><a href="posts/generative-art-a-wavy-circle/index.html#org09b1557">A Fading Circulator</a></li>
+<li><a href="posts/generative-art-a-wavy-circle/index.html#org23b6720">A Noisy Radius</a></li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org9e5e464">
-<h2 id="org9e5e464">A Constant Radius</h2>
-<div class="outline-text-2" id="text-org9e5e464">
+<div class="outline-2" id="outline-container-org9d5c7eb">
+<h2 id="org9d5c7eb">A Constant Radius</h2>
+<div class="outline-text-2" id="text-org9d5c7eb">
 <p><img alt="nil" src="posts/generative-art-a-wavy-circle/constant_radius.png"></p>
 <div class="highlight">
 <pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">ConstantRadius</span><span class="w"> </span><span class="p">{</span>
@@ -139,9 +365,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org928c77b">
-<h2 id="org928c77b">A Circulator</h2>
-<div class="outline-text-2" id="text-org928c77b">
+<div class="outline-2" id="outline-container-org82ad0ab">
+<h2 id="org82ad0ab">A Circulator</h2>
+<div class="outline-text-2" id="text-org82ad0ab">
 <p>
 <script src="posts/generative-art-a-wavy-circle/circulator.js"></script></p>
 <div class="p5js" id="circulator-50136a19"></div>
@@ -225,9 +451,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org3c33f58">
-<h2 id="org3c33f58">A Fading Circulator</h2>
-<div class="outline-text-2" id="text-org3c33f58">
+<div class="outline-2" id="outline-container-org09b1557">
+<h2 id="org09b1557">A Fading Circulator</h2>
+<div class="outline-text-2" id="text-org09b1557">
 <p>
 <script src="posts/generative-art-a-wavy-circle/circulaterfader.js"></script></p>
 <div class="p5js" id="hsl-fader-42232bf1"></div>
@@ -315,9 +541,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgc7deefa">
-<h2 id="orgc7deefa">A Noisy Radius</h2>
-<div class="outline-text-2" id="text-orgc7deefa">
+<div class="outline-2" id="outline-container-org23b6720">
+<h2 id="org23b6720">A Noisy Radius</h2>
+<div class="outline-text-2" id="text-org23b6720">
 <p>
 <script src="posts/generative-art-a-wavy-circle/noisy_radius.js"></script></p>
 <div class="p5js" id="noisy-fader-20091e70"></div>
@@ -392,38 +618,38 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="posts/a-validator-for-slidersettings/index.html#orgbe88229">The Validator</a>
+<li><a href="posts/a-validator-for-slidersettings/index.html#orgeb59ee4">The Validator</a>
 <ul>
-<li><a href="posts/a-validator-for-slidersettings/index.html#org30dc8cc">Class Declaration</a></li>
-<li><a href="posts/a-validator-for-slidersettings/index.html#org7921131">Is A Number</a></li>
-<li><a href="posts/a-validator-for-slidersettings/index.html#org05565b6">Is Set</a></li>
-<li><a href="posts/a-validator-for-slidersettings/index.html#org6e03353">Is An Integer</a></li>
-<li><a href="posts/a-validator-for-slidersettings/index.html#orga0a5bbb">Is An Element's ID</a></li>
+<li><a href="posts/a-validator-for-slidersettings/index.html#org3dbdbe2">Class Declaration</a></li>
+<li><a href="posts/a-validator-for-slidersettings/index.html#org1a681b9">Is A Number</a></li>
+<li><a href="posts/a-validator-for-slidersettings/index.html#orga3f39cf">Is Set</a></li>
+<li><a href="posts/a-validator-for-slidersettings/index.html#org6d3f31e">Is An Integer</a></li>
+<li><a href="posts/a-validator-for-slidersettings/index.html#org150e14e">Is An Element's ID</a></li>
 </ul>
 </li>
-<li><a href="posts/a-validator-for-slidersettings/index.html#orgc25e22b">Links</a>
+<li><a href="posts/a-validator-for-slidersettings/index.html#org23107c0">Links</a>
 <ul>
-<li><a href="posts/a-validator-for-slidersettings/index.html#orgc20e07e">Related Posts</a></li>
-<li><a href="posts/a-validator-for-slidersettings/index.html#org74505c0">Javascript</a></li>
+<li><a href="posts/a-validator-for-slidersettings/index.html#orgba2aec2">Related Posts</a></li>
+<li><a href="posts/a-validator-for-slidersettings/index.html#org8926600">Javascript</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgbe88229">
-<h2 id="orgbe88229">The Validator</h2>
-<div class="outline-text-2" id="text-orgbe88229">
+<div class="outline-2" id="outline-container-orgeb59ee4">
+<h2 id="orgeb59ee4">The Validator</h2>
+<div class="outline-text-2" id="text-orgeb59ee4">
 <p><img alt="Validator UML" src="posts/a-validator-for-slidersettings/validator.png"></p>
 <p>The <code>Validator</code> class checks the type of a given value and throws an Error if it's not correct. It's meant to validate settings, in particular the <a href="posts/slider-settings-and-validator/index.html">SliderSettings</a>.</p>
 </div>
-<div class="outline-3" id="outline-container-org30dc8cc">
-<h3 id="org30dc8cc">Class Declaration</h3>
-<div class="outline-text-3" id="text-org30dc8cc">
+<div class="outline-3" id="outline-container-org3dbdbe2">
+<h3 id="org3dbdbe2">Class Declaration</h3>
+<div class="outline-text-3" id="text-org3dbdbe2">
 <p>The constructor takes the <code>document</code> as an argument to make it testable and also to make explicit where it came from. The class also defines an array <code>emptiness</code> to hold the values that I'll use to check if a variable was set.</p>
 </div>
-<div class="outline-4" id="outline-container-org1765f20">
-<h4 id="org1765f20">Setup JSDOM For Testing</h4>
-<div class="outline-text-4" id="text-org1765f20">
+<div class="outline-4" id="outline-container-orgdfe1324">
+<h4 id="orgdfe1324">Setup JSDOM For Testing</h4>
+<div class="outline-text-4" id="text-orgdfe1324">
 <p>This is the document that I'm passing to the <code>Validator</code> for testing.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">VALID_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"validator-id"</span><span class="p">;</span>
@@ -439,9 +665,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org8544a53">
-<h4 id="org8544a53">Test And Implement The Validator Class</h4>
-<div class="outline-text-4" id="text-org8544a53">
+<div class="outline-4" id="outline-container-org6e70ea2">
+<h4 id="org6e70ea2">Test And Implement The Validator Class</h4>
+<div class="outline-text-4" id="text-org6e70ea2">
 <div class="highlight">
 <pre><span></span><span class="k">Feature:</span><span class="nf"> Validator</span>
 </pre></div>
@@ -461,7 +687,7 @@
 <span class="w">  </span><span class="p">}</span>
 </pre></div>
 <p>These blocks are the pattern that I'm going to follow for most of the rest of the code:</p>
-<div class="notecard" id="org482d223">
+<div class="notecard" id="orga46f708">
 <ol class="org-ol">
 <li>Feature file fragment.</li>
 <li>Test implementation to match the feature file.</li>
@@ -471,14 +697,14 @@
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org7921131">
-<h3 id="org7921131">Is A Number</h3>
-<div class="outline-text-3" id="text-org7921131">
+<div class="outline-3" id="outline-container-org1a681b9">
+<h3 id="org1a681b9">Is A Number</h3>
+<div class="outline-text-3" id="text-org1a681b9">
 <p>Our first method checks that a variable holds a number of some kind.</p>
 </div>
-<div class="outline-4" id="outline-container-org589ebf3">
-<h4 id="org589ebf3">The Scenarios</h4>
-<div class="outline-text-4" id="text-org589ebf3">
+<div class="outline-4" id="outline-container-org696becc">
+<h4 id="org696becc">The Scenarios</h4>
+<div class="outline-text-4" id="text-org696becc">
 <div class="highlight">
 <pre><span></span><span class="k">Scenario:</span><span class="nf"> The expected number is a number.</span>
 
@@ -497,7 +723,7 @@
 <span class="nx">Then</span><span class="p">(</span><span class="s2">"nothing happens."</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{});</span>
 </pre></div>
 <p>This is the case where we get what we wanted.</p>
-<div class="notecard" id="orgbed2259">
+<div class="notecard" id="org1300c85">
 <p><b>Note:</b> I added a second check for <code>0</code> because I was originally using the <a href="https://developer.mozilla.org/en-US/docs/Glossary/Falsy"><code>falsy</code></a> check (<code>!(actual)</code>) but it turns out that 0 would be considered false if you do that so I added an explicit check to make sure I wasn't disallowing 0.</p>
 </div>
 <div class="highlight">
@@ -542,9 +768,9 @@
 <p>This isn't explicitly needed, I think, since it falls within "non-number" but I wrote the tests as I made the <code>SliderSettings</code> and sometimes I would get the parameters out of order (I wish javascript had named variables) so I added <code>null</code> checks for the arguments to make it more obvious.</p>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org4536eda">
-<h4 id="org4536eda">The Method</h4>
-<div class="outline-text-4" id="text-org4536eda">
+<div class="outline-4" id="outline-container-orgf5cb473">
+<h4 id="orgf5cb473">The Method</h4>
+<div class="outline-text-4" id="text-orgf5cb473">
 <p>And here's the implementation.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">is_a_number</span><span class="p">(</span><span class="nx">identifier</span><span class="p">,</span><span class="w"> </span><span class="nx">actual</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -557,14 +783,14 @@
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org05565b6">
-<h3 id="org05565b6">Is Set</h3>
-<div class="outline-text-3" id="text-org05565b6">
+<div class="outline-3" id="outline-container-orga3f39cf">
+<h3 id="orga3f39cf">Is Set</h3>
+<div class="outline-text-3" id="text-orga3f39cf">
 <p>This is for the cases where I have no particular type in the mind but a variable does need to be set to something.</p>
 </div>
-<div class="outline-4" id="outline-container-org51ce7a4">
-<h4 id="org51ce7a4">Scenarios</h4>
-<div class="outline-text-4" id="text-org51ce7a4">
+<div class="outline-4" id="outline-container-orgc83b4fa">
+<h4 id="orgc83b4fa">Scenarios</h4>
+<div class="outline-text-4" id="text-orgc83b4fa">
 <div class="highlight">
 <pre><span></span><span class="k">Scenario:</span><span class="nf"> The variable has a value set.</span>
 
@@ -622,9 +848,9 @@
 <p>I wouldn't think this would be something that needs to be checked, but since javascript just returns <code>undefined</code> instead or raising an error if you misspell a variable name, I guess it's useful.</p>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org2ff787d">
-<h4 id="org2ff787d">The Method</h4>
-<div class="outline-text-4" id="text-org2ff787d">
+<div class="outline-4" id="outline-container-org935660b">
+<h4 id="org935660b">The Method</h4>
+<div class="outline-text-4" id="text-org935660b">
 <p>This checks if the value is in whatever is in the <code>emptiness</code> array, which as of now has:</p>
 <ul class="org-ul">
 <li><code>null</code></li>
@@ -642,12 +868,12 @@
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org6e03353">
-<h3 id="org6e03353">Is An Integer</h3>
-<div class="outline-text-3" id="text-org6e03353"></div>
-<div class="outline-4" id="outline-container-org40ca033">
-<h4 id="org40ca033">The Scenarios</h4>
-<div class="outline-text-4" id="text-org40ca033">
+<div class="outline-3" id="outline-container-org6d3f31e">
+<h3 id="org6d3f31e">Is An Integer</h3>
+<div class="outline-text-3" id="text-org6d3f31e"></div>
+<div class="outline-4" id="outline-container-orgc2b173a">
+<h4 id="orgc2b173a">The Scenarios</h4>
+<div class="outline-text-4" id="text-orgc2b173a">
 <div class="highlight">
 <pre><span></span><span class="k">Scenario:</span><span class="nf"> The variable has an integer</span>
 
@@ -724,9 +950,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgfdcc70d">
-<h4 id="orgfdcc70d">The Method</h4>
-<div class="outline-text-4" id="text-orgfdcc70d">
+<div class="outline-4" id="outline-container-org7f441a1">
+<h4 id="org7f441a1">The Method</h4>
+<div class="outline-text-4" id="text-org7f441a1">
 <p>This is, oddly, the only built-in that I could find that does type checks (but I didn't look that hard, and I was using DuckDuckGo so I might have found something using a different search engine).</p>
 <div class="highlight">
 <pre><span></span><span class="nx">is_an_integer</span><span class="p">(</span><span class="nx">identifier</span><span class="p">,</span><span class="w"> </span><span class="nx">actual</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -738,14 +964,14 @@
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orga0a5bbb">
-<h3 id="orga0a5bbb">Is An Element's ID</h3>
-<div class="outline-text-3" id="text-orga0a5bbb">
+<div class="outline-3" id="outline-container-org150e14e">
+<h3 id="org150e14e">Is An Element's ID</h3>
+<div class="outline-text-3" id="text-org150e14e">
 <p>This is what really started it all. I had some mysterious errors <a href="posts/generative-art-spiral/index.html">drawing a spiral</a> which turned out to be because I had changed a div ID in the HTML but not in the javascript. So this checks to see if there really an element with the ID. It doesn't check if it's the <b>right</b> ID, but I don't know that there's a simple way to do that anyway.</p>
 </div>
-<div class="outline-4" id="outline-container-orgd078a9a">
-<h4 id="orgd078a9a">The Scenarios</h4>
-<div class="outline-text-4" id="text-orgd078a9a">
+<div class="outline-4" id="outline-container-orgac14362">
+<h4 id="orgac14362">The Scenarios</h4>
+<div class="outline-text-4" id="text-orgac14362">
 <div class="highlight">
 <pre><span></span><span class="k">Scenario:</span><span class="nf"> A valid ID is given.</span>
 
@@ -784,9 +1010,9 @@
 <p>Although I suppose the odds of a random string matching my <code>div</code> ID is pretty low, I thought that mangling the ID would be a better guaranty that it won't match than using <code>faker</code> to generate a string.</p>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orga21a349">
-<h4 id="orga21a349">The Method</h4>
-<div class="outline-text-4" id="text-orga21a349">
+<div class="outline-4" id="outline-container-org6d00e1f">
+<h4 id="org6d00e1f">The Method</h4>
+<div class="outline-text-4" id="text-org6d00e1f">
 <p>This relies on the built-in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById"><code>document.getElementById</code></a> method (well, built-in when there's a browser).</p>
 <div class="highlight">
 <pre><span></span><span class="nx">is_an_element_id</span><span class="p">(</span><span class="nx">identifier</span><span class="p">,</span><span class="w"> </span><span class="nx">actual</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -799,20 +1025,20 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgc25e22b">
-<h2 id="orgc25e22b">Links</h2>
-<div class="outline-text-2" id="text-orgc25e22b"></div>
-<div class="outline-3" id="outline-container-orgc20e07e">
-<h3 id="orgc20e07e">Related Posts</h3>
-<div class="outline-text-3" id="text-orgc20e07e">
+<div class="outline-2" id="outline-container-org23107c0">
+<h2 id="org23107c0">Links</h2>
+<div class="outline-text-2" id="text-org23107c0"></div>
+<div class="outline-3" id="outline-container-orgba2aec2">
+<h3 id="orgba2aec2">Related Posts</h3>
+<div class="outline-text-3" id="text-orgba2aec2">
 <ul class="org-ul">
 <li><a href="posts/slider-settings-and-validator/index.html">Slider and Caption Settings</a></li>
 </ul>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org74505c0">
-<h3 id="org74505c0">Javascript</h3>
-<div class="outline-text-3" id="text-org74505c0">
+<div class="outline-3" id="outline-container-org8926600">
+<h3 id="org8926600">Javascript</h3>
+<div class="outline-text-3" id="text-org8926600">
 <ul class="org-ul">
 <li>Document: getElementById() method - Web APIs | MDN [Internet]. 2023 [cited 2023 Oct 3]. Available from: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById">https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById</a></li>
 <li>isNaN() - JavaScript | MDN [Internet]. 2023 [cited 2023 Oct 3]. Available from: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN</a></li>
@@ -839,32 +1065,32 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="posts/the-great-slidini/index.html#orga4095ab">Slidini</a>
+<li><a href="posts/the-great-slidini/index.html#org6475c4e">Slidini</a>
 <ul>
-<li><a href="posts/the-great-slidini/index.html#orge4cb44d">The Class Declaration</a></li>
-<li><a href="posts/the-great-slidini/index.html#org5efd92c">The Constructor</a></li>
-<li><a href="posts/the-great-slidini/index.html#orgdd9e543">The Slider</a></li>
-<li><a href="posts/the-great-slidini/index.html#orge1bf3ef">The Caption</a></li>
-<li><a href="posts/the-great-slidini/index.html#org9977861">The Caption Updater</a></li>
+<li><a href="posts/the-great-slidini/index.html#orge5b8194">The Class Declaration</a></li>
+<li><a href="posts/the-great-slidini/index.html#org7023448">The Constructor</a></li>
+<li><a href="posts/the-great-slidini/index.html#orgbcd7bc8">The Slider</a></li>
+<li><a href="posts/the-great-slidini/index.html#orgf4826aa">The Caption</a></li>
+<li><a href="posts/the-great-slidini/index.html#org9e7386f">The Caption Updater</a></li>
 </ul>
 </li>
-<li><a href="posts/the-great-slidini/index.html#org92c370d">Links</a>
+<li><a href="posts/the-great-slidini/index.html#org223b5b6">Links</a>
 <ul>
-<li><a href="posts/the-great-slidini/index.html#org485ef77">Related Posts</a></li>
-<li><a href="posts/the-great-slidini/index.html#org0c793ce">Reference</a></li>
+<li><a href="posts/the-great-slidini/index.html#org9f2bd4f">Related Posts</a></li>
+<li><a href="posts/the-great-slidini/index.html#orgc3f5815">Reference</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orga4095ab">
-<h2 id="orga4095ab">Slidini</h2>
-<div class="outline-text-2" id="text-orga4095ab">
+<div class="outline-2" id="outline-container-org6475c4e">
+<h2 id="org6475c4e">Slidini</h2>
+<div class="outline-text-2" id="text-org6475c4e">
 <p><img alt="nil" src="posts/the-great-slidini/slidini.png"></p>
 </div>
-<div class="outline-3" id="outline-container-orge4cb44d">
-<h3 id="orge4cb44d">The Class Declaration</h3>
-<div class="outline-text-3" id="text-orge4cb44d">
+<div class="outline-3" id="outline-container-orge5b8194">
+<h3 id="orge5b8194">The Class Declaration</h3>
+<div class="outline-text-3" id="text-orge5b8194">
 <p>The Slidini class is going to create two HTML elements - a Slider and a label (what I call a caption) for the slider.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">Slidini</span><span class="w"> </span><span class="p">{</span>
@@ -873,9 +1099,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org5efd92c">
-<h3 id="org5efd92c">The Constructor</h3>
-<div class="outline-text-3" id="text-org5efd92c">
+<div class="outline-3" id="outline-container-org7023448">
+<h3 id="org7023448">The Constructor</h3>
+<div class="outline-text-3" id="text-org7023448">
 <div class="highlight">
 <pre><span></span><span class="k">Feature:</span><span class="nf"> A Slidini class to hold a slider and its caption.</span>
 </pre></div>
@@ -889,9 +1115,9 @@
 <p>The <code>slider_settings</code> and <code>caption_settings</code> should be instances of the <code>SliderSettings</code> and <code>CaptionSettings</code> classes (see the <a href="posts/slider-settings-and-validator/index.html">Slider and Caption Settings</a> post) and the <code>p5</code> object should be a p5.js instance.</p>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgdd9e543">
-<h3 id="orgdd9e543">The Slider</h3>
-<div class="outline-text-3" id="text-orgdd9e543">
+<div class="outline-3" id="outline-container-orgbcd7bc8">
+<h3 id="orgbcd7bc8">The Slider</h3>
+<div class="outline-text-3" id="text-orgbcd7bc8">
 <p>This creates the slider and the caption. I decided to muddy them together like this in order to create the callback to update the caption whenever the slider is updated, and to add the initial caption once the slider is created.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">get</span><span class="w"> </span><span class="nx">slider</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -918,9 +1144,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orge1bf3ef">
-<h3 id="orge1bf3ef">The Caption</h3>
-<div class="outline-text-3" id="text-orge1bf3ef">
+<div class="outline-3" id="outline-container-orgf4826aa">
+<h3 id="orgf4826aa">The Caption</h3>
+<div class="outline-text-3" id="text-orgf4826aa">
 <p>This is the caption for the slider. It expects there to be a <code>div</code> that it can stick the caption into.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">get</span><span class="w"> </span><span class="nx">caption</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -933,9 +1159,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org9977861">
-<h3 id="org9977861">The Caption Updater</h3>
-<div class="outline-text-3" id="text-org9977861">
+<div class="outline-3" id="outline-container-org9e7386f">
+<h3 id="org9e7386f">The Caption Updater</h3>
+<div class="outline-text-3" id="text-org9e7386f">
 <p>This sets the caption to the current value of the slider. It's used both to initialize the caption and as a callback to update the caption whenever the slider's value changes.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">update_caption</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -947,20 +1173,20 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org92c370d">
-<h2 id="org92c370d">Links</h2>
-<div class="outline-text-2" id="text-org92c370d"></div>
-<div class="outline-3" id="outline-container-org485ef77">
-<h3 id="org485ef77">Related Posts</h3>
-<div class="outline-text-3" id="text-org485ef77">
+<div class="outline-2" id="outline-container-org223b5b6">
+<h2 id="org223b5b6">Links</h2>
+<div class="outline-text-2" id="text-org223b5b6"></div>
+<div class="outline-3" id="outline-container-org9f2bd4f">
+<h3 id="org9f2bd4f">Related Posts</h3>
+<div class="outline-text-3" id="text-org9f2bd4f">
 <ul class="org-ul">
 <li><a href="posts/slider-settings-and-validator/index.html">Slider and Caption Settings</a></li>
 </ul>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org0c793ce">
-<h3 id="org0c793ce">Reference</h3>
-<div class="outline-text-3" id="text-org0c793ce">
+<div class="outline-3" id="outline-container-orgc3f5815">
+<h3 id="orgc3f5815">Reference</h3>
+<div class="outline-text-3" id="text-orgc3f5815">
 <ul class="org-ul">
 <li>p5.js reference | createSlider() [Internet]. [cited 2023 Apr 25]. Available from: <a href="https://p5js.org/reference/#/p5/createSlider">https://p5js.org/reference/#/p5/createSlider</a></li>
 <li>p5.js reference | p5.Element [Internet]. [cited 2023 Sep 14]. Available from: <a href="https://p5js.org/reference/#/p5.Element">https://p5js.org/reference/#/p5.Element</a></li>
@@ -986,14 +1212,14 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="posts/figure-drawing-sites/index.html#orge15332b">Figure Reference</a></li>
-<li><a href="posts/figure-drawing-sites/index.html#org7c3f580">How To Draw</a></li>
+<li><a href="posts/figure-drawing-sites/index.html#orgab8536a">Figure Reference</a></li>
+<li><a href="posts/figure-drawing-sites/index.html#orgbaaf49d">How To Draw</a></li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orge15332b">
-<h2 id="orge15332b">Figure Reference</h2>
-<div class="outline-text-2" id="text-orge15332b">
+<div class="outline-2" id="outline-container-orgab8536a">
+<h2 id="orgab8536a">Figure Reference</h2>
+<div class="outline-text-2" id="text-orgab8536a">
 <ul class="org-ul">
 <li><a href="https://www.posemaniacs.com/">Pose Maniacs</a></li>
 <li><a href="https://line-of-action.com/">Line of Action</a></li>
@@ -1004,9 +1230,9 @@
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org7c3f580">
-<h2 id="org7c3f580">How To Draw</h2>
-<div class="outline-text-2" id="text-org7c3f580">
+<div class="outline-2" id="outline-container-orgbaaf49d">
+<h2 id="orgbaaf49d">How To Draw</h2>
+<div class="outline-text-2" id="text-orgbaaf49d">
 <ul class="org-ul">
 <li><a href="https://www.youtube.com/playlist?list=PLtG4P3lq8RHFBeVaruf2JjyQmZJH4__Zv">Anatomy of the Human Body</a> - Proko's playlist on YouTube</li>
 </ul>
@@ -1027,43 +1253,43 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="posts/slider-settings-and-validator/index.html#org7f6f85b">The Sliders Settings</a>
+<li><a href="posts/slider-settings-and-validator/index.html#org9ce05c6">The Sliders Settings</a>
 <ul>
-<li><a href="posts/slider-settings-and-validator/index.html#org2a36929">The Scenario</a></li>
-<li><a href="posts/slider-settings-and-validator/index.html#org77c3909">The Testing</a></li>
-<li><a href="posts/slider-settings-and-validator/index.html#orgcf41b1a">The Slider Settings Implementation</a></li>
+<li><a href="posts/slider-settings-and-validator/index.html#org2c73fb2">The Scenario</a></li>
+<li><a href="posts/slider-settings-and-validator/index.html#orgbf32fd4">The Testing</a></li>
+<li><a href="posts/slider-settings-and-validator/index.html#org4d9493b">The Slider Settings Implementation</a></li>
 </ul>
 </li>
-<li><a href="posts/slider-settings-and-validator/index.html#org88393ab">The Caption Settings</a>
+<li><a href="posts/slider-settings-and-validator/index.html#orgfcdf7ce">The Caption Settings</a>
 <ul>
-<li><a href="posts/slider-settings-and-validator/index.html#orgb7393e3">The Testing</a></li>
-<li><a href="posts/slider-settings-and-validator/index.html#org3505ec1">The CaptionSettings Implementation</a></li>
+<li><a href="posts/slider-settings-and-validator/index.html#org31230a8">The Testing</a></li>
+<li><a href="posts/slider-settings-and-validator/index.html#org207e402">The CaptionSettings Implementation</a></li>
 </ul>
 </li>
-<li><a href="posts/slider-settings-and-validator/index.html#org8644787">Links</a>
+<li><a href="posts/slider-settings-and-validator/index.html#orga4ea78b">Links</a>
 <ul>
-<li><a href="posts/slider-settings-and-validator/index.html#org413f5d1">Related Post</a></li>
-<li><a href="posts/slider-settings-and-validator/index.html#org44e44ef">References</a></li>
+<li><a href="posts/slider-settings-and-validator/index.html#org41b7f1c">Related Post</a></li>
+<li><a href="posts/slider-settings-and-validator/index.html#org10ec27a">References</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org7f6f85b">
-<h2 id="org7f6f85b">The Sliders Settings</h2>
-<div class="outline-text-2" id="text-org7f6f85b">
+<div class="outline-2" id="outline-container-org9ce05c6">
+<h2 id="org9ce05c6">The Sliders Settings</h2>
+<div class="outline-text-2" id="text-org9ce05c6">
 <p><img alt="nil" src="posts/slider-settings-and-validator/slider_settings.png"></p>
 <p>The <code>SliderSettings</code> class holds the values for the <a href="posts/the-great-slidini/index.html">Slidini</a> class and optionally validates the values it's been given.</p>
 </div>
-<div class="outline-3" id="outline-container-org2a36929">
-<h3 id="org2a36929">The Scenario</h3>
-<div class="outline-text-3" id="text-org2a36929">
+<div class="outline-3" id="outline-container-org2c73fb2">
+<h3 id="org2c73fb2">The Scenario</h3>
+<div class="outline-text-3" id="text-org2c73fb2">
 <p>Since there's only one method to call and it defers everything to the <a href="posts/a-validator-for-slidersettings/index.html">Validator</a> I'm going to have one Scenario to test, but to try and make it easier to read I'm going to break up the Then-And statements within it, but I'm not going to break up the <code>check_rep</code> method itself so I'm not going to show the implementation under each test it satisfies, but just show the class definition in entirety after all the tests.</p>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org77c3909">
-<h3 id="org77c3909">The Testing</h3>
-<div class="outline-text-3" id="text-org77c3909">
+<div class="outline-3" id="outline-container-orgbf32fd4">
+<h3 id="orgbf32fd4">The Testing</h3>
+<div class="outline-text-3" id="text-orgbf32fd4">
 <p>First we need to import some javascript. Even though I'm faking all the methods I'm going to use on the <code>Validator</code> class I used the real definition because I was hoping to figure out how to get <code>sinon</code> to copy all the methods automatically, but I didn't see anything indicating it can, so maybe next time I'll just make a fake object instead.</p>
 <div class="highlight">
 <pre><span></span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">expect</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"chai"</span><span class="p">;</span>
@@ -1090,9 +1316,9 @@
 </pre></div>
 <p>The <code>METHODS</code> array holds the names of all of the Validator's methods that <code>check_rep</code> uses so that I can replace the Validator's methods in a loop instead of doing it separately for each one.</p>
 </div>
-<div class="outline-4" id="outline-container-orgd979d55">
-<h4 id="orgd979d55">Setup The Slider Settings</h4>
-<div class="outline-text-4" id="text-orgd979d55">
+<div class="outline-4" id="outline-container-org264405f">
+<h4 id="org264405f">Setup The Slider Settings</h4>
+<div class="outline-text-4" id="text-org264405f">
 <p>Now I'll build the <code>SliderSettings</code> with the faked <code>Validator</code> methods in the cucumber <code>Given</code> function.</p>
 <div class="highlight">
 <pre><span></span><span class="k">Feature:</span><span class="nf"> Slider Settings</span>
@@ -1133,9 +1359,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgbe25281">
-<h4 id="orgbe25281">Calling Check Rep</h4>
-<div class="outline-text-4" id="text-orgbe25281">
+<div class="outline-4" id="outline-container-orgcb58841">
+<h4 id="orgcb58841">Calling Check Rep</h4>
+<div class="outline-text-4" id="text-orgcb58841">
 <p>This is the only call to <code>SliderSettings</code> I make.</p>
 <div class="highlight">
 <pre><span></span><span class="k">When </span><span class="nf">check_rep is called</span>
@@ -1148,9 +1374,9 @@
 <p>Now the rest of the tests check all the calls to the <code>Validator</code> that the <code>check_rep</code> method made.</p>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgd3f52e1">
-<h4 id="orgd3f52e1">Min Check</h4>
-<div class="outline-text-4" id="text-orgd3f52e1">
+<div class="outline-4" id="outline-container-org2b87a5e">
+<h4 id="org2b87a5e">Min Check</h4>
+<div class="outline-text-4" id="text-org2b87a5e">
 <p>The first property that <code>check_rep</code> validates is the <code>min</code>.</p>
 <div class="highlight">
 <pre><span></span><span class="k">Then </span><span class="nf">it checked the min</span>
@@ -1170,9 +1396,9 @@
 <p>The rest of the checks are pretty much the same thing but with different variables so I'll stop the commentary for a while.</p>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgfe329b8">
-<h4 id="orgfe329b8">Max Check</h4>
-<div class="outline-text-4" id="text-orgfe329b8">
+<div class="outline-4" id="outline-container-orgd51ceaf">
+<h4 id="orgd51ceaf">Max Check</h4>
+<div class="outline-text-4" id="text-orgd51ceaf">
 <div class="highlight">
 <pre><span></span><span class="k">And </span><span class="nf">it checked the max</span>
 </pre></div>
@@ -1185,9 +1411,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgc39a38a">
-<h4 id="orgc39a38a">Default Value</h4>
-<div class="outline-text-4" id="text-orgc39a38a">
+<div class="outline-4" id="outline-container-org4f1d842">
+<h4 id="org4f1d842">Default Value</h4>
+<div class="outline-text-4" id="text-org4f1d842">
 <div class="highlight">
 <pre><span></span><span class="k">And </span><span class="nf">it checked the default_value</span>
 </pre></div>
@@ -1200,9 +1426,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgca8a0fe">
-<h4 id="orgca8a0fe">Step Size</h4>
-<div class="outline-text-4" id="text-orgca8a0fe">
+<div class="outline-4" id="outline-container-orgef663a5">
+<h4 id="orgef663a5">Step Size</h4>
+<div class="outline-text-4" id="text-orgef663a5">
 <div class="highlight">
 <pre><span></span><span class="k">And </span><span class="nf">it checked the step_size</span>
 </pre></div>
@@ -1215,9 +1441,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org34685c8">
-<h4 id="org34685c8">Slider Div</h4>
-<div class="outline-text-4" id="text-org34685c8">
+<div class="outline-4" id="outline-container-org9c05e05">
+<h4 id="org9c05e05">Slider Div</h4>
+<div class="outline-text-4" id="text-org9c05e05">
 <div class="highlight">
 <pre><span></span><span class="k">And </span><span class="nf">it checked the slider_div</span>
 </pre></div>
@@ -1231,9 +1457,9 @@
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgcf41b1a">
-<h3 id="orgcf41b1a">The Slider Settings Implementation</h3>
-<div class="outline-text-3" id="text-orgcf41b1a">
+<div class="outline-3" id="outline-container-org4d9493b">
+<h3 id="org4d9493b">The Slider Settings Implementation</h3>
+<div class="outline-text-3" id="text-org4d9493b">
 <p>Now that we have the tests, I'll implement the slider settings.</p>
 <p><img alt="nil" src="posts/slider-settings-and-validator/slider_settings.png"></p>
 <p>The <code>SliderSettings</code> holds the settings to build <a href="posts/the-great-slidini/index.html">Slidini</a>, the Slider and Caption holder. It really could be done with a plain object (which is what it was) but I decided to add a validator to make sure that I was getting all the parameters right.</p>
@@ -1262,19 +1488,19 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org88393ab">
-<h2 id="org88393ab">The Caption Settings</h2>
-<div class="outline-text-2" id="text-org88393ab">
-<p>The Caption Settings are pretty much just like the Slider Settings except that they are meant for the label that lets the user know what the current slider's value is. I used to have everything in the <a href="posts/slider-settings-and-validator/index.html#org7f6f85b">SliderSettings</a> but it wasn't obvious what belonged to which so I broke them apart.</p>
+<div class="outline-2" id="outline-container-orgfcdf7ce">
+<h2 id="orgfcdf7ce">The Caption Settings</h2>
+<div class="outline-text-2" id="text-orgfcdf7ce">
+<p>The Caption Settings are pretty much just like the Slider Settings except that they are meant for the label that lets the user know what the current slider's value is. I used to have everything in the <a href="posts/slider-settings-and-validator/index.html#org9ce05c6">SliderSettings</a> but it wasn't obvious what belonged to which so I broke them apart.</p>
 </div>
-<div class="outline-3" id="outline-container-orgb7393e3">
-<h3 id="orgb7393e3">The Testing</h3>
-<div class="outline-text-3" id="text-orgb7393e3">
+<div class="outline-3" id="outline-container-org31230a8">
+<h3 id="org31230a8">The Testing</h3>
+<div class="outline-text-3" id="text-org31230a8">
 <p>This is pretty much exactly the same as the testing for the <code>SliderSettings</code> so I won't have a whole lot to add to it.</p>
 </div>
-<div class="outline-4" id="outline-container-org9f99cf1">
-<h4 id="org9f99cf1">Imports</h4>
-<div class="outline-text-4" id="text-org9f99cf1">
+<div class="outline-4" id="outline-container-org6c03ed2">
+<h4 id="org6c03ed2">Imports</h4>
+<div class="outline-text-4" id="text-org6c03ed2">
 <div class="highlight">
 <pre><span></span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">expect</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"chai"</span><span class="p">;</span>
 <span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">faker</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@faker-js/faker"</span><span class="p">;</span>
@@ -1286,9 +1512,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org84d73dc">
-<h4 id="org84d73dc">Call Object Indices</h4>
-<div class="outline-text-4" id="text-org84d73dc">
+<div class="outline-4" id="outline-container-org225c4bf">
+<h4 id="org225c4bf">Call Object Indices</h4>
+<div class="outline-text-4" id="text-org225c4bf">
 <div class="highlight">
 <pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">CAPTION_IS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="nx">SET</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
@@ -1306,9 +1532,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org11a4086">
-<h4 id="org11a4086">The Feature</h4>
-<div class="outline-text-4" id="text-org11a4086">
+<div class="outline-4" id="outline-container-orgd2d060f">
+<h4 id="orgd2d060f">The Feature</h4>
+<div class="outline-text-4" id="text-orgd2d060f">
 <div class="highlight">
 <pre><span></span><span class="k">Feature:</span><span class="nf"> Settings for a caption/label.</span>
 
@@ -1319,9 +1545,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgf7261b3">
-<h4 id="orgf7261b3">Setting up the Caption Settings in "Given"</h4>
-<div class="outline-text-4" id="text-orgf7261b3">
+<div class="outline-4" id="outline-container-org9dbb604">
+<h4 id="org9dbb604">Setting up the Caption Settings in "Given"</h4>
+<div class="outline-text-4" id="text-org9dbb604">
 <div class="highlight">
 <pre><span></span><span class="nx">Given</span><span class="p">(</span><span class="s2">"a CaptionSettings"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 </pre></div>
@@ -1365,9 +1591,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org151e9a0">
-<h4 id="org151e9a0">Check Rep</h4>
-<div class="outline-text-4" id="text-org151e9a0">
+<div class="outline-4" id="outline-container-org0d5beb5">
+<h4 id="org0d5beb5">Check Rep</h4>
+<div class="outline-text-4" id="text-org0d5beb5">
 <div class="highlight">
 <pre><span></span><span class="k">Scenario:</span><span class="nf"> check_rep is called.</span>
 
@@ -1383,9 +1609,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orged70e5c">
-<h4 id="orged70e5c">Did It Validate the Label?</h4>
-<div class="outline-text-4" id="text-orged70e5c">
+<div class="outline-4" id="outline-container-org8502722">
+<h4 id="org8502722">Did It Validate the Label?</h4>
+<div class="outline-text-4" id="text-org8502722">
 <div class="highlight">
 <pre><span></span><span class="k">Then </span><span class="nf">it checks the label</span>
 </pre></div>
@@ -1398,9 +1624,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org171d191">
-<h4 id="org171d191">Did It Validate the Precision?</h4>
-<div class="outline-text-4" id="text-org171d191">
+<div class="outline-4" id="outline-container-orga17b727">
+<h4 id="orga17b727">Did It Validate the Precision?</h4>
+<div class="outline-text-4" id="text-orga17b727">
 <div class="highlight">
 <pre><span></span><span class="k">And </span><span class="nf">it checks the precision</span>
 </pre></div>
@@ -1413,9 +1639,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org870db93">
-<h4 id="org870db93">Did It Validate the Div ID?</h4>
-<div class="outline-text-4" id="text-org870db93">
+<div class="outline-4" id="outline-container-org13b7b28">
+<h4 id="org13b7b28">Did It Validate the Div ID?</h4>
+<div class="outline-text-4" id="text-org13b7b28">
 <div class="highlight">
 <pre><span></span><span class="k">And </span><span class="nf">it checks the caption div ID.</span>
 </pre></div>
@@ -1429,9 +1655,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org36211a0">
-<h4 id="org36211a0">Does it add a pound sign to the DIV ID?</h4>
-<div class="outline-text-4" id="text-org36211a0">
+<div class="outline-4" id="outline-container-org51751c6">
+<h4 id="org51751c6">Does it add a pound sign to the DIV ID?</h4>
+<div class="outline-text-4" id="text-org51751c6">
 <p>The <code>p5.select</code> method uses CSS selectors so it needs you to put a <code>#</code> sign in front of the DIV ID to tell it that it's an ID.</p>
 <div class="highlight">
 <pre><span></span><span class="k">Scenario:</span><span class="nf"> The caption DIV selector is set up</span>
@@ -1452,9 +1678,9 @@
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org3505ec1">
-<h3 id="org3505ec1">The CaptionSettings Implementation</h3>
-<div class="outline-text-3" id="text-org3505ec1">
+<div class="outline-3" id="outline-container-org207e402">
+<h3 id="org207e402">The CaptionSettings Implementation</h3>
+<div class="outline-text-3" id="text-org207e402">
 <p>So here's where I implemennt the class. The <i>label</i> property is a string that gets inserted into the string that's displayed on the Label element. Maybe I should have called it something else… The <i>precision</i> property is used to decide how many decimal places to show in the Label, and the <i>caption_div</i> is the ID of the element where I'm going to stick the Label.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">CaptionSettings</span><span class="w"> </span><span class="p">{</span>
@@ -1484,21 +1710,21 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org8644787">
-<h2 id="org8644787">Links</h2>
-<div class="outline-text-2" id="text-org8644787"></div>
-<div class="outline-3" id="outline-container-org413f5d1">
-<h3 id="org413f5d1">Related Post</h3>
-<div class="outline-text-3" id="text-org413f5d1">
+<div class="outline-2" id="outline-container-orga4ea78b">
+<h2 id="orga4ea78b">Links</h2>
+<div class="outline-text-2" id="text-orga4ea78b"></div>
+<div class="outline-3" id="outline-container-org41b7f1c">
+<h3 id="org41b7f1c">Related Post</h3>
+<div class="outline-text-3" id="text-org41b7f1c">
 <ul class="org-ul">
 <li><a href="posts/a-validator-for-slidersettings/index.html">A Validator for SliderSettings</a></li>
 <li><a href="posts/the-great-slidini/index.html">The Great Slidini</a></li>
 </ul>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org44e44ef">
-<h3 id="org44e44ef">References</h3>
-<div class="outline-text-3" id="text-org44e44ef">
+<div class="outline-3" id="outline-container-org10ec27a">
+<h3 id="org10ec27a">References</h3>
+<div class="outline-text-3" id="text-org10ec27a">
 <ul class="org-ul">
 <li>id - HTML: HyperText Markup Language | MDN [Internet]. 2023 [cited 2023 Sep 14]. Available from: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id">https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id</a></li>
 </ul>
@@ -1520,35 +1746,35 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="posts/cucumber-chai-and-jsdom/index.html#org86ae27d">What Is This About?</a>
+<li><a href="posts/cucumber-chai-and-jsdom/index.html#org12d8d90">What Is This About?</a>
 <ul>
-<li><a href="posts/cucumber-chai-and-jsdom/index.html#orgfd10dbb">The Earlier Problem</a></li>
-<li><a href="posts/cucumber-chai-and-jsdom/index.html#org4a47aee">The Newer Problem</a></li>
+<li><a href="posts/cucumber-chai-and-jsdom/index.html#orgfbc7242">The Earlier Problem</a></li>
+<li><a href="posts/cucumber-chai-and-jsdom/index.html#orgafb4918">The Newer Problem</a></li>
 </ul>
 </li>
-<li><a href="posts/cucumber-chai-and-jsdom/index.html#orgeeef2b4">The Feature File</a></li>
-<li><a href="posts/cucumber-chai-and-jsdom/index.html#org750fc1f">The Software Under Test</a>
+<li><a href="posts/cucumber-chai-and-jsdom/index.html#org7c2f24f">The Feature File</a></li>
+<li><a href="posts/cucumber-chai-and-jsdom/index.html#org5d81982">The Software Under Test</a>
 <ul>
-<li><a href="posts/cucumber-chai-and-jsdom/index.html#orgf78be0c">The Class Declaration</a></li>
-<li><a href="posts/cucumber-chai-and-jsdom/index.html#org255d8e7">The Get Element Method</a></li>
+<li><a href="posts/cucumber-chai-and-jsdom/index.html#orgfd0f1ac">The Class Declaration</a></li>
+<li><a href="posts/cucumber-chai-and-jsdom/index.html#org96605d7">The Get Element Method</a></li>
 </ul>
 </li>
-<li><a href="posts/cucumber-chai-and-jsdom/index.html#org310fb79">The Step File</a>
+<li><a href="posts/cucumber-chai-and-jsdom/index.html#org958bd2f">The Step File</a>
 <ul>
-<li><a href="posts/cucumber-chai-and-jsdom/index.html#org367b195">Setting Up</a></li>
-<li><a href="posts/cucumber-chai-and-jsdom/index.html#orgbb3f1d5">The Tests</a></li>
+<li><a href="posts/cucumber-chai-and-jsdom/index.html#org0e0fdb7">Setting Up</a></li>
+<li><a href="posts/cucumber-chai-and-jsdom/index.html#org61516c1">The Tests</a></li>
 </ul>
 </li>
-<li><a href="posts/cucumber-chai-and-jsdom/index.html#org7832c8c">What Have We Learned?</a></li>
+<li><a href="posts/cucumber-chai-and-jsdom/index.html#org82c644a">What Have We Learned?</a></li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org86ae27d">
-<h2 id="org86ae27d">What Is This About?</h2>
-<div class="outline-text-2" id="text-org86ae27d"></div>
-<div class="outline-3" id="outline-container-orgfd10dbb">
-<h3 id="orgfd10dbb">The Earlier Problem</h3>
-<div class="outline-text-3" id="text-orgfd10dbb">
+<div class="outline-2" id="outline-container-org12d8d90">
+<h2 id="org12d8d90">What Is This About?</h2>
+<div class="outline-text-2" id="text-org12d8d90"></div>
+<div class="outline-3" id="outline-container-orgfbc7242">
+<h3 id="orgfbc7242">The Earlier Problem</h3>
+<div class="outline-text-3" id="text-orgfbc7242">
 <p>In my code from <a href="posts/generative-art-spiral/index.html">my spiral post</a> I used <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById">document.getElementById</a> as a check to make sure that I was passing in a valid <code>div</code> ID to <code>p5.js</code> and I decided to add some testing to make sure my validator was working as I expected. The problem was that when you run tests in <code>node.js</code> the <code>document</code> object doesn't exist. One way to get around this might be to use <code>Selenium</code> or some other browser-tester but that seemed like overkill.</p>
 <p>My first idea was that I would just mock the <code>document</code> object using <a href="https://sinonjs.org/">sinon</a> since this is a fairly easy thing to do in python (maybe not mocking <code>document</code>, specifically, since that is a javascript thing, but mocking objects in a module is fairly easy) but I simply couldn't find anything that seemed to indicate that this was possible, only posts saying that <code>sinon</code> doesn't work that way.</p>
 <p>So then I stumbled upon <a href="https://github.com/jsdom/jsdom">jsdom</a>, which appeared to be what I wanted to mock the document. The problem was that it's more of a browser simulator not a means to replace objects so I still had to figure out a way to replace the <code>document</code> that my class was expecting with the <code>jsdom</code> document. In the other post where I first used <code>jsdom</code> I followed the pattern shown in <a href="https://github.com/danielcb29/cucumberjs-jsdom-example">this github repository</a> where you stick the <code>jsdom document</code> into the <code>global</code> variable which makes it appear to be a global variable just like it is when you run the code in a browser.</p>
@@ -1558,9 +1784,9 @@
 <p>Where <code>dom</code> is an instance of <code>jsdom</code> setup with some HTML to use for the testing. Amazingly this did seem to work…</p>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org4a47aee">
-<h3 id="org4a47aee">The Newer Problem</h3>
-<div class="outline-text-3" id="text-org4a47aee">
+<div class="outline-3" id="outline-container-orgafb4918">
+<h3 id="orgafb4918">The Newer Problem</h3>
+<div class="outline-text-3" id="text-orgafb4918">
 <p>Then I got to this post where I wanted to document getting <code>jsdom</code> to work and, even though I was using a simpler version of the previous post, I found that the tests were failing mysteriously (pretty much everything with javascript is mysterious to me). With a lot of troubleshooting, I managed to find out that instead of using the <code>dom</code> I was creating here it was still using the same one from the other testing. Except sometimes it was using the <code>dom</code> I defined here and these tests passed but then the other tests failed. I guess <code>global</code> means global in the truer sense, not just for the scope of a single set of tests, and there's some kind of race going on between the different pieces of code that are trying to set and use this global <code>document</code>. Oy.</p>
 <p>So, then I went looking at the <code>jsdom</code> documentation (which is pretty much just a <i>readme</i> and all the "issues" people have posted), but there was one page on their wiki titled <a href="https://github.com/jsdom/jsdom/wiki/Don't-stuff-jsdom-globals-onto-the-Node-global">Don't Stuff jsdom Globals Onto the Node Global</a>, which, I guess, means that I shouldn't have done what I did and all those Stack Overflow answers say to do. The page scolding all us silly people for using <code>global</code> did have a few examples of how they thought you should do it instead, so then I tried their solution of adding the javascript for my class to the <code>jsdom</code> object instead of using it in the <code>cucumber.js</code> test code. That way my class would have access to the <code>document</code> in their global space.</p>
 <p>Easy-peasy. Well… this produced more mysterious failures except now it was in a different place. After running their examples in the Node REPL unsuccessfully I found <a href="https://github.com/jsdom/jsdom/issues/2475">this "issue"</a> where it's explained that they don't support the <code>&lt;script type="module"&gt;</code> parameter (so you can't use ES6 imports like I do). Okay, so then I dumped the class definition to a string and added it directly, but no matter what I couldn't get <code>jsdom</code> to interpret any class I put in, although functions did work, so I came to the conclusion that they don't support javascript classes either.</p>
@@ -1570,9 +1796,9 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgeeef2b4">
-<h2 id="orgeeef2b4">The Feature File</h2>
-<div class="outline-text-2" id="text-orgeeef2b4">
+<div class="outline-2" id="outline-container-org7c2f24f">
+<h2 id="org7c2f24f">The Feature File</h2>
+<div class="outline-text-2" id="text-org7c2f24f">
 <p>This is a <a href="https://github.com/cucumber/cucumber-js">Cucumber.js</a> test so I'll create a simple feature file for a class that retrieves a document element and test the case where the ID is correct and the one where it is incorrect.</p>
 <div class="highlight">
 <pre><span></span><span class="k">Feature:</span><span class="nf"> An Element Getter</span>
@@ -1591,14 +1817,14 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org750fc1f">
-<h2 id="org750fc1f">The Software Under Test</h2>
-<div class="outline-text-2" id="text-org750fc1f">
+<div class="outline-2" id="outline-container-org5d81982">
+<h2 id="org5d81982">The Software Under Test</h2>
+<div class="outline-text-2" id="text-org5d81982">
 <p>Now the implementation. This is kind of a useless class, but this was supposed to be about how to get <code>jsdom</code> working so I can test code expecting a <code>document</code>.</p>
 </div>
-<div class="outline-3" id="outline-container-orgf78be0c">
-<h3 id="orgf78be0c">The Class Declaration</h3>
-<div class="outline-text-3" id="text-orgf78be0c">
+<div class="outline-3" id="outline-container-orgfd0f1ac">
+<h3 id="orgfd0f1ac">The Class Declaration</h3>
+<div class="outline-text-3" id="text-orgfd0f1ac">
 <p>This is the class I'm going to test.</p>
 <p><img alt="nil" src="posts/cucumber-chai-and-jsdom/element-getter.png"></p>
 <div class="highlight">
@@ -1613,9 +1839,9 @@
 <p>The constructor shows the main change I made to get it working - instead of using a global <code>document</code> I added it as an argument. I went through all that rigamarole trying to avoid this since it seemed like I was changing code just to test it, but now that I think about it, it's what I'd've done in python anyway, since I kind of don't like these "magic" objects that show up without being created or imported like they do in javascript.</p>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org255d8e7">
-<h3 id="org255d8e7">The Get Element Method</h3>
-<div class="outline-text-3" id="text-org255d8e7">
+<div class="outline-3" id="outline-container-org96605d7">
+<h3 id="org96605d7">The Get Element Method</h3>
+<div class="outline-text-3" id="text-org96605d7">
 <p>I made a getter for the retrieved element. It probably would have been easier in this case if I didn't store it, since I could test both when the ID is correct and when it isn't with the same object, just by changing the <code>this.element_id</code> value, but it's a pattern I often use and it gave me the chance to test out javascript's <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields">Private Class Fields</a> syntax. To be quite honest, I think using the pound sign (<code>#</code>) is kind of ugly - I prefer the underscore, and <a href="https://pygments.org/">Pygments</a> draws red boxes around the <code>#</code>- but at least I know about it.</p>
 <p>The main value in using a getter here is that it can check that the element exists, since an invalid ID passed to <code>getElementById</code> will just return a <code>null</code> object rather thhan throw in error.</p>
 <div class="highlight">
@@ -1632,17 +1858,17 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org310fb79">
-<h2 id="org310fb79">The Step File</h2>
-<div class="outline-text-2" id="text-org310fb79">
+<div class="outline-2" id="outline-container-org958bd2f">
+<h2 id="org958bd2f">The Step File</h2>
+<div class="outline-text-2" id="text-org958bd2f">
 <p>And now the test code.</p>
 </div>
-<div class="outline-3" id="outline-container-org367b195">
-<h3 id="org367b195">Setting Up</h3>
-<div class="outline-text-3" id="text-org367b195"></div>
-<div class="outline-4" id="outline-container-orgeb18d0c">
-<h4 id="orgeb18d0c">Import the Test Libraries</h4>
-<div class="outline-text-4" id="text-orgeb18d0c">
+<div class="outline-3" id="outline-container-org0e0fdb7">
+<h3 id="org0e0fdb7">Setting Up</h3>
+<div class="outline-text-3" id="text-org0e0fdb7"></div>
+<div class="outline-4" id="outline-container-org57d25df">
+<h4 id="org57d25df">Import the Test Libraries</h4>
+<div class="outline-text-4" id="text-org57d25df">
 <div class="highlight">
 <pre><span></span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">expect</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"chai"</span><span class="p">;</span>
 <span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Given</span><span class="p">,</span><span class="w"> </span><span class="nx">When</span><span class="p">,</span><span class="w"> </span><span class="nx">Then</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@cucumber/cucumber"</span><span class="p">;</span>
@@ -1651,9 +1877,9 @@
 <p>These are the libraries that I installed to support testing. Using <code>jsdom</code> instead of creating a mock was convenient, but I might have to watch what the overhead is if I make a lot of tests that use it.</p>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org4e23189">
-<h4 id="org4e23189">Import the Software Under Test</h4>
-<div class="outline-text-4" id="text-org4e23189">
+<div class="outline-4" id="outline-container-org6e6e830">
+<h4 id="org6e6e830">Import the Software Under Test</h4>
+<div class="outline-text-4" id="text-org6e6e830">
 <p>Now I'll import the <code>ElementGetter</code> class that I defined above. It occurs to me that for a case like this where I don't actually use the code for anything other than testing I could have put it next to the tests, but I guess this is a better dress rehearsal for really using code in a post.</p>
 <p>Note the extra step up the path (<code>../</code>) because this time I followed the <code>cucumber</code> example and put the steps in a folder named <code>steps</code> instead of in a file named <code>steps.js</code>, which might make it easier to organize in the future if I have more to test, but makes relative paths that much more painful.</p>
 <div class="highlight">
@@ -1661,9 +1887,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org3422585">
-<h4 id="org3422585">Setup JSDOM</h4>
-<div class="outline-text-4" id="text-org3422585">
+<div class="outline-4" id="outline-container-orgb035b0d">
+<h4 id="orgb035b0d">Setup JSDOM</h4>
+<div class="outline-text-4" id="text-orgb035b0d">
 <p>Here's where I create the <code>jsdom</code> object with a <code>div</code> that the <code>ElementGetter</code> can get. I'm passing in the whole HTML string but in the documentation they sometimes just pass in the body.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">EXPECTED_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"expected-div"</span><span class="p">;</span>
@@ -1678,12 +1904,12 @@
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgbb3f1d5">
-<h3 id="orgbb3f1d5">The Tests</h3>
-<div class="outline-text-3" id="text-orgbb3f1d5"></div>
-<div class="outline-4" id="outline-container-orgbbab3e2">
-<h4 id="orgbbab3e2">The Right ID</h4>
-<div class="outline-text-4" id="text-orgbbab3e2">
+<div class="outline-3" id="outline-container-org61516c1">
+<h3 id="org61516c1">The Tests</h3>
+<div class="outline-text-3" id="text-org61516c1"></div>
+<div class="outline-4" id="outline-container-org7a0d626">
+<h4 id="org7a0d626">The Right ID</h4>
+<div class="outline-text-4" id="text-org7a0d626">
 <p>This is the first scenario where I expect the <code>ElementGetter</code> to successfully find the element. There's not a lot to test here, other than it doesn't crash.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">Given</span><span class="p">(</span><span class="s2">"an ElementGetter with the correct ID"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -1702,9 +1928,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgb5230aa">
-<h4 id="orgb5230aa">The Wrong ID</h4>
-<div class="outline-text-4" id="text-orgb5230aa">
+<div class="outline-4" id="outline-container-orgffeb2e7">
+<h4 id="orgffeb2e7">The Wrong ID</h4>
+<div class="outline-text-4" id="text-orgffeb2e7">
 <p>This is the more interesting case where we give the <code>ElementGetter</code> an ID that doesn't match any element in the page.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">Given</span><span class="p">(</span><span class="s2">"an ElementGetter with the wrong ID"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -1728,9 +1954,9 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org7832c8c">
-<h2 id="org7832c8c">What Have We Learned?</h2>
-<div class="outline-text-2" id="text-org7832c8c">
+<div class="outline-2" id="outline-container-org82c644a">
+<h2 id="org82c644a">What Have We Learned?</h2>
+<div class="outline-text-2" id="text-org82c644a">
 <p>I suppose the biggest lesson is that I shouldn't have tried so hard to fake the <code>document</code> object as a magic global object the way it normally is used and instead just gone for an explicit argument that gets passed to the class (or function) that needs it (which sort of follows the <a href="https://en.wikipedia.org/wiki/Dependency_injection?useskin=vector">Dependency Injection Pattern</a>). I also learned that <code>jsdom</code> is interesting but behind the ECMA standard, as were some of the other libraries I ran into in trying to solve different parts of this problem, so I have to either decide to not use ECMA 6 or not rely so much on these other libraries that don't use the current standards.</p>
 </div>
 </div>
@@ -1748,15 +1974,15 @@
 <p>
 <script src="posts/generative-art-concentric-circles/concentric-circles.js"></script></p>
 <div class="p5js" id="03d2e681-concentric-circles"></div>
-<div class="outline-2" id="outline-container-org8da44bb">
-<h2 id="org8da44bb">Introduction</h2>
-<div class="outline-text-2" id="text-org8da44bb">
+<div class="outline-2" id="outline-container-org3ded466">
+<h2 id="org3ded466">Introduction</h2>
+<div class="outline-text-2" id="text-org3ded466">
 <p>This is a sketch that extends the <a href="posts/generative-art-circles/index.html">Generative Art Circles</a> post (slightly) to make concentric circles. I was going to make a spiral but realized after I wrote out the code that I had actually made concentric circles - so it's sort of a half-step from the circle to the spiral.</p>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgeb1f05a">
-<h2 id="orgeb1f05a">The Class</h2>
-<div class="outline-text-2" id="text-orgeb1f05a">
+<div class="outline-2" id="outline-container-org44cb5b8">
+<h2 id="org44cb5b8">The Class</h2>
+<div class="outline-text-2" id="text-org44cb5b8">
 <p>The <code>ConcentricCircles</code> class keeps track of the parameters for the circles and draws them. Here I'm declaring the class and some fields to store the parameters.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">ConcentricCircles</span><span class="w"> </span><span class="p">{</span>
@@ -1784,9 +2010,9 @@
 </pre></div>
 <p>The constructor takes the <code>p5.js</code> object and the coordinates for the center of the circles (<code>center_x</code> and <code>center_y</code>) as well as the <code>maximum_radius</code> - the value at which the circles have hit their limit and should turn around. This is presumably half the width of the canvas, but since the <code>ConcentricCircles</code> class isn't creating the canvas I thought it should be the code that creates the sketch that decides what the limit is.</p>
 </div>
-<div class="outline-3" id="outline-container-orged45dbe">
-<h3 id="orged45dbe">The Step</h3>
-<div class="outline-text-3" id="text-orged45dbe">
+<div class="outline-3" id="outline-container-org1a8dfbc">
+<h3 id="org1a8dfbc">The Step</h3>
+<div class="outline-text-3" id="text-org1a8dfbc">
 <p>The <code>step</code> is the amount the radius increases between each circle. I put it in a getter so that it can check if the circles are at the limits of the expected maximum (or minimum) size and thus should change direction (shrink instead of grow or vice-versa).</p>
 <div class="highlight">
 <pre><span></span><span class="nx">get</span><span class="w"> </span><span class="nx">step</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -1798,9 +2024,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org3c8421a">
-<h3 id="org3c8421a">The Draw</h3>
-<div class="outline-text-3" id="text-org3c8421a">
+<div class="outline-3" id="outline-container-orgc3b98da">
+<h3 id="orgc3b98da">The Draw</h3>
+<div class="outline-text-3" id="text-orgc3b98da">
 <p>The <code>draw</code> method is what the sketch function calls to tell the <code>ConcentricCircles</code> to draw a circle. This is similar to the sketch that drew a single circle except that the radius gets incremented at after the circle is drawn.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -1819,14 +2045,14 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org306b60c">
-<h2 id="org306b60c">The Sketch Function</h2>
-<div class="outline-text-2" id="text-org306b60c">
+<div class="outline-2" id="outline-container-org0a9385b">
+<h2 id="org0a9385b">The Sketch Function</h2>
+<div class="outline-text-2" id="text-org0a9385b">
 <p>This is the function that gets passed to <code>p5</code> to execute the <code>setup</code> and <code>draw</code> methods.</p>
 </div>
-<div class="outline-3" id="outline-container-org89d8721">
-<h3 id="org89d8721">Concentric Circles</h3>
-<div class="outline-text-3" id="text-org89d8721">
+<div class="outline-3" id="outline-container-org6af7ff4">
+<h3 id="org6af7ff4">Concentric Circles</h3>
+<div class="outline-text-3" id="text-org6af7ff4">
 <p>After declaring the function and some constants for the canvas, it creates an instance of the <code>ConcentricCircles</code> class.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">concentric_circles</span><span class="p">(</span><span class="nx">p5</span><span class="p">){</span>
@@ -1839,9 +2065,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org7f8ae46">
-<h3 id="org7f8ae46">Set Up</h3>
-<div class="outline-text-3" id="text-org7f8ae46">
+<div class="outline-3" id="outline-container-org36d1234">
+<h3 id="org36d1234">Set Up</h3>
+<div class="outline-text-3" id="text-org36d1234">
 <p>The <code>setup</code> method doesn't do anything fancy, although I did have to set the <code>frameRate</code> to a slower speed otherwise I couldn't see the circles being animated.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">setup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(){</span>
@@ -1854,9 +2080,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org3a1f9fe">
-<h3 id="org3a1f9fe">Draw</h3>
-<div class="outline-text-3" id="text-org3a1f9fe">
+<div class="outline-3" id="outline-container-orgc0d8593">
+<h3 id="orgc0d8593">Draw</h3>
+<div class="outline-text-3" id="text-orgc0d8593">
 <p>The <code>draw</code> method defers to the <code>ConcentricCircles.draw</code> method to do the actual drawing of the circles, but I added a light white overlay so that the circles fade out and you can see the animation.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">draw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -1866,9 +2092,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgccbec78">
-<h3 id="orgccbec78">Passing The Sketch to p5.js</h3>
-<div class="outline-text-3" id="text-orgccbec78">
+<div class="outline-3" id="outline-container-orgb2f604f">
+<h3 id="orgb2f604f">Passing The Sketch to p5.js</h3>
+<div class="outline-text-3" id="text-orgb2f604f">
 <p>That's pretty much it for the sketch, the last thing to do is just pass the <code>concentric_circles</code> function to <code>p5</code> along with the <code>id</code> for the <code>div</code> where the sketch should go (which I defined but don't show in the post).</p>
 <div class="highlight">
 <pre><span></span><span class="ow">new</span><span class="w"> </span><span class="nx">p5</span><span class="p">(</span><span class="nx">concentric_circles</span><span class="p">,</span><span class="w"> </span><span class="nx">CONCENTRIC_CIRCLES_DIV</span><span class="p">);</span>
@@ -1876,384 +2102,10 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org2386897">
-<h2 id="org2386897">The End</h2>
-<div class="outline-text-2" id="text-org2386897">
+<div class="outline-2" id="outline-container-orgafeb243">
+<h2 id="orgafeb243">The End</h2>
+<div class="outline-text-2" id="text-orgafeb243">
 <p>And that's it for drawing concentric circles, now on to spirals.</p>
-</div>
-</div>
-</div>
-</article>
-<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article">
-<header>
-<h1 class="p-name entry-title"><a class="u-url" href="posts/generative-art-spiral/index.html">Generative Art: Spiral</a></h1>
-<div class="metadata">
-<p class="byline author vcard"><span class="byline-name fn" itemprop="author">The Cloistered Monkey</span></p>
-<p class="dateline"><a href="posts/generative-art-spiral/index.html" rel="bookmark"><time class="published dt-published" datetime="2023-06-17T16:38:42-07:00" itemprop="datePublished" title="2023-06-17 16:38">2023-06-17 16:38</time></a></p>
-</div>
-</header>
-<div class="p-summary entry-summary">
-<div id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
-<ul>
-<li><a href="posts/generative-art-spiral/index.html#org8d97e23">The Div IDs</a>
-<ul>
-<li><a href="posts/generative-art-spiral/index.html#org4b78d2b">The Sketch Div</a></li>
-<li><a href="posts/generative-art-spiral/index.html#org4b23f60">The Slider Divs</a></li>
-<li><a href="posts/generative-art-spiral/index.html#org318ba1d">Text Divs</a></li>
-</ul>
-</li>
-<li><a href="posts/generative-art-spiral/index.html#org306a8e0">The Slider Settings</a>
-<ul>
-<li><a href="posts/generative-art-spiral/index.html#org805584a">The Validator</a></li>
-<li><a href="posts/generative-art-spiral/index.html#orgbdfdef0">Angle Slider</a></li>
-<li><a href="posts/generative-art-spiral/index.html#org9eb09da">Radius Slider</a></li>
-<li><a href="posts/generative-art-spiral/index.html#org6500997">Circle Slider</a></li>
-</ul>
-</li>
-<li><a href="posts/generative-art-spiral/index.html#org111e6a8">The Spiralizer</a>
-<ul>
-<li><a href="posts/generative-art-spiral/index.html#org6db76f8">Class Declaration</a></li>
-<li><a href="posts/generative-art-spiral/index.html#org38695ff">The Constructor</a></li>
-<li><a href="posts/generative-art-spiral/index.html#org0b05e5b">The Draw Method</a></li>
-<li><a href="posts/generative-art-spiral/index.html#org4632e0c">Reset</a></li>
-</ul>
-</li>
-<li><a href="posts/generative-art-spiral/index.html#org2883ef7">The Spiral Sketch</a>
-<ul>
-<li><a href="posts/generative-art-spiral/index.html#orga5bc6d0">Function Declaration</a></li>
-<li><a href="posts/generative-art-spiral/index.html#org4c04367">Setup</a></li>
-<li><a href="posts/generative-art-spiral/index.html#org8c2147f">Draw</a></li>
-<li><a href="posts/generative-art-spiral/index.html#org00bcad3">Double-Clicked</a></li>
-<li><a href="posts/generative-art-spiral/index.html#orgb2e5b8d">The P5 Instance</a></li>
-</ul>
-</li>
-<li><a href="posts/generative-art-spiral/index.html#orgec08eed">References</a></li>
-</ul>
-</div>
-</div>
-<p>
-<script src="posts/generative-art-spiral/spiral.js" type="module"></script></p>
-<div class="p5js" id="spiral-0a168ba9"></div>
-<div id="angle-text-0a168ba9"></div>
-<div id="angle-slider-0a168ba9"></div>
-<div id="radius-text-0a168ba9"></div>
-<div id="radius-slider-0a168ba9"></div>
-<div id="circle-text-0a168ba9"></div>
-<div id="circle-slider-0a168ba9"></div>
-<div class="outline-2" id="outline-container-org8d97e23">
-<h2 id="org8d97e23">The Div IDs</h2>
-<div class="outline-text-2" id="text-org8d97e23">
-<p>To specify where the parts of the sketch go I added some <code>div</code> tags to the HTML so I'm going to create some javascript constants with the div IDs to make it easier to keep track of them.</p>
-</div>
-<div class="outline-3" id="outline-container-org4b78d2b">
-<h3 id="org4b78d2b">The Sketch Div</h3>
-<div class="outline-text-3" id="text-org4b78d2b">
-<p>This is the ID for the <code>div</code> where the main sketch will go, it gets passed to the p5 constructor, along with the sketch definition, to create the <a href="posts/generative-art-spiral/index.html#orgb2e5b8d">the P5 instance</a>.</p>
-<div class="highlight">
-<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">SPIRAL_DIV</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"spiral-0a168ba9"</span><span class="p">;</span>
-</pre></div>
-</div>
-</div>
-<div class="outline-3" id="outline-container-org4b23f60">
-<h3 id="org4b23f60">The Slider Divs</h3>
-<div class="outline-text-3" id="text-org4b23f60">
-<p>I'm going to add some sliders to make it easier to adjust some of the parameters and see how that affects the sketch. These are the IDs of the <code>div</code> tags where I'm going to put the sliders to change some of the sketch values. The angle and radius sliders will set how much the angle and radius will change as the circle is drawn. If, for example, the angle slider is set to 5, then every point that's added will be rotated five degrees from the previous point, and if the radius is set to 5, then the radius will grow by 5 every time a point is added.</p>
-<p>The circle slider is a little different in that it sets the diameter for the circles that I'm drawing to create the spiral, so it's just an aesthetic setting.</p>
-<div class="highlight">
-<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">SPIRAL_ANGLE_SLIDER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"angle-slider-0a168ba9"</span><span class="p">;</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">SPIRAL_RADIUS_SLIDER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"radius-slider-0a168ba9"</span><span class="p">;</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">SPIRAL_CIRCLE_SLIDER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"circle-slider-0a168ba9"</span><span class="p">;</span>
-</pre></div>
-</div>
-</div>
-<div class="outline-3" id="outline-container-org318ba1d">
-<h3 id="org318ba1d">Text Divs</h3>
-<div class="outline-text-3" id="text-org318ba1d">
-<p>I also created some <code>div</code> tags that I'll put some text into to show the current value of each of the sliders.</p>
-<div class="highlight">
-<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">SPIRAL_ANGLE_TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"angle-text-0a168ba9"</span><span class="p">;</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">SPIRAL_RADIUS_TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"radius-text-0a168ba9"</span><span class="p">;</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">SPIRAL_CIRCLE_TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"circle-text-0a168ba9"</span><span class="p">;</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="outline-2" id="outline-container-org306a8e0">
-<h2 id="org306a8e0">The Slider Settings</h2>
-<div class="outline-text-2" id="text-org306a8e0"></div>
-<div class="outline-3" id="outline-container-org805584a">
-<h3 id="org805584a">The Validator</h3>
-<div class="outline-text-3" id="text-org805584a">
-<p>This is used by the settings classes to try and see if I'm passing in valid arguments.</p>
-<div class="highlight">
-<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">VALIDATOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Validator</span><span class="p">(</span><span class="nb">document</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<div class="outline-3" id="outline-container-orgbdfdef0">
-<h3 id="orgbdfdef0">Angle Slider</h3>
-<div class="outline-text-3" id="text-orgbdfdef0">
-<p>The values used to create the angle-increment slider.</p>
-<div class="highlight">
-<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">ANGLE_SLIDER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">SliderSettings</span><span class="p">(</span>
-<span class="w">  </span><span class="mf">0</span><span class="p">,</span>
-<span class="w">  </span><span class="mf">40</span><span class="p">,</span>
-<span class="w">  </span><span class="mf">5</span><span class="p">,</span>
-<span class="w">  </span><span class="mf">0</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">SPIRAL_ANGLE_SLIDER</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">VALIDATOR</span>
-<span class="p">);</span>
-
-<span class="kd">const</span><span class="w"> </span><span class="nx">ANGLE_CAPTION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">CaptionSettings</span><span class="p">(</span>
-<span class="w">  </span><span class="s2">"Angle Increment"</span><span class="p">,</span>
-<span class="w">  </span><span class="mf">2</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">SPIRAL_ANGLE_TEXT</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">VALIDATOR</span>
-<span class="p">);</span>
-
-<span class="nx">ANGLE_SLIDER</span><span class="p">.</span><span class="nx">check_rep</span><span class="p">();</span>
-<span class="nx">ANGLE_CAPTION</span><span class="p">.</span><span class="nx">check_rep</span><span class="p">();</span>
-</pre></div>
-</div>
-</div>
-<div class="outline-3" id="outline-container-org9eb09da">
-<h3 id="org9eb09da">Radius Slider</h3>
-<div class="outline-text-3" id="text-org9eb09da">
-<p>The values used to create the radius increment slider.</p>
-<div class="highlight">
-<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">RADIUS_SLIDER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">SliderSettings</span><span class="p">(</span>
-<span class="w">  </span><span class="mf">0</span><span class="p">,</span>
-<span class="w">  </span><span class="mf">20</span><span class="p">,</span>
-<span class="w">  </span><span class="mf">1</span><span class="p">,</span>
-<span class="w">  </span><span class="mf">0</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">SPIRAL_RADIUS_SLIDER</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">VALIDATOR</span>
-<span class="p">);</span>
-
-<span class="kd">const</span><span class="w"> </span><span class="nx">RADIUS_CAPTION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">CaptionSettings</span><span class="p">(</span>
-<span class="w">  </span><span class="s2">"Radius Increment"</span><span class="p">,</span>
-<span class="w">  </span><span class="mf">2</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">SPIRAL_RADIUS_TEXT</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">VALIDATOR</span>
-<span class="p">);</span>
-
-<span class="nx">RADIUS_SLIDER</span><span class="p">.</span><span class="nx">check_rep</span><span class="p">();</span>
-<span class="nx">RADIUS_CAPTION</span><span class="p">.</span><span class="nx">check_rep</span><span class="p">();</span>
-</pre></div>
-</div>
-</div>
-<div class="outline-3" id="outline-container-org6500997">
-<h3 id="org6500997">Circle Slider</h3>
-<div class="outline-text-3" id="text-org6500997">
-<p>The values used to create the circle diameter slider.</p>
-<div class="highlight">
-<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">CIRCLE_SLIDER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">SliderSettings</span><span class="p">(</span>
-<span class="w">  </span><span class="mf">1</span><span class="p">,</span>
-<span class="w">  </span><span class="mf">100</span><span class="p">,</span>
-<span class="w">  </span><span class="mf">1</span><span class="p">,</span>
-<span class="w">  </span><span class="mf">0</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">SPIRAL_CIRCLE_SLIDER</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">VALIDATOR</span>
-<span class="p">);</span>
-
-<span class="kd">const</span><span class="w"> </span><span class="nx">CIRCLE_CAPTION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">CaptionSettings</span><span class="p">(</span>
-<span class="w">  </span><span class="s2">"Point Diameter"</span><span class="p">,</span>
-<span class="w">  </span><span class="mf">2</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">SPIRAL_CIRCLE_TEXT</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">VALIDATOR</span>
-<span class="p">);</span>
-
-<span class="nx">CIRCLE_SLIDER</span><span class="p">.</span><span class="nx">check_rep</span><span class="p">();</span>
-<span class="nx">CIRCLE_CAPTION</span><span class="p">.</span><span class="nx">check_rep</span><span class="p">();</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="outline-2" id="outline-container-org111e6a8">
-<h2 id="org111e6a8">The Spiralizer</h2>
-<div class="outline-text-2" id="text-org111e6a8"></div>
-<div class="outline-3" id="outline-container-org6db76f8">
-<h3 id="org6db76f8">Class Declaration</h3>
-<div class="outline-text-3" id="text-org6db76f8">
-<div class="highlight">
-<pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">Spiralizer</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="c1">// geometry</span>
-<span class="w">  </span><span class="nx">degrees_in_a_circle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">360</span><span class="p">;</span>
-<span class="w">  </span><span class="nx">to_radians</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="p">)</span><span class="o">/</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">degrees_in_a_circle</span><span class="p">;</span>
-
-<span class="w">  </span><span class="c1">// the starting values for the circles</span>
-<span class="w">  </span><span class="nx">radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
-<span class="w">  </span><span class="nx">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
-
-<span class="w">  </span><span class="c1">// the center of our sketch (and the circles)</span>
-<span class="w">  </span><span class="nx">center_x</span><span class="p">;</span>
-<span class="w">  </span><span class="nx">center_y</span><span class="p">;</span>
-</pre></div>
-</div>
-</div>
-<div class="outline-3" id="outline-container-org38695ff">
-<h3 id="org38695ff">The Constructor</h3>
-<div class="outline-text-3" id="text-org38695ff">
-<div class="highlight">
-<pre><span></span><span class="kr">constructor</span><span class="p">(</span><span class="nx">p5</span><span class="p">,</span><span class="w"> </span><span class="nx">center_x</span><span class="p">,</span><span class="w"> </span><span class="nx">center_y</span><span class="p">,</span><span class="w"> </span><span class="nx">maximum_radius</span><span class="p">,</span>
-<span class="w">            </span><span class="nx">angle_slider</span><span class="p">,</span><span class="w"> </span><span class="nx">radius_slider</span><span class="p">,</span><span class="w"> </span><span class="nx">circle_slider</span><span class="p">){</span>
-<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">p5</span><span class="p">;</span>
-<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">center_x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">center_x</span><span class="p">;</span>
-<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">center_y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">center_y</span><span class="p">;</span>
-<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">maximum_radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">maximum_radius</span><span class="p">;</span>
-
-<span class="w">  </span><span class="c1">// the amount to move the points on the circle as they're drawn</span>
-<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">angle_increment</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">angle_slider</span><span class="p">;</span>
-<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">radius_increment</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">radius_slider</span><span class="p">;</span>
-
-<span class="w">  </span><span class="c1">// the size of the circle to draw  the circles</span>
-<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">point_diameter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">circle_slider</span><span class="p">;</span>
-<span class="p">}</span><span class="w"> </span><span class="c1">// constructor</span>
-</pre></div>
-</div>
-</div>
-<div class="outline-3" id="outline-container-org0b05e5b">
-<h3 id="org0b05e5b">The Draw Method</h3>
-<div class="outline-text-3" id="text-org0b05e5b">
-<div class="highlight">
-<pre><span></span><span class="nx">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">radians</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="p">;</span>
-
-<span class="w">  </span><span class="nx">radians</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">angle</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">to_radians</span><span class="p">;</span>
-<span class="w">  </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">center_x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">radius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">cos</span><span class="p">(</span><span class="nx">radians</span><span class="p">);</span>
-<span class="w">  </span><span class="nx">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">center_y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">radius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nx">radians</span><span class="p">);</span>
-<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">circle</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">point_diameter</span><span class="p">.</span><span class="nx">value</span><span class="p">());</span>
-
-
-<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">radius</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">radius_increment</span><span class="p">.</span><span class="nx">value</span><span class="p">();</span>
-<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">angle</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">angle_increment</span><span class="p">.</span><span class="nx">value</span><span class="p">();</span>
-
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">radius</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">maximum_radius</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">radius_increment</span><span class="p">.</span><span class="nx">value</span><span class="p">();</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span><span class="w"> </span><span class="c1">// end draw</span>
-</pre></div>
-</div>
-</div>
-<div class="outline-3" id="outline-container-org4632e0c">
-<h3 id="org4632e0c">Reset</h3>
-<div class="outline-text-3" id="text-org4632e0c">
-<div class="highlight">
-<pre><span></span><span class="nx">reset</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">radius_increment</span><span class="p">.</span><span class="nx">value</span><span class="p">();</span>
-<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
-<span class="p">}</span><span class="w"> </span><span class="c1">// end reset</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="outline-2" id="outline-container-org2883ef7">
-<h2 id="org2883ef7">The Spiral Sketch</h2>
-<div class="outline-text-2" id="text-org2883ef7">
-<p>This is going to be the sketch that we pass to <a href="posts/generative-art-spiral/index.html#orgb2e5b8d">the P5 constructor</a> to create the animation.</p>
-</div>
-<div class="outline-3" id="outline-container-orga5bc6d0">
-<h3 id="orga5bc6d0">Function Declaration</h3>
-<div class="outline-text-3" id="text-orga5bc6d0">
-<div class="highlight">
-<pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">spiral_sketch</span><span class="p">(</span><span class="nx">p5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="c1">// the size of the canvas and the color of the circles</span>
-<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">WIDTH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">500</span><span class="p">;</span>
-<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">HEIGHT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">WIDTH</span><span class="p">;</span>
-<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">POINT_COLOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"RoyalBlue"</span><span class="p">;</span>
-
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">spiralizer</span><span class="p">;</span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">angle_slider</span><span class="p">;</span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">radius_slider</span><span class="p">;</span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">circle_slider</span><span class="p">;</span>
-</pre></div>
-</div>
-</div>
-<div class="outline-3" id="outline-container-org4c04367">
-<h3 id="org4c04367">Setup</h3>
-<div class="outline-text-3" id="text-org4c04367"></div>
-<div class="outline-4" id="outline-container-org8c80621">
-<h4 id="org8c80621">Setup The Canvas and Drawing Settings</h4>
-<div class="outline-text-4" id="text-org8c80621">
-<div class="highlight">
-<pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">setup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(){</span>
-<span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">createCanvas</span><span class="p">(</span><span class="nx">WIDTH</span><span class="p">,</span><span class="w"> </span><span class="nx">HEIGHT</span><span class="p">);</span>
-<span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">background</span><span class="p">(</span><span class="s2">"white"</span><span class="p">);</span>
-<span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">stroke</span><span class="p">(</span><span class="nx">POINT_COLOR</span><span class="p">);</span>
-<span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="nx">POINT_COLOR</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<div class="outline-4" id="outline-container-org02adf36">
-<h4 id="org02adf36">Create The Sliders</h4>
-<div class="outline-text-4" id="text-org02adf36">
-<div class="highlight">
-<pre><span></span><span class="nx">angle_slider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Slidini</span><span class="p">(</span><span class="nx">ANGLE_SLIDER</span><span class="p">,</span><span class="w"> </span><span class="nx">ANGLE_CAPTION</span><span class="p">,</span><span class="w"> </span><span class="nx">p5</span><span class="p">);</span><span class="w">  </span>
-<span class="nx">radius_slider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Slidini</span><span class="p">(</span><span class="nx">RADIUS_SLIDER</span><span class="p">,</span><span class="w"> </span><span class="nx">RADIUS_CAPTION</span><span class="p">,</span><span class="w"> </span><span class="nx">p5</span><span class="p">);</span>
-<span class="nx">circle_slider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Slidini</span><span class="p">(</span><span class="nx">CIRCLE_SLIDER</span><span class="p">,</span><span class="w"> </span><span class="nx">CIRCLE_CAPTION</span><span class="p">,</span><span class="w"> </span><span class="nx">p5</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<div class="outline-4" id="outline-container-orgdee6794">
-<h4 id="orgdee6794">Create the Spiralizer and End the Setup</h4>
-<div class="outline-text-4" id="text-orgdee6794">
-<div class="highlight">
-<pre><span></span><span class="nx">spiralizer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Spiralizer</span><span class="p">(</span><span class="nx">p5</span><span class="p">,</span><span class="w"> </span><span class="nx">WIDTH</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">HEIGHT</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">WIDTH</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span>
-<span class="w">                            </span><span class="nx">angle_slider</span><span class="p">.</span><span class="nx">slider</span><span class="p">,</span>
-<span class="w">                            </span><span class="nx">radius_slider</span><span class="p">.</span><span class="nx">slider</span><span class="p">,</span>
-<span class="w">                            </span><span class="nx">circle_slider</span><span class="p">.</span><span class="nx">slider</span><span class="p">);</span>
-
-<span class="p">}</span><span class="w"> </span><span class="c1">// end setup</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="outline-3" id="outline-container-org8c2147f">
-<h3 id="org8c2147f">Draw</h3>
-<div class="outline-text-3" id="text-org8c2147f">
-<div class="highlight">
-<pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">draw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">spiralizer</span><span class="p">.</span><span class="nx">draw</span><span class="p">();</span>
-<span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">background</span><span class="p">(</span><span class="mf">255</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span>
-<span class="p">}</span><span class="c1">// end draw</span>
-</pre></div>
-</div>
-</div>
-<div class="outline-3" id="outline-container-org00bcad3">
-<h3 id="org00bcad3">Double-Clicked</h3>
-<div class="outline-text-3" id="text-org00bcad3">
-<div class="highlight">
-<pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">doubleClicked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">spiralizer</span><span class="p">.</span><span class="nx">reset</span><span class="p">();</span>
-<span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">background</span><span class="p">(</span><span class="s2">"white"</span><span class="p">);</span>
-<span class="p">}</span><span class="w"> </span><span class="c1">// end doubleClicked</span>
-</pre></div>
-</div>
-</div>
-<div class="outline-3" id="outline-container-orgb2e5b8d">
-<h3 id="orgb2e5b8d">The P5 Instance</h3>
-<div class="outline-text-3" id="text-orgb2e5b8d">
-<p>To create the animation I'll create a p5 object by passing in <a href="posts/generative-art-spiral/index.html#org2883ef7">the function from the previous section</a> and <a href="posts/generative-art-spiral/index.html#org4b78d2b">the div ID</a> to identify where in the page the sketch should go.</p>
-<div class="highlight">
-<pre><span></span><span class="ow">new</span><span class="w"> </span><span class="nx">p5</span><span class="p">(</span><span class="nx">spiral_sketch</span><span class="p">,</span><span class="w"> </span><span class="nx">SPIRAL_DIV</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="outline-2" id="outline-container-orgec08eed">
-<h2 id="orgec08eed">References</h2>
-<div class="outline-text-2" id="text-orgec08eed">
-<ul class="org-ul">
-<li><a href="posts/bibliography-generative-art/index.html">Generative Art</a></li>
-<li>id - HTML: HyperText Markup Language | MDN [Internet]. 2023 [cited 2023 Sep 14]. Available from: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id">https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id</a></li>
-<li>p5.js reference | createSlider() [Internet]. [cited 2023 Apr 25]. Available from: <a href="https://p5js.org/reference/#/p5/createSlider">https://p5js.org/reference/#/p5/createSlider</a></li>
-<li>p5.js reference | p5.Element [Internet]. [cited 2023 Sep 14]. Available from: <a href="https://p5js.org/reference/#/p5.Element">https://p5js.org/reference/#/p5.Element</a></li>
-<li>p5.js reference | html() [Internet]. [cited 2023 Sep 14]. Available from: <a href="https://p5js.org/reference/#/p5.Element/html">https://p5js.org/reference/#/p5.Element/html</a></li>
-<li>p5.js reference | parent() [Internet]. [cited 2023 Sep 14]. Available from: <a href="https://p5js.org/reference/#/p5.Element/parent">https://p5js.org/reference/#/p5.Element/parent</a></li>
-<li>p5.js reference | select() [Internet]. [cited 2023 Sep 14]. Available from: <a href="https://p5js.org/reference/#/p5/select">https://p5js.org/reference/#/p5/select</a></li>
-</ul>
 </div>
 </div>
 </div>

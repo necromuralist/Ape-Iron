@@ -68,32 +68,32 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="index.html#orga4095ab">Slidini</a>
+<li><a href="index.html#org6475c4e">Slidini</a>
 <ul>
-<li><a href="index.html#orge4cb44d">The Class Declaration</a></li>
-<li><a href="index.html#org5efd92c">The Constructor</a></li>
-<li><a href="index.html#orgdd9e543">The Slider</a></li>
-<li><a href="index.html#orge1bf3ef">The Caption</a></li>
-<li><a href="index.html#org9977861">The Caption Updater</a></li>
+<li><a href="index.html#orge5b8194">The Class Declaration</a></li>
+<li><a href="index.html#org7023448">The Constructor</a></li>
+<li><a href="index.html#orgbcd7bc8">The Slider</a></li>
+<li><a href="index.html#orgf4826aa">The Caption</a></li>
+<li><a href="index.html#org9e7386f">The Caption Updater</a></li>
 </ul>
 </li>
-<li><a href="index.html#org92c370d">Links</a>
+<li><a href="index.html#org223b5b6">Links</a>
 <ul>
-<li><a href="index.html#org485ef77">Related Posts</a></li>
-<li><a href="index.html#org0c793ce">Reference</a></li>
+<li><a href="index.html#org9f2bd4f">Related Posts</a></li>
+<li><a href="index.html#orgc3f5815">Reference</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orga4095ab">
-<h2 id="orga4095ab">Slidini</h2>
-<div class="outline-text-2" id="text-orga4095ab">
+<div class="outline-2" id="outline-container-org6475c4e">
+<h2 id="org6475c4e">Slidini</h2>
+<div class="outline-text-2" id="text-org6475c4e">
 <p><img alt="nil" src="slidini.png"></p>
 </div>
-<div class="outline-3" id="outline-container-orge4cb44d">
-<h3 id="orge4cb44d">The Class Declaration</h3>
-<div class="outline-text-3" id="text-orge4cb44d">
+<div class="outline-3" id="outline-container-orge5b8194">
+<h3 id="orge5b8194">The Class Declaration</h3>
+<div class="outline-text-3" id="text-orge5b8194">
 <p>The Slidini class is going to create two HTML elements - a Slider and a label (what I call a caption) for the slider.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">Slidini</span><span class="w"> </span><span class="p">{</span>
@@ -102,9 +102,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org5efd92c">
-<h3 id="org5efd92c">The Constructor</h3>
-<div class="outline-text-3" id="text-org5efd92c">
+<div class="outline-3" id="outline-container-org7023448">
+<h3 id="org7023448">The Constructor</h3>
+<div class="outline-text-3" id="text-org7023448">
 <div class="highlight">
 <pre><span></span><span class="k">Feature:</span><span class="nf"> A Slidini class to hold a slider and its caption.</span>
 </pre></div>
@@ -118,9 +118,9 @@
 <p>The <code>slider_settings</code> and <code>caption_settings</code> should be instances of the <code>SliderSettings</code> and <code>CaptionSettings</code> classes (see the <a href="../slider-settings-and-validator/index.html">Slider and Caption Settings</a> post) and the <code>p5</code> object should be a p5.js instance.</p>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgdd9e543">
-<h3 id="orgdd9e543">The Slider</h3>
-<div class="outline-text-3" id="text-orgdd9e543">
+<div class="outline-3" id="outline-container-orgbcd7bc8">
+<h3 id="orgbcd7bc8">The Slider</h3>
+<div class="outline-text-3" id="text-orgbcd7bc8">
 <p>This creates the slider and the caption. I decided to muddy them together like this in order to create the callback to update the caption whenever the slider is updated, and to add the initial caption once the slider is created.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">get</span><span class="w"> </span><span class="nx">slider</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -147,9 +147,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orge1bf3ef">
-<h3 id="orge1bf3ef">The Caption</h3>
-<div class="outline-text-3" id="text-orge1bf3ef">
+<div class="outline-3" id="outline-container-orgf4826aa">
+<h3 id="orgf4826aa">The Caption</h3>
+<div class="outline-text-3" id="text-orgf4826aa">
 <p>This is the caption for the slider. It expects there to be a <code>div</code> that it can stick the caption into.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">get</span><span class="w"> </span><span class="nx">caption</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -162,9 +162,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org9977861">
-<h3 id="org9977861">The Caption Updater</h3>
-<div class="outline-text-3" id="text-org9977861">
+<div class="outline-3" id="outline-container-org9e7386f">
+<h3 id="org9e7386f">The Caption Updater</h3>
+<div class="outline-text-3" id="text-org9e7386f">
 <p>This sets the caption to the current value of the slider. It's used both to initialize the caption and as a callback to update the caption whenever the slider's value changes.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">update_caption</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -176,20 +176,20 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org92c370d">
-<h2 id="org92c370d">Links</h2>
-<div class="outline-text-2" id="text-org92c370d"></div>
-<div class="outline-3" id="outline-container-org485ef77">
-<h3 id="org485ef77">Related Posts</h3>
-<div class="outline-text-3" id="text-org485ef77">
+<div class="outline-2" id="outline-container-org223b5b6">
+<h2 id="org223b5b6">Links</h2>
+<div class="outline-text-2" id="text-org223b5b6"></div>
+<div class="outline-3" id="outline-container-org9f2bd4f">
+<h3 id="org9f2bd4f">Related Posts</h3>
+<div class="outline-text-3" id="text-org9f2bd4f">
 <ul class="org-ul">
 <li><a href="../slider-settings-and-validator/index.html">Slider and Caption Settings</a></li>
 </ul>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org0c793ce">
-<h3 id="org0c793ce">Reference</h3>
-<div class="outline-text-3" id="text-org0c793ce">
+<div class="outline-3" id="outline-container-orgc3f5815">
+<h3 id="orgc3f5815">Reference</h3>
+<div class="outline-text-3" id="text-orgc3f5815">
 <ul class="org-ul">
 <li>p5.js reference | createSlider() [Internet]. [cited 2023 Apr 25]. Available from: <a href="https://p5js.org/reference/#/p5/createSlider">https://p5js.org/reference/#/p5/createSlider</a></li>
 <li>p5.js reference | p5.Element [Internet]. [cited 2023 Sep 14]. Available from: <a href="https://p5js.org/reference/#/p5.Element">https://p5js.org/reference/#/p5.Element</a></li>

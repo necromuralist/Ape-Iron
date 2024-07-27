@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron (Posts about notetofutureself)</title><link>https://necromuralist.github.io/Ape-Iron/</link><description></description><atom:link href="https://necromuralist.github.io/Ape-Iron/categories/notetofutureself.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;The Cloistered Monkey&lt;/a&gt; 
+&lt;div id="license" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"&gt;&lt;span property="dct:title"&gt;Ape-Iron&lt;/span&gt; is licensed under
+&lt;a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY-SA 4.0
+&lt;img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;
+&lt;img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;
+&lt;img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"&gt;&lt;/a&gt;&lt;/p&gt; 
+</copyright><lastBuildDate>Sat, 27 Jul 2024 21:14:50 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>P5.js Hello</title><link>https://necromuralist.github.io/Ape-Iron/posts/p5js-hello/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;div id="text-table-of-contents" role="doc-toc"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/p5js-hello/index.html#org5d649ae"&gt;What Is This?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/p5js-hello/index.html#org27799fa"&gt;The Setup&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/p5js-hello/index.html#org23e02c0"&gt;The Meta-Header&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/p5js-hello/index.html#org23cbfd8"&gt;The Tangle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/p5js-hello/index.html#orgd396242"&gt;The DIV Shortcode&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/p5js-hello/index.html#org322fa46"&gt;The JavaScript&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/p5js-hello/index.html#orgc5978dd"&gt;The Div ID&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/p5js-hello/index.html#orgc31bf0f"&gt;The Hello Class&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/p5js-hello/index.html#org32af78c"&gt;Hello Sketch&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/p5js-hello/index.html#orgd01fb7f"&gt;P5 Object&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/p5js-hello/index.html#org4426755"&gt;The End&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/p5js-hello/index.html#org2d1084b"&gt;Links&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+&lt;a id="org1eafb5e"&gt;&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;script src="https://necromuralist.github.io/Ape-Iron/posts/p5js-hello/hello.js"&gt;&lt;/script&gt;
+
+&lt;/p&gt;&lt;div class="p5js" id="hello-08b095a8"&gt;&lt;/div&gt;
+
+
+&lt;div id="outline-container-org5d649ae" class="outline-2"&gt;
+&lt;h2 id="org5d649ae"&gt;What Is This?&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org5d649ae"&gt;
+&lt;p&gt;
+This is a post to remind me how to make p5.js posts. It's based on my somewhat idiosyncratic way of working (using Emacs' &lt;a href="https://orgmode.org/"&gt;org-mode&lt;/a&gt; for the text-markup and &lt;a href="https://getnikola.com/"&gt;nikola&lt;/a&gt; to render it as HTML) and is meant to help me get restarted if I stop using p5.js for a little while and need to remember how to do it. The short version:
+&lt;/p&gt;
+
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/p5js-hello/index.html#org98a4e3c"&gt;Include the &lt;code&gt;p5.js&lt;/code&gt; JavaScript library&lt;/a&gt; in the post.&lt;/li&gt;
+
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/p5js-hello/index.html#orgf14b83e"&gt;Make a "tangle"&lt;/a&gt; to export the JavaScript file.&lt;/li&gt;
+
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/p5js-hello/index.html#org0989f70"&gt;Make an HTML &lt;code&gt;div&lt;/code&gt; tag&lt;/a&gt; to locate the p5.js sketch in the post.&lt;/li&gt;
+
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/p5js-hello/index.html#org5c8e198"&gt;Make a sketch&lt;/a&gt; that defines the necessary &lt;code&gt;p5.js&lt;/code&gt; methods (mostly &lt;code&gt;setup&lt;/code&gt; and &lt;code&gt;draw&lt;/code&gt;).&lt;/li&gt;
+
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/p5js-hello/index.html#orgcc41acb"&gt;Create a P5 object&lt;/a&gt;, passing in the sketch and the div ID to the constructor.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org27799fa" class="outline-2"&gt;
+&lt;h2 id="org27799fa"&gt;The Setup&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org27799fa"&gt;
+&lt;p&gt;
+The next three sections in this post won't normally be visible in other posts, they're specific to my use of nikola and a noweb-like style with org-mode and will be in the source but won't be in the exported HTML.
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org23e02c0" class="outline-3"&gt;
+&lt;h3 id="org23e02c0"&gt;&lt;a id="org98a4e3c"&gt;&lt;/a&gt; The Meta-Header&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org23e02c0"&gt;
+&lt;p&gt;
+To get &lt;code&gt;p5.js&lt;/code&gt; into this post I'm telling nikola to use a template I made in the meta-data block at the beginning of the file for this post.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;.. template: p5.tmpl
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;
+The &lt;code&gt;p5.tmpl&lt;/code&gt; template adds an HTML tag to include the p5 JavaScript code in the HEAD section of the HTML document.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org23cbfd8" class="outline-3"&gt;
+&lt;h3 id="org23cbfd8"&gt;&lt;a id="orgf14b83e"&gt;&lt;/a&gt; The Tangle&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org23cbfd8"&gt;
+&lt;p&gt;
+Since the intent is to define the JavaScript in the org-mode blocks and then export it I'll typically create a &lt;code&gt;tangle&lt;/code&gt; code block to control the export. The org-mode header uses a path relative to the org-mode file that makes up this post. This file is in a sub-folder (&lt;code&gt;posts/&lt;/code&gt;) so the path has to go up one directory first then back down into the &lt;code&gt;files/posts/&lt;/code&gt; folder and then into another sub-folder whose name matches the slug for this post (&lt;code&gt;p5js-hello&lt;/code&gt;). The folder named after the slug doesn't exist by default and won't be created by Emacs (it will just fail with a message in the Emacs mini-buffer when you export the file) so you need to create it before doing the export.
+&lt;/p&gt;
+
+&lt;p&gt;
+The tangle is made up of references to blocks that I'll be defining in later sections, referring to them using their name. For example, &lt;code&gt;&amp;lt;&amp;lt;hello-div&amp;gt;&amp;gt;&lt;/code&gt; in this tangle will match an org-mode block named &lt;code&gt;hello-div&lt;/code&gt; defined in a later section of this post.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;#+begin_src js :tangle ../files/posts/p5js-hello/hello.js :exports none
+&amp;lt;&amp;lt;hello-div&amp;gt;&amp;gt;
+
+&amp;lt;&amp;lt;hello-class&amp;gt;&amp;gt;
+
+&amp;lt;&amp;lt;hello-sketch&amp;gt;&amp;gt;
+
+&amp;lt;&amp;lt;p5-instance&amp;gt;&amp;gt;
+#+end_src
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgd396242" class="outline-3"&gt;
+&lt;h3 id="orgd396242"&gt;&lt;a id="org0989f70"&gt;&lt;/a&gt; The DIV Shortcode&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgd396242"&gt;
+&lt;p&gt;
+In order to specify where in this post the &lt;code&gt;p5.js&lt;/code&gt; sketch will be rendered I need to create an HTML &lt;code&gt;source&lt;/code&gt; tag which points to the JavaScript file I created in the tangle section above (in this case the file is &lt;code&gt;hello.js&lt;/code&gt; ). I also want to create a &lt;code&gt;div&lt;/code&gt; tag with an ID that I define so that I can tell &lt;code&gt;p5.js&lt;/code&gt; to use it as the location for the sketch (in this case the ID will be &lt;code&gt;"hello-08b095a8"&lt;/code&gt;).
+&lt;/p&gt;
+
+&lt;p&gt;
+This is the jinja-based shortcode I use to put those two tags into the post.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;{{&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;p5div&lt;/span&gt;  &lt;span class="n"&gt;source&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"hello.js"&lt;/span&gt; &lt;span class="n"&gt;divid&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"hello-08b095a8"&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;}}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="notecard" id="org054e63f"&gt;
+&lt;p&gt;
+The &lt;code&gt;hello.js&lt;/code&gt; file will sit next to the HTML file for this post once we export it so you only want the file name, not the path to the folder it sits in. I'm mentioning it here because I sometimes get mixed up between the three cases I've run into for files:
+&lt;/p&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;files that need a path from this post (like the tangle)&lt;/li&gt;
+&lt;li&gt;files that need paths from the top of the repository (usually created using commands run outside of org-mode)&lt;/li&gt;
+&lt;li&gt;files that just need the file-name&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;
+When &lt;code&gt;nikola&lt;/code&gt; builds the site it will convert that shortcode to a couple of tags that look something like:
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;source&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"hello.js"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"p5js"&lt;/span&gt; &lt;span class="na"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"hello-08b095a8"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;
+In the future I'll probably get rid of or change this shortcode, since the only thing it does that's specific to p5 is set the &lt;code&gt;class&lt;/code&gt; attribute, but, for now, this is how it's getting done.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org322fa46" class="outline-2"&gt;
+&lt;h2 id="org322fa46"&gt;The JavaScript&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org322fa46"&gt;
+&lt;p&gt;
+The remaining sections define the JavaScript that gets exported into the tangle file that I defined in the first section of this post.
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgc5978dd" class="outline-3"&gt;
+&lt;h3 id="orgc5978dd"&gt;&lt;a id="orgcd910cd"&gt;&lt;/a&gt; The Div ID&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgc5978dd"&gt;
+&lt;p&gt;
+Since I need to pass the ID given to the &lt;code&gt;div&lt;/code&gt; tag in the previous section to P5 I'll store it in a variable for later.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;HELLO_DIV&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"hello-08b095a8"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;
+As noted &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/p5js-hello/index.html#orgf14b83e"&gt;above&lt;/a&gt;, the &lt;i&gt;tangle&lt;/i&gt; refers to the JavaScript blocks I'm defining in the rest of the document by name (which I give to them in the block-headers using &lt;code&gt;:noweb-ref&lt;/code&gt;). The header where I stick the name doesn't get exported into the HTML document so just for this block I'll show what it looks like with the org-mode header along with the JavaScript that goes into the block.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;#+begin_src js :noweb-ref hello-div
+const HELLO_DIV = "hello-08b095a8";
+#+end_src
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;
+Here the &lt;code&gt;:noweb-ref hello-div&lt;/code&gt; tells org-mode to stick the JavaScript into the tangle block above where the &lt;code&gt;&amp;lt;&amp;lt;hello-div&amp;gt;&amp;gt;&lt;/code&gt; placeholder text is.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgc31bf0f" class="outline-3"&gt;
+&lt;h3 id="orgc31bf0f"&gt;&lt;a id="org5e487dc"&gt;&lt;/a&gt; The Hello Class&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgc31bf0f"&gt;
+&lt;p&gt;
+Here's a toy class that keeps the parameters for the circle and which draws the circle when its &lt;code&gt;draw&lt;/code&gt; method is called.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;class&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;Hello&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="kr"&gt;constructor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;width&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;height&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;diameter&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;step&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;step&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;step&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;radius&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;width&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;width&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;height&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;height&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;y&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;height&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;diameter&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;diameter&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;diameter&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;};&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;//constructor&lt;/span&gt;
+
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;draw&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;circle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;diameter&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;diameter&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;||&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;width&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;diameter&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;step&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;};&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;step&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;width&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;};&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// draw&lt;/span&gt;
+&lt;span class="p"&gt;};&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// Hello&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org32af78c" class="outline-3"&gt;
+&lt;h3 id="org32af78c"&gt;&lt;a id="org5c8e198"&gt;&lt;/a&gt; Hello Sketch&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org32af78c"&gt;
+&lt;p&gt;
+Here's the sketch that gets passed to the P5 constructor.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;hello_sketch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;WIDTH&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;800&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;HEIGHT&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;WIDTH&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;4&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;BACKGROUND&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;255&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;ALPHA&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;50&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="kd"&gt;const&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;POINT_COLOR&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"RoyalBlue"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;HELLO&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;setup&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;createCanvas&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;WIDTH&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;HEIGHT&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;background&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;BACKGROUND&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;stroke&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;POINT_COLOR&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;fill&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;BACKGROUND&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;HELLO&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;Hello&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;WIDTH&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;HEIGHT&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;50&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;5&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;};&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// setup&lt;/span&gt;
+
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;draw&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;background&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;BACKGROUND&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;ALPHA&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;HELLO&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;draw&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;};&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;//draw&lt;/span&gt;
+&lt;span class="p"&gt;};&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// hello_sketch&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgd01fb7f" class="outline-3"&gt;
+&lt;h3 id="orgd01fb7f"&gt;&lt;a id="orgcc41acb"&gt;&lt;/a&gt; P5 Object&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgd01fb7f"&gt;
+&lt;p&gt;
+Finally, I'll create a &lt;code&gt;p5&lt;/code&gt; object, giving it the sketch and &lt;code&gt;div&lt;/code&gt; ID so &lt;code&gt;p5.js&lt;/code&gt; will render the code.
+&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ow"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;p5&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;hello_sketch&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;HELLO_DIV&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;
+If we &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/p5js-hello/index.html#org1eafb5e"&gt;go back to the top&lt;/a&gt; we should see the sketch running (a circle moving back and forth) .
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org4426755" class="outline-2"&gt;
+&lt;h2 id="org4426755"&gt;The End&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org4426755"&gt;
+&lt;p&gt;
+And that's it for the basic post. The parts once again:
+&lt;/p&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Use the p5 nikola template &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/p5js-hello/index.html#org98a4e3c"&gt;in the nikola-header&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/p5js-hello/index.html#orgf14b83e"&gt;Tangle&lt;/a&gt; the JavaScript to a file in &lt;code&gt;../files/posts/&amp;lt;slug&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Setup the &lt;code&gt;script&lt;/code&gt; and &lt;code&gt;div&lt;/code&gt; tags to include the sketch in the exported HTML (using &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/p5js-hello/index.html#org0989f70"&gt;the p5div shortcode&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Write &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/p5js-hello/index.html#org5c8e198"&gt;the sketch&lt;/a&gt; to pass to p5.&lt;/li&gt;
+&lt;li&gt;Create a &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/p5js-hello/index.html#orgcc41acb"&gt;p5 object&lt;/a&gt; using the sketch and &lt;code&gt;div&lt;/code&gt; ID.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org2d1084b" class="outline-2"&gt;
+&lt;h2 id="org2d1084b"&gt;Links&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org2d1084b"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;a href="https://orgmode.org/manual/Noweb-Reference-Syntax.html"&gt;Org-Mode noweb reference&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><category>javascript</category><category>notetofutureself</category><category>p5.js</category><guid>https://necromuralist.github.io/Ape-Iron/posts/p5js-hello/index.html</guid><pubDate>Sun, 14 Jul 2024 03:31:47 GMT</pubDate></item></channel></rss>

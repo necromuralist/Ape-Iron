@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>P5.js Hello | Ape Iron</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<meta content="#5670d4" name="theme-color">
+<meta content="Nikola (getnikola.com)" name="generator">
+<link href="../../rss.xml" hreflang="en" rel="alternate" title="RSS" type="application/rss+xml">
+<link href="https://necromuralist.github.io/Ape-Iron/posts/p5js-hello/index.html" rel="canonical"><!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><!-- favicons -->
+<link href="../../apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+<link href="../../favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="../../favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="../../site.webmanifest" rel="manifest">
+<meta content="The Cloistered Monkey" name="author">
+<link href="../inking-sites/index.html" rel="prev" title="Inking Sites" type="text/html">
+<meta content="Ape Iron" property="og:site_name">
+<meta content="P5.js Hello" property="og:title">
+<meta content="https://necromuralist.github.io/Ape-Iron/posts/p5js-hello/index.html" property="og:url">
+<meta content="Table of Contents What Is This? The Setup The Meta-Header The Tangle The DIV Shortcode The JavaScript The Div ID The Hello Class Hello Sketch P5 Object The End Links What Is Thi" property="og:description">
+<meta content="article" property="og:type">
+<meta content="2024-07-13T20:31:47-07:00" property="article:published_time">
+<meta content="javascript" property="article:tag">
+<meta content="notetofutureself" property="article:tag">
+<meta content="p5.js" property="article:tag">
+<script crossorigin="anonymous" integrity="sha512-d6sc8kbZEtA2LwB9m/ck0FhvyUwVfdmvTeyJRprmj7Wg9wRFtHDIpr6qk4g/y3Ix3O9I6KHIv6SGu9f7RaP1Gw==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+</head>
+<body>
+<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a> <!-- Menubar -->
+<nav class="navbar navbar-expand-md static-top mb-4 navbar-light bg-light">
+<div class="container"><!-- This keeps the margins nice -->
+ <a class="navbar-brand" href="../../"><span id="blog-title">Ape Iron</span></a> <button aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#bs-navbar" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="bs-navbar">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item"><a class="nav-link" href="../../archive.html">Archive</a></li>
+<li class="nav-item"><a class="nav-link" href="../../categories/">Tags</a></li>
+<li class="nav-item"><a class="nav-link" href="../../rss.xml">RSS feed</a></li>
+<li class="nav-item dropdown"><a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Monkey Pages</a>
+<div class="dropdown-menu"><a class="dropdown-item" href="https://necromuralist.github.io/">Cloistered Monkey</a> <a class="dropdown-item" href="https://necromuralist.github.io/Beach-Pig-Thigh/">Beach Pig Rump & Thigh</a> <a class="dropdown-item" href="https://necromuralist.github.io/Bowling-For-Data/">Bowling For Data</a> <a class="dropdown-item" href="https://necromuralist.github.io/Terribilis-Ludum/">Terribilis Ludum</a> <a class="dropdown-item" href="https://necromuralist.github.io/Neurotic-Networking/">Neurotic Networking</a> <a class="dropdown-item" href="https://necromuralist.github.io/Visions-Voices-Data/">Visions, Voices, Data</a></div>
+</li>
+</ul>
+<!-- DuckDuckGo custom search -->
+<form action="https://duckduckgo.com/" class="navbar-form pull-left" id="search" method="get" name="search"><input name="sites" type="hidden" value="https://necromuralist.github.io/Ape-Iron/"><input name="k8" type="hidden" value="#444444"><input name="k9" type="hidden" value="#D51920"><input name="kt" type="hidden" value="h"><input class="span2" maxlength="255" name="q" placeholder="Search…" type="text"><input style="visibility: hidden;display:none" type="submit" value="DuckDuckGo Search"></form>
+<!-- End of custom search -->
+<ul class="navbar-nav navbar-right">
+<li class="nav-item"><a class="nav-link" href="index.org" id="sourcelink">Source</a></li>
+</ul>
+</div>
+<!-- /.navbar-collapse --></div>
+<!-- /.container --></nav>
+<!-- End of Menubar -->
+<div class="container" id="content" role="main">
+<div class="body-content"><!--Body content-->
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article">
+<header>
+<h1 class="p-name entry-title" itemprop="headline name"><a class="u-url" href="#">P5.js Hello</a></h1>
+<div class="metadata">
+<p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">The Cloistered Monkey</span></p>
+<p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2024-07-13T20:31:47-07:00" itemprop="datePublished" title="2024-07-13 20:31">2024-07-13 20:31</time></a></p>
+<p class="sourceline"><a class="sourcelink" href="index.org">Source</a></p>
+</div>
+</header>
+<div class="e-content entry-content" itemprop="articleBody text">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="index.html#org5d649ae">What Is This?</a></li>
+<li><a href="index.html#org27799fa">The Setup</a>
+<ul>
+<li><a href="index.html#org23e02c0">The Meta-Header</a></li>
+<li><a href="index.html#org23cbfd8">The Tangle</a></li>
+<li><a href="index.html#orgd396242">The DIV Shortcode</a></li>
+</ul>
+</li>
+<li><a href="index.html#org322fa46">The JavaScript</a>
+<ul>
+<li><a href="index.html#orgc5978dd">The Div ID</a></li>
+<li><a href="index.html#orgc31bf0f">The Hello Class</a></li>
+<li><a href="index.html#org32af78c">Hello Sketch</a></li>
+<li><a href="index.html#orgd01fb7f">P5 Object</a></li>
+</ul>
+</li>
+<li><a href="index.html#org4426755">The End</a></li>
+<li><a href="index.html#org2d1084b">Links</a></li>
+</ul>
+</div>
+</div>
+<p><a id="org1eafb5e"></a></p>
+<p>
+<script src="hello.js"></script></p>
+<div class="p5js" id="hello-08b095a8"></div>
+<div class="outline-2" id="outline-container-org5d649ae">
+<h2 id="org5d649ae">What Is This?</h2>
+<div class="outline-text-2" id="text-org5d649ae">
+<p>This is a post to remind me how to make p5.js posts. It's based on my somewhat idiosyncratic way of working (using Emacs' <a href="https://orgmode.org/">org-mode</a> for the text-markup and <a href="https://getnikola.com/">nikola</a> to render it as HTML) and is meant to help me get restarted if I stop using p5.js for a little while and need to remember how to do it. The short version:</p>
+<ul class="org-ul">
+<li><a href="index.html#org98a4e3c">Include the <code>p5.js</code> JavaScript library</a> in the post.</li>
+<li><a href="index.html#orgf14b83e">Make a "tangle"</a> to export the JavaScript file.</li>
+<li><a href="index.html#org0989f70">Make an HTML <code>div</code> tag</a> to locate the p5.js sketch in the post.</li>
+<li><a href="index.html#org5c8e198">Make a sketch</a> that defines the necessary <code>p5.js</code> methods (mostly <code>setup</code> and <code>draw</code>).</li>
+<li><a href="index.html#orgcc41acb">Create a P5 object</a>, passing in the sketch and the div ID to the constructor.</li>
+</ul>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org27799fa">
+<h2 id="org27799fa">The Setup</h2>
+<div class="outline-text-2" id="text-org27799fa">
+<p>The next three sections in this post won't normally be visible in other posts, they're specific to my use of nikola and a noweb-like style with org-mode and will be in the source but won't be in the exported HTML.</p>
+</div>
+<div class="outline-3" id="outline-container-org23e02c0">
+<h3 id="org23e02c0"><a id="org98a4e3c"></a> The Meta-Header</h3>
+<div class="outline-text-3" id="text-org23e02c0">
+<p>To get <code>p5.js</code> into this post I'm telling nikola to use a template I made in the meta-data block at the beginning of the file for this post.</p>
+<div class="highlight">
+<pre><span></span>.. template: p5.tmpl
+</pre></div>
+<p>The <code>p5.tmpl</code> template adds an HTML tag to include the p5 JavaScript code in the HEAD section of the HTML document.</p>
+<div class="highlight">
+<pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org23cbfd8">
+<h3 id="org23cbfd8"><a id="orgf14b83e"></a> The Tangle</h3>
+<div class="outline-text-3" id="text-org23cbfd8">
+<p>Since the intent is to define the JavaScript in the org-mode blocks and then export it I'll typically create a <code>tangle</code> code block to control the export. The org-mode header uses a path relative to the org-mode file that makes up this post. This file is in a sub-folder (<code>posts/</code>) so the path has to go up one directory first then back down into the <code>files/posts/</code> folder and then into another sub-folder whose name matches the slug for this post (<code>p5js-hello</code>). The folder named after the slug doesn't exist by default and won't be created by Emacs (it will just fail with a message in the Emacs mini-buffer when you export the file) so you need to create it before doing the export.</p>
+<p>The tangle is made up of references to blocks that I'll be defining in later sections, referring to them using their name. For example, <code>&lt;&lt;hello-div&gt;&gt;</code> in this tangle will match an org-mode block named <code>hello-div</code> defined in a later section of this post.</p>
+<div class="highlight">
+<pre><span></span>#+begin_src js :tangle ../files/posts/p5js-hello/hello.js :exports none
+&lt;&lt;hello-div&gt;&gt;
+
+&lt;&lt;hello-class&gt;&gt;
+
+&lt;&lt;hello-sketch&gt;&gt;
+
+&lt;&lt;p5-instance&gt;&gt;
+#+end_src
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orgd396242">
+<h3 id="orgd396242"><a id="org0989f70"></a> The DIV Shortcode</h3>
+<div class="outline-text-3" id="text-orgd396242">
+<p>In order to specify where in this post the <code>p5.js</code> sketch will be rendered I need to create an HTML <code>source</code> tag which points to the JavaScript file I created in the tangle section above (in this case the file is <code>hello.js</code> ). I also want to create a <code>div</code> tag with an ID that I define so that I can tell <code>p5.js</code> to use it as the location for the sketch (in this case the ID will be <code>"hello-08b095a8"</code>).</p>
+<p>This is the jinja-based shortcode I use to put those two tags into the post.</p>
+<div class="highlight">
+<pre><span></span><span class="p">{{</span><span class="o">%</span> <span class="n">p5div</span>  <span class="n">source</span><span class="o">=</span><span class="s2">"hello.js"</span> <span class="n">divid</span><span class="o">=</span><span class="s2">"hello-08b095a8"</span> <span class="o">%</span><span class="p">}}</span>
+</pre></div>
+<div class="notecard" id="org054e63f">
+<p>The <code>hello.js</code> file will sit next to the HTML file for this post once we export it so you only want the file name, not the path to the folder it sits in. I'm mentioning it here because I sometimes get mixed up between the three cases I've run into for files:</p>
+<ul class="org-ul">
+<li>files that need a path from this post (like the tangle)</li>
+<li>files that need paths from the top of the repository (usually created using commands run outside of org-mode)</li>
+<li>files that just need the file-name</li>
+</ul>
+</div>
+<p>When <code>nikola</code> builds the site it will convert that shortcode to a couple of tags that look something like:</p>
+<div class="highlight">
+<pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">source</span><span class="o">=</span><span class="s">"hello.js"</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"p5js"</span> <span class="na">id</span><span class="o">=</span><span class="s">"hello-08b095a8"</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+<p>In the future I'll probably get rid of or change this shortcode, since the only thing it does that's specific to p5 is set the <code>class</code> attribute, but, for now, this is how it's getting done.</p>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org322fa46">
+<h2 id="org322fa46">The JavaScript</h2>
+<div class="outline-text-2" id="text-org322fa46">
+<p>The remaining sections define the JavaScript that gets exported into the tangle file that I defined in the first section of this post.</p>
+</div>
+<div class="outline-3" id="outline-container-orgc5978dd">
+<h3 id="orgc5978dd"><a id="orgcd910cd"></a> The Div ID</h3>
+<div class="outline-text-3" id="text-orgc5978dd">
+<p>Since I need to pass the ID given to the <code>div</code> tag in the previous section to P5 I'll store it in a variable for later.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">HELLO_DIV</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"hello-08b095a8"</span><span class="p">;</span>
+</pre></div>
+<p>As noted <a href="index.html#orgf14b83e">above</a>, the <i>tangle</i> refers to the JavaScript blocks I'm defining in the rest of the document by name (which I give to them in the block-headers using <code>:noweb-ref</code>). The header where I stick the name doesn't get exported into the HTML document so just for this block I'll show what it looks like with the org-mode header along with the JavaScript that goes into the block.</p>
+<div class="highlight">
+<pre><span></span>#+begin_src js :noweb-ref hello-div
+const HELLO_DIV = "hello-08b095a8";
+#+end_src
+</pre></div>
+<p>Here the <code>:noweb-ref hello-div</code> tells org-mode to stick the JavaScript into the tangle block above where the <code>&lt;&lt;hello-div&gt;&gt;</code> placeholder text is.</p>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orgc31bf0f">
+<h3 id="orgc31bf0f"><a id="org5e487dc"></a> The Hello Class</h3>
+<div class="outline-text-3" id="text-orgc31bf0f">
+<p>Here's a toy class that keeps the parameters for the circle and which draws the circle when its <code>draw</code> method is called.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">Hello</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">p5</span><span class="p">,</span><span class="w"> </span><span class="nx">width</span><span class="p">,</span><span class="w"> </span><span class="nx">height</span><span class="p">,</span><span class="w"> </span><span class="nx">diameter</span><span class="p">,</span><span class="w"> </span><span class="nx">step</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">p5</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">step</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">width</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">height</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">height</span><span class="o">/</span><span class="mf">2</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">diameter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">diameter</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">diameter</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="w">  </span><span class="p">};</span><span class="w"> </span><span class="c1">//constructor</span>
+
+<span class="w">  </span><span class="nx">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">circle</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">diameter</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">x</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">diameter</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">x</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">width</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">diameter</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">step</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">};</span><span class="w"> </span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">step</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">width</span><span class="p">;</span>
+<span class="w">  </span><span class="p">};</span><span class="w"> </span><span class="c1">// draw</span>
+<span class="p">};</span><span class="w"> </span><span class="c1">// Hello</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org32af78c">
+<h3 id="org32af78c"><a id="org5c8e198"></a> Hello Sketch</h3>
+<div class="outline-text-3" id="text-org32af78c">
+<p>Here's the sketch that gets passed to the P5 constructor.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">hello_sketch</span><span class="p">(</span><span class="nx">p5</span><span class="p">){</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">WIDTH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">800</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">HEIGHT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">WIDTH</span><span class="o">/</span><span class="mf">4</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">BACKGROUND</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">255</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">ALPHA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">50</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">POINT_COLOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"RoyalBlue"</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">HELLO</span><span class="p">;</span>
+
+<span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">setup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">p5</span><span class="p">.</span><span class="nx">createCanvas</span><span class="p">(</span><span class="nx">WIDTH</span><span class="p">,</span><span class="w"> </span><span class="nx">HEIGHT</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">p5</span><span class="p">.</span><span class="nx">background</span><span class="p">(</span><span class="nx">BACKGROUND</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">p5</span><span class="p">.</span><span class="nx">stroke</span><span class="p">(</span><span class="nx">POINT_COLOR</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">p5</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="nx">BACKGROUND</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">HELLO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Hello</span><span class="p">(</span><span class="nx">p5</span><span class="p">,</span><span class="w"> </span><span class="nx">WIDTH</span><span class="p">,</span><span class="w"> </span><span class="nx">HEIGHT</span><span class="p">,</span><span class="w"> </span><span class="mf">50</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span>
+<span class="w">  </span><span class="p">};</span><span class="w"> </span><span class="c1">// setup</span>
+
+<span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">draw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">p5</span><span class="p">.</span><span class="nx">background</span><span class="p">(</span><span class="nx">BACKGROUND</span><span class="p">,</span><span class="w"> </span><span class="nx">ALPHA</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">HELLO</span><span class="p">.</span><span class="nx">draw</span><span class="p">();</span>
+<span class="w">  </span><span class="p">};</span><span class="w"> </span><span class="c1">//draw</span>
+<span class="p">};</span><span class="w"> </span><span class="c1">// hello_sketch</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orgd01fb7f">
+<h3 id="orgd01fb7f"><a id="orgcc41acb"></a> P5 Object</h3>
+<div class="outline-text-3" id="text-orgd01fb7f">
+<p>Finally, I'll create a <code>p5</code> object, giving it the sketch and <code>div</code> ID so <code>p5.js</code> will render the code.</p>
+<div class="highlight">
+<pre><span></span><span class="ow">new</span><span class="w"> </span><span class="nx">p5</span><span class="p">(</span><span class="nx">hello_sketch</span><span class="p">,</span><span class="w"> </span><span class="nx">HELLO_DIV</span><span class="p">);</span>
+</pre></div>
+<p>If we <a href="index.html#org1eafb5e">go back to the top</a> we should see the sketch running (a circle moving back and forth) .</p>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org4426755">
+<h2 id="org4426755">The End</h2>
+<div class="outline-text-2" id="text-org4426755">
+<p>And that's it for the basic post. The parts once again:</p>
+<ul class="org-ul">
+<li>Use the p5 nikola template <a href="index.html#org98a4e3c">in the nikola-header</a>.</li>
+<li><a href="index.html#orgf14b83e">Tangle</a> the JavaScript to a file in <code>../files/posts/&lt;slug&gt;</code>.</li>
+<li>Setup the <code>script</code> and <code>div</code> tags to include the sketch in the exported HTML (using <a href="index.html#org0989f70">the p5div shortcode</a>).</li>
+<li>Write <a href="index.html#org5c8e198">the sketch</a> to pass to p5.</li>
+<li>Create a <a href="index.html#orgcc41acb">p5 object</a> using the sketch and <code>div</code> ID.</li>
+</ul>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org2d1084b">
+<h2 id="org2d1084b">Links</h2>
+<div class="outline-text-2" id="text-org2d1084b">
+<ul class="org-ul">
+<li><a href="https://orgmode.org/manual/Noweb-Reference-Syntax.html">Org-Mode noweb reference</a></li>
+</ul>
+</div>
+</div>
+</div>
+<aside class="postpromonav">
+<nav>
+<ul class="tags" itemprop="keywords">
+<li><a class="tag p-category" href="../../categories/javascript/index.html" rel="tag">javascript</a></li>
+<li><a class="tag p-category" href="../../categories/notetofutureself/index.html" rel="tag">notetofutureself</a></li>
+<li><a class="tag p-category" href="../../categories/p5js/index.html" rel="tag">p5.js</a></li>
+</ul>
+<ul class="pager hidden-print">
+<li class="previous"><a href="../inking-sites/index.html" rel="prev" title="Inking Sites">Previous post</a></li>
+</ul>
+</nav>
+</aside>
+</article>
+<!--End of body content-->
+<footer id="footer">Scribbles by <a href="mailto:cloisteredmonkey.jmark@slmail.me">The Cloistered Monkey</a> - 2024 - Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a>
+<div id="license" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Ape-Iron</span> is licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" rel="license noopener noreferrer" style="display:inline-block;" target="_blank">CC BY-SA 4.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></div>
+</footer>
+</div>
+<script src="../../assets/js/all-nocdn.js"></script>
+<script>
+
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+</script></div>
+</body>
+</html>

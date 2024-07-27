@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron (Posts about graphing)</title><link>https://necromuralist.github.io/Ape-Iron/</link><description></description><atom:link href="https://necromuralist.github.io/Ape-Iron/categories/graphing.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;The Cloistered Monkey&lt;/a&gt; 
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron (Posts about graphing)</title><link>https://necromuralist.github.io/Ape-Iron/</link><description></description><atom:link href="https://necromuralist.github.io/Ape-Iron/categories/graphing.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;The Cloistered Monkey&lt;/a&gt; 
 &lt;div id="license" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"&gt;&lt;span property="dct:title"&gt;Ape-Iron&lt;/span&gt; is licensed under
 &lt;a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY-SA 4.0
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"&gt;&lt;/a&gt;&lt;/p&gt; 
-</copyright><lastBuildDate>Mon, 11 Sep 2023 22:49:52 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Graphing P5 Noise</title><link>https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
+</copyright><lastBuildDate>Tue, 25 Jun 2024 03:43:10 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Graphing P5 Noise</title><link>https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org7e3a212"&gt;What Is This About?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org2cca447"&gt;Setup The Sketch&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org9f4b096"&gt;What Is This About?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgd72f070"&gt;Setup The Sketch&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgdd87f1e"&gt;Name The Parent DIV&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org60b4e2a"&gt;The Instance Container Function&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org296cc45"&gt;Name The Parent DIV&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org492ecd7"&gt;The Instance Container Function&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgc8f1fef"&gt;Constants and Variables&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgbc063ff"&gt;Constants and Variables&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgdc7d60c"&gt;The Noise Space&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org2ec2e06"&gt;The Slider&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgfe3c685"&gt;Colors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org9610f9b"&gt;The Noise Space&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgc368a8c"&gt;The Slider&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org64dfbea"&gt;Colors&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org3464342"&gt;Setup&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org4d10a59"&gt;Setup&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org6bd202c"&gt;Canvas and Line&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org24ab2bd"&gt;Slider&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org6b04f65"&gt;Canvas and Line&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgb13e288"&gt;Slider&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org60e845b"&gt;Draw&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org820d7a0"&gt;Draw&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgd992ce5"&gt;The Draw Function&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org97f6dc7"&gt;Setup The Next Frame&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org65a168d"&gt;Plot Next Frame&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orga011fd3"&gt;Move the Noise Input&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org160808f"&gt;Slider Label&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgd4bba6f"&gt;Once Again But As a Picture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgd56158c"&gt;The Draw Function&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org88b41e1"&gt;Setup The Next Frame&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org6ed13ec"&gt;Plot Next Frame&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orge813121"&gt;Move the Noise Input&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org7fc5d75"&gt;Slider Label&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org71c4a4f"&gt;Once Again But As a Picture&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgee64346"&gt;Make The Sketch Object&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org50166ff"&gt;And That's It, Then&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orge9ba3cd"&gt;Sources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org2a5c643"&gt;Make The Sketch Object&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#org8ddf4a6"&gt;And That's It, Then&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/index.html#orgeeb8068"&gt;Sources&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -54,9 +54,9 @@
 The slider controls how big a step the graph takes along the &lt;code&gt;noise&lt;/code&gt; space with each move to the right along the x-axis (moving the slider to the right makes the steps bigger so the line looks noisier). 
 &lt;/p&gt;
 
-&lt;div id="outline-container-org7e3a212" class="outline-2"&gt;
-&lt;h2 id="org7e3a212"&gt;What Is This About?&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org7e3a212"&gt;
+&lt;div id="outline-container-org9f4b096" class="outline-2"&gt;
+&lt;h2 id="org9f4b096"&gt;What Is This About?&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org9f4b096"&gt;
 &lt;p&gt;
 The plot is a visualization of the p5.js &lt;a href="https://p5js.org/reference/#/p5/noise"&gt;noise&lt;/a&gt; function. I got the idea for it from &lt;a href="https://thecodingtrain.com/tracks/the-nature-of-code-2/noc/perlin/graphing-1d-perlin-noise"&gt;the Coding Train&lt;/a&gt; but the author of that site explains it by talking about it in a video so I thought I'd re-do it so I can understand what the code is doing a little better. The &lt;a href="https://p5js.org/reference/#/p5/noise"&gt;p5 documentation&lt;/a&gt; and the &lt;b&gt;Coding Train&lt;/b&gt; both describe the &lt;code&gt;noise&lt;/code&gt; function as producing &lt;a href="https://en.wikipedia.org/w/index.php?title=Perlin_noise&amp;amp;oldid=1148235423"&gt;Perlin noise&lt;/a&gt;, and Dan Shiffman (the &lt;b&gt;Coding Train&lt;/b&gt; author) even goes on to point out that it's the original version of perlin noise from 1983 and in a later video he shows how to implement &lt;a href="https://en.wikipedia.org/w/index.php?title=Simplex_noise&amp;amp;oldid=1103667712"&gt;Simplex Noise&lt;/a&gt;, an improved version created by Ken Perlin, the author of the original Perlin Noise. On the github site for Processing, however, there are two issues that claim that processing's &lt;code&gt;noise&lt;/code&gt; isn't really &lt;i&gt;perlin&lt;/i&gt; noise but rather a form of &lt;a href="https://en.wikipedia.org/w/index.php?title=Value_noise&amp;amp;oldid=1024311499"&gt;Value Noise&lt;/a&gt;. 
 &lt;/p&gt;
@@ -67,16 +67,16 @@ I don't know enough to know what's right, so I'll just call it noise or p5's noi
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org2cca447" class="outline-2"&gt;
-&lt;h2 id="org2cca447"&gt;Setup The Sketch&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org2cca447"&gt;
+&lt;div id="outline-container-orgd72f070" class="outline-2"&gt;
+&lt;h2 id="orgd72f070"&gt;Setup The Sketch&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgd72f070"&gt;
 &lt;p&gt;
 Now on to the code. This first section isn't really about plotting the graph but rather about setting up the P5 sketch in the HTML.
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgdd87f1e" class="outline-3"&gt;
-&lt;h3 id="orgdd87f1e"&gt;Name The Parent DIV&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgdd87f1e"&gt;
+&lt;div id="outline-container-org296cc45" class="outline-3"&gt;
+&lt;h3 id="org296cc45"&gt;Name The Parent DIV&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org296cc45"&gt;
 &lt;p&gt;
 We're making a &lt;code&gt;div&lt;/code&gt; to stick the sketch into the page so here's the ID we'll use for that &lt;code&gt;div&lt;/code&gt; so the code can refer to it.
 &lt;/p&gt;
@@ -85,9 +85,9 @@ We're making a &lt;code&gt;div&lt;/code&gt; to stick the sketch into the page so
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org60b4e2a" class="outline-3"&gt;
-&lt;h3 id="org60b4e2a"&gt;The Instance Container Function&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org60b4e2a"&gt;
+&lt;div id="outline-container-org492ecd7" class="outline-3"&gt;
+&lt;h3 id="org492ecd7"&gt;The Instance Container Function&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org492ecd7"&gt;
 &lt;p&gt;
 To keep all the variables for the sketch contained in its scope we're going to use a function (&lt;code&gt;noise_graph&lt;/code&gt;) to act as a closure.
 &lt;/p&gt;
@@ -97,17 +97,17 @@ To keep all the variables for the sketch contained in its scope we're going to u
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgc8f1fef" class="outline-2"&gt;
-&lt;h2 id="orgc8f1fef"&gt;Constants and Variables&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgc8f1fef"&gt;
+&lt;div id="outline-container-orgbc063ff" class="outline-2"&gt;
+&lt;h2 id="orgbc063ff"&gt;Constants and Variables&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgbc063ff"&gt;
 &lt;p&gt;
 Now we're into the p5 sketch code (contained within &lt;code&gt;noise_graph&lt;/code&gt;). Before defining the &lt;code&gt;setup&lt;/code&gt; and &lt;code&gt;draw&lt;/code&gt; methods let's define some variables that we can use within them.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgdc7d60c" class="outline-3"&gt;
-&lt;h3 id="orgdc7d60c"&gt;The Noise Space&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgdc7d60c"&gt;
+&lt;div id="outline-container-org9610f9b" class="outline-3"&gt;
+&lt;h3 id="org9610f9b"&gt;The Noise Space&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org9610f9b"&gt;
 &lt;p&gt;
 The inputs to the &lt;code&gt;noise&lt;/code&gt; function are what we'll call the &lt;code&gt;X_NOISE_COORDINATE&lt;/code&gt; (or variations on that name, anyway). Every time the canvas gets re-drawn we'll re-draw the graph by putting in a sequence of x-values starting at &lt;code&gt;STARTING_X_NOISE_COORDINATE&lt;/code&gt; and incrementing it by &lt;code&gt;X_NOISE_COORDINATE_STEP_SIZE&lt;/code&gt; as we move along the x-axis of the canvas.
 &lt;/p&gt;
@@ -125,9 +125,9 @@ The &lt;code&gt;X_NOISE_COORDINATE_STEP_SIZE&lt;/code&gt; is sort of a re-mappin
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org2ec2e06" class="outline-3"&gt;
-&lt;h3 id="org2ec2e06"&gt;The Slider&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org2ec2e06"&gt;
+&lt;div id="outline-container-orgc368a8c" class="outline-3"&gt;
+&lt;h3 id="orgc368a8c"&gt;The Slider&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgc368a8c"&gt;
 &lt;p&gt;
 These are some variables so we can add a slider to allow the user to change the step-size to increment the noise input. The slider step size of 0 means that there will be a continuous change in the value as the slider is moved, as opposed to giving it discrete values to jump to.
 &lt;/p&gt;
@@ -142,9 +142,9 @@ These are some variables so we can add a slider to allow the user to change the 
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgfe3c685" class="outline-3"&gt;
-&lt;h3 id="orgfe3c685"&gt;Colors&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgfe3c685"&gt;
+&lt;div id="outline-container-org64dfbea" class="outline-3"&gt;
+&lt;h3 id="org64dfbea"&gt;Colors&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org64dfbea"&gt;
 &lt;p&gt;
 These are the color settings for the plot.
 &lt;/p&gt;
@@ -158,9 +158,9 @@ These are the color settings for the plot.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org3464342" class="outline-2"&gt;
-&lt;h2 id="org3464342"&gt;Setup&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org3464342"&gt;
+&lt;div id="outline-container-org4d10a59" class="outline-2"&gt;
+&lt;h2 id="org4d10a59"&gt;Setup&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org4d10a59"&gt;
 &lt;p&gt;
 Now we'll monkey-patch the &lt;code&gt;setup&lt;/code&gt; function that gets called once at the start of the animation.
 &lt;/p&gt;
@@ -168,9 +168,9 @@ Now we'll monkey-patch the &lt;code&gt;setup&lt;/code&gt; function that gets cal
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;setup&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org6bd202c" class="outline-3"&gt;
-&lt;h3 id="org6bd202c"&gt;Canvas and Line&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org6bd202c"&gt;
+&lt;div id="outline-container-org6b04f65" class="outline-3"&gt;
+&lt;h3 id="org6b04f65"&gt;Canvas and Line&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org6b04f65"&gt;
 &lt;p&gt;
 The only possibly not-so-obvious thing here should be the &lt;code&gt;document.getElementById(NOISE_GRAPH_DIV).offsetWidth&lt;/code&gt; argument to the &lt;code&gt;createCanvas&lt;/code&gt; method which grabs the width of the container in which the plot is being put (not the width of the entire window).
 &lt;/p&gt;
@@ -182,9 +182,9 @@ The only possibly not-so-obvious thing here should be the &lt;code&gt;document.g
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org24ab2bd" class="outline-3"&gt;
-&lt;h3 id="org24ab2bd"&gt;Slider&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org24ab2bd"&gt;
+&lt;div id="outline-container-orgb13e288" class="outline-3"&gt;
+&lt;h3 id="orgb13e288"&gt;Slider&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgb13e288"&gt;
 &lt;p&gt;
 Now we'll create the slider to let the user play with the step-size for the noise input.
 &lt;/p&gt;
@@ -199,16 +199,16 @@ Now we'll create the slider to let the user play with the step-size for the nois
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org60e845b" class="outline-2"&gt;
-&lt;h2 id="org60e845b"&gt;Draw&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org60e845b"&gt;
+&lt;div id="outline-container-org820d7a0" class="outline-2"&gt;
+&lt;h2 id="org820d7a0"&gt;Draw&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org820d7a0"&gt;
 &lt;p&gt;
 Here's where we define the &lt;code&gt;draw&lt;/code&gt; function that gets called repeatedly to animate our sketch.
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgd992ce5" class="outline-3"&gt;
-&lt;h3 id="orgd992ce5"&gt;The Draw Function&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgd992ce5"&gt;
+&lt;div id="outline-container-orgd56158c" class="outline-3"&gt;
+&lt;h3 id="orgd56158c"&gt;The Draw Function&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgd56158c"&gt;
 &lt;p&gt;
 Monkey patch the &lt;code&gt;draw&lt;/code&gt; method on the &lt;code&gt;p5&lt;/code&gt; object.
 &lt;/p&gt;
@@ -217,9 +217,9 @@ Monkey patch the &lt;code&gt;draw&lt;/code&gt; method on the &lt;code&gt;p5&lt;/
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org97f6dc7" class="outline-3"&gt;
-&lt;h3 id="org97f6dc7"&gt;Setup The Next Frame&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org97f6dc7"&gt;
+&lt;div id="outline-container-org88b41e1" class="outline-3"&gt;
+&lt;h3 id="org88b41e1"&gt;Setup The Next Frame&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org88b41e1"&gt;
 &lt;p&gt;
 We'll paint the canvas with a semi-opaque white on every refresh so that you can sort of see how the graph changes with each loop. We also create some variables:
 &lt;/p&gt;
@@ -237,9 +237,9 @@ We'll paint the canvas with a semi-opaque white on every refresh so that you can
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org65a168d" class="outline-3"&gt;
-&lt;h3 id="org65a168d"&gt;Plot Next Frame&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org65a168d"&gt;
+&lt;div id="outline-container-org6ed13ec" class="outline-3"&gt;
+&lt;h3 id="org6ed13ec"&gt;Plot Next Frame&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org6ed13ec"&gt;
 &lt;p&gt;
 Here's where we plot the graph. We're going to draw the graph using connected line segments so before the loop starts we'll tell p5 to start the shape.
 &lt;/p&gt;
@@ -276,9 +276,9 @@ That's the end of the for-loop. Now, outside of the loop we call &lt;code&gt;end
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orga011fd3" class="outline-3"&gt;
-&lt;h3 id="orga011fd3"&gt;Move the Noise Input&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orga011fd3"&gt;
+&lt;div id="outline-container-orge813121" class="outline-3"&gt;
+&lt;h3 id="orge813121"&gt;Move the Noise Input&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orge813121"&gt;
 &lt;p&gt;
 Now we'll move the input for the noise function at the start of the graph a little. If we didn't the input to the noise function as we went through the loop would always be the same so our plot would just draw the same thing over and over again (well, if we move the slider to change the &lt;code&gt;noise_step_size&lt;/code&gt; it wouldn't be exactly the same, but the starting point would always be the same).
 &lt;/p&gt;
@@ -291,9 +291,9 @@ I'm not showing the closing braces (&lt;code&gt;}&lt;/code&gt;) to end the funct
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org160808f" class="outline-3"&gt;
-&lt;h3 id="org160808f"&gt;Slider Label&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org160808f"&gt;
+&lt;div id="outline-container-org7fc5d75" class="outline-3"&gt;
+&lt;h3 id="org7fc5d75"&gt;Slider Label&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org7fc5d75"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;textSize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;32&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;textAlign&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;CENTER&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;fill&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"white"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
@@ -301,13 +301,13 @@ I'm not showing the closing braces (&lt;code&gt;}&lt;/code&gt;) to end the funct
 &lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;rect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;width&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;height&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;35&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;250&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;30&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;fill&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"black"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;text&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sb"&gt;`Noise Change: &lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nx"&gt;slider&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;value&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="nx"&gt;toFixed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;	    &lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;width&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;height&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;            &lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;width&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;p5js&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;height&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgd4bba6f" class="outline-3"&gt;
-&lt;h3 id="orgd4bba6f"&gt;Once Again But As a Picture&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgd4bba6f"&gt;
+&lt;div id="outline-container-org71c4a4f" class="outline-3"&gt;
+&lt;h3 id="org71c4a4f"&gt;Once Again But As a Picture&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org71c4a4f"&gt;
 &lt;p&gt;
 &lt;img src="https://necromuralist.github.io/Ape-Iron/posts/graphing-p5-noise/noise-for-loop-1250.webp" alt="for-loop-diagram"&gt;
 &lt;/p&gt;
@@ -315,9 +315,9 @@ I'm not showing the closing braces (&lt;code&gt;}&lt;/code&gt;) to end the funct
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgee64346" class="outline-2"&gt;
-&lt;h2 id="orgee64346"&gt;Make The Sketch Object&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgee64346"&gt;
+&lt;div id="outline-container-org2a5c643" class="outline-2"&gt;
+&lt;h2 id="org2a5c643"&gt;Make The Sketch Object&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org2a5c643"&gt;
 &lt;p&gt;
 Next we pass our sketch definition to &lt;code&gt;p5&lt;/code&gt; to build it and attach it to our HTML div.
 &lt;/p&gt;
@@ -325,17 +325,17 @@ Next we pass our sketch definition to &lt;code&gt;p5&lt;/code&gt; to build it an
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org50166ff" class="outline-2"&gt;
-&lt;h2 id="org50166ff"&gt;And That's It, Then&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org50166ff"&gt;
+&lt;div id="outline-container-org8ddf4a6" class="outline-2"&gt;
+&lt;h2 id="org8ddf4a6"&gt;And That's It, Then&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org8ddf4a6"&gt;
 &lt;p&gt;
 At this point we should have a graph that helps to visualize how the &lt;code&gt;noise&lt;/code&gt; function changes over one-dimension. Noise to the aside, it's also a useful template for plotting any kind of graph, you'd just have to change the setting of the &lt;code&gt;y&lt;/code&gt; value to whatever other function you want to visualize.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orge9ba3cd" class="outline-2"&gt;
-&lt;h2 id="orge9ba3cd"&gt;Sources&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orge9ba3cd"&gt;
+&lt;div id="outline-container-orgeeb8068" class="outline-2"&gt;
+&lt;h2 id="orgeeb8068"&gt;Sources&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgeeb8068"&gt;
 &lt;p&gt;
 P5 Reference:
 &lt;/p&gt;

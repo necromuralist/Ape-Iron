@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron (Posts about bookmark)</title><link>https://necromuralist.github.io/Ape-Iron/</link><description></description><atom:link href="https://necromuralist.github.io/Ape-Iron/categories/bookmark.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;The Cloistered Monkey&lt;/a&gt; 
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron (Posts about bookmark)</title><link>https://necromuralist.github.io/Ape-Iron/</link><description></description><atom:link href="https://necromuralist.github.io/Ape-Iron/categories/bookmark.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;The Cloistered Monkey&lt;/a&gt; 
 &lt;div id="license" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"&gt;&lt;span property="dct:title"&gt;Ape-Iron&lt;/span&gt; is licensed under
 &lt;a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY-SA 4.0
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"&gt;&lt;/a&gt;&lt;/p&gt; 
-</copyright><lastBuildDate>Mon, 11 Sep 2023 22:49:52 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Link Collection</title><link>https://necromuralist.github.io/Ape-Iron/posts/link-collection/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
+</copyright><lastBuildDate>Tue, 25 Jun 2024 03:43:09 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Link Collection</title><link>https://necromuralist.github.io/Ape-Iron/posts/link-collection/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/link-collection/index.html#org1b7e570"&gt;Design Patterns&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/link-collection/index.html#org172177b"&gt;Creative Coding&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/link-collection/index.html#orgf7471fc"&gt;Design Patterns&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/link-collection/index.html#orgb795d56"&gt;Creative Coding&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org1b7e570" class="outline-2"&gt;
-&lt;h2 id="org1b7e570"&gt;Design Patterns&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org1b7e570"&gt;
+&lt;div id="outline-container-orgf7471fc" class="outline-2"&gt;
+&lt;h2 id="orgf7471fc"&gt;Design Patterns&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgf7471fc"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;&lt;a href="https://www.patterns.dev/"&gt;patterns.dev&lt;/a&gt;: An online book of patterns for JavaScript and React.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org172177b" class="outline-2"&gt;
-&lt;h2 id="org172177b"&gt;Creative Coding&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org172177b"&gt;
+&lt;div id="outline-container-orgb795d56" class="outline-2"&gt;
+&lt;h2 id="orgb795d56"&gt;Creative Coding&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgb795d56"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;&lt;a href="https://github.com/terkelg/awesome-creative-coding"&gt;Awesome Creative Coding&lt;/a&gt;: A collection of links on github.&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://awesomeopensource.com/project/terkelg/awesome-creative-coding"&gt;Awesome Creative Coding Again&lt;/a&gt;: This looks like the same list but on &lt;a href="https://awesomeopensource.com/"&gt;Awesome Open Source&lt;/a&gt; so there might be more cross-linked pages.&lt;/li&gt;

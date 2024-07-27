@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron (Posts about testing)</title><link>https://necromuralist.github.io/Ape-Iron/</link><description></description><atom:link href="https://necromuralist.github.io/Ape-Iron/categories/testing.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;The Cloistered Monkey&lt;/a&gt; 
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ape Iron (Posts about testing)</title><link>https://necromuralist.github.io/Ape-Iron/</link><description></description><atom:link href="https://necromuralist.github.io/Ape-Iron/categories/testing.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:cloisteredmonkey.jmark@slmail.me"&gt;The Cloistered Monkey&lt;/a&gt; 
 &lt;div id="license" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"&gt;&lt;span property="dct:title"&gt;Ape-Iron&lt;/span&gt; is licensed under
 &lt;a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"&gt;CC BY-SA 4.0
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"&gt;
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"&gt;
 &lt;img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"&gt;&lt;/a&gt;&lt;/p&gt; 
-</copyright><lastBuildDate>Mon, 30 Oct 2023 23:10:50 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Cucumber, Chai, and JSDOM</title><link>https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
+</copyright><lastBuildDate>Tue, 25 Jun 2024 03:43:09 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Cucumber, Chai, and JSDOM</title><link>https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="table-of-contents" role="doc-toc"&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#org86ae27d"&gt;What Is This About?&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#org12d8d90"&gt;What Is This About?&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#orgfd10dbb"&gt;The Earlier Problem&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#org4a47aee"&gt;The Newer Problem&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#orgfbc7242"&gt;The Earlier Problem&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#orgafb4918"&gt;The Newer Problem&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#orgeeef2b4"&gt;The Feature File&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#org750fc1f"&gt;The Software Under Test&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#org7c2f24f"&gt;The Feature File&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#org5d81982"&gt;The Software Under Test&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#orgf78be0c"&gt;The Class Declaration&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#org255d8e7"&gt;The Get Element Method&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#orgfd0f1ac"&gt;The Class Declaration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#org96605d7"&gt;The Get Element Method&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#org310fb79"&gt;The Step File&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#org958bd2f"&gt;The Step File&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#org367b195"&gt;Setting Up&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#orgbb3f1d5"&gt;The Tests&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#org0e0fdb7"&gt;Setting Up&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#org61516c1"&gt;The Tests&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#org7832c8c"&gt;What Have We Learned?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-chai-and-jsdom/index.html#org82c644a"&gt;What Have We Learned?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org86ae27d" class="outline-2"&gt;
-&lt;h2 id="org86ae27d"&gt;What Is This About?&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org86ae27d"&gt;
+&lt;div id="outline-container-org12d8d90" class="outline-2"&gt;
+&lt;h2 id="org12d8d90"&gt;What Is This About?&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org12d8d90"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgfd10dbb" class="outline-3"&gt;
-&lt;h3 id="orgfd10dbb"&gt;The Earlier Problem&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgfd10dbb"&gt;
+&lt;div id="outline-container-orgfbc7242" class="outline-3"&gt;
+&lt;h3 id="orgfbc7242"&gt;The Earlier Problem&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgfbc7242"&gt;
 &lt;p&gt;
 In my code from &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/generative-art-spiral/index.html"&gt;my spiral post&lt;/a&gt; I used &lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById"&gt;document.getElementById&lt;/a&gt; as a check to make sure that I was passing in a valid &lt;code&gt;div&lt;/code&gt; ID to &lt;code&gt;p5.js&lt;/code&gt; and I decided to add some testing to make sure my validator was working as I expected. The problem was that when you run tests in &lt;code&gt;node.js&lt;/code&gt; the &lt;code&gt;document&lt;/code&gt; object doesn't exist. One way to get around this might be to use &lt;code&gt;Selenium&lt;/code&gt; or some other browser-tester but that seemed like overkill.
 &lt;/p&gt;
@@ -61,9 +61,9 @@ Where &lt;code&gt;dom&lt;/code&gt; is an instance of &lt;code&gt;jsdom&lt;/code&
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org4a47aee" class="outline-3"&gt;
-&lt;h3 id="org4a47aee"&gt;The Newer Problem&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org4a47aee"&gt;
+&lt;div id="outline-container-orgafb4918" class="outline-3"&gt;
+&lt;h3 id="orgafb4918"&gt;The Newer Problem&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgafb4918"&gt;
 &lt;p&gt;
 Then I got to this post where I wanted to document getting &lt;code&gt;jsdom&lt;/code&gt; to work and, even though I was using a simpler version of the previous post, I found that the tests were failing mysteriously (pretty much everything with javascript is mysterious to me). With a lot of troubleshooting, I managed to find out that instead of using the &lt;code&gt;dom&lt;/code&gt; I was creating here it was still using the same one from the other testing. Except sometimes it was using the &lt;code&gt;dom&lt;/code&gt; I defined here and these tests passed but then the other tests failed. I guess &lt;code&gt;global&lt;/code&gt; means global in the truer sense, not just for the scope of a single set of tests, and there's some kind of race going on between the different pieces of code that are trying to set and use this global &lt;code&gt;document&lt;/code&gt;. Oy.
 &lt;/p&gt;
@@ -91,9 +91,9 @@ In the end I ended up doing an ugly workaround which didn't really even require 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgeeef2b4" class="outline-2"&gt;
-&lt;h2 id="orgeeef2b4"&gt;The Feature File&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgeeef2b4"&gt;
+&lt;div id="outline-container-org7c2f24f" class="outline-2"&gt;
+&lt;h2 id="org7c2f24f"&gt;The Feature File&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org7c2f24f"&gt;
 &lt;p&gt;
 This is a &lt;a href="https://github.com/cucumber/cucumber-js"&gt;Cucumber.js&lt;/a&gt; test so I'll create a simple feature file for a class that retrieves a document element and test the case where the ID is correct and the one where it is incorrect.
 &lt;/p&gt;
@@ -115,17 +115,17 @@ This is a &lt;a href="https://github.com/cucumber/cucumber-js"&gt;Cucumber.js&lt
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org750fc1f" class="outline-2"&gt;
-&lt;h2 id="org750fc1f"&gt;The Software Under Test&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org750fc1f"&gt;
+&lt;div id="outline-container-org5d81982" class="outline-2"&gt;
+&lt;h2 id="org5d81982"&gt;The Software Under Test&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org5d81982"&gt;
 &lt;p&gt;
 Now the implementation. This is kind of a useless class, but this was supposed to be about how to get &lt;code&gt;jsdom&lt;/code&gt; working so I can test code expecting a &lt;code&gt;document&lt;/code&gt;.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgf78be0c" class="outline-3"&gt;
-&lt;h3 id="orgf78be0c"&gt;The Class Declaration&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgf78be0c"&gt;
+&lt;div id="outline-container-orgfd0f1ac" class="outline-3"&gt;
+&lt;h3 id="orgfd0f1ac"&gt;The Class Declaration&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgfd0f1ac"&gt;
 &lt;p&gt;
 This is the class I'm going to test.
 &lt;/p&gt;
@@ -149,9 +149,9 @@ The constructor shows the main change I made to get it working - instead of usin
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org255d8e7" class="outline-3"&gt;
-&lt;h3 id="org255d8e7"&gt;The Get Element Method&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org255d8e7"&gt;
+&lt;div id="outline-container-org96605d7" class="outline-3"&gt;
+&lt;h3 id="org96605d7"&gt;The Get Element Method&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org96605d7"&gt;
 &lt;p&gt;
 I made a getter for the retrieved element. It probably would have been easier in this case if I didn't store it, since I could test both when the ID is correct and when it isn't with the same object, just by changing the &lt;code&gt;this.element_id&lt;/code&gt; value, but it's a pattern I often use and it gave me the chance to test out javascript's &lt;a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields"&gt;Private Class Fields&lt;/a&gt; syntax. To be quite honest, I think using the pound sign (&lt;code&gt;#&lt;/code&gt;) is kind of ugly - I prefer the underscore, and &lt;a href="https://pygments.org/"&gt;Pygments&lt;/a&gt; draws red boxes around the &lt;code&gt;#&lt;/code&gt;- but at least I know about it. 
 &lt;/p&gt;
@@ -174,21 +174,21 @@ The main value in using a getter here is that it can check that the element exis
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org310fb79" class="outline-2"&gt;
-&lt;h2 id="org310fb79"&gt;The Step File&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org310fb79"&gt;
+&lt;div id="outline-container-org958bd2f" class="outline-2"&gt;
+&lt;h2 id="org958bd2f"&gt;The Step File&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org958bd2f"&gt;
 &lt;p&gt;
 And now the test code.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org367b195" class="outline-3"&gt;
-&lt;h3 id="org367b195"&gt;Setting Up&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org367b195"&gt;
+&lt;div id="outline-container-org0e0fdb7" class="outline-3"&gt;
+&lt;h3 id="org0e0fdb7"&gt;Setting Up&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org0e0fdb7"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgeb18d0c" class="outline-4"&gt;
-&lt;h4 id="orgeb18d0c"&gt;Import the Test Libraries&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgeb18d0c"&gt;
+&lt;div id="outline-container-org57d25df" class="outline-4"&gt;
+&lt;h4 id="org57d25df"&gt;Import the Test Libraries&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org57d25df"&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;expect&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"chai"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="k"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;Given&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;When&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;Then&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"@cucumber/cucumber"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="k"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;JSDOM&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"jsdom"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -200,9 +200,9 @@ These are the libraries that I installed to support testing. Using &lt;code&gt;j
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org4e23189" class="outline-4"&gt;
-&lt;h4 id="org4e23189"&gt;Import the Software Under Test&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org4e23189"&gt;
+&lt;div id="outline-container-org6e6e830" class="outline-4"&gt;
+&lt;h4 id="org6e6e830"&gt;Import the Software Under Test&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org6e6e830"&gt;
 &lt;p&gt;
 Now I'll import the &lt;code&gt;ElementGetter&lt;/code&gt; class that I defined above. It occurs to me that for a case like this where I don't actually use the code for anything other than testing I could have put it next to the tests, but I guess this is a better dress rehearsal for really using code in a post.
 &lt;/p&gt;
@@ -216,9 +216,9 @@ Note the extra step up the path (&lt;code&gt;../&lt;/code&gt;) because this time
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org3422585" class="outline-4"&gt;
-&lt;h4 id="org3422585"&gt;Setup JSDOM&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org3422585"&gt;
+&lt;div id="outline-container-orgb035b0d" class="outline-4"&gt;
+&lt;h4 id="orgb035b0d"&gt;Setup JSDOM&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgb035b0d"&gt;
 &lt;p&gt;
 Here's where I create the &lt;code&gt;jsdom&lt;/code&gt; object with a &lt;code&gt;div&lt;/code&gt; that the &lt;code&gt;ElementGetter&lt;/code&gt; can get. I'm passing in the whole HTML string but in the documentation they sometimes just pass in the body.
 &lt;/p&gt;
@@ -236,13 +236,13 @@ Here's where I create the &lt;code&gt;jsdom&lt;/code&gt; object with a &lt;code&
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgbb3f1d5" class="outline-3"&gt;
-&lt;h3 id="orgbb3f1d5"&gt;The Tests&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgbb3f1d5"&gt;
+&lt;div id="outline-container-org61516c1" class="outline-3"&gt;
+&lt;h3 id="org61516c1"&gt;The Tests&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org61516c1"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgbbab3e2" class="outline-4"&gt;
-&lt;h4 id="orgbbab3e2"&gt;The Right ID&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgbbab3e2"&gt;
+&lt;div id="outline-container-org7a0d626" class="outline-4"&gt;
+&lt;h4 id="org7a0d626"&gt;The Right ID&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org7a0d626"&gt;
 &lt;p&gt;
 This is the first scenario where I expect the &lt;code&gt;ElementGetter&lt;/code&gt; to successfully find the element. There's not a lot to test here, other than it doesn't crash.
 &lt;/p&gt;
@@ -264,9 +264,9 @@ This is the first scenario where I expect the &lt;code&gt;ElementGetter&lt;/code
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgb5230aa" class="outline-4"&gt;
-&lt;h4 id="orgb5230aa"&gt;The Wrong ID&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgb5230aa"&gt;
+&lt;div id="outline-container-orgffeb2e7" class="outline-4"&gt;
+&lt;h4 id="orgffeb2e7"&gt;The Wrong ID&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgffeb2e7"&gt;
 &lt;p&gt;
 This is the more interesting case where we give the &lt;code&gt;ElementGetter&lt;/code&gt; an ID that doesn't match any element in the page.
 &lt;/p&gt;
@@ -296,9 +296,9 @@ Since I made a getter to retrieve the element, you can't pass it directly to &lt
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org7832c8c" class="outline-2"&gt;
-&lt;h2 id="org7832c8c"&gt;What Have We Learned?&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org7832c8c"&gt;
+&lt;div id="outline-container-org82c644a" class="outline-2"&gt;
+&lt;h2 id="org82c644a"&gt;What Have We Learned?&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org82c644a"&gt;
 &lt;p&gt;
 I suppose the biggest lesson is that I shouldn't have tried so hard to fake the &lt;code&gt;document&lt;/code&gt; object as a magic global object the way it normally is used and instead just gone for an explicit argument that gets passed to the class (or function) that needs it (which sort of follows the &lt;a href="https://en.wikipedia.org/wiki/Dependency_injection?useskin=vector"&gt;Dependency Injection Pattern&lt;/a&gt;). I also learned that &lt;code&gt;jsdom&lt;/code&gt; is interesting but behind the ECMA standard, as were some of the other libraries I ran into in trying to solve different parts of this problem, so I have to either decide to not use ECMA 6 or not rely so much on these other libraries that don't use the current standards.
 &lt;/p&gt;
@@ -307,40 +307,40 @@ I suppose the biggest lesson is that I shouldn't have tried so hard to fake the 
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org18a39cc"&gt;What Is This, Then?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#orgd5f0b32"&gt;Setting Up&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org2e7d208"&gt;What Is This, Then?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#orgec20161"&gt;Setting Up&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org97089c8"&gt;The Cucumber.js Configuration&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#orgec9b36e"&gt;The Testing package.json&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#orgbf88da8"&gt;The Cucumber.js Configuration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org572da94"&gt;The Testing package.json&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org26f60bb"&gt;The Test Files&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#orgd8c017b"&gt;The Test Files&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org12bd8e9"&gt;The Feature File&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org3230893"&gt;The Test Steps&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org837f00a"&gt;The Imports&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org29a0558"&gt;Given&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#orgf03d757"&gt;When&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org4c4bb73"&gt;Then&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org1b25fa5"&gt;The Feature File&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org6a7bddb"&gt;The Test Steps&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org2de2954"&gt;The Imports&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#orgb9b0afd"&gt;Given&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#orgf618368"&gt;When&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#orge6793e3"&gt;Then&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org1ae7619"&gt;The Greeter&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org6a4fb5a"&gt;The Greeter package.json&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#orgac1b86d"&gt;Now the Other Hard Part&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org97896d2"&gt;The Greeter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#orgfc5e0f8"&gt;The Greeter package.json&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#orgc12fdf0"&gt;Now the Other Hard Part&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org7bb1d50"&gt;First Let's Setup the Sketch Tag&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#orgc874d21"&gt;Now Let's Use It&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org5f9d16c"&gt;First Let's Setup the Sketch Tag&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org06c1bce"&gt;Now Let's Use It&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org92f9c0e"&gt;What Have We Learned?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org390b8e8"&gt;Links&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#org32ee0e5"&gt;What Have We Learned?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/cucumber-and-ecma-script-modules-esm/index.html#orgd164bf9"&gt;Links&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org18a39cc" class="outline-2"&gt;
-&lt;h2 id="org18a39cc"&gt;What Is This, Then?&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org18a39cc"&gt;
+&lt;div id="outline-container-org2e7d208" class="outline-2"&gt;
+&lt;h2 id="org2e7d208"&gt;What Is This, Then?&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org2e7d208"&gt;
 &lt;p&gt;
 This is a re-do of the cucumber.js example testing for &lt;a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules"&gt;JavaScript/ECMAScript Modules (ESM)&lt;/a&gt;. Just copying the files exactly as they're given in the &lt;a href="https://github.com/cucumber/cucumber-js-examples"&gt;cucumber.js GitHub repository&lt;/a&gt; works pretty much without problem, but since I'm doing this messy thing with writing JavaScript in these blog posts instead of as part of a code-project, it took a little more work than I would have liked.
 &lt;/p&gt;
@@ -351,17 +351,17 @@ I had &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgd5f0b32" class="outline-2"&gt;
-&lt;h2 id="orgd5f0b32"&gt;Setting Up&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgd5f0b32"&gt;
+&lt;div id="outline-container-orgec20161" class="outline-2"&gt;
+&lt;h2 id="orgec20161"&gt;Setting Up&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgec20161"&gt;
 &lt;p&gt;
 The cucumber.js page has instructions on installing it, so I won't go over it. It's mostly just &lt;code&gt;npm install cucumber --save-dev&lt;/code&gt;. I seem to remember that they said somewhere not to install it globally, but I can't remember now where I saw it. Once I installed it, I had to edit a couple of files to get it working the way I wanted it to.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org97089c8" class="outline-3"&gt;
-&lt;h3 id="org97089c8"&gt;The Cucumber.js Configuration&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org97089c8"&gt;
+&lt;div id="outline-container-orgbf88da8" class="outline-3"&gt;
+&lt;h3 id="orgbf88da8"&gt;The Cucumber.js Configuration&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgbf88da8"&gt;
 &lt;p&gt;
 &lt;code&gt;cucumber.js&lt;/code&gt; uses a configuration file named… &lt;code&gt;cucumber.js&lt;/code&gt; that you put where you run the tests. I'm going to put cucumber test-files into folders whose names will have the form &lt;code&gt;test-&amp;lt;slug&amp;gt;&lt;/code&gt;, where &lt;code&gt;slug&lt;/code&gt; is the slug for the post where I define the JavaScript and tests in, so in order to get &lt;code&gt;cucumber&lt;/code&gt; to find them, I need to change the glob in the &lt;code&gt;import&lt;/code&gt; line to match.
 &lt;/p&gt;
@@ -378,9 +378,9 @@ This file is using the ESM syntax (using an &lt;code&gt;export&lt;/code&gt; stat
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgec9b36e" class="outline-3"&gt;
-&lt;h3 id="orgec9b36e"&gt;The Testing package.json&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgec9b36e"&gt;
+&lt;div id="outline-container-org572da94" class="outline-3"&gt;
+&lt;h3 id="org572da94"&gt;The Testing package.json&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org572da94"&gt;
 &lt;p&gt;
 Next we need a &lt;code&gt;package.json&lt;/code&gt; file next to the &lt;code&gt;cucumber.js&lt;/code&gt; file. There's two changes I made.
 &lt;/p&gt;
@@ -411,7 +411,7 @@ I had previously installed &lt;code&gt;chai&lt;/code&gt; globally and it was wor
 So far, these are the files that I've edited in the testing directory.
 &lt;/p&gt;
 
-&lt;pre class="example" id="org68b095f"&gt;
+&lt;pre class="example" id="orge4c1778"&gt;
 cucumber.js
 package.json
 &lt;/pre&gt;
@@ -424,7 +424,7 @@ There's also a &lt;code&gt;package-lock.json&lt;/code&gt; and &lt;code&gt;node_m
 Now that we have this setup we can run the test-runner using &lt;code&gt;npm&lt;/code&gt;.
 &lt;/p&gt;
 
-&lt;pre class="example" id="org39d0a3c"&gt;
+&lt;pre class="example" id="orgb2d2d70"&gt;
 npm test
 &lt;/pre&gt;
 
@@ -435,17 +435,17 @@ Cucumber runs once and then will re-run the testing every time we make a change 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org26f60bb" class="outline-2"&gt;
-&lt;h2 id="org26f60bb"&gt;The Test Files&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org26f60bb"&gt;
+&lt;div id="outline-container-orgd8c017b" class="outline-2"&gt;
+&lt;h2 id="orgd8c017b"&gt;The Test Files&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgd8c017b"&gt;
 &lt;p&gt;
 The slug for this post is &lt;code&gt;cucumber-and-ecma-script-modules-esm&lt;/code&gt; so the testing files are going into a folder named &lt;code&gt;test-cucumber-and-ecma-script-modules-esm&lt;/code&gt; which sits next to the &lt;code&gt;cucumber.js&lt;/code&gt; files and the &lt;code&gt;package.json&lt;/code&gt; files that I just mentioned.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org12bd8e9" class="outline-3"&gt;
-&lt;h3 id="org12bd8e9"&gt;The Feature File&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org12bd8e9"&gt;
+&lt;div id="outline-container-org1b25fa5" class="outline-3"&gt;
+&lt;h3 id="org1b25fa5"&gt;The Feature File&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org1b25fa5"&gt;
 &lt;p&gt;
 We're going to make a Greeter class that does one thing: greets users. Cucumber will look for files that have the &lt;code&gt;.feature&lt;/code&gt; file extension and parse the keywords to figure out what tests to expect. Here's the one for our greeter (in the file &lt;code&gt;greetings.feature&lt;/code&gt;).
 &lt;/p&gt;
@@ -461,18 +461,18 @@ We're going to make a Greeter class that does one thing: greets users. Cucumber 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org3230893" class="outline-3"&gt;
-&lt;h3 id="org3230893"&gt;The Test Steps&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org3230893"&gt;
+&lt;div id="outline-container-org6a7bddb" class="outline-3"&gt;
+&lt;h3 id="org6a7bddb"&gt;The Test Steps&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org6a7bddb"&gt;
 &lt;p&gt;
 Now that we have a feature file we have to write the tests that match it. In our feature file we used three special keywords - &lt;code&gt;Given&lt;/code&gt;, &lt;code&gt;When&lt;/code&gt; and &lt;code&gt;Then&lt;/code&gt; - which have to match functions in our test file to pass the cucumber tests, which I'll put in a file called &lt;code&gt;steps.js&lt;/code&gt;. In the example code they put it in a folder named &lt;code&gt;steps&lt;/code&gt;, which makes sense if you have more than one folder but this'll do for now.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org837f00a" class="outline-3"&gt;
-&lt;h3 id="org837f00a"&gt;The Imports&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org837f00a"&gt;
+&lt;div id="outline-container-org2de2954" class="outline-3"&gt;
+&lt;h3 id="org2de2954"&gt;The Imports&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org2de2954"&gt;
 &lt;p&gt;
 These are the ESM style imports. The &lt;code&gt;Greeter&lt;/code&gt; import statement is long because it's in a file accessible to this post rather than being next to the test-code so I have to pass in the path relative to where the &lt;code&gt;steps.js&lt;/code&gt; file is.
 &lt;/p&gt;
@@ -483,9 +483,9 @@ These are the ESM style imports. The &lt;code&gt;Greeter&lt;/code&gt; import sta
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org29a0558" class="outline-3"&gt;
-&lt;h3 id="org29a0558"&gt;Given&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org29a0558"&gt;
+&lt;div id="outline-container-orgb9b0afd" class="outline-3"&gt;
+&lt;h3 id="orgb9b0afd"&gt;Given&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgb9b0afd"&gt;
 &lt;p&gt;
 Our &lt;code&gt;given&lt;/code&gt; function just creates a Greeter instance. There are also functions like &lt;code&gt;Before&lt;/code&gt; and &lt;code&gt;BeforeAll&lt;/code&gt; that let you do something once before each Scenario (or all Scenarios), but we only have one scenario and it sounds clearer to me to say "Given a greeter…".
 &lt;/p&gt;
@@ -497,9 +497,9 @@ Our &lt;code&gt;given&lt;/code&gt; function just creates a Greeter instance. The
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgf03d757" class="outline-3"&gt;
-&lt;h3 id="orgf03d757"&gt;When&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgf03d757"&gt;
+&lt;div id="outline-container-orgf618368" class="outline-3"&gt;
+&lt;h3 id="orgf618368"&gt;When&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgf618368"&gt;
 &lt;p&gt;
 Our &lt;code&gt;when&lt;/code&gt; calls the &lt;code&gt;greetings&lt;/code&gt; method and saves the output so we can check it in our &lt;code&gt;Then&lt;/code&gt; function.
 &lt;/p&gt;
@@ -511,9 +511,9 @@ Our &lt;code&gt;when&lt;/code&gt; calls the &lt;code&gt;greetings&lt;/code&gt; m
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org4c4bb73" class="outline-3"&gt;
-&lt;h3 id="org4c4bb73"&gt;Then&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org4c4bb73"&gt;
+&lt;div id="outline-container-orge6793e3" class="outline-3"&gt;
+&lt;h3 id="orge6793e3"&gt;Then&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orge6793e3"&gt;
 &lt;p&gt;
 Our last function is interesting in that it uses what they call &lt;a href="https://github.com/cucumber/cucumber-expressions#readme"&gt;cucumber-expressions&lt;/a&gt;, which allow you to put types into the string definition to tell it what to look for in the feature definition so we don't have to set the exact value. In this case our feature file says &lt;code&gt;Then I should hear "Go away."&lt;/code&gt; The end of the statement is in quotes so cucumber knows that it's a string so we can replace it with &lt;code&gt;{string}&lt;/code&gt; when we define the function and cucumber will pass in the expected string as an argument to the function that we pass to the &lt;code&gt;Then&lt;/code&gt; function. Then we can use the passed-in value rather than hard-coding the expected string into our test. In this case the parameter &lt;code&gt;what_he_should_have_said&lt;/code&gt; will have the string "Go away." in it, extracted (without the quotes) from our feature file definition.
 &lt;/p&gt;
@@ -529,7 +529,7 @@ Our last function is interesting in that it uses what they call &lt;a href="http
 So far this is the basic structure of our testing folder (ignoring othe stuff that I didn't create or edit).
 &lt;/p&gt;
 
-&lt;pre class="example" id="org2e667e2"&gt;
+&lt;pre class="example" id="org4095869"&gt;
 cucumber.js
 package.json
 test-cucumber-and-ecma-script-modules-esm/
@@ -540,9 +540,9 @@ test-cucumber-and-ecma-script-modules-esm/
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org1ae7619" class="outline-2"&gt;
-&lt;h2 id="org1ae7619"&gt;The Greeter&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org1ae7619"&gt;
+&lt;div id="outline-container-org97896d2" class="outline-2"&gt;
+&lt;h2 id="org97896d2"&gt;The Greeter&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org97896d2"&gt;
 &lt;p&gt;
 Based on our test, this is what our Greeter class should look like.
 &lt;/p&gt;
@@ -557,7 +557,7 @@ Now let's define the Greeter (the software under test). Initially, just to see i
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;class&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;Greeter&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;greetings&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-&lt;span class="w"&gt;	&lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"Go away."&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"Go away."&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 
@@ -589,9 +589,9 @@ when defining the class, but, as seems to be the way with JavaScript, there's mu
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org6a4fb5a" class="outline-2"&gt;
-&lt;h2 id="org6a4fb5a"&gt;The Greeter package.json&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org6a4fb5a"&gt;
+&lt;div id="outline-container-orgfc5e0f8" class="outline-2"&gt;
+&lt;h2 id="orgfc5e0f8"&gt;The Greeter package.json&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgfc5e0f8"&gt;
 &lt;p&gt;
 This next bit took me a while to figure out. If you put the &lt;code&gt;Greeter&lt;/code&gt; definition into a sub-folder below where we're running the tests, it will recognize our &lt;code&gt;greeter.js&lt;/code&gt; file as an ESM module just fine. But, if you move it into a folder outside our tests as I did, node (or cucumber) suddenly won't be able to tell that it's an ESM module.
 &lt;/p&gt;
@@ -616,17 +616,17 @@ I suppose, maybe it's a little like an &lt;code&gt;__init__.py&lt;/code&gt; file
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgac1b86d" class="outline-2"&gt;
-&lt;h2 id="orgac1b86d"&gt;Now the Other Hard Part&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgac1b86d"&gt;
+&lt;div id="outline-container-orgc12fdf0" class="outline-2"&gt;
+&lt;h2 id="orgc12fdf0"&gt;Now the Other Hard Part&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgc12fdf0"&gt;
 &lt;p&gt;
 Okay, so the testing is working now, but just running tests is sort of meaningless (no offense to testers), the real point of it all is to get the tested JavaScript back into this post and use it.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org7bb1d50" class="outline-3"&gt;
-&lt;h3 id="org7bb1d50"&gt;First Let's Setup the Sketch Tag&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org7bb1d50"&gt;
+&lt;div id="outline-container-org5f9d16c" class="outline-3"&gt;
+&lt;h3 id="org5f9d16c"&gt;First Let's Setup the Sketch Tag&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org5f9d16c"&gt;
 &lt;p&gt;
 According to &lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script"&gt;Mozilla&lt;/a&gt;, &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; tags are assumed to be JavaScript if you don't set a MIME type (and so they tell you not to set the &lt;code&gt;type&lt;/code&gt; argument if it's a regular script) but to let the browser know it's a module you have to set the attribute &lt;code&gt;type="module"&lt;/code&gt; in the tag. I'm going to use a convoluted name for the actual p5 sketch file that I'm making, but for demonstration's sake let's pretend it's called &lt;code&gt;sketch.js&lt;/code&gt;, then the HTML tag to include it in this post would look like this.
 &lt;/p&gt;
@@ -640,9 +640,9 @@ The &lt;code&gt;Greeter&lt;/code&gt; class is going to be imported into our sket
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgc874d21" class="outline-3"&gt;
-&lt;h3 id="orgc874d21"&gt;Now Let's Use It&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgc874d21"&gt;
+&lt;div id="outline-container-org06c1bce" class="outline-3"&gt;
+&lt;h3 id="org06c1bce"&gt;Now Let's Use It&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org06c1bce"&gt;
 &lt;p&gt;
 We'll import the &lt;code&gt;Greeter&lt;/code&gt; into the sketch, setup the canvas, and then display the greeter's greetings on the canvas.
 &lt;/p&gt;
@@ -685,7 +685,7 @@ Impressed?
 Just for completeness, the folder with the code for the post has these files in it.
 &lt;/p&gt;
 
-&lt;pre class="example" id="org217bfac"&gt;
+&lt;pre class="example" id="org5d18263"&gt;
 greeter.js
 sketch.js
 package.json
@@ -694,18 +694,18 @@ package.json
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org92f9c0e" class="outline-2"&gt;
-&lt;h2 id="org92f9c0e"&gt;What Have We Learned?&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org92f9c0e"&gt;
+&lt;div id="outline-container-org32ee0e5" class="outline-2"&gt;
+&lt;h2 id="org32ee0e5"&gt;What Have We Learned?&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org32ee0e5"&gt;
 &lt;p&gt;
 This was an exercise in seeing if I could get cucumber.js and ESM modules working. In particular it was about testing code that gets included in this post and used by p5. This was a pretty simple example, but it seems to work so I'll take it as a start that I can reference when going back to work with more complex p5 code.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org390b8e8" class="outline-2"&gt;
-&lt;h2 id="org390b8e8"&gt;Links&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org390b8e8"&gt;
+&lt;div id="outline-container-orgd164bf9" class="outline-2"&gt;
+&lt;h2 id="orgd164bf9"&gt;Links&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgd164bf9"&gt;
 &lt;p&gt;
 These are (mostly) referred to in the body of the post, and the body also has links not in here, but for future reference, this should be enough to get back up to speed.
 &lt;/p&gt;
@@ -722,44 +722,44 @@ These are (mostly) referred to in the body of the post, and the body also has li
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;div id="text-table-of-contents" role="doc-toc"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org9f23ceb"&gt;What This Is&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org1d7af88"&gt;Setting Up the Tests&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org82de242"&gt;What This Is&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org0138e9d"&gt;Setting Up the Tests&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgb76eb53"&gt;Running the Tests&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgfe4c71e"&gt;Writing the Test File&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org0528559"&gt;Import Chai and Sinon&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org54e3431"&gt;Import the Color Increaser Class&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org179e5bb"&gt;Running the Tests&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgafc3bcb"&gt;Writing the Test File&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgd4cc7ca"&gt;Import Chai and Sinon&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org7e6c59d"&gt;Import the Color Increaser Class&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgba04fd1"&gt;The Whole Code Module&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org75fc0b3"&gt;Channel Constants&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org620ff89"&gt;Testing and Implementing the Color Increaser&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgde882bb"&gt;The Whole Code Module&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgd8b3b03"&gt;Channel Constants&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgf7e7dd7"&gt;Testing and Implementing the Color Increaser&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgf9c18b6"&gt;Mock Color&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org480b7c1"&gt;Setting Up the Tests&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgd208906"&gt;Does the ColorIncreaser Exist?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org62890ee"&gt;The ColorIncreaser Class&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orge61d849"&gt;Does it take an increment amount?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgd8645e6"&gt;Does it take a color?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org6ff82ca"&gt;The Increaser&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orge60dd64"&gt;Does it wrap red back to 255 when it hits 256?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org66bbace"&gt;Does Green Wrap Too?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org8c7603b"&gt;Does Blue Wrap Too?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgec0168d"&gt;The Next Method&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orga4ade0e"&gt;Does next return the color?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgac1c90c"&gt;Export the Color Increaser&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgb6ca543"&gt;Running The tests&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org8bfc947"&gt;Mock Color&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org496df64"&gt;Setting Up the Tests&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org539b6ee"&gt;Does the ColorIncreaser Exist?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgcc5f91d"&gt;The ColorIncreaser Class&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgfda8b5a"&gt;Does it take an increment amount?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgaf35038"&gt;Does it take a color?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org65e0ff5"&gt;The Increaser&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org3d9409f"&gt;Does it wrap red back to 255 when it hits 256?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orga5f1767"&gt;Does Green Wrap Too?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org4af4520"&gt;Does Blue Wrap Too?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgf5f42da"&gt;The Next Method&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org58d901b"&gt;Does next return the color?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org011cb1c"&gt;Export the Color Increaser&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org37922d4"&gt;Running The tests&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org31bd88c"&gt;The Sketch&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org639401f"&gt;The Sketch&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org675ec96"&gt;The Sketch Function&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org49bce0f"&gt;The &lt;code&gt;setup&lt;/code&gt; Function&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgd6314ac"&gt;The &lt;code&gt;draw&lt;/code&gt; Function&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org3834439"&gt;The Sketch Function&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org1b5beb2"&gt;The &lt;code&gt;setup&lt;/code&gt; Function&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org2f96f53"&gt;The &lt;code&gt;draw&lt;/code&gt; Function&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orgfd685f1"&gt;The End&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org3d8b7f5"&gt;Sources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#orga019fde"&gt;The End&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html#org1848408"&gt;Sources&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -771,22 +771,22 @@ These are (mostly) referred to in the body of the post, and the body also has li
 &lt;/p&gt;&lt;div class="p5js" id="6a5fb18a-bdd-sketch"&gt;&lt;/div&gt;
 
 
-&lt;div id="outline-container-org9f23ceb" class="outline-2"&gt;
-&lt;h2 id="org9f23ceb"&gt;What This Is&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org9f23ceb"&gt;
+&lt;div id="outline-container-org82de242" class="outline-2"&gt;
+&lt;h2 id="org82de242"&gt;What This Is&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org82de242"&gt;
 &lt;p&gt;
 This is a walk-through of the &lt;a href="https://p5js.org/learn/tdd.html"&gt;test-driven development example&lt;/a&gt; on the &lt;a href="https://p5js.org/"&gt;p5js site&lt;/a&gt;. The color changing square above is created by exhaustively stepping through the RGB values for a p5 &lt;a href="https://p5js.org/reference/#/p5.Color"&gt;color&lt;/a&gt;. The site documentation doesn't seem to tell you the name of the color array attribute so you can access it, instead it tells you to use setter methods, but the tutorial indicates that the array is stored as an attribute of the color object named &lt;code&gt;levels&lt;/code&gt; so we'll be working with that to change the colors.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org1d7af88" class="outline-2"&gt;
-&lt;h2 id="org1d7af88"&gt;Setting Up the Tests&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org1d7af88"&gt;
+&lt;div id="outline-container-org0138e9d" class="outline-2"&gt;
+&lt;h2 id="org0138e9d"&gt;Setting Up the Tests&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org0138e9d"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgb76eb53" class="outline-3"&gt;
-&lt;h3 id="orgb76eb53"&gt;Running the Tests&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgb76eb53"&gt;
+&lt;div id="outline-container-org179e5bb" class="outline-3"&gt;
+&lt;h3 id="org179e5bb"&gt;Running the Tests&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org179e5bb"&gt;
 &lt;p&gt;
 To run the tests I'll use three things:
 &lt;/p&gt;
@@ -821,13 +821,13 @@ Weirdly, the mocha &lt;a href="https://mochajs.org/#getting-started"&gt;Getting 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgfe4c71e" class="outline-3"&gt;
-&lt;h3 id="orgfe4c71e"&gt;Writing the Test File&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgfe4c71e"&gt;
+&lt;div id="outline-container-orgafc3bcb" class="outline-3"&gt;
+&lt;h3 id="orgafc3bcb"&gt;Writing the Test File&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgafc3bcb"&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgbd06e5f" class="outline-4"&gt;
-&lt;h4 id="orgbd06e5f"&gt;Put It In Strict Mode&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgbd06e5f"&gt;
+&lt;div id="outline-container-orgb8fa4f0" class="outline-4"&gt;
+&lt;h4 id="orgb8fa4f0"&gt;Put It In Strict Mode&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgb8fa4f0"&gt;
 &lt;p&gt;
 Javascript can be pretty lenient about letting what might be considered mistakes pass through without raising an error. I'll put the test-code into &lt;a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode"&gt;Strict Mode&lt;/a&gt;, making our mistakes more evident, hopefully, by putting this line at the top of the &lt;code&gt;test.js&lt;/code&gt; file:
 &lt;/p&gt;
@@ -838,9 +838,9 @@ Javascript can be pretty lenient about letting what might be considered mistakes
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org0528559" class="outline-3"&gt;
-&lt;h3 id="org0528559"&gt;Import Chai and Sinon&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org0528559"&gt;
+&lt;div id="outline-container-orgd4cc7ca" class="outline-3"&gt;
+&lt;h3 id="orgd4cc7ca"&gt;Import Chai and Sinon&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgd4cc7ca"&gt;
 &lt;p&gt;
 I'm going to use the &lt;a href="https://en.wikipedia.org/wiki/Behavior-driven_development?useskin=vector"&gt;Behavior-Driven Development&lt;/a&gt; (BDD) version of &lt;a href="https://www.chaijs.com/api/bdd/"&gt;Chai&lt;/a&gt; to make our assertions about what we expect the code to be doing.
 &lt;/p&gt;
@@ -864,9 +864,9 @@ I'm also going to stub some methods using &lt;a href="https://sinonjs.org/"&gt;s
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org54e3431" class="outline-3"&gt;
-&lt;h3 id="org54e3431"&gt;Import the Color Increaser Class&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org54e3431"&gt;
+&lt;div id="outline-container-org7e6c59d" class="outline-3"&gt;
+&lt;h3 id="org7e6c59d"&gt;Import the Color Increaser Class&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org7e6c59d"&gt;
 &lt;p&gt;
 We're going to create a &lt;code&gt;ColorIncreaser&lt;/code&gt; class which we need to import into the test code. Our import is going to look a little funky, though, because the sketch is in a folder created for this post.
 &lt;/p&gt;
@@ -901,9 +901,9 @@ Also, in order to be able to import the class we need to set it as exportable in
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgba04fd1" class="outline-2"&gt;
-&lt;h2 id="orgba04fd1"&gt;The Whole Code Module&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgba04fd1"&gt;
+&lt;div id="outline-container-orgde882bb" class="outline-2"&gt;
+&lt;h2 id="orgde882bb"&gt;The Whole Code Module&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgde882bb"&gt;
 &lt;p&gt;
 Since this is about coding test-driven I'm going to show the tests and then the implementation that gets written to pass the test. This makes it kind of disorienting to read so I thought I'd show the entire &lt;code&gt;color-increaser.js&lt;/code&gt; file that's being created here exactly as it ends up once it's all done.
 &lt;/p&gt;
@@ -954,9 +954,9 @@ Since this is about coding test-driven I'm going to show the tests and then the 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org75fc0b3" class="outline-2"&gt;
-&lt;h2 id="org75fc0b3"&gt;Channel Constants&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org75fc0b3"&gt;
+&lt;div id="outline-container-orgd8b3b03" class="outline-2"&gt;
+&lt;h2 id="orgd8b3b03"&gt;Channel Constants&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgd8b3b03"&gt;
 &lt;p&gt;
 I have a tendency to flip values around (sometimes it seems like blue should come before green, for example) so I like to create objects to hold values that get used repeatedly. This at the top of the same module as the Color Increaser class.
 &lt;/p&gt;
@@ -972,17 +972,17 @@ I have a tendency to flip values around (sometimes it seems like blue should com
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org620ff89" class="outline-2"&gt;
-&lt;h2 id="org620ff89"&gt;Testing and Implementing the Color Increaser&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org620ff89"&gt;
+&lt;div id="outline-container-orgf7e7dd7" class="outline-2"&gt;
+&lt;h2 id="orgf7e7dd7"&gt;Testing and Implementing the Color Increaser&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgf7e7dd7"&gt;
 &lt;p&gt;
 Now we'll write the tests and implement the &lt;code&gt;ColorIncreaser&lt;/code&gt; class along with it.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgf9c18b6" class="outline-3"&gt;
-&lt;h3 id="orgf9c18b6"&gt;Mock Color&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgf9c18b6"&gt;
+&lt;div id="outline-container-org8bfc947" class="outline-3"&gt;
+&lt;h3 id="org8bfc947"&gt;Mock Color&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org8bfc947"&gt;
 &lt;p&gt;
 We don't want to use any p5 objects in the testing so we'll make a fake &lt;a href="https://p5js.org/reference/#/p5/color"&gt;color&lt;/a&gt; object, implementing its undocumented (as far as I can tell) &lt;code&gt;levels&lt;/code&gt; attribute as an &lt;a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"&gt;Array&lt;/a&gt;.
 &lt;/p&gt;
@@ -1001,9 +1001,9 @@ We don't want to use any p5 objects in the testing so we'll make a fake &lt;a hr
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org480b7c1" class="outline-3"&gt;
-&lt;h3 id="org480b7c1"&gt;Setting Up the Tests&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org480b7c1"&gt;
+&lt;div id="outline-container-org496df64" class="outline-3"&gt;
+&lt;h3 id="org496df64"&gt;Setting Up the Tests&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org496df64"&gt;
 &lt;p&gt;
 &lt;code&gt;mocha&lt;/code&gt;'s &lt;code&gt;describe&lt;/code&gt; function acts like a header around our tests. Within it I'm setting some constants and also defining a &lt;code&gt;beforeEach&lt;/code&gt; function which will create a new &lt;code&gt;ColorIncreaser&lt;/code&gt; object before running each test so it won't have any changes we make in the other tests spilling over. Although I could import the &lt;code&gt;CHANNELS&lt;/code&gt; object with the constants I thought it'd be a better check to create a new set to double-check what's going on in the code being tested.
 &lt;/p&gt;
@@ -1019,18 +1019,18 @@ We don't want to use any p5 objects in the testing so we'll make a fake &lt;a hr
 
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nx"&gt;beforeEach&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;color_mock&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;MockColor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;RGB_MIN&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;RGB_MIN&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;			       &lt;/span&gt;&lt;span class="nx"&gt;RGB_MIN&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;RGB_MAX&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;                               &lt;/span&gt;&lt;span class="nx"&gt;RGB_MIN&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;RGB_MAX&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;color_increaser&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;ColorIncreaser&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;COLOR_INCREMENT&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;					 &lt;/span&gt;&lt;span class="nx"&gt;color_mock&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;                                         &lt;/span&gt;&lt;span class="nx"&gt;color_mock&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;});&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
 
-&lt;div id="outline-container-orgd208906" class="outline-3"&gt;
-&lt;h3 id="orgd208906"&gt;Does the ColorIncreaser Exist?&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgd208906"&gt;
+&lt;div id="outline-container-org539b6ee" class="outline-3"&gt;
+&lt;h3 id="org539b6ee"&gt;Does the ColorIncreaser Exist?&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org539b6ee"&gt;
 &lt;p&gt;
 Our first test makes sure that we were able to create the &lt;code&gt;ColorIncreaser&lt;/code&gt; object. This is actually a little bit of a fake because the &lt;code&gt;beforeEach&lt;/code&gt; will fail if we can't create the object and it won't actually reach this test. I suppose you could still break it by making a function named &lt;code&gt;ColorIncreaser&lt;/code&gt; instead of a class so this acts as an extra check.
 &lt;/p&gt;
@@ -1040,7 +1040,7 @@ First we make a section header to make it a little clearer (it doesn't actually 
 &lt;/p&gt;
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;describe&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"When the ColorIncreaser is constructed"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;	  &lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;
@@ -1059,9 +1059,9 @@ Mocha will &lt;a href="https://mochajs.org/#asynchronous-code"&gt;run the tests 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org62890ee" class="outline-3"&gt;
-&lt;h3 id="org62890ee"&gt;The ColorIncreaser Class&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org62890ee"&gt;
+&lt;div id="outline-container-orgcc5f91d" class="outline-3"&gt;
+&lt;h3 id="orgcc5f91d"&gt;The ColorIncreaser Class&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgcc5f91d"&gt;
 &lt;p&gt;
 Now that we have the test I'll define the class and its constructor. It's a pretty basic class, here's a class diagram of its attributes.
 &lt;/p&gt;
@@ -1083,9 +1083,9 @@ And here's the class and constructor definition.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orge61d849" class="outline-3"&gt;
-&lt;h3 id="orge61d849"&gt;Does it take an increment amount?&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orge61d849"&gt;
+&lt;div id="outline-container-orgfda8b5a" class="outline-3"&gt;
+&lt;h3 id="orgfda8b5a"&gt;Does it take an increment amount?&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgfda8b5a"&gt;
 &lt;p&gt;
 This is just a sanity check to make sure that the constructor actually saved the increment amount we passed in.
 &lt;/p&gt;
@@ -1099,9 +1099,9 @@ This is just a sanity check to make sure that the constructor actually saved the
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgd8645e6" class="outline-3"&gt;
-&lt;h3 id="orgd8645e6"&gt;Does it take a color?&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgd8645e6"&gt;
+&lt;div id="outline-container-orgaf35038" class="outline-3"&gt;
+&lt;h3 id="orgaf35038"&gt;Does it take a color?&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgaf35038"&gt;
 &lt;p&gt;
 This is another check to make sure the constructor saved the color object that got passed in. I couldn't find a same-object checker in &lt;code&gt;chai&lt;/code&gt; but the &lt;code&gt;eql&lt;/code&gt; is described as a check that the objects are "deeply-equal" which I assume is the same thing.
 &lt;/p&gt;
@@ -1115,9 +1115,9 @@ This is another check to make sure the constructor saved the color object that g
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org6ff82ca" class="outline-3"&gt;
-&lt;h3 id="org6ff82ca"&gt;The Increaser&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org6ff82ca"&gt;
+&lt;div id="outline-container-org65e0ff5" class="outline-3"&gt;
+&lt;h3 id="org65e0ff5"&gt;The Increaser&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org65e0ff5"&gt;
 &lt;p&gt;
 We're going to implement a method for the &lt;code&gt;ColorIncreaser&lt;/code&gt; that will increment the color-array so let's check that it works. It sort of treats the three color channels (Red, Green, and Blue… we'll pretend Alpha doesn't exist) like a three-digit number using base 255 instead of 10 and with the digits being BGR. So we start with all three channels at 0, then we increment red from 0 to 255 and when it hits 256 we set it back to 0 and set green to 1, then we repeat this over and over until green goes up to 256 at which point we reset both red and green to 0 and set blue to 1 and so on.
 &lt;/p&gt;
@@ -1131,9 +1131,9 @@ I'll add a &lt;code&gt;describe&lt;/code&gt; section to the tests to make it cle
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org291bfed" class="outline-4"&gt;
-&lt;h4 id="org291bfed"&gt;Does the red channel increase?&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org291bfed"&gt;
+&lt;div id="outline-container-org8358ef7" class="outline-4"&gt;
+&lt;h4 id="org8358ef7"&gt;Does the red channel increase?&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org8358ef7"&gt;
 &lt;p&gt;
 Until it increments the red channel past 255 the other channels don't change so we'll first test that only the red channel changes up until that point.
 &lt;/p&gt;
@@ -1141,12 +1141,12 @@ Until it increments the red channel past 255 the other channels don't change so 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;it&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Then it should increment red up until 255"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;done&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
 &lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;count&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nx"&gt;RGB_MIN&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;count&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;RGB_MAX&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;count&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-&lt;span class="w"&gt;	&lt;/span&gt;&lt;span class="nx"&gt;color_increaser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;increase&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nx"&gt;color_increaser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;increase&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 &lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;expected&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;RGB_MAX&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;RGB_MIN&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;RGB_MIN&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;RGB_MAX&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 
 &lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nx"&gt;CHANNELS&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;forEach&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;channel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;index&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;=&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-&lt;span class="w"&gt;	&lt;/span&gt;&lt;span class="nx"&gt;color_increaser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;color&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;levels&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;channel&lt;/span&gt;&lt;span class="p"&gt;]).&lt;/span&gt;&lt;span class="nx"&gt;to&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;equal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;expected&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;index&lt;/span&gt;&lt;span class="p"&gt;]));&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nx"&gt;color_increaser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;color&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;levels&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;channel&lt;/span&gt;&lt;span class="p"&gt;]).&lt;/span&gt;&lt;span class="nx"&gt;to&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;equal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;expected&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;index&lt;/span&gt;&lt;span class="p"&gt;]));&lt;/span&gt;
 
 &lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nx"&gt;done&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;});&lt;/span&gt;
@@ -1154,9 +1154,9 @@ Until it increments the red channel past 255 the other channels don't change so 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org772e97a" class="outline-4"&gt;
-&lt;h4 id="org772e97a"&gt;The Color-Increaser Method&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org772e97a"&gt;
+&lt;div id="outline-container-org38d4688" class="outline-4"&gt;
+&lt;h4 id="org38d4688"&gt;The Color-Increaser Method&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org38d4688"&gt;
 &lt;p&gt;
 So now I'll add the &lt;code&gt;increase&lt;/code&gt; method to the &lt;code&gt;ColorIncreaser&lt;/code&gt; class which adds the &lt;code&gt;color_increment&lt;/code&gt; to the red-channel when it's called.
 &lt;/p&gt;
@@ -1168,9 +1168,9 @@ So now I'll add the &lt;code&gt;increase&lt;/code&gt; method to the &lt;code&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orge60dd64" class="outline-3"&gt;
-&lt;h3 id="orge60dd64"&gt;Does it wrap red back to 255 when it hits 256?&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orge60dd64"&gt;
+&lt;div id="outline-container-org3d9409f" class="outline-3"&gt;
+&lt;h3 id="org3d9409f"&gt;Does it wrap red back to 255 when it hits 256?&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org3d9409f"&gt;
 &lt;p&gt;
 The channels can only go up to 255 so once we hit 256:
 &lt;/p&gt;
@@ -1237,17 +1237,17 @@ These are our expected values before and after the call to &lt;code&gt;increase&
 &lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nx"&gt;color_increaser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;color&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;levels&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;RED&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;RGB_MAX&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nx"&gt;color_increaser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;increase&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 &lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;expected&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;RGB_MIN&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;COLOR_INCREMENT&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;		      &lt;/span&gt;&lt;span class="nx"&gt;RGB_MIN&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;RGB_MAX&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+&lt;span class="w"&gt;                      &lt;/span&gt;&lt;span class="nx"&gt;RGB_MIN&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;RGB_MAX&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
 &lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nx"&gt;CHANNELS&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;forEach&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;channel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;index&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;=&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-&lt;span class="w"&gt;	&lt;/span&gt;&lt;span class="nx"&gt;color_increaser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;color&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;levels&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;channel&lt;/span&gt;&lt;span class="p"&gt;]).&lt;/span&gt;&lt;span class="nx"&gt;to&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;equal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;expected&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;index&lt;/span&gt;&lt;span class="p"&gt;]));&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nx"&gt;color_increaser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;color&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;levels&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;channel&lt;/span&gt;&lt;span class="p"&gt;]).&lt;/span&gt;&lt;span class="nx"&gt;to&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;equal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;expected&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;index&lt;/span&gt;&lt;span class="p"&gt;]));&lt;/span&gt;
 &lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nx"&gt;done&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;});&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgf7713cd" class="outline-4"&gt;
-&lt;h4 id="orgf7713cd"&gt;The Wrap-Red Conditional&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orgf7713cd"&gt;
+&lt;div id="outline-container-orgf298dad" class="outline-4"&gt;
+&lt;h4 id="orgf298dad"&gt;The Wrap-Red Conditional&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgf298dad"&gt;
 &lt;p&gt;
 Within the &lt;code&gt;increase&lt;/code&gt; method we add this little chunk after incrementing the red channel.
 &lt;/p&gt;
@@ -1261,9 +1261,9 @@ Within the &lt;code&gt;increase&lt;/code&gt; method we add this little chunk aft
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org66bbace" class="outline-3"&gt;
-&lt;h3 id="org66bbace"&gt;Does Green Wrap Too?&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org66bbace"&gt;
+&lt;div id="outline-container-orga5f1767" class="outline-3"&gt;
+&lt;h3 id="orga5f1767"&gt;Does Green Wrap Too?&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orga5f1767"&gt;
 &lt;p&gt;
 As with red, the green channel can only go up to 255 so once we increase green to 256:
 &lt;/p&gt;
@@ -1334,18 +1334,18 @@ These are our expected values before and after the call to &lt;code&gt;increase&
 &lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="nx"&gt;color_increaser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;increase&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 
 &lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;expected&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;RGB_MIN&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;RGB_MIN&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;		     &lt;/span&gt;&lt;span class="nx"&gt;COLOR_INCREMENT&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;RGB_MAX&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+&lt;span class="w"&gt;                     &lt;/span&gt;&lt;span class="nx"&gt;COLOR_INCREMENT&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;RGB_MAX&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
 
 &lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nx"&gt;CHANNELS&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;forEach&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;channel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;index&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;=&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-&lt;span class="w"&gt;	&lt;/span&gt;&lt;span class="nx"&gt;color_increaser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;color&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;levels&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;channel&lt;/span&gt;&lt;span class="p"&gt;]).&lt;/span&gt;&lt;span class="nx"&gt;to&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;equal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-&lt;span class="w"&gt;	  &lt;/span&gt;&lt;span class="nx"&gt;expected&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;index&lt;/span&gt;&lt;span class="p"&gt;]));&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nx"&gt;color_increaser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;color&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;levels&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;channel&lt;/span&gt;&lt;span class="p"&gt;]).&lt;/span&gt;&lt;span class="nx"&gt;to&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;equal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="nx"&gt;expected&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;index&lt;/span&gt;&lt;span class="p"&gt;]));&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;done&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 &lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="p"&gt;});&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org2357b5f" class="outline-4"&gt;
-&lt;h4 id="org2357b5f"&gt;The Wrap-Green Conditional&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org2357b5f"&gt;
+&lt;div id="outline-container-orgb6e80ed" class="outline-4"&gt;
+&lt;h4 id="orgb6e80ed"&gt;The Wrap-Green Conditional&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgb6e80ed"&gt;
 &lt;p&gt;
 Now within the &lt;code&gt;increase&lt;/code&gt; method we add this little chunk after incrementing the red channel to check the green channel.
 &lt;/p&gt;
@@ -1359,9 +1359,9 @@ Now within the &lt;code&gt;increase&lt;/code&gt; method we add this little chunk
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org8c7603b" class="outline-3"&gt;
-&lt;h3 id="org8c7603b"&gt;Does Blue Wrap Too?&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org8c7603b"&gt;
+&lt;div id="outline-container-org4af4520" class="outline-3"&gt;
+&lt;h3 id="org4af4520"&gt;Does Blue Wrap Too?&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org4af4520"&gt;
 &lt;p&gt;
 As with red and green, the blue channel can only go up to 255 so once we increase blue to 256:
 &lt;/p&gt;
@@ -1427,19 +1427,19 @@ These are our expected values before and after the call to &lt;code&gt;increase&
 &lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="nx"&gt;color_increaser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;increase&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 
 &lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="kd"&gt;let&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;expected&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;RGB_MIN&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;RGB_MIN&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;RGB_MIN&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;		     &lt;/span&gt;&lt;span class="nx"&gt;RGB_MAX&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+&lt;span class="w"&gt;                     &lt;/span&gt;&lt;span class="nx"&gt;RGB_MAX&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
 
 &lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nx"&gt;CHANNELS&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;forEach&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;channel&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;index&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;=&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-&lt;span class="w"&gt;	&lt;/span&gt;&lt;span class="nx"&gt;color_increaser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;color&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;levels&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;channel&lt;/span&gt;&lt;span class="p"&gt;]).&lt;/span&gt;&lt;span class="nx"&gt;to&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;equal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-&lt;span class="w"&gt;	  &lt;/span&gt;&lt;span class="nx"&gt;expected&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;index&lt;/span&gt;&lt;span class="p"&gt;]));&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nx"&gt;color_increaser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;color&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;levels&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;channel&lt;/span&gt;&lt;span class="p"&gt;]).&lt;/span&gt;&lt;span class="nx"&gt;to&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;equal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="nx"&gt;expected&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;index&lt;/span&gt;&lt;span class="p"&gt;]));&lt;/span&gt;
 
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;done&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 &lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="p"&gt;});&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org58b2468" class="outline-4"&gt;
-&lt;h4 id="org58b2468"&gt;The Wrap-Blue Conditional&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org58b2468"&gt;
+&lt;div id="outline-container-org18969d2" class="outline-4"&gt;
+&lt;h4 id="org18969d2"&gt;The Wrap-Blue Conditional&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org18969d2"&gt;
 &lt;p&gt;
 I originally just used a modulus to keep blue within range, but since we're allowing the user to change the increment this might not always go back to zero so here's the conditional that resets the blue channel if it exceeds the limit.
 &lt;/p&gt;
@@ -1456,9 +1456,9 @@ And there we have our exhaustive channel incrementer.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgec0168d" class="outline-3"&gt;
-&lt;h3 id="orgec0168d"&gt;The Next Method&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgec0168d"&gt;
+&lt;div id="outline-container-orgf5f42da" class="outline-3"&gt;
+&lt;h3 id="orgf5f42da"&gt;The Next Method&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgf5f42da"&gt;
 &lt;p&gt;
 I'm going to implement a &lt;code&gt;next&lt;/code&gt; method to simplify things a little. It'll call increase and the return the color object. Just because.
 &lt;/p&gt;
@@ -1467,9 +1467,9 @@ I'm going to implement a &lt;code&gt;next&lt;/code&gt; method to simplify things
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org2be9f8f" class="outline-4"&gt;
-&lt;h4 id="org2be9f8f"&gt;Does the next method increase the color?&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org2be9f8f"&gt;
+&lt;div id="outline-container-org5fc079b" class="outline-4"&gt;
+&lt;h4 id="org5fc079b"&gt;Does the next method increase the color?&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org5fc079b"&gt;
 &lt;p&gt;
 To check that next calls the &lt;code&gt;increase&lt;/code&gt; method I'll monkey-patch it with a &lt;a href="https://sinonjs.org/releases/latest/spies/"&gt;sinon spy&lt;/a&gt; and check that when we call &lt;code&gt;next&lt;/code&gt; the &lt;code&gt;increase&lt;/code&gt; spy gets called.
 &lt;/p&gt;
@@ -1486,9 +1486,9 @@ To check that next calls the &lt;code&gt;increase&lt;/code&gt; method I'll monke
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org78a1a04" class="outline-4"&gt;
-&lt;h4 id="org78a1a04"&gt;The Next Method&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-org78a1a04"&gt;
+&lt;div id="outline-container-orga301e5a" class="outline-4"&gt;
+&lt;h4 id="orga301e5a"&gt;The Next Method&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orga301e5a"&gt;
 &lt;p&gt;
 Now I'll implement the &lt;code&gt;next&lt;/code&gt; method and have it call the &lt;code&gt;increase&lt;/code&gt; method.
 &lt;/p&gt;
@@ -1500,9 +1500,9 @@ Now I'll implement the &lt;code&gt;next&lt;/code&gt; method and have it call the
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orga4ade0e" class="outline-3"&gt;
-&lt;h3 id="orga4ade0e"&gt;Does next return the color?&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orga4ade0e"&gt;
+&lt;div id="outline-container-org58d901b" class="outline-3"&gt;
+&lt;h3 id="org58d901b"&gt;Does next return the color?&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org58d901b"&gt;
 &lt;p&gt;
 Instead of requiring the user to make two calls I'll have the next method return the color object directly.
 &lt;/p&gt;
@@ -1516,9 +1516,9 @@ Instead of requiring the user to make two calls I'll have the next method return
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orge0ff2d3" class="outline-4"&gt;
-&lt;h4 id="orge0ff2d3"&gt;Return the color&lt;/h4&gt;
-&lt;div class="outline-text-4" id="text-orge0ff2d3"&gt;
+&lt;div id="outline-container-org56b12d1" class="outline-4"&gt;
+&lt;h4 id="org56b12d1"&gt;Return the color&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org56b12d1"&gt;
 &lt;p&gt;
 Now in our &lt;code&gt;ColorIncreaser.next&lt;/code&gt; method we return the color.
 &lt;/p&gt;
@@ -1528,9 +1528,9 @@ Now in our &lt;code&gt;ColorIncreaser.next&lt;/code&gt; method we return the col
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgac1c90c" class="outline-3"&gt;
-&lt;h3 id="orgac1c90c"&gt;Export the Color Increaser&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgac1c90c"&gt;
+&lt;div id="outline-container-org011cb1c" class="outline-3"&gt;
+&lt;h3 id="org011cb1c"&gt;Export the Color Increaser&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org011cb1c"&gt;
 &lt;p&gt;
 The implementation so far is good enough to get the code working within the p5 sketch, which would normally be the ultimate goal. But in order for the test code to be able to import the &lt;code&gt;ColorIncreaser&lt;/code&gt; (using the &lt;code&gt;require&lt;/code&gt; function) we need to add a line in the file with the &lt;code&gt;ColorIncreaser&lt;/code&gt; definition to export it.
 &lt;/p&gt;
@@ -1546,9 +1546,9 @@ The code given in the tutorial just has the export line, but this will raise an 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgb6ca543" class="outline-3"&gt;
-&lt;h3 id="orgb6ca543"&gt;Running The tests&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgb6ca543"&gt;
+&lt;div id="outline-container-org37922d4" class="outline-3"&gt;
+&lt;h3 id="org37922d4"&gt;Running The tests&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org37922d4"&gt;
 &lt;p&gt;
 Now, let's see what it looks like when we run the tests.
 &lt;/p&gt;
@@ -1556,7 +1556,7 @@ Now, let's see what it looks like when we run the tests.
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mocha ../tests/test*
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;pre class="example" id="org5199600"&gt;
+&lt;pre class="example" id="orgae6c434"&gt;
 
 
 Given the ColorIncreaser class definition
@@ -1585,17 +1585,17 @@ The output in the terminal has some color added to the text so it looks prettier
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org31bd88c" class="outline-2"&gt;
-&lt;h2 id="org31bd88c"&gt;The Sketch&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org31bd88c"&gt;
+&lt;div id="outline-container-org639401f" class="outline-2"&gt;
+&lt;h2 id="org639401f"&gt;The Sketch&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org639401f"&gt;
 &lt;p&gt;
 Now that we have the &lt;code&gt;ColorIncreaser&lt;/code&gt; we can add it to a sketch to change the colors of the square that we're drawing.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org675ec96" class="outline-3"&gt;
-&lt;h3 id="org675ec96"&gt;The Sketch Function&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org675ec96"&gt;
+&lt;div id="outline-container-org3834439" class="outline-3"&gt;
+&lt;h3 id="org3834439"&gt;The Sketch Function&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org3834439"&gt;
 &lt;p&gt;
 As I noted before, I'm using the instance-mode syntax for the sketch so this is the function that holds the &lt;code&gt;setup&lt;/code&gt; and &lt;code&gt;draw&lt;/code&gt; functions.
 &lt;/p&gt;
@@ -1608,9 +1608,9 @@ As I noted before, I'm using the instance-mode syntax for the sketch so this is 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org49bce0f" class="outline-3"&gt;
-&lt;h3 id="org49bce0f"&gt;The &lt;code&gt;setup&lt;/code&gt; Function&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org49bce0f"&gt;
+&lt;div id="outline-container-org1b5beb2" class="outline-3"&gt;
+&lt;h3 id="org1b5beb2"&gt;The &lt;code&gt;setup&lt;/code&gt; Function&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org1b5beb2"&gt;
 &lt;p&gt;
 The setup  creates the canvas and color increaser instance.
 &lt;/p&gt;
@@ -1630,9 +1630,9 @@ The setup  creates the canvas and color increaser instance.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgd6314ac" class="outline-3"&gt;
-&lt;h3 id="orgd6314ac"&gt;The &lt;code&gt;draw&lt;/code&gt; Function&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgd6314ac"&gt;
+&lt;div id="outline-container-org2f96f53" class="outline-3"&gt;
+&lt;h3 id="org2f96f53"&gt;The &lt;code&gt;draw&lt;/code&gt; Function&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org2f96f53"&gt;
 &lt;p&gt;
 The draw sets the background color and increases its value once per frame.
 &lt;/p&gt;
@@ -1645,18 +1645,18 @@ The draw sets the background color and increases its value once per frame.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgfd685f1" class="outline-2"&gt;
-&lt;h2 id="orgfd685f1"&gt;The End&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgfd685f1"&gt;
+&lt;div id="outline-container-orga019fde" class="outline-2"&gt;
+&lt;h2 id="orga019fde"&gt;The End&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orga019fde"&gt;
 &lt;p&gt;
 So, there you go. The sketch wasn't so exciting, but the main value in going through the exercise, I think, was being able to get the javascript testing infrastructure working and getting back into using chai and sinon and the crazy world of module imports in javascript.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org3d8b7f5" class="outline-2"&gt;
-&lt;h2 id="org3d8b7f5"&gt;Sources&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org3d8b7f5"&gt;
+&lt;div id="outline-container-org1848408" class="outline-2"&gt;
+&lt;h2 id="org1848408"&gt;Sources&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org1848408"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;Behavior-driven development. In: Wikipedia [Internet]. 2023 [cited 2023 Jun 9]. Available from: &lt;a href="https://en.wikipedia.org/w/index.php?title=Behavior-driven_development&amp;amp;oldid=1158619924"&gt;https://en.wikipedia.org/w/index.php?title=Behavior-driven_development&amp;amp;oldid=1158619924&lt;/a&gt;&lt;/li&gt;
 
@@ -1669,9 +1669,9 @@ So, there you go. The sketch wasn't so exciting, but the main value in going thr
 &lt;li&gt;Unit Testing and Test Driven Development | p5.js [Internet]. [cited 2023 Jun 8]. Available from: &lt;a href="https://p5js.org/learn/tdd.html"&gt;https://p5js.org/learn/tdd.html&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><category>javascript</category><category>p5.js</category><category>testing</category><guid>https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html</guid><pubDate>Fri, 09 Jun 2023 21:03:10 GMT</pubDate></item><item><title>Bubba Test</title><link>https://necromuralist.github.io/Ape-Iron/posts/bubba-test/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="outline-container-org5175ef8" class="outline-2"&gt;
-&lt;h2 id="org5175ef8"&gt;Big Bubba&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org5175ef8"&gt;
+&lt;/div&gt;</description><category>javascript</category><category>p5.js</category><category>testing</category><guid>https://necromuralist.github.io/Ape-Iron/posts/bdd-testing-p5/index.html</guid><pubDate>Fri, 09 Jun 2023 21:03:10 GMT</pubDate></item><item><title>Bubba Test</title><link>https://necromuralist.github.io/Ape-Iron/posts/bubba-test/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="outline-container-org15a016e" class="outline-2"&gt;
+&lt;h2 id="org15a016e"&gt;Big Bubba&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org15a016e"&gt;
 &lt;p&gt;
 This is a webp image converted from a 600 dpi scanned image that was converted to grayscale using gimp.
 &lt;/p&gt;
@@ -1688,9 +1688,9 @@ This is a webp image converted from a 600 dpi scanned image that was converted t
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orge61d6d8" class="outline-2"&gt;
-&lt;h2 id="orge61d6d8"&gt;Smaller Bubba&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orge61d6d8"&gt;
+&lt;div id="outline-container-orgf689b09" class="outline-2"&gt;
+&lt;h2 id="orgf689b09"&gt;Smaller Bubba&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgf689b09"&gt;
 &lt;p&gt;
 This is the same image but scaled down to a width of 2,500 pixels.
 &lt;/p&gt;
@@ -1706,9 +1706,9 @@ This is the same image but scaled down to a width of 2,500 pixels.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-orgbddcbdf" class="outline-2"&gt;
-&lt;h2 id="orgbddcbdf"&gt;Hosted On PCloud&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgbddcbdf"&gt;
+&lt;div id="outline-container-org5007b5b" class="outline-2"&gt;
+&lt;h2 id="org5007b5b"&gt;Hosted On PCloud&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org5007b5b"&gt;
 &lt;p&gt;
 This is the smaller image hosted on pcloud instead of as part of this repository. To do this you need to go to put the image in the pCloud "Public Folder" and then go to the pcloud website to get the URL. The "Link For Websites" they give you is an anchor so you can download the image (or whatever file you're sharing, so you need to grap the URL and put it in an &lt;code&gt;img&lt;/code&gt; tag instead).
 &lt;/p&gt;
@@ -1718,18 +1718,18 @@ This is the smaller image hosted on pcloud instead of as part of this repository
 &lt;/div&gt;
 
 
-&lt;div id="outline-container-org13bb64d" class="outline-2"&gt;
-&lt;h2 id="org13bb64d"&gt;Conclusion&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org13bb64d"&gt;
+&lt;div id="outline-container-org5b56f57" class="outline-2"&gt;
+&lt;h2 id="org5b56f57"&gt;Conclusion&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org5b56f57"&gt;
 &lt;p&gt;
 The intention here was to figure out either what size to make the image so that it won't eat up my GitHub quota or to see how well putting it on pCloud would work. This particular image might not have been the best test for this, though, as the file size endede up being small enough that worrying about using an external image host is maybe not worth the time spent thinking about it. But I'll keep testing as I make the images more complex and perhaps at some point it will make sense to use an external host. In the mean time, using the bigger file didn't really improve the image so at least I know that using 2,500 pixels for the width is good enough.
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><category>comics</category><category>testing</category><guid>https://necromuralist.github.io/Ape-Iron/posts/bubba-test/index.html</guid><pubDate>Wed, 15 Mar 2023 01:04:56 GMT</pubDate></item><item><title>Bag Man</title><link>https://necromuralist.github.io/Ape-Iron/posts/bag-man/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="outline-container-org692023c" class="outline-2"&gt;
-&lt;h2 id="org692023c"&gt;The Bag Man&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org692023c"&gt;
+&lt;/div&gt;</description><category>comics</category><category>testing</category><guid>https://necromuralist.github.io/Ape-Iron/posts/bubba-test/index.html</guid><pubDate>Wed, 15 Mar 2023 01:04:56 GMT</pubDate></item><item><title>Bag Man</title><link>https://necromuralist.github.io/Ape-Iron/posts/bag-man/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="outline-container-orga549617" class="outline-2"&gt;
+&lt;h2 id="orga549617"&gt;The Bag Man&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orga549617"&gt;
 &lt;p&gt;
-This post was created to see what happens in the slideshow if you put all the image files in the &lt;code&gt;images&lt;/code&gt; folder without sub-folders, it's a companion to the &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/image-testing/"&gt;Image Testing&lt;/a&gt; post.
+This post was created to see what happens in the slideshow if you put all the image files in the &lt;code&gt;images&lt;/code&gt; folder without sub-folders, it's a companion to the &lt;a href="https://necromuralist.github.io/Ape-Iron/posts/image-testing/index.html"&gt;Image Testing&lt;/a&gt; post.
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -1738,14 +1738,14 @@ This post was created to see what happens in the slideshow if you put all the im
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org39f46a3" class="outline-2"&gt;
-&lt;h2 id="org39f46a3"&gt;The Bag Man Without Thumbnails&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org39f46a3"&gt;
+&lt;div id="outline-container-org198faea" class="outline-2"&gt;
+&lt;h2 id="org198faea"&gt;The Bag Man Without Thumbnails&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org198faea"&gt;
 &lt;p&gt;
 If you want to just display the image they recommend you put it in the &lt;code&gt;files&lt;/code&gt; folder, but you can still reference it in the images folder too, but you need to be aware of the fact that the folder path has to change. This org-reference:
 &lt;/p&gt;
 
-&lt;pre class="example" id="org0d93db7"&gt;
+&lt;pre class="example" id="orgac8fe0b"&gt;
 [[img-url:../../images/bag-man.webp]]
 &lt;/pre&gt;
 
@@ -1759,9 +1759,9 @@ Will include this (full-sized) image (&lt;b&gt;&lt;b&gt;note:&lt;/b&gt;&lt;/b&gt
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org26e5a14" class="outline-2"&gt;
-&lt;h2 id="org26e5a14"&gt;Bag-Man Re-Crafted&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org26e5a14"&gt;
+&lt;div id="outline-container-org35e4a21" class="outline-2"&gt;
+&lt;h2 id="org35e4a21"&gt;Bag-Man Re-Crafted&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org35e4a21"&gt;
 &lt;p&gt;
 This was a tracing of the bag man onto kraft paper to mess around with gouache.
 &lt;/p&gt;
@@ -1770,31 +1770,31 @@ This was a tracing of the bag man onto kraft paper to mess around with gouache.
 &lt;a href="https://necromuralist.github.io/Ape-Iron/images/bag-man-kraft.webp" class="image-reference"&gt;&lt;img src="https://necromuralist.github.io/Ape-Iron/images/bag-man-kraft.thumbnail.webp" alt="Bag-Man &amp;amp; Purse-Dog On Kraft Paper"&gt;&lt;/a&gt;
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><category>images</category><category>testing</category><guid>https://necromuralist.github.io/Ape-Iron/posts/bag-man/index.html</guid><pubDate>Fri, 12 Feb 2021 02:03:27 GMT</pubDate></item><item><title>Image Testing</title><link>https://necromuralist.github.io/Ape-Iron/posts/image-testing/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="outline-container-orgc0b1a0b" class="outline-2"&gt;
-&lt;h2 id="orgc0b1a0b"&gt;Thumbnail With Baguette Box&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-orgc0b1a0b"&gt;
+&lt;/div&gt;</description><category>images</category><category>testing</category><guid>https://necromuralist.github.io/Ape-Iron/posts/bag-man/index.html</guid><pubDate>Fri, 12 Feb 2021 02:03:27 GMT</pubDate></item><item><title>Image Testing</title><link>https://necromuralist.github.io/Ape-Iron/posts/image-testing/index.html</link><dc:creator>The Cloistered Monkey</dc:creator><description>&lt;div id="outline-container-orgc55292c" class="outline-2"&gt;
+&lt;h2 id="orgc55292c"&gt;Thumbnail With Baguette Box&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgc55292c"&gt;
 &lt;p&gt;
 This is a look at using an &lt;a href="https://getnikola.com/handbook.html#embedding-images"&gt;embedded image&lt;/a&gt; from the &lt;code&gt;images&lt;/code&gt; folder. If you put the files in the &lt;code&gt;images&lt;/code&gt; folder then it automatically creates thumbnails and a slide-show, but there's a little trick to getting the folder references right. 
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id="outline-container-org29c36c8" class="outline-3"&gt;
-&lt;h3 id="org29c36c8"&gt;HTML&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-org29c36c8"&gt;
+&lt;div id="outline-container-orgc0eecc9" class="outline-3"&gt;
+&lt;h3 id="orgc0eecc9"&gt;HTML&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgc0eecc9"&gt;
 &lt;p&gt;
 If you use HTML you can just assume that the &lt;code&gt;images&lt;/code&gt; folder is at the root of the site (make sure to set the class to "reference").
 &lt;/p&gt;
 
-&lt;pre class="example" id="orgccabf2b"&gt;
+&lt;pre class="example" id="org70e222b"&gt;
 &amp;lt;a class="reference" href="/images/eyeball-man.webp" alt="Eyeball Man"&amp;gt;&amp;lt;img src="/images/eyeball-man.thumbnail.webp"&amp;gt;&amp;lt;/a&amp;gt;
 &lt;/pre&gt;
 
 &lt;a class="reference" href="https://necromuralist.github.io/Ape-Iron/images/eyeball-man.webp" alt="Eyeball Man"&gt;&lt;img src="https://necromuralist.github.io/Ape-Iron/images/eyeball-man.thumbnail.webp"&gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-orgcd867cf" class="outline-3"&gt;
-&lt;h3 id="orgcd867cf"&gt;The Thumbnail Shortcode&lt;/h3&gt;
-&lt;div class="outline-text-3" id="text-orgcd867cf"&gt;
+&lt;div id="outline-container-org5331866" class="outline-3"&gt;
+&lt;h3 id="org5331866"&gt;The Thumbnail Shortcode&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org5331866"&gt;
 &lt;p&gt;
 It took me a while to stumble upon this, but there is an &lt;code&gt;image&lt;/code&gt; shortcode for those of us not using ReST (although it isn't directly linked to in the documentation for the ReST directive, from what I could tell). So if you want to do it the easier way:
 &lt;/p&gt;
@@ -1818,9 +1818,9 @@ This will give you a thumbnail which will produce a pop-up to the original image
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id="outline-container-org21f38f2" class="outline-2"&gt;
-&lt;h2 id="org21f38f2"&gt;More Notes&lt;/h2&gt;
-&lt;div class="outline-text-2" id="text-org21f38f2"&gt;
+&lt;div id="outline-container-orgbff1c0d" class="outline-2"&gt;
+&lt;h2 id="orgbff1c0d"&gt;More Notes&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgbff1c0d"&gt;
 &lt;ul class="org-ul"&gt;
 &lt;li&gt;The &lt;code&gt;alt&lt;/code&gt; attribute adds a title to the images in the slide show&lt;/li&gt;
 &lt;li&gt;Nikola builds the slideshow from all the images on the page. So if you only have one post open, it will show the post's images, but if you are in the blog-post index and there's more than one post shown, it will pick up the images from all the posts.&lt;/li&gt;

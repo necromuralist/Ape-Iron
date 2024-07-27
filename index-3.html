@@ -18,9 +18,10 @@
 <link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
 <link href="favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
 <link href="site.webmanifest" rel="manifest">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+<script crossorigin="anonymous" integrity="sha512-d6sc8kbZEtA2LwB9m/ck0FhvyUwVfdmvTeyJRprmj7Wg9wRFtHDIpr6qk4g/y3Ix3O9I6KHIv6SGu9f7RaP1Gw==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+<script crossorigin="anonymous" integrity="sha512-d6sc8kbZEtA2LwB9m/ck0FhvyUwVfdmvTeyJRprmj7Wg9wRFtHDIpr6qk4g/y3Ix3O9I6KHIv6SGu9f7RaP1Gw==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+<script crossorigin="anonymous" integrity="sha512-d6sc8kbZEtA2LwB9m/ck0FhvyUwVfdmvTeyJRprmj7Wg9wRFtHDIpr6qk4g/y3Ix3O9I6KHIv6SGu9f7RaP1Gw==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+<script crossorigin="anonymous" integrity="sha512-d6sc8kbZEtA2LwB9m/ck0FhvyUwVfdmvTeyJRprmj7Wg9wRFtHDIpr6qk4g/y3Ix3O9I6KHIv6SGu9f7RaP1Gw==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
 </head>
 <body>
 <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a> <!-- Menubar -->
@@ -49,6 +50,380 @@
 <div class="postindex">
 <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article">
 <header>
+<h1 class="p-name entry-title"><a class="u-url" href="posts/generative-art-spiral/index.html">Generative Art: Spiral</a></h1>
+<div class="metadata">
+<p class="byline author vcard"><span class="byline-name fn" itemprop="author">The Cloistered Monkey</span></p>
+<p class="dateline"><a href="posts/generative-art-spiral/index.html" rel="bookmark"><time class="published dt-published" datetime="2023-06-17T16:38:42-07:00" itemprop="datePublished" title="2023-06-17 16:38">2023-06-17 16:38</time></a></p>
+</div>
+</header>
+<div class="p-summary entry-summary">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="posts/generative-art-spiral/index.html#org724b3f6">The Div IDs</a>
+<ul>
+<li><a href="posts/generative-art-spiral/index.html#org925a9dd">The Sketch Div</a></li>
+<li><a href="posts/generative-art-spiral/index.html#org834fc92">The Slider Divs</a></li>
+<li><a href="posts/generative-art-spiral/index.html#orgd4875d0">Text Divs</a></li>
+</ul>
+</li>
+<li><a href="posts/generative-art-spiral/index.html#orgc0d3c67">The Slider Settings</a>
+<ul>
+<li><a href="posts/generative-art-spiral/index.html#org6ac7eb3">The Validator</a></li>
+<li><a href="posts/generative-art-spiral/index.html#org6bbaa3c">Angle Slider</a></li>
+<li><a href="posts/generative-art-spiral/index.html#org568b7bd">Radius Slider</a></li>
+<li><a href="posts/generative-art-spiral/index.html#org00aecf9">Circle Slider</a></li>
+</ul>
+</li>
+<li><a href="posts/generative-art-spiral/index.html#org1b32172">The Spiralizer</a>
+<ul>
+<li><a href="posts/generative-art-spiral/index.html#org394cb32">Class Declaration</a></li>
+<li><a href="posts/generative-art-spiral/index.html#org4038061">The Constructor</a></li>
+<li><a href="posts/generative-art-spiral/index.html#orgef8ebbf">The Draw Method</a></li>
+<li><a href="posts/generative-art-spiral/index.html#org585a43f">Reset</a></li>
+</ul>
+</li>
+<li><a href="posts/generative-art-spiral/index.html#org7c54a79">The Spiral Sketch</a>
+<ul>
+<li><a href="posts/generative-art-spiral/index.html#org3080b8c">Function Declaration</a></li>
+<li><a href="posts/generative-art-spiral/index.html#org6838cb4">Setup</a></li>
+<li><a href="posts/generative-art-spiral/index.html#org3395e9f">Draw</a></li>
+<li><a href="posts/generative-art-spiral/index.html#org03e476e">Double-Clicked</a></li>
+<li><a href="posts/generative-art-spiral/index.html#org2763fa9">The P5 Instance</a></li>
+</ul>
+</li>
+<li><a href="posts/generative-art-spiral/index.html#org717bd76">References</a></li>
+</ul>
+</div>
+</div>
+<p>
+<script src="posts/generative-art-spiral/spiral.js" type="module"></script></p>
+<div class="p5js" id="spiral-0a168ba9"></div>
+<div id="angle-text-0a168ba9"></div>
+<div id="angle-slider-0a168ba9"></div>
+<div id="radius-text-0a168ba9"></div>
+<div id="radius-slider-0a168ba9"></div>
+<div id="circle-text-0a168ba9"></div>
+<div id="circle-slider-0a168ba9"></div>
+<div class="outline-2" id="outline-container-org724b3f6">
+<h2 id="org724b3f6">The Div IDs</h2>
+<div class="outline-text-2" id="text-org724b3f6">
+<p>To specify where the parts of the sketch go I added some <code>div</code> tags to the HTML so I'm going to create some javascript constants with the div IDs to make it easier to keep track of them.</p>
+</div>
+<div class="outline-3" id="outline-container-org925a9dd">
+<h3 id="org925a9dd">The Sketch Div</h3>
+<div class="outline-text-3" id="text-org925a9dd">
+<p>This is the ID for the <code>div</code> where the main sketch will go, it gets passed to the p5 constructor, along with the sketch definition, to create the <a href="posts/generative-art-spiral/index.html#org2763fa9">the P5 instance</a>.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">SPIRAL_DIV</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"spiral-0a168ba9"</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org834fc92">
+<h3 id="org834fc92">The Slider Divs</h3>
+<div class="outline-text-3" id="text-org834fc92">
+<p>I'm going to add some sliders to make it easier to adjust some of the parameters and see how that affects the sketch. These are the IDs of the <code>div</code> tags where I'm going to put the sliders to change some of the sketch values. The angle and radius sliders will set how much the angle and radius will change as the circle is drawn. If, for example, the angle slider is set to 5, then every point that's added will be rotated five degrees from the previous point, and if the radius is set to 5, then the radius will grow by 5 every time a point is added.</p>
+<p>The circle slider is a little different in that it sets the diameter for the circles that I'm drawing to create the spiral, so it's just an aesthetic setting.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">SPIRAL_ANGLE_SLIDER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"angle-slider-0a168ba9"</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">SPIRAL_RADIUS_SLIDER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"radius-slider-0a168ba9"</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">SPIRAL_CIRCLE_SLIDER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"circle-slider-0a168ba9"</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orgd4875d0">
+<h3 id="orgd4875d0">Text Divs</h3>
+<div class="outline-text-3" id="text-orgd4875d0">
+<p>I also created some <code>div</code> tags that I'll put some text into to show the current value of each of the sliders.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">SPIRAL_ANGLE_TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"angle-text-0a168ba9"</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">SPIRAL_RADIUS_TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"radius-text-0a168ba9"</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">SPIRAL_CIRCLE_TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"circle-text-0a168ba9"</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-orgc0d3c67">
+<h2 id="orgc0d3c67">The Slider Settings</h2>
+<div class="outline-text-2" id="text-orgc0d3c67"></div>
+<div class="outline-3" id="outline-container-org6ac7eb3">
+<h3 id="org6ac7eb3">The Validator</h3>
+<div class="outline-text-3" id="text-org6ac7eb3">
+<p>This is used by the settings classes to try and see if I'm passing in valid arguments.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">VALIDATOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Validator</span><span class="p">(</span><span class="nb">document</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org6bbaa3c">
+<h3 id="org6bbaa3c">Angle Slider</h3>
+<div class="outline-text-3" id="text-org6bbaa3c">
+<p>The values used to create the angle-increment slider.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">ANGLE_SLIDER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">SliderSettings</span><span class="p">(</span>
+<span class="w">  </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">  </span><span class="mf">40</span><span class="p">,</span>
+<span class="w">  </span><span class="mf">5</span><span class="p">,</span>
+<span class="w">  </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">SPIRAL_ANGLE_SLIDER</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">VALIDATOR</span>
+<span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">ANGLE_CAPTION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">CaptionSettings</span><span class="p">(</span>
+<span class="w">  </span><span class="s2">"Angle Increment"</span><span class="p">,</span>
+<span class="w">  </span><span class="mf">2</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">SPIRAL_ANGLE_TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">VALIDATOR</span>
+<span class="p">);</span>
+
+<span class="nx">ANGLE_SLIDER</span><span class="p">.</span><span class="nx">check_rep</span><span class="p">();</span>
+<span class="nx">ANGLE_CAPTION</span><span class="p">.</span><span class="nx">check_rep</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org568b7bd">
+<h3 id="org568b7bd">Radius Slider</h3>
+<div class="outline-text-3" id="text-org568b7bd">
+<p>The values used to create the radius increment slider.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">RADIUS_SLIDER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">SliderSettings</span><span class="p">(</span>
+<span class="w">  </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">  </span><span class="mf">20</span><span class="p">,</span>
+<span class="w">  </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">  </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">SPIRAL_RADIUS_SLIDER</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">VALIDATOR</span>
+<span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">RADIUS_CAPTION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">CaptionSettings</span><span class="p">(</span>
+<span class="w">  </span><span class="s2">"Radius Increment"</span><span class="p">,</span>
+<span class="w">  </span><span class="mf">2</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">SPIRAL_RADIUS_TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">VALIDATOR</span>
+<span class="p">);</span>
+
+<span class="nx">RADIUS_SLIDER</span><span class="p">.</span><span class="nx">check_rep</span><span class="p">();</span>
+<span class="nx">RADIUS_CAPTION</span><span class="p">.</span><span class="nx">check_rep</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org00aecf9">
+<h3 id="org00aecf9">Circle Slider</h3>
+<div class="outline-text-3" id="text-org00aecf9">
+<p>The values used to create the circle diameter slider.</p>
+<div class="highlight">
+<pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">CIRCLE_SLIDER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">SliderSettings</span><span class="p">(</span>
+<span class="w">  </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">  </span><span class="mf">100</span><span class="p">,</span>
+<span class="w">  </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">  </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">SPIRAL_CIRCLE_SLIDER</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">VALIDATOR</span>
+<span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">CIRCLE_CAPTION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">CaptionSettings</span><span class="p">(</span>
+<span class="w">  </span><span class="s2">"Point Diameter"</span><span class="p">,</span>
+<span class="w">  </span><span class="mf">2</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">SPIRAL_CIRCLE_TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">VALIDATOR</span>
+<span class="p">);</span>
+
+<span class="nx">CIRCLE_SLIDER</span><span class="p">.</span><span class="nx">check_rep</span><span class="p">();</span>
+<span class="nx">CIRCLE_CAPTION</span><span class="p">.</span><span class="nx">check_rep</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org1b32172">
+<h2 id="org1b32172">The Spiralizer</h2>
+<div class="outline-text-2" id="text-org1b32172"></div>
+<div class="outline-3" id="outline-container-org394cb32">
+<h3 id="org394cb32">Class Declaration</h3>
+<div class="outline-text-3" id="text-org394cb32">
+<div class="highlight">
+<pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">Spiralizer</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// geometry</span>
+<span class="w">  </span><span class="nx">degrees_in_a_circle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">360</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">to_radians</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="p">)</span><span class="o">/</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">degrees_in_a_circle</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// the starting values for the circles</span>
+<span class="w">  </span><span class="nx">radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// the center of our sketch (and the circles)</span>
+<span class="w">  </span><span class="nx">center_x</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">center_y</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org4038061">
+<h3 id="org4038061">The Constructor</h3>
+<div class="outline-text-3" id="text-org4038061">
+<div class="highlight">
+<pre><span></span><span class="kr">constructor</span><span class="p">(</span><span class="nx">p5</span><span class="p">,</span><span class="w"> </span><span class="nx">center_x</span><span class="p">,</span><span class="w"> </span><span class="nx">center_y</span><span class="p">,</span><span class="w"> </span><span class="nx">maximum_radius</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">angle_slider</span><span class="p">,</span><span class="w"> </span><span class="nx">radius_slider</span><span class="p">,</span><span class="w"> </span><span class="nx">circle_slider</span><span class="p">){</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">p5</span><span class="p">;</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">center_x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">center_x</span><span class="p">;</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">center_y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">center_y</span><span class="p">;</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">maximum_radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">maximum_radius</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// the amount to move the points on the circle as they're drawn</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">angle_increment</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">angle_slider</span><span class="p">;</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">radius_increment</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">radius_slider</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// the size of the circle to draw  the circles</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">point_diameter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">circle_slider</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// constructor</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orgef8ebbf">
+<h3 id="orgef8ebbf">The Draw Method</h3>
+<div class="outline-text-3" id="text-orgef8ebbf">
+<div class="highlight">
+<pre><span></span><span class="nx">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">radians</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="p">;</span>
+
+<span class="w">  </span><span class="nx">radians</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">angle</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">to_radians</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">center_x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">radius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">cos</span><span class="p">(</span><span class="nx">radians</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">center_y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">radius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nx">radians</span><span class="p">);</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">p5</span><span class="p">.</span><span class="nx">circle</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">point_diameter</span><span class="p">.</span><span class="nx">value</span><span class="p">());</span>
+
+
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">radius</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">radius_increment</span><span class="p">.</span><span class="nx">value</span><span class="p">();</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">angle</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">angle_increment</span><span class="p">.</span><span class="nx">value</span><span class="p">();</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">radius</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">maximum_radius</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">radius_increment</span><span class="p">.</span><span class="nx">value</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// end draw</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org585a43f">
+<h3 id="org585a43f">Reset</h3>
+<div class="outline-text-3" id="text-org585a43f">
+<div class="highlight">
+<pre><span></span><span class="nx">reset</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">radius_increment</span><span class="p">.</span><span class="nx">value</span><span class="p">();</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// end reset</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org7c54a79">
+<h2 id="org7c54a79">The Spiral Sketch</h2>
+<div class="outline-text-2" id="text-org7c54a79">
+<p>This is going to be the sketch that we pass to <a href="posts/generative-art-spiral/index.html#org2763fa9">the P5 constructor</a> to create the animation.</p>
+</div>
+<div class="outline-3" id="outline-container-org3080b8c">
+<h3 id="org3080b8c">Function Declaration</h3>
+<div class="outline-text-3" id="text-org3080b8c">
+<div class="highlight">
+<pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">spiral_sketch</span><span class="p">(</span><span class="nx">p5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// the size of the canvas and the color of the circles</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">WIDTH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">500</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">HEIGHT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">WIDTH</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">POINT_COLOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"RoyalBlue"</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">spiralizer</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">angle_slider</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">radius_slider</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">circle_slider</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org6838cb4">
+<h3 id="org6838cb4">Setup</h3>
+<div class="outline-text-3" id="text-org6838cb4"></div>
+<div class="outline-4" id="outline-container-orgf264388">
+<h4 id="orgf264388">Setup The Canvas and Drawing Settings</h4>
+<div class="outline-text-4" id="text-orgf264388">
+<div class="highlight">
+<pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">setup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(){</span>
+<span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">createCanvas</span><span class="p">(</span><span class="nx">WIDTH</span><span class="p">,</span><span class="w"> </span><span class="nx">HEIGHT</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">background</span><span class="p">(</span><span class="s2">"white"</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">stroke</span><span class="p">(</span><span class="nx">POINT_COLOR</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="nx">POINT_COLOR</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-org15a4749">
+<h4 id="org15a4749">Create The Sliders</h4>
+<div class="outline-text-4" id="text-org15a4749">
+<div class="highlight">
+<pre><span></span><span class="nx">angle_slider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Slidini</span><span class="p">(</span><span class="nx">ANGLE_SLIDER</span><span class="p">,</span><span class="w"> </span><span class="nx">ANGLE_CAPTION</span><span class="p">,</span><span class="w"> </span><span class="nx">p5</span><span class="p">);</span><span class="w">  </span>
+<span class="nx">radius_slider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Slidini</span><span class="p">(</span><span class="nx">RADIUS_SLIDER</span><span class="p">,</span><span class="w"> </span><span class="nx">RADIUS_CAPTION</span><span class="p">,</span><span class="w"> </span><span class="nx">p5</span><span class="p">);</span>
+<span class="nx">circle_slider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Slidini</span><span class="p">(</span><span class="nx">CIRCLE_SLIDER</span><span class="p">,</span><span class="w"> </span><span class="nx">CIRCLE_CAPTION</span><span class="p">,</span><span class="w"> </span><span class="nx">p5</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-4" id="outline-container-org6f1bcf4">
+<h4 id="org6f1bcf4">Create the Spiralizer and End the Setup</h4>
+<div class="outline-text-4" id="text-org6f1bcf4">
+<div class="highlight">
+<pre><span></span><span class="nx">spiralizer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Spiralizer</span><span class="p">(</span><span class="nx">p5</span><span class="p">,</span><span class="w"> </span><span class="nx">WIDTH</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">HEIGHT</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">WIDTH</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span>
+<span class="w">                            </span><span class="nx">angle_slider</span><span class="p">.</span><span class="nx">slider</span><span class="p">,</span>
+<span class="w">                            </span><span class="nx">radius_slider</span><span class="p">.</span><span class="nx">slider</span><span class="p">,</span>
+<span class="w">                            </span><span class="nx">circle_slider</span><span class="p">.</span><span class="nx">slider</span><span class="p">);</span>
+
+<span class="p">}</span><span class="w"> </span><span class="c1">// end setup</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org3395e9f">
+<h3 id="org3395e9f">Draw</h3>
+<div class="outline-text-3" id="text-org3395e9f">
+<div class="highlight">
+<pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">draw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">spiralizer</span><span class="p">.</span><span class="nx">draw</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">background</span><span class="p">(</span><span class="mf">255</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span>
+<span class="p">}</span><span class="c1">// end draw</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org03e476e">
+<h3 id="org03e476e">Double-Clicked</h3>
+<div class="outline-text-3" id="text-org03e476e">
+<div class="highlight">
+<pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">doubleClicked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">spiralizer</span><span class="p">.</span><span class="nx">reset</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">background</span><span class="p">(</span><span class="s2">"white"</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// end doubleClicked</span>
+</pre></div>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org2763fa9">
+<h3 id="org2763fa9">The P5 Instance</h3>
+<div class="outline-text-3" id="text-org2763fa9">
+<p>To create the animation I'll create a p5 object by passing in <a href="posts/generative-art-spiral/index.html#org7c54a79">the function from the previous section</a> and <a href="posts/generative-art-spiral/index.html#org925a9dd">the div ID</a> to identify where in the page the sketch should go.</p>
+<div class="highlight">
+<pre><span></span><span class="ow">new</span><span class="w"> </span><span class="nx">p5</span><span class="p">(</span><span class="nx">spiral_sketch</span><span class="p">,</span><span class="w"> </span><span class="nx">SPIRAL_DIV</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="outline-2" id="outline-container-org717bd76">
+<h2 id="org717bd76">References</h2>
+<div class="outline-text-2" id="text-org717bd76">
+<ul class="org-ul">
+<li><a href="posts/bibliography-generative-art/index.html">Generative Art</a></li>
+<li>id - HTML: HyperText Markup Language | MDN [Internet]. 2023 [cited 2023 Sep 14]. Available from: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id">https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id</a></li>
+<li>p5.js reference | createSlider() [Internet]. [cited 2023 Apr 25]. Available from: <a href="https://p5js.org/reference/#/p5/createSlider">https://p5js.org/reference/#/p5/createSlider</a></li>
+<li>p5.js reference | p5.Element [Internet]. [cited 2023 Sep 14]. Available from: <a href="https://p5js.org/reference/#/p5.Element">https://p5js.org/reference/#/p5.Element</a></li>
+<li>p5.js reference | html() [Internet]. [cited 2023 Sep 14]. Available from: <a href="https://p5js.org/reference/#/p5.Element/html">https://p5js.org/reference/#/p5.Element/html</a></li>
+<li>p5.js reference | parent() [Internet]. [cited 2023 Sep 14]. Available from: <a href="https://p5js.org/reference/#/p5.Element/parent">https://p5js.org/reference/#/p5.Element/parent</a></li>
+<li>p5.js reference | select() [Internet]. [cited 2023 Sep 14]. Available from: <a href="https://p5js.org/reference/#/p5/select">https://p5js.org/reference/#/p5/select</a></li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article">
+<header>
 <h1 class="p-name entry-title"><a class="u-url" href="posts/cucumber-and-ecma-script-modules-esm/index.html">Cucumber and ECMA Script Modules (ESM) In a Nikola Post</a></h1>
 <div class="metadata">
 <p class="byline author vcard"><span class="byline-name fn" itemprop="author">The Cloistered Monkey</span></p>
@@ -60,51 +435,51 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#org18a39cc">What Is This, Then?</a></li>
-<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#orgd5f0b32">Setting Up</a>
+<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#org2e7d208">What Is This, Then?</a></li>
+<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#orgec20161">Setting Up</a>
 <ul>
-<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#org97089c8">The Cucumber.js Configuration</a></li>
-<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#orgec9b36e">The Testing package.json</a></li>
+<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#orgbf88da8">The Cucumber.js Configuration</a></li>
+<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#org572da94">The Testing package.json</a></li>
 </ul>
 </li>
-<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#org26f60bb">The Test Files</a>
+<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#orgd8c017b">The Test Files</a>
 <ul>
-<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#org12bd8e9">The Feature File</a></li>
-<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#org3230893">The Test Steps</a></li>
-<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#org837f00a">The Imports</a></li>
-<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#org29a0558">Given</a></li>
-<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#orgf03d757">When</a></li>
-<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#org4c4bb73">Then</a></li>
+<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#org1b25fa5">The Feature File</a></li>
+<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#org6a7bddb">The Test Steps</a></li>
+<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#org2de2954">The Imports</a></li>
+<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#orgb9b0afd">Given</a></li>
+<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#orgf618368">When</a></li>
+<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#orge6793e3">Then</a></li>
 </ul>
 </li>
-<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#org1ae7619">The Greeter</a></li>
-<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#org6a4fb5a">The Greeter package.json</a></li>
-<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#orgac1b86d">Now the Other Hard Part</a>
+<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#org97896d2">The Greeter</a></li>
+<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#orgfc5e0f8">The Greeter package.json</a></li>
+<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#orgc12fdf0">Now the Other Hard Part</a>
 <ul>
-<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#org7bb1d50">First Let's Setup the Sketch Tag</a></li>
-<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#orgc874d21">Now Let's Use It</a></li>
+<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#org5f9d16c">First Let's Setup the Sketch Tag</a></li>
+<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#org06c1bce">Now Let's Use It</a></li>
 </ul>
 </li>
-<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#org92f9c0e">What Have We Learned?</a></li>
-<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#org390b8e8">Links</a></li>
+<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#org32ee0e5">What Have We Learned?</a></li>
+<li><a href="posts/cucumber-and-ecma-script-modules-esm/index.html#orgd164bf9">Links</a></li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org18a39cc">
-<h2 id="org18a39cc">What Is This, Then?</h2>
-<div class="outline-text-2" id="text-org18a39cc">
+<div class="outline-2" id="outline-container-org2e7d208">
+<h2 id="org2e7d208">What Is This, Then?</h2>
+<div class="outline-text-2" id="text-org2e7d208">
 <p>This is a re-do of the cucumber.js example testing for <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript/ECMAScript Modules (ESM)</a>. Just copying the files exactly as they're given in the <a href="https://github.com/cucumber/cucumber-js-examples">cucumber.js GitHub repository</a> works pretty much without problem, but since I'm doing this messy thing with writing JavaScript in these blog posts instead of as part of a code-project, it took a little more work than I would have liked.</p>
 <p>I had <a href="posts/bdd-testing-p5/index.html">previously tried</a> to get ESM modules to work with <a href="https://mochajs.org/">mocha</a> but gave up and went back to using the <a href="https://en.wikipedia.org/wiki/CommonJS?useskin=vector">CommonJS</a> syntax instead (which I just read is meant to work outside the browser and not in it, which explains some of the trouble I ran into). This time I seem to have gotten the ESM style of modules working with <a href="https://cucumber.io/docs/installation/javascript/">cucumber.js</a>, but it \(\textit{is}\) a bit convoluted and maybe not really a good idea to do it this way. So here we go.</p>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgd5f0b32">
-<h2 id="orgd5f0b32">Setting Up</h2>
-<div class="outline-text-2" id="text-orgd5f0b32">
+<div class="outline-2" id="outline-container-orgec20161">
+<h2 id="orgec20161">Setting Up</h2>
+<div class="outline-text-2" id="text-orgec20161">
 <p>The cucumber.js page has instructions on installing it, so I won't go over it. It's mostly just <code>npm install cucumber --save-dev</code>. I seem to remember that they said somewhere not to install it globally, but I can't remember now where I saw it. Once I installed it, I had to edit a couple of files to get it working the way I wanted it to.</p>
 </div>
-<div class="outline-3" id="outline-container-org97089c8">
-<h3 id="org97089c8">The Cucumber.js Configuration</h3>
-<div class="outline-text-3" id="text-org97089c8">
+<div class="outline-3" id="outline-container-orgbf88da8">
+<h3 id="orgbf88da8">The Cucumber.js Configuration</h3>
+<div class="outline-text-3" id="text-orgbf88da8">
 <p><code>cucumber.js</code> uses a configuration file named… <code>cucumber.js</code> that you put where you run the tests. I'm going to put cucumber test-files into folders whose names will have the form <code>test-&lt;slug&gt;</code>, where <code>slug</code> is the slug for the post where I define the JavaScript and tests in, so in order to get <code>cucumber</code> to find them, I need to change the glob in the <code>import</code> line to match.</p>
 <div class="highlight">
 <pre><span></span><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
@@ -115,9 +490,9 @@
 <p>This file is using the ESM syntax (using an <code>export</code> statement) instead of the CJS form of setting <code>module.export</code>. We're going to have to make all the code match the ESM form, mixing and matching causes cucumber to crash throwing errors saying it was expecting an ESM module.</p>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgec9b36e">
-<h3 id="orgec9b36e">The Testing package.json</h3>
-<div class="outline-text-3" id="text-orgec9b36e">
+<div class="outline-3" id="outline-container-org572da94">
+<h3 id="org572da94">The Testing package.json</h3>
+<div class="outline-text-3" id="text-org572da94">
 <p>Next we need a <code>package.json</code> file next to the <code>cucumber.js</code> file. There's two changes I made.</p>
 <ul class="org-ul">
 <li><code>"type": "module"</code> tells cucumber (or node?) that we'll be using ESM, not CJS</li>
@@ -138,27 +513,27 @@
 </pre></div>
 <p>I had previously installed <code>chai</code> globally and it was working with <code>mocha</code> but for mysterious reasons this time I got a "Module not found" error (maybe because I installed <code>cucumber</code> locally) so I installed it locally too.</p>
 <p>So far, these are the files that I've edited in the testing directory.</p>
-<pre class="example" id="org68b095f">
+<pre class="example" id="orge4c1778">
 cucumber.js
 package.json
 </pre>
 <p>There's also a <code>package-lock.json</code> and <code>node_modules/</code> which were created as part of installing <code>cucumber</code> and <code>chai</code> but I don't touch those.</p>
 <p>Now that we have this setup we can run the test-runner using <code>npm</code>.</p>
-<pre class="example" id="org39d0a3c">
+<pre class="example" id="orgb2d2d70">
 npm test
 </pre>
 <p>Cucumber runs once and then will re-run the testing every time we make a change to our files. I'm not sure how the magic gets done but it even detects when I make changes to the JavaScript being tested after I moved it outside of the testing folder.</p>
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org26f60bb">
-<h2 id="org26f60bb">The Test Files</h2>
-<div class="outline-text-2" id="text-org26f60bb">
+<div class="outline-2" id="outline-container-orgd8c017b">
+<h2 id="orgd8c017b">The Test Files</h2>
+<div class="outline-text-2" id="text-orgd8c017b">
 <p>The slug for this post is <code>cucumber-and-ecma-script-modules-esm</code> so the testing files are going into a folder named <code>test-cucumber-and-ecma-script-modules-esm</code> which sits next to the <code>cucumber.js</code> files and the <code>package.json</code> files that I just mentioned.</p>
 </div>
-<div class="outline-3" id="outline-container-org12bd8e9">
-<h3 id="org12bd8e9">The Feature File</h3>
-<div class="outline-text-3" id="text-org12bd8e9">
+<div class="outline-3" id="outline-container-org1b25fa5">
+<h3 id="org1b25fa5">The Feature File</h3>
+<div class="outline-text-3" id="text-org1b25fa5">
 <p>We're going to make a Greeter class that does one thing: greets users. Cucumber will look for files that have the <code>.feature</code> file extension and parse the keywords to figure out what tests to expect. Here's the one for our greeter (in the file <code>greetings.feature</code>).</p>
 <div class="highlight">
 <pre><span></span><span class="k">Feature:</span><span class="nf"> Greeting</span>
@@ -171,15 +546,15 @@ npm test
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org3230893">
-<h3 id="org3230893">The Test Steps</h3>
-<div class="outline-text-3" id="text-org3230893">
+<div class="outline-3" id="outline-container-org6a7bddb">
+<h3 id="org6a7bddb">The Test Steps</h3>
+<div class="outline-text-3" id="text-org6a7bddb">
 <p>Now that we have a feature file we have to write the tests that match it. In our feature file we used three special keywords - <code>Given</code>, <code>When</code> and <code>Then</code> - which have to match functions in our test file to pass the cucumber tests, which I'll put in a file called <code>steps.js</code>. In the example code they put it in a folder named <code>steps</code>, which makes sense if you have more than one folder but this'll do for now.</p>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org837f00a">
-<h3 id="org837f00a">The Imports</h3>
-<div class="outline-text-3" id="text-org837f00a">
+<div class="outline-3" id="outline-container-org2de2954">
+<h3 id="org2de2954">The Imports</h3>
+<div class="outline-text-3" id="text-org2de2954">
 <p>These are the ESM style imports. The <code>Greeter</code> import statement is long because it's in a file accessible to this post rather than being next to the test-code so I have to pass in the path relative to where the <code>steps.js</code> file is.</p>
 <div class="highlight">
 <pre><span></span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">expect</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"chai"</span><span class="p">;</span>
@@ -188,9 +563,9 @@ npm test
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org29a0558">
-<h3 id="org29a0558">Given</h3>
-<div class="outline-text-3" id="text-org29a0558">
+<div class="outline-3" id="outline-container-orgb9b0afd">
+<h3 id="orgb9b0afd">Given</h3>
+<div class="outline-text-3" id="text-orgb9b0afd">
 <p>Our <code>given</code> function just creates a Greeter instance. There are also functions like <code>Before</code> and <code>BeforeAll</code> that let you do something once before each Scenario (or all Scenarios), but we only have one scenario and it sounds clearer to me to say "Given a greeter…".</p>
 <div class="highlight">
 <pre><span></span><span class="nx">Given</span><span class="p">(</span><span class="s2">"a greeter"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -199,9 +574,9 @@ npm test
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgf03d757">
-<h3 id="orgf03d757">When</h3>
-<div class="outline-text-3" id="text-orgf03d757">
+<div class="outline-3" id="outline-container-orgf618368">
+<h3 id="orgf618368">When</h3>
+<div class="outline-text-3" id="text-orgf618368">
 <p>Our <code>when</code> calls the <code>greetings</code> method and saves the output so we can check it in our <code>Then</code> function.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">When</span><span class="p">(</span><span class="s2">"the greeter greets me"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -210,9 +585,9 @@ npm test
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org4c4bb73">
-<h3 id="org4c4bb73">Then</h3>
-<div class="outline-text-3" id="text-org4c4bb73">
+<div class="outline-3" id="outline-container-orge6793e3">
+<h3 id="orge6793e3">Then</h3>
+<div class="outline-text-3" id="text-orge6793e3">
 <p>Our last function is interesting in that it uses what they call <a href="https://github.com/cucumber/cucumber-expressions#readme">cucumber-expressions</a>, which allow you to put types into the string definition to tell it what to look for in the feature definition so we don't have to set the exact value. In this case our feature file says <code>Then I should hear "Go away."</code> The end of the statement is in quotes so cucumber knows that it's a string so we can replace it with <code>{string}</code> when we define the function and cucumber will pass in the expected string as an argument to the function that we pass to the <code>Then</code> function. Then we can use the passed-in value rather than hard-coding the expected string into our test. In this case the parameter <code>what_he_should_have_said</code> will have the string "Go away." in it, extracted (without the quotes) from our feature file definition.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">Then</span><span class="p">(</span><span class="s2">"I should hear {string}"</span><span class="p">,</span>
@@ -222,7 +597,7 @@ npm test
 <span class="p">);</span>
 </pre></div>
 <p>So far this is the basic structure of our testing folder (ignoring othe stuff that I didn't create or edit).</p>
-<pre class="example" id="org2e667e2">
+<pre class="example" id="org4095869">
 cucumber.js
 package.json
 test-cucumber-and-ecma-script-modules-esm/
@@ -231,9 +606,9 @@ test-cucumber-and-ecma-script-modules-esm/
 </pre></div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org1ae7619">
-<h2 id="org1ae7619">The Greeter</h2>
-<div class="outline-text-2" id="text-org1ae7619">
+<div class="outline-2" id="outline-container-org97896d2">
+<h2 id="org97896d2">The Greeter</h2>
+<div class="outline-text-2" id="text-org97896d2">
 <p>Based on our test, this is what our Greeter class should look like.</p>
 <p><img alt="nil" src="posts/cucumber-and-ecma-script-modules-esm/greeter.png"></p>
 <p>Now let's define the Greeter (the software under test). Initially, just to see if it worked, I put it next to the test files the way that the example did, but the point of this is to get the JavaScript into the post so we can work with P5, so its final resting place is in a file named <code>greetings.js</code> in the folder where <a href="https://getnikola.com/">Nikola</a> will look for files when I build the site.</p>
@@ -261,9 +636,9 @@ test-cucumber-and-ecma-script-modules-esm/
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org6a4fb5a">
-<h2 id="org6a4fb5a">The Greeter package.json</h2>
-<div class="outline-text-2" id="text-org6a4fb5a">
+<div class="outline-2" id="outline-container-orgfc5e0f8">
+<h2 id="orgfc5e0f8">The Greeter package.json</h2>
+<div class="outline-text-2" id="text-orgfc5e0f8">
 <p>This next bit took me a while to figure out. If you put the <code>Greeter</code> definition into a sub-folder below where we're running the tests, it will recognize our <code>greeter.js</code> file as an ESM module just fine. But, if you move it into a folder outside our tests as I did, node (or cucumber) suddenly won't be able to tell that it's an ESM module.</p>
 <p>The error message will helpfully tell you to change the file extension from <code>.js</code> to <code>.mjs</code>, which doesn't work, and offer you a different import syntax to use, which also doesn't work, and to tell you to put <code>"type": "module"</code> into the <code>package.json</code> file… which turns out to <i>sort of</i> be the answer.</p>
 <p>If you look at the <code>package.json</code> I edited in the section above to run the tests you'll see that it already has the <code>"type": "module"</code> line in it, which I assume is why the tests were running before I moved <code>greetings.js</code>. But it turns out that to get the tests to recognize the <code>greetings.js</code> file as an ESM module once I moved it I also had to put a <code>package.json</code> file next to it that identified it as an ESM module. Like so:</p>
@@ -276,14 +651,14 @@ test-cucumber-and-ecma-script-modules-esm/
 <p>I suppose, maybe it's a little like an <code>__init__.py</code> file in python that tells python to recognize a folder as a module (package?). Or maybe not. Anyway, going now and looking at the output of the tests - Hokey Shmokes, Bullwinkle! It works!</p>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgac1b86d">
-<h2 id="orgac1b86d">Now the Other Hard Part</h2>
-<div class="outline-text-2" id="text-orgac1b86d">
+<div class="outline-2" id="outline-container-orgc12fdf0">
+<h2 id="orgc12fdf0">Now the Other Hard Part</h2>
+<div class="outline-text-2" id="text-orgc12fdf0">
 <p>Okay, so the testing is working now, but just running tests is sort of meaningless (no offense to testers), the real point of it all is to get the tested JavaScript back into this post and use it.</p>
 </div>
-<div class="outline-3" id="outline-container-org7bb1d50">
-<h3 id="org7bb1d50">First Let's Setup the Sketch Tag</h3>
-<div class="outline-text-3" id="text-org7bb1d50">
+<div class="outline-3" id="outline-container-org5f9d16c">
+<h3 id="org5f9d16c">First Let's Setup the Sketch Tag</h3>
+<div class="outline-text-3" id="text-org5f9d16c">
 <p>According to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">Mozilla</a>, <code>&lt;script&gt;</code> tags are assumed to be JavaScript if you don't set a MIME type (and so they tell you not to set the <code>type</code> argument if it's a regular script) but to let the browser know it's a module you have to set the attribute <code>type="module"</code> in the tag. I'm going to use a convoluted name for the actual p5 sketch file that I'm making, but for demonstration's sake let's pretend it's called <code>sketch.js</code>, then the HTML tag to include it in this post would look like this.</p>
 <div class="highlight">
 <pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"sketch.js"</span> <span class="na">type</span><span class="o">=</span><span class="s">"module"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
@@ -291,9 +666,9 @@ test-cucumber-and-ecma-script-modules-esm/
 <p>The <code>Greeter</code> class is going to be imported into our sketch module so we don't refer to it in the HTML.</p>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgc874d21">
-<h3 id="orgc874d21">Now Let's Use It</h3>
-<div class="outline-text-3" id="text-orgc874d21">
+<div class="outline-3" id="outline-container-org06c1bce">
+<h3 id="org06c1bce">Now Let's Use It</h3>
+<div class="outline-text-3" id="text-org06c1bce">
 <p>We'll import the <code>Greeter</code> into the sketch, setup the canvas, and then display the greeter's greetings on the canvas.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">GREETINGS_DIV</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"db4ce169-greetings-sketch"</span><span class="p">;</span>
@@ -320,22 +695,22 @@ test-cucumber-and-ecma-script-modules-esm/
 <div class="p5js" id="db4ce169-greetings-sketch"></div>
 <p>Impressed?</p>
 <p>Just for completeness, the folder with the code for the post has these files in it.</p>
-<pre class="example" id="org217bfac">
+<pre class="example" id="org5d18263">
 greeter.js
 sketch.js
 package.json
 </pre></div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org92f9c0e">
-<h2 id="org92f9c0e">What Have We Learned?</h2>
-<div class="outline-text-2" id="text-org92f9c0e">
+<div class="outline-2" id="outline-container-org32ee0e5">
+<h2 id="org32ee0e5">What Have We Learned?</h2>
+<div class="outline-text-2" id="text-org32ee0e5">
 <p>This was an exercise in seeing if I could get cucumber.js and ESM modules working. In particular it was about testing code that gets included in this post and used by p5. This was a pretty simple example, but it seems to work so I'll take it as a start that I can reference when going back to work with more complex p5 code.</p>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org390b8e8">
-<h2 id="org390b8e8">Links</h2>
-<div class="outline-text-2" id="text-org390b8e8">
+<div class="outline-2" id="outline-container-orgd164bf9">
+<h2 id="orgd164bf9">Links</h2>
+<div class="outline-text-2" id="text-orgd164bf9">
 <p>These are (mostly) referred to in the body of the post, and the body also has links not in here, but for future reference, this should be enough to get back up to speed.</p>
 <ul class="org-ul">
 <li>Cucumber.js [Internet]. Cucumber; 2023 [cited 2023 Jun 17]. Available from: <a href="https://github.com/cucumber/cucumber-js">https://github.com/cucumber/cucumber-js</a></li>
@@ -361,22 +736,22 @@ package.json
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="posts/link-collection/index.html#org1b7e570">Design Patterns</a></li>
-<li><a href="posts/link-collection/index.html#org172177b">Creative Coding</a></li>
+<li><a href="posts/link-collection/index.html#orgf7471fc">Design Patterns</a></li>
+<li><a href="posts/link-collection/index.html#orgb795d56">Creative Coding</a></li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org1b7e570">
-<h2 id="org1b7e570">Design Patterns</h2>
-<div class="outline-text-2" id="text-org1b7e570">
+<div class="outline-2" id="outline-container-orgf7471fc">
+<h2 id="orgf7471fc">Design Patterns</h2>
+<div class="outline-text-2" id="text-orgf7471fc">
 <ul class="org-ul">
 <li><a href="https://www.patterns.dev/">patterns.dev</a>: An online book of patterns for JavaScript and React.</li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org172177b">
-<h2 id="org172177b">Creative Coding</h2>
-<div class="outline-text-2" id="text-org172177b">
+<div class="outline-2" id="outline-container-orgb795d56">
+<h2 id="orgb795d56">Creative Coding</h2>
+<div class="outline-text-2" id="text-orgb795d56">
 <ul class="org-ul">
 <li><a href="https://github.com/terkelg/awesome-creative-coding">Awesome Creative Coding</a>: A collection of links on github.</li>
 <li><a href="https://awesomeopensource.com/project/terkelg/awesome-creative-coding">Awesome Creative Coding Again</a>: This looks like the same list but on <a href="https://awesomeopensource.com/">Awesome Open Source</a> so there might be more cross-linked pages.</li>
@@ -399,44 +774,44 @@ package.json
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="posts/bdd-testing-p5/index.html#org9f23ceb">What This Is</a></li>
-<li><a href="posts/bdd-testing-p5/index.html#org1d7af88">Setting Up the Tests</a>
+<li><a href="posts/bdd-testing-p5/index.html#org82de242">What This Is</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#org0138e9d">Setting Up the Tests</a>
 <ul>
-<li><a href="posts/bdd-testing-p5/index.html#orgb76eb53">Running the Tests</a></li>
-<li><a href="posts/bdd-testing-p5/index.html#orgfe4c71e">Writing the Test File</a></li>
-<li><a href="posts/bdd-testing-p5/index.html#org0528559">Import Chai and Sinon</a></li>
-<li><a href="posts/bdd-testing-p5/index.html#org54e3431">Import the Color Increaser Class</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#org179e5bb">Running the Tests</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#orgafc3bcb">Writing the Test File</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#orgd4cc7ca">Import Chai and Sinon</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#org7e6c59d">Import the Color Increaser Class</a></li>
 </ul>
 </li>
-<li><a href="posts/bdd-testing-p5/index.html#orgba04fd1">The Whole Code Module</a></li>
-<li><a href="posts/bdd-testing-p5/index.html#org75fc0b3">Channel Constants</a></li>
-<li><a href="posts/bdd-testing-p5/index.html#org620ff89">Testing and Implementing the Color Increaser</a>
+<li><a href="posts/bdd-testing-p5/index.html#orgde882bb">The Whole Code Module</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#orgd8b3b03">Channel Constants</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#orgf7e7dd7">Testing and Implementing the Color Increaser</a>
 <ul>
-<li><a href="posts/bdd-testing-p5/index.html#orgf9c18b6">Mock Color</a></li>
-<li><a href="posts/bdd-testing-p5/index.html#org480b7c1">Setting Up the Tests</a></li>
-<li><a href="posts/bdd-testing-p5/index.html#orgd208906">Does the ColorIncreaser Exist?</a></li>
-<li><a href="posts/bdd-testing-p5/index.html#org62890ee">The ColorIncreaser Class</a></li>
-<li><a href="posts/bdd-testing-p5/index.html#orge61d849">Does it take an increment amount?</a></li>
-<li><a href="posts/bdd-testing-p5/index.html#orgd8645e6">Does it take a color?</a></li>
-<li><a href="posts/bdd-testing-p5/index.html#org6ff82ca">The Increaser</a></li>
-<li><a href="posts/bdd-testing-p5/index.html#orge60dd64">Does it wrap red back to 255 when it hits 256?</a></li>
-<li><a href="posts/bdd-testing-p5/index.html#org66bbace">Does Green Wrap Too?</a></li>
-<li><a href="posts/bdd-testing-p5/index.html#org8c7603b">Does Blue Wrap Too?</a></li>
-<li><a href="posts/bdd-testing-p5/index.html#orgec0168d">The Next Method</a></li>
-<li><a href="posts/bdd-testing-p5/index.html#orga4ade0e">Does next return the color?</a></li>
-<li><a href="posts/bdd-testing-p5/index.html#orgac1c90c">Export the Color Increaser</a></li>
-<li><a href="posts/bdd-testing-p5/index.html#orgb6ca543">Running The tests</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#org8bfc947">Mock Color</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#org496df64">Setting Up the Tests</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#org539b6ee">Does the ColorIncreaser Exist?</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#orgcc5f91d">The ColorIncreaser Class</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#orgfda8b5a">Does it take an increment amount?</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#orgaf35038">Does it take a color?</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#org65e0ff5">The Increaser</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#org3d9409f">Does it wrap red back to 255 when it hits 256?</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#orga5f1767">Does Green Wrap Too?</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#org4af4520">Does Blue Wrap Too?</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#orgf5f42da">The Next Method</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#org58d901b">Does next return the color?</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#org011cb1c">Export the Color Increaser</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#org37922d4">Running The tests</a></li>
 </ul>
 </li>
-<li><a href="posts/bdd-testing-p5/index.html#org31bd88c">The Sketch</a>
+<li><a href="posts/bdd-testing-p5/index.html#org639401f">The Sketch</a>
 <ul>
-<li><a href="posts/bdd-testing-p5/index.html#org675ec96">The Sketch Function</a></li>
-<li><a href="posts/bdd-testing-p5/index.html#org49bce0f">The <code>setup</code> Function</a></li>
-<li><a href="posts/bdd-testing-p5/index.html#orgd6314ac">The <code>draw</code> Function</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#org3834439">The Sketch Function</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#org1b5beb2">The <code>setup</code> Function</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#org2f96f53">The <code>draw</code> Function</a></li>
 </ul>
 </li>
-<li><a href="posts/bdd-testing-p5/index.html#orgfd685f1">The End</a></li>
-<li><a href="posts/bdd-testing-p5/index.html#org3d8b7f5">Sources</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#orga019fde">The End</a></li>
+<li><a href="posts/bdd-testing-p5/index.html#org1848408">Sources</a></li>
 </ul>
 </div>
 </div>
@@ -444,18 +819,18 @@ package.json
 <script src="posts/bdd-testing-p5/color-increaser.js"></script>
 <script src="posts/bdd-testing-p5/sketch.js"></script></p>
 <div class="p5js" id="6a5fb18a-bdd-sketch"></div>
-<div class="outline-2" id="outline-container-org9f23ceb">
-<h2 id="org9f23ceb">What This Is</h2>
-<div class="outline-text-2" id="text-org9f23ceb">
+<div class="outline-2" id="outline-container-org82de242">
+<h2 id="org82de242">What This Is</h2>
+<div class="outline-text-2" id="text-org82de242">
 <p>This is a walk-through of the <a href="https://p5js.org/learn/tdd.html">test-driven development example</a> on the <a href="https://p5js.org/">p5js site</a>. The color changing square above is created by exhaustively stepping through the RGB values for a p5 <a href="https://p5js.org/reference/#/p5.Color">color</a>. The site documentation doesn't seem to tell you the name of the color array attribute so you can access it, instead it tells you to use setter methods, but the tutorial indicates that the array is stored as an attribute of the color object named <code>levels</code> so we'll be working with that to change the colors.</p>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org1d7af88">
-<h2 id="org1d7af88">Setting Up the Tests</h2>
-<div class="outline-text-2" id="text-org1d7af88"></div>
-<div class="outline-3" id="outline-container-orgb76eb53">
-<h3 id="orgb76eb53">Running the Tests</h3>
-<div class="outline-text-3" id="text-orgb76eb53">
+<div class="outline-2" id="outline-container-org0138e9d">
+<h2 id="org0138e9d">Setting Up the Tests</h2>
+<div class="outline-text-2" id="text-org0138e9d"></div>
+<div class="outline-3" id="outline-container-org179e5bb">
+<h3 id="org179e5bb">Running the Tests</h3>
+<div class="outline-text-3" id="text-org179e5bb">
 <p>To run the tests I'll use three things:</p>
 <ul class="org-ul">
 <li><a href="https://mochajs.org/">mocha</a>: the framework to define the tests</li>
@@ -477,12 +852,12 @@ package.json
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgfe4c71e">
-<h3 id="orgfe4c71e">Writing the Test File</h3>
-<div class="outline-text-3" id="text-orgfe4c71e"></div>
-<div class="outline-4" id="outline-container-orgbd06e5f">
-<h4 id="orgbd06e5f">Put It In Strict Mode</h4>
-<div class="outline-text-4" id="text-orgbd06e5f">
+<div class="outline-3" id="outline-container-orgafc3bcb">
+<h3 id="orgafc3bcb">Writing the Test File</h3>
+<div class="outline-text-3" id="text-orgafc3bcb"></div>
+<div class="outline-4" id="outline-container-orgb8fa4f0">
+<h4 id="orgb8fa4f0">Put It In Strict Mode</h4>
+<div class="outline-text-4" id="text-orgb8fa4f0">
 <p>Javascript can be pretty lenient about letting what might be considered mistakes pass through without raising an error. I'll put the test-code into <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">Strict Mode</a>, making our mistakes more evident, hopefully, by putting this line at the top of the <code>test.js</code> file:</p>
 <div class="highlight">
 <pre><span></span><span class="s2">"use strict"</span><span class="p">;</span>
@@ -490,9 +865,9 @@ package.json
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org0528559">
-<h3 id="org0528559">Import Chai and Sinon</h3>
-<div class="outline-text-3" id="text-org0528559">
+<div class="outline-3" id="outline-container-orgd4cc7ca">
+<h3 id="orgd4cc7ca">Import Chai and Sinon</h3>
+<div class="outline-text-3" id="text-orgd4cc7ca">
 <p>I'm going to use the <a href="https://en.wikipedia.org/wiki/Behavior-driven_development?useskin=vector">Behavior-Driven Development</a> (BDD) version of <a href="https://www.chaijs.com/api/bdd/">Chai</a> to make our assertions about what we expect the code to be doing.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">expect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">"chai"</span><span class="p">).</span><span class="nx">expect</span><span class="p">;</span>
@@ -507,9 +882,9 @@ package.json
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org54e3431">
-<h3 id="org54e3431">Import the Color Increaser Class</h3>
-<div class="outline-text-3" id="text-org54e3431">
+<div class="outline-3" id="outline-container-org7e6c59d">
+<h3 id="org7e6c59d">Import the Color Increaser Class</h3>
+<div class="outline-text-3" id="text-org7e6c59d">
 <p>We're going to create a <code>ColorIncreaser</code> class which we need to import into the test code. Our import is going to look a little funky, though, because the sketch is in a folder created for this post.</p>
 <ul class="org-ul">
 <li><code>files/posts/bdd-testing-p5/</code></li>
@@ -527,9 +902,9 @@ package.json
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgba04fd1">
-<h2 id="orgba04fd1">The Whole Code Module</h2>
-<div class="outline-text-2" id="text-orgba04fd1">
+<div class="outline-2" id="outline-container-orgde882bb">
+<h2 id="orgde882bb">The Whole Code Module</h2>
+<div class="outline-text-2" id="text-orgde882bb">
 <p>Since this is about coding test-driven I'm going to show the tests and then the implementation that gets written to pass the test. This makes it kind of disorienting to read so I thought I'd show the entire <code>color-increaser.js</code> file that's being created here exactly as it ends up once it's all done.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">CHANNELS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
@@ -577,9 +952,9 @@ package.json
 </pre></div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org75fc0b3">
-<h2 id="org75fc0b3">Channel Constants</h2>
-<div class="outline-text-2" id="text-org75fc0b3">
+<div class="outline-2" id="outline-container-orgd8b3b03">
+<h2 id="orgd8b3b03">Channel Constants</h2>
+<div class="outline-text-2" id="text-orgd8b3b03">
 <p>I have a tendency to flip values around (sometimes it seems like blue should come before green, for example) so I like to create objects to hold values that get used repeatedly. This at the top of the same module as the Color Increaser class.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">CHANNELS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
@@ -593,14 +968,14 @@ package.json
 </pre></div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org620ff89">
-<h2 id="org620ff89">Testing and Implementing the Color Increaser</h2>
-<div class="outline-text-2" id="text-org620ff89">
+<div class="outline-2" id="outline-container-orgf7e7dd7">
+<h2 id="orgf7e7dd7">Testing and Implementing the Color Increaser</h2>
+<div class="outline-text-2" id="text-orgf7e7dd7">
 <p>Now we'll write the tests and implement the <code>ColorIncreaser</code> class along with it.</p>
 </div>
-<div class="outline-3" id="outline-container-orgf9c18b6">
-<h3 id="orgf9c18b6">Mock Color</h3>
-<div class="outline-text-3" id="text-orgf9c18b6">
+<div class="outline-3" id="outline-container-org8bfc947">
+<h3 id="org8bfc947">Mock Color</h3>
+<div class="outline-text-3" id="text-org8bfc947">
 <p>We don't want to use any p5 objects in the testing so we'll make a fake <a href="https://p5js.org/reference/#/p5/color">color</a> object, implementing its undocumented (as far as I can tell) <code>levels</code> attribute as an <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">MockColor</span><span class="w"> </span><span class="p">{</span>
@@ -616,9 +991,9 @@ package.json
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org480b7c1">
-<h3 id="org480b7c1">Setting Up the Tests</h3>
-<div class="outline-text-3" id="text-org480b7c1">
+<div class="outline-3" id="outline-container-org496df64">
+<h3 id="org496df64">Setting Up the Tests</h3>
+<div class="outline-text-3" id="text-org496df64">
 <p><code>mocha</code>'s <code>describe</code> function acts like a header around our tests. Within it I'm setting some constants and also defining a <code>beforeEach</code> function which will create a new <code>ColorIncreaser</code> object before running each test so it won't have any changes we make in the other tests spilling over. Although I could import the <code>CHANNELS</code> object with the constants I thought it'd be a better check to create a new set to double-check what's going on in the code being tested.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">describe</span><span class="p">(</span><span class="s1">'Given the ColorIncreaser class definition'</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -639,9 +1014,9 @@ package.json
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgd208906">
-<h3 id="orgd208906">Does the ColorIncreaser Exist?</h3>
-<div class="outline-text-3" id="text-orgd208906">
+<div class="outline-3" id="outline-container-org539b6ee">
+<h3 id="org539b6ee">Does the ColorIncreaser Exist?</h3>
+<div class="outline-text-3" id="text-org539b6ee">
 <p>Our first test makes sure that we were able to create the <code>ColorIncreaser</code> object. This is actually a little bit of a fake because the <code>beforeEach</code> will fail if we can't create the object and it won't actually reach this test. I suppose you could still break it by making a function named <code>ColorIncreaser</code> instead of a class so this acts as an extra check.</p>
 <p>First we make a section header to make it a little clearer (it doesn't actually affect the tests, just the output after the test is run).</p>
 <div class="highlight">
@@ -658,9 +1033,9 @@ package.json
 <p>Mocha will <a href="https://mochajs.org/#asynchronous-code">run the tests asynchronously</a> (parallel and out of order) so we need to accept the <code>done</code> function and then call it when the test is finished so mocha knows that the test is done.</p>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org62890ee">
-<h3 id="org62890ee">The ColorIncreaser Class</h3>
-<div class="outline-text-3" id="text-org62890ee">
+<div class="outline-3" id="outline-container-orgcc5f91d">
+<h3 id="orgcc5f91d">The ColorIncreaser Class</h3>
+<div class="outline-text-3" id="text-orgcc5f91d">
 <p>Now that we have the test I'll define the class and its constructor. It's a pretty basic class, here's a class diagram of its attributes.</p>
 <p><img alt="Color Increaser class diagram" src="posts/bdd-testing-p5/color-increaser.webp"></p>
 <p>And here's the class and constructor definition.</p>
@@ -673,9 +1048,9 @@ package.json
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orge61d849">
-<h3 id="orge61d849">Does it take an increment amount?</h3>
-<div class="outline-text-3" id="text-orge61d849">
+<div class="outline-3" id="outline-container-orgfda8b5a">
+<h3 id="orgfda8b5a">Does it take an increment amount?</h3>
+<div class="outline-text-3" id="text-orgfda8b5a">
 <p>This is just a sanity check to make sure that the constructor actually saved the increment amount we passed in.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">it</span><span class="p">(</span><span class="s2">"And it should set the color_increment"</span><span class="p">,</span>
@@ -686,9 +1061,9 @@ package.json
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgd8645e6">
-<h3 id="orgd8645e6">Does it take a color?</h3>
-<div class="outline-text-3" id="text-orgd8645e6">
+<div class="outline-3" id="outline-container-orgaf35038">
+<h3 id="orgaf35038">Does it take a color?</h3>
+<div class="outline-text-3" id="text-orgaf35038">
 <p>This is another check to make sure the constructor saved the color object that got passed in. I couldn't find a same-object checker in <code>chai</code> but the <code>eql</code> is described as a check that the objects are "deeply-equal" which I assume is the same thing.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">it</span><span class="p">(</span><span class="s2">"And set the color attribute"</span><span class="p">,</span>
@@ -699,18 +1074,18 @@ package.json
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org6ff82ca">
-<h3 id="org6ff82ca">The Increaser</h3>
-<div class="outline-text-3" id="text-org6ff82ca">
+<div class="outline-3" id="outline-container-org65e0ff5">
+<h3 id="org65e0ff5">The Increaser</h3>
+<div class="outline-text-3" id="text-org65e0ff5">
 <p>We're going to implement a method for the <code>ColorIncreaser</code> that will increment the color-array so let's check that it works. It sort of treats the three color channels (Red, Green, and Blue… we'll pretend Alpha doesn't exist) like a three-digit number using base 255 instead of 10 and with the digits being BGR. So we start with all three channels at 0, then we increment red from 0 to 255 and when it hits 256 we set it back to 0 and set green to 1, then we repeat this over and over until green goes up to 256 at which point we reset both red and green to 0 and set blue to 1 and so on.</p>
 <p>I'll add a <code>describe</code> section to the tests to make it clearer where testing this method starts.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">describe</span><span class="p">(</span><span class="s2">"And when the increase() method is called"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 </pre></div>
 </div>
-<div class="outline-4" id="outline-container-org291bfed">
-<h4 id="org291bfed">Does the red channel increase?</h4>
-<div class="outline-text-4" id="text-org291bfed">
+<div class="outline-4" id="outline-container-org8358ef7">
+<h4 id="org8358ef7">Does the red channel increase?</h4>
+<div class="outline-text-4" id="text-org8358ef7">
 <p>Until it increments the red channel past 255 the other channels don't change so we'll first test that only the red channel changes up until that point.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">it</span><span class="w"> </span><span class="p">(</span><span class="s2">"Then it should increment red up until 255"</span><span class="p">,</span>
@@ -728,9 +1103,9 @@ package.json
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org772e97a">
-<h4 id="org772e97a">The Color-Increaser Method</h4>
-<div class="outline-text-4" id="text-org772e97a">
+<div class="outline-4" id="outline-container-org38d4688">
+<h4 id="org38d4688">The Color-Increaser Method</h4>
+<div class="outline-text-4" id="text-org38d4688">
 <p>So now I'll add the <code>increase</code> method to the <code>ColorIncreaser</code> class which adds the <code>color_increment</code> to the red-channel when it's called.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">increase</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -739,9 +1114,9 @@ package.json
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orge60dd64">
-<h3 id="orge60dd64">Does it wrap red back to 255 when it hits 256?</h3>
-<div class="outline-text-3" id="text-orge60dd64">
+<div class="outline-3" id="outline-container-org3d9409f">
+<h3 id="org3d9409f">Does it wrap red back to 255 when it hits 256?</h3>
+<div class="outline-text-3" id="text-org3d9409f">
 <p>The channels can only go up to 255 so once we hit 256:</p>
 <ul class="org-ul">
 <li>red wraps back to 0</li>
@@ -797,9 +1172,9 @@ package.json
 <span class="w">    </span><span class="p">});</span>
 </pre></div>
 </div>
-<div class="outline-4" id="outline-container-orgf7713cd">
-<h4 id="orgf7713cd">The Wrap-Red Conditional</h4>
-<div class="outline-text-4" id="text-orgf7713cd">
+<div class="outline-4" id="outline-container-orgf298dad">
+<h4 id="orgf298dad">The Wrap-Red Conditional</h4>
+<div class="outline-text-4" id="text-orgf298dad">
 <p>Within the <code>increase</code> method we add this little chunk after incrementing the red channel.</p>
 <div class="highlight">
 <pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">RED</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">MAXIMUM</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -810,9 +1185,9 @@ package.json
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org66bbace">
-<h3 id="org66bbace">Does Green Wrap Too?</h3>
-<div class="outline-text-3" id="text-org66bbace">
+<div class="outline-3" id="outline-container-orga5f1767">
+<h3 id="orga5f1767">Does Green Wrap Too?</h3>
+<div class="outline-text-3" id="text-orga5f1767">
 <p>As with red, the green channel can only go up to 255 so once we increase green to 256:</p>
 <ul class="org-ul">
 <li>wrap green back to 0</li>
@@ -873,9 +1248,9 @@ package.json
 <span class="w">   </span><span class="p">});</span>
 </pre></div>
 </div>
-<div class="outline-4" id="outline-container-org2357b5f">
-<h4 id="org2357b5f">The Wrap-Green Conditional</h4>
-<div class="outline-text-4" id="text-org2357b5f">
+<div class="outline-4" id="outline-container-orgb6e80ed">
+<h4 id="orgb6e80ed">The Wrap-Green Conditional</h4>
+<div class="outline-text-4" id="text-orgb6e80ed">
 <p>Now within the <code>increase</code> method we add this little chunk after incrementing the red channel to check the green channel.</p>
 <div class="highlight">
 <pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">GREEN</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">MAXIMUM</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -886,9 +1261,9 @@ package.json
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org8c7603b">
-<h3 id="org8c7603b">Does Blue Wrap Too?</h3>
-<div class="outline-text-3" id="text-org8c7603b">
+<div class="outline-3" id="outline-container-org4af4520">
+<h3 id="org4af4520">Does Blue Wrap Too?</h3>
+<div class="outline-text-3" id="text-org4af4520">
 <p>As with red and green, the blue channel can only go up to 255 so once we increase blue to 256:</p>
 <ul class="org-ul">
 <li>wrap all three channels back to 0</li>
@@ -948,9 +1323,9 @@ package.json
 <span class="w">   </span><span class="p">});</span>
 </pre></div>
 </div>
-<div class="outline-4" id="outline-container-org58b2468">
-<h4 id="org58b2468">The Wrap-Blue Conditional</h4>
-<div class="outline-text-4" id="text-org58b2468">
+<div class="outline-4" id="outline-container-org18969d2">
+<h4 id="org18969d2">The Wrap-Blue Conditional</h4>
+<div class="outline-text-4" id="text-org18969d2">
 <p>I originally just used a modulus to keep blue within range, but since we're allowing the user to change the increment this might not always go back to zero so here's the conditional that resets the blue channel if it exceeds the limit.</p>
 <div class="highlight">
 <pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">levels</span><span class="p">[</span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">BLUE</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">CHANNELS</span><span class="p">.</span><span class="nx">MAXIMUM</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -961,17 +1336,17 @@ package.json
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgec0168d">
-<h3 id="orgec0168d">The Next Method</h3>
-<div class="outline-text-3" id="text-orgec0168d">
+<div class="outline-3" id="outline-container-orgf5f42da">
+<h3 id="orgf5f42da">The Next Method</h3>
+<div class="outline-text-3" id="text-orgf5f42da">
 <p>I'm going to implement a <code>next</code> method to simplify things a little. It'll call increase and the return the color object. Just because.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">describe</span><span class="p">(</span><span class="s2">"And when the next() method is called"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 </pre></div>
 </div>
-<div class="outline-4" id="outline-container-org2be9f8f">
-<h4 id="org2be9f8f">Does the next method increase the color?</h4>
-<div class="outline-text-4" id="text-org2be9f8f">
+<div class="outline-4" id="outline-container-org5fc079b">
+<h4 id="org5fc079b">Does the next method increase the color?</h4>
+<div class="outline-text-4" id="text-org5fc079b">
 <p>To check that next calls the <code>increase</code> method I'll monkey-patch it with a <a href="https://sinonjs.org/releases/latest/spies/">sinon spy</a> and check that when we call <code>next</code> the <code>increase</code> spy gets called.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">it</span><span class="p">(</span><span class="s2">"Then it should increase the color"</span><span class="p">,</span>
@@ -985,9 +1360,9 @@ package.json
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org78a1a04">
-<h4 id="org78a1a04">The Next Method</h4>
-<div class="outline-text-4" id="text-org78a1a04">
+<div class="outline-4" id="outline-container-orga301e5a">
+<h4 id="orga301e5a">The Next Method</h4>
+<div class="outline-text-4" id="text-orga301e5a">
 <p>Now I'll implement the <code>next</code> method and have it call the <code>increase</code> method.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">next</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -996,9 +1371,9 @@ package.json
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orga4ade0e">
-<h3 id="orga4ade0e">Does next return the color?</h3>
-<div class="outline-text-3" id="text-orga4ade0e">
+<div class="outline-3" id="outline-container-org58d901b">
+<h3 id="org58d901b">Does next return the color?</h3>
+<div class="outline-text-3" id="text-org58d901b">
 <p>Instead of requiring the user to make two calls I'll have the next method return the color object directly.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">it</span><span class="w"> </span><span class="p">(</span><span class="s2">"And return the color"</span><span class="p">,</span>
@@ -1009,9 +1384,9 @@ package.json
 <span class="w">    </span><span class="p">});</span>
 </pre></div>
 </div>
-<div class="outline-4" id="outline-container-orge0ff2d3">
-<h4 id="orge0ff2d3">Return the color</h4>
-<div class="outline-text-4" id="text-orge0ff2d3">
+<div class="outline-4" id="outline-container-org56b12d1">
+<h4 id="org56b12d1">Return the color</h4>
+<div class="outline-text-4" id="text-org56b12d1">
 <p>Now in our <code>ColorIncreaser.next</code> method we return the color.</p>
 <div class="highlight">
 <pre><span></span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">;</span>
@@ -1019,9 +1394,9 @@ package.json
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgac1c90c">
-<h3 id="orgac1c90c">Export the Color Increaser</h3>
-<div class="outline-text-3" id="text-orgac1c90c">
+<div class="outline-3" id="outline-container-org011cb1c">
+<h3 id="org011cb1c">Export the Color Increaser</h3>
+<div class="outline-text-3" id="text-org011cb1c">
 <p>The implementation so far is good enough to get the code working within the p5 sketch, which would normally be the ultimate goal. But in order for the test code to be able to import the <code>ColorIncreaser</code> (using the <code>require</code> function) we need to add a line in the file with the <code>ColorIncreaser</code> definition to export it.</p>
 <p>The code given in the tutorial just has the export line, but this will raise an error outside of node.js - so it works for testing but causes a <code>ReferenceError</code> in the browser (when using a python-based server anyway) so to prevent that from happening I added a check that will do the export only if the <code>module</code> is defined, which is an indication that this is being used in node (or I messed up and defined it somewhere else).</p>
 <div class="highlight">
@@ -1031,14 +1406,14 @@ package.json
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgb6ca543">
-<h3 id="orgb6ca543">Running The tests</h3>
-<div class="outline-text-3" id="text-orgb6ca543">
+<div class="outline-3" id="outline-container-org37922d4">
+<h3 id="org37922d4">Running The tests</h3>
+<div class="outline-text-3" id="text-org37922d4">
 <p>Now, let's see what it looks like when we run the tests.</p>
 <div class="highlight">
 <pre><span></span>mocha ../tests/test*
 </pre></div>
-<pre class="example" id="org5199600">
+<pre class="example" id="orgae6c434">
 
 
 Given the ColorIncreaser class definition
@@ -1063,14 +1438,14 @@ Given the ColorIncreaser class definition
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org31bd88c">
-<h2 id="org31bd88c">The Sketch</h2>
-<div class="outline-text-2" id="text-org31bd88c">
+<div class="outline-2" id="outline-container-org639401f">
+<h2 id="org639401f">The Sketch</h2>
+<div class="outline-text-2" id="text-org639401f">
 <p>Now that we have the <code>ColorIncreaser</code> we can add it to a sketch to change the colors of the square that we're drawing.</p>
 </div>
-<div class="outline-3" id="outline-container-org675ec96">
-<h3 id="org675ec96">The Sketch Function</h3>
-<div class="outline-text-3" id="text-org675ec96">
+<div class="outline-3" id="outline-container-org3834439">
+<h3 id="org3834439">The Sketch Function</h3>
+<div class="outline-text-3" id="text-org3834439">
 <p>As I noted before, I'm using the instance-mode syntax for the sketch so this is the function that holds the <code>setup</code> and <code>draw</code> functions.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">flashing_square</span><span class="p">(</span><span class="nx">p5js</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -1080,9 +1455,9 @@ Given the ColorIncreaser class definition
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org49bce0f">
-<h3 id="org49bce0f">The <code>setup</code> Function</h3>
-<div class="outline-text-3" id="text-org49bce0f">
+<div class="outline-3" id="outline-container-org1b5beb2">
+<h3 id="org1b5beb2">The <code>setup</code> Function</h3>
+<div class="outline-text-3" id="text-org1b5beb2">
 <p>The setup creates the canvas and color increaser instance.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">p5js</span><span class="p">.</span><span class="nx">setup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -1099,9 +1474,9 @@ Given the ColorIncreaser class definition
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgd6314ac">
-<h3 id="orgd6314ac">The <code>draw</code> Function</h3>
-<div class="outline-text-3" id="text-orgd6314ac">
+<div class="outline-3" id="outline-container-org2f96f53">
+<h3 id="org2f96f53">The <code>draw</code> Function</h3>
+<div class="outline-text-3" id="text-org2f96f53">
 <p>The draw sets the background color and increases its value once per frame.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">p5js</span><span class="p">.</span><span class="nx">draw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -1111,15 +1486,15 @@ Given the ColorIncreaser class definition
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgfd685f1">
-<h2 id="orgfd685f1">The End</h2>
-<div class="outline-text-2" id="text-orgfd685f1">
+<div class="outline-2" id="outline-container-orga019fde">
+<h2 id="orga019fde">The End</h2>
+<div class="outline-text-2" id="text-orga019fde">
 <p>So, there you go. The sketch wasn't so exciting, but the main value in going through the exercise, I think, was being able to get the javascript testing infrastructure working and getting back into using chai and sinon and the crazy world of module imports in javascript.</p>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org3d8b7f5">
-<h2 id="org3d8b7f5">Sources</h2>
-<div class="outline-text-2" id="text-org3d8b7f5">
+<div class="outline-2" id="outline-container-org1848408">
+<h2 id="org1848408">Sources</h2>
+<div class="outline-text-2" id="text-org1848408">
 <ul class="org-ul">
 <li>Behavior-driven development. In: Wikipedia [Internet]. 2023 [cited 2023 Jun 9]. Available from: <a href="https://en.wikipedia.org/w/index.php?title=Behavior-driven_development&amp;oldid=1158619924">https://en.wikipedia.org/w/index.php?title=Behavior-driven_development&amp;oldid=1158619924</a></li>
 <li>Expect / Should - Chai [Internet]. [cited 2023 Jun 9]. Available from: <a href="https://www.chaijs.com/api/bdd/">https://www.chaijs.com/api/bdd/</a></li>
@@ -1144,13 +1519,13 @@ Given the ColorIncreaser class definition
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="posts/bibliography-the-nature-of-code/index.html#org5d55337">The Book</a></li>
+<li><a href="posts/bibliography-the-nature-of-code/index.html#org289b666">The Book</a></li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org5d55337">
-<h2 id="org5d55337">The Book</h2>
-<div class="outline-text-2" id="text-org5d55337">
+<div class="outline-2" id="outline-container-org289b666">
+<h2 id="org289b666">The Book</h2>
+<div class="outline-text-2" id="text-org289b666">
 <p>The product page for the book points to the older version of the book.</p>
 <ul class="org-ul">
 <li>Nature of Code [Internet]. [cited 2023 May 11]. Available from: <a href="https://natureofcode.com">https://natureofcode.com</a></li>
@@ -1177,20 +1552,20 @@ Given the ColorIncreaser class definition
 </div>
 </header>
 <div class="p-summary entry-summary">
-<div class="outline-2" id="outline-container-orgf5d85ab">
-<h2 id="orgf5d85ab">The Book</h2>
-<div class="outline-text-2" id="text-orgf5d85ab">
+<div class="outline-2" id="outline-container-org157d420">
+<h2 id="org157d420">The Book</h2>
+<div class="outline-text-2" id="text-org157d420">
 <ul class="org-ul">
 <li>Pearson M. Generative art: a practical guide using processing. Shelter Island, NY : London: Manning ; Pearson Education [distributor]; 2011. 197 pages</li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org5a69aed">
-<h2 id="org5a69aed">The Author's Site(s)</h2>
-<div class="outline-text-2" id="text-org5a69aed"></div>
-<div class="outline-3" id="outline-container-org136d4d8">
-<h3 id="org136d4d8">Zen Bullets (probably)</h3>
-<div class="outline-text-3" id="text-org136d4d8">
+<div class="outline-2" id="outline-container-org990dbab">
+<h2 id="org990dbab">The Author's Site(s)</h2>
+<div class="outline-text-2" id="text-org990dbab"></div>
+<div class="outline-3" id="outline-container-org13d2bca">
+<h3 id="org13d2bca">Zen Bullets (probably)</h3>
+<div class="outline-text-3" id="text-org13d2bca">
 <p>The Zen Bullets site doesn't have the author's name listed on it (that I could see) but there's references to this being his pen-name (e.g. on <a href="https://leanpub.com/u/zenbullets">leanpub</a>) and the works look about right.</p>
 <ul class="org-ul">
 <li><a href="http://zenbullets.com/">http://zenbullets.com/</a> : This appears to be the author's main site</li>
@@ -1200,9 +1575,9 @@ Given the ColorIncreaser class definition
 <p>The Zen Bullets site uses a very small font and you can't scroll the menu on the left if you increase the font size and it pushes the text off the pgae so you it's pretty hard to read the navigational text beyond the top items in the menu, but all the links appear to be to interesting stuff so it's worth it to just click on the links even if you can't read them.</p>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org2001937">
-<h3 id="org2001937">Abandoned Art (Possibly Truly Abandoned)</h3>
-<div class="outline-text-3" id="text-org2001937">
+<div class="outline-3" id="outline-container-org5a7ec8d">
+<h3 id="org5a7ec8d">Abandoned Art (Possibly Truly Abandoned)</h3>
+<div class="outline-text-3" id="text-org5a7ec8d">
 <p><b>Warning:</b> uBlock Origin blocks this site because the web-host it uses is listed as untrustworthy, so I haven't actually seen the page, but it's listed in the book and the book's <a href="https://www.manning.com/books/generative-art">product page</a> so I'm including it mostly to remind myself not to go there, even though they tell you to (the errata page does have a a note saying the site's license is expired, but they didn't fix the main page).</p>
 <ul class="org-ul">
 <li>abandonedart.org</li>
@@ -1211,9 +1586,9 @@ Given the ColorIncreaser class definition
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org0e5b1f5">
-<h2 id="org0e5b1f5">Other Artist's Mentioned In the Book</h2>
-<div class="outline-text-2" id="text-org0e5b1f5">
+<div class="outline-2" id="outline-container-org6376f57">
+<h2 id="org6376f57">Other Artist's Mentioned In the Book</h2>
+<div class="outline-text-2" id="text-org6376f57">
 <p>These are ones that I could find dedicated sites for. The earliest pioneers (other than Manfred Mohr and Paul Brown) don't seem to have websites with their work.</p>
 <ul class="org-ul">
 <li><a href="https://www.syedrezaali.com/">Reza Ali</a></li>
@@ -1246,39 +1621,39 @@ Given the ColorIncreaser class definition
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="posts/generative-art-circles/index.html#org5b398a0">A Circle</a></li>
-<li><a href="posts/generative-art-circles/index.html#org3595c93">Closure, Constants, and Variables</a>
+<li><a href="posts/generative-art-circles/index.html#org43a1a8b">A Circle</a></li>
+<li><a href="posts/generative-art-circles/index.html#org1afd731">Closure, Constants, and Variables</a>
 <ul>
-<li><a href="posts/generative-art-circles/index.html#orgf92e704">Constants</a></li>
-<li><a href="posts/generative-art-circles/index.html#org3344685">Variables</a></li>
+<li><a href="posts/generative-art-circles/index.html#org6ca37ef">Constants</a></li>
+<li><a href="posts/generative-art-circles/index.html#org4076408">Variables</a></li>
 </ul>
 </li>
-<li><a href="posts/generative-art-circles/index.html#org693b77d">Set Up</a></li>
-<li><a href="posts/generative-art-circles/index.html#orgbb209d0">Draw</a>
+<li><a href="posts/generative-art-circles/index.html#org1771e0b">Set Up</a></li>
+<li><a href="posts/generative-art-circles/index.html#org3510df5">Draw</a>
 <ul>
-<li><a href="posts/generative-art-circles/index.html#orgff818ca">Looping Around the Circle</a></li>
-<li><a href="posts/generative-art-circles/index.html#org586d4d6">The Coordinates of the Circle's Points</a></li>
-<li><a href="posts/generative-art-circles/index.html#org0dd7d61">Now We Draw</a></li>
-<li><a href="posts/generative-art-circles/index.html#org1b7ebe2">And the Rest</a></li>
+<li><a href="posts/generative-art-circles/index.html#org6ca0ecf">Looping Around the Circle</a></li>
+<li><a href="posts/generative-art-circles/index.html#orga2b9b0f">The Coordinates of the Circle's Points</a></li>
+<li><a href="posts/generative-art-circles/index.html#orgd1adff9">Now We Draw</a></li>
+<li><a href="posts/generative-art-circles/index.html#org0b05029">And the Rest</a></li>
 </ul>
 </li>
-<li><a href="posts/generative-art-circles/index.html#org66c92e6">Closing Up</a></li>
-<li><a href="posts/generative-art-circles/index.html#orgd038afa">References</a></li>
+<li><a href="posts/generative-art-circles/index.html#org520a7de">Closing Up</a></li>
+<li><a href="posts/generative-art-circles/index.html#org0aa0de3">References</a></li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org5b398a0">
-<h2 id="org5b398a0">A Circle</h2>
-<div class="outline-text-2" id="text-org5b398a0">
+<div class="outline-2" id="outline-container-org43a1a8b">
+<h2 id="org43a1a8b">A Circle</h2>
+<div class="outline-text-2" id="text-org43a1a8b">
 <p>This is a starting point for looking at cyclic sketches. In this case it's just a circle but it's a basic concept that I'll probably use more of later so I thought I'd make a dedicated post for it. In particular it uses <a href="https://en.wikipedia.org/wiki/Polar_coordinate_system?useskin=vector">Polar Coordinates</a> which might come in handy.</p>
 <p>
 <script src="posts/generative-art-circles/circle.js"></script></p>
 <div class="p5js" id="5fa2c81b-hard-circle"></div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org3595c93">
-<h2 id="org3595c93">Closure, Constants, and Variables</h2>
-<div class="outline-text-2" id="text-org3595c93">
+<div class="outline-2" id="outline-container-org1afd731">
+<h2 id="org1afd731">Closure, Constants, and Variables</h2>
+<div class="outline-text-2" id="text-org1afd731">
 <p>We begin in the usual way with a variable to hold the <code>div id</code> that the sketch will go into and declaring the function that will hold our sketch tode.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">CIRCLE_DIV</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"5fa2c81b-hard-circle"</span><span class="p">;</span>
@@ -1286,9 +1661,9 @@ Given the ColorIncreaser class definition
 <span class="kd">function</span><span class="w"> </span><span class="nx">circle_the_hard_way</span><span class="p">(</span><span class="nx">p5</span><span class="p">){</span>
 </pre></div>
 </div>
-<div class="outline-3" id="outline-container-orgf92e704">
-<h3 id="orgf92e704">Constants</h3>
-<div class="outline-text-3" id="text-orgf92e704">
+<div class="outline-3" id="outline-container-org6ca37ef">
+<h3 id="org6ca37ef">Constants</h3>
+<div class="outline-text-3" id="text-org6ca37ef">
 <p>Next I'll declare some constants, both to maybe remind me what the values represent when I use them later and to have a place where I can change the values as I experiment with what looks interesting.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">DEGREES_IN_A_CIRCLE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">360</span><span class="p">;</span>
@@ -1308,9 +1683,9 @@ Given the ColorIncreaser class definition
 <p>To make it less confusing I'll refer to the small circles that make up the big cicrle as "points" most of the time.</p>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org3344685">
-<h3 id="org3344685">Variables</h3>
-<div class="outline-text-3" id="text-org3344685">
+<div class="outline-3" id="outline-container-org4076408">
+<h3 id="org4076408">Variables</h3>
+<div class="outline-text-3" id="text-org4076408">
 <p>The variables are:</p>
 <ul class="org-ul">
 <li><code>center_x</code>, <code>center_y</code>: the center coordinates for the circle. These could be constants but I usually set them in the <code>setup</code>.</li>
@@ -1326,9 +1701,9 @@ Given the ColorIncreaser class definition
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org693b77d">
-<h2 id="org693b77d">Set Up</h2>
-<div class="outline-text-2" id="text-org693b77d">
+<div class="outline-2" id="outline-container-org1771e0b">
+<h2 id="org1771e0b">Set Up</h2>
+<div class="outline-text-2" id="text-org1771e0b">
 <p>Our <code>setup</code> function creates the canvas, sets the colors and creates the slider to let the user change how big a jump we take between drawing points on the circle</p>
 <div class="highlight">
 <pre><span></span><span class="w">  </span><span class="nx">p5</span><span class="p">.</span><span class="nx">setup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -1348,17 +1723,17 @@ Given the ColorIncreaser class definition
 </pre></div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgbb209d0">
-<h2 id="orgbb209d0">Draw</h2>
-<div class="outline-text-2" id="text-orgbb209d0">
+<div class="outline-2" id="outline-container-org3510df5">
+<h2 id="org3510df5">Draw</h2>
+<div class="outline-text-2" id="text-org3510df5">
 <p>The <code>draw</code> function draws a circle using circles and a line showing the raduis.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">draw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 </pre></div>
 </div>
-<div class="outline-3" id="outline-container-orgff818ca">
-<h3 id="orgff818ca">Looping Around the Circle</h3>
-<div class="outline-text-3" id="text-orgff818ca">
+<div class="outline-3" id="outline-container-org6ca0ecf">
+<h3 id="org6ca0ecf">Looping Around the Circle</h3>
+<div class="outline-text-3" id="text-org6ca0ecf">
 <p>We're going to rotate around the circle once using the <code>start</code> value as the angle to start at and the value the slider's set at for the number of degrees we move between drawing the points on the circle. To make it easier to think about I'm using degrees in the for-loop but the <i>sin</i> and <i>cos</i> functions expect radians so we need to convert the degrees. Since the circumference of a circle is both \(360^\circ\) and \(2\pi\) we can use a straight ratio to convert them.</p>
 <p>\[ \textit{radians} = \textit{degrees} \times \frac{2 \pi}{360} \]</p>
 <p>This is usually written using a half-circle \(\left(\frac{\pi}{180}\right)\) but I find it easier to remember the whole circle for some reason.</p>
@@ -1369,9 +1744,9 @@ Given the ColorIncreaser class definition
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org586d4d6">
-<h3 id="org586d4d6">The Coordinates of the Circle's Points</h3>
-<div class="outline-text-3" id="text-org586d4d6">
+<div class="outline-3" id="outline-container-orga2b9b0f">
+<h3 id="orga2b9b0f">The Coordinates of the Circle's Points</h3>
+<div class="outline-text-3" id="text-orga2b9b0f">
 <p>The coordinates for our point are calculated using the trigonometric definitions for <i>sin</i> and <i>cos</i>.</p>
 \begin{align} \cos \theta &amp;= \frac{adjacent}{hypotenuse} \\ \textit{adjacent} &amp;= \textit{hypotenuse} \times \cos \theta \end{align} \begin{align} \sin \theta &amp;= \frac{opposite}{hypotenuse}\\ \textit{opposite} &amp;= \textit{hypoteuse} \times \sin \theta \end{align}
 <p>Using the <i>radius</i> we want as the <i>hypotenuse</i> and the <i>adjacent</i> and <i>opposite</i> values as the <i>x</i> and <i>y</i> coordinates we can re-write the equations as:</p>
@@ -1384,9 +1759,9 @@ Given the ColorIncreaser class definition
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org0dd7d61">
-<h3 id="org0dd7d61">Now We Draw</h3>
-<div class="outline-text-3" id="text-org0dd7d61">
+<div class="outline-3" id="outline-container-orgd1adff9">
+<h3 id="orgd1adff9">Now We Draw</h3>
+<div class="outline-text-3" id="text-orgd1adff9">
 <p>Now that we have our <i>x</i> and <i>y</i> coordinates for the next point on the circle we can draw it.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">line</span><span class="p">(</span><span class="nx">center_x</span><span class="p">,</span><span class="w"> </span><span class="nx">center_y</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="p">);</span>
@@ -1394,9 +1769,9 @@ Given the ColorIncreaser class definition
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org1b7ebe2">
-<h3 id="org1b7ebe2">And the Rest</h3>
-<div class="outline-text-3" id="text-org1b7ebe2">
+<div class="outline-3" id="outline-container-org0b05029">
+<h3 id="org0b05029">And the Rest</h3>
+<div class="outline-text-3" id="text-org0b05029">
 <p>If we just draw the points and line we'll end up with a black dot, which still shows that it's working, but kind of negates the point of using something animated, so I'll draw a white background that's mostly transparent so we can see things move.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">p5</span><span class="p">.</span><span class="nx">background</span><span class="p">(</span><span class="mf">255</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
@@ -1408,15 +1783,15 @@ Given the ColorIncreaser class definition
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org66c92e6">
-<h2 id="org66c92e6">Closing Up</h2>
-<div class="outline-text-2" id="text-org66c92e6">
+<div class="outline-2" id="outline-container-org520a7de">
+<h2 id="org520a7de">Closing Up</h2>
+<div class="outline-text-2" id="text-org520a7de">
 <p>And there we have the circle. I had two main reasons for doing this exercise - one was to have a starting point for making noisier shapes and the other was to remind myself of how to make cyclical values so that I can use it as input for functions that I want to have repeat themselves.</p>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgd038afa">
-<h2 id="orgd038afa">References</h2>
-<div class="outline-text-2" id="text-orgd038afa">
+<div class="outline-2" id="outline-container-org0aa0de3">
+<h2 id="org0aa0de3">References</h2>
+<div class="outline-text-2" id="text-org0aa0de3">
 <ul class="org-ul">
 <li><a href="posts/bibliography-generative-art/index.html">Generative Art</a></li>
 <li><a href="posts/bibliography-the-nature-of-code/index.html">The Nature of Code</a></li>

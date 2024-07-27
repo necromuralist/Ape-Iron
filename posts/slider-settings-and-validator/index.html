@@ -68,43 +68,43 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="index.html#org7f6f85b">The Sliders Settings</a>
+<li><a href="index.html#org9ce05c6">The Sliders Settings</a>
 <ul>
-<li><a href="index.html#org2a36929">The Scenario</a></li>
-<li><a href="index.html#org77c3909">The Testing</a></li>
-<li><a href="index.html#orgcf41b1a">The Slider Settings Implementation</a></li>
+<li><a href="index.html#org2c73fb2">The Scenario</a></li>
+<li><a href="index.html#orgbf32fd4">The Testing</a></li>
+<li><a href="index.html#org4d9493b">The Slider Settings Implementation</a></li>
 </ul>
 </li>
-<li><a href="index.html#org88393ab">The Caption Settings</a>
+<li><a href="index.html#orgfcdf7ce">The Caption Settings</a>
 <ul>
-<li><a href="index.html#orgb7393e3">The Testing</a></li>
-<li><a href="index.html#org3505ec1">The CaptionSettings Implementation</a></li>
+<li><a href="index.html#org31230a8">The Testing</a></li>
+<li><a href="index.html#org207e402">The CaptionSettings Implementation</a></li>
 </ul>
 </li>
-<li><a href="index.html#org8644787">Links</a>
+<li><a href="index.html#orga4ea78b">Links</a>
 <ul>
-<li><a href="index.html#org413f5d1">Related Post</a></li>
-<li><a href="index.html#org44e44ef">References</a></li>
+<li><a href="index.html#org41b7f1c">Related Post</a></li>
+<li><a href="index.html#org10ec27a">References</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org7f6f85b">
-<h2 id="org7f6f85b">The Sliders Settings</h2>
-<div class="outline-text-2" id="text-org7f6f85b">
+<div class="outline-2" id="outline-container-org9ce05c6">
+<h2 id="org9ce05c6">The Sliders Settings</h2>
+<div class="outline-text-2" id="text-org9ce05c6">
 <p><img alt="nil" src="slider_settings.png"></p>
 <p>The <code>SliderSettings</code> class holds the values for the <a href="../the-great-slidini/index.html">Slidini</a> class and optionally validates the values it's been given.</p>
 </div>
-<div class="outline-3" id="outline-container-org2a36929">
-<h3 id="org2a36929">The Scenario</h3>
-<div class="outline-text-3" id="text-org2a36929">
+<div class="outline-3" id="outline-container-org2c73fb2">
+<h3 id="org2c73fb2">The Scenario</h3>
+<div class="outline-text-3" id="text-org2c73fb2">
 <p>Since there's only one method to call and it defers everything to the <a href="../a-validator-for-slidersettings/index.html">Validator</a> I'm going to have one Scenario to test, but to try and make it easier to read I'm going to break up the Then-And statements within it, but I'm not going to break up the <code>check_rep</code> method itself so I'm not going to show the implementation under each test it satisfies, but just show the class definition in entirety after all the tests.</p>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org77c3909">
-<h3 id="org77c3909">The Testing</h3>
-<div class="outline-text-3" id="text-org77c3909">
+<div class="outline-3" id="outline-container-orgbf32fd4">
+<h3 id="orgbf32fd4">The Testing</h3>
+<div class="outline-text-3" id="text-orgbf32fd4">
 <p>First we need to import some javascript. Even though I'm faking all the methods I'm going to use on the <code>Validator</code> class I used the real definition because I was hoping to figure out how to get <code>sinon</code> to copy all the methods automatically, but I didn't see anything indicating it can, so maybe next time I'll just make a fake object instead.</p>
 <div class="highlight">
 <pre><span></span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">expect</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"chai"</span><span class="p">;</span>
@@ -131,9 +131,9 @@
 </pre></div>
 <p>The <code>METHODS</code> array holds the names of all of the Validator's methods that <code>check_rep</code> uses so that I can replace the Validator's methods in a loop instead of doing it separately for each one.</p>
 </div>
-<div class="outline-4" id="outline-container-orgd979d55">
-<h4 id="orgd979d55">Setup The Slider Settings</h4>
-<div class="outline-text-4" id="text-orgd979d55">
+<div class="outline-4" id="outline-container-org264405f">
+<h4 id="org264405f">Setup The Slider Settings</h4>
+<div class="outline-text-4" id="text-org264405f">
 <p>Now I'll build the <code>SliderSettings</code> with the faked <code>Validator</code> methods in the cucumber <code>Given</code> function.</p>
 <div class="highlight">
 <pre><span></span><span class="k">Feature:</span><span class="nf"> Slider Settings</span>
@@ -174,9 +174,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgbe25281">
-<h4 id="orgbe25281">Calling Check Rep</h4>
-<div class="outline-text-4" id="text-orgbe25281">
+<div class="outline-4" id="outline-container-orgcb58841">
+<h4 id="orgcb58841">Calling Check Rep</h4>
+<div class="outline-text-4" id="text-orgcb58841">
 <p>This is the only call to <code>SliderSettings</code> I make.</p>
 <div class="highlight">
 <pre><span></span><span class="k">When </span><span class="nf">check_rep is called</span>
@@ -189,9 +189,9 @@
 <p>Now the rest of the tests check all the calls to the <code>Validator</code> that the <code>check_rep</code> method made.</p>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgd3f52e1">
-<h4 id="orgd3f52e1">Min Check</h4>
-<div class="outline-text-4" id="text-orgd3f52e1">
+<div class="outline-4" id="outline-container-org2b87a5e">
+<h4 id="org2b87a5e">Min Check</h4>
+<div class="outline-text-4" id="text-org2b87a5e">
 <p>The first property that <code>check_rep</code> validates is the <code>min</code>.</p>
 <div class="highlight">
 <pre><span></span><span class="k">Then </span><span class="nf">it checked the min</span>
@@ -211,9 +211,9 @@
 <p>The rest of the checks are pretty much the same thing but with different variables so I'll stop the commentary for a while.</p>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgfe329b8">
-<h4 id="orgfe329b8">Max Check</h4>
-<div class="outline-text-4" id="text-orgfe329b8">
+<div class="outline-4" id="outline-container-orgd51ceaf">
+<h4 id="orgd51ceaf">Max Check</h4>
+<div class="outline-text-4" id="text-orgd51ceaf">
 <div class="highlight">
 <pre><span></span><span class="k">And </span><span class="nf">it checked the max</span>
 </pre></div>
@@ -226,9 +226,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgc39a38a">
-<h4 id="orgc39a38a">Default Value</h4>
-<div class="outline-text-4" id="text-orgc39a38a">
+<div class="outline-4" id="outline-container-org4f1d842">
+<h4 id="org4f1d842">Default Value</h4>
+<div class="outline-text-4" id="text-org4f1d842">
 <div class="highlight">
 <pre><span></span><span class="k">And </span><span class="nf">it checked the default_value</span>
 </pre></div>
@@ -241,9 +241,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgca8a0fe">
-<h4 id="orgca8a0fe">Step Size</h4>
-<div class="outline-text-4" id="text-orgca8a0fe">
+<div class="outline-4" id="outline-container-orgef663a5">
+<h4 id="orgef663a5">Step Size</h4>
+<div class="outline-text-4" id="text-orgef663a5">
 <div class="highlight">
 <pre><span></span><span class="k">And </span><span class="nf">it checked the step_size</span>
 </pre></div>
@@ -256,9 +256,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org34685c8">
-<h4 id="org34685c8">Slider Div</h4>
-<div class="outline-text-4" id="text-org34685c8">
+<div class="outline-4" id="outline-container-org9c05e05">
+<h4 id="org9c05e05">Slider Div</h4>
+<div class="outline-text-4" id="text-org9c05e05">
 <div class="highlight">
 <pre><span></span><span class="k">And </span><span class="nf">it checked the slider_div</span>
 </pre></div>
@@ -272,9 +272,9 @@
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgcf41b1a">
-<h3 id="orgcf41b1a">The Slider Settings Implementation</h3>
-<div class="outline-text-3" id="text-orgcf41b1a">
+<div class="outline-3" id="outline-container-org4d9493b">
+<h3 id="org4d9493b">The Slider Settings Implementation</h3>
+<div class="outline-text-3" id="text-org4d9493b">
 <p>Now that we have the tests, I'll implement the slider settings.</p>
 <p><img alt="nil" src="slider_settings.png"></p>
 <p>The <code>SliderSettings</code> holds the settings to build <a href="../the-great-slidini/index.html">Slidini</a>, the Slider and Caption holder. It really could be done with a plain object (which is what it was) but I decided to add a validator to make sure that I was getting all the parameters right.</p>
@@ -303,19 +303,19 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org88393ab">
-<h2 id="org88393ab">The Caption Settings</h2>
-<div class="outline-text-2" id="text-org88393ab">
-<p>The Caption Settings are pretty much just like the Slider Settings except that they are meant for the label that lets the user know what the current slider's value is. I used to have everything in the <a href="index.html#org7f6f85b">SliderSettings</a> but it wasn't obvious what belonged to which so I broke them apart.</p>
+<div class="outline-2" id="outline-container-orgfcdf7ce">
+<h2 id="orgfcdf7ce">The Caption Settings</h2>
+<div class="outline-text-2" id="text-orgfcdf7ce">
+<p>The Caption Settings are pretty much just like the Slider Settings except that they are meant for the label that lets the user know what the current slider's value is. I used to have everything in the <a href="index.html#org9ce05c6">SliderSettings</a> but it wasn't obvious what belonged to which so I broke them apart.</p>
 </div>
-<div class="outline-3" id="outline-container-orgb7393e3">
-<h3 id="orgb7393e3">The Testing</h3>
-<div class="outline-text-3" id="text-orgb7393e3">
+<div class="outline-3" id="outline-container-org31230a8">
+<h3 id="org31230a8">The Testing</h3>
+<div class="outline-text-3" id="text-org31230a8">
 <p>This is pretty much exactly the same as the testing for the <code>SliderSettings</code> so I won't have a whole lot to add to it.</p>
 </div>
-<div class="outline-4" id="outline-container-org9f99cf1">
-<h4 id="org9f99cf1">Imports</h4>
-<div class="outline-text-4" id="text-org9f99cf1">
+<div class="outline-4" id="outline-container-org6c03ed2">
+<h4 id="org6c03ed2">Imports</h4>
+<div class="outline-text-4" id="text-org6c03ed2">
 <div class="highlight">
 <pre><span></span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">expect</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"chai"</span><span class="p">;</span>
 <span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">faker</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@faker-js/faker"</span><span class="p">;</span>
@@ -327,9 +327,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org84d73dc">
-<h4 id="org84d73dc">Call Object Indices</h4>
-<div class="outline-text-4" id="text-org84d73dc">
+<div class="outline-4" id="outline-container-org225c4bf">
+<h4 id="org225c4bf">Call Object Indices</h4>
+<div class="outline-text-4" id="text-org225c4bf">
 <div class="highlight">
 <pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">CAPTION_IS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="nx">SET</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
@@ -347,9 +347,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org11a4086">
-<h4 id="org11a4086">The Feature</h4>
-<div class="outline-text-4" id="text-org11a4086">
+<div class="outline-4" id="outline-container-orgd2d060f">
+<h4 id="orgd2d060f">The Feature</h4>
+<div class="outline-text-4" id="text-orgd2d060f">
 <div class="highlight">
 <pre><span></span><span class="k">Feature:</span><span class="nf"> Settings for a caption/label.</span>
 
@@ -360,9 +360,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgf7261b3">
-<h4 id="orgf7261b3">Setting up the Caption Settings in "Given"</h4>
-<div class="outline-text-4" id="text-orgf7261b3">
+<div class="outline-4" id="outline-container-org9dbb604">
+<h4 id="org9dbb604">Setting up the Caption Settings in "Given"</h4>
+<div class="outline-text-4" id="text-org9dbb604">
 <div class="highlight">
 <pre><span></span><span class="nx">Given</span><span class="p">(</span><span class="s2">"a CaptionSettings"</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 </pre></div>
@@ -406,9 +406,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org151e9a0">
-<h4 id="org151e9a0">Check Rep</h4>
-<div class="outline-text-4" id="text-org151e9a0">
+<div class="outline-4" id="outline-container-org0d5beb5">
+<h4 id="org0d5beb5">Check Rep</h4>
+<div class="outline-text-4" id="text-org0d5beb5">
 <div class="highlight">
 <pre><span></span><span class="k">Scenario:</span><span class="nf"> check_rep is called.</span>
 
@@ -424,9 +424,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orged70e5c">
-<h4 id="orged70e5c">Did It Validate the Label?</h4>
-<div class="outline-text-4" id="text-orged70e5c">
+<div class="outline-4" id="outline-container-org8502722">
+<h4 id="org8502722">Did It Validate the Label?</h4>
+<div class="outline-text-4" id="text-org8502722">
 <div class="highlight">
 <pre><span></span><span class="k">Then </span><span class="nf">it checks the label</span>
 </pre></div>
@@ -439,9 +439,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org171d191">
-<h4 id="org171d191">Did It Validate the Precision?</h4>
-<div class="outline-text-4" id="text-org171d191">
+<div class="outline-4" id="outline-container-orga17b727">
+<h4 id="orga17b727">Did It Validate the Precision?</h4>
+<div class="outline-text-4" id="text-orga17b727">
 <div class="highlight">
 <pre><span></span><span class="k">And </span><span class="nf">it checks the precision</span>
 </pre></div>
@@ -454,9 +454,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org870db93">
-<h4 id="org870db93">Did It Validate the Div ID?</h4>
-<div class="outline-text-4" id="text-org870db93">
+<div class="outline-4" id="outline-container-org13b7b28">
+<h4 id="org13b7b28">Did It Validate the Div ID?</h4>
+<div class="outline-text-4" id="text-org13b7b28">
 <div class="highlight">
 <pre><span></span><span class="k">And </span><span class="nf">it checks the caption div ID.</span>
 </pre></div>
@@ -470,9 +470,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org36211a0">
-<h4 id="org36211a0">Does it add a pound sign to the DIV ID?</h4>
-<div class="outline-text-4" id="text-org36211a0">
+<div class="outline-4" id="outline-container-org51751c6">
+<h4 id="org51751c6">Does it add a pound sign to the DIV ID?</h4>
+<div class="outline-text-4" id="text-org51751c6">
 <p>The <code>p5.select</code> method uses CSS selectors so it needs you to put a <code>#</code> sign in front of the DIV ID to tell it that it's an ID.</p>
 <div class="highlight">
 <pre><span></span><span class="k">Scenario:</span><span class="nf"> The caption DIV selector is set up</span>
@@ -493,9 +493,9 @@
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org3505ec1">
-<h3 id="org3505ec1">The CaptionSettings Implementation</h3>
-<div class="outline-text-3" id="text-org3505ec1">
+<div class="outline-3" id="outline-container-org207e402">
+<h3 id="org207e402">The CaptionSettings Implementation</h3>
+<div class="outline-text-3" id="text-org207e402">
 <p>So here's where I implemennt the class. The <i>label</i> property is a string that gets inserted into the string that's displayed on the Label element. Maybe I should have called it something else… The <i>precision</i> property is used to decide how many decimal places to show in the Label, and the <i>caption_div</i> is the ID of the element where I'm going to stick the Label.</p>
 <div class="highlight">
 <pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">CaptionSettings</span><span class="w"> </span><span class="p">{</span>
@@ -525,21 +525,21 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org8644787">
-<h2 id="org8644787">Links</h2>
-<div class="outline-text-2" id="text-org8644787"></div>
-<div class="outline-3" id="outline-container-org413f5d1">
-<h3 id="org413f5d1">Related Post</h3>
-<div class="outline-text-3" id="text-org413f5d1">
+<div class="outline-2" id="outline-container-orga4ea78b">
+<h2 id="orga4ea78b">Links</h2>
+<div class="outline-text-2" id="text-orga4ea78b"></div>
+<div class="outline-3" id="outline-container-org41b7f1c">
+<h3 id="org41b7f1c">Related Post</h3>
+<div class="outline-text-3" id="text-org41b7f1c">
 <ul class="org-ul">
 <li><a href="../a-validator-for-slidersettings/index.html">A Validator for SliderSettings</a></li>
 <li><a href="../the-great-slidini/index.html">The Great Slidini</a></li>
 </ul>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org44e44ef">
-<h3 id="org44e44ef">References</h3>
-<div class="outline-text-3" id="text-org44e44ef">
+<div class="outline-3" id="outline-container-org10ec27a">
+<h3 id="org10ec27a">References</h3>
+<div class="outline-text-3" id="text-org10ec27a">
 <ul class="org-ul">
 <li>id - HTML: HyperText Markup Language | MDN [Internet]. 2023 [cited 2023 Sep 14]. Available from: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id">https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id</a></li>
 </ul>

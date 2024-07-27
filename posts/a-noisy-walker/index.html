@@ -28,7 +28,7 @@
 <meta content="nature of code" property="article:tag">
 <meta content="noise" property="article:tag">
 <meta content="p5.js" property="article:tag">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+<script crossorigin="anonymous" integrity="sha512-d6sc8kbZEtA2LwB9m/ck0FhvyUwVfdmvTeyJRprmj7Wg9wRFtHDIpr6qk4g/y3Ix3O9I6KHIv6SGu9f7RaP1Gw==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
 </head>
 <body>
 <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a> <!-- Menubar -->
@@ -70,21 +70,21 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="index.html#orgdce4fef">The Noise Walker</a>
+<li><a href="index.html#org03d5ebb">The Noise Walker</a>
 <ul>
-<li><a href="index.html#org7d5d774">Noise Value Offset</a></li>
-<li><a href="index.html#org6569333">Walk</a></li>
-<li><a href="index.html#org22aa43f">Show Yourself</a></li>
+<li><a href="index.html#org8e8b72d">Noise Value Offset</a></li>
+<li><a href="index.html#org8740cbe">Walk</a></li>
+<li><a href="index.html#org91b3614">Show Yourself</a></li>
 </ul>
 </li>
-<li><a href="index.html#org5753eb4">The Sketch</a>
+<li><a href="index.html#org77ddeba">The Sketch</a>
 <ul>
-<li><a href="index.html#org2042bfa">Set Up</a></li>
-<li><a href="index.html#org3b2affa">Draw</a></li>
+<li><a href="index.html#org80d9671">Set Up</a></li>
+<li><a href="index.html#org72e80ae">Draw</a></li>
 </ul>
 </li>
-<li><a href="index.html#org933f76b">The End</a></li>
-<li><a href="index.html#org9cab5fc">Sources</a></li>
+<li><a href="index.html#org1f2c428">The End</a></li>
+<li><a href="index.html#org0e511f3">Sources</a></li>
 </ul>
 </div>
 </div>
@@ -94,9 +94,9 @@
 <script src="sketch.js"></script></p>
 <div class="p5js" id="noisy-walker"></div>
 <p>This is a follow-up to the <a href="../a-random-walker/index.html">Random Walker</a> post. In that previous post I made a walker that moved randomly in any (2D) direction. In this post I'll make a walker that moves according to values given by the p5 <a href="https://p5js.org/reference/#/p5/noise">noise</a> function. This is a pretty straight repeat of what's in the <a href="https://nature-of-code-2nd-edition.netlify.app/introduction/">introduction to the Nature of Code</a>.</p>
-<div class="outline-2" id="outline-container-orgdce4fef">
-<h2 id="orgdce4fef">The Noise Walker</h2>
-<div class="outline-text-2" id="text-orgdce4fef">
+<div class="outline-2" id="outline-container-org03d5ebb">
+<h2 id="org03d5ebb">The Noise Walker</h2>
+<div class="outline-text-2" id="text-org03d5ebb">
 <p>The NoiseWalker keeps track of its position on the canvas as well as moving itself and plotting a circle in its current location. Its constructor starts it at the center of the canvas and creates a noise-offset vector to hold the inputs to the noise function. The noise-offset vector is initially given random x and y values so they aren't the same - since <code>noise</code> is a function if we passed in the same value to it for both x and y they would both get the same value out of it and we'd end up with a diagonal line instead of something that looks random-ish the way that we want.</p>
 <p>The first call to the <code>walk</code> method will clobber the initial <i>x</i> and <i>y</i> positions so setting it to the center of the canvas isn't really important.</p>
 <div class="highlight">
@@ -131,9 +131,9 @@
 <span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="c1">// end constructor</span>
 </pre></div>
 </div>
-<div class="outline-3" id="outline-container-org7d5d774">
-<h3 id="org7d5d774">Noise Value Offset</h3>
-<div class="outline-text-3" id="text-org7d5d774">
+<div class="outline-3" id="outline-container-org8e8b72d">
+<h3 id="org8e8b72d">Noise Value Offset</h3>
+<div class="outline-text-3" id="text-org8e8b72d">
 <p>This property will return the current value of the slider. It's maybe overkill, but I'm trying to re-learn javascript along with p5 and follow along with <i>The Nature of Code</i> so I need things to be extra-obvious, sometimes.</p>
 <div class="highlight">
 <pre><span></span><span class="cm">/** getter for amount to add to the noise offset</span>
@@ -145,9 +145,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org6569333">
-<h3 id="org6569333">Walk</h3>
-<div class="outline-text-3" id="text-org6569333">
+<div class="outline-3" id="outline-container-org8740cbe">
+<h3 id="org8740cbe">Walk</h3>
+<div class="outline-text-3" id="text-org8740cbe">
 <p>The <code>walk</code> method moves the walker by adding some noise to its position. The <code>noise</code> function outputs a value from 0 to 1 so I'll use it as a scale factor for the width and height of the canvas to get the new location of the walker. Note that we're not using the prior position of the walker when calculating the new one, just the noise.</p>
 <div class="highlight">
 <pre><span></span><span class="cm">/** update the position and noise offset */</span>
@@ -160,9 +160,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org22aa43f">
-<h3 id="org22aa43f">Show Yourself</h3>
-<div class="outline-text-3" id="text-org22aa43f">
+<div class="outline-3" id="outline-container-org91b3614">
+<h3 id="org91b3614">Show Yourself</h3>
+<div class="outline-text-3" id="text-org91b3614">
 <p>The Noise Walker's <code>show_yourself</code> method draws a circle wherever the walker happens to be at the moment. Nothing fancy.</p>
 <div class="highlight">
 <pre><span></span><span class="nx">show_yourself</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -175,9 +175,9 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org5753eb4">
-<h2 id="org5753eb4">The Sketch</h2>
-<div class="outline-text-2" id="text-org5753eb4">
+<div class="outline-2" id="outline-container-org77ddeba">
+<h2 id="org77ddeba">The Sketch</h2>
+<div class="outline-text-2" id="text-org77ddeba">
 <p>I'll put the sketch in a function named "noise_walk".</p>
 <div class="highlight">
 <pre><span></span><span class="nx">NOISY_WALKER_DIV</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"noisy-walker"</span><span class="p">;</span>
@@ -191,9 +191,9 @@
 <span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">slider</span><span class="p">;</span>
 </pre></div>
 </div>
-<div class="outline-3" id="outline-container-org2042bfa">
-<h3 id="org2042bfa">Set Up</h3>
-<div class="outline-text-3" id="text-org2042bfa">
+<div class="outline-3" id="outline-container-org80d9671">
+<h3 id="org80d9671">Set Up</h3>
+<div class="outline-text-3" id="text-org80d9671">
 <p>The <code>setup</code> method will create the canvas, a slider which the user can use to change the size of the steps the walker takes along the noise offset, and the walker itself. The canvas and slider are placed based on the order in which you create them. In this case I wanted the slider underneath the canvas so I had to define it after the canvas (but before the walker since I pass it to the walker).</p>
 <div class="highlight">
 <pre><span></span><span class="cm">/** setup the canvas, walker, and slider */</span>
@@ -214,9 +214,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org3b2affa">
-<h3 id="org3b2affa">Draw</h3>
-<div class="outline-text-3" id="text-org3b2affa">
+<div class="outline-3" id="outline-container-org72e80ae">
+<h3 id="org72e80ae">Draw</h3>
+<div class="outline-text-3" id="text-org72e80ae">
 <p>The draw function moves and shows the walker.</p>
 <div class="highlight">
 <pre><span></span><span class="cm">/** move and draw the walker */</span>
@@ -237,15 +237,15 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org933f76b">
-<h2 id="org933f76b">The End</h2>
-<div class="outline-text-2" id="text-org933f76b">
+<div class="outline-2" id="outline-container-org1f2c428">
+<h2 id="org1f2c428">The End</h2>
+<div class="outline-text-2" id="text-org1f2c428">
 <p>And there's the code for the sketch at the top of the page.</p>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org9cab5fc">
-<h2 id="org9cab5fc">Sources</h2>
-<div class="outline-text-2" id="text-org9cab5fc">
+<div class="outline-2" id="outline-container-org0e511f3">
+<h2 id="org0e511f3">Sources</h2>
+<div class="outline-text-2" id="text-org0e511f3">
 <ul class="org-ul">
 <li>Nature of Code [Internet]. [cited 2023 May 11]. Available from: <a href="https://nature-of-code-2nd-edition.netlify.app/">https://nature-of-code-2nd-edition.netlify.app/</a></li>
 <li>p5 reference | noise() [Internet]. [cited 2023 Apr 25]. Available from: <a href="https://p5js.org/reference/#/p5/noise">https://p5js.org/reference/#/p5/noise</a></li>

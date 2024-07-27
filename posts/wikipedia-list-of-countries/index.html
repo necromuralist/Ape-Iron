@@ -69,39 +69,39 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="index.html#orgf1a0f3f">Beginning</a>
+<li><a href="index.html#org757a567">Beginning</a>
 <ul>
-<li><a href="index.html#orgfaf79e8">Set Up</a></li>
+<li><a href="index.html#orgc13fb24">Set Up</a></li>
 </ul>
 </li>
-<li><a href="index.html#org7319cbe">Middle</a>
+<li><a href="index.html#org525c609">Middle</a>
 <ul>
-<li><a href="index.html#orgb2b0c79">Grabbing Some HTML</a></li>
-<li><a href="index.html#orgd6b8c2f">Plotting</a></li>
-<li><a href="index.html#orgc9a83a4">Just the Population Table</a></li>
-<li><a href="index.html#org40f3f53">Countries by Area</a></li>
+<li><a href="index.html#org4536ab6">Grabbing Some HTML</a></li>
+<li><a href="index.html#orgfc18807">Plotting</a></li>
+<li><a href="index.html#org2b35e26">Just the Population Table</a></li>
+<li><a href="index.html#org20ff628">Countries by Area</a></li>
 </ul>
 </li>
-<li><a href="index.html#orge37a384">Plotting Again</a>
+<li><a href="index.html#org3f9013d">Plotting Again</a>
 <ul>
-<li><a href="index.html#org271fd5a">By Area</a></li>
-<li><a href="index.html#orgdc321d2">By Population</a></li>
-<li><a href="index.html#org2db1491">By Density</a></li>
+<li><a href="index.html#orgc1cf661">By Area</a></li>
+<li><a href="index.html#org0791d60">By Population</a></li>
+<li><a href="index.html#org14d11ed">By Density</a></li>
 </ul>
 </li>
-<li><a href="index.html#orgc682e6d">End</a></li>
+<li><a href="index.html#orgf66e8dd">End</a></li>
 </ul>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgf1a0f3f">
-<h2 id="orgf1a0f3f">Beginning</h2>
-<div class="outline-text-2" id="text-orgf1a0f3f"></div>
-<div class="outline-3" id="outline-container-orgfaf79e8">
-<h3 id="orgfaf79e8">Set Up</h3>
-<div class="outline-text-3" id="text-orgfaf79e8"></div>
-<div class="outline-4" id="outline-container-org3edb78b">
-<h4 id="org3edb78b">Imports</h4>
-<div class="outline-text-4" id="text-org3edb78b">
+<div class="outline-2" id="outline-container-org757a567">
+<h2 id="org757a567">Beginning</h2>
+<div class="outline-text-2" id="text-org757a567"></div>
+<div class="outline-3" id="outline-container-orgc13fb24">
+<h3 id="orgc13fb24">Set Up</h3>
+<div class="outline-text-3" id="text-orgc13fb24"></div>
+<div class="outline-4" id="outline-container-orgc8ca452">
+<h4 id="orgc8ca452">Imports</h4>
+<div class="outline-text-4" id="text-orgc8ca452">
 <div class="highlight">
 <pre><span></span><span class="c1"># python</span>
 <span class="kn">from</span> <span class="nn">argparse</span> <span class="kn">import</span> <span class="n">Namespace</span>
@@ -121,9 +121,9 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orged855e8">
-<h4 id="orged855e8">Plotting</h4>
-<div class="outline-text-4" id="text-orged855e8">
+<div class="outline-4" id="outline-container-org27a0844">
+<h4 id="org27a0844">Plotting</h4>
+<div class="outline-text-4" id="text-org27a0844">
 <div class="highlight">
 <pre><span></span><span class="n">SLUG</span> <span class="o">=</span> <span class="s2">"wikipedia-list-of-countries"</span>
 <span class="n">Embed</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">EmbedHoloviews</span><span class="p">,</span> <span class="n">folder_path</span><span class="o">=</span><span class="sa">f</span><span class="s2">"files/posts/</span><span class="si">{</span><span class="n">SLUG</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
@@ -135,18 +135,18 @@
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org45c02b5">
-<h4 id="org45c02b5">Set Up Tabulate</h4>
-<div class="outline-text-4" id="text-org45c02b5">
+<div class="outline-4" id="outline-container-orge4803a7">
+<h4 id="orge4803a7">Set Up Tabulate</h4>
+<div class="outline-text-4" id="text-orge4803a7">
 <p>This is just to make printing the pandas data-frames a little easier. <a href="https://github.com/nnicandro/emacs-jupyter">emacs-jupyter</a> actually does a pretty good job of rendering them as HTML like a regular jupyter notebook, but this makes it a little more readable while in emacs, plus I can control things better.</p>
 <div class="highlight">
 <pre><span></span><span class="n">TABLE</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">tabulate</span><span class="p">,</span> <span class="n">showindex</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">tablefmt</span><span class="o">=</span><span class="s2">"orgtbl"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="s2">"keys"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orga9d431b">
-<h4 id="orga9d431b">Set Up Selenium</h4>
-<div class="outline-text-4" id="text-orga9d431b">
+<div class="outline-4" id="outline-container-org95aa51b">
+<h4 id="org95aa51b">Set Up Selenium</h4>
+<div class="outline-text-4" id="text-org95aa51b">
 <div class="highlight">
 <pre><span></span><span class="n">options</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">FirefoxOptions</span><span class="p">()</span>
 <span class="n">options</span><span class="o">.</span><span class="n">headless</span> <span class="o">=</span> <span class="kc">True</span>
@@ -156,15 +156,15 @@
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-org7319cbe">
-<h2 id="org7319cbe">Middle</h2>
-<div class="outline-text-2" id="text-org7319cbe"></div>
-<div class="outline-3" id="outline-container-orgb2b0c79">
-<h3 id="orgb2b0c79">Grabbing Some HTML</h3>
-<div class="outline-text-3" id="text-orgb2b0c79"></div>
-<div class="outline-4" id="outline-container-org05af6c8">
-<h4 id="org05af6c8">Build the Table</h4>
-<div class="outline-text-4" id="text-org05af6c8">
+<div class="outline-2" id="outline-container-org525c609">
+<h2 id="org525c609">Middle</h2>
+<div class="outline-text-2" id="text-org525c609"></div>
+<div class="outline-3" id="outline-container-org4536ab6">
+<h3 id="org4536ab6">Grabbing Some HTML</h3>
+<div class="outline-text-3" id="text-org4536ab6"></div>
+<div class="outline-4" id="outline-container-org953f3e2">
+<h4 id="org953f3e2">Build the Table</h4>
+<div class="outline-text-4" id="text-org953f3e2">
 <p>The tables are created using javascript so we need to use Selenium (or something else that handles javascript) to get the page for us.</p>
 <div class="highlight">
 <pre><span></span><span class="n">URL</span> <span class="o">=</span> <span class="s2">"https://www.wikiwand.com/en/List_of_countries_and_dependencies_by_population_density"</span>
@@ -259,9 +259,9 @@
 | –      | Macau (China)                      |                    45 |       696100 |                               54799 | September 30, 2019 | Official quarterly estimate |
 </pre></div>
 </div>
-<div class="outline-4" id="outline-container-org568d2ed">
-<h4 id="org568d2ed">The Last Two Rows</h4>
-<div class="outline-text-4" id="text-org568d2ed">
+<div class="outline-4" id="outline-container-org0e627c0">
+<h4 id="org0e627c0">The Last Two Rows</h4>
+<div class="outline-text-4" id="text-org0e627c0">
 <p>I guess because the table is so long Wikipedia repeats the header at the bottom of the table.</p>
 <div class="highlight">
 <pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">TABLE</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]))</span>
@@ -369,14 +369,14 @@
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgd6b8c2f">
-<h3 id="orgd6b8c2f">Plotting</h3>
-<div class="outline-text-3" id="text-orgd6b8c2f">
+<div class="outline-3" id="outline-container-orgfc18807">
+<h3 id="orgfc18807">Plotting</h3>
+<div class="outline-text-3" id="text-orgfc18807">
 <p>This is just to take a look.</p>
 </div>
-<div class="outline-4" id="outline-container-orga08c568">
-<h4 id="orga08c568">By Area</h4>
-<div class="outline-text-4" id="text-orga08c568">
+<div class="outline-4" id="outline-container-orgab75172">
+<h4 id="orgab75172">By Area</h4>
+<div class="outline-text-4" id="text-orgab75172">
 <p>First I'll sort the table by area using <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.sort_values.html">sort_values</a>.</p>
 <div class="highlight">
 <pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">area</span><span class="p">)</span>
@@ -487,9 +487,9 @@ Population Difference: 168,435,684
 </div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgc9a83a4">
-<h3 id="orgc9a83a4">Just the Population Table</h3>
-<div class="outline-text-3" id="text-orgc9a83a4">
+<div class="outline-3" id="outline-container-org2b35e26">
+<h3 id="org2b35e26">Just the Population Table</h3>
+<div class="outline-text-3" id="text-org2b35e26">
 <p>For some reason pandas is acting up here so I had to separate the building of the dataframe and re-running the code blocks a few times. It even said that pandas couldn't find html5lib, which is kind of weird since the earlier <code>read_html</code> call worked…</p>
 <div class="highlight">
 <pre><span></span><span class="n">URL</span> <span class="o">=</span> <span class="s2">"https://www.wikiwand.com/en/List_of_countries_and_dependencies_by_population"</span>
@@ -634,9 +634,9 @@ By Population Table: 98.45 %
 By Density Table: 97.84 %
 </pre></div>
 </div>
-<div class="outline-3" id="outline-container-org40f3f53">
-<h3 id="org40f3f53">Countries by Area</h3>
-<div class="outline-text-3" id="text-org40f3f53">
+<div class="outline-3" id="outline-container-org20ff628">
+<h3 id="org20ff628">Countries by Area</h3>
+<div class="outline-text-3" id="text-org20ff628">
 <div class="highlight">
 <pre><span></span><span class="n">URL</span> <span class="o">=</span> <span class="s2">"https://www.wikiwand.com/en/List_of_countries_and_dependencies_by_area"</span>
 <span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span>
@@ -691,15 +691,15 @@ By Density Table: 97.84 %
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orge37a384">
-<h2 id="orge37a384">Plotting Again</h2>
-<div class="outline-text-2" id="text-orge37a384"></div>
-<div class="outline-3" id="outline-container-org271fd5a">
-<h3 id="org271fd5a">By Area</h3>
-<div class="outline-text-3" id="text-org271fd5a"></div>
-<div class="outline-4" id="outline-container-org4cf7487">
-<h4 id="org4cf7487">Biggest</h4>
-<div class="outline-text-4" id="text-org4cf7487">
+<div class="outline-2" id="outline-container-org3f9013d">
+<h2 id="org3f9013d">Plotting Again</h2>
+<div class="outline-text-2" id="text-org3f9013d"></div>
+<div class="outline-3" id="outline-container-orgc1cf661">
+<h3 id="orgc1cf661">By Area</h3>
+<div class="outline-text-3" id="text-orgc1cf661"></div>
+<div class="outline-4" id="outline-container-org724e4b3">
+<h4 id="org724e4b3">Biggest</h4>
+<div class="outline-text-4" id="text-org724e4b3">
 <div class="highlight">
 <pre><span></span><span class="n">cleaned</span> <span class="o">=</span> <span class="n">cleaned</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">area_cleaned</span><span class="p">)</span>
 <span class="n">subset</span> <span class="o">=</span> <span class="n">cleaned</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">:]</span>
@@ -725,18 +725,18 @@ By Density Table: 97.84 %
 <p>Okay, so it looks like I forgot to clean out the note references in the country names. Also, Russia as bigger than Antarctica? Go figure. I'm also surprised that the United States has more area than China. Actually I was surprised by this whole thing. I guess I never really looked too closely at the relative sizes of countries before, and area's a tough thing to estimate visually.</p>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgbc908bd">
-<h4 id="orgbc908bd">Getting Rid of the Notes</h4>
-<div class="outline-text-4" id="text-orgbc908bd">
+<div class="outline-4" id="outline-container-orgc36bcaf">
+<h4 id="orgc36bcaf">Getting Rid of the Notes</h4>
+<div class="outline-text-4" id="text-orgc36bcaf">
 <div class="highlight">
 <pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="n">cleaned</span><span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">country_cleaned</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">"["</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">cleaned</span><span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">country_cleaned</span><span class="p">]</span> <span class="o">=</span> <span class="n">names</span>
 </pre></div>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgcc18624">
-<h4 id="orgcc18624">Smallest</h4>
-<div class="outline-text-4" id="text-orgcc18624">
+<div class="outline-4" id="outline-container-org477edad">
+<h4 id="org477edad">Smallest</h4>
+<div class="outline-text-4" id="text-org477edad">
 <div class="highlight">
 <pre><span></span><span class="n">subset</span> <span class="o">=</span> <span class="n">cleaned</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">area_cleaned</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">:]</span>
 <span class="n">plot</span> <span class="o">=</span> <span class="n">subset</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">country_cleaned</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">area_cleaned</span><span class="p">)</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span>
@@ -756,12 +756,12 @@ By Density Table: 97.84 %
 </object></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgdc321d2">
-<h3 id="orgdc321d2">By Population</h3>
-<div class="outline-text-3" id="text-orgdc321d2"></div>
-<div class="outline-4" id="outline-container-org7345660">
-<h4 id="org7345660">Most Populated</h4>
-<div class="outline-text-4" id="text-org7345660">
+<div class="outline-3" id="outline-container-org0791d60">
+<h3 id="org0791d60">By Population</h3>
+<div class="outline-text-3" id="text-org0791d60"></div>
+<div class="outline-4" id="outline-container-orga0e1325">
+<h4 id="orga0e1325">Most Populated</h4>
+<div class="outline-text-4" id="text-orga0e1325">
 <div class="highlight">
 <pre><span></span><span class="n">subset</span> <span class="o">=</span> <span class="n">cleaned</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">population</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">:]</span>
 <span class="n">population_columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">area_cleaned</span><span class="p">,</span>
@@ -787,9 +787,9 @@ By Density Table: 97.84 %
 <p>I had encountered this list before, when reading <i>Memory Craft</i> by Lynne Kelly, but it still surprises me that the United States is third and that Bangladesh has more people than Russia.</p>
 </div>
 </div>
-<div class="outline-4" id="outline-container-org896838c">
-<h4 id="org896838c">Least Populous</h4>
-<div class="outline-text-4" id="text-org896838c">
+<div class="outline-4" id="outline-container-org6bb131b">
+<h4 id="org6bb131b">Least Populous</h4>
+<div class="outline-text-4" id="text-org6bb131b">
 <div class="highlight">
 <pre><span></span><span class="n">subset</span> <span class="o">=</span> <span class="n">cleaned</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">population</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">:]</span>
 <span class="n">plot</span> <span class="o">=</span> <span class="n">subset</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">country_cleaned</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">population</span><span class="p">,</span>
@@ -811,12 +811,12 @@ By Density Table: 97.84 %
 </object></div>
 </div>
 </div>
-<div class="outline-3" id="outline-container-org2db1491">
-<h3 id="org2db1491">By Density</h3>
-<div class="outline-text-3" id="text-org2db1491"></div>
-<div class="outline-4" id="outline-container-org5a37648">
-<h4 id="org5a37648">Densest</h4>
-<div class="outline-text-4" id="text-org5a37648">
+<div class="outline-3" id="outline-container-org14d11ed">
+<h3 id="org14d11ed">By Density</h3>
+<div class="outline-text-3" id="text-org14d11ed"></div>
+<div class="outline-4" id="outline-container-org249b4ed">
+<h4 id="org249b4ed">Densest</h4>
+<div class="outline-text-4" id="text-org249b4ed">
 <div class="highlight">
 <pre><span></span><span class="n">density_columns</span><span class="o">=</span><span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">population</span><span class="p">,</span> <span class="n">Columns</span><span class="o">.</span><span class="n">area_cleaned</span><span class="p">]</span>
 <span class="n">subset</span> <span class="o">=</span> <span class="n">cleaned</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">Columns</span><span class="o">.</span><span class="n">density_cleaned</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">:]</span>
@@ -840,9 +840,9 @@ By Density Table: 97.84 %
 <p>It's sort of interesting that the two most dense countries are both known for their gambling.</p>
 </div>
 </div>
-<div class="outline-4" id="outline-container-orgbc1db2f">
-<h4 id="orgbc1db2f">Sparsest</h4>
-<div class="outline-text-4" id="text-orgbc1db2f">
+<div class="outline-4" id="outline-container-org63a68fd">
+<h4 id="org63a68fd">Sparsest</h4>
+<div class="outline-text-4" id="text-org63a68fd">
 <p>First, because of the way I calculated Antarctica it currently has a negative number (-14) for density, which is a little odd so I'll set it to 0.</p>
 <div class="highlight">
 <pre><span></span><span class="n">cleaned</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">cleaned</span><span class="p">[</span><span class="n">Columns</span><span class="o">.</span><span class="n">country_cleaned</span><span class="p">]</span><span class="o">==</span><span class="s2">"Antarctica"</span><span class="p">,</span> <span class="n">Columns</span><span class="o">.</span><span class="n">density_cleaned</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
@@ -870,9 +870,9 @@ By Density Table: 97.84 %
 </div>
 </div>
 </div>
-<div class="outline-2" id="outline-container-orgc682e6d">
-<h2 id="orgc682e6d">End</h2>
-<div class="outline-text-2" id="text-orgc682e6d">
+<div class="outline-2" id="outline-container-orgf66e8dd">
+<h2 id="orgf66e8dd">End</h2>
+<div class="outline-text-2" id="text-orgf66e8dd">
 <p>Well, the point wasn't really just to look at the list (there is a Wikipedia page there already, after all) but to have something that I could mess with locally, so I'll save it now, but first I'll do a little more cleaning.</p>
 <p>Do I need the rank? Nah.</p>
 <div class="highlight">
