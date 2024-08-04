@@ -14,6 +14,10 @@
 #+OPTIONS: ^:{}
 #+TOC: headlines 2
 
+* Comics
+- [[https://en.wikipedia.org/wiki/Portal:Comics?useskin=vector][Wikipedia's Comics Portal]]: A comics-based front page.
+** Non-Fiction
+- [[https://en.wikipedia.org/wiki/Graphic_medicine?useskin=vector][Graphic Medicine]]: Wikipedia page on Graphic Medicine.
 * Design Patterns
 - [[https://www.patterns.dev/][patterns.dev]]: An online book of patterns for JavaScript and React.
 

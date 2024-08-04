@@ -8,7 +8,7 @@
 .. description: A bibliography page for the Nature of Code.
 .. type: text
 .. status: 
-.. updated: 
+.. updated: 2024-08-02 13:55:23 UTC-07:00
 
 #+END_COMMENT
 
@@ -16,11 +16,12 @@
 #+TOC: headlines 2
 
 * The Book
-The product page for the book points to the older version of the book.
 
 - Nature of Code [Internet]. [cited 2023 May 11]. Available from: https://natureofcode.com
 
-The version I'm looking at is the second edition which uses p5.js.
+When I originally made this page the link above pointed to the first edition so I have a separate link below for the second edition. As of today (2024-08-02) the link above seems to point to the 2nd edition as well.
+
+I'll keep the dedicated second-edition link here in case the link above changes again.
 
 - https://nature-of-code-2nd-edition.netlify.app/ : the hosted book
 - https://github.com/nature-of-code/noc-book-2023: the repository for the book
